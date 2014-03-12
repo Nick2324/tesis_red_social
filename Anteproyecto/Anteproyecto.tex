@@ -1,4 +1,4 @@
-\documentclass[letter,openright,12pt]{book}
+\documentclass[letter,12pt]{book}
 \usepackage[spanish]{babel}
 \usepackage[bookmarks]{hyperref}
 \usepackage[utf8]{inputenc}
@@ -71,18 +71,21 @@
   \listoftables % indice de tablas
   
   \chapter{Definición del problema}
+  \input{./Capitulos/1-Descripcion_problema/Descripcion_problema.tex}
   
   \chapter{Justificación del problema}
   
   \chapter{Objetivos}
   \section{Objetivo General}
-  \section{Objetivos especificos}
+  \section{Objetivos específicos}
   
   \chapter{Marco teórico}
   
+  \input{./Capitulos/3-Marco_teorico/Marco_teorico.tex}
+  
   \chapter{Metodología}
   
-  \chapter{Metodos utilizados}
+  \chapter{Métodos utilizados}
   
   \input{./Capitulos/6-Metodos/Encuesta.tex}
   
@@ -93,7 +96,8 @@
   \input{./Capitulos/8-Recursos/Hardware.tex}
   \input{./Capitulos/8-Recursos/Software.tex}
   
-  \chapter{Referencias}
+  \bibliographystyle{plain}
+  \bibliography{bibliografia}
   
   \renewcommand\appendixname{Anexo}
   

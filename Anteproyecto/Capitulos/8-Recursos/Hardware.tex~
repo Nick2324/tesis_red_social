@@ -1,8 +1,6 @@
 \section{Recursos de Hardware}
-  \begin{table}
+  \begin{table}[!htb]
     \caption{Recursos de hardware}
-    \label{tab:}
-
     \begin{center}
       \begin{tabular}{|c|p{5cm}|c|}
         \hline
