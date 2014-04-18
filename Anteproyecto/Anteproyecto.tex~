@@ -5,7 +5,9 @@
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{pdflscape}
 \usepackage{array}
+\usepackage{apacite} 
 \graphicspath{ {./imagenes/} }
 \setcounter{secnumdepth}{3} % para que ponga 1.1.1.1 en subsubsecciones...
 \setcounter{tocdepth}{3} % para que añada las subsubsecciones en el indice...
@@ -71,18 +73,23 @@
   \listoftables % indice de tablas
   
   \chapter{Definición del problema}
+  \input{./Capitulos/1-Descripcion_problema/Descripcion_problema.tex}
   
   \chapter{Justificación del problema}
+  \input{./Capitulos/2-Justificacion/Justificacion.tex}
   
   \chapter{Objetivos}
   \section{Objetivo General}
+   \input{./Capitulos/3-Objetivos/General.tex}
   \section{Objetivos específicos}
+   \input{./Capitulos/3-Objetivos/Especificos.tex}
   
   \chapter{Marco teórico}
   
-  \input{./Capitulos/3-Marco_teorico/Marco_teorico.tex}
+  \input{./Capitulos/4-Marco_teorico/Marco_teorico.tex}
   
   \chapter{Metodología}
+  \input{./Capitulos/5-Metodologia/Metodologia.tex}
   
   \chapter{Métodos utilizados}
   
@@ -95,7 +102,8 @@
   \input{./Capitulos/8-Recursos/Hardware.tex}
   \input{./Capitulos/8-Recursos/Software.tex}
   
-  \chapter{Referencias}
+  \bibliographystyle{apacite}
+  \bibliography{bibliografia}
   
   \renewcommand\appendixname{Anexo}
   

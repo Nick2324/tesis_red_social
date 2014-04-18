@@ -6,9 +6,13 @@
         \hline
         Recurso & Descripción\\
         \hline \hline
+        Debian Versión 7.4 (wheezy),32-bit & Sistema operativo en el que se realiza el desarrollo. \\
+        \hline
         Eclipse IDE & Entorno de desarrollo de código abierto\\
         \hline
         Android Developement Tools (ADT) & Plugin para el IDE Eclipse que brinda un entorno de desarrollo para construir aplicaciones Android\\
+        \hline
+        Archi & Herramienta libre y gratuita para crear modelos en el estándar Archimate\\
         \hline
       \end{tabular}
     \end{center}

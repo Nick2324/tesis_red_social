@@ -1,0 +1,52 @@
+\begin{enumerate}
+  \item Fase de pre-prducción
+	\begin{enumerate}
+	  \item Etapa de modelamiento \\
+		Describir y formalizar los requerimientos funcionales y no funcionales.
+		\begin{enumerate}
+		  \item Se utilizan casos de uso de negocio, de manera que se descompone el dominio del negocio en sus areas funcionales y sus subsitemas. Por lo general, estos casos de uso son candidatos a servicios.
+		\end{enumerate}
+	\item Etapa de ensamblamiento \\
+		Analisis de los subsistemas
+			\begin{enumerate}
+			  \item Se especifican las dependencias y el flujo de informacion a lo largo de los diferentes subsistemas encontrados. Adicionalmente, se hace un análisis de que casos de uso se exponen como servicios.
+			  \end{enumerate}
+			  Describir y formalizar las funcionalidades de los diferentes servicios que sean necesarios. \\
+			  \begin{enumerate}
+			  \item Se clasifican y describen los servicios de manera jerárquica, de manera que se pueda determinar la interdependencia y composicion de los mismos.
+			  \end{enumerate}
+		Espeficiar los componentes necesarios
+		\begin{enumerate}
+		  \item Se especifican las caracteristicas que debe cumplir cada componente que valla a implementar algún servicio. Estas caracteristicas son:
+				\begin{enumerate}
+				  \item Datos
+				  \item Reglas
+				  \item Servicio(s) que va a implementar
+				  \item Variaciones posibles
+				\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+	
+
+	
+	
+\item Fase de producción
+\begin{enumerate}
+  \item 	Etapa de despliegue
+		\begin{enumerate}
+		  \item Asignar los servicios que van a solucionar los requerimientos funcionales. \\
+			Se asignan los diferentes servicios identificados con los subsistemas/casos de uso que van a solucionar. Por lo general, se asume que existe una relacion 1 a 1 entre servicios y funcionalidades.
+		\item Determinar que servicios pueden ser solucionados por terceros. \\
+			Se define, de los servicios necesarios, cuales se deben crear desde cero y cuales pueden ser resueltos utilizando servicios existentes desarrollados por terceros.
+		\item Desarrollar los servicios propuestos. \\
+			Se procede a crear los servicios necesarios que fueron propuestos en etapas anteriores.
+		\end{enumerate}
+	\item Etapa de gestión
+		\begin{enumerate}
+		  \item Monitoreo constante del rendimiento de la aplicación \\
+			<no lo hacemos?>
+		 \item Reconfiguración correctiva según sea necesario. \\
+			<no lo hacemos?>
+		\end{enumerate}
+\end{enumerate}
+\end{enumerate}

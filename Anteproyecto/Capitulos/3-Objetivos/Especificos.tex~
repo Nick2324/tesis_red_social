@@ -1,0 +1,19 @@
+\begin{itemize}
+  \item Investigar acerca de las tecnologías a utilizar en el desarrollo del prototipo, las cuales son:
+      \begin{itemize}
+      \item Archimate (estandar)
+      \item Tecnologías andorid
+      \item SOA
+    \end{itemize}
+  \item Identificar los servicios que la aplicacion debe ofrecer y soportar.
+
+	\item Categorizar y jerarquizar los servicios identificados.
+
+	\item Identificar y especificar los componentes necesarios para dar cumplimiento a los servicios identificados.
+
+	\item Asignar los diferentes servicios a los respectivos componentes que los deben realizar.
+
+	\item Seleccionar servicios existentes (creados por terceros) que puedan ser utilizados.
+
+	\item Realizar los servicios restantes.
+\end{itemize}
