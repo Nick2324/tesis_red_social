@@ -1,16 +1,45 @@
 \documentclass[letter,12pt]{book}
 \usepackage[spanish]{babel}
 \usepackage[bookmarks]{hyperref}
-\usepackage[utf8]{inputenc}
+
+\usepackage[utf8x]{inputenc}
 \usepackage{lmodern}
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{pdflscape}
 \usepackage{array}
+\usepackage{hvfloat}
 \usepackage{apacite} 
 \graphicspath{ {./imagenes/} }
 \setcounter{secnumdepth}{3} % para que ponga 1.1.1.1 en subsubsecciones...
 \setcounter{tocdepth}{3} % para que añada las subsubsecciones en el indice...
+
+\hyphenation{ar-na-bol-di}
+\hyphenation{stake-hol-ders}
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\chapter*{\bibname}% <-- this line was changed from \chapter* to \section*
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\setlength{\parskip}{1ex}
 
 \begin{document}
 
@@ -33,7 +62,7 @@
     \end{large}
     \vspace*{0.2in}
     \begin{Large}
-    \textbf{EL TÍTULO DE LA TESIS} \\
+    \textbf{DISEÑO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SNA ORIENTADO AL DEPORTE SOBRE TECNOLOGÍAS MÓVILES} \\ 
     \end{Large}
     \vspace*{0.3in}
     \begin{large}
@@ -46,6 +75,7 @@
     \vspace*{0.1in}
     \begin{large}
     Dirigida por: \\
+    Doctor Carlos Enrique Montenegro Marin
     \end{large}
     \end{center}
 
@@ -57,11 +87,6 @@
   \mbox{}
   \thispagestyle{empty} % para que no se numere esta página
   
-  
-  \chapter*{Resumen} % si no queremos que añada la palabra "Capitulo"
-  \addcontentsline{toc}{section}{Resumen} % si queremos que aparezca en el índice
-  \markboth{RESUMEN}{RESUMEN} % encabezado
-  
   \tableofcontents % indice de contenidos
 
   \cleardoublepage
@@ -72,44 +97,60 @@
   \addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
   \listoftables % indice de tablas
   
+  \chapter*{Introducción} % si no queremos que añada la palabra "Capitulo"
+  \addcontentsline{toc}{section}{Introducción} % si queremos que aparezca en el índice
+  \markboth{INTRODUCCIÓN}{INTRODUCCIÓN} % encabezado
+  \input{./Capitulos/Introduccion/Introduccion.tex}
+  
+  \chapter*{Glosario}
+  \addcontentsline{toc}{section}{Glosario} % si queremos que aparezca en el índice
+  \markboth{GLOSARIO}{GLOSARIO} % encabezado
+  \input{./Capitulos/Glosario/Glosario.tex}
+  
   \chapter{Definición del problema}
-  \input{./Capitulos/1-Descripcion_problema/Descripcion_problema.tex}
+  \input{./Capitulos/Descripcion_problema/Descripcion_problema.tex}
   
   \chapter{Justificación del problema}
-  \input{./Capitulos/2-Justificacion/Justificacion.tex}
+  \input{./Capitulos/Justificacion/Justificacion.tex}
   
   \chapter{Objetivos}
   \section{Objetivo General}
-   \input{./Capitulos/3-Objetivos/General.tex}
+   \input{./Capitulos/Objetivos/General.tex}
   \section{Objetivos específicos}
-   \input{./Capitulos/3-Objetivos/Especificos.tex}
+   \input{./Capitulos/Objetivos/Especificos.tex}
   
   \chapter{Marco teórico}
   
-  \input{./Capitulos/4-Marco_teorico/Marco_teorico.tex}
+  \input{./Capitulos/Marco_teorico/Marco_teorico.tex}
   
   \chapter{Metodología}
-  \input{./Capitulos/5-Metodologia/Metodologia.tex}
+  \input{./Capitulos/Metodologia/Metodologia.tex}
   
-  \chapter{Métodos utilizados}
+%   \chapter{Métodos utilizados}
   
-  \input{./Capitulos/6-Metodos/Encuesta.tex}
+%   \input{./Capitulos/Metodos/Encuesta.tex}
   
   \chapter{Cronograma}
   
-  \chapter{Recursos}
+  \input{./Capitulos/Cronograma/Cronograma.tex}
   
-  \input{./Capitulos/8-Recursos/Hardware.tex}
-  \input{./Capitulos/8-Recursos/Software.tex}
+  \chapter{Costos}
+  
+  \input{./Capitulos/Recursos/Hardware.tex}
+  \input{./Capitulos/Recursos/Software.tex}
+  \input{./Capitulos/Recursos/Humanos.tex}
+  \input{./Capitulos/Recursos/Miscelaneos.tex}
+  \input{./Capitulos/Recursos/Totales.tex}
+  
   
   \bibliographystyle{apacite}
   \bibliography{bibliografia}
   
-  \renewcommand\appendixname{Anexo}
+%   \renewcommand\appendixname{Anexo}
   
-  \appendix
-  \chapter{Resultados encuesta inicial} \label{anexo1}
-  \input{./Capitulos/Anexos/Resultados_encuesta.tex}
+%   \appendix
+%   \chapter*{Resultados encuesta inicial} \label{anexo1}
+%   \input{./Capitulos/Anexos/Resultados_encuesta.tex}
   
   
   

@@ -1,0 +1,325 @@
+\section{Estado del arte} \label{cap:estado_arte}
+\subsection{UX - Análisis}
+Los servicios de redes sociales (SNS por sus siglas en ingles: Social Network Services) como Facebook, LinkedIn, Twitter, SportTracker o Xportia, ofrecen servicios para la gestión de la OSN de cada usuario que acceda a estas aplicaciones. Según un estudio hecho para medir la experiencia de usuario (UX por sus siglas en ingles: User eXperience) en los SNS, se encontraron 8 categorías que son críticas a la hora de diseñar una SNS y son:
+
+\begin{enumerate}
+  \item Self-expresion: Capacidad que tengan las OSN de compartir contenido relacionado a la vida real de los usuarios tal como lo pueden ser las fotos, los videos, los comentarios o las comunicaciones directas.
+  \item Reciprocity: Interacción bilateral en tiempo real, es decir, interacción instantánea con uno o varios individuales en la OSN (por ejemplo, por medio de los servicios de mensajería instantánea).
+  \item Learning: La información recibida por medio de la OSN debe poder ser utilizada en pro del desarrollo cognitivo del individual; debe existir información útil al individual que usa la OSN.
+  \item Curiosity: El contenido de la OSN debe ser interesante para quien la utiliza.
+  \item Suitability of functionality: Se refiere a cuán ``utilizable'' es una funcionalidad.
+  \item Suitability of content: La calidad y exactitud de la información que en la OSN reside debe ser suficiente para el individual perteneciente a ella.
+  \item Completeness of the user network: Los individuales deben querer pertenecer a la red social y buscar eficientemente a otros individuales para poder formar lazos con ellos y hacer crecer su red social.
+  \item Trust and privacy: Confianza en los servicios de las OSN, así como también la capacidad que tiene el usuario de gestionar la privacidad del contenido que comparte en dicha OSN. \cite{social_experience}
+
+Cada uno de las categorías nombradas hace parte de los factores que impulsan la utilización de los SNS para la gestión de las OSN de las personas. 
+\end{enumerate}
+
+\subsection{Factor distancia en la formación de las redes sociales}
+
+La formación de redes sociales (tanto fuera de línea como en línea) es afecta por la distancia entre cada individual y el posible tipo de enlace que los uniría. En \cite{evolution} se hizo un estudio acerca de la formación de lazos, la formación de triadas entre individuales de una red social basada en la inscripción localizaciones recomendadas y frecuentadas por los usuarios, teniendo como parámetros ``la edad'' o tiempo de vinculación del individual a la red social, el grado de cada individual (número de conexiones que tiene un individual a otro) y la localización de cada individual en la red social. También se analizó cómo afectaba la creación de nuevos lazos con la movilidad del usuario (el desplazamiento por lugares geográficos distintos). En conclusión, se verificó que la formación de lazos depende proporcionalmente de la edad y del grado del individual y es inversamente proporcional a la distancia que a cada individual y que la formación de lazos puede modelarse con solo dos de los tres factores (el grado y la distancia); en cuanto a la formación de triadas, se verificó que ésta depende de las características sociales de la red, tomando énfasis en los individuales compartidos entre los posibles individuales formadores de triadas. Además, en cuanto a la creación de nuevos lazos teniendo en cuenta los lugares visitados por cada usuario de la red social, se presenta un patrón: Los usuarios escogen un lugar popular para visitar y, posteriormente, dirimen con que usuario crear un lazo teniendo en cuenta su popularidad y que frecuente los mismos lugares siempre.
+
+\begin{landscape}
+  
+\begin{table}
+  \caption{Comparacion de redes, parte 1}
+  \label{tab:comparacion_redes_1}
+
+  \begin{center}
+  
+  \resizebox{20cm}{!}{
+  \begin{tabular}{|p{5cm}|llll|}
+    \hline
+    Fun\textbackslash Red social & \multicolumn{1}{c}{Sportfactor} & \multicolumn{1}{c}{Deportesreunidos} & \multicolumn{1}{c}{Mybestplay} & \multicolumn{1}{c|}{Subetudeporte} \\ 
+    \hline
+    Gestión de foros & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{Si} \\ 
+    \hline
+    Gestión de encuentros deportivos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Organización de eventos} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Encuentros deportivos informales} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Creación de grupos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Manejo de torneos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Organización y difusión} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Difusión info. Deportiva & \multicolumn{1}{c}{-RSS de noticias} & \multicolumn{1}{c}{- Blog propio} & \multicolumn{1}{c}{-Difusión de eventos} & \multicolumn{1}{c|}{- Gestión de blogs} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Blog propio} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Serv. self-expression & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Difusión de multimedia} & \multicolumn{1}{c}{-Difusión de multimedia } & \multicolumn{1}{c|}{-Difusión de multimedia} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Sistema estadístico & \multicolumn{1}{c}{-Medición de avance en} & \multicolumn{1}{c}{- Sistemas de estadísticas para cada servicio} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{ estadísticas del deporte practicado} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de transversales & \multicolumn{1}{c}{-Trainner personales} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{-Guías de nutrición} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{- Catalogo de lesiones y fisioterapia} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Servicios deportivos & \multicolumn{1}{c}{-Guía deportiva (shops, restaurantes, etc.)} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Soporte multi-deporte & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{Solo deportes en equipo} & \multicolumn{1}{c|}{Si} \\ 
+    \hline
+    Gestión de tipos de usu. & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Equipos } & \multicolumn{1}{c}{Si} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Clubes} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Centros deportivos} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de sponsors & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión del conocimiento & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de geolocaliza. & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Soporte móvil & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Conexión con otros SNS & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+  \end{tabular}
+  }
+    \end{center}
+\end{table}
+  
+  \newpage
+  
+  \begin{table}
+  \caption{Comparacion de redes, parte 2}
+  \label{tab:comparacion_redes_2}
+
+  \begin{center}
+  
+  \resizebox{20cm}{!}{
+    \begin{tabular}{|p{4cm}|p{9cm}p{7cm}p{7cm}|}
+\hline
+Fun\textbackslash Red social & Sporttia & Amatteur & Fitivity  \\ 
+\hline
+Gestión de foros &  &  &  \\ 
+\hline
+Gestión de encuentros deportivos & - Organización de eventos en centros deportivos & - Publicación o búsqueda de eventos deportivos & -Basado en geolocalización \\ 
+ & - Gestión de jugadores &  &  \\ 
+ & -Gestión de características del partido &  &  \\ 
+\hline
+Creación de grupos &  &  &  \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Serv. self-expression &  & -Difusión de multimedia &  \\ 
+ &  &  &  \\ 
+\hline
+Sistema estadístico &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+ &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Servicios deportivos & -Alquiler de centros deportivos & - Servicios de compra y venta de artículos deportivos &  \\ 
+ &  &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Si & Si \\ 
+\hline
+Gestión de tipos de usu. & -Deportista -Centro deportivo & -Deportista  &  \\ 
+ &  & -Equipo &  \\ 
+ &  &  -Organización &  \\ 
+\hline
+Gestión de sponsors &  & -Promoción como deportista, equipo u organización &  \\ 
+\hline
+Gestión del conocimiento & - Clases virtuales &  &  \\ 
+\hline
+Gestión de geolocaliza. &  & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Soporte móvil &  &  & -Android \\ 
+ &  &  & -IOS \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{} \\ 
+\end{tabular}
+  }
+      \end{center}
+\end{table}
+
+\newpage
+
+\begin{table}
+  \caption{Comparacion de redes, parte 3}
+  \label{tab:comparacion_redes_3}
+
+  \begin{center}
+  \resizebox{20cm}{!}{
+  \begin{tabular}{|p{4cm}|p{7cm}p{6cm}p{9cm}|}
+\hline
+Fun\textbackslash Red social & Bkool & Deportmeet & Sportsnak \\ 
+\hline
+Gestión de foros &  &  & - Foros con profesionales (managers, coaches, teams) \\ 
+ &  &  & - Ofrece posibilidad al usuario de ser moderador de foros \\ 
+\hline
+Gestión de encuentros deportivos & - Creación de eventos deportivos (solo o con amigos) &  - Gestión de eventos deportivos & - Manejo de eventos deportivos \\ 
+ & - Gestión de ``retos'' &  &  \\ 
+\hline
+Gestión de grupos & Si &  &  \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva & - Gestión de información de ligas & - Artículos de profesionales & -Asociación con blogs deportivos \\ 
+ &  &  & - Manejo de ``live scores'' \\ 
+\hline
+Serv. self-expression & -Subida de texto plano & -Difusión de multimedia & - Manejo contenido plano y multimedia \\ 
+ & -Difusión de multimedia &  & - Uso de mensajería instantánea \\ 
+\hline
+Sistema estadístico & - Estadísticas de deportista & - Gestión del nivel del deportista &  \\ 
+ &  & -Manejo de perfiles de usuario &  \\ 
+\hline
+Gestión de transversales &  & -Foros de nutrición &  \\ 
+\hline
+Servicios deportivos &  & - Venta de artículos deportivos & - Módulos para negociantes en temas de deporte \\ 
+ &  &  & - Manejo de ofertas en ofrecimiento de instalaciones deportivas \\ 
+ &  &  & -- Herramientas para hacer ``boost'' a negociantes (bussiness member) \\ 
+\hline
+Soporte multi-deporte & Deportes de ruta & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Gestión de tipos de usu. &  &  & -Public member \\ 
+ &  &  & -Club member \\ 
+ &  &  & -Bussiness member \\ 
+\hline
+Gestión de sponsors &  &  & - Manejo de ``sponsorship'' \\ 
+\hline
+Gestión del conocimiento &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de geolocaliza. & - Posibilidad de grabar trazados & - Localización de eventos & - Geolocalización de actividad deportiva cercana a un punto \\ 
+ & (deportes de ruta) &  &  \\ 
+\hline
+Soporte móvil & -Android &  &  \\ 
+ & -IOS &  &  \\ 
+\hline
+Conexión con otros SNS & -Facebook &  &  \\ 
+ & -twitter &  &  \\ 
+\hline
+\end{tabular}
+}
+  
+  \end{center}
+\end{table}
+
+\newpage
+
+\begin{table}
+  \caption{Comparacion de redes, parte 4}
+  \label{tab:comparacion_redes_4}
+
+  \begin{center}
+    \resizebox{20cm}{!}{
+    \begin{tabular}{|p{5cm}|lll|}
+\hline
+Fun\textbackslash Red social & Huddlers & Yoyde & Timpik \\ 
+\hline
+Gestión de foros &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de encuentros deportivos & - Organización de eventos deportivos & - Manejo de eventos deportivos & - Manejo de eventos deportivos \\ 
+ &  &  &  \\ 
+\hline
+Gestión de grupos &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Manejo de torneos &  & Si &  \\ 
+\hline
+Difusión info. Deportiva &  & - Manejo de blogs &  \\ 
+ &  &  &  \\ 
+\hline
+Serv. self-expression &  & -Manejo de ``muro'' & - Manejo de ``muro''  \\ 
+ &  &  & -Gestión de mensajería \\ 
+\hline
+Sistema estadístico &  &  &  \\ 
+ &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+\hline
+Servicios deportivos &  &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Gestión de tipos de usu. &  & -Club deportivo & - Manejo de perfil deportivo \\ 
+ &  & -Deportista &  \\ 
+\hline
+Gestión de sponsors &  &  &  \\ 
+\hline
+Gestión del conocimiento &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de geolocaliza. & - Funcionalidad ``jugando en'' & - Manejo de escenarios deportivos &  \\ 
+ &  & - Manejo de ``rutas'' &  \\ 
+\hline
+Soporte móvil & -IOS &  & -Android \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\end{tabular}
+}
+  
+  \end{center}
+\end{table}
+
+\begin{table}
+  \caption{Comparacion de redes, parte 5}
+  \label{tab:comparacion_redes_5}
+
+  \begin{center}
+  \resizebox{20cm}{!}{
+    \begin{tabular}{|p{4cm}|p{7cm}p{7cm}p{8cm}|}
+\hline
+Fun\textbackslash Red social & Socialsports & Strava & Ineftos \\ 
+\hline
+Gestión de foros &  &  & Si \\ 
+\hline
+Gestión de encuentros deportivos & - Organizador de eventos deportivos & - Manejo de desafíos (challenges) & - Organización de eventos \\ 
+\hline
+Gestión de grupos &  &  & Si \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva &  &  & - Manejo de blogs para estudiantes \\ 
+\hline
+Serv. self-expression & - Manejo de multimedia &  & - Manejo de mensajería \\ 
+ &  &  & - Manejo de ``muro'' \\ 
+ &  &  & - Manejo de multimedia \\ 
+\hline
+Sistema estadístico &  & - Gestión de estadísticas del atleta & - Utiliza mecanismo de encuestas para autorregularse \\ 
+ &  & - Gestión de ``follows'' a otros deportistas para comparación de estadísticas (competencia) & - Gestión de foros: Estadísticas de foro \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+\hline
+Servicios deportivos & - Evaluación de la comunidad sobre los prestadores de servicio &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Monodeporte (ciclomontañismo) & Si \\ 
+\hline
+Gestión de tipos de usu. & - Manejo de perfil de deportista (deportes practicados, lugares frecuentados, horarios frecuentados) &  & - Manejo de usuarios (profesores, alumnos, entidades sin ánimo de lucro) \\ 
+ & - Manejo de usuarios (prestadores de servicio y deportistas) &  &  \\ 
+\hline
+Gestión de sponsors &  &  &  \\ 
+\hline
+Gestión del conocimiento &  & - Encuentro de consejos deportivos & - ``Social learning'' \\ 
+\hline
+Gestión de geolocaliza. &  & - Gestión de trazados logrados &  \\ 
+ &  & - Gestión de trazados &  \\ 
+\hline
+Soporte móvil &  & -Android &  \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\end{tabular}
+  }
+  \end{center}
+\end{table}
+
+\end{landscape}
