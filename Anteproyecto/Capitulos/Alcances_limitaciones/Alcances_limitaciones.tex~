@@ -1,0 +1,13 @@
+\section{Alcances y limitaciones}
+
+\subsection{Alcances}
+
+Este proyecto pretende diseñar e implementar un prototipo de SNS orientado al deporte bajo dispositivos moviles ANDROID, utilizando una arquitectura orientada a servicios que facilite el desarrollo y la interoperabilidad con diferentes sistemas que existen actualmente en el mercado. Para esto, se utilizará el entorno de desarrollo que brinda Android a los desarrolladores en conjunto con los diferentes dispositivos disponibles para el desarrollo del proyecto. El prototipo a implementar se centrará en \textbf{DOS} (2) deportes e implementará \textbf{TRES} (3) funcionalidades básicas propias de una red social, esto con el objetivo de que el producto final sea de la mayor calidad posible.
+
+\subsection{Limitaciones}
+
+Entre las diferentes limitaciones que se pueden encontrar en el desarrollo del actual proyecto, se encuentran las siguientes:
+
+Disponibilidad de dispositivos de prueba: Ya que en el mercado existe una gran cantidad de dispositivos moviles, todos con diferentes especificaciones, es imposible garantizar que la aplicación a diseñar sea soportada por todos los dispositivos del mercado. Sin embargo, se tienen diferentes dispositivos, entre tablets y celulares, en donde se pueden realizar las pruebas (referenciados en los recursos de software), limitando los dispositivos soportados oficialmente por el prototipo.
+
+Disponibilidad de equipos a usar como servidores: Al necesitar de varios servidores para soportar los diferentes servicios que puedan ser necesitados, es posible estos se encuentren ubicados en equipos que no sean los indicados para desempeñarse como servidores, lo que limita el rendimiento y capacidad de pruebas del prototipo.

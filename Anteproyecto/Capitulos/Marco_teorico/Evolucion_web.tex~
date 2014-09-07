@@ -6,7 +6,7 @@ La evolución de los servicios proporcionados a través de internet ha sido drá
   \begin{center}
     \includegraphics[width=11cm]{./imagenes/utilizacion_internet.png}
     \caption{Cambio de la utilización de internet en función de los servicios de conectividad social que son creados y soportados en ella}
+    \cite{evolucion_web}.
     \label{fig:utilizacion_internet}
-    \textbf{Fuente:}  FALTA
   \end{center}
 \end{figure}

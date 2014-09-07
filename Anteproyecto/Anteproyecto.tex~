@@ -10,12 +10,18 @@
 \usepackage{array}
 \usepackage{hvfloat}
 \usepackage{apacite} 
+\usepackage{chngcntr} %para numeracion de figuras
 \graphicspath{ {./imagenes/} }
 \setcounter{secnumdepth}{3} % para que ponga 1.1.1.1 en subsubsecciones...
 \setcounter{tocdepth}{3} % para que añada las subsubsecciones en el indice...
 
 \hyphenation{ar-na-bol-di}
 \hyphenation{stake-hol-ders}
+
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
 
 \makeatletter
 \renewenvironment{thebibliography}[1]
@@ -58,15 +64,15 @@
     PROYECTO CURRICULAR DE INGENIERÍA DE SISTEMAS \\
     \vspace*{0.6in}
     \begin{large}
-    Tesis:\\
+    Anteproyecto:\\
     \end{large}
     \vspace*{0.2in}
     \begin{Large}
-    \textbf{DISEÑO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SNA ORIENTADO AL DEPORTE SOBRE TECNOLOGÍAS MÓVILES} \\ 
+    \textbf{DISEÑO E IMPLEMENTACIÓN DE UN PROTOTIPO DE SNS ORIENTADO AL DEPORTE SOBRE TECNOLOGÍAS MÓVILES} \\ 
     \end{Large}
     \vspace*{0.3in}
     \begin{large}
-    Presentada por:\\
+    Presentado por:\\
       Nicolás Mauricio Garcia Garzon 20091020031 \\
       Luis Felipe Gonzalez Moreno 20091020035
     \end{large}
@@ -97,6 +103,9 @@
   \addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
   \listoftables % indice de tablas
   
+  \counterwithout{figure}{chapter}
+  \counterwithout{table}{chapter}
+  
   \chapter*{Introducción} % si no queremos que añada la palabra "Capitulo"
   \addcontentsline{toc}{section}{Introducción} % si queremos que aparezca en el índice
   \markboth{INTRODUCCIÓN}{INTRODUCCIÓN} % encabezado
@@ -118,13 +127,27 @@
    \input{./Capitulos/Objetivos/General.tex}
   \section{Objetivos específicos}
    \input{./Capitulos/Objetivos/Especificos.tex}
-  
+
+  \chapter{Marco conceptual}
+  \input{./Capitulos/Marco_teorico/Marco_conceptual.tex}
+ 
   \chapter{Marco teórico}
-  
   \input{./Capitulos/Marco_teorico/Marco_teorico.tex}
+
+  \chapter{Marco fundamental}
+  \input{./Capitulos/Marco_teorico/Marco_fundamental.tex}  
+  
+  \chapter{Marco legal}
+  \input{./Capitulos/Marco_teorico/Marco_legal.tex}
+  
+  \chapter{Alcances y limitaciones}
+  \input{./Capitulos/Alcances_limitaciones/Alcances_limitaciones.tex}
   
   \chapter{Metodología}
   \input{./Capitulos/Metodologia/Metodologia.tex}
+
+  \chapter{Propuesta de arquitectura}
+  \input{./Capitulos/Arquitectura/Arquitectura.tex}
   
 %   \chapter{Métodos utilizados}
   
@@ -135,6 +158,7 @@
   \input{./Capitulos/Cronograma/Cronograma.tex}
   
   \chapter{Costos}
+  \label{cap:costos}
   
   \input{./Capitulos/Recursos/Hardware.tex}
   \input{./Capitulos/Recursos/Software.tex}
