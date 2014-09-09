@@ -326,7 +326,7 @@
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="498d755b" name="Intro - Organización de eventos deportivos">
       <child xsi:type="archimate:DiagramObject" id="930f95e4" textAlignment="2" archimateElement="c09fd0d8">
-        <bounds x="600" y="72"/>
+        <bounds x="564" y="72"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="ffcbb750" textAlignment="2" targetConnections="0259a829" archimateElement="b9bda510">
         <bounds x="120" y="216"/>
@@ -344,7 +344,7 @@
         <bounds x="288" y="216"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="1706dd2b" textAlignment="2" archimateElement="70812f5d">
-        <bounds x="456" y="72"/>
+        <bounds x="436" y="23"/>
       </child>
     </element>
   </folder>
