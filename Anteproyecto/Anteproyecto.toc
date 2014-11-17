@@ -1,0 +1,69 @@
+\select@language {spanish}
+\contentsline {chapter}{Lista de figuras}{7}{chapter*.2}
+\contentsline {chapter}{Lista de tablas}{9}{chapter*.3}
+\contentsline {section}{Introducci\IeC {\'o}n}{11}{chapter*.5}
+\contentsline {section}{Glosario}{13}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Definici\IeC {\'o}n del problema}{15}{chapter.1}
+\contentsline {chapter}{\numberline {2}Justificaci\IeC {\'o}n del problema}{19}{chapter.2}
+\contentsline {chapter}{\numberline {3}Objetivos}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objetivo General}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Objetivos espec\IeC {\'\i }ficos}{23}{section.3.2}
+\contentsline {chapter}{\numberline {4}Marco conceptual}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Comunicaci\IeC {\'o}n}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Evoluci\IeC {\'o}n de la web}{26}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}R\IeC {\'e}d social}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Business Process Modeling Notation (BPMN)}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Pertinencia con el proyecto}{29}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Service-Oriented Architecture (SOA)}{29}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Primeros conceptos}{29}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Computaci\IeC {\'o}n orientada a servicios}{30}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Pertinencia con el proyecto}{35}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Scrum}{35}{section.4.5}
+\contentsline {chapter}{\numberline {5}Marco te\IeC {\'o}rico}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Redes Sociales}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}SNA: Social Network Analisis}{37}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Analisis egoc\IeC {\'e}ntrico}{37}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Grado de centralidad}{38}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Grado de cercan\IeC {\'\i }a}{40}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Factor distancia en la formaci\IeC {\'o}n de las redes sociales}{40}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Grado de intermediaci\IeC {\'o}n}{41}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}D\IeC {\'\i }adas}{42}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Tr\IeC {\'\i }adas}{43}{subsection.5.1.8}
+\contentsline {subsection}{\numberline {5.1.9}An\IeC {\'a}lisis Tri\IeC {\'a}dico}{45}{subsection.5.1.9}
+\contentsline {section}{\numberline {5.2}UX - An\IeC {\'a}lisis}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}Business Process Modeling Notation (BPMN)}{47}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Enlaces}{47}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Colaboraci\IeC {\'o}n}{49}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Service-Oriented Architecture (SOA)}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Proceso de An\IeC {\'a}lisis y dise\IeC {\~n}o orientados a servicios}{51}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Metas y beneficios de la computaci\IeC {\'o}n orientada a servicios }{52}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Scrum}{53}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Equipo Scrum (Scrum Team)}{53}{subsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.1.1}Product Owner (due\IeC {\~n}o del producto)}{53}{subsubsection.5.5.1.1}
+\contentsline {subsubsection}{\numberline {5.5.1.2}Development Team (Equipo de desarrollo)}{53}{subsubsection.5.5.1.2}
+\contentsline {subsubsection}{\numberline {5.5.1.3}Scrum Master}{54}{subsubsection.5.5.1.3}
+\contentsline {subsection}{\numberline {5.5.2}Eventos}{55}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Sprint}{55}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}Sprint Planning Meeting (Reuni\IeC {\'o}n de Planificaci\IeC {\'o}n de Sprint)}{56}{subsubsection.5.5.2.2}
+\contentsline {subsubsection}{\numberline {5.5.2.3}Daily Scrum (Scrum Diario)}{56}{subsubsection.5.5.2.3}
+\contentsline {subsubsection}{\numberline {5.5.2.4}Sprint Review (Revisi\IeC {\'o}n de Sprint)}{56}{subsubsection.5.5.2.4}
+\contentsline {subsubsection}{\numberline {5.5.2.5}Sprint Retrospective (Retrospectiva de Sprint)}{56}{subsubsection.5.5.2.5}
+\contentsline {subsection}{\numberline {5.5.3}Artefactos}{57}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}Sprint Goal (Objetivo del Sprint)}{57}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}Product Backlog (Lista de Producto)}{57}{subsubsection.5.5.3.2}
+\contentsline {subsubsection}{\numberline {5.5.3.3}Sprint Backlog (Lista de Pendientes del Sprint)}{57}{subsubsection.5.5.3.3}
+\contentsline {section}{\numberline {5.6}Estado del arte}{57}{section.5.6}
+\contentsline {chapter}{\numberline {6}Marco legal}{65}{chapter.6}
+\contentsline {chapter}{\numberline {7}Alcances y limitaciones}{69}{chapter.7}
+\contentsline {section}{\numberline {7.1}Alcances y limitaciones}{69}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Alcances}{69}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Limitaciones}{70}{subsection.7.1.2}
+\contentsline {chapter}{\numberline {8}Metodolog\IeC {\'\i }a}{73}{chapter.8}
+\contentsline {chapter}{\numberline {9}Propuesta de arquitectura}{77}{chapter.9}
+\contentsline {chapter}{\numberline {10}Cronograma}{79}{chapter.10}
+\contentsline {chapter}{\numberline {11}Costos}{81}{chapter.11}
+\contentsline {section}{\numberline {11.1}Recursos de Hardware}{81}{section.11.1}
+\contentsline {section}{\numberline {11.2}Recursos de Software}{81}{section.11.2}
+\contentsline {section}{\numberline {11.3}Recursos humanos}{81}{section.11.3}
+\contentsline {section}{\numberline {11.4}Recursos miscel\IeC {\'a}neos}{81}{section.11.4}
+\contentsline {section}{\numberline {11.5}Costos totales}{84}{section.11.5}

@@ -19,7 +19,7 @@ En la tabla \ref{tab:rec_humanos} se muestran los costos estimados en los que se
           \hline
         \end{tabular}    
     } \\
-    \textbf{Fuente}: Manual de referencia de tarifas ACIEM (Asociacion Colombiana de Ingenieros - http://goo.gl/AJ2yMn \\
+    \cite{manual_referencia_costos} \\
     \scriptsize  *No tienen dedicación completa para el desarrollo del proyecto, por lo que se contabiliza el 50\% del salario únicamente.
     \end{center}
   \end{table}

@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Anteproyecto2.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: bibliografia.bib
+Warning--entry type for "manual_referencia_costos" isn't style-file defined
+--line 5 of file bibliografia.bib
+Warning--entry type for "evolucion_web" isn't style-file defined
+--line 93 of file bibliografia.bib
+Warning--entry type for "scrum_guide" isn't style-file defined
+--line 114 of file bibliografia.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+Warning--No journal in dynamics
+You've used 14 entries,
+            6735 wiz_defined-function locations,
+            1297 strings with 12280 characters,
+and the built_in function-call counts, 24031 in all, are:
+= -- 3082
+> -- 196
+< -- 1069
++ -- 1019
+- -- 30
+* -- 1405
+:= -- 4286
+add.period$ -- 56
+call.type$ -- 14
+change.case$ -- 225
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 558
+empty$ -- 998
+format.name$ -- 317
+if$ -- 4719
+int.to.chr$ -- 0
+int.to.str$ -- 28
+missing$ -- 0
+newline$ -- 339
+num.names$ -- 112
+pop$ -- 413
+preamble$ -- 1
+purify$ -- 55
+quote$ -- 0
+skip$ -- 1793
+stack$ -- 0
+substring$ -- 1113
+swap$ -- 289
+text.length$ -- 28
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 1336
+warning$ -- 1
+while$ -- 107
+width$ -- 0
+write$ -- 412
+(There were 4 warnings)
