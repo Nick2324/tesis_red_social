@@ -1,0 +1,6 @@
+graph diada{
+	concentrate=true
+	label="Par conectado"
+	B	
+	A -- C
+}
