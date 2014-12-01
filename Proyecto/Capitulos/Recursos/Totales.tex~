@@ -1,0 +1,26 @@
+\section{Costos totales}
+  \begin{table}[!htb]
+    \caption{Costos totales}
+    \label{tab:rec_totales}
+    \begin{center}
+    \resizebox{11cm}{!}{
+      \begin{tabular}{|l|l|l|}
+        \hline
+        Concepto                       & Financiación          & Valor        \\
+        \hline
+        \hline
+        Hardware                       & Propia                & \$3'120.000  \\
+        Humanos (Director/co-Director) & Universidad Distrital & \$29'568.000 \\
+        Humanos (Developement team)    & Propia                & \$22'176.000 \\
+        Misceláneos                    & Propia                & \$2'004.000  \\
+        \hline
+        \multicolumn{2}{|r|}{\textbf{Sub-Total}}                 & \$55'064.400 \\
+        \hline
+        Otros (20\%)                   & Propia                & \$11'012.880 \\
+        \hline
+        \multicolumn{2}{|r|}{\textbf{Total}}                     & \$66'077.280 \\
+        \hline
+      \end{tabular}
+    }
+    \end{center}
+  \end{table}

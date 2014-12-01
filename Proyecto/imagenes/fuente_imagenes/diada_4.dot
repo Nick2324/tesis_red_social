@@ -1,0 +1,7 @@
+digraph diada{
+	concentrate=true
+	rankdir=LR
+	label="Diada 4"
+	A -> B
+	B -> A
+}
