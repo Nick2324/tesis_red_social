@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  1 DEC 2014 17:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  3 DEC 2014 18:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -488,7 +488,7 @@ s-converted-to.pdf imagenes/Logo_Distrital.eps>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<imagenes/Logo_Distrital-eps-converted-to.pdf, id=341, 266.9975pt x 230.8625pt>
+<imagenes/Logo_Distrital-eps-converted-to.pdf, id=357, 266.9975pt x 230.8625pt>
 File: imagenes/Logo_Distrital-eps-converted-to.pdf Graphic file (type pdf)
 <use imagenes/Logo_Distrital-eps-converted-to.pdf>
 Package pdftex.def Info: imagenes/Logo_Distrital-eps-converted-to.pdf used on i
@@ -567,19 +567,18 @@ LaTeX Info: Redefining \% on input line 105.
  [8] (./Anteproyecto.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-)
-\tf@lot=\write6
-\openout6 = `Anteproyecto.lot'.
-
  [9
 
 
-]
+])
+\tf@lot=\write6
+\openout6 = `Anteproyecto.lot'.
+
 LaTeX Info: Redefining \. on input line 112.
 LaTeX Info: Redefining \% on input line 112.
- [10
+ [10] (./Capitulos/Introduccion/Introduccion.tex) [11
 
-] (./Capitulos/Introduccion/Introduccion.tex) [11]
+]
 LaTeX Info: Redefining \. on input line 117.
 LaTeX Info: Redefining \% on input line 117.
  [12
@@ -652,7 +651,7 @@ ong^^Seneres o cualquier
 ) [25
 
 ] (./Capitulos/Marco_teorico/Evolucion_web.tex
-<./imagenes/utilizacion_internet.png, id=667, 746.79pt x 513.92pt>
+<./imagenes/utilizacion_internet.png, id=709, 746.79pt x 513.92pt>
 File: ./imagenes/utilizacion_internet.png Graphic file (type png)
 
 <use ./imagenes/utilizacion_internet.png>
@@ -673,7 +672,7 @@ converted-to.pdf ./imagenes/Red_simple.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_simple-eps-converted-to.pdf, id=673, 135.50626pt x 57.21375pt>
+<./imagenes/Red_simple-eps-converted-to.pdf, id=715, 135.50626pt x 57.21375pt>
 File: ./imagenes/Red_simple-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/Red_simple-eps-converted-to.pdf>
@@ -701,7 +700,7 @@ eps-converted-to.pdf ./imagenes/Red_asimetrica.eps>
 (epstopdf)             \includegraphics on input line 28.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=694, 206.7725pt x 67.25125p
+<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=736, 206.7725pt x 67.25125p
 t>
 File: ./imagenes/Red_asimetrica-eps-converted-to.pdf Graphic file (type pdf)
  <use ./imagenes/Red_asimetrica-eps-converted-to.pdf>
@@ -726,19 +725,19 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
  [29]
-<./imagenes/1.png, id=717, 539.01375pt x 415.5525pt>
+<./imagenes/1.png, id=759, 539.01375pt x 415.5525pt>
 File: ./imagenes/1.png Graphic file (type png)
  <use ./imagenes/1.png>
 Package pdftex.def Info: ./imagenes/1.png used on input line 79.
 (pdftex.def)             Requested size: 312.9803pt x 241.29327pt.
 
-<./imagenes/2.png, id=721, 606.01407pt x 417.81094pt>
+<./imagenes/2.png, id=763, 606.01407pt x 417.81094pt>
 File: ./imagenes/2.png Graphic file (type png)
  <use ./imagenes/2.png>
 Package pdftex.def Info: ./imagenes/2.png used on input line 90.
 (pdftex.def)             Requested size: 312.9803pt x 215.78387pt.
 
-<./imagenes/3.png, id=725, 397.485pt x 311.66437pt>
+<./imagenes/3.png, id=767, 397.485pt x 311.66437pt>
 File: ./imagenes/3.png Graphic file (type png)
  <use ./imagenes/3.png>
 Package pdftex.def Info: ./imagenes/3.png used on input line 101.
@@ -750,7 +749,7 @@ LaTeX Info: Redefining \% on input line 114.
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
  [31 <./imagenes/1.png>]
-<./imagenes/5.png, id=739, 461.47406pt x 143.78719pt>
+<./imagenes/5.png, id=782, 461.47406pt x 143.78719pt>
 File: ./imagenes/5.png Graphic file (type png)
  <use ./imagenes/5.png>
 Package pdftex.def Info: ./imagenes/5.png used on input line 129.
@@ -764,7 +763,7 @@ Underfull \vbox (badness 2229) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
  [33 <./imagenes/3.png> <./imagenes/5.png>]
-<./imagenes/4.png, id=751, 510.40688pt x 424.58624pt>
+<./imagenes/4.png, id=794, 510.40688pt x 424.58624pt>
 File: ./imagenes/4.png Graphic file (type png)
  <use ./imagenes/4.png>
 Package pdftex.def Info: ./imagenes/4.png used on input line 145.
@@ -799,7 +798,7 @@ s-converted-to.pdf ./imagenes/red_estrella.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_estrella-eps-converted-to.pdf, id=792, 230.8625pt x 212.795pt>
+<./imagenes/red_estrella-eps-converted-to.pdf, id=834, 230.8625pt x 212.795pt>
 File: ./imagenes/red_estrella-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/red_estrella-eps-converted-to.pdf>
@@ -829,7 +828,7 @@ verted-to.pdf ./imagenes/bow_tie.eps>
 (epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/bow_tie-eps-converted-to.pdf, id=824, 195.73125pt x 194.7275pt>
+<./imagenes/bow_tie-eps-converted-to.pdf, id=866, 195.73125pt x 194.7275pt>
 File: ./imagenes/bow_tie-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/bow_tie-eps-converted-to.pdf>
@@ -847,7 +846,7 @@ verted-to.pdf ./imagenes/diada_1.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_1-eps-converted-to.pdf, id=826, 136.51pt x 131.49126pt>
+<./imagenes/diada_1-eps-converted-to.pdf, id=868, 136.51pt x 131.49126pt>
 File: ./imagenes/diada_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_1-eps-converted-to.pdf>
@@ -865,7 +864,7 @@ verted-to.pdf ./imagenes/diada_2.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_2-eps-converted-to.pdf, id=827, 135.50626pt x 82.3075pt>
+<./imagenes/diada_2-eps-converted-to.pdf, id=869, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_2-eps-converted-to.pdf>
@@ -883,7 +882,7 @@ verted-to.pdf ./imagenes/diada_3.eps>
 (epstopdf)             \includegraphics on input line 99.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_3-eps-converted-to.pdf, id=828, 135.50626pt x 82.3075pt>
+<./imagenes/diada_3-eps-converted-to.pdf, id=870, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_3-eps-converted-to.pdf>
@@ -901,7 +900,7 @@ verted-to.pdf ./imagenes/diada_4.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_4-eps-converted-to.pdf, id=829, 135.50626pt x 82.3075pt>
+<./imagenes/diada_4-eps-converted-to.pdf, id=871, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_4-eps-converted-to.pdf>
@@ -928,7 +927,7 @@ a_1-eps-converted-to.pdf ./imagenes/triada_simetrica_1.eps>
 (epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=840, 136.51pt x 133.498
+<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=882, 136.51pt x 133.498
 75pt>
 File: ./imagenes/triada_simetrica_1-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -948,7 +947,7 @@ a_2-eps-converted-to.pdf ./imagenes/triada_simetrica_2.eps>
 (epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=841, 132.495pt x 196.73
+<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=883, 132.495pt x 196.73
 5pt>
 File: ./imagenes/triada_simetrica_2-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -968,7 +967,7 @@ a_3-eps-converted-to.pdf ./imagenes/triada_simetrica_3.eps>
 (epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=842, 163.61125pt x 134.
+<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=884, 163.61125pt x 134.
 5025pt>
 File: ./imagenes/triada_simetrica_3-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -988,7 +987,7 @@ a_4-eps-converted-to.pdf ./imagenes/triada_simetrica_4.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=843, 142.5325pt x 149.5
+<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=885, 142.5325pt x 149.5
 5875pt>
 File: ./imagenes/triada_simetrica_4-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1021,7 +1020,7 @@ converted-to.pdf ./imagenes/triada_003.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_003-eps-converted-to.pdf, id=891, 142.5325pt x 175.65625pt>
+<./imagenes/triada_003-eps-converted-to.pdf, id=933, 142.5325pt x 175.65625pt>
 File: ./imagenes/triada_003-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_003-eps-converted-to.pdf>
@@ -1040,7 +1039,7 @@ converted-to.pdf ./imagenes/triada_012.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_012-eps-converted-to.pdf, id=892, 163.61125pt x 160.6pt>
+<./imagenes/triada_012-eps-converted-to.pdf, id=934, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_012-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_012-eps-converted-to.pdf>
@@ -1059,7 +1058,7 @@ f>
 (epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021C-eps-converted-to.pdf, id=893, 132.495pt x 222.8325pt>
+<./imagenes/triada_021C-eps-converted-to.pdf, id=935, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021C-eps-converted-to.pdf>
@@ -1078,7 +1077,7 @@ f>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021D-eps-converted-to.pdf, id=894, 132.495pt x 223.83624pt>
+<./imagenes/triada_021D-eps-converted-to.pdf, id=936, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_021D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021D-eps-converted-to.pdf>
@@ -1097,7 +1096,7 @@ f>
 (epstopdf)             \includegraphics on input line 154.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021U-eps-converted-to.pdf, id=895, 132.495pt x 222.8325pt>
+<./imagenes/triada_021U-eps-converted-to.pdf, id=937, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021U-eps-converted-to.pdf>
@@ -1116,7 +1115,7 @@ f>
 (epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030C-eps-converted-to.pdf, id=896, 136.51pt x 159.59625pt>
+<./imagenes/triada_030C-eps-converted-to.pdf, id=938, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030C-eps-converted-to.pdf>
@@ -1135,7 +1134,7 @@ f>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030T-eps-converted-to.pdf, id=897, 136.51pt x 159.59625pt>
+<./imagenes/triada_030T-eps-converted-to.pdf, id=939, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030T-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030T-eps-converted-to.pdf>
@@ -1154,7 +1153,7 @@ converted-to.pdf ./imagenes/triada_102.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_102-eps-converted-to.pdf, id=898, 163.61125pt x 160.6pt>
+<./imagenes/triada_102-eps-converted-to.pdf, id=940, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_102-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_102-eps-converted-to.pdf>
@@ -1173,7 +1172,7 @@ f>
 (epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111D-eps-converted-to.pdf, id=899, 132.495pt x 222.8325pt>
+<./imagenes/triada_111D-eps-converted-to.pdf, id=941, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111D-eps-converted-to.pdf>
@@ -1192,7 +1191,7 @@ f>
 (epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111U-eps-converted-to.pdf, id=900, 132.495pt x 222.8325pt>
+<./imagenes/triada_111U-eps-converted-to.pdf, id=942, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111U-eps-converted-to.pdf>
@@ -1211,7 +1210,7 @@ f>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120C-eps-converted-to.pdf, id=901, 136.51pt x 159.59625pt>
+<./imagenes/triada_120C-eps-converted-to.pdf, id=943, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120C-eps-converted-to.pdf>
@@ -1230,7 +1229,7 @@ f>
 (epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120D-eps-converted-to.pdf, id=902, 136.51pt x 159.59625pt>
+<./imagenes/triada_120D-eps-converted-to.pdf, id=944, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120D-eps-converted-to.pdf>
@@ -1249,7 +1248,7 @@ f>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120U-eps-converted-to.pdf, id=903, 136.51pt x 159.59625pt>
+<./imagenes/triada_120U-eps-converted-to.pdf, id=945, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120U-eps-converted-to.pdf>
@@ -1268,7 +1267,7 @@ converted-to.pdf ./imagenes/triada_201.eps>
 (epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_201-eps-converted-to.pdf, id=904, 132.495pt x 223.83624pt>
+<./imagenes/triada_201-eps-converted-to.pdf, id=946, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_201-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_201-eps-converted-to.pdf>
@@ -1287,7 +1286,7 @@ converted-to.pdf ./imagenes/triada_210.eps>
 (epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_210-eps-converted-to.pdf, id=905, 136.51pt x 159.59625pt>
+<./imagenes/triada_210-eps-converted-to.pdf, id=947, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_210-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_210-eps-converted-to.pdf>
@@ -1306,7 +1305,7 @@ converted-to.pdf ./imagenes/triada_300.eps>
 (epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_300-eps-converted-to.pdf, id=906, 136.51pt x 159.59625pt>
+<./imagenes/triada_300-eps-converted-to.pdf, id=948, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_300-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_300-eps-converted-to.pdf>
@@ -1342,8 +1341,8 @@ kite-eps-converted-to.pdf ./imagenes/red_krackhardt_kite.eps>
 (epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=993, 311.1625pt x 289.
-08pt>
+<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=1036, 311.1625pt x 289
+.08pt>
 File: ./imagenes/red_krackhardt_kite-eps-converted-to.pdf Graphic file (type pd
 f)
  <use ./imagenes/red_krackhardt_kite-eps-converted-to.pdf>
@@ -1356,7 +1355,7 @@ Overfull \hbox (44.93935pt too wide) in paragraph at lines 1--1
 []\OT1/lmr/bx/n/17.28 Business Pro-cess Mod-el-ing No-ta-tion (BPMN) 
  []
 
-<./imagenes/gateway_exclusivo.png, id=996, 784.9325pt x 270.00874pt>
+<./imagenes/gateway_exclusivo.png, id=1039, 784.9325pt x 270.00874pt>
 File: ./imagenes/gateway_exclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_exclusivo.png>
@@ -1366,7 +1365,7 @@ Package pdftex.def Info: ./imagenes/gateway_exclusivo.png used on input line 13
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
  [45]
-<./imagenes/gateway_paralelo.png, id=1005, 737.75626pt x 249.93375pt>
+<./imagenes/gateway_paralelo.png, id=1048, 737.75626pt x 249.93375pt>
 File: ./imagenes/gateway_paralelo.png Graphic file (type png)
 
 <use ./imagenes/gateway_paralelo.png>
@@ -1377,7 +1376,7 @@ LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
  [46 <./imagenes/red_krackhardt_kite-eps-converted-to.pdf> <./imagenes/gateway_
 exclusivo.png>]
-<./imagenes/gateway_inclusivo.png, id=1020, 785.93625pt x 306.14375pt>
+<./imagenes/gateway_inclusivo.png, id=1062, 785.93625pt x 306.14375pt>
 File: ./imagenes/gateway_inclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_inclusivo.png>
@@ -1385,7 +1384,7 @@ Package pdftex.def Info: ./imagenes/gateway_inclusivo.png used on input line 35
 .
 (pdftex.def)             Requested size: 312.9803pt x 121.9181pt.
 
-<./imagenes/gateway_complejo.png, id=1024, 959.585pt x 337.26pt>
+<./imagenes/gateway_complejo.png, id=1066, 959.585pt x 337.26pt>
 File: ./imagenes/gateway_complejo.png Graphic file (type png)
 
 <use ./imagenes/gateway_complejo.png>
@@ -1395,7 +1394,7 @@ Package pdftex.def Info: ./imagenes/gateway_complejo.png used on input line 47.
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
  [47 <./imagenes/gateway_paralelo.png> <./imagenes/gateway_inclusivo.png>]
-<./imagenes/diagrama_colaboracion.png, id=1035, 958.58125pt x 464.73625pt>
+<./imagenes/diagrama_colaboracion.png, id=1077, 958.58125pt x 464.73625pt>
 File: ./imagenes/diagrama_colaboracion.png Graphic file (type png)
 
 <use ./imagenes/diagrama_colaboracion.png>
@@ -1403,7 +1402,7 @@ Package pdftex.def Info: ./imagenes/diagrama_colaboracion.png used on input lin
 e 65.
 (pdftex.def)             Requested size: 312.9803pt x 151.73952pt.
 
-<./imagenes/diagrama_colaboracion_caja_negra.png, id=1039, 963.6pt x 434.62375p
+<./imagenes/diagrama_colaboracion_caja_negra.png, id=1081, 963.6pt x 434.62375p
 t>
 File: ./imagenes/diagrama_colaboracion_caja_negra.png Graphic file (type png)
  <use ./imagenes/diagrama_colaboracion_caja_negra.png>
@@ -1420,7 +1419,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
  [49 <./imagenes/diagrama_colaboracion.png> <./imagenes/diagrama_colaboracion_c
-aja_negra.png>] <./imagenes/6.png, id=1055, 386.19281pt x 241.65282pt>
+aja_negra.png>] <./imagenes/6.png, id=1097, 386.19281pt x 241.65282pt>
 File: ./imagenes/6.png Graphic file (type png)
 
 <use ./imagenes/6.png>
@@ -1468,7 +1467,7 @@ LaTeX Warning: Citation `measuring_maintainability' undefined on input line 5.
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
-[58] <./imagenes/mantainability1.png, id=1117, 356.83313pt x 259.7203pt>
+[58] <./imagenes/mantainability1.png, id=1159, 356.83313pt x 259.7203pt>
 File: ./imagenes/mantainability1.png Graphic file (type png)
 
 <use ./imagenes/mantainability1.png>
@@ -1480,14 +1479,14 @@ LaTeX Info: Redefining \% on input line 40.
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 40.
 
-<./imagenes/mantainability2.png, id=1124, 268.00125pt x 103.13531pt>
+<./imagenes/mantainability2.png, id=1166, 268.00125pt x 103.13531pt>
 File: ./imagenes/mantainability2.png Graphic file (type png)
 
 <use ./imagenes/mantainability2.png>
 Package pdftex.def Info: ./imagenes/mantainability2.png used on input line 44.
 (pdftex.def)             Requested size: 312.9803pt x 120.44434pt.
 
-<./imagenes/mantainability3.png, id=1127, 266.49562pt x 141.52875pt>
+<./imagenes/mantainability3.png, id=1169, 266.49562pt x 141.52875pt>
 File: ./imagenes/mantainability3.png Graphic file (type png)
 
 <use ./imagenes/mantainability3.png>
@@ -1498,7 +1497,7 @@ Package pdftex.def Info: ./imagenes/mantainability3.png used on input line 55.
 LaTeX Warning: Reference `mantainability4' on page 60 undefined on input line 6
 2.
 
-<./imagenes/mantainability4.png, id=1132, 141.52875pt x 123.46124pt>
+<./imagenes/mantainability4.png, id=1174, 141.52875pt x 123.46124pt>
 File: ./imagenes/mantainability4.png Graphic file (type png)
 
 <use ./imagenes/mantainability4.png>
@@ -1569,34 +1568,409 @@ LaTeX Info: Redefining \% on input line 212.
 
 LaTeX Warning: Citation `archimate2' undefined on input line 3.
 
-<./imagenes/Archimate/businessactor.png, id=1227, 161.85469pt x 69.25874pt>
+<./imagenes/Archimate/businessactor.png, id=1270, 161.85469pt x 69.25874pt>
 File: ./imagenes/Archimate/businessactor.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessactor.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessactor.png used on input l
-ine 46.
+ine 70.
 (pdftex.def)             Requested size: 199.16928pt x 85.23105pt.
 
-<./imagenes/Archimate/businesscollaboration.png, id=1228, 176.91093pt x 69.2587
+<./imagenes/Archimate/businesscollaboration.png, id=1271, 176.91093pt x 69.2587
 4pt>
 File: ./imagenes/Archimate/businesscollaboration.png Graphic file (type png)
  <use ./imagenes/Archimate/businesscollaboration.png>
 Package pdftex.def Info: ./imagenes/Archimate/businesscollaboration.png used on
- input line 46.
+ input line 70.
 (pdftex.def)             Requested size: 199.16928pt x 77.974pt.
 
-Overfull \hbox (36.7862pt too wide) in paragraph at lines 25--47
+<./imagenes/Archimate/businessrole.png, id=1272, 209.28188pt x 69.25874pt>
+File: ./imagenes/Archimate/businessrole.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessrole.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessrole.png used on input li
+ne 70.
+(pdftex.def)             Requested size: 199.16928pt x 65.91167pt.
+
+<./imagenes/Archimate/businessprocess.png, id=1273, 204.765pt x 69.25874pt>
+File: ./imagenes/Archimate/businessprocess.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessprocess.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessprocess.png used on input
+ line 70.
+(pdftex.def)             Requested size: 199.16928pt x 67.37004pt.
+
+<./imagenes/Archimate/businessfunction.png, id=1274, 190.46156pt x 69.25874pt>
+File: ./imagenes/Archimate/businessfunction.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessfunction.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessfunction.png used on inpu
+t line 70.
+(pdftex.def)             Requested size: 199.16928pt x 72.4279pt.
+
+<./imagenes/Archimate/businessinteraction.png, id=1275, 158.84344pt x 69.25874p
+t>
+File: ./imagenes/Archimate/businessinteraction.png Graphic file (type png)
+ <use ./imagenes/Archimate/businessinteraction.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessinteraction.png used on i
+nput line 70.
+(pdftex.def)             Requested size: 199.16928pt x 86.84901pt.
+
+<./imagenes/Archimate/businessevent.png, id=1276, 184.43906pt x 69.25874pt>
+File: ./imagenes/Archimate/businessevent.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessevent.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessevent.png used on input l
+ine 70.
+(pdftex.def)             Requested size: 199.16928pt x 74.78986pt.
+
+<./imagenes/Archimate/businessservice.png, id=1277, 211.54031pt x 69.25874pt>
+File: ./imagenes/Archimate/businessservice.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessservice.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessservice.png used on input
+ line 70.
+(pdftex.def)             Requested size: 199.16928pt x 65.211pt.
+
+<./imagenes/Archimate/businessproduct.png, id=1278, 105.39375pt x 69.25874pt>
+File: ./imagenes/Archimate/businessproduct.png Graphic file (type png)
+
+<use ./imagenes/Archimate/businessproduct.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessproduct.png used on input
+ line 70.
+(pdftex.def)             Requested size: 199.16928pt x 130.88594pt.
+
+Overfull \hbox (36.7863pt too wide) in paragraph at lines 21--71
+ [][] 
+ []
+
+
+<./imagenes/Archimate/applicationcomponent.png, id=1282, 246.1697pt x 69.25874p
+t>
+File: ./imagenes/Archimate/applicationcomponent.png Graphic file (type png)
+ <use ./imagenes/Archimate/applicationcomponent.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationcomponent.png used on 
+input line 112.
+(pdftex.def)             Requested size: 199.16928pt x 56.03796pt.
+
+<./imagenes/Archimate/applicationcollaboration.png, id=1283, 172.39406pt x 69.2
+5874pt>
+File: ./imagenes/Archimate/applicationcollaboration.png Graphic file (type png)
+
+ <use ./imagenes/Archimate/applicationcollaboration.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationcollaboration.png used
+ on input line 112.
+(pdftex.def)             Requested size: 199.16928pt x 80.0168pt.
+
+<./imagenes/Archimate/applicationfunction.png, id=1284, 181.42781pt x 69.25874p
+t>
+File: ./imagenes/Archimate/applicationfunction.png Graphic file (type png)
+ <use ./imagenes/Archimate/applicationfunction.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationfunction.png used on i
+nput line 112.
+(pdftex.def)             Requested size: 199.16928pt x 76.03265pt.
+
+<./imagenes/Archimate/applicationinteraction.png, id=1285, 151.3153pt x 69.2587
+4pt>
+File: ./imagenes/Archimate/applicationinteraction.png Graphic file (type png)
+ <use ./imagenes/Archimate/applicationinteraction.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationinteraction.png used o
+n input line 112.
+(pdftex.def)             Requested size: 199.16928pt x 91.16289pt.
+
+<./imagenes/Archimate/applicationservice.png, id=1286, 209.28188pt x 69.25874pt
+>
+File: ./imagenes/Archimate/applicationservice.png Graphic file (type png)
+ <use ./imagenes/Archimate/applicationservice.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationservice.png used on in
+put line 112.
+(pdftex.def)             Requested size: 199.16928pt x 65.91167pt.
+
+Overfull \hbox (36.78766pt too wide) in paragraph at lines 86--113
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
+[70]
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
+ [71 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscol
+laboration.png> <./imagenes/Archimate/businessrole.png> <./imagenes/Archimate/b
+usinessprocess.png> <./imagenes/Archimate/businessfunction.png> <./imagenes/Arc
+himate/businessinteraction.png> <./imagenes/Archimate/businessevent.png> <./ima
+genes/Archimate/businessservice.png> <./imagenes/Archimate/businessproduct.png>
+]
+<./imagenes/Archimate/technologynode.png, id=1299, 191.21437pt x 69.25874pt>
+File: ./imagenes/Archimate/technologynode.png Graphic file (type png)
+
+<use ./imagenes/Archimate/technologynode.png>
+Package pdftex.def Info: ./imagenes/Archimate/technologynode.png used on input 
+line 155.
+(pdftex.def)             Requested size: 199.16928pt x 72.14362pt.
+
+<./imagenes/Archimate/technologydevice.png, id=1300, 202.50656pt x 57.21375pt>
+File: ./imagenes/Archimate/technologydevice.png Graphic file (type png)
+
+<use ./imagenes/Archimate/technologydevice.png>
+Package pdftex.def Info: ./imagenes/Archimate/technologydevice.png used on inpu
+t line 155.
+(pdftex.def)             Requested size: 199.16928pt x 56.27248pt.
+
+<./imagenes/Archimate/technologynetwork.png, id=1301, 179.92218pt x 67.0003pt>
+File: ./imagenes/Archimate/technologynetwork.png Graphic file (type png)
+
+<use ./imagenes/Archimate/technologynetwork.png>
+Package pdftex.def Info: ./imagenes/Archimate/technologynetwork.png used on inp
+ut line 155.
+(pdftex.def)             Requested size: 199.16928pt x 74.17387pt.
+
+<./imagenes/Archimate/technologyswsystem.png, id=1302, 194.22563pt x 67.75313pt
+>
+File: ./imagenes/Archimate/technologyswsystem.png Graphic file (type png)
+ <use ./imagenes/Archimate/technologyswsystem.png>
+Package pdftex.def Info: ./imagenes/Archimate/technologyswsystem.png used on in
+put line 155.
+(pdftex.def)             Requested size: 199.16928pt x 69.47943pt.
+
+<./imagenes/Archimate/technologyservice.png, id=1303, 210.7875pt x 71.51718pt>
+File: ./imagenes/Archimate/technologyservice.png Graphic file (type png)
+
+<use ./imagenes/Archimate/technologyservice.png>
+Package pdftex.def Info: ./imagenes/Archimate/technologyservice.png used on inp
+ut line 155.
+(pdftex.def)             Requested size: 199.16928pt x 67.57645pt.
+
+Overfull \hbox (36.79253pt too wide) in paragraph at lines 129--156
+ [][] 
+ []
+
+<./imagenes/Archimate/relassociation.png, id=1307, 84.315pt x 18.0675pt>
+File: ./imagenes/Archimate/relassociation.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relassociation.png>
+Package pdftex.def Info: ./imagenes/Archimate/relassociation.png used on input 
+line 205.
+(pdftex.def)             Requested size: 199.16928pt x 42.68025pt.
+
+<./imagenes/Archimate/relusedby.png, id=1308, 65.49469pt x 22.58438pt>
+File: ./imagenes/Archimate/relusedby.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relusedby.png>
+Package pdftex.def Info: ./imagenes/Archimate/relusedby.png used on input line 
+205.
+(pdftex.def)             Requested size: 199.16928pt x 68.68956pt.
+
+<./imagenes/Archimate/relrealization.png, id=1309, 79.04532pt x 26.34843pt>
+File: ./imagenes/Archimate/relrealization.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relrealization.png>
+Package pdftex.def Info: ./imagenes/Archimate/relrealization.png used on input 
+line 205.
+(pdftex.def)             Requested size: 199.16928pt x 66.40118pt.
+
+<./imagenes/Archimate/relassignment.png, id=1310, 93.34875pt x 15.05624pt>
+File: ./imagenes/Archimate/relassignment.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relassignment.png>
+Package pdftex.def Info: ./imagenes/Archimate/relassignment.png used on input l
+ine 205.
+(pdftex.def)             Requested size: 199.16928pt x 32.1256pt.
+
+<./imagenes/Archimate/relaggregation.png, id=1311, 82.05656pt x 18.82031pt>
+File: ./imagenes/Archimate/relaggregation.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relaggregation.png>
+Package pdftex.def Info: ./imagenes/Archimate/relaggregation.png used on input 
+line 205.
+(pdftex.def)             Requested size: 199.16928pt x 45.68625pt.
+
+<./imagenes/Archimate/relcomposition.png, id=1312, 82.05656pt x 18.82031pt>
+File: ./imagenes/Archimate/relcomposition.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relcomposition.png>
+Package pdftex.def Info: ./imagenes/Archimate/relcomposition.png used on input 
+line 205.
+(pdftex.def)             Requested size: 199.16928pt x 45.68625pt.
+
+Overfull \hbox (36.80154pt too wide) in paragraph at lines 175--206
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
+[72 <./imagenes/Archimate/applicationcomponent.png> <./imagenes/Archimate/appli
+cationcollaboration.png> <./imagenes/Archimate/applicationfunction.png> <./imag
+enes/Archimate/applicationinteraction.png> <./imagenes/Archimate/applicationser
+vice.png>]
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
+ [73 <./imagenes/Archimate/technologynode.png> <./imagenes/Archimate/technology
+device.png> <./imagenes/Archimate/technologynetwork.png> <./imagenes/Archimate/
+technologyswsystem.png> <./imagenes/Archimate/technologyservice.png> <./imagene
+s/Archimate/relassociation.png> <./imagenes/Archimate/relusedby.png> <./imagene
+s/Archimate/relrealization.png> <./imagenes/Archimate/relassignment.png> <./ima
+genes/Archimate/relaggregation.png> <./imagenes/Archimate/relcomposition.png>] 
+<./imagenes/Archimate/relflow.png, id=1325, 57.96657pt x 21.07875pt>
+File: ./imagenes/Archimate/relflow.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relflow.png>
+Package pdftex.def Info: ./imagenes/Archimate/relflow.png used on input line 23
+3.
+(pdftex.def)             Requested size: 199.16928pt x 72.44153pt.
+
+<./imagenes/Archimate/reltriggering.png, id=1326, 63.23625pt x 22.58438pt>
+File: ./imagenes/Archimate/reltriggering.png Graphic file (type png)
+
+<use ./imagenes/Archimate/reltriggering.png>
+Package pdftex.def Info: ./imagenes/Archimate/reltriggering.png used on input l
+ine 233.
+(pdftex.def)             Requested size: 199.16928pt x 71.13353pt.
+
+Overfull \hbox (36.80643pt too wide) in paragraph at lines 219--234
+ [][] 
+ []
+
+<./imagenes/Archimate/reljunction.png, id=1330, 22.58438pt x 16.56187pt>
+File: ./imagenes/Archimate/reljunction.png Graphic file (type png)
+
+<use ./imagenes/Archimate/reljunction.png>
+Package pdftex.def Info: ./imagenes/Archimate/reljunction.png used on input lin
+e 261.
+(pdftex.def)             Requested size: 199.16928pt x 146.09743pt.
+
+<./imagenes/Archimate/relspecialization.png, id=1331, 92.59593pt x 27.10126pt>
+File: ./imagenes/Archimate/relspecialization.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relspecialization.png>
+Package pdftex.def Info: ./imagenes/Archimate/relspecialization.png used on inp
+ut line 261.
+(pdftex.def)             Requested size: 199.16928pt x 58.29466pt.
+
+Overfull \hbox (36.80043pt too wide) in paragraph at lines 247--262
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
+ [74 <./imagenes/Archimate/relflow.png> <./imagenes/Archimate/reltriggering.png
+> <./imagenes/Archimate/reljunction.png> <./imagenes/Archimate/relspecializatio
+n.png>]
+<./imagenes/Archimate/introductoryviewpoint.png, id=1340, 406.51875pt x 395.979
+37pt>
+File: ./imagenes/Archimate/introductoryviewpoint.png Graphic file (type png)
+ <use ./imagenes/Archimate/introductoryviewpoint.png>
+Package pdftex.def Info: ./imagenes/Archimate/introductoryviewpoint.png used on
+ input line 305.
+(pdftex.def)             Requested size: 199.16928pt x 194.00137pt.
+
+Overfull \hbox (113.81102pt too wide) in paragraph at lines 305--305
+[]|  
+ []
+
+
+Overfull \hbox (36.79068pt too wide) in paragraph at lines 283--306
+ [][] 
+ []
+
+
+Overfull \hbox (36.80476pt too wide) in paragraph at lines 317--340
+ [][] 
+ []
+
+
+<./imagenes/Archimate/businessfunctionviewpoint.png, id=1345, 645.91313pt x 110
+.66344pt>
+File: ./imagenes/Archimate/businessfunctionviewpoint.png Graphic file (type png
+)
+ <use ./imagenes/Archimate/businessfunctionviewpoint.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessfunctionviewpoint.png use
+d on input line 373.
+(pdftex.def)             Requested size: 199.16928pt x 34.12292pt.
+
+Overfull \hbox (113.81102pt too wide) in paragraph at lines 373--373
+[]|  
+ []
+
+
+Overfull \hbox (36.80632pt too wide) in paragraph at lines 351--374
+ [][] 
+ []
+
+
+<./imagenes/Archimate/businessprocessviewpoint.png, id=1348, 652.68843pt x 338.
+76563pt>
+File: ./imagenes/Archimate/businessprocessviewpoint.png Graphic file (type png)
+
+ <use ./imagenes/Archimate/businessprocessviewpoint.png>
+Package pdftex.def Info: ./imagenes/Archimate/businessprocessviewpoint.png used
+ on input line 407.
+(pdftex.def)             Requested size: 199.16928pt x 103.37247pt.
+
+Overfull \hbox (113.81102pt too wide) in paragraph at lines 407--407
+[]|  
+ []
+
+
+Overfull \hbox (36.80542pt too wide) in paragraph at lines 385--408
+ [][] 
+ []
+
+
+<./imagenes/Archimate/applicationusageviewpoint.png, id=1351, 635.37375pt x 432
+.11438pt>
+File: ./imagenes/Archimate/applicationusageviewpoint.png Graphic file (type png
+)
+ <use ./imagenes/Archimate/applicationusageviewpoint.png>
+Package pdftex.def Info: ./imagenes/Archimate/applicationusageviewpoint.png use
+d on input line 441.
+(pdftex.def)             Requested size: 199.16928pt x 135.45079pt.
+
+Overfull \hbox (113.81102pt too wide) in paragraph at lines 441--441
+[]|  
+ []
+
+
+Overfull \hbox (36.80382pt too wide) in paragraph at lines 419--442
+ [][] 
+ []
+
+<./imagenes/Archimate/productviewpoint.png, id=1354, 701.62125pt x 349.305pt>
+File: ./imagenes/Archimate/productviewpoint.png Graphic file (type png)
+
+<use ./imagenes/Archimate/productviewpoint.png>
+Package pdftex.def Info: ./imagenes/Archimate/productviewpoint.png used on inpu
+t line 475.
+(pdftex.def)             Requested size: 199.16928pt x 99.15854pt.
+
+Overfull \hbox (170.71654pt too wide) in paragraph at lines 475--475
+[]|  
+ []
+
+
+Overfull \hbox (36.79785pt too wide) in paragraph at lines 453--476
  [][] 
  []
 
 ) (./Capitulos/Marco_teorico/Estado_arte.tex
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [70]
+ [75 <./imagenes/Archimate/introductoryviewpoint.png>]
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [76 <./imagenes/Archimate/businessfunctionviewpoint.png> <./imagenes/Archimate
+/businessprocessviewpoint.png>]
+LaTeX Info: Redefining \. on input line 4.
+LaTeX Info: Redefining \% on input line 4.
+ [77 <./imagenes/Archimate/applicationusageviewpoint.png> <./imagenes/Archimate
+/productviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- [71 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscol
-laboration.png>]
+
+[78]
 Overfull \hbox (20.58249pt too wide) in paragraph at lines 17--69
  [][] 
  []
@@ -1715,31 +2089,34 @@ LaTeX Warning: Float too large for page by 47.49173pt on input line 321.
 
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
-[72]
+[79]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
- [73]
+ [80]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
- [74]
+ [81]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
- [75]
+ [82]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
- [76]))
-Cap\'{\i }tulo 6.
-(./Capitulos/Marco_teorico/Marco_legal.tex [77
+ [83]))
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [84
 
 
 
 ]
+Cap\'{\i }tulo 6.
+(./Capitulos/Marco_teorico/Marco_legal.tex [85]
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
- [78]) [79]
+ [86]) [87]
 LaTeX Info: Redefining \. on input line 143.
 LaTeX Info: Redefining \% on input line 143.
- [80
+ [88
 
 ]
 Cap\'{\i }tulo 7.
@@ -1749,20 +2126,20 @@ Overfull \hbox (6.16432pt too wide) in paragraph at lines 12--13
 laci^^Son (sea sim^^Setri-
  []
 
-[81]
+[89]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [82])
+ [90])
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
- [83]
+ [91]
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
- [84
+ [92
 
 ]
 Cap\'{\i }tulo 8.
-(./Capitulos/Metodologia/Metodologia.tex [85]
+(./Capitulos/Metodologia/Metodologia.tex [93]
 Overfull \hbox (0.58981pt too wide) in paragraph at lines 29--31
 []\OT1/lmr/m/n/12 Daily Scrum (15 min-u-tos m^^Saxi-mo)[Solo par-tic-i-pa el de
 -vel-ope-ment team] 
@@ -1775,25 +2152,25 @@ Overfull \hbox (36.80826pt too wide) in paragraph at lines 58--125
 
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
-[86]) [87]
+[94]) [95]
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
- [88
+ [96
 
 ]
 Cap\'{\i }tulo 9.
 (./Capitulos/Arquitectura/Arquitectura.tex
-<./imagenes/arquitectura_propuesta.jpg, id=1318, 748.7975pt x 482.80376pt>
+<./imagenes/arquitectura_propuesta.jpg, id=1456, 748.7975pt x 482.80376pt>
 File: ./imagenes/arquitectura_propuesta.jpg Graphic file (type jpg)
 
 <use ./imagenes/arquitectura_propuesta.jpg>
 Package pdftex.def Info: ./imagenes/arquitectura_propuesta.jpg used on input li
 ne 5.
 (pdftex.def)             Requested size: 284.52756pt x 183.45259pt.
-) [89 <./imagenes/arquitectura_propuesta.jpg>]
+) [97 <./imagenes/arquitectura_propuesta.jpg>]
 LaTeX Info: Redefining \. on input line 156.
 LaTeX Info: Redefining \% on input line 156.
- [90
+ [98
 
 ]
 Cap\'{\i }tulo 10.
@@ -1802,7 +2179,7 @@ Overfull \hbox (8.35382pt too wide) in paragraph at lines 8--29
  [] 
  []
 
-<./imagenes/cronograma_completo.PNG, id=1327, 917.67844pt x 281.55188pt>
+<./imagenes/cronograma_completo.PNG, id=1466, 917.67844pt x 281.55188pt>
 File: ./imagenes/cronograma_completo.PNG Graphic file (type png)
 
 <use ./imagenes/cronograma_completo.PNG>
@@ -1813,10 +2190,10 @@ Package pdftex.def Info: ./imagenes/cronograma_completo.PNG used on input line
 
 LaTeX Warning: Float too large for page by 11.17409pt on input line 38.
 
-) [91]
+) [99]
 LaTeX Info: Redefining \. on input line 160.
 LaTeX Info: Redefining \% on input line 160.
- [92 <./imagenes/cronograma_completo.PNG>]
+ [100 <./imagenes/cronograma_completo.PNG>]
 Cap\'{\i }tulo 11.
 (./Capitulos/Recursos/Hardware.tex
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
@@ -1867,24 +2244,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--21
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 23.
 ) (./Capitulos/Recursos/Miscelaneos.tex)
-(./Capitulos/Recursos/Totales.tex [93
+(./Capitulos/Recursos/Totales.tex [101
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [94]
+ [102]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [95]) (./Anteproyecto.bbl
+ [103]) (./Anteproyecto.bbl
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [96
+
+[104
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 25.
 
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Underfull \hbox (badness 6842) in paragraph at lines 120--132
@@ -1898,13 +2275,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--132
 omado [] -gerencia [] -marketing /
  []
 
-[97
+[105
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
- [98]
+ [106]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
  (./Anteproyecto.aux
 LaTeX Info: Redefining \. on input line 21.
@@ -1913,10 +2290,13 @@ LaTeX Info: Redefining \% on input line 21.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `Anteproyecto.out' has not changed.
-(rerunfilecheck)             Checksum: FC02B2BAD6CD4EE788C31CB5A80B4CC1;6343.
+(rerunfilecheck)             Checksum: F331B09948BFEFEB645E760BDA8439C8;6649.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  )
@@ -1925,13 +2305,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
 ### simple group (level 1) entered at line 59 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10256 strings out of 495059
- 157473 string characters out of 3182030
- 304659 words of memory out of 3000000
- 12882 multiletter control sequences out of 15000+200000
+ 10456 strings out of 495059
+ 164785 string characters out of 3182030
+ 305342 words of memory out of 3000000
+ 13027 multiletter control sequences out of 15000+200000
  57452 words of font info for 43 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 43i,14n,40p,1766b,619s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,15n,40p,1766b,656s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{cite.archimate2} has been reference
 d but does not exist, replaced by a fixed one
 
@@ -1962,10 +2342,10 @@ e1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/s
 hare/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/publi
 c/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Anteproyecto.pdf (98 pages, 1556243 bytes).
+Output written on Anteproyecto.pdf (106 pages, 2101790 bytes).
 PDF statistics:
- 1495 PDF objects out of 1728 (max. 8388607)
- 1281 compressed objects within 13 object streams
- 265 named destinations out of 1000 (max. 500000)
- 928 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1636 PDF objects out of 1728 (max. 8388607)
+ 1381 compressed objects within 14 object streams
+ 288 named destinations out of 1000 (max. 500000)
+ 1120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
