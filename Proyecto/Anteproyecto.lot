@@ -4,33 +4,49 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio\relax }}{71}{table.caption.32}
-\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{72}{table.caption.33}
-\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{73}{table.caption.34}
-\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{73}{table.caption.35}
-\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{74}{table.caption.36}
-\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{74}{table.caption.37}
-\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{75}{table.caption.38}
-\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{76}{table.caption.39}
-\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'{}}on\relax }}{76}{table.caption.40}
-\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{76}{table.caption.41}
-\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{77}{table.caption.42}
-\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{77}{table.caption.43}
-\contentsline {table}{\numberline {13}{\ignorespaces Comparacion de redes, parte 1\relax }}{79}{table.caption.44}
-\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 2\relax }}{80}{table.caption.45}
-\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 3\relax }}{81}{table.caption.46}
-\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 4\relax }}{82}{table.caption.47}
-\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 5\relax }}{83}{table.caption.48}
+\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio\relax }}{75}{table.caption.32}
+\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{76}{table.caption.33}
+\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{77}{table.caption.34}
+\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{77}{table.caption.35}
+\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{78}{table.caption.36}
+\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{78}{table.caption.37}
+\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{79}{table.caption.38}
+\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{80}{table.caption.39}
+\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'{}}on\relax }}{80}{table.caption.40}
+\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{80}{table.caption.41}
+\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{81}{table.caption.42}
+\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{81}{table.caption.43}
+\contentsline {table}{\numberline {13}{\ignorespaces Comparacion de redes, parte 1\relax }}{83}{table.caption.44}
+\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 2\relax }}{84}{table.caption.45}
+\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 3\relax }}{85}{table.caption.46}
+\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 4\relax }}{86}{table.caption.47}
+\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 5\relax }}{87}{table.caption.48}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {18}{\ignorespaces Product backlog inicial\relax }}{95}{table.caption.49}
+\contentsline {table}{\numberline {18}{\ignorespaces Product backlog inicial\relax }}{99}{table.caption.49}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {19}{\ignorespaces Actividades generales a llevar a cabo\relax }}{99}{table.caption.51}
+\contentsline {table}{\numberline {19}{\ignorespaces Descripci\IeC {\'o}n Buscador Deportivo\relax }}{109}{table.caption.61}
+\contentsline {table}{\numberline {20}{\ignorespaces Descripci\IeC {\'o}n Consejos\relax }}{111}{table.caption.63}
+\contentsline {table}{\numberline {21}{\ignorespaces Descripci\IeC {\'o}n Periodismo\relax }}{112}{table.caption.65}
+\contentsline {table}{\numberline {22}{\ignorespaces Descripci\IeC {\'o}n Servicios\relax }}{113}{table.caption.67}
+\contentsline {table}{\numberline {23}{\ignorespaces Descripci\IeC {\'o}n Buscador de consejos deportivos\relax }}{118}{table.caption.74}
+\contentsline {table}{\numberline {24}{\ignorespaces Descripci\IeC {\'o}n Buscador deportivo\relax }}{119}{table.caption.76}
+\contentsline {table}{\numberline {25}{\ignorespaces Descripci\IeC {\'o}n Evaluador consejos de salud\relax }}{120}{table.caption.78}
+\contentsline {table}{\numberline {26}{\ignorespaces Generador de consejos deportivos\relax }}{122}{table.caption.80}
+\contentsline {table}{\numberline {27}{\ignorespaces Generador de contenidos de salud\relax }}{123}{table.caption.82}
+\contentsline {table}{\numberline {28}{\ignorespaces Buscador de consejos deportivos\relax }}{128}{table.caption.89}
+\contentsline {table}{\numberline {29}{\ignorespaces Buscador deportivo\relax }}{131}{table.caption.91}
+\contentsline {table}{\numberline {30}{\ignorespaces Evaluador consejos de salud\relax }}{132}{table.caption.93}
+\contentsline {table}{\numberline {31}{\ignorespaces Generador de consejos deportivos\relax }}{133}{table.caption.95}
+\contentsline {table}{\numberline {32}{\ignorespaces Generador de contenidos de salud\relax }}{135}{table.caption.97}
+\contentsline {table}{\numberline {33}{\ignorespaces Producto1\relax }}{137}{table.caption.99}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {20}{\ignorespaces Recursos de hardware\relax }}{102}{table.caption.53}
-\contentsline {table}{\numberline {21}{\ignorespaces Recursos de software\relax }}{102}{table.caption.54}
-\contentsline {table}{\numberline {22}{\ignorespaces Recursos humanos\relax }}{103}{table.caption.55}
-\contentsline {table}{\numberline {23}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{103}{table.caption.56}
-\contentsline {table}{\numberline {24}{\ignorespaces Costos totales\relax }}{104}{table.caption.57}
+\contentsline {table}{\numberline {34}{\ignorespaces Actividades generales a llevar a cabo\relax }}{139}{table.caption.100}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {35}{\ignorespaces Recursos de hardware\relax }}{142}{table.caption.102}
+\contentsline {table}{\numberline {36}{\ignorespaces Recursos de software\relax }}{142}{table.caption.103}
+\contentsline {table}{\numberline {37}{\ignorespaces Recursos humanos\relax }}{143}{table.caption.104}
+\contentsline {table}{\numberline {38}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{143}{table.caption.105}
+\contentsline {table}{\numberline {39}{\ignorespaces Costos totales\relax }}{144}{table.caption.106}

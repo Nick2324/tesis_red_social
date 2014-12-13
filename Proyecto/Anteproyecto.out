@@ -79,10 +79,49 @@
 \BOOKMARK [2][-]{subsection.7.1.2}{Limitaciones}{section.7.1}% 79
 \BOOKMARK [0][-]{chapter.8}{Metodolog\355a}{}% 80
 \BOOKMARK [0][-]{chapter.9}{Propuesta de arquitectura}{}% 81
-\BOOKMARK [0][-]{chapter.10}{Cronograma}{}% 82
-\BOOKMARK [0][-]{chapter.11}{Costos}{}% 83
-\BOOKMARK [1][-]{section.11.1}{Recursos de Hardware}{chapter.11}% 84
-\BOOKMARK [1][-]{section.11.2}{Recursos de Software}{chapter.11}% 85
-\BOOKMARK [1][-]{section.11.3}{Recursos humanos}{chapter.11}% 86
-\BOOKMARK [1][-]{section.11.4}{Recursos miscel\341neos}{chapter.11}% 87
-\BOOKMARK [1][-]{section.11.5}{Costos totales}{chapter.11}% 88
+\BOOKMARK [0][-]{chapter.10}{Arquitectura}{}% 82
+\BOOKMARK [1][-]{section.10.1}{Vistas archimate}{chapter.10}% 83
+\BOOKMARK [2][-]{subsubsection.10.1.0.1}{Actores y roles}{section.10.1}% 84
+\BOOKMARK [3][-]{subsubsection.10.1.0.2}{Introductory viewpoint}{subsubsection.10.1.0.1}% 85
+\BOOKMARK [3][-]{subsubsection.10.1.0.3}{Layered viewpoint}{subsubsection.10.1.0.1}% 86
+\BOOKMARK [2][-]{subsection.10.1.1}{Business Functions Viewpoints}{section.10.1}% 87
+\BOOKMARK [3][-]{subsubsection.10.1.1.1}{Patrocinios Deportivos}{subsection.10.1.1}% 88
+\BOOKMARK [3][-]{subsubsection.10.1.1.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.1}% 89
+\BOOKMARK [3][-]{subsubsection.10.1.1.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.1}% 90
+\BOOKMARK [3][-]{subsubsection.10.1.1.4}{Estad\355sticas Deportivas}{subsection.10.1.1}% 91
+\BOOKMARK [3][-]{subsubsection.10.1.1.5}{Entrenamiento Deportivo}{subsection.10.1.1}% 92
+\BOOKMARK [3][-]{subsubsection.10.1.1.6}{Buscador Deportivo}{subsection.10.1.1}% 93
+\BOOKMARK [3][-]{subsubsection.10.1.1.7}{Consejos}{subsection.10.1.1}% 94
+\BOOKMARK [3][-]{subsubsection.10.1.1.8}{Periodismo}{subsection.10.1.1}% 95
+\BOOKMARK [3][-]{subsubsection.10.1.1.9}{Servicios}{subsection.10.1.1}% 96
+\BOOKMARK [2][-]{subsection.10.1.2}{Business Process Viewpoints}{section.10.1}% 97
+\BOOKMARK [3][-]{subsubsection.10.1.2.1}{Patrocinios Deportivos}{subsection.10.1.2}% 98
+\BOOKMARK [3][-]{subsubsection.10.1.2.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.2}% 99
+\BOOKMARK [3][-]{subsubsection.10.1.2.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.2}% 100
+\BOOKMARK [3][-]{subsubsection.10.1.2.4}{Estad\355sticas Deportivas}{subsection.10.1.2}% 101
+\BOOKMARK [3][-]{subsubsection.10.1.2.5}{Entrenamiento Deportivo}{subsection.10.1.2}% 102
+\BOOKMARK [3][-]{subsubsection.10.1.2.6}{Buscador de consejos deportivos}{subsection.10.1.2}% 103
+\BOOKMARK [3][-]{subsubsection.10.1.2.7}{Buscador deportivo}{subsection.10.1.2}% 104
+\BOOKMARK [3][-]{subsubsection.10.1.2.8}{Evaluador consejos de salud}{subsection.10.1.2}% 105
+\BOOKMARK [3][-]{subsubsection.10.1.2.9}{Generador de consejos deportivos}{subsection.10.1.2}% 106
+\BOOKMARK [3][-]{subsubsection.10.1.2.10}{Generador de contenidos de salud}{subsection.10.1.2}% 107
+\BOOKMARK [2][-]{subsection.10.1.3}{Application Usage Viewpoints}{section.10.1}% 108
+\BOOKMARK [3][-]{subsubsection.10.1.3.1}{Patrocinios Deportivos}{subsection.10.1.3}% 109
+\BOOKMARK [3][-]{subsubsection.10.1.3.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.3}% 110
+\BOOKMARK [3][-]{subsubsection.10.1.3.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.3}% 111
+\BOOKMARK [3][-]{subsubsection.10.1.3.4}{Estad\355sticas Deportivas}{subsection.10.1.3}% 112
+\BOOKMARK [3][-]{subsubsection.10.1.3.5}{Entrenamiento Deportivo}{subsection.10.1.3}% 113
+\BOOKMARK [3][-]{subsubsection.10.1.3.6}{Buscador de consejos deportivos}{subsection.10.1.3}% 114
+\BOOKMARK [3][-]{subsubsection.10.1.3.7}{Buscador deportivo}{subsection.10.1.3}% 115
+\BOOKMARK [3][-]{subsubsection.10.1.3.8}{Evaluador consejos de salud}{subsection.10.1.3}% 116
+\BOOKMARK [3][-]{subsubsection.10.1.3.9}{Generador de consejos deportivos}{subsection.10.1.3}% 117
+\BOOKMARK [3][-]{subsubsection.10.1.3.10}{Generador de contenidos de salud}{subsection.10.1.3}% 118
+\BOOKMARK [2][-]{subsection.10.1.4}{Product Viewpoint}{section.10.1}% 119
+\BOOKMARK [3][-]{subsubsection.10.1.4.1}{Product}{subsection.10.1.4}% 120
+\BOOKMARK [0][-]{chapter.11}{Cronograma}{}% 121
+\BOOKMARK [0][-]{chapter.12}{Costos}{}% 122
+\BOOKMARK [1][-]{section.12.1}{Recursos de Hardware}{chapter.12}% 123
+\BOOKMARK [1][-]{section.12.2}{Recursos de Software}{chapter.12}% 124
+\BOOKMARK [1][-]{section.12.3}{Recursos humanos}{chapter.12}% 125
+\BOOKMARK [1][-]{section.12.4}{Recursos miscel\341neos}{chapter.12}% 126
+\BOOKMARK [1][-]{section.12.5}{Costos totales}{chapter.12}% 127
