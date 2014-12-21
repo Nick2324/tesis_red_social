@@ -20,7 +20,6 @@
 			\hline
 			Responsabilidades & Vistas relacionadas \\
 			\hline \hline
-			********************************************
 			\begin{itemize}
 				\item \textbf{Actor deportivo (Actor):} Es todo aquel actor encontrado en una red social deportiva.
 				\item \textbf{Equipo (Actor):} Es un grupo deportivo conformado con el objetivo de competencia en la red social deportiva.
@@ -61,7 +60,6 @@
 			\hline
 			Responsabilidades & Vistas relacionadas \\
 			\hline \hline
-			********************************************
 			\begin{itemize}
 				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte.
 				\item \textbf{Consejero deportivo (Rol):} Jugador/entrenador dador de consejos deportivos.
@@ -75,15 +73,15 @@
 			\end{itemize} 
 			&
 			\begin{itemize}
-				\item Rol - actor, Bussiness process - (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos)
-				\item Rol - actor, Bussiness process - (Entrenamiento deportivo)
-				\item Rol - actor, Bussiness process - (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos)
+				\item Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item Bussiness process (Entrenamiento deportivo), Business function (Entrenamiento deportivo)
+				\item Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
 				\item N/A
 				\item N/A
 				\item N/A
-				\item Rol - actor, Bussiness process - (Patrocinio deportivo, Organización evento deportivo)
-				\item Rol - actor, Bussiness process - (Estadísticas deportivas)
-				\item Rol - actor
+				\item Bussiness process (Patrocinio deportivo, Organización evento deportivo), Business function (Organización eventos deportivos, Patrocinios deportivos)
+				\item Bussiness process (Estadísticas deportivas), Business function (Patrocinio deportivo, Estadísticas deportivas, Organizador de eventos deportivos)
+				\item N/A
 			\end{itemize} 
 			\\
 			\hline
@@ -113,7 +111,7 @@
 			\hline
 			Responsabilidades & Vistas relacionadas \\
 			\hline \hline
-			********************************************
+			
 			\begin{itemize}
 				\item \textbf{Búsqueda de información deportiva (Servicio de negocio):} Usado para buscar información relacioana con el deporte: Reglas, consejos deportivos, entre otros.
 				\item \textbf{Organización de eventos deportivos (Servicio de negocio):} Servicio por medio del cual todos los actores participantes componen un evento deportivo (ya sea un torneo, una clínica deportiva, un entrenamiento o partido(s) aislado(s)).
@@ -180,7 +178,7 @@
 \end{figure}
 
 \begin{table}[!htb]
-	\caption{Descripción Patrocinio Deportivo}
+	\caption{Business function - Patrocinio Deportivo}
 	\label{tab:BF_PatrocinioDeportivo}
 	\begin{center}
 		\resizebox{11cm}{!}{
@@ -201,11 +199,11 @@
 			\end{itemize} 
 			&
 			\begin{itemize}
-				\item Rol - actor, Bussiness process (Estadísticas deportivas)
+				\item Rol - actor, Bussiness process (Estadísticas deportivas), Business function (Estadísticas deportivas, Organizador de eventos deportivos)
 				\item Rol - actor
-				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos).
-				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos)
-				\item Rol - actor, Bussiness process (Patrocinio deportivo, Organización evento deportivo)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+				\item Rol - actor, Bussiness process (Patrocinio deportivo, Organización evento deportivo), Business function (Organización eventos deportivos)
 				\item Application usage (Organización de eventos deportivos), Business function (Organización de eventos deportivos), Business process (Organización de eventos deportivos)
 				\item Application usage (Organización de eventos deportivos), Business function (Organización de eventos deportivos), Business process (Organización de eventos deportivos)
 				\item Application usage (Organización de eventos deportivos), Business function (Organización de eventos deportivos), Business process (Organización de eventos deportivos)
@@ -229,6 +227,48 @@
   \end{center}
 \end{figure}
 
+\begin{table}[!htb]
+	\caption{Business function - Organización de eventos deportivos}
+	\label{tab:BF_OrganizacionEventosDeportivos}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Gestor de encuentros deportivos (Rol):} Gestor de un encuentro deportivo.
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Patrocinador deportivo (Rol):} Actor deportivo que apoya a un jugador/equipo/evento en la consecución de sus metas otorgandole dinero, materiales o servicios deportivos
+				\item \textbf{Verificación viabilidad del evento (Función):} Función que realiza un actor para verificar que un evento es viable o no de hacer
+				\item \textbf{Estructuración del evento (Función):} Función desarrollada por los entes que estructuran un evento deportivo, antes de su ejecución real
+				\item \textbf{Ejecución del evento (Función):} Función realizada por los entes involucrados en la ejecución de la planeación de un evento deportivo
+				\item \textbf{Participación deportiva (Función):} Función que desempeñan aquellas agrupaciones deportivas que fueron invitadas o aceptadas en un evento deportivo. Esta se refiere a toda actividad que ellos deban hacer
+				\item \textbf{Provisión de servicios (Función):} Función cumplida por un patrocinador deportivo, dando a las agrupaciones que patrocina servicios que él ofrezca
+				\item \textbf{Provisión de recursos materiales (Función):} Función cumplida por un patrocinador deportivo, dando a las agrupaciones que patrocina recursos materiales
+				\item \textbf{Financiamiento (Función):} Función desarrollada por un patrocinador deportivo para patrocinar a otros entes en la red social
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Rol - actor, Bussiness process (Patrocinio deportivo, Organización evento deportivo), Business function (Patrocinios deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+				\item Rol - actor, Bussiness process (Estadísticas deportivas), Business function (Patrocinio deportivo, Estadísticas deportivas)
+				\item N/A
+				\item N/A
+				\item N/A
+				\item N/A
+				\item Application usage (Organización de eventos deportivos), Business function (Patrocinios deportivos), Business process (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos), Business function (Patrocinios deportivos), Business process (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos), Business function (Patrocinios deportivos), Business process (Organización de eventos deportivos)
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsubsection{Formación de Grupos Deportivos}
 
 \begin{figure}[!htb]
@@ -239,6 +279,42 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Business function - Formación de Grupos Deportivos}
+	\label{tab:BF_FormacionGruposDeportivos}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Formadores de grupo deportivo (Colaboración):} Colaboración conformada por los roles que trabajan en la dinámica de un grupo deportivo a traves del tiempo
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Gestión de grupo deportivo (Función):} Función que desarrolla el ente encargado de gestionar aspectos internos o externos relacionados con el grupo deportivo al que gestiona
+				\item \textbf{Difusión del grupo deportivo (Función):} Función realizada por el ente que difunde el grupo deportivo en los diferentes canales de la red social
+				\item \textbf{Control de unión de miembros(Función):} Función asignada a quien controla la unión de gente nueva a un grupo deportivo
+				\item \textbf{Difusión de información deportiva (Función):} 
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Bussiness process (Formación de grupos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Organización de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas)
+				\item N/A
+				\item N/A
+				\item N/A
+				\item 
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Estadísticas Deportivas}
 
@@ -251,6 +327,40 @@
   \end{center}
 \end{figure}
 
+\begin{table}[!htb]
+	\caption{Business function - Estadísticas Deportivas}
+	\label{tab:BF_EstadisticasDeportivas}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Patrocinador deportivo (Rol):} Actor deportivo que apoya a un jugador/equipo/evento en la consecución de sus metas otorgandole dinero, materiales o servicios deportivos
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Buscador de estadísticas (Función):} Función realizada por quien se dedica a buscar estadísticas deportivas
+				\item \textbf{Creación de estadísticas (Función):} Función realizada por el ente creador de estadísticas
+				\item \textbf{Analizador de estadísticas (Función):} Función asignada a quien analiza estadísticas deportivas
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Rol - actor, Bussiness process (Estadísticas deportivas), Business function (Patrocinio deportivo, Organizador de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Organización de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas)
+				\item N/A
+				\item N/A
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsubsection{Entrenamiento Deportivo}
 
 \begin{figure}[!htb]
@@ -261,6 +371,48 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Business function - Entrenamiento Deportivo}
+	\label{tab:BF_EntrenamientoDeportivo}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Consejero deportivo (Rol):} Jugador/entrenador dador de consejos deportivos
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Consejero deportivo (Función):} Ésta es realizada por la persona quien ayuda paso a paso a los deportistas en las agrupaciones deportivas a realizarse en sus habilidades humanas y deportivas
+				\item \textbf{Entrenador (Función):} Función cumplida por el ente que entrena a los miembros de una agrupación deportiva
+				\item \textbf{Creador de ejercicios (Función):} Función realizada por el ente que crea ejercicios que serán realizados por los miembros de una agrupación deportiva en un entrenamiento
+				\item \textbf{Evaluador de grupo deportivo (Función):} Función realizada por el ente que vigila el rendimiento de las personas que pertenecen a un grupo deportivo
+				\item \textbf{Entrenar (Función):} Función desempeñada por los miembros de una agrupación deportiva que siguen los ejercicios asignados por aquel que tenga la función de ser entrenador, así como ser coevaluador
+				\item \textbf{Practicante de ejercicios (Función):} Función desempeñada por los miembros de una agrupación deportiva, realizar los ejercicios asignados por un entrenador
+				\item \textbf{Coevaluador (Función):} Función realizada por deportistas de la misma agrupación deportiva quienes juzgan el trabajo de los compañeros
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Estadísticas Deportivas, Formación de Grupos Deportivos, Organización de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Formación de Grupos Deportivos, Estadísticas Deportivas)
+				\item N/A
+				\item N/A
+				\item N/A
+				\item N/A
+				\item N/A
+				\item N/A
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Buscador Deportivo}
 
@@ -439,6 +591,67 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Descripción Servicios}
+	\label{tab:BF_Servicios}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			Administra el consumo y oferta de servicios deportivos a los interesados.
+			\begin{itemize}
+				\item \textbf{Entrenador deportivo (Rol):} 
+				\item \textbf{Gestor de encuentros deportivos (Rol):} 
+				\item \textbf{Agrupación deportiva (Rol):} 
+				\item \textbf{Construcción de proyectos (Servicio de negocio):} 
+				\item \textbf{Evaluación de proyectos (Servicio de negocio):} 
+				\item \textbf{Patrocino deportivo (Servicio de negocio):} 
+				\item \textbf{Necesidad de patrocinio (Evento):} 
+				\item \textbf{Petición de patrocinio (Evento):} 
+				\item \textbf{Pedir patrocinio (Proceso de negocio):} 
+				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} 
+				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} 
+				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} 
+				\item \textbf{Evaluar financiamiento (Proceso de negocio):} 
+				\item \textbf{Evaluar prestamo de servicio (Proceso de negocio):} 
+				\item \textbf{Evaluar prestamo de producto (Proceso de negocio):} 
+				\item \textbf{Patrocinar (Proceso de negocio):} 
+				\item \textbf{Buscar servicio (Proceso de negocio):} 
+				\item \textbf{Prestar servicio (Proceso de negocio):} 
+				\item \textbf{Buscar material deportivo (Proceso de negocio):} 
+				\item \textbf{Dar producto deportivo (Proceso de negocio):} 
+				\item \textbf{Financiar evento deportivo (Proceso de negocio):} 
+				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} 
+				\item \textbf{Pedir patrocinio (Servicio de aplicación):} 
+				\item \textbf{Persistencia de servicios (Servicio de aplicación):} 
+				\item \textbf{Actualizar servicio (Servicio de aplicación):} 
+				\item \textbf{Crear servicio (Servicio de aplicación):} 
+				\item \textbf{Consultar servicios (Servicio de aplicación):} 
+				\item \textbf{Calcular rendimiento (Servicio de aplicación):} 
+				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} 
+				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} 
+				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Crear recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} 
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Organización de Eventos Deportivos}
 

@@ -123,7 +123,7 @@
       <element xsi:type="archimate:BusinessFunction" id="71209772" name="Ejecución del evento"/>
       <element xsi:type="archimate:BusinessFunction" id="f309e899" name="Estructuración del evento"/>
       <element xsi:type="archimate:BusinessFunction" id="6de91a82" name="Participación deportiva"/>
-      <element xsi:type="archimate:BusinessFunction" id="eebb9446" name="Viabilidad del evento"/>
+      <element xsi:type="archimate:BusinessFunction" id="eebb9446" name="Verificación viabilidad del evento"/>
       <element xsi:type="archimate:BusinessFunction" id="6c492a87" name="Periodismo"/>
       <element xsi:type="archimate:BusinessFunction" id="fc6142aa" name="Consumidor de servicios"/>
       <element xsi:type="archimate:BusinessFunction" id="7c3660f4" name="Prestador de servicios"/>
@@ -4161,7 +4161,7 @@
               <sourceConnection xsi:type="archimate:Connection" id="6228db21" source="ce37b634" target="b365b235" relationship="7e7db4a9"/>
             </child>
             <child xsi:type="archimate:DiagramObject" id="016578f7" textAlignment="2" targetConnections="dc16674a" archimateElement="eebb9446">
-              <bounds x="37" y="60" width="120" height="37"/>
+              <bounds x="37" y="48" width="120" height="49"/>
               <sourceConnection xsi:type="archimate:Connection" id="27645a0a" source="016578f7" target="ce37b634" relationship="5f8ecc55"/>
               <sourceConnection xsi:type="archimate:Connection" id="fba1da28" source="016578f7" target="3638c3b9" relationship="a174fa63">
                 <bendpoint startX="203" startY="-6" endX="-366" endY="-126"/>
