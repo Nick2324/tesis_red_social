@@ -593,8 +593,8 @@
 \end{figure}
 
 \begin{table}[!htb]
-	\caption{Descripción Servicios}
-	\label{tab:BF_Servicios}
+	\caption{Patrocinios Deportivos}
+	\label{tab:BP_PatrociniosDeportivos}
 	\begin{center}
 		\resizebox{11cm}{!}{
 		\begin{tabular}{|p{7cm}|p{4cm}|}
@@ -603,47 +603,77 @@
 			\hline \hline
 			Administra el consumo y oferta de servicios deportivos a los interesados.
 			\begin{itemize}
-				\item \textbf{Entrenador deportivo (Rol):} 
-				\item \textbf{Gestor de encuentros deportivos (Rol):} 
-				\item \textbf{Agrupación deportiva (Rol):} 
-				\item \textbf{Construcción de proyectos (Servicio de negocio):} 
-				\item \textbf{Evaluación de proyectos (Servicio de negocio):} 
-				\item \textbf{Patrocino deportivo (Servicio de negocio):} 
-				\item \textbf{Necesidad de patrocinio (Evento):} 
-				\item \textbf{Petición de patrocinio (Evento):} 
-				\item \textbf{Pedir patrocinio (Proceso de negocio):} 
-				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} 
-				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} 
-				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} 
-				\item \textbf{Evaluar financiamiento (Proceso de negocio):} 
-				\item \textbf{Evaluar prestamo de servicio (Proceso de negocio):} 
-				\item \textbf{Evaluar prestamo de producto (Proceso de negocio):} 
-				\item \textbf{Patrocinar (Proceso de negocio):} 
-				\item \textbf{Buscar servicio (Proceso de negocio):} 
-				\item \textbf{Prestar servicio (Proceso de negocio):} 
-				\item \textbf{Buscar material deportivo (Proceso de negocio):} 
-				\item \textbf{Dar producto deportivo (Proceso de negocio):} 
-				\item \textbf{Financiar evento deportivo (Proceso de negocio):} 
-				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} 
-				\item \textbf{Pedir patrocinio (Servicio de aplicación):} 
-				\item \textbf{Persistencia de servicios (Servicio de aplicación):} 
-				\item \textbf{Actualizar servicio (Servicio de aplicación):} 
-				\item \textbf{Crear servicio (Servicio de aplicación):} 
-				\item \textbf{Consultar servicios (Servicio de aplicación):} 
-				\item \textbf{Calcular rendimiento (Servicio de aplicación):} 
-				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} 
-				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} 
-				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Crear recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Gestor de encuentros deportivos (Rol):} Gestor de un encuentro deportivo
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reúnen a practicar un deporte
+				\item \textbf{Construcción de proyectos (Servicio de negocio):} Servicio que ofrece la creación de proyectos justo tal como lo desearía ver el patrocinador
+				\item \textbf{Evaluación de proyectos (Servicio de negocio):} Servicio que permite la interacción patrocinador-proyecto-grupo deportivo
+				\item \textbf{Patrocinio deportivo (Servicio de negocio):} Servicio ofrecido por patrocinadores de iniciativas deportivas para el sustento de las mismas
+				\item \textbf{Necesidad de patrocinio (Evento):} Establece una necesidad de que un evento/actor deportivo necesite de un patrocinio deportivo
+				\item \textbf{Petición de patrocinio (Evento):} Realiza la petición de patrocinio a un patrocinador deportivo
+				\item \textbf{Pedir patrocinio (Proceso de negocio):} Proceso por el cual los actores deportivos interesados hacen una petición de patrocinio a los patrocinadores identificados en la red social
+				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} Realiza la construcción del proyecto a presentar a los patrocinadores deportivos
+				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} Envía el proyecto a los patrocinadores deportivos que haya elegido el actor deportivo interesado
+				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} Realiza un cálculo de costo/beneficio para dar herramientas que le permitan al patrocinador evaluar si es viable o no un patrocinio
+				\item \textbf{Evaluar financiamiento (Proceso de negocio):} Evalúa el financiamiento del proyecto presentado por un actor deportivo
+				\item \textbf{Evaluar préstamo de servicio (Proceso de negocio):} Evalúa el préstamo de un servicio como patrocinio al proyecto de un actor deportivo
+				\item \textbf{Evaluar préstamo de producto (Proceso de negocio):} Evalúa el préstamo de materiales que puedan ser prestados/regalados como patrocinio a un proyecto presentado por un actor deportivo
+				\item \textbf{Patrocinar (Proceso de negocio):} Proceso de patrocinio de un proyecto presentado por un actor deportivo
+				\item \textbf{Buscar servicio (Proceso de negocio):} Busca los servicios prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Prestar servicio (Proceso de negocio):} Presta los servicios prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Buscar material deportivo (Proceso de negocio):} Busca los productos prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Dar producto deportivo (Proceso de negocio):} Da los productos deportivos que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Financiar evento deportivo (Proceso de negocio):} Financia un evento deportivo
+				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} Financia las actividades de una agrupación deportiva
+				\item \textbf{Pedir patrocinio (Servicio de aplicación):} Servicio desde el cual un actor deportivo pide un patrocinio a un patrocinador
+				\item \textbf{Persistencia de servicios (Servicio de aplicación):} Servicio para el manejo de datos de servicios
+				\item \textbf{Actualizar servicio (Servicio de aplicación):} Actualiza un servicio ofrecido
+				\item \textbf{Crear servicio (Servicio de aplicación):} Permite la creación de un servicio
+				\item \textbf{Consultar servicio (Servicio de aplicación):} Permite la consulta de la información de un servicio
+				\item \textbf{Calcular rendimiento (Servicio de aplicación):} Calcula las ganancias/perdidas que se tendrán al tomar el rol de patrocinador de un evento/actor deportivo
+				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} Manejo de la capacidad de financiamiento (o prestamo de servicio o producto) al actor deportivo para la realización del proyecto
+				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} Utiliza los servicios que ponen a disposición patrocinadores para patrocinar eventos deportivo o actores deportivos
+				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} Servicio para el manejo de los datos referentes a los recursos materiales de un actor comercial
+				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} Actualiza loa información de los recursos materiales
+				\item \textbf{Crear recursos materiales (Servicio de aplicación):} Este servicio ofrece la creación de recursos materiales
+				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} Deja consultar la información de recursos materiales
 			\end{itemize} 
 			&
 			\begin{itemize}
-				\item 
-				\item 
-				\item 
-				\item 
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+				\item Rol - actor, Bussiness process (Organización evento deportivo), Business function (Organización eventos deportivos, Patrocinios deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, organización de eventos deportivos, formación de grupos deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item N/A
+				\item N/A
+				\item General layered, Bussiness process (Organización de eventos deportivos), Business Product
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Business process (Organización de eventos deportivos) ,Application usage (Organización de eventos deportivos, Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo
 			\end{itemize} 
 			\\
 			\hline
@@ -663,6 +693,64 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Organización de Eventos Deportivos}
+	\label{tab:BP_OrganizacionEventosDeportivos}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			Administra el consumo y oferta de servicios deportivos a los interesados.
+			\begin{itemize}
+				\item \textbf{Entrenador deportivo (Rol):} 
+				\item \textbf{Gestor de encuentros deportivos (Rol):} 
+				\item \textbf{Agrupación deportiva (Rol):} 
+				\item \textbf{Construcción de proyectos (Servicio de negocio):} 
+				\item \textbf{Evaluación de proyectos (Servicio de negocio):} 
+				\item \textbf{Patrocinio deportivo (Servicio de negocio):} 
+				\item \textbf{Necesidad de patrocinio (Evento):} 
+				\item \textbf{Petición de patrocinio (Evento):} 
+				\item \textbf{Pedir patrocinio (Proceso de negocio):} 
+				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} 
+				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} 
+				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} 
+				\item \textbf{Evaluar financiamiento (Proceso de negocio):} 
+				\item \textbf{Evaluar préstamo de servicio (Proceso de negocio):} 
+				\item \textbf{Evaluar préstamo de producto (Proceso de negocio):} 
+				\item \textbf{Patrocinar (Proceso de negocio):} 
+				\item \textbf{Buscar servicio (Proceso de negocio):} 
+				\item \textbf{Prestar servicio (Proceso de negocio):} 
+				\item \textbf{Buscar material deportivo (Proceso de negocio):} 
+				\item \textbf{Dar producto deportivo (Proceso de negocio):} 
+				\item \textbf{Financiar evento deportivo (Proceso de negocio):} 
+				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} 
+				\item \textbf{Pedir patrocinio (Servicio de aplicación):} 
+				\item \textbf{Persistencia de servicios (Servicio de aplicación):}  datos de servicios
+				\item \textbf{Actualizar servicio (Servicio de aplicación):} 
+				\item \textbf{Crear servicio (Servicio de aplicación):} 
+				\item \textbf{Consultar servicio (Servicio de aplicación):} 
+				\item \textbf{Calcular rendimiento (Servicio de aplicación):} 
+				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} 
+				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} 
+				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Crear recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} 
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Formación de Grupos Deportivos}
 
@@ -907,6 +995,102 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Patrocinios Deportivos}
+	\label{tab:BP_PatrociniosDeportivos}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			Administra el consumo y oferta de servicios deportivos a los interesados.
+			\begin{itemize}
+				\item \textbf{Necesidad de patrocinio (Evento):} Establece una necesidad de que un evento/actor deportivo necesite de un patrocinio deportivo
+				\item \textbf{Petición de patrocinio (Evento):} Realiza la petición de patrocinio a un patrocinador deportivo
+				\item \textbf{Pedir patrocinio (Proceso de negocio):} Proceso por el cual los actores deportivos interesados hacen una petición de patrocinio a los patrocinadores identificados en la red social
+				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} Realiza la construcción del proyecto a presentar a los patrocinadores deportivos
+				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} Envía el proyecto a los patrocinadores deportivos que haya elegido el actor deportivo interesado
+				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} Realiza un cálculo de costo/beneficio para dar herramientas que le permitan al patrocinador evaluar si es viable o no un patrocinio
+				\item \textbf{Evaluar financiamiento (Proceso de negocio):} Evalúa el financiamiento del proyecto presentado por un actor deportivo
+				\item \textbf{Evaluar préstamo de servicio (Proceso de negocio):} Evalúa el préstamo de un servicio como patrocinio al proyecto de un actor deportivo
+				\item \textbf{Evaluar préstamo de producto (Proceso de negocio):} Evalúa el préstamo de materiales que puedan ser prestados/regalados como patrocinio a un proyecto presentado por un actor deportivo
+				\item \textbf{Patrocinar (Proceso de negocio):} Proceso de patrocinio de un proyecto presentado por un actor deportivo
+				\item \textbf{Buscar servicio (Proceso de negocio):} Busca los servicios prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Prestar servicio (Proceso de negocio):} Presta los servicios prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Buscar material deportivo (Proceso de negocio):} Busca los productos prestados que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Dar producto deportivo (Proceso de negocio):} Da los productos deportivos que puedan ayudar al proyecto a patrocinar de algún modo
+				\item \textbf{Financiar evento deportivo (Proceso de negocio):} Financia un evento deportivo
+				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} Financia las actividades de una agrupación deportiva
+				\item \textbf{Pedir patrocinio (Servicio de aplicación):} Servicio desde el cual un actor deportivo pide un patrocinio a un patrocinador
+				\item \textbf{Persistencia de servicios (Servicio de aplicación):} Servicio para el manejo de datos de servicios
+				\item \textbf{Actualizar servicio (Servicio de aplicación):} Actualiza un servicio ofrecido
+				\item \textbf{Crear servicio (Servicio de aplicación):} Permite la creación de un servicio
+				\item \textbf{Consultar servicio (Servicio de aplicación):} Permite la consulta de la información de un servicio
+				\item \textbf{Calcular rendimiento (Servicio de aplicación):} Calcula las ganancias/perdidas que se tendrán al tomar el rol de patrocinador de un evento/actor deportivo
+				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} Manejo de la capacidad de financiamiento (o préstamo de servicio o producto) al actor deportivo para la realización del proyecto
+				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} Utiliza los servicios que ponen a disposición patrocinadores para patrocinar eventos deportivo o actores deportivos
+				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} Servicio para el manejo de los datos referentes a los recursos materiales de un actor comercial
+				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} Actualiza loa información de los recursos materiales
+				\item \textbf{Crear recursos materiales (Servicio de aplicación):} Este servicio ofrece la creación de recursos materiales
+				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} Deja consultar la información de recursos materiales
+				\item \textbf{Gestión de eventos (Componente de aplicación):} Realiza todas las funcionalidades ofrecidas en los servicios de eventos (creación, modificación y consulta, así como también funcionalidades estadísticas por medio del componente "Gestión estadística")
+				\item \textbf{Gestión de grupo deportivo (Componente de aplicación):} Módulo para la gestión de grupos deportivos
+				\item \textbf{Gestión estadística (Componente de aplicación):} Componente usado por otros para la producción de información estadística en cuanto a los criterios establecidos para cada actor deportivo, para cada evento deportivo y para cada servicio deportivo prestado
+				\item \textbf{Gestión de comunicación (Componente de aplicación):} Sirve como componente administrador de las funciones chat del SNS
+				\item \textbf{Gestión de recursos materiales (Componente de aplicación):} Gestión de recursos materiales para patrocinio de un patrocinador
+				\item \textbf{Gestión de servicios (Componente de aplicación):} Colabora (por la parte del prestador de servicios) en la producción de la relación compra-venta entre actores-usuarios de la red social deportiva
+				\item \textbf{Gestión de recursos financieros (Componente de aplicación):} Gestión de recursos financieros para patrocinio de un patrocinador
+				\item \textbf{Servicio de mensajería (Servicio de aplicación):} Servicio de comunicación instantánea entre el patrocinador y el actor deportivo que presentó el proyecto
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Business process (Organización de eventos deportivos) ,Application usage (Organización de eventos deportivos, Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo)
+				\item Application usage (Patrocinio deportivo
+				\item Application usage (Patrocinio deportivo)
+				\item General layered, Application usage (Estadísticas deportivas, Organización eventos deportivos)
+				\item Application usage (Formación de grupos deportivos, Entrenamiento deportivo)
+				\item General layered, Application usage (Entrenamiento deportivo, Estadísticas deportivas, Organización de eventos deportivos)
+				\item Application usage (Entrenamiento deportivo, Formación de grupos deportivos)
+				\item N/A
+				\item General layered, Application usage (Entrenamiento deportivo, Estadisticas deportivas)
+				\item N/A
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Organización de Eventos Deportivos}
 
