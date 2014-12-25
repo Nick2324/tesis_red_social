@@ -673,7 +673,7 @@
 				\item Application usage (Patrocinio deportivo)
 				\item Application usage (Patrocinio deportivo)
 				\item Application usage (Patrocinio deportivo)
-				\item Application usage (Patrocinio deportivo
+				\item Application usage (Patrocinio deportivo)
 			\end{itemize} 
 			\\
 			\hline
@@ -705,44 +705,87 @@
 			\hline \hline
 			Administra el consumo y oferta de servicios deportivos a los interesados.
 			\begin{itemize}
-				\item \textbf{Entrenador deportivo (Rol):} 
-				\item \textbf{Gestor de encuentros deportivos (Rol):} 
-				\item \textbf{Agrupación deportiva (Rol):} 
-				\item \textbf{Construcción de proyectos (Servicio de negocio):} 
-				\item \textbf{Evaluación de proyectos (Servicio de negocio):} 
-				\item \textbf{Patrocinio deportivo (Servicio de negocio):} 
-				\item \textbf{Necesidad de patrocinio (Evento):} 
-				\item \textbf{Petición de patrocinio (Evento):} 
-				\item \textbf{Pedir patrocinio (Proceso de negocio):} 
-				\item \textbf{Realizar proyecto a presentar (Proceso de negocio):} 
-				\item \textbf{Enviar proyecto a patrocinadores (Proceso de negocio):} 
-				\item \textbf{Calcular costo/beneficio de patrocinio (Proceso de negocio):} 
-				\item \textbf{Evaluar financiamiento (Proceso de negocio):} 
-				\item \textbf{Evaluar préstamo de servicio (Proceso de negocio):} 
-				\item \textbf{Evaluar préstamo de producto (Proceso de negocio):} 
-				\item \textbf{Patrocinar (Proceso de negocio):} 
-				\item \textbf{Buscar servicio (Proceso de negocio):} 
-				\item \textbf{Prestar servicio (Proceso de negocio):} 
-				\item \textbf{Buscar material deportivo (Proceso de negocio):} 
-				\item \textbf{Dar producto deportivo (Proceso de negocio):} 
-				\item \textbf{Financiar evento deportivo (Proceso de negocio):} 
-				\item \textbf{Financiar grupo deportivo (Proceso de negocio):} 
-				\item \textbf{Pedir patrocinio (Servicio de aplicación):} 
-				\item \textbf{Persistencia de servicios (Servicio de aplicación):}  datos de servicios
-				\item \textbf{Actualizar servicio (Servicio de aplicación):} 
-				\item \textbf{Crear servicio (Servicio de aplicación):} 
-				\item \textbf{Consultar servicio (Servicio de aplicación):} 
-				\item \textbf{Calcular rendimiento (Servicio de aplicación):} 
-				\item \textbf{Modificar capacidad financiadora (Servicio de aplicación):} 
-				\item \textbf{Gestión de patrocinios (Servicio de aplicación):} 
-				\item \textbf{Persistencia de recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Actualizar recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Crear recursos materiales (Servicio de aplicación):} 
-				\item \textbf{Consultar recursos materiales (Servicio de aplicación):} 
+				\item \textbf{Organizador (Colaboración de negocio):} Colaboración donde participan los roles de los que depende la organización y ejecución de un evento deportivo
+				\item \textbf{Patrocinador deportivo (Rol):} Actor deportivo que apoya a un jugador/equipo/evento en la consecución de sus metas otorgandole dinero, materiales o servicios deportivos
+				\item \textbf{Gestor de encuentros deportivos (Rol):} Gestor de un encuentro deportivo
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Organización de eventos deportivos (Servicio de negocio):} Servicio por medio del cual todos los actores participantes componen un evento deportivo (ya sea un torneo, una clínica deportiva, un entrenamiento o partido(s) aislado(s))
+				\item \textbf{Planeación de eventos deportivos (Servicio de negocio):} Realiza la planeación de un evento deportivo
+				\item \textbf{Ejecución de eventos deportivos (Servicio de negocio):} Por medio de este se puede ejecutar el plan de un evento deportivo
+				\item \textbf{Patrocinio deportivo (Servicio de negocio):} Servicio ofrecido por patrocinadores de iniciativas deportivas para el sustento de las mismas
+				\item \textbf{Petición de evento (Evento):} Evento que responde a la petición de actores deportivos de realización de un evento deportivo
+				\item \textbf{Evento estructurado (Evento):} Evento que llama a la ejecución de un evento ya planeado
+				\item \textbf{Petición aceptada (Evento):} Evento que hace permite la actuación de la agrupación deportiva iniciar procesos relacionados a su participación en un evento
+				\item \textbf{Planeación del evento (Proceso de negocio):} Ejecuta todos los procesos atados a la planeación de un evento deportivo
+				\item \textbf{Verificar viabilidad del evento (Proceso de negocio):} Verifica si el evento cuenta con ciertos requisitos para que sea un éxito
+				\item \textbf{Definir detalles del evento (Proceso de negocio):} Define datos básicos del evento, definidos en los requisitos 
+				\item \textbf{Definir lugar del evento (Proceso de negocio):} Define el lugar(es) del evento
+				\item \textbf{Definir requisitos de grupos deportivos (Proceso de negocio):} Define los requisitos que deben tener los aspirantes a participar en el evento como agrupaciones deportivas
+				\item \textbf{Definir servicios a ofrecer en el evento (Proceso de negocio):} Definición de que tipo de servicios serán los ofrecidos en el evento
+				\item \textbf{Buscar servicios de medios (Proceso de negocio):} Realización de la contratación (o petición de transmisión) de servicios de medios de comunicación
+				\item \textbf{Elaborar llaves (Proceso de negocio):} Elaboración de cuadros/llaves que se tendrán en el evento (método para elaborarlas y como evolucionan a través del evento)
+				\item \textbf{Ejecutar evento (Proceso de negocio):} Proceso que ejecuta el plan del evento realizado en el proceso "planeación del evento"
+				\item \textbf{Abrir evento al público (Proceso de negocio):} Publica el evento para que el público se entere y pueda participar
+				\item \textbf{Inscribir grupos deportivos (Proceso de negocio):} Proceso de realización de inscripción de grupos deportivos que quieren participar en el evento y que cumplen con los requisitos definidos
+				\item \textbf{Inscribir personas al evento (Proceso de negocio):} Proceso de realización de inscripción a actores deportivos que desean ser espectadores del evento deportivo
+				\item \textbf{Establecer llaves (Proceso de negocio):} Establece las llaves que se llevarán en el evento deportivo
+				\item \textbf{Ejecutar evento planeado (Proceso de negocio):} Proceso que da inicio oficial al evento
+				\item \textbf{Clausurar evento (Proceso de negocio):} Realiza las acciones que se requieran una vez el evento haya terminado
+				\item \textbf{Participar en evento deportivo (Proceso de negocio):} Inscripción de grupos deportivos a participar en el evento
+				\item \textbf{Consolidar grupo deportivo (Proceso de negocio):} Creación (si aún no ha sido hecha) de un grupo deportivo
+				\item \textbf{Hacer petición de inscripción (Proceso de negocio):} Realizar una petición a los organizadores del evento para la inscripción de una agrupación deportiva a este
+				\item \textbf{Persistencia de eventos (Servicio de aplicación):} Servicio para el manejo de datos de eventos en el sistema
+				\item \textbf{Cancelar evento (Servicio de aplicación):} Cancela un evento deportivo
+				\item \textbf{Crear evento (Servicio de aplicación):} Crea el evento deportivo
+				\item \textbf{Clausurar evento (Servicio de aplicación):} Realiza las acciones que se requieran una vez el evento haya terminado
+				\item \textbf{Actualizar evento (Servicio de aplicación):} Actualiza detalles del evento deportivo
+				\item \textbf{Invitar stakeholder (Servicio de aplicación):} Realiza una invitación a cualquier actor deportivo que desee participar con algún concepto en el evento (agrupación deportiva, patrocinador o cualquier otro actor deportivo)
+				\item \textbf{Establecer estadísticas (Servicio de aplicación):} Establece que será contabilizado como estadística del evento deportivo
+				\item \textbf{Establecer alertas de inicio de evento (Servicio de aplicación):} Establece recordatorios de iniciación del evento a todos los stakeholders del mismo
+				\item \textbf{Establecer llaves (Servicio de aplicación):} Establece las llaves que se llevarán en el evento deportivo
+				\item \textbf{Petición de participación en evento (Servicio de aplicación):} Envia un mensaje de petición de participación en un evento a los organizadores del mismo por parte de una agrupación deportiva
 			\end{itemize} 
 			&
 			\begin{itemize}
 				\item N/A
+				\item Rol - actor, Bussiness process (Patrocinio deportivo, Estadísticas deportivas), Business function (Patrocinio deportivo, Estadísticas deportivas, Organizador de eventos deportivos)
+				\item Rol - actor, Bussiness process (Patrocinio deportivo), Business function (Organización eventos deportivos, Patrocinios deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, estadísticas deportivas, formación de grupos deportivos, patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item Introductory, General layered
+				\item N/A
+				\item N/A
+				\item General layered, Bussiness process (Patrocinio deportivo), Business Product
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos) 
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
+				\item Application usage (Organización de eventos deportivos)
 			\end{itemize} 
 			\\
 			\hline
