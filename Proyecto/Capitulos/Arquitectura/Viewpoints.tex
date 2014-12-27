@@ -897,8 +897,8 @@
 \end{figure}
 
 \begin{table}[!htb]
-	\caption{Business function - Formación de Grupos Deportivos}
-	\label{tab:BF_FormacionGruposDeportivos}
+	\caption{Estadísticas Deportivas}
+	\label{tab:BP_EstadisticasDeportivas}
 	\begin{center}
 		\resizebox{11cm}{!}{
 		\begin{tabular}{|p{7cm}|p{4cm}|}
@@ -906,16 +906,49 @@
 			Responsabilidades & Vistas relacionadas \\
 			\hline \hline
 			\begin{itemize}
-				\item \textbf{Formadores de grupo deportivo (Colaboración):} 
-				\item \textbf{Agrupación deportiva (Rol):} 
-				\item \textbf{Entrenador deportivo (Rol):} 
-				\item \textbf{Gestión de grupo deportivo (Función):} 
-				\item \textbf{Difusión del grupo deportivo (Función):} 
-				\item \textbf{Control de unión de miembros(Función):} 
-				\item \textbf{Difusión de información deportiva (Función):} 
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Patrocinador deportivo (Rol):} Actor deportivo que apoya a un jugador/equipo/evento en la consecución de sus metas otorgandole dinero, materiales o servicios deportivos
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Búsqueda de información estadística (Servicio de negocio):} Permite la búsqueda de información estadística producida y guardada por el SNS o fuentes externas
+				\item \textbf{Creación de estadísticas (Servicio de negocio):} Servicio utilizado para generar estadísticas de jugadores, de equipos, de eventos deportivos y de calificaciones a organizaciones en el SNS por medio de criterios especificados en los requerimientos de cada deporte
+				\item \textbf{Análisis estadístico (Servicio de negocio):} Permite hacer pronósticos de aquello que podría ocurrir según los datos que tiene
+				\item \textbf{Publicación de información deportiva (Servicio de negocio):} Publica en el SNS la información estadística generada
+				\item \textbf{Necesidad de estadísticas deportivas (Evento):} Evento que lanza la búsqueda de información estadística y, a su ves, la producción de la misma
+				\item \textbf{Buscar información estadística (Proceso de negocio):} Proceso que busca información estadística ya existente para dar respuesta al evento que lo generó
+				\item \textbf{Producir estadísticas (Proceso de negocio):} Proceso de producción de estadísticas
+				\item \textbf{Recaudar datos (Proceso de negocio):} Proceso que indica buscar datos que puedan ser relevantes a la estadística que se intenta crear
+				\item \textbf{Crear información estadística (Proceso de negocio):} Crea las estadísticas basado en la información recolectada y en principios estadísticos, así como definiciones dadas en los requerimientos
+				\item \textbf{Analizar estadísticas (Proceso de negocio):} Proceso mediante el cual se hacen inferencias a partir de la información estadística creada
+				\item \textbf{Publicar análisis (Proceso de negocio):} Hace visible a la red social deportiva el análisis desarrollado
+				\item \textbf{Tomar decisiones (Proceso de negocio):} Proceso mediante el cual se toman decisiones en cuanto a acciones a tomar en la red social basados en las estadísticas creadas
+				\item \textbf{Consultar estadísticas (Servicio de aplicación):} Permite la consulta de estadísticas de equipos, jugadores y otros entes (especificados en los requerimientos) definidas para cada uno de ellos según el ámbito de aplicación (deportivo, ofrecimiento deportivo, etc)
+				\item \textbf{Creación de estadísticas (Servicio de aplicación):} Servicio utilizado para generar estadísticas de jugadores, de equipos, de eventos deportivos y de calificaciones a organizaciones en el SNS por medio de criterios especificados en los requerimientos de cada deporte
+				\item \textbf{Realización de predicciones estadísticas (Servicio de aplicación):} Servicio estadístico para predecir densidades poblacionales en lugares de afluencia deportiva
+				\item \textbf{Insertar indicador (Servicio de aplicación):} Servicio mediante el cual se añaden criterios de creación de estadísticas
+				\item \textbf{Manejo de social media (Servicio de aplicación):} Servicio que permite manejar funcionalidades social media (publicación de información, comunicación por chats, comentarios a publicaciones públicas en un perfíl propio del actor deportivo)
 			\end{itemize} 
 			&
 			\begin{itemize}
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, Organización de eventos deportivos, Formación de grupos deportivos, Patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item Rol - actor, Bussiness process (Patrocinio deportivo, Organizador de eventos deportivos), Business function (Patrocinio deportivo, Estadísticas deportivas, Organizador de eventos deportivos)
+				\item Rol - actor, Bussiness process (Entrenamiento deportivo, Formación de grupos deportivos, Patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+				\item N/A
+				\item General layered
+				\item N/A
+				\item N/A
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item General layered, Application usage (Estadísticas deportivas) 
+				\item Application usage (Estadísticas deportivas) 
+				\item General layered, Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item General layered, Introductory, Application usage (Formación de grupos deportivos)
 			\end{itemize} 
 			\\
 			\hline
@@ -935,6 +968,77 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Entrenamiento Deportivo}
+	\label{tab:BP_EntrenamientoDeportivo}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Agrupación deportiva (Rol):} Grupo deportivo o equipo deportivo que se reunen a practicar un deporte
+				\item \textbf{Consejero deportivo (Rol):} Jugador/entrenador dador de consejos deportivos
+				\item \textbf{Entrenador deportivo (Rol):} Quien cumple la función de entrenar
+				\item \textbf{Entrenamiento deportivo (Servicio de negocio):} Servicios que ofrece un entrenador deportivo para entrenar un grupo deportivo
+				\item \textbf{Recibimiento de consejos deportivos (Servicio de negocio):} Servicio por el cual se prestan lugares para el diálogo entre jugadores en orden de obtener consejos deportivos
+				\item \textbf{Prestación de servicio de coaching (Evento):} Provoca entrenar un grupo deportivo
+				\item \textbf{Plan de entrenamiento construido (Evento):} Evento que dispara el proceso de entrenar para la agrupación deportiva que está siendo entrenada
+				\item \textbf{Coevaluación realizada (Evento):} Evento que dispara el proceso de reevaluar el plan de entrenamiento llevado a cabo para ajustarlo
+				\item \textbf{Entrenar grupo deportivo (Proceso de negocio):} Acción de entrenar a un jugador/equipo
+				\item \textbf{Construir plan de entrenamiento (Proceso de negocio):} Construcción de un plan de entrenamiento para un jugador/equipo específico
+				\item \textbf{Retroalimentar plan de entrenamiento (Proceso de negocio):} Reestructuración del plan de entrenamiento si se hace necesaria
+				\item \textbf{Evaluar funcionamiento del plan de entrenamiento (Proceso de negocio):} Evaluar los resultados producidos en la coevaluación
+				\item \textbf{Entregar plan de entrenamiento (Proceso de negocio):} Entrega al jugador/equipo del plan de entrenamiento
+				\item \textbf{Ejecutar plan de entrenamiento (Proceso de negocio):} Ejecución del plan de entrenamiento
+				\item \textbf{Entender plan de entrenamiento (Interacción de negocio):} Interiorización del plan de entrenamiento hecho por el entrenador deportivo
+				\item \textbf{Dar consejo deportivo (Interacción de negocio):} Acción de dar consejo deportivo a los jugadores de un equipo
+				\item \textbf{Ejecutar coevaluación (Interacción de negocio):} Acción de evaluar a todo el equipo de jugadores y al equipo mismo
+				\item \textbf{Realizar ejercicios del plan (Proceso de negocio):} Realización de los ejercicios establecidos en el plan de entrenamiento
+				\item \textbf{Ejecución plan de entrenamiento (Servicio de aplicación):} Servicio por el cual se permite la ejecución del plan de entrenamiento
+				\item \textbf{Servicio de comunicación colaborativa (Servicio de aplicación):} Servicio que utilizan los diferentes actores para comunicarse en pro de darle un valor añadido a los entrenamientos con consejos compartidos
+				\item \textbf{Servicios de plan de entrenamiento (Servicio de aplicación):} Por medio de éste se puede acceder a un plan de entrenamiento producido por un entrenador para cierto grupo específico de equipos/jugadores
+				\item \textbf{Crear plan de entrenamiento (Servicio de aplicación):} Servicio que permite la creación de un plan de entrenamiento deportivo para determinado equipo/jugador
+				\item \textbf{Modificar plan de entrenamiento (Servicio de aplicación):} Servicio que permite la modificación de los items especificados originalmente en el plan de entrenamiento
+				\item \textbf{Evaluar desempeño grupo deportivo(Servicio de aplicación):} Servicio que permite medir/ver la evolución del grupo deportivo conforme es ejecutado en su totalidad el plan de entrenamiento
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Rol - actor, Bussiness process (Estadísticas deportivas, Organización de eventos deportivos, Formación de grupos deportivos, Patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos)
+				\item Rol - actor, Business function (Entrenamiento deportivo) 
+				\item Rol - actor, Bussiness process (Estadísticas deportivas, Formación de grupos deportivos, Patrocinios deportivos), Business function (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+				\item General layered, Bussiness process (Entrenamiento deportivo)
+				\item N/A
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo) 
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Buscador de consejos deportivos}
 
@@ -1458,6 +1562,68 @@
   \end{center}
 \end{figure}
 
+\begin{table}[!htb]
+	\caption{Estadísticas Deportivas}
+	\label{tab:AU_EstadisticasDeportivas}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Necesidad de estadísticas deportivas (Evento):} Evento que lanza la búsqueda de información estadística y, a su ves, la producción de la misma
+				\item \textbf{Buscar información estadística (Proceso de negocio):} Proceso que busca información estadística ya existente para dar respuesta al evento que lo generó
+				\item \textbf{Producir estadísticas (Proceso de negocio):} Proceso de producción de estadísticas
+				\item \textbf{Recaudar datos (Proceso de negocio):} Proceso que indica buscar datos que puedan ser relevantes a la estadística que se intenta crear
+				\item \textbf{Crear información estadística (Proceso de negocio):} Crea las estadísticas basado en la información recolectada y en principios estadísticos, así como definiciones dadas en los requerimientos
+				\item \textbf{Analizar estadísticas (Proceso de negocio):} Proceso mediante el cual se hacen inferencias a partir de la información estadística creada
+				\item \textbf{Publicar análisis (Proceso de negocio):} Hace visible a la red social deportiva el análisis desarrollado
+				\item \textbf{Tomar decisiones (Proceso de negocio):} Proceso mediante el cual se toman decisiones en cuanto a acciones a tomar en la red social basados en las estadísticas creadas
+				\item \textbf{Consultar estadísticas (Servicio de aplicación):} Permite la consulta de estadísticas de equipos, jugadores y otros entes (especificados en los requerimientos) definidas para cada uno de ellos según el ámbito de aplicación (deportivo, ofrecimiento deportivo, etc)
+				\item \textbf{Creación de estadísticas (Servicio de aplicación):} Servicio utilizado para generar estadísticas de jugadores, de equipos, de eventos deportivos y de calificaciones a organizaciones en el SNS por medio de criterios especificados en los requerimientos de cada deporte
+				\item \textbf{Realización de predicciones estadísticas (Servicio de aplicación):} Servicio estadístico para predecir densidades poblacionales en lugares de afluencia deportiva
+				\item \textbf{Insertar indicador (Servicio de aplicación):} Servicio mediante el cual se añaden criterios de creación de estadísticas
+				\item \textbf{Manejo de social media (Servicio de aplicación):} Servicio que permite manejar funcionalidades social media (publicación de información, comunicación por chats, comentarios a publicaciones públicas en un perfíl propio del actor deportivo)
+				\item \textbf{Gestión estadística (Componente de aplicación):} Componente usado por otros para la producción de información estadística en cuanto a los criterios establecidos para cada actor deportivo, para cada evento deportivo y para cada servicio deportivo prestado
+				\item \textbf{Manejo de contenidos (Componente de aplicación):} Componente del SNS para la administración de los contenidos, referiendose a la base de conocimientos proporcionada para cada deporte soportado por la red social
+				\item \textbf{Gestión de geolocalización (Componente de aplicación):} Componente utilizado por otros para la ubicación de eventos y grupos deportivos/jugadores en el SNS
+				\item \textbf{Gestión de servicios (Componente de aplicación):} Colabora (por la parte del prestador de servicios) en la producción de la relación compra-venta entre actores-usuarios de la red social deportiva
+				\item \textbf{Gestión de eventos (Componente de aplicación):} Realiza todas las funcionalidades ofrecidas en los servicios de eventos (creación, modificación y consulta, así como también funcionalidades estadísticas por medio del componente "Gestión estadística")
+				\item \textbf{Gestión de usuarios (Componente de aplicación):} Permite la creación, modificación y recuperación de usuarios-actores deportivos en el SNS
+				\item \textbf{Gestor de estadísticas (Colaboración de aplicación):} Por medio de éste se administran todas las funcionalidades estadísticas ofrecidas por el SNS 
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item General layered, Application usage (Estadísticas deportivas) 
+				\item Application usage (Estadísticas deportivas) 
+				\item General layered, Application usage (Estadísticas deportivas)
+				\item Application usage (Estadísticas deportivas)
+				\item General layered, Introductory, Application usage (Formación de grupos deportivos)
+				\item General layered, Application usage (Entrenamiento deportivo, Patrocinios deportivos, Organización de eventos deportivos)
+				\item General layered, Introductory, Application usage (Entrenamiento deportivo)
+				\item General layered, Introductory, Application usage (Organización eventos deportivos)
+				\item General layered, Application usage (Entrenamiento deportivo, Patrocinios deportivos)
+				\item General layered, Application usage (Organización eventos deportivos, Patrocinios deportivos)
+				\item General layered, Application usage (Entrenamiento deportivo, Formación de grupos deportivos)
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsubsection{Entrenamiento Deportivo}
 
 \begin{figure}[!htb]
@@ -1468,6 +1634,85 @@
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+\begin{table}[!htb]
+	\caption{Entrenamiento Deportivo}
+	\label{tab:AU_EntrenamientoDeportivo}
+	\begin{center}
+		\resizebox{11cm}{!}{
+		\begin{tabular}{|p{7cm}|p{4cm}|}
+			\hline
+			Responsabilidades & Vistas relacionadas \\
+			\hline \hline
+			\begin{itemize}
+				\item \textbf{Prestación de servicio de coaching (Evento):} Provoca entrenar un grupo deportivo
+				\item \textbf{Plan de entrenamiento construido (Evento):} Evento que dispara el proceso de entrenar para la agrupación deportiva que está siendo entrenada
+				\item \textbf{Coevaluación realizada (Evento):} Evento que dispara el proceso de reevaluar el plan de entrenamiento llevado a cabo para ajustarlo
+				\item \textbf{Entrenar grupo deportivo (Proceso de negocio):} Acción de entrenar a un jugador/equipo
+				\item \textbf{Construir plan de entrenamiento (Proceso de negocio):} Construcción de un plan de entrenamiento para un jugador/equipo específico
+				\item \textbf{Retroalimentar plan de entrenamiento (Proceso de negocio):} Reestructuración del plan de entrenamiento si se hace necesaria
+				\item \textbf{Evaluar funcionamiento del plan de entrenamiento (Proceso de negocio):} Evaluar los resultados producidos en la coevaluación
+				\item \textbf{Entregar plan de entrenamiento (Proceso de negocio):} Entrega al jugador/equipo del plan de entrenamiento
+				\item \textbf{Ejecutar plan de entrenamiento (Proceso de negocio):} Ejecución del plan de entrenamiento
+				\item \textbf{Entender plan de entrenamiento (Interacción de negocio):} Interiorización del plan de entrenamiento hecho por el entrenador deportivo
+				\item \textbf{Dar consejo deportivo (Interacción de negocio):} Acción de dar consejo deportivo a los jugadores de un equipo
+				\item \textbf{Ejecutar coevaluación (Interacción de negocio):} Acción de evaluar a todo el equipo de jugadores y al equipo mismo
+				\item \textbf{Realizar ejercicios del plan (Proceso de negocio):} Realización de los ejercicios establecidos en el plan de entrenamiento
+				\item \textbf{Ejecución plan de entrenamiento (Servicio de aplicación):} Servicio por el cual se permite la ejecución del plan de entrenamiento
+				\item \textbf{Servicio de comunicación colaborativa (Servicio de aplicación):} Servicio que utilizan los diferentes actores para comunicarse en pro de darle un valor añadido a los entrenamientos con consejos compartidos
+				\item \textbf{Servicios de plan de entrenamiento (Servicio de aplicación):} Por medio de éste se puede acceder a un plan de entrenamiento producido por un entrenador para cierto grupo específico de equipos/jugadores
+				\item \textbf{Crear plan de entrenamiento (Servicio de aplicación):} Servicio que permite la creación de un plan de entrenamiento deportivo para determinado equipo/jugador
+				\item \textbf{Modificar plan de entrenamiento (Servicio de aplicación):} Servicio que permite la modificación de los items especificados originalmente en el plan de entrenamiento
+				\item \textbf{Evaluar desempeño grupo deportivo (Servicio de aplicación):} Servicio que permite medir/ver la evolución del grupo deportivo conforme es ejecutado en su totalidad el plan de entrenamiento
+				\item \textbf{Gestión de servicios (Componente de aplicación):} Colabora (por la parte del prestador de servicios) en la producción de la relación compra-venta entre actores-usuarios de la red social deportiva
+				\item \textbf{Gestión de servicio de coaching (Componente de aplicación):} Componente que brinda funcionalidades de administración de los servicios de coaching
+				\item \textbf{Gestión estadística (Componente de aplicación):} Componente usado por otros para la producción de información estadística en cuanto a los criterios establecidos para cada actor deportivo, para cada evento deportivo y para cada servicio deportivo prestado
+				\item \textbf{Gestión de usuarios (Componente de aplicación):} Permite la creación, modificación y recuperación de usuarios-actores deportivos en el SNS
+				\item \textbf{Gestión de grupo deportivo (Componente de aplicación):} Módulo para la gestión de grupos deportivos
+				\item \textbf{Manejo de contenidos (Componente de aplicación):} Componente del SNS para la administración de los contenidos, referiendose a la base de conocimientos proporcionada para cada deporte soportado por la red social
+				\item \textbf{Gestión de comunicación (Componente de aplicación):} Sirve como el componente administrador de todo el contenido (chat y self-sharing) producido por el perfíl de un actor deportivo en el SNS
+				\item \textbf{Gestión de comunicación colaborativa (Colaboración de aplicación):} Colaboración que integra todos los componentes necesarios para lograr una comunicación con el fin del aprendizaje mutuo en el entrenamiento deportivo
+				\item \textbf{Controlador de servicios de coaching (Colaboración de aplicación):} Colaboración para llevar a cabo una función completa de la administración de los servicios coaching
+			\end{itemize} 
+			&
+			\begin{itemize}
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo) 
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item Application usage (Entrenamiento deportivo)
+				\item General layered, Application usage (Estadisticas deportivas, Patrocinios deportivos)
+				\item N/A
+				\item General layered, Application usage (Estadisticas deportivas, Patrocinios deportivos, Organización de eventos deportivos)
+				\item General layered, Application usage (Estadísticas deportivas, Formación de grupos deportivos)
+				\item Application usage (Formación de grupos deportivos, Patrocinio deportivo)
+				\item General layered, Introductory, Application usage (Estadísticas deportivas)
+				\item Application usage (Formación de grupos deportivos, Patrocinio deportivo)
+				\item N/A
+				\item N/A
+			\end{itemize} 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsubsection{Buscador de consejos deportivos}
 
