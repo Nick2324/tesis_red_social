@@ -79,19 +79,20 @@
 \contentsline {subsection}{\numberline {7.1.1}Alcances}{91}{subsection.7.1.1}
 \contentsline {subsection}{\numberline {7.1.2}Limitaciones}{92}{subsection.7.1.2}
 \contentsline {chapter}{\numberline {8}Metodolog\IeC {\'\i }a}{95}{chapter.8}
-\contentsline {chapter}{\numberline {9}Propuesta de arquitectura}{99}{chapter.9}
-\contentsline {chapter}{\numberline {10}Requerimientos}{101}{chapter.10}
-\contentsline {section}{\numberline {10.1}Requerimientos funcionales}{101}{section.10.1}
-\contentsline {section}{\numberline {10.2}Requerimientos no funcionales}{101}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}QiU}{102}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Reusabilidad}{102}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Mantenibilidad}{102}{subsection.10.2.3}
-\contentsline {subsection}{\numberline {10.2.4}Interoperabilidad}{102}{subsection.10.2.4}
-\contentsline {subsection}{\numberline {10.2.5}Seguridad}{102}{subsection.10.2.5}
-\contentsline {chapter}{\numberline {11}Cronograma}{115}{chapter.11}
-\contentsline {chapter}{\numberline {12}Costos}{117}{chapter.12}
-\contentsline {section}{\numberline {12.1}Recursos de Hardware}{117}{section.12.1}
-\contentsline {section}{\numberline {12.2}Recursos de Software}{117}{section.12.2}
-\contentsline {section}{\numberline {12.3}Recursos humanos}{117}{section.12.3}
-\contentsline {section}{\numberline {12.4}Recursos miscel\IeC {\'a}neos}{117}{section.12.4}
-\contentsline {section}{\numberline {12.5}Costos totales}{120}{section.12.5}
+\contentsline {chapter}{\numberline {9}An\IeC {\'a}lisis de requerimientos}{99}{chapter.9}
+\contentsline {section}{\numberline {9.1}Requerimientos}{99}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Requerimientos funcionales}{99}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Requerimientos no funcionales}{100}{subsection.9.1.2}
+\contentsline {subsubsection}{\numberline {9.1.2.1}QiU}{100}{subsubsection.9.1.2.1}
+\contentsline {subsubsection}{\numberline {9.1.2.2}Reusabilidad}{100}{subsubsection.9.1.2.2}
+\contentsline {subsubsection}{\numberline {9.1.2.3}Mantenibilidad}{100}{subsubsection.9.1.2.3}
+\contentsline {subsubsection}{\numberline {9.1.2.4}Interoperabilidad}{100}{subsubsection.9.1.2.4}
+\contentsline {subsubsection}{\numberline {9.1.2.5}Seguridad}{100}{subsubsection.9.1.2.5}
+\contentsline {section}{\numberline {9.2}Casos de uso}{111}{section.9.2}
+\contentsline {chapter}{\numberline {10}Cronograma}{113}{chapter.10}
+\contentsline {chapter}{\numberline {11}Costos}{115}{chapter.11}
+\contentsline {section}{\numberline {11.1}Recursos de Hardware}{115}{section.11.1}
+\contentsline {section}{\numberline {11.2}Recursos de Software}{115}{section.11.2}
+\contentsline {section}{\numberline {11.3}Recursos humanos}{115}{section.11.3}
+\contentsline {section}{\numberline {11.4}Recursos miscel\IeC {\'a}neos}{115}{section.11.4}
+\contentsline {section}{\numberline {11.5}Costos totales}{118}{section.11.5}

@@ -78,19 +78,20 @@
 \BOOKMARK [2][-]{subsection.7.1.1}{Alcances}{section.7.1}% 78
 \BOOKMARK [2][-]{subsection.7.1.2}{Limitaciones}{section.7.1}% 79
 \BOOKMARK [0][-]{chapter.8}{Metodolog\355a}{}% 80
-\BOOKMARK [0][-]{chapter.9}{Propuesta de arquitectura}{}% 81
-\BOOKMARK [0][-]{chapter.10}{Requerimientos}{}% 82
-\BOOKMARK [1][-]{section.10.1}{Requerimientos funcionales}{chapter.10}% 83
-\BOOKMARK [1][-]{section.10.2}{Requerimientos no funcionales}{chapter.10}% 84
-\BOOKMARK [2][-]{subsection.10.2.1}{QiU}{section.10.2}% 85
-\BOOKMARK [2][-]{subsection.10.2.2}{Reusabilidad}{section.10.2}% 86
-\BOOKMARK [2][-]{subsection.10.2.3}{Mantenibilidad}{section.10.2}% 87
-\BOOKMARK [2][-]{subsection.10.2.4}{Interoperabilidad}{section.10.2}% 88
-\BOOKMARK [2][-]{subsection.10.2.5}{Seguridad}{section.10.2}% 89
-\BOOKMARK [0][-]{chapter.11}{Cronograma}{}% 90
-\BOOKMARK [0][-]{chapter.12}{Costos}{}% 91
-\BOOKMARK [1][-]{section.12.1}{Recursos de Hardware}{chapter.12}% 92
-\BOOKMARK [1][-]{section.12.2}{Recursos de Software}{chapter.12}% 93
-\BOOKMARK [1][-]{section.12.3}{Recursos humanos}{chapter.12}% 94
-\BOOKMARK [1][-]{section.12.4}{Recursos miscel\341neos}{chapter.12}% 95
-\BOOKMARK [1][-]{section.12.5}{Costos totales}{chapter.12}% 96
+\BOOKMARK [0][-]{chapter.9}{An\341lisis de requerimientos}{}% 81
+\BOOKMARK [1][-]{section.9.1}{Requerimientos}{chapter.9}% 82
+\BOOKMARK [2][-]{subsection.9.1.1}{Requerimientos funcionales}{section.9.1}% 83
+\BOOKMARK [2][-]{subsection.9.1.2}{Requerimientos no funcionales}{section.9.1}% 84
+\BOOKMARK [3][-]{subsubsection.9.1.2.1}{QiU}{subsection.9.1.2}% 85
+\BOOKMARK [3][-]{subsubsection.9.1.2.2}{Reusabilidad}{subsection.9.1.2}% 86
+\BOOKMARK [3][-]{subsubsection.9.1.2.3}{Mantenibilidad}{subsection.9.1.2}% 87
+\BOOKMARK [3][-]{subsubsection.9.1.2.4}{Interoperabilidad}{subsection.9.1.2}% 88
+\BOOKMARK [3][-]{subsubsection.9.1.2.5}{Seguridad}{subsection.9.1.2}% 89
+\BOOKMARK [1][-]{section.9.2}{Casos de uso}{chapter.9}% 90
+\BOOKMARK [0][-]{chapter.10}{Cronograma}{}% 91
+\BOOKMARK [0][-]{chapter.11}{Costos}{}% 92
+\BOOKMARK [1][-]{section.11.1}{Recursos de Hardware}{chapter.11}% 93
+\BOOKMARK [1][-]{section.11.2}{Recursos de Software}{chapter.11}% 94
+\BOOKMARK [1][-]{section.11.3}{Recursos humanos}{chapter.11}% 95
+\BOOKMARK [1][-]{section.11.4}{Recursos miscel\341neos}{chapter.11}% 96
+\BOOKMARK [1][-]{section.11.5}{Costos totales}{chapter.11}% 97
