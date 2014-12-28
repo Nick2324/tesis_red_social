@@ -12,6 +12,7 @@
 \usepackage{apacite} 
 \usepackage{chngcntr} %para numeracion de figuras
 \usepackage{mathtools}
+\usepackage{supertabular}
 \graphicspath{ {./imagenes/} }
 \setcounter{secnumdepth}{3} % para que ponga 1.1.1.1 en subsubsecciones...
 \setcounter{tocdepth}{3} % para que añada las subsubsecciones en el indice...
@@ -120,6 +121,7 @@
   \input{./Capitulos/Glosario/Glosario.tex}
   
   \chapter{Definición del problema}
+  \label{chap:definicion_problema}
   \input{./Capitulos/Descripcion_problema/Descripcion_problema.tex}
   
   \chapter{Justificación del problema}
@@ -149,8 +151,11 @@
   \chapter{Propuesta de arquitectura}
   \input{./Capitulos/Arquitectura/Arquitectura.tex}
   
-  \chapter{Arquitectura}
-  \input{./Capitulos/Arquitectura/Viewpoints.tex}  
+  \chapter{Requerimientos}
+  \input{./Capitulos/Requerimientos/Requerimientos.tex}  
+  
+  %\chapter{Arquitectura}
+  %\input{./Capitulos/Arquitectura/Viewpoints.tex}  
   
 %   \chapter{Métodos utilizados}
   

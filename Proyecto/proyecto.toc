@@ -1,0 +1,97 @@
+\select@language {spanish}
+\contentsline {chapter}{Lista de figuras}{9}{chapter*.2}
+\contentsline {chapter}{Lista de tablas}{11}{chapter*.3}
+\contentsline {section}{Introducci\IeC {\'o}n}{13}{chapter*.5}
+\contentsline {section}{Glosario}{15}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Definici\IeC {\'o}n del problema}{17}{chapter.1}
+\contentsline {chapter}{\numberline {2}Justificaci\IeC {\'o}n del problema}{21}{chapter.2}
+\contentsline {chapter}{\numberline {3}Objetivos}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objetivo General}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Objetivos espec\IeC {\'\i }ficos}{25}{section.3.2}
+\contentsline {chapter}{\numberline {4}Marco conceptual}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Comunicaci\IeC {\'o}n}{27}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Evoluci\IeC {\'o}n de la web}{28}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}R\IeC {\'e}d social}{28}{section.4.2}
+\contentsline {section}{\numberline {4.3}Business Process Modeling Notation (BPMN)}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Pertinencia con el proyecto}{31}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Service-Oriented Architecture (SOA)}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Primeros conceptos}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Computaci\IeC {\'o}n orientada a servicios}{32}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Pertinencia con el proyecto}{37}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Scrum}{37}{section.4.5}
+\contentsline {chapter}{\numberline {5}Marco te\IeC {\'o}rico}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Redes Sociales}{39}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}SNA: Social Network Analisis}{39}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Analisis egoc\IeC {\'e}ntrico}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Grado de centralidad}{40}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Grado de cercan\IeC {\'\i }a}{42}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Factor distancia en la formaci\IeC {\'o}n de las redes sociales}{42}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Grado de intermediaci\IeC {\'o}n}{43}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}D\IeC {\'\i }adas}{44}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Tr\IeC {\'\i }adas}{45}{subsection.5.1.8}
+\contentsline {subsection}{\numberline {5.1.9}An\IeC {\'a}lisis Tri\IeC {\'a}dico}{47}{subsection.5.1.9}
+\contentsline {section}{\numberline {5.2}Business Process Modeling Notation (BPMN)}{47}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Enlaces}{47}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Colaboraci\IeC {\'o}n}{50}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Service-Oriented Architecture (SOA)}{52}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Proceso de An\IeC {\'a}lisis y dise\IeC {\~n}o orientados a servicios}{52}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Metas y beneficios de la computaci\IeC {\'o}n orientada a servicios}{53}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Principios de dise\IeC {\~n}o SOA}{54}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Scrum}{55}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Equipo Scrum (Scrum Team)}{55}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}Product Owner (due\IeC {\~n}o del producto)}{55}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}Development Team (Equipo de desarrollo)}{56}{subsubsection.5.4.1.2}
+\contentsline {subsubsection}{\numberline {5.4.1.3}Scrum Master}{56}{subsubsection.5.4.1.3}
+\contentsline {subsection}{\numberline {5.4.2}Eventos}{58}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}Sprint}{58}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Sprint Planning Meeting (Reuni\IeC {\'o}n de Planificaci\IeC {\'o}n de Sprint)}{58}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}Daily Scrum (Scrum Diario)}{58}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}Sprint Review (Revisi\IeC {\'o}n de Sprint)}{58}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}Sprint Retrospective (Retrospectiva de Sprint)}{59}{subsubsection.5.4.2.5}
+\contentsline {subsection}{\numberline {5.4.3}Artefactos}{59}{subsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.3.1}Sprint Goal (Objetivo del Sprint)}{59}{subsubsection.5.4.3.1}
+\contentsline {subsubsection}{\numberline {5.4.3.2}Product Backlog (Lista de Producto)}{59}{subsubsection.5.4.3.2}
+\contentsline {subsubsection}{\numberline {5.4.3.3}Sprint Backlog (Lista de Pendientes del Sprint)}{59}{subsubsection.5.4.3.3}
+\contentsline {section}{\numberline {5.5}Requerimientos no funcionales}{60}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Mantenibilidad}{60}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Reusabilidad}{65}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}Medidas de reusabilidad}{65}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}Blueprints y reusabilidad}{65}{subsubsection.5.5.2.2}
+\contentsline {subsubsection}{\numberline {5.5.2.3}Logic Centralization: Patr\IeC {\'o}n de dise\IeC {\~n}o pro-reusabilidad}{66}{subsubsection.5.5.2.3}
+\contentsline {subsubsection}{\numberline {5.5.2.4}Granularidad y reusabilidad}{66}{subsubsection.5.5.2.4}
+\contentsline {subsection}{\numberline {5.5.3}QiU: Quality in Use}{67}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}Usabilidad}{67}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}User aceptance (Aceptaci\IeC {\'o}n de usuario)}{67}{subsubsection.5.5.3.2}
+\contentsline {subsubsection}{\numberline {5.5.3.3}Experiencia de usuario (User eXperience - UX)}{68}{subsubsection.5.5.3.3}
+\contentsline {subsubsection}{\numberline {5.5.3.4}Conceptos para medir QiU}{69}{subsubsection.5.5.3.4}
+\contentsline {subsection}{\numberline {5.5.4}Seguridad}{70}{subsection.5.5.4}
+\contentsline {section}{\numberline {5.6}Archimate 2.0}{72}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Capas de archimate}{72}{subsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.1.1}Capa de negocio}{72}{subsubsection.5.6.1.1}
+\contentsline {subsubsection}{\numberline {5.6.1.2}Capa de aplicaci\IeC {\'o}n}{72}{subsubsection.5.6.1.2}
+\contentsline {subsubsection}{\numberline {5.6.1.3}Capa de infraestructura}{74}{subsubsection.5.6.1.3}
+\contentsline {subsection}{\numberline {5.6.2}Relaciones}{74}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Vistas archimate}{77}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}Estado del arte}{77}{section.5.7}
+\contentsline {chapter}{\numberline {6}Marco legal}{87}{chapter.6}
+\contentsline {chapter}{\numberline {7}Alcances y limitaciones}{91}{chapter.7}
+\contentsline {section}{\numberline {7.1}Alcances y limitaciones}{91}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Alcances}{91}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Limitaciones}{92}{subsection.7.1.2}
+\contentsline {chapter}{\numberline {8}Metodolog\IeC {\'\i }a}{95}{chapter.8}
+\contentsline {chapter}{\numberline {9}Propuesta de arquitectura}{99}{chapter.9}
+\contentsline {chapter}{\numberline {10}Requerimientos}{101}{chapter.10}
+\contentsline {section}{\numberline {10.1}Requerimientos funcionales}{101}{section.10.1}
+\contentsline {section}{\numberline {10.2}Requerimientos no funcionales}{101}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}QiU}{102}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Reusabilidad}{102}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Mantenibilidad}{102}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}Interoperabilidad}{102}{subsection.10.2.4}
+\contentsline {subsection}{\numberline {10.2.5}Seguridad}{102}{subsection.10.2.5}
+\contentsline {chapter}{\numberline {11}Cronograma}{115}{chapter.11}
+\contentsline {chapter}{\numberline {12}Costos}{117}{chapter.12}
+\contentsline {section}{\numberline {12.1}Recursos de Hardware}{117}{section.12.1}
+\contentsline {section}{\numberline {12.2}Recursos de Software}{117}{section.12.2}
+\contentsline {section}{\numberline {12.3}Recursos humanos}{117}{section.12.3}
+\contentsline {section}{\numberline {12.4}Recursos miscel\IeC {\'a}neos}{117}{section.12.4}
+\contentsline {section}{\numberline {12.5}Costos totales}{120}{section.12.5}
