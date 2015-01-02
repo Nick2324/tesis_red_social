@@ -1784,9 +1784,506 @@ A continuación se muestran los casos de uso del módulo de administración de t
 
 A continuación se muestran los casos de uso del módulo de administración de equipos
 
+\begin{table}[!htb]
+	\caption{CU025-Administración de equipos: Descripción}
+	\label{tab:cu025_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administración de equipos \\
+			\hline
+			Identificador & CU025 \\
+			\hline
+			Descripción & Permite administrar un equipo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Administrar un equipo en la red social deportiva \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario está en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Crear un equipo
+					\item Actualizar información de equipo
+					\item Agregar un integrante a un equipo
+					\item Actualizar información de integrante de equipo
+					\item Dar de baja a integrante de grupo
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU025-Administración de equipos: Flujos de hechos}
+	\label{tab:cu025_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU026-Crear un equipo: Descripción}
+	\label{tab:cu026_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear un equipo \\
+			\hline
+			Identificador & CU026 \\
+			\hline
+			Descripción & Permite la creación de un equipo deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige crear un equipo deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+				\item El usuario eligió la administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario crea un equipo deportivo
+				\item El usuario se encuentra en la pantalla de administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU026-Crear un equipo: Flujos de hechos}
+	\label{tab:cu026_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU027-Actualizar información de equipo: Descripción}
+	\label{tab:cu027_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de equipo \\
+			\hline
+			Identificador & CU027 \\
+			\hline
+			Descripción & Permite actualizar la información general de un equipo deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige actualizar la información de un equipo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+				\item El usuario eligió la administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario actualiza la información del equipo deportivo
+				\item El usuario se encuentra en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU027-Actualizar información de equipo: Flujos de hechos}
+	\label{tab:cu027_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU028-Agregar un integrante a un equipo: Descripción}
+	\label{tab:cu028_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Agregar un integrante a un equipo \\
+			\hline
+			Identificador & CU028 \\
+			\hline
+			Descripción & Permite agregar un integrante al equipo elegido \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige agregar un integrante a un equipo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+				\item El usuario eligió la administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario agrega un integrante al equipo
+				\item El usuario se encuentra en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU028-Agregar un integrante a un equipo: Flujos de hechos}
+	\label{tab:cu028_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU029-Actualizar información de integrante de equipo: Descripción}
+	\label{tab:cu029_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de integrante de equipo \\
+			\hline
+			Identificador & CU029 \\
+			\hline
+			Descripción & Permite la actualización la información de la información de un integrante del equipo referente al equipo mismo (ej. posición en la que éste juega) \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & El usuario elige actualizar la información de equipo de un integrante del equipo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+				\item El usuario eligió la administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario cambia la información de equipo de un integrante del equipo
+				\item El usuario se encuentra en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU029-Actualizar información de integrante de equipo: Flujos de hechos}
+	\label{tab:cu029_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU030-Dar de baja a integrante de equipo: Descripción}
+	\label{tab:cu030_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Dar de baja a integrante de equipo \\
+			\hline
+			Identificador & CU030 \\
+			\hline
+			Descripción & Permite eliminar un jugador de un equipo deportivo, así como desvincularse del mismo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & El usuario elige dar de baja a un integrante del equipo (darse de baja también) \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos o un jugador del equipo intenta acceder a la funcionalidad
+				\item El usuario eligió la administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario da de baja a un jugador del equipo (o se da de baja a si mismo)
+				\item El usuario se encuentra en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU030-Dar de baja a integrante de equipo: Flujos de hechos}
+	\label{tab:cu030_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsection{Módulo de estadísticas}
 
 A continuación se muestran los casos de uso del módulo de estadísticas
+
+\begin{table}[!htb]
+	\caption{CU031-Gestión de estadísticas: Descripción}
+	\label{tab:cu031_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestión de estadísticas \\
+			\hline
+			Identificador & CU031 \\
+			\hline
+			Descripción &  \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & El usuario elige dar de baja a un integrante del equipo (darse de baja también) \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos o un jugador del equipo intenta acceder a la funcionalidad
+				\item El usuario eligió la administración de equipos
+				\item El usuario eligió un equipo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario da de baja a un jugador del equipo (o se da de baja a si mismo)
+				\item El usuario se encuentra en la pantalla de administración de equipos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU031-Gestión de estadísticas: Flujos de hechos}
+	\label{tab:cu031_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsection{Módulo de gestión de sponsors}
 
