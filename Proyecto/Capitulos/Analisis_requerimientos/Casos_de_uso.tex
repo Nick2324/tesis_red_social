@@ -6,8 +6,8 @@ Los diagramas estarán dividos por cada módulo de gestión identificado basado 
 	\caption{CU001-NOMBRE: Descripción}
 	\label{tab:cu001_desc}
 	\begin{center}
-		\resizebox{11cm}{!}{
-		\begin{tabular}{|p{4cm}|p{7cm}|}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
 			\hline
 			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
 			\hline
@@ -41,11 +41,13 @@ Los diagramas estarán dividos por cada módulo de gestión identificado basado 
 	\caption{CU001-NOMBRE: Flujos de hechos}
 	\label{tab:cu001_flujo}
 	\begin{center}
-		\resizebox{13cm}{!}{
-		\begin{tabular}{|p{2cm}||p{4cm}|p{7cm}|}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
 			\hline
-			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso}
-			Nombre & \multicolumn{2}{|p|}{}
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
 			 & & \\
@@ -64,8 +66,8 @@ A continuación se muestran los casos de uso del módulo de administración de e
 	\caption{CU001-Gestión de entrenadores: Descripción}
 	\label{tab:cu001_desc}
 	\begin{center}
-		\resizebox{11cm}{!}{
-		\begin{tabular}{|p{4cm}|p{7cm}|}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
 			\hline
 			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
 			\hline
@@ -75,19 +77,42 @@ A continuación se muestran los casos de uso del módulo de administración de e
 			\hline
 			Descripción & Gestiona las opciones dadas a los entrenadores deportivos en el SNS \\
 			\hline
-			Actor & !*!*!*!*!*! \\
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 \\
 			\hline
-			Disparador & Actor entrenador elige la opción de gestión de entrenadores \\
+			Disparador & Actor con rol de entrenador deportivo elige la opción de gestión de entrenadores \\
 			\hline
-			Inclusiones & \\
+			Inclusiones & N/A \\
 			\hline
-			Puntos de extensión & \\
+			Puntos de extensión & N/A \\
 			\hline
-			Precondiciones &  \\
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
 			\hline
-			Postcondiciones & \\
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario puede ver el menú de gestión de entrenadores
+			\end{itemize}
+			\\
 			\hline
-			Notas & \\
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Convertirse en entrenador de jugador/equipo
+					\item Dejar de entrenar a jugador/equipo
+					\item Llevar seguimiento de entrenamientos
+					\item Promocionar servicios de entrenamiento
+				\end{itemize}
+			\end{itemize}
+			\\
 			\hline
 		\end{tabular}
 		} \\
@@ -99,11 +124,302 @@ A continuación se muestran los casos de uso del módulo de administración de e
 	\caption{CU001-Gestión de entrenadores: Flujos de hechos}
 	\label{tab:cu001_flujo}
 	\begin{center}
-		\resizebox{13cm}{!}{
-		\begin{tabular}{|p{2cm}||p{4cm}|p{7cm}|}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
 			\hline
-			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso}
-			Nombre & \multicolumn{2}{|p|}{}
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU002-Convertirse en entrenador de jugador/equipo: Descripción}
+	\label{tab:cu002_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Convertirse en entrenador de jugador/equipo \\
+			\hline
+			Identificador & CU002 \\
+			\hline
+			Descripción & Ayuda a pedir/aceptar la petición de ser entrenador de un jugador o equipo en el SNS \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 \\
+			\hline
+			Disparador & Actor con rol de entrenador deportivo elige la opción de entrenar a equipo o jugador \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha elegido o no ser entrenador de un jugador o equipo deportivo.
+				\item El usuario sigue gestionando su rol como entrenador de otros usuarios de la red social.
+				\item El usuario regresa al menú de gestión de entrenamiento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU002-Gestión de entrenadores: Flujos de hechos}
+	\label{tab:cu002_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU003-Dejar de entrenar a jugador/equipo: Descripción}
+	\label{tab:cu003_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Dejar de entrenar a jugador/equipo \\
+			\hline
+			Identificador & CU003 \\
+			\hline
+			Descripción & Permite dejar de ser entrenador de un jugador o equipo en el SNS \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 
+			\\
+			\hline
+			Disparador & Actor con rol de entrenador deportivo elige la opción de dejar de ser entrenador de equipo o jugador \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha elegido o no dejar de ser entrenador de un jugador o equipo deportivo.
+				\item El usuario sigue gestionando su rol como entrenador de otros usuarios de la red social.
+				\item El usuario regresa al menú de gestión de entrenamiento deportivo.
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU003-Dejar de entrenar a jugador/equipo: Flujos de hechos}
+	\label{tab:cu003_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+
+\begin{table}[!htb]
+	\caption{CU004-Llevar seguimiento de entrenamientos: Descripción}
+	\label{tab:cu004_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Llevar seguimiento de entrenamientos \\
+			\hline
+			Identificador & CU004 \\
+			\hline
+			Descripción & Permite administrar los planes de entrenamientos dados a los entrenados en cuanto a su cumplimiento, a su actualización y en cuanto a su creación \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 
+			\\
+			\hline
+			Disparador & Actor con rol de entrenador deportivo elige la opción de seguimiento de planes de entrenamiento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario se encuentra en la administración de planes deportivos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU004-Llevar seguimiento de entrenamientos: Flujos de hechos}
+	\label{tab:cu004_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU005-Promocionar servicios de entrenamiento: Descripción}
+	\label{tab:cu005_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Promocionar servicios de entrenamiento \\
+			\hline
+			Identificador & CU005 \\
+			\hline
+			Descripción & Permite la promoción de servicios de entrenamiento hacia los equipos/jugadores posiblemente interesados, así como también sobre las noticias nuevas en la red social \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 
+			\\
+			\hline
+			Disparador & Actor con rol de entrenador deportivo elige la opción de promoción de sus servicios de entrenamiento deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha promocionado sus servicios y decide seguir promocionando.
+				\item El usuario vuelve a la opción de gestión de entrenamiento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU005-Promocionar servicios de entrenamiento: Flujos de hechos}
+	\label{tab:cu005_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
 			 & & \\
@@ -118,9 +434,992 @@ A continuación se muestran los casos de uso del módulo de administración de e
 
 A continuación se muestran los casos de uso del módulo de administración de eventos deportivos
 
+\begin{table}[!htb]
+	\caption{CU006-Administrar eventos deportivos: Descripción}
+	\label{tab:cu006_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administrar eventos deportivos \\
+			\hline
+			Identificador & CU006 \\
+			\hline
+			Descripción & Permite la administración de eventos deportivos realizados \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de administrar un evento deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario está en la pantalla de administración de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Crear evento deportivo
+					\item Cancelar evento deportivo
+					\item Actualizar información de evento deportivo
+					\item Administrar involucrados
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU006-Administrar eventos deportivos: Flujos de hechos}
+	\label{tab:cu006_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU007-Crear evento deportivo: Descripción}
+	\label{tab:cu007_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear evento deportivo \\
+			\hline
+			Identificador & CU007 \\
+			\hline
+			Descripción & Permite la creación de un evento deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de crear un evento deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido la opción de administrar eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario crea un evento deportivo
+				\item El usuario está en la pantalla de administración de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU007-Crear evento deportivo: Flujos de hechos}
+	\label{tab:cu007_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU008-Cancelar evento deportivo: Descripción}
+	\label{tab:cu008_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Cancelar evento deportivo \\
+			\hline
+			Identificador & CU008 \\
+			\hline
+			Descripción & Permite la cancelación de un evento deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de cancelar un evento deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido la opción de administrar eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario cancela un evento deportivo
+				\item El usuario está en la pantalla de administración de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU008-Cancelar evento deportivo: Flujos de hechos}
+	\label{tab:cu008_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU009-Actualizar información de evento deportivo: Descripción}
+	\label{tab:cu009_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de evento deportivo \\
+			\hline
+			Identificador & CU009 \\
+			\hline
+			Descripción & Permite la actualizar la información de un evento deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de actualizar la información de un evento deportivo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido la opción de administrar eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario cambia la información de un evento deportivo
+				\item El usuario está en la pantalla de administración de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU009-Actualizar información de evento deportivo: Flujos de hechos}
+	\label{tab:cu009_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU010-Administrar involucrados: Descripción}
+	\label{tab:cu010_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administrar involucrados \\
+			\hline
+			Identificador & CU010 \\
+			\hline
+			Descripción & Permite la administración de los stakeholder asociados a alguno de los eventos creados \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de administración de involucrados en el evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Añadir colaborador
+					\item Retirar colaborador
+					\item Añadir participante
+					\item Retirar participante
+					\item Añadir espectador
+					\item Retirar espectador
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU010-Administrar involucrados: Flujos de hechos}
+	\label{tab:cu010_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU011-Añadir colaborador: Descripción}
+	\label{tab:cu011_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Añadir colaborador\\
+			\hline
+			Identificador & CU011 \\
+			\hline
+			Descripción & Permite añadir un colaborador en la organización de un evento deportivo en el evento escogido \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de añadir colaborador \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Solo el creador/administrador principal del evento puede activar esta opcionalidad
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario añade uno o varios colaboradores a la organización del evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU011-Añadir colaborador: Flujos de hechos}
+	\label{tab:cu011_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU012-Retirar colaborador: Descripción}
+	\label{tab:cu012_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar colaborador \\
+			\hline
+			Identificador & CU012 \\
+			\hline
+			Descripción & Permite retirar un organizador del evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de retirar colaborador \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Solo el creador/administrador principal del evento puede activar esta opcionalidad
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario retira uno o varios colaboradores de la organización del evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU012-Retirar colaborador: Flujos de hechos}
+	\label{tab:cu012_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU013-Añadir participante: Descripción}
+	\label{tab:cu013_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Añadir participante \\
+			\hline
+			Identificador & CU013 \\
+			\hline
+			Descripción & Permite añadir un participante deportivo (equipo o jugador) al evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de añadir un participante deportivo al evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario añade uno o varios participantes deportivos al evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU013-Añadir participante: Flujos de hechos}
+	\label{tab:cu013_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU014-Retirar participante: Descripción}
+	\label{tab:cu014_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar participante \\
+			\hline
+			Identificador & CU014 \\
+			\hline
+			Descripción & Permite retirar un participante deportivo (equipo o jugador) del evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de retirar un participante deportivo al evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario retira un participante deportivo del evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU014-Retirar participante: Flujos de hechos}
+	\label{tab:cu014_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU015-Añadir espectador: Descripción}
+	\label{tab:cu015_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Añadir espectador \\
+			\hline
+			Identificador & CU015 \\
+			\hline
+			Descripción & Permite la adición de un espectador al evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de añadir un espectador deportivo al evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario añade un o varios espectadores al deportivo del evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU015-Añadir espectador: Flujos de hechos}
+	\label{tab:cu015_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU016-Retirar espectador: Descripción}
+	\label{tab:cu016_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar espectador \\
+			\hline
+			Identificador & CU016 \\
+			\hline
+			Descripción & Permite retirar un espectador del evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de retirar un espectador deportivo del evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido un evento al cual administrar involucrados
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario retira uno o varios espectadores del deportivo del evento deportivo
+				\item El usuario está en la pantalla de administración de involucrados en un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU016-Retirar espectador: Flujos de hechos}
+	\label{tab:cu016_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsection{Módulo de administración de torneos}
 
 A continuación se muestran los casos de uso del módulo de administración de torneos
+
+\begin{table}[!htb]
+	\caption{CU017-Administrar torneos: Descripción}
+	\label{tab:cu017_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administrar torneos \\
+			\hline
+			Identificador & CU017 \\
+			\hline
+			Descripción & Permite la administración de torneos deportivos \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de administrar torneos \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Crear torneo
+					\item Actualizar información de torneo
+					\item Gestionar formatos de torneo
+					\item Agregar equipo a torneo
+					\item Retirar equipo de torneo
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU017-Administrar torneos: Flujos de hechos}
+	\label{tab:cu017_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU018-Crear un torneo: Descripción}
+	\label{tab:cu018_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear un torneo \\
+			\hline
+			Identificador & CU018 \\
+			\hline
+			Descripción & Permite la creación de un torneo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de crear un torneo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido administrar torneo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha creado o no un torneo
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU018-Crear un torneo: Flujos de hechos}
+	\label{tab:cu018_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU019-Actualizar información de torneo: Descripción}
+	\label{tab:cu019_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de torneo \\
+			\hline
+			Identificador & CU019 \\
+			\hline
+			Descripción & Actualiza la información de un torneo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de actualizar información de torneo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestionar formato de torneo
+			\end{itemize}	
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido administrar torneo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha actualizado o no la información de un torneo
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU019-Actualizar información de torneo: Flujos de hechos}
+	\label{tab:cu019_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
 
 \subsection{Módulo de administración de equipos}
 
