@@ -1421,6 +1421,215 @@ A continuación se muestran los casos de uso del módulo de administración de t
 	\end{center}
 \end{table}
 
+\begin{table}[!htb]
+	\caption{CU020-Gestionar formato de torneo: Descripción}
+	\label{tab:cu020_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar formato de torneo \\
+			\hline
+			Identificador & CU020 \\
+			\hline
+			Descripción & Permite la asignación de un formato al torneo realizado, así como también la organización de los equipos/jugadores participantes en dicho formato \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige gestionar formato de evento \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido administrar torneo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha gestionado el formato de torneo que desea
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU020-Gestionar formato de torneo: Flujos de hechos}
+	\label{tab:cu020_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU021-Agregar equipo a torneo: Descripción}
+	\label{tab:cu021_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Agregar equipo a torneo \\
+			\hline
+			Identificador & CU021 \\
+			\hline
+			Descripción & Agrega un equipo o jugador al torneo sin asignarlo a algún puesto en el formato elegido por el organizador del torneo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige agregar equipo o jugador a torneo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido administrar torneo
+				\item Se ha elegido un torneo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha agregado o no un equipo o jugador al torneo
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU021-Agregar equipo a torneo: Flujos de hechos}
+	\label{tab:cu021_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU022-Retirar equipo de torneo: Descripción}
+	\label{tab:cu022_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar equipo de torneo \\
+			\hline
+			Identificador & CU022 \\
+			\hline
+			Descripción & Retira un equipo o jugador del torneo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige retirar equipo o jugador del torneo \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Se ha elegido administrar torneo
+				\item Se ha elegido un torneo en específico
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha retirado o no un equipo o jugador del torneo
+				\item El usuario está en la pantalla de administración de torneos
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU022-Retirar equipo de torneo: Flujos de hechos}
+	\label{tab:cu022_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
 \subsection{Módulo de administración de equipos}
 
 A continuación se muestran los casos de uso del módulo de administración de equipos
