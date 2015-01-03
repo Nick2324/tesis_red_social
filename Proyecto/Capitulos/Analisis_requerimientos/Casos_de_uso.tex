@@ -2228,12 +2228,12 @@ A continuación se muestran los casos de uso del módulo de estadísticas
 			\hline
 			Identificador & CU031 \\
 			\hline
-			Descripción &  \\
+			Descripción & Permite la gestión de estadísticas a través de la red social deportiva \\
 			\hline
 			Actor & Todo actor de la red social	 
 			\\
 			\hline
-			Disparador & El usuario elige dar de baja a un integrante del equipo (darse de baja también) \\
+			Disparador & El usuario decide calificar un objeto calificable en el SNS (evento, usuario de la red social, servicio prestado por un usuario de la red social, etc.) \\
 			\hline
 			Inclusiones & N/A \\
 			\hline
@@ -2242,20 +2242,29 @@ A continuación se muestran los casos de uso del módulo de estadísticas
 			\hline
 			Precondiciones &  
 			\begin{itemize}
-				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos o un jugador del equipo intenta acceder a la funcionalidad
-				\item El usuario eligió la administración de equipos
-				\item El usuario eligió un equipo en específico
+				\item La aplicación ha sido cargada por un con permisos para calificar el objeto calificable del SNS
+				\item El usuario elige calificar el objeto
 			\end{itemize}
 			\\
 			\hline
 			Postcondiciones & 
 			\begin{itemize}
-				\item El usuario da de baja a un jugador del equipo (o se da de baja a si mismo)
-				\item El usuario se encuentra en la pantalla de administración de equipos
+				\item El usuario se encuentra en la pantalla de calificación
 			\end{itemize}
 			\\
 			\hline
-			Notas & N/A
+			Notas &
+			\begin{itemize}
+				\item Generalización de
+				\begin{itemize}
+				 \item Llevar estadística de jugador
+				 \item Llevar estadística de equipo
+				 \item Calificar ligas deportivas
+				 \item Calificar entrenadores
+				 \item Calificar organización
+				 \item Llevar calificación de "mejor por categoría"
+				\end{itemize}
+			\end{itemize}
 			\\
 			\hline
 		\end{tabular}
@@ -2267,6 +2276,229 @@ A continuación se muestran los casos de uso del módulo de estadísticas
 \begin{table}[!htb]
 	\caption{CU031-Gestión de estadísticas: Flujos de hechos}
 	\label{tab:cu031_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU032-Llevar estadística de jugador: Descripción}
+	\label{tab:cu032_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Llevar estadística de jugador \\
+			\hline
+			Identificador & CU032 \\
+			\hline
+			Descripción & Permite el cálculo de estadísticas de un jugador venidas desde los datos registrados de los equipos en los que se encuentra y de datos verificables en prácticas libres para cada uno de los deportes que éste practica \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Jugador
+				\item Equipo
+				\item Entrenador
+			\end{itemize}				 
+			\\
+			\hline
+			Disparador & El usuario ingresa datos estadísticos de un jugador a la red social \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestión de niveles de juego
+			\end{itemize}
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada como entrenador, equipo deportivo o jugador
+				\item El usuario ingresa datos estadísticos del jugador
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se calculan datos estadísticos del jugador
+			\end{itemize}
+			\\
+			\hline
+			Notas & Los datos pueden ser accesados por cualquier usuario de la red social
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU032-Llevar estadística de jugador: Flujos de hechos}
+	\label{tab:cu032_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU033-Llevar estadística de equipo: Descripción}
+	\label{tab:cu033_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Llevar estadística de equipo \\
+			\hline
+			Identificador & CU033 \\
+			\hline
+			Descripción & Permite el cálculo de estadísticas de un equipo venidas desde los datos registrados de éste en los eventos/torneos deportivos en los que ha participado \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Equipo
+				\item Entrenador
+			\end{itemize}				 
+			\\
+			\hline
+			Disparador & El usuario ingresa datos estadísticos de un equipo a la red social \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestión de niveles de juego
+			\end{itemize}
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada como entrenador, equipo deportivo o jugador
+				\item El usuario se encuentra en gestión de equipo
+				\item El usuario ingresa datos estadísticos del equipo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se calculan datos estadísticos del equipo
+			\end{itemize}
+			\\
+			\hline
+			Notas & Los datos pueden ser accesados por cualquier usuario de la red social
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU033-Llevar estadística de equipo: Flujos de hechos}
+	\label{tab:cu033_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU034-Gestión de niveles de juego: Descripción}
+	\label{tab:cu034_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestión de niveles de juego \\
+			\hline
+			Identificador & CU034 \\
+			\hline
+			Descripción & Lleva un análisis del nivel de juego de un jugador/equipo respecto de sus estadísticas y las manejadas en el resto de la red social, así como también las estadísticas de nivel de juego manejadas usualmente en un lugar donde hayan prácticas deportivas \\
+			\hline
+			Actor & N/A		 
+			\\
+			\hline
+			Disparador & El usuario ingresa datos estadísticos de un equipo/jugador a la red social o se obtienen datos de un lugar deportivo, el nivel de juego manejado en dicho lugar \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestión de niveles de juego
+			\end{itemize}
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada como entrenador, equipo deportivo o jugador
+				\item El usuario ingresa datos estadísticos del equipo/jugador o la red social obtiene datos de lugares deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se calculan datos estadísticos del equipo
+			\end{itemize}
+			\\
+			\hline
+			Notas & Los datos pueden ser accesados por cualquier usuario de la red social
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU034-Gestión de niveles de juego: Flujos de hechos}
+	\label{tab:cu034_flujo}
 	\begin{center}
 		\resizebox{15cm}{!}{
 		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
