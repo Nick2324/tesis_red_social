@@ -4198,19 +4198,19 @@
             <bounds x="36" y="816"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="d396d338" textAlignment="2" targetConnections="700ee18d e44f62ab 21d6cfc5 2da04af8 8fd29e0d" archimateElement="0c1fa360">
-            <bounds x="36" y="1067"/>
+            <bounds x="36" y="996"/>
             <sourceConnection xsi:type="archimate:Connection" id="6ba052c8" source="d396d338" target="3c6ae11c" relationship="76f49d0e"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="ed42fac9" textAlignment="2" archimateElement="9674515b">
-            <bounds x="-155" y="978"/>
+            <bounds x="-155" y="907"/>
             <sourceConnection xsi:type="archimate:Connection" id="700ee18d" source="ed42fac9" target="d396d338" relationship="659af073"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="3ee8f261" textAlignment="2" archimateElement="06ac8af4">
-            <bounds x="-155" y="1039"/>
+            <bounds x="-155" y="968"/>
             <sourceConnection xsi:type="archimate:Connection" id="e44f62ab" source="3ee8f261" target="d396d338" relationship="54384bfa"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="3c11e075" textAlignment="2" archimateElement="defad0e9">
-            <bounds x="-155" y="1104"/>
+            <bounds x="-155" y="1033"/>
             <sourceConnection xsi:type="archimate:Connection" id="21d6cfc5" source="3c11e075" target="d396d338" relationship="861a5b36"/>
           </child>
         </element>

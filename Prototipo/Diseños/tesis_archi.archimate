@@ -257,6 +257,7 @@
     <element xsi:type="archimate:BusinessProcess" id="bf6b74c6" name="Generador de contenidos de salud"/>
     <element xsi:type="archimate:BusinessEvent" id="b4ae40b2" name="Plan de entrenamiento construido"/>
     <element xsi:type="archimate:BusinessEvent" id="dd6a1ad1" name="Coevaluación realizada"/>
+    <element xsi:type="archimate:BusinessObject" id="a24523f8" name="evento x convencion"/>
   </folder>
   <folder name="Application" id="1d3190c4" type="application">
     <folder name="Services" id="85825bc9">
@@ -4433,11 +4434,11 @@
             <bounds x="720" y="738"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="945b0bd7" textAlignment="2" archimateElement="3a7bd457">
-            <bounds x="948" y="840"/>
+            <bounds x="936" y="830"/>
             <sourceConnection xsi:type="archimate:Connection" id="91085b7f" source="945b0bd7" target="90e58344" relationship="759dbddd"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="811d6e3e" textAlignment="2" archimateElement="9d6cf687">
-            <bounds x="807" y="840"/>
+            <bounds x="636" y="830"/>
             <sourceConnection xsi:type="archimate:Connection" id="4a7ae582" source="811d6e3e" target="90e58344" relationship="91bd75af"/>
           </child>
           <child xsi:type="archimate:Note" id="990a35fb" textAlignment="1">
@@ -4445,8 +4446,11 @@
             <content>Algunos procesos son omitidos dependiendo del tipo de evento manejado</content>
           </child>
           <child xsi:type="archimate:DiagramObject" id="50252d82" textAlignment="2" archimateElement="d92c01f6">
-            <bounds x="672" y="840"/>
+            <bounds x="780" y="830"/>
             <sourceConnection xsi:type="archimate:Connection" id="c10d98bd" source="50252d82" target="90e58344" relationship="e710625b"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="822572d4" textAlignment="2" archimateElement="a24523f8">
+            <bounds x="548" y="854"/>
           </child>
         </element>
       </folder>
