@@ -1,0 +1,395 @@
+A continuación se encuentran los artefactos de negocio generados, cada uno de ellos separados por una tabla específica para cada tipo.
+
+\begin{table}[!htb]
+	\caption{Actores de negocio}
+	\label{tab:actores_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Actor deportivo &
+			Es todo aquel actor encontrado en una red social deportiva &
+			General por capas, introductorio \\
+			\hline
+			Entrenador &
+			Actor deportivo cuyo objetivo es el acompañamiento y prestación de servicios de entrenamiento a los diferentes actores deportivos (jugadores/grupos deportivos/equipo) &
+			\\
+			\hline
+			Equipo &
+			Es un grupo deportivo conformado con el objetivo de competencia en la red social deportiva &
+			\\
+			\hline
+			Grupo deportivo &
+			Es un grupo deportivo conformado con el objetivo recreacional de practicar uno o varios deportes &
+			\\
+			\hline
+			Jugador &
+			Actor deportivo individual (persona individual) practicante de uno o varios deportes &
+			\\
+			\hline
+			Organización &
+			Organización que presta servicios deportivos a los demás actores en la red social deportiva &
+			\\
+			\hline
+			Patrocinador &
+			Prestador de servicios (monetarios, materiales o servicios deportivos tales como préstamo de espacios deportivos) que puedan ayudar o interesar a uno o más actores deportivos (jugadores y equipos) en pro de la consecución de sus objetivos &
+			\\
+			\hline
+			Periodista &
+			Actor cuyo objetivo es el de proporcionar información acerca de los diferentes acontecimientos ocurridos en el deporte alrededor del mundo &
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Roles de negocio}
+	\label{tab:roles_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Agrupación deportiva &
+			Grupo deportivo o equipo deportivo que se reunen a practicar un deporte &
+			Rol - actor, Proceso de negocio (Entrenamiento deportivo, Estadísticas deportivas, Organización de eventos deportivos, Formación de grupos deportivos, Patrocinios deportivos), Función de negocio (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Organización de eventos deportivos) \\
+			\hline
+			Consejero de salud &
+			Jugador/entrenador/organización encargados de dar consejos de salud dentro de la red social deportiva &
+			Rol - actor
+			\\
+			\hline
+			Consejero deportivo &
+			Jugador/entrenador dador de consejos deportivos &
+			Rol - actor, Proceso de negocio (Entrenamiento deportivo), Función de negocio (Entrenamiento deportivo)
+			\\
+			\hline
+			Consumidor de servicios deportivos &
+			Actor deportivo que consume el servicio otorcado por un prestador de servicios deportivos &
+			Rol - actor
+			\\
+			\hline
+			Entrenador deportivo &
+			Quien cumple la función de entrenar &
+			Rol - actor, Proceso de negocio (Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos, Patrocinios deportivos), Función de negocio (Patrocinio deportivo, Entrenamiento deportivo, Estadísticas deportivas, Formación de grupos deportivos)
+			\\
+			\hline
+			Gestor de encuentros deportivos &
+			Gestor de un encuentro deportivo &
+			Rol - actor, Proceso de negocio (Patrocinio deportivo, Organización evento deportivo), Función de negocio (Organización eventos deportivos, Patrocinios deportivos)
+			\\
+			\hline
+			Patrocinador deportivo &
+			Actor deportivo que apoya a un jugador/equipo/evento en la consecución de sus metas otorgandole dinero, materiales o servicios deportivos &
+			Rol - actor, Proceso de negocio (Patrocinio deportivo, Estadísticas deportivas, Organizador de eventos deportivos), Función de negocio (Patrocinio deportivo, Estadísticas deportivas, Organizador de eventos deportivos)
+			\\
+			\hline
+			Periodista deportivo &
+			Actor que publica información deportiva de diversa índole alrededor del mundo &
+			Rol - actor
+			\\
+			\hline
+			Prestador de servicios deportivos &
+			Actor deportivo que ofrece sus servicios a los demás actores en la red social &
+			Rol - actor, Función de negocio (Patrocinio deportivo)
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Eventos de negocio}
+	\label{tab:eventos_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Coevaluación realizada & 
+			Evento que dispara el proceso de reevaluar el plan de entrenamiento llevado a cabo para ajustarlo & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Estadísticas producidas & 
+			Evento producido cuando estadísticas deportivas/comerciales han sido producidas & 
+			Proceso de negocio (Patrocinios deportivos), Uso de aplicación (Patrocinios deportivos)
+			\\
+			\hline
+			Evento estructurado & 
+			Evento que llama a la ejecución de un evento ya planeado & 
+			Proceso de negocio (Patrocinios deportivos, Organización de eventos deportivos), Uso de aplicación (Patrocinios deportivos, Organización de eventos deportivos)
+			\\
+			\hline
+			Interés de formación de grupo deportivo & 
+			Evento que lanza la creación de un grupo deportivo & 
+			Proceso de negocio (Formación de grupos deportivos), Uso de aplicación (Formación de grupos deportivos)
+			\\
+			\hline
+			Necesidad de estadísticas deportivas & 
+			Evento que lanza la búsqueda de información estadística y, a su ves, la producción de la misma & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Necesidad de manejo de red social deportiva & 
+			Lanzador de las funciones de administrador de red social deportiva & 
+			General por capas, Introductorio
+			\\
+			\hline
+			Necesidad de patrocinio & 
+			Establece una necesidad de que un evento/actor deportivo necesite de un patrocinio deportivo & 
+			Proceso de negocio (Patrocinio deportivo), Uso de aplicación (Patrocinio deportivo)
+			\\
+			\hline
+			Petición aceptada & 
+			Evento que hace permite la actuación de la agrupación deportiva iniciar procesos relacionados a su participación en un evento & 
+			Uso de aplicación (Organización de eventos deportivos), Proceso de negocio (Organización de eventos deportivos)
+			\\
+			\hline
+			Petición de evento & 
+			Evento que responde a la petición de actores deportivos de realización de un evento deportivo & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+			Petición de patrocinio & 
+			Realiza la petición de patrocinio a un patrocinador deportivo & 
+			Proceso de negocio (Patrocinio deportivo), Uso de aplicación (Patrocinio deportivo)
+			\\
+			\hline
+			Plan de entrenamiento construido & 
+			Evento que dispara el proceso de entrenar para la agrupación deportiva que está siendo entrenada & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Prestación de servicio de coaching & 
+			Provoca entrenar un grupo deportivo & 
+			Proceso de negocio (Entrenamiento deportivo, Patrocinios deportivos), Uso de aplicación (Entrenamiento deportivo, Patrocinios deportivos)
+			\\
+			\hline
+			Publicación de grupo & 
+			Evento que lanza las acciones de actores agenos al grupo para unirsele & 
+			Proceso de negocio (Formación de grupos deportivos, Patrocinios deportivos), Uso de aplicación (Formación de grupos deportivos)
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Interacciones de negocio}
+	\label{tab:interacciones_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Dar consejo deportivo & 
+			Acción de dar consejo deportivo a los jugadores de un equipo & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Ejecutar coevaluación & 
+			Acción de evaluar a todo el equipo de jugadores y al equipo mismo & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Entender plan de entrenamiento & 
+			Interiorización del plan de entrenamiento hecho por el entrenador deportivo & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Objetos de negocio}
+	\label{tab:objetos_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Ejercicio & 
+			Ejercicio físico/mental que corresponde a un deporte en particular o a una habilidad transversal a todos los deportes & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Estadística & 
+			Representa un dato-información estadística en el negocio & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Estadística de evento deportivo & 
+			Representa un dato-información estadística en el negocio referente a un evento deportivo & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Estadística de servicio & 
+			Representa un dato-información estadística en el negocio respecto a los servicios que ofrecen actores comerciales en la red social & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Estadística deportiva & 
+			Representa un dato-información estadística en el negocio referente a aspectos deportivos de deportistas, entrenadores y grupos deportivos & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Estadística geoespacial & 
+			Representa un dato-información estadística en el negocio asociada con la ubicación geoespacial de un sitio de entrenamiento o evento & 
+			Proceso de negocio (Estadísticas deportivas), Uso de aplicación (Estadísticas deportivas)
+			\\
+			\hline
+			Evaluación deportiva & 
+			Valoración que hacen todos los actores involucrados en el entrenamiento deportivo a un jugador, a un entrenador o a un grupo deportivo & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Evento deportivo & 
+			Evento con caracter deportivo & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+			Evento informativo deportivo & 
+			Evento de caracter deportivo que no cumple un caracter práctico en un caracter deportivo (conferencias, convenciones, etc) & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+			Plan de entrenamiento & 
+			Agrupación de ejercicios enfocadas a mejorar un conjunto de habilidades dentro de un deporte específico o una habilidad transversal a todos & 
+			Proceso de negocio (Entrenamiento deportivo), Uso de aplicación (Entrenamiento deportivo)
+			\\
+			\hline
+			Práctica deportiva & 
+			Práctica deportiva amateur o profesional & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+			Producto & 
+			Producto deportivo prestado por un actor comercial & 
+			Proceso de negocio (Patrocinios deportivos), Uso de aplicación (Patrocinios deportivos)
+			\\
+			\hline
+			Proyecto & 
+			Proyecto presentado a un patrocinador para que éste lo patrocine & 
+			Proceso de negocio (Patrocinios deportivos), Uso de aplicación (Patrocinios deportivos)
+			\\
+			\hline
+			Servicio & 
+			Servicio deportivo prestado & 
+			Proceso de negocio (Patrocinios deportivos), Uso de aplicación (Patrocinios deportivos)
+			\\
+			\hline
+			Torneo & 
+			Torneo deportivo & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+			Clínica deportiva & 
+			Evento que se dedica especificamente a enseñar ciertos aspectos de un deporte a deportistas & 
+			Proceso de negocio (Organización de eventos deportivos), Uso de aplicación (Organización de eventos deportivos)
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Colaboraciones de negocio}
+	\label{tab:colaboraciones_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+			Formadores de grupo deportivo & 
+			Colaboración conformada por los roles que trabajan en la dinámica de un grupo deportivo a traves del tiempo & 
+			Proceso de negocio (Formación de grupos deportivos), Función de negocio (Formación de grupos deportivos)
+			\\
+			\hline
+			Organizador & 
+			Colaboración donde participan los roles de los que depende la organización y ejecución de un evento deportivo & 
+			Proceso de negocio (Organización de eventos deportivos)
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Actores de negocio}
+	\label{tab:actores_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{Producto de negocio}
+	\label{tab:producto_negocio}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{7cm}|p{4cm}|}
+			\hline
+			\textbf{Nombre} &
+			\textbf{Descripción} &
+			\textbf{Puntos de vista relacionados} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{center}
+	\begin{longtable}{|p{1.5cm}|p{3cm}|p{5cm}|p{2cm}|p{3cm}|}
+		\caption{Requerimientos funcionales \label{tab:requerimientos_funcionales}} \\
+		\hline
+		\textbf{Nombre} &
+		\textbf{Descripción} &
+		\textbf{Puntos de vista relacionados} \\
+		\hline
+	\end{longtable}
+	\textbf{Fuente}: Autores
+\end{center}

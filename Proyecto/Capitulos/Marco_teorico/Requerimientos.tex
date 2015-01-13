@@ -37,7 +37,7 @@ Así, en el presente proyecto, se ha decidido utilizar las siguientes medidas cr
 
 \begin{itemize}
  
- \item \textbf{Nivel de complejidad por unidad}: El nivel de complejidad es calculado, en primera instancia, calculando la complejidad ciclomática de cada unidad del software, la cual es definida como $$cc = e – n + 2$$ donde $n$ representa a los nodos del grafo de control de flujo y $e$ el número de aristas de dicho grafo(******paginaweb). Luego de esto, será necesario ubicar cada unidad en un nivel de riesgo. En el siguiente cuadro se podrá observar cómo son valorados los niveles de riesgo:
+ \item \textbf{Nivel de complejidad por unidad}: El nivel de complejidad es calculado, en primera instancia, calculando la complejidad ciclomática de cada unidad del software, la cual es definida como $$cc = e – n + 2$$ donde $n$ representa a los nodos del grafo de control de flujo y $e$ el número de aristas de dicho grafo, según \cite{cyclomatic_complexity}. Luego de esto, será necesario ubicar cada unidad en un nivel de riesgo. En el siguiente cuadro se podrá observar cómo son valorados los niveles de riesgo:
 
 \begin{figure}[!htb]
   \begin{center}
@@ -87,7 +87,7 @@ En \cite{complexity_mesure}, basados en las definiciones de los documentos WSDL,
 
 \subsection{Reusabilidad}
 
-*****
+En \cite{computer_science}, nombra la reusabilidad como la utilización de un producto terminado para el desarrollo de otro producto, tal vez con algunos cambios sobre el original. Una de las metas de la reusabilidad, según \cite{computer_science}, es el trato de la granuralidad a un nivel en el que el software pueda ser reusado para el desarrollo de otro software. Se nombra, en \cite{computer_science}, el manejo de la granuralidad de un componente de software. En lo que a este desarrollo refiere, se deberá manejar la granuralidad de los servicios a nivel de capacidades, de complejidad de datos y a nivel de servicios, según \cite{soa_principles}.
 
 \subsubsection{Medidas de reusabilidad}
 
@@ -191,7 +191,7 @@ Otros elementos de la seguridad, enfocada más al aspecto informático, son:
 \begin{itemize}
  \item \textbf{Autenticación}: Es la presentación de los participantes de la conexión. Este concepto responde a la pregunta \textit{¿quien eres?}.
  \item \textbf{Autorización}: Es la posibilidad de un usuario (humano o no) de realizar una operación u obtener algún dato. Este concepto responde a la pregunta \textit{¿que puedes hacer?}.
- \item \textbf{Auditoría}: *****
+ \item \textbf{Auditoría}: La revisión de los posibles vaciós presentados en temas de seguridad es manejado por la constancia de la realización de ésta actividad.
  \item \textbf{Confidencialidad}: Este concepto establece la necesidad de que la información compartida entre diferentes usuarios sea vista solo por ellos.
  \item \textbf{Integridad}: Este concepto es logrado cuando se logra proteger los datos de modificaciones indeseadas antes de que el receptor reciba un mensaje de un emisor.
  \item \textbf{Disponibilidad}: Es la seguridad de que una aplicación estará siempre disponible para usuarios legítimos.

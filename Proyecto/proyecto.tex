@@ -13,6 +13,7 @@
 \usepackage{chngcntr} %para numeracion de figuras
 \usepackage{mathtools}
 \usepackage{supertabular}
+\usepackage{longtable}
 \graphicspath{ {./imagenes/} }
 \setcounter{secnumdepth}{3} % para que ponga 1.1.1.1 en subsubsecciones...
 \setcounter{tocdepth}{3} % para que añada las subsubsecciones en el indice...
@@ -154,15 +155,14 @@
   \chapter{Análisis de requerimientos}
   \input{./Capitulos/Analisis_requerimientos/Analisis_requerimientos.tex}  
   
-  %\chapter{Arquitectura}
-  %\input{./Capitulos/Arquitectura/Viewpoints.tex}  
+  \chapter{Arquitectura}
+  \label{chap:arquitectura}
+  \input{./Capitulos/Arquitectura/Viewpoints.tex}  
   
-%   \chapter{Métodos utilizados}
-  
-%   \input{./Capitulos/Metodos/Encuesta.tex}
+  \chapter{Métodos utilizados}
+  \input{./Capitulos/Metodos/Encuesta.tex}
   
   \chapter{Cronograma}
-  
   \input{./Capitulos/Cronograma/Cronograma.tex}
   
   \chapter{Costos}
@@ -174,6 +174,8 @@
   \input{./Capitulos/Recursos/Miscelaneos.tex}
   \input{./Capitulos/Recursos/Totales.tex}
   
+  \chapter{Anexos}
+  \input{./Capitulos/Anexos/Anexos.tex}
   
   \bibliographystyle{apacite}
   \bibliography{bibliografia}

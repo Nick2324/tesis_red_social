@@ -4,82 +4,58 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio\relax }}{75}{table.caption.32}
-\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{76}{table.caption.33}
-\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{77}{table.caption.34}
-\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{77}{table.caption.35}
-\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{78}{table.caption.36}
-\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{78}{table.caption.37}
-\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{79}{table.caption.38}
-\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{80}{table.caption.39}
-\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'{}}on\relax }}{80}{table.caption.40}
-\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{80}{table.caption.41}
-\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{81}{table.caption.42}
-\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{81}{table.caption.43}
-\contentsline {table}{\numberline {13}{\ignorespaces Comparacion de redes, parte 1\relax }}{83}{table.caption.44}
-\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 2\relax }}{84}{table.caption.45}
-\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 3\relax }}{85}{table.caption.46}
-\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 4\relax }}{86}{table.caption.47}
-\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 5\relax }}{87}{table.caption.48}
+\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio\relax }}{80}{table.caption.32}
+\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{81}{table.caption.33}
+\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de tecnolog\IeC {\'\i }a\relax }}{82}{table.caption.34}
+\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{83}{table.caption.35}
+\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{84}{table.caption.36}
+\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{84}{table.caption.37}
+\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{85}{table.caption.38}
+\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{86}{table.caption.39}
+\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'o}n\relax }}{86}{table.caption.40}
+\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{87}{table.caption.41}
+\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{88}{table.caption.42}
+\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.43}
+\contentsline {table}{\numberline {13}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.44}
+\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 1\relax }}{90}{table.caption.45}
+\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 2\relax }}{91}{table.caption.46}
+\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 3\relax }}{92}{table.caption.47}
+\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 4\relax }}{93}{table.caption.48}
+\contentsline {table}{\numberline {18}{\ignorespaces Comparacion de redes, parte 5\relax }}{94}{table.caption.49}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {18}{\ignorespaces Product backlog inicial\relax }}{99}{table.caption.49}
+\contentsline {table}{\numberline {19}{\ignorespaces Product backlog inicial\relax }}{105}{table.caption.50}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {19}{\ignorespaces Requerimientos funcionales\relax }}{103}{table.caption.50}
-\contentsline {table}{\numberline {20}{\ignorespaces QiU - Escenario de calidad 1\relax }}{104}{table.caption.51}
-\contentsline {table}{\numberline {21}{\ignorespaces QiU - Escenario de calidad 2\relax }}{104}{table.caption.52}
-\contentsline {table}{\numberline {22}{\ignorespaces QiU - Escenario de calidad 3\relax }}{105}{table.caption.53}
-\contentsline {table}{\numberline {23}{\ignorespaces QiU - Escenario de calidad 4\relax }}{105}{table.caption.54}
-\contentsline {table}{\numberline {24}{\ignorespaces QiU - Escenario de calidad 5\relax }}{106}{table.caption.55}
-\contentsline {table}{\numberline {25}{\ignorespaces QiU - Escenario de calidad 6\relax }}{106}{table.caption.56}
-\contentsline {table}{\numberline {26}{\ignorespaces QiU - Escenario de calidad 7\relax }}{107}{table.caption.57}
-\contentsline {table}{\numberline {27}{\ignorespaces QiU - Escenario de calidad 8\relax }}{107}{table.caption.58}
-\contentsline {table}{\numberline {28}{\ignorespaces Reusabilidad - Escenario de calidad 1\relax }}{108}{table.caption.59}
-\contentsline {table}{\numberline {29}{\ignorespaces Reusabilidad - Escenario de calidad 2\relax }}{108}{table.caption.60}
-\contentsline {table}{\numberline {30}{\ignorespaces Reusabilidad - Escenario de calidad 3\relax }}{109}{table.caption.61}
-\contentsline {table}{\numberline {31}{\ignorespaces Mantenibilidad - Escenario de calidad 1\relax }}{109}{table.caption.62}
-\contentsline {table}{\numberline {32}{\ignorespaces Mantenibilidad - Escenario de calidad 2\relax }}{110}{table.caption.63}
-\contentsline {table}{\numberline {33}{\ignorespaces Mantenibilidad - Escenario de calidad 3\relax }}{110}{table.caption.64}
-\contentsline {table}{\numberline {34}{\ignorespaces Interoperabilidad - Escenario de calidad 1\relax }}{111}{table.caption.65}
-\contentsline {table}{\numberline {35}{\ignorespaces Seguridad - Escenario de calidad 1\relax }}{111}{table.caption.66}
-\contentsline {table}{\numberline {36}{\ignorespaces Seguridad - Escenario de calidad 2\relax }}{112}{table.caption.67}
-\contentsline {table}{\numberline {37}{\ignorespaces Seguridad - Escenario de calidad 3\relax }}{113}{table.caption.68}
-\contentsline {table}{\numberline {38}{\ignorespaces Seguridad - Escenario de calidad 4\relax }}{114}{table.caption.69}
-\contentsline {table}{\numberline {39}{\ignorespaces CU001-NOMBRE: Descripci\IeC {\'o}n\relax }}{114}{table.caption.70}
-\contentsline {table}{\numberline {40}{\ignorespaces CU001-NOMBRE: Flujos de hechos\relax }}{115}{table.caption.71}
-\contentsline {table}{\numberline {59}{\ignorespaces CU010-Administrar involucrados: Descripci\IeC {\'o}n\relax }}{115}{table.caption.90}
-\contentsline {table}{\numberline {61}{\ignorespaces CU011-A\IeC {\~n}adir colaborador: Descripci\IeC {\'o}n\relax }}{115}{table.caption.92}
-\contentsline {table}{\numberline {63}{\ignorespaces CU012-Retirar colaborador: Descripci\IeC {\'o}n\relax }}{115}{table.caption.94}
-\contentsline {table}{\numberline {65}{\ignorespaces CU013-A\IeC {\~n}adir participante: Descripci\IeC {\'o}n\relax }}{115}{table.caption.96}
-\contentsline {table}{\numberline {67}{\ignorespaces CU014-Retirar participante: Descripci\IeC {\'o}n\relax }}{115}{table.caption.98}
-\contentsline {table}{\numberline {69}{\ignorespaces CU015-A\IeC {\~n}adir espectador: Descripci\IeC {\'o}n\relax }}{115}{table.caption.100}
-\contentsline {table}{\numberline {71}{\ignorespaces CU016-Retirar espectador: Descripci\IeC {\'o}n\relax }}{115}{table.caption.102}
-\contentsline {table}{\numberline {73}{\ignorespaces CU017-Administrar torneos: Descripci\IeC {\'o}n\relax }}{115}{table.caption.104}
-\contentsline {table}{\numberline {75}{\ignorespaces CU018-Crear un torneo: Descripci\IeC {\'o}n\relax }}{115}{table.caption.106}
-\contentsline {table}{\numberline {77}{\ignorespaces CU019-Actualizar informaci\IeC {\'o}n de torneo: Descripci\IeC {\'o}n\relax }}{115}{table.caption.108}
-\contentsline {table}{\numberline {41}{\ignorespaces CU001-Gesti\IeC {\'o}n de entrenadores: Descripci\IeC {\'o}n\relax }}{116}{table.caption.72}
-\contentsline {table}{\numberline {42}{\ignorespaces CU001-Gesti\IeC {\'o}n de entrenadores: Flujos de hechos\relax }}{117}{table.caption.73}
-\contentsline {table}{\numberline {43}{\ignorespaces CU002-Convertirse en entrenador de jugador/equipo: Descripci\IeC {\'o}n\relax }}{118}{table.caption.74}
-\contentsline {table}{\numberline {44}{\ignorespaces CU002-Gesti\IeC {\'o}n de entrenadores: Flujos de hechos\relax }}{119}{table.caption.75}
-\contentsline {table}{\numberline {45}{\ignorespaces CU003-Dejar de entrenar a jugador/equipo: Descripci\IeC {\'o}n\relax }}{120}{table.caption.76}
-\contentsline {table}{\numberline {46}{\ignorespaces CU003-Dejar de entrenar a jugador/equipo: Flujos de hechos\relax }}{121}{table.caption.77}
-\contentsline {table}{\numberline {47}{\ignorespaces CU004-Llevar seguimiento de entrenamientos: Descripci\IeC {\'o}n\relax }}{122}{table.caption.78}
-\contentsline {table}{\numberline {48}{\ignorespaces CU004-Llevar seguimiento de entrenamientos: Flujos de hechos\relax }}{123}{table.caption.79}
-\contentsline {table}{\numberline {49}{\ignorespaces CU005-Promocionar servicios de entrenamiento: Descripci\IeC {\'o}n\relax }}{124}{table.caption.80}
-\contentsline {table}{\numberline {50}{\ignorespaces CU005-Promocionar servicios de entrenamiento: Flujos de hechos\relax }}{125}{table.caption.81}
-\contentsline {table}{\numberline {51}{\ignorespaces CU006-Administrar eventos deportivos: Descripci\IeC {\'o}n\relax }}{126}{table.caption.82}
-\contentsline {table}{\numberline {52}{\ignorespaces CU006-Administrar eventos deportivos: Flujos de hechos\relax }}{127}{table.caption.83}
-\contentsline {table}{\numberline {53}{\ignorespaces CU007-Crear evento deportivo: Descripci\IeC {\'o}n\relax }}{127}{table.caption.84}
-\contentsline {table}{\numberline {54}{\ignorespaces CU007-Crear evento deportivo: Flujos de hechos\relax }}{128}{table.caption.85}
-\contentsline {table}{\numberline {55}{\ignorespaces CU008-Cancelar evento deportivo: Descripci\IeC {\'o}n\relax }}{128}{table.caption.86}
-\contentsline {table}{\numberline {56}{\ignorespaces CU008-Cancelar evento deportivo: Flujos de hechos\relax }}{129}{table.caption.87}
-\contentsline {table}{\numberline {57}{\ignorespaces CU009-Actualizar informaci\IeC {\'o}n de evento deportivo: Descripci\IeC {\'o}n\relax }}{129}{table.caption.88}
+\contentsline {table}{\numberline {20}{\ignorespaces Requerimientos funcionales }}{108}{table.9.20}
+\contentsline {table}{\numberline {21}{\ignorespaces QiU - Escenario de calidad 1\relax }}{122}{table.caption.51}
+\contentsline {table}{\numberline {22}{\ignorespaces QiU - Escenario de calidad 2\relax }}{122}{table.caption.52}
+\contentsline {table}{\numberline {23}{\ignorespaces QiU - Escenario de calidad 3\relax }}{123}{table.caption.53}
+\contentsline {table}{\numberline {24}{\ignorespaces QiU - Escenario de calidad 4\relax }}{123}{table.caption.54}
+\contentsline {table}{\numberline {25}{\ignorespaces QiU - Escenario de calidad 5\relax }}{124}{table.caption.55}
+\contentsline {table}{\numberline {26}{\ignorespaces QiU - Escenario de calidad 6\relax }}{124}{table.caption.56}
+\contentsline {table}{\numberline {27}{\ignorespaces QiU - Escenario de calidad 7\relax }}{125}{table.caption.57}
+\contentsline {table}{\numberline {28}{\ignorespaces QiU - Escenario de calidad 8\relax }}{125}{table.caption.58}
+\contentsline {table}{\numberline {29}{\ignorespaces Reusabilidad - Escenario de calidad 1\relax }}{126}{table.caption.59}
+\contentsline {table}{\numberline {30}{\ignorespaces Reusabilidad - Escenario de calidad 2\relax }}{127}{table.caption.60}
+\contentsline {table}{\numberline {31}{\ignorespaces Reusabilidad - Escenario de calidad 3\relax }}{127}{table.caption.61}
+\contentsline {table}{\numberline {32}{\ignorespaces Mantenibilidad - Escenario de calidad 1\relax }}{128}{table.caption.62}
+\contentsline {table}{\numberline {33}{\ignorespaces Mantenibilidad - Escenario de calidad 2\relax }}{128}{table.caption.63}
+\contentsline {table}{\numberline {34}{\ignorespaces Mantenibilidad - Escenario de calidad 3\relax }}{129}{table.caption.64}
+\contentsline {table}{\numberline {35}{\ignorespaces Interoperabilidad - Escenario de calidad 1\relax }}{129}{table.caption.65}
+\contentsline {table}{\numberline {36}{\ignorespaces Seguridad - Escenario de calidad 1\relax }}{130}{table.caption.66}
+\contentsline {table}{\numberline {37}{\ignorespaces Seguridad - Escenario de calidad 2\relax }}{131}{table.caption.67}
+\contentsline {table}{\numberline {38}{\ignorespaces Seguridad - Escenario de calidad 3\relax }}{132}{table.caption.68}
+\contentsline {table}{\numberline {39}{\ignorespaces Seguridad - Escenario de calidad 4\relax }}{133}{table.caption.69}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {79}{\ignorespaces Actividades generales a llevar a cabo\relax }}{131}{table.caption.110}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {80}{\ignorespaces Recursos de hardware\relax }}{134}{table.caption.112}
-\contentsline {table}{\numberline {81}{\ignorespaces Recursos de software\relax }}{134}{table.caption.113}
-\contentsline {table}{\numberline {82}{\ignorespaces Recursos humanos\relax }}{135}{table.caption.114}
-\contentsline {table}{\numberline {83}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{135}{table.caption.115}
-\contentsline {table}{\numberline {84}{\ignorespaces Costos totales\relax }}{136}{table.caption.116}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {40}{\ignorespaces Actividades generales a llevar a cabo\relax }}{167}{table.caption.105}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {41}{\ignorespaces Recursos de hardware\relax }}{170}{table.caption.107}
+\contentsline {table}{\numberline {42}{\ignorespaces Recursos de software\relax }}{170}{table.caption.108}
+\contentsline {table}{\numberline {43}{\ignorespaces Recursos humanos\relax }}{171}{table.caption.109}
+\contentsline {table}{\numberline {44}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{171}{table.caption.110}
+\contentsline {table}{\numberline {45}{\ignorespaces Costos totales\relax }}{172}{table.caption.111}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {46}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{174}{table.caption.112}

@@ -256,6 +256,12 @@
       <element xsi:type="archimate:BusinessProcess" id="41834502" name="Publicar información a interesados">
         <documentation>Publica información de grupo deportivo relevante para actores deportivos que no hacen parte del grupo deportivo en si</documentation>
       </element>
+      <element xsi:type="archimate:BusinessProcess" id="557149f4" name="Seguir proyecto">
+        <documentation>Proceso realizado por un patrocinador para seguir un actor deportivo o un evento en la red social deportiva</documentation>
+      </element>
+      <element xsi:type="archimate:BusinessProcess" id="5b5c446a" name="Leer información de grupo deportivo">
+        <documentation>Proceso realizado por actores deportivos que buscan información de grupos deportivos sin pertenecer a él</documentation>
+      </element>
     </folder>
     <folder name="Functions" id="5fc52bbd">
       <element xsi:type="archimate:BusinessFunction" id="853f7d60" name="Financiamiento">
@@ -421,6 +427,9 @@
       <element xsi:type="archimate:BusinessService" id="526975f8" name="Evaluación de proyectos">
         <documentation>Servicio que permite la interacción patrocinador-proyecto-grupo deportivo</documentation>
       </element>
+      <element xsi:type="archimate:BusinessService" id="a5522b9d" name="Seguimiento de proyectos">
+        <documentation>Servicio de negocio referente al seguimiento de actores o eventos deportivos a traves de la red social deportiva</documentation>
+      </element>
     </folder>
     <folder name="Events" id="02b8d52d">
       <element xsi:type="archimate:BusinessEvent" id="fd59b8de" name="Petición de patrocinio">
@@ -468,6 +477,9 @@
       </element>
       <element xsi:type="archimate:BusinessEvent" id="95254e95" name="Estadísticas producidas">
         <documentation>Evento producido cuando estadísticas deportivas/comerciales han sido producidas</documentation>
+      </element>
+      <element xsi:type="archimate:BusinessEvent" id="dd6a1ad1" name="Coevaluación realizada">
+        <documentation>Evento que dispara el proceso de reevaluar el plan de entrenamiento llevado a cabo para ajustarlo</documentation>
       </element>
     </folder>
     <folder name="Interfaces" id="8fe2ebc9">
@@ -563,18 +575,6 @@
     <element xsi:type="archimate:BusinessProcess" id="fea2f3b7" name="Evaluador consejos de salud"/>
     <element xsi:type="archimate:BusinessProcess" id="51eab7c1" name="Buscar contenido de salud"/>
     <element xsi:type="archimate:BusinessProcess" id="bf6b74c6" name="Generador de contenidos de salud"/>
-    <element xsi:type="archimate:BusinessEvent" id="dd6a1ad1" name="Coevaluación realizada">
-      <documentation>Evento que dispara el proceso de reevaluar el plan de entrenamiento llevado a cabo para ajustarlo</documentation>
-    </element>
-    <element xsi:type="archimate:BusinessProcess" id="5b5c446a" name="Leer información de grupo deportivo">
-      <documentation>Proceso realizado por actores deportivos que buscan información de grupos deportivos sin pertenecer a él</documentation>
-    </element>
-    <element xsi:type="archimate:BusinessProcess" id="557149f4" name="Seguir proyecto">
-      <documentation>Proceso realizado por un patrocinador para seguir un actor deportivo o un evento en la red social deportiva</documentation>
-    </element>
-    <element xsi:type="archimate:BusinessService" id="a5522b9d" name="Seguimiento de proyectos">
-      <documentation>Servicio de negocio referente al seguimiento de actores o eventos deportivos a traves de la red social deportiva</documentation>
-    </element>
   </folder>
   <folder name="Application" id="1d3190c4" type="application">
     <folder name="Services" id="85825bc9">
@@ -828,6 +828,10 @@ Descripción: Servicio que sirve para publicar información a actores deportivos
         <documentation>Identificador: SVC057
 Descripción: Permite la gestión de aquellos actores deportivos que están siendo patrocinados por el actor deportivo</documentation>
       </element>
+      <element xsi:type="archimate:ApplicationService" id="171c818a" name="Participar en evento">
+        <documentation>Identificador: SCV058
+Descripción: Permite la elección a un grupo deportivo de participar o no en un evento deportivo</documentation>
+      </element>
     </folder>
     <folder name="Functions" id="2b5ac2c6">
       <element xsi:type="archimate:ApplicationFunction" id="e6a8782f" name="Definición del evento"/>
@@ -855,22 +859,51 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
       <element xsi:type="archimate:ApplicationFunction" id="be432b41" name="Desarrollo de estadísticas"/>
     </folder>
     <folder name="Components" id="530a7f8c">
-      <element xsi:type="archimate:ApplicationComponent" id="2c6417e5" name="Gestión de eventos"/>
+      <element xsi:type="archimate:ApplicationComponent" id="2c6417e5" name="Gestión de eventos">
+        <documentation>Realiza todas las funcionalidades ofrecidas en los servicios de eventos (creación, modificación y consulta, así como también funcionalidades estadísticas por medio del componente &quot;Gestión estadística&quot;)</documentation>
+      </element>
       <element xsi:type="archimate:ApplicationComponent" id="a270e976" name="Gestión de noticas deportivas"/>
-      <element xsi:type="archimate:ApplicationComponent" id="915b3224" name="Gestión de recursos financieros"/>
-      <element xsi:type="archimate:ApplicationComponent" id="7fd58ecf" name="Gestión de recursos materiales"/>
-      <element xsi:type="archimate:ApplicationComponent" id="13a5c550" name="Gestión estadística"/>
-      <element xsi:type="archimate:ApplicationComponent" id="bce13512" name="Gestión de compras"/>
-      <element xsi:type="archimate:ApplicationComponent" id="ae98a3f4" name="Gestión de servicios"/>
-      <element xsi:type="archimate:ApplicationComponent" id="2e8259a6" name="Gestión de grupo deportivo"/>
-      <element xsi:type="archimate:ApplicationComponent" id="a90a4bf7" name="Gestión de comunicación"/>
-      <element xsi:type="archimate:ApplicationComponent" id="bf98ef73" name="Gestión de geolocalización"/>
-      <element xsi:type="archimate:ApplicationComponent" id="a232b212" name="Gestión de usuarios"/>
-      <element xsi:type="archimate:ApplicationComponent" id="0518d19d" name="Manejo de contenidos"/>
+      <element xsi:type="archimate:ApplicationComponent" id="915b3224" name="Gestión de recursos financieros">
+        <documentation>Gestión de recursos financieros para patrocinio de un patrocinador</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="7fd58ecf" name="Gestión de recursos materiales">
+        <documentation>Gestión de recursos materiales para patrocinio de un patrocinador</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="13a5c550" name="Gestión estadística">
+        <documentation>Componente usado por otros para la producción de información estadística en cuanto a los criterios establecidos para cada actor deportivo, para cada evento deportivo y para cada servicio deportivo prestado</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="bce13512" name="Gestión de compras">
+        <documentation>Colabora (por la parte del comprador) en la producción de la relación compra-venta entre actores-usuarios de la red social deportiva</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="ae98a3f4" name="Gestión de servicios">
+        <documentation>Colabora (por la parte del prestador de servicios) en la producción de la relación compra-venta entre actores-usuarios de la red social deportiva</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="2e8259a6" name="Gestión de grupo deportivo">
+        <documentation>Módulo para la gestión de grupos deportivos</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="a90a4bf7" name="Gestión de comunicación">
+        <documentation>Sirve como el componente administrador de todo el contenido (chat y self-sharing) producido por el perfíl de un actor deportivo en el SNS</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="bf98ef73" name="Gestión de geolocalización">
+        <documentation>Componente utilizado por otros para la ubicación de eventos y grupos deportivos/jugadores en el SNS</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="a232b212" name="Gestión de usuarios">
+        <documentation>Permite la creación, modificación y recuperación de usuarios-actores deportivos en el SNS</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="0518d19d" name="Manejo de contenidos">
+        <documentation>Componente del SNS para la administración de los contenidos, referiendose a la base de conocimientos proporcionada para cada deporte soportado por la red social</documentation>
+      </element>
       <element xsi:type="archimate:ApplicationComponent" id="414c8ae5" name="Manejo de contenidos deportivos"/>
       <element xsi:type="archimate:ApplicationComponent" id="dc50ffd4" name="Manejo de contenido de salud"/>
-      <element xsi:type="archimate:ApplicationComponent" id="1536e5f8" name="Gestión de servicio de coaching"/>
-      <element xsi:type="archimate:ApplicationComponent" id="a81a328b" name="Gestión de deportes"/>
+      <element xsi:type="archimate:ApplicationComponent" id="1536e5f8" name="Gestión de servicio de coaching">
+        <documentation>Componente que brinda funcionalidades de administración de los servicios de coaching</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="a81a328b" name="Gestión de deportes">
+        <documentation>Deja al usuario administrador del SNS, así como a otros servicios de aplicación, crear, modificar o recuperar la información de un deporte en específico soportado por el SNS</documentation>
+      </element>
+      <element xsi:type="archimate:ApplicationComponent" id="b0c911b2" name="Gestión de patrocinios">
+        <documentation>Componente que administra las funcionalidades atadas solo a patrocinios</documentation>
+      </element>
     </folder>
     <folder name="Collaborations" id="78462fbb">
       <element xsi:type="archimate:ApplicationCollaboration" id="e4f0ef39" name="Definición y ejecución de eventos">
@@ -1456,7 +1489,6 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
     <element xsi:type="archimate:AggregationRelationship" id="a3fc07a6" source="9773f183" target="a81a328b"/>
     <element xsi:type="archimate:AssociationRelationship" id="e58f731f" source="959ae183" target="a81a328b"/>
     <element xsi:type="archimate:AssociationRelationship" id="a61733cb" source="c7fb9317" target="a81a328b"/>
-    <element xsi:type="archimate:AssociationRelationship" id="199f63f2" source="8d5e7a49" target="0518d19d"/>
     <element xsi:type="archimate:AssociationRelationship" id="805602ed" source="e79f40b3" target="a232b212"/>
     <element xsi:type="archimate:AssociationRelationship" id="0ea75408" source="0d189030" target="2c6417e5"/>
     <element xsi:type="archimate:AssociationRelationship" id="5bbdcd32" source="dd5956cd" target="bce13512"/>
@@ -1707,7 +1739,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
     <element xsi:type="archimate:UsedByRelationship" id="bfd5e7ab" source="414e5e12" target="1bc208a8"/>
     <element xsi:type="archimate:UsedByRelationship" id="b1dbebf6" source="3431e4e9" target="955b4cf1"/>
     <element xsi:type="archimate:UsedByRelationship" id="3a3bce2f" source="f2e93b13" target="949877b8"/>
-    <element xsi:type="archimate:RealisationRelationship" id="ebbaf671" source="80127318" target="3431e4e9"/>
+    <element xsi:type="archimate:RealisationRelationship" id="ebbaf671" source="b0c911b2" target="3431e4e9"/>
     <element xsi:type="archimate:UsedByRelationship" id="d50b4767" source="2e8259a6" target="f2e93b13"/>
     <element xsi:type="archimate:UsedByRelationship" id="b7aa68f2" source="2c6417e5" target="f2e93b13"/>
     <element xsi:type="archimate:RealisationRelationship" id="58f95844" source="13a5c550" target="f2e93b13"/>
@@ -1990,6 +2022,13 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
     <element xsi:type="archimate:CompositionRelationship" id="e7ac6f27" source="3431e4e9" target="a0a2fe7b"/>
     <element xsi:type="archimate:CompositionRelationship" id="0b9bb30c" source="3431e4e9" target="3bc9855d"/>
     <element xsi:type="archimate:UsedByRelationship" id="c965ac1d" source="3bc9855d" target="557149f4"/>
+    <element xsi:type="archimate:AggregationRelationship" id="54ac3043" source="80127318" target="b0c911b2"/>
+    <element xsi:type="archimate:AggregationRelationship" id="ace5039d" source="9773f183" target="b0c911b2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="49bc481b" source="b0c911b2" target="3431e4e9"/>
+    <element xsi:type="archimate:UsedByRelationship" id="633f09ec" source="171c818a" target="245be382"/>
+    <element xsi:type="archimate:AggregationRelationship" id="0efb95d6" source="e4f0ef39" target="a232b212"/>
+    <element xsi:type="archimate:AssociationRelationship" id="4a089060" source="a90a4bf7" target="8d5e7a49"/>
+    <element xsi:type="archimate:AggregationRelationship" id="751a2a3f" source="9773f183" target="a90a4bf7"/>
   </folder>
   <folder name="Views" id="57b9f81d" type="diagrams">
     <folder name="Bussiness views" id="38bcaa2b">
@@ -2065,6 +2104,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <bounds x="24" y="96"/>
           <sourceConnection xsi:type="archimate:Connection" id="fd9a4e36" source="c36bcc57" target="736ca34d" relationship="f0d493d6"/>
         </child>
+        <documentation>Es una versión pequeña de un punto de vista organizacional en el que solo se intenta mostrar la relación de asignación entre actores y roles identificados en el diseño de la arquitectura. Debido a la complejidad de una red social deportiva, es posible que un actor adquiera todos los roles mostrados en la vista, sin embargo, especializandose en unos o accediendo principalmente a un rol. Tal es el caso de los roles de agrupación deportiva, entrenador deportivo, prestador de servicios deportivos y patrocinador deportivo.</documentation>
       </element>
       <element xsi:type="archimate:ArchimateDiagramModel" id="976b9007" name="Organization - actores" connectionRouterType="2">
         <child xsi:type="archimate:DiagramObject" id="124ac35e" textAlignment="2" targetConnections="c42c81a1" archimateElement="225f8043">
@@ -2102,6 +2142,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <bounds x="162" y="66"/>
           <sourceConnection xsi:type="archimate:Connection" id="4878aa3f" source="750ae4a4" target="3b3d3e63" relationship="f8a2c2f0"/>
         </child>
+        <documentation>Aunque esta no es una vista archimate, haciendo uso de esta es posible observar los actores tenidos en cuenta en la creación del SNS. Un actor deportivo es quien desencadena a los demás actores que pueden desenvolverse en la red social debido a las funcionalidades pensadas para ella. El único actor que no ha sido propiamente pensado para ser soportado por la red social, pero que se hace necesario a la hora de tener en claro el negocio, es el periodista. El resto, en su totalidad, son soportados por la red social.</documentation>
       </element>
       <element xsi:type="archimate:ArchimateDiagramModel" id="392528ba" name="Bussiness Functions" viewpoint="6">
         <child xsi:type="archimate:DiagramObject" id="054818ab" textAlignment="2" archimateElement="7e064f76">
@@ -2322,7 +2363,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="168" y="192" width="120" height="37"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="135a44d3" textAlignment="2" targetConnections="265797b1" archimateElement="2c5cf2b7">
-            <bounds x="24" y="174"/>
+            <bounds x="24" y="174" width="120" height="64"/>
           </child>
         </child>
         <child xsi:type="archimate:DiagramObject" id="fc3d27c4" textAlignment="2" targetConnections="aa85562c" archimateElement="2e07b01d">
@@ -2348,6 +2389,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <bounds x="204" y="234" width="120" height="37"/>
           <sourceConnection xsi:type="archimate:Connection" id="aa85562c" source="e78119b2" target="fc3d27c4" relationship="a8d9c890"/>
         </child>
+        <documentation>Sobre esta capa se puede observar que los arquitectos han decidido utilizar una arquitectura cliente/servidor para el soporte del desarrollo del SNS. A su vez, se puede observar que el software utilizado por parte del cliente deberá ser un sistema android con el cliente desarrollado específicamente para dar la GUI del SNS. Por parte del servidor se puede ver que se utilizarán entornos Java para el servidor de aplicaciones, Neo4j como la base de datos y sistema operativo Debian. Todo estará soportado sobre conexiones por medio de la red internet.</documentation>
       </element>
     </folder>
     <folder name="Introductory views" id="f1b393f6">
@@ -3025,13 +3067,12 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <sourceConnection xsi:type="archimate:Connection" id="18fe78a0" source="47f3d3a5" target="fd44002b" relationship="bb51b26a"/>
           <sourceConnection xsi:type="archimate:Connection" id="89684b96" source="47f3d3a5" target="09814085" relationship="c94afc71"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="e622db86" textAlignment="2" targetConnections="9505b6e7 b48e5201" archimateElement="0518d19d">
+        <child xsi:type="archimate:DiagramObject" id="e622db86" textAlignment="2" targetConnections="9505b6e7" archimateElement="0518d19d">
           <bounds x="685" y="562"/>
           <sourceConnection xsi:type="archimate:Connection" id="717ed959" source="e622db86" target="09814085" relationship="0ba94d79"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="8e320cee" textAlignment="2" archimateElement="8d5e7a49">
           <bounds x="769" y="470" width="132" height="60"/>
-          <sourceConnection xsi:type="archimate:Connection" id="b48e5201" source="8e320cee" target="e622db86" relationship="199f63f2"/>
           <sourceConnection xsi:type="archimate:Connection" id="1612d102" source="8e320cee" target="c3b54716" relationship="1c6ad113"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="bed74d5c" textAlignment="2" archimateElement="959ae183">
@@ -3095,6 +3136,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <sourceConnection xsi:type="archimate:Connection" id="43a627eb" source="c3b54716" target="0b91dcb5" relationship="7ed65fdd"/>
           <sourceConnection xsi:type="archimate:Connection" id="a4a56422" source="c3b54716" target="71490214" relationship="77c0d878"/>
         </child>
+        <documentation>Esta vista muestra las principales características ofrecidas por la red social. Así, es visto que el SNS buscará, en específico, cumplir las funciones de geolocalización, del soporte de información acerca de un deporte, del manejo de social media (esto es, el despliegue de funciones para interactuar con otros en la red social) y el módulo de gestión del conocimiento (similar a la gestión de una comunidad/foro en internet).</documentation>
       </element>
     </folder>
     <folder name="Viewpoints" id="a8c9c196">
@@ -3214,6 +3256,9 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <child xsi:type="archimate:DiagramObject" id="63549009" textAlignment="2" targetConnections="b1ede3a7 283fab84" archimateElement="f9cabd19">
             <bounds x="792" y="390"/>
           </child>
+          <documentation>El proceso de entrenamiento deportivo ha sido dividido en dos procesos grandes, uno atado al entrenador solamente (entrenar grupo deportivo) y otro atado tanto a la agrupación deportiva como al entrenador deportivo (ejecutar plan de entrenamiento). Sobre estos dos grandes procesos se destacan las funciones expresadas en el punto de vista de funciones de negocio de entrenamiento deportivo. Sobre esta vista se manejan dos objetos de negocio principales: evaluaciones deportivas y planes de entrenamiento.
+
+En función de soportar los procesos expresados por los autores, se generaron tres servicios de aplicación principales: La ejecución de un plan de entrenamiento, otros servicios de gestión del plan de entrenamiento y un servicio para el soporte de la evaluación deportiva, el cual se nombró &quot;servicio de comunicación colaborativa&quot;.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="7b14901f" name="Bussiness function - Entrenamiento deportivo">
           <child xsi:type="archimate:DiagramObject" id="2e25c96b" textAlignment="2" archimateElement="04a65435">
@@ -3274,10 +3319,11 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <child xsi:type="archimate:DiagramObject" id="7d6a5eb8" targetConnections="49969399 e73bed8a" archimateElement="ac28c95d">
             <bounds x="454" y="456"/>
             <sourceConnection xsi:type="archimate:Connection" id="afe6fde4" source="7d6a5eb8" target="46046ed7" relationship="bd2892fa">
-              <bendpoint startX="372" startY="-65" endX="-8" endY="91"/>
+              <bendpoint startX="378" startY="-81" endX="-2" endY="75"/>
             </sourceConnection>
             <sourceConnection xsi:type="archimate:Connection" id="702324bf" source="7d6a5eb8" target="42ccc78d" relationship="90d4eed7"/>
           </child>
+          <documentation>Sobre este punto de vista se puede observar el flujo de información entre los roles participantes en un entrenamiento deportivo. Todos están basados en la valoración del trabajo producido en la práctica según los eventos producidos en la misma y la valoración que a estos de cada rol para, así, producir ejercicios deportivos para el entrenamiento.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="29b1c83d" name="Application usage - Entrenamiento deportivo" connectionRouterType="2">
           <child xsi:type="archimate:DiagramObject" id="c471e9a8" textAlignment="2" targetConnections="5cccc356" archimateElement="6c599a89">
@@ -3425,6 +3471,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="1260" y="168"/>
             <sourceConnection xsi:type="archimate:Connection" id="0b85d030" source="ad7fc5ea" target="4d48b234" relationship="3ac975c1"/>
           </child>
+          <documentation>Para el soporte de los servicios proporcionados por el SNS, son utilizados componentes de estadística, de gestión de usuarios y de grupos deportivos, así como también de comunicación y de manejo de contenidos para la evaluación de los entrenados y la ejecución del plan de entrenamiento por parte de los mismos. Hay un último componente de aplicación que es el de gestión de servicio de coaching, el cual realiza los servicios relacionados con el plan de entrenamiento y que, a su vez, está compuesto en el componente de gestión de servicios ya que éste entrenamiento deportivo es visto en la red social como otro servicio prestado a los actores que ella interactúan.</documentation>
         </element>
       </folder>
       <folder name="Estadísticas deportivas" id="2e038b0d">
@@ -3566,35 +3613,39 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="559" y="44" width="120" height="46"/>
             <sourceConnection xsi:type="archimate:Connection" id="35f99578" source="912443fb" target="e964680a" relationship="4c51dfc8"/>
           </child>
+          <documentation>A parte de lo expresado en el punto de vista de proceso de negocio de estadísticas deportivas, hay múltiples componentes que interactuarán por medio de los servicios que soportan debido al amplio espectro que ocupan las estadísticas sobre el SNS. A parte del componente de gestión de estadísticas, el de usuarios, el de eventos, el de servicios y el de geolocalización ocupan un lugar por ser estos evaluados por medio de estadísticas. Se encuentra también uno de manejo de contenidos que es usado para el compartir las estadísticas y comentar sobre ellas como se haría en la red social deportiva real.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="71d7f23e" name="Bussiness function  - Estadisticas deportivas">
           <child xsi:type="archimate:DiagramObject" id="f26c418e" textAlignment="2" archimateElement="1bc208a8">
             <bounds x="312" y="144"/>
             <sourceConnection xsi:type="archimate:Connection" id="99af168e" source="f26c418e" target="b42da9cc" relationship="41651197">
-              <bendpoint startX="276" startY="-3" endX="-24" endY="-136"/>
+              <bendpoint startX="300" startY="-3" endY="-136"/>
             </sourceConnection>
-            <sourceConnection xsi:type="archimate:Connection" id="0d104ff6" source="f26c418e" target="978d39e6" relationship="47744eaa"/>
-            <sourceConnection xsi:type="archimate:Connection" id="8d5144b0" source="f26c418e" target="15470ef0" relationship="071c54bc">
-              <bendpoint startY="-63" endX="-301" endY="12"/>
+            <sourceConnection xsi:type="archimate:Connection" id="0d104ff6" source="f26c418e" target="978d39e6" relationship="47744eaa">
+              <bendpoint startX="-206" startY="4" endX="-2" endY="-66"/>
             </sourceConnection>
+            <sourceConnection xsi:type="archimate:Connection" id="8d5144b0" source="f26c418e" target="15470ef0" relationship="071c54bc"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="88cdd407" textAlignment="2" archimateElement="04a65435">
             <bounds x="312" y="276"/>
             <sourceConnection xsi:type="archimate:Connection" id="db5068bc" source="88cdd407" target="b42da9cc" relationship="967af413"/>
-            <sourceConnection xsi:type="archimate:Connection" id="01c93066" source="88cdd407" target="978d39e6" relationship="e113c2e5"/>
+            <sourceConnection xsi:type="archimate:Connection" id="01c93066" source="88cdd407" target="978d39e6" relationship="e113c2e5">
+              <bendpoint startX="-206" endX="-2" endY="62"/>
+            </sourceConnection>
           </child>
           <child xsi:type="archimate:DiagramObject" id="33633a29" textAlignment="2" archimateElement="98c30d34">
             <bounds x="312" y="213"/>
             <sourceConnection xsi:type="archimate:Connection" id="61f11304" source="33633a29" target="b42da9cc" relationship="dc830de9"/>
             <sourceConnection xsi:type="archimate:Connection" id="52880581" source="33633a29" target="978d39e6" relationship="9f52b9fa"/>
             <sourceConnection xsi:type="archimate:Connection" id="fb1b1192" source="33633a29" target="15470ef0" relationship="b561077c">
-              <bendpoint startX="288" endX="-13" endY="144"/>
+              <bendpoint startX="300" endX="-1" endY="144"/>
             </sourceConnection>
           </child>
           <child xsi:type="archimate:DiagramObject" id="b42da9cc" textAlignment="2" targetConnections="99af168e 61f11304 db5068bc" archimateElement="c42154fa">
             <bounds x="588" y="281" width="169" height="46"/>
             <sourceConnection xsi:type="archimate:Connection" id="0707481d" source="b42da9cc" target="15470ef0" relationship="97be9a8f">
-              <bendpoint startX="84" startY="-112" endX="83" endY="96"/>
+              <bendpoint startX="130" startY="-2" endX="130" endY="206"/>
+              <bendpoint startX="130" startY="-210" endX="130" endY="-2"/>
             </sourceConnection>
           </child>
           <child xsi:type="archimate:DiagramObject" id="978d39e6" textAlignment="2" targetConnections="52880581 01c93066 0d104ff6 cd065f02" archimateElement="4276f222">
@@ -3606,6 +3657,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <bendpoint startX="-505" endY="-144"/>
             </sourceConnection>
           </child>
+          <documentation>Sobre este punto de vista se puede observar que, en específico, entrenadores, patrocinadores deportivos y agrupaciones deportivas producen y utilizan estadísticas. Estas estadísticas son traducidas en calificaciones a los demás en, por ejemplo, el préstamo de servicios deportivos. En el punto de vista de proceso de negocio de estadísticas deportivas es más preciso ver cuales son los tipos de estadística con los cuales se trabaja.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="c7eb0bb3" name="Bussiness process  - Estadisticas deportivas" connectionRouterType="2">
           <child xsi:type="archimate:DiagramObject" id="b91ae1f6" textAlignment="2" targetConnections="aca221a7 95f4163b 8783b5ea" archimateElement="1bc208a8">
@@ -3715,7 +3767,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="5f43de0d" source="d3c35a89" target="7dcc86ef" relationship="b8c67401"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="661df685" textAlignment="2" archimateElement="bf630f81">
-            <bounds x="1313" y="186" width="133" height="55"/>
+            <bounds x="1313" y="168" width="133" height="73"/>
             <sourceConnection xsi:type="archimate:Connection" id="8e5363ca" source="661df685" target="7dcc86ef" relationship="76de9450"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="10a7fb53" textAlignment="2" targetConnections="c83519b4 c15100d9" archimateElement="4145d466">
@@ -3727,6 +3779,9 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="889" y="380" width="120" height="46"/>
             <sourceConnection xsi:type="archimate:Connection" id="c15100d9" source="c9307cfc" target="10a7fb53" relationship="4c51dfc8"/>
           </child>
+          <documentation>Esta vista se ha dedicado a expresar el proceso de generación de estadísticas. El diferenciador de este proceso es el tipo de estadísticas que se generan y, por ende, los objetos de negocio que estarán asociados a dichas estadísticas. Las estadísticas generadas serán las de servicios deportivos ofrecidos sobre la red social, sobre estadísticas deportivas de agrupaciones deportivas, sobre estadísticas geoespaciales teniendo en cuenta aspectos de niveles de juego, deportes practicados y eventos generados sobre dicha ubicación geoespacial, y estadísticas propias de un evento deportivo.
+
+En la vista, sobre la capa de aplicación, pueden verse los servicios que soportarán el proceso de generación de estadísticas.</documentation>
         </element>
       </folder>
       <folder name="Formación de grupos deportivos" id="f0a1ce8a">
@@ -3849,10 +3904,6 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="d88d611d" source="c37a91a4" target="6864f7bb" relationship="03cd48d6"/>
             <sourceConnection xsi:type="archimate:Connection" id="ff747fda" source="c37a91a4" target="5343f193" relationship="78e276b4"/>
           </child>
-          <child xsi:type="archimate:DiagramObject" id="5da5410b" textAlignment="2" targetConnections="64a81de3" archimateElement="a90a4bf7">
-            <bounds x="1308" y="712" width="132" height="48"/>
-            <sourceConnection xsi:type="archimate:Connection" id="83b446cc" source="5da5410b" target="c37a91a4" relationship="4481b68e"/>
-          </child>
           <child xsi:type="archimate:DiagramObject" id="f189bdf7" textAlignment="2" targetConnections="9a18faae 8f3846cf" archimateElement="5b5c446a">
             <bounds x="1969" y="156" width="156" height="55"/>
           </child>
@@ -3860,6 +3911,11 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="576" y="77" width="217" height="80"/>
             <content>Utilizado tanto para grupos deportivos como para equipos deportivos, no permitiendo al primero participar o tener características del segundo</content>
           </child>
+          <child xsi:type="archimate:DiagramObject" id="5da5410b" textAlignment="2" targetConnections="64a81de3" archimateElement="a90a4bf7">
+            <bounds x="1308" y="712" width="132" height="48"/>
+            <sourceConnection xsi:type="archimate:Connection" id="83b446cc" source="5da5410b" target="c37a91a4" relationship="4481b68e"/>
+          </child>
+          <documentation>A parte de lo ya dicho en el punto de vista de proceso de negocio de formación de grupos deportivos, se puede observar los componentes en soporte de los servicios de aplicación: Uno para la gestión del grupo deportivo, otro para la gestión de usuarios y el otro para la gestión de la comunicación.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="745f2f24" name="Bussiness function - Formacion grupos deportivos">
           <child xsi:type="archimate:DiagramObject" id="f1c3e7de" textAlignment="2" targetConnections="52b10b49 ac186f95" archimateElement="1bc208a8">
@@ -3891,14 +3947,15 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             </child>
           </child>
           <child xsi:type="archimate:DiagramObject" id="a1a0e822" targetConnections="d610791d" archimateElement="ba152f36">
-            <bounds x="352" y="408"/>
+            <bounds x="362" y="408"/>
             <sourceConnection xsi:type="archimate:Connection" id="ccb99c30" source="a1a0e822" target="d2f94050" relationship="094735de"/>
             <sourceConnection xsi:type="archimate:Connection" id="ac186f95" source="a1a0e822" target="f1c3e7de" relationship="5d30e381"/>
           </child>
           <child xsi:type="archimate:Note" id="c165bd7f" textAlignment="1">
-            <bounds x="251" y="467" width="217" height="80"/>
+            <bounds x="267" y="467" width="206" height="80"/>
             <content>Utilizado tanto para grupos deportivos como para equipos deportivos, no permitiendo al primero participar o tener características del segundo</content>
           </child>
+          <documentation>En cuanto a la formación de grupos se refiere, entre roles intercambian la información acerca de sus peticiones a unirse a la red social, así como la respuesta a la misma. Se puede ver que los roles que interactuan en la formación de grupos deportivos son solo los de entrenadores y agrupaciones deportivas y que ellos mismos conforman los grupos deportivos.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="d6f6ec9e" name="Bussiness process - Formacion grupos deportivos" connectionRouterType="2">
           <child xsi:type="archimate:DiagramObject" id="873811ea" textAlignment="2" archimateElement="9afb7567">
@@ -4036,6 +4093,9 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="-180" y="78" width="217" height="80"/>
             <content>Utilizado tanto para grupos deportivos como para equipos deportivos, no permitiendo al primero participar o tener características del segundo</content>
           </child>
+          <documentation>Este punto de vista de proceso de negocio está basado en dos procesos principales: La creación de un grupo deportivo y la interacción con el grupo deportivo. Lo que los arquitectos transmiten es el cómo, luego de la creación del grupo, se desempeñan procesos que luego serán recurrentes a través de la vida del grupo deportivo: La interacción grupal y la asignación de roles sobre integrantes del grupo deportivo. Según el punto de vista, solo aquellos con rol de entrenadores deportivos y de agrupaciones deportivas pueden formar un grupo deportivo. Hay un tercer proceso que es la lectura de información del grupo deportivo, en el caso de un actor deportivo que esté interesado en unirse/participar en el grupo deportivo. Este punto de vista es utilizado tanto para grupos deportivos como para equipos deportivos, no permitiendo al primero participar o tener características del segundo.
+
+Los procesos de negocio representados son cubiertos por un servicio grande específico para prestar funcionalidades a los grupos deportivos y éste, a su vez, hace uso del servicio de social media para poder implementar la interacción grupal.</documentation>
         </element>
       </folder>
       <folder name="Organización de eventos deportivos" id="9370fc3b">
@@ -4123,7 +4183,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <bounds x="199" y="132" width="120" height="59"/>
               <sourceConnection xsi:type="archimate:Connection" id="d55ed11b" source="84101580" target="0ec3b86b" relationship="c3b4dc9a"/>
             </child>
-            <child xsi:type="archimate:DiagramObject" id="b4218fa1" textAlignment="2" targetConnections="a45d3393" archimateElement="245be382">
+            <child xsi:type="archimate:DiagramObject" id="b4218fa1" textAlignment="2" targetConnections="a45d3393 53c6bfe0" archimateElement="245be382">
               <bounds x="24" y="48" width="133" height="49"/>
               <sourceConnection xsi:type="archimate:Connection" id="e2b63e0a" source="b4218fa1" target="8e207f00" relationship="6732dc1c"/>
             </child>
@@ -4134,7 +4194,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="8fd29e0d" source="5a79649f" target="d396d338" relationship="09a4cd3d"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="9675e946" textAlignment="2" targetConnections="3fa757b2" archimateElement="13a5c550">
-            <bounds x="300" y="954"/>
+            <bounds x="407" y="914"/>
             <sourceConnection xsi:type="archimate:Connection" id="e461ff66" source="9675e946" target="f0619560" relationship="e9040f09"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="c1d3a3ab" textAlignment="2" archimateElement="e4f0ef39">
@@ -4143,6 +4203,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="62fb60ce" source="c1d3a3ab" target="5a79649f" relationship="c015df9d"/>
             <sourceConnection xsi:type="archimate:Connection" id="3fa757b2" source="c1d3a3ab" target="9675e946" relationship="67b998b0"/>
             <sourceConnection xsi:type="archimate:Connection" id="e6e99408" source="c1d3a3ab" target="607eeec1" relationship="190375c5"/>
+            <sourceConnection xsi:type="archimate:Connection" id="09a8854f" source="c1d3a3ab" target="040c64d6" relationship="0efb95d6"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="112cdc9e" textAlignment="2" targetConnections="a91ee257" archimateElement="bf98ef73">
             <bounds x="288" y="1092"/>
@@ -4253,6 +4314,16 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="-155" y="1092" width="120" height="67"/>
             <sourceConnection xsi:type="archimate:Connection" id="7ec4742e" source="80dcf10f" target="d396d338" relationship="479eb7a0"/>
           </child>
+          <child xsi:type="archimate:DiagramObject" id="844648e4" textAlignment="2" archimateElement="171c818a">
+            <bounds x="936" y="698"/>
+            <sourceConnection xsi:type="archimate:Connection" id="53c6bfe0" source="844648e4" target="b4218fa1" relationship="633f09ec"/>
+          </child>
+          <child xsi:type="archimate:DiagramObject" id="040c64d6" textAlignment="2" targetConnections="09a8854f" archimateElement="a232b212">
+            <bounds x="240" y="954"/>
+          </child>
+          <documentation>Para la organización de eventos deportivos, a parte de lo visto en el punto de vista de proceso de negocio, se puede observar que el SNS deportivo, en una fase final de desarrollo (más allá del prototipo que se alcanza en este proyecto), está dedicado al soporte de funcionalidades para eventos deportivos tales como torneos, clínicas, eventos informativos (como ejemplo, una conferencia deportiva) y, el elemento principal, las prácticas deportivas (prácticas informales realizadas por jugadores amateur).
+
+En soporte de los servicios mostrados, está el componente de gestión de eventos que, junto con la gestión de patrocinio, de geolocalización, de estadísticas y de usuarios. </documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="8bb722b3" name="Bussiness function - Organizacion eventos deportivos">
           <child xsi:type="archimate:DiagramObject" id="3638c3b9" textAlignment="2" targetConnections="eff969f5 fba1da28" archimateElement="98c30d34">
@@ -4304,6 +4375,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <bounds x="37" y="240" width="120" height="37"/>
             </child>
           </child>
+          <documentation>En este punto de vista se puede observar el paso de información a través de los diferentes roles que interactúan en la creación y ejecución de un evento deportivo (patrocinadores, agrupaciones deportivas y gestores de encuentros deportivos) quienes intercambian la información de cada uno para ser patrocinado, para pedir participación o para participar en el evento deportivo.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="5659afe7" name="Bussiness process - Organizacion eventos deportivos" connectionRouterType="2">
           <child xsi:type="archimate:DiagramObject" id="0719c1da" textAlignment="2" targetConnections="afb189c4" archimateElement="c09fd0d8">
@@ -4416,7 +4488,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <bounds x="240" y="120" width="120" height="59"/>
               <sourceConnection xsi:type="archimate:Connection" id="2a20e3bf" source="ab3c66ce" target="d0c5235a" relationship="c3b4dc9a"/>
             </child>
-            <child xsi:type="archimate:DiagramObject" id="d5e91c17" textAlignment="2" targetConnections="04ee1326" archimateElement="245be382">
+            <child xsi:type="archimate:DiagramObject" id="d5e91c17" textAlignment="2" targetConnections="04ee1326 e042042b" archimateElement="245be382">
               <bounds x="36" y="36" width="133" height="49"/>
               <sourceConnection xsi:type="archimate:Connection" id="372a3442" source="d5e91c17" target="ce43d57f" relationship="dab349a9"/>
               <sourceConnection xsi:type="archimate:Connection" id="fb9245f4" source="d5e91c17" target="7ecb4b37" relationship="6732dc1c"/>
@@ -4466,7 +4538,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="04ee1326" source="50721624" target="d5e91c17" relationship="ff78c5c0"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="95120a82" textAlignment="2" archimateElement="c3858f9f">
-            <bounds x="1116" y="756" width="140" height="55"/>
+            <bounds x="1116" y="754" width="140" height="55"/>
             <sourceConnection xsi:type="archimate:Connection" id="f4e55b00" source="95120a82" target="ab3c66ce" relationship="ecc60983"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="90e58344" textAlignment="2" targetConnections="c10d98bd 4a7ae582 91085b7f 2081c318 1022c132 39007073 66a8c812" archimateElement="1fb18a97">
@@ -4492,6 +4564,11 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="504" y="824" width="120" height="61"/>
             <sourceConnection xsi:type="archimate:Connection" id="66a8c812" source="822572d4" target="90e58344" relationship="a6320c32"/>
           </child>
+          <child xsi:type="archimate:DiagramObject" id="1564cf50" textAlignment="2" archimateElement="171c818a">
+            <bounds x="948" y="744"/>
+            <sourceConnection xsi:type="archimate:Connection" id="e042042b" source="1564cf50" target="d5e91c17" relationship="633f09ec"/>
+          </child>
+          <documentation>En cuanto al proceso de organización de eventos deportivos, los autores han decidido dividir éste en tres procesos grandes: Planear el proyecto, ejecutar el proyecto y participación en el evento deportivo. Se puede ver también que un gestor de eventos deportivos puede trabajar a la par con un patrocinador deportivo para organizar el evento deportivo, con lo cual se puede discernir la conexión entre un patrocinio al evento deportivo y la organización del mismo. El primer gran proceso es soportado por servicios que proporcionan capacidades para tratar con los datos del evento; del segundo gran proceso se soportan algunos de los subprocesos pertenecientes a este, los que son considerados valiosos para el desarrollo del SNS como la invitación y notificación a participantes, así como también la clausura de un evento y la gestión de formatos deportivos; en el tercer gran proceso solo se tienen servicios para la petición a participar en el evento o la participación en el evento mismo.</documentation>
         </element>
       </folder>
       <folder name="Patrocinios deportivos" id="9a0b67d8">
@@ -4562,7 +4639,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <sourceConnection xsi:type="archimate:Connection" id="2b8b4b7b" source="166a4b1b" target="dbee3ba2" relationship="21e76407"/>
             </child>
           </child>
-          <child xsi:type="archimate:DiagramObject" id="e5efb595" textAlignment="2" targetConnections="627bb078 851d7ddf 6be46dde" archimateElement="3431e4e9">
+          <child xsi:type="archimate:DiagramObject" id="e5efb595" textAlignment="2" targetConnections="851d7ddf 6be46dde 627bb078" archimateElement="3431e4e9">
             <bounds x="1032" y="532" width="120" height="48"/>
             <sourceConnection xsi:type="archimate:Connection" id="03eac404" source="e5efb595" target="ff984b8c" relationship="b1dbebf6"/>
             <sourceConnection xsi:type="archimate:Connection" id="bf8c3f90" source="e5efb595" target="758b777b" relationship="e7ac6f27"/>
@@ -4581,8 +4658,8 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <sourceConnection xsi:type="archimate:Connection" id="93370284" source="e4a0ff54" target="fd4031da" relationship="cef32208"/>
             <sourceConnection xsi:type="archimate:Connection" id="fe608d54" source="e4a0ff54" target="69a4526b" relationship="6d453040"/>
             <sourceConnection xsi:type="archimate:Connection" id="ce0e1699" source="e4a0ff54" target="95c71d58" relationship="e4be9c24"/>
-            <sourceConnection xsi:type="archimate:Connection" id="627bb078" source="e4a0ff54" target="e5efb595" relationship="ebbaf671"/>
             <sourceConnection xsi:type="archimate:Connection" id="67cf1e8f" source="e4a0ff54" target="bd564724" relationship="372a1c1d"/>
+            <sourceConnection xsi:type="archimate:Connection" id="161b126a" source="e4a0ff54" target="952b6a74" relationship="54ac3043"/>
           </child>
           <child xsi:type="archimate:DiagramObject" id="fd4031da" textAlignment="2" targetConnections="93370284" archimateElement="ae98a3f4">
             <bounds x="491" y="756"/>
@@ -4701,6 +4778,13 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="864" y="498" width="132" height="43"/>
             <sourceConnection xsi:type="archimate:Connection" id="68c04ec3" source="48153548" target="81fd4ead" relationship="c965ac1d"/>
           </child>
+          <child xsi:type="archimate:DiagramObject" id="952b6a74" textAlignment="2" targetConnections="161b126a" archimateElement="b0c911b2">
+            <bounds x="913" y="744"/>
+            <sourceConnection xsi:type="archimate:Connection" id="627bb078" source="952b6a74" target="e5efb595" relationship="ebbaf671"/>
+          </child>
+          <documentation>A parte de lo ya observado en el punto de vista de proceso de negocio de patrocinios deportivos, en este punto de vista puede observarse con los objetos de negocio, en particular, que en la aplicación el objeto de negocio &quot;proyecto&quot; no va a ser soportado más que como un posible paso de mensajes entre patrocinador y patrocinado, puesto que el servicio que soporta el proceso de negocio de petición de patrocinios sólo envía la intención de ser patrocinado como un mensaje, en otras palabras, el SNS no soporta la creación de proyectos aunque si facilita la visualización de factores que influyen en el patrocinio de un actor deportivo (como, por ejemplo, las estadísticas deportivas generadas para un actor deportivo).
+
+Se hace la creación de componentes de negocio para la gestión de cada facilidad ofrecida por un patrocinador, así como también uno para el patrocinio mismo, gestión de patrocinios, soportando los servicios de patrocinio ofrecidos. La utilización de los demás servicios se ve reflejada en componentes relacionados con estadísticas, con grupos deportivos y con eventos deportivos. También se observa un componente de comunicación, el cual realiza el servicio de mensajería para el envío de mensajes (proyecto) entre patrocinador y patrocinado.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="dcfbf570" name="Bussiness function  - Patrocinios deportivos" connectionRouterType="1">
           <child xsi:type="archimate:DiagramObject" id="b14dffd6" textAlignment="2" targetConnections="99d761d4 459e8053 594def52" archimateElement="98c30d34">
@@ -4748,6 +4832,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <bendpoint startX="-141" startY="-15" endX="1" endY="162"/>
             </sourceConnection>
           </child>
+          <documentation>En este punto de vista se puede observar cómo los patrocinadores pueden patrocinar diferentes actores en la red social. Más a fondo, se puede ver como un patrocinador apoya los proyectos desempeñados por un actor que desempeña un rol específico en la red social. Así, por ejemplo, un gestor de encuentros deportivos puede pedir un patrocinio o recibir una petición de un patrocinador para ser patrocinado por el evento que va a realizar. También se puede observar que un patrocinador deportivo patrocina proyectos de otros actores sobre la red social con su financiamiento, con la prestación de uno o varios servicios o con la provisión de uno o varios recursos materiales.</documentation>
         </element>
         <element xsi:type="archimate:ArchimateDiagramModel" id="d4d2e033" name="Bussiness process  - Patrocinios deportivos" connectionRouterType="2">
           <child xsi:type="archimate:DiagramObject" id="38492f3c" textAlignment="2" targetConnections="b89eeadf" archimateElement="42b85adf">
@@ -4803,7 +4888,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
               <sourceConnection xsi:type="archimate:Connection" id="ca22c6e0" source="02147c25" target="ddbff596" relationship="22c2ef4a"/>
             </child>
             <child xsi:type="archimate:DiagramObject" id="ddbff596" textAlignment="2" targetConnections="ca22c6e0" archimateElement="f032f54e">
-              <bounds x="180" y="72" width="120" height="46"/>
+              <bounds x="180" y="72" width="120" height="50"/>
             </child>
             <child xsi:type="archimate:DiagramObject" id="25a508cd" textAlignment="2" targetConnections="6c597601" archimateElement="94f29496">
               <bounds x="444" y="60"/>
@@ -4936,6 +5021,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
             <bounds x="139" y="384" width="132" height="43"/>
             <sourceConnection xsi:type="archimate:Connection" id="80e69df6" source="65b83730" target="56586876" relationship="c965ac1d"/>
           </child>
+          <documentation>En el proceso de patrocinios, los autores han orientado el proceso de negocio partiendo desde el patrocinado hacia el patrocinador (con la petición de patrocinios) y desde el patrocinador al patrocinado (dejando al patrocinador decidir si patrocinar o no un proyecto según el seguimiento que él le haga a éste). Se puede ver también que los servicios ofrecidos soportan todos los procesos de negocio ilustrados.</documentation>
         </element>
       </folder>
       <element xsi:type="archimate:ArchimateDiagramModel" id="17522e4f" name="General Layered" connectionRouterType="2">
@@ -4961,6 +5047,8 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <sourceConnection xsi:type="archimate:Connection" id="9d1885b5" source="f0ddcdef" target="5315cbce" relationship="c0984fd1"/>
           <sourceConnection xsi:type="archimate:Connection" id="b967544c" source="f0ddcdef" target="61ba914a" relationship="106e4ca3"/>
           <sourceConnection xsi:type="archimate:Connection" id="9e81758e" source="f0ddcdef" target="d2f4d2d3" relationship="a3fc07a6"/>
+          <sourceConnection xsi:type="archimate:Connection" id="139ab9a7" source="f0ddcdef" target="294bca48" relationship="ace5039d"/>
+          <sourceConnection xsi:type="archimate:Connection" id="78fbf89b" source="f0ddcdef" target="035a988e" relationship="751a2a3f"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="8a52345a" textAlignment="2" targetConnections="9b29a197" archimateElement="897ab0fe">
           <bounds x="467" y="852"/>
@@ -4977,7 +5065,7 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <sourceConnection xsi:type="archimate:Connection" id="0f1439f4" source="d4e4d278" target="89938a27" relationship="af1fca61"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="0a9476cf" textAlignment="2" targetConnections="28439375 a8e5fce9" archimateElement="bf98ef73">
-          <bounds x="132" y="573" width="145" height="49"/>
+          <bounds x="63" y="571" width="145" height="49"/>
           <sourceConnection xsi:type="archimate:Connection" id="79345291" source="0a9476cf" target="8548a3c3" relationship="bb51b26a"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="3649a4e6" textAlignment="2" targetConnections="4b13bfaf cf1cbf34" archimateElement="bce13512">
@@ -4986,8 +5074,8 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
         <child xsi:type="archimate:DiagramObject" id="61ba914a" textAlignment="2" targetConnections="b967544c 425e35b2" archimateElement="ae98a3f4">
           <bounds x="1091" y="568"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="eab7f626" textAlignment="2" targetConnections="4900c378 a769bd19 b3daa8d8" archimateElement="0518d19d">
-          <bounds x="372" y="571"/>
+        <child xsi:type="archimate:DiagramObject" id="eab7f626" textAlignment="2" targetConnections="4900c378 b3daa8d8" archimateElement="0518d19d">
+          <bounds x="240" y="571"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="5315cbce" textAlignment="2" targetConnections="9d1885b5 9686d787 db333583" archimateElement="13a5c550">
           <bounds x="504" y="571"/>
@@ -4999,9 +5087,8 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <bounds x="791" y="571"/>
           <sourceConnection xsi:type="archimate:Connection" id="f324dfe5" source="f29aaa13" target="ec4e6fa1" relationship="f1ba95aa"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="d0df80ff" textAlignment="2" archimateElement="8d5e7a49">
+        <child xsi:type="archimate:DiagramObject" id="d0df80ff" textAlignment="2" targetConnections="5825a7a8" archimateElement="8d5e7a49">
           <bounds x="347" y="479" width="132" height="60"/>
-          <sourceConnection xsi:type="archimate:Connection" id="a769bd19" source="d0df80ff" target="eab7f626" relationship="199f63f2"/>
           <sourceConnection xsi:type="archimate:Connection" id="a48467b0" source="d0df80ff" target="366da953" relationship="1c6ad113"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="a539c3ae" textAlignment="2" archimateElement="959ae183">
@@ -5145,6 +5232,20 @@ Descripción: Permite la gestión de aquellos actores deportivos que están sien
           <bounds x="684" y="-36" width="120" height="63"/>
           <sourceConnection xsi:type="archimate:Connection" id="dd62056c" source="e2b974bb" target="082d77c9" relationship="52f0539c"/>
         </child>
+        <child xsi:type="archimate:DiagramObject" id="03efbb77" textAlignment="2" targetConnections="07c3c95c" archimateElement="3431e4e9">
+          <bounds x="1272" y="474" width="154" height="50"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="294bca48" textAlignment="2" targetConnections="139ab9a7" archimateElement="b0c911b2">
+          <bounds x="1236" y="567"/>
+          <sourceConnection xsi:type="archimate:Connection" id="07c3c95c" source="294bca48" target="03efbb77" relationship="49bc481b"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="035a988e" textAlignment="2" targetConnections="78fbf89b" archimateElement="a90a4bf7">
+          <bounds x="373" y="571"/>
+          <sourceConnection xsi:type="archimate:Connection" id="5825a7a8" source="035a988e" target="d0df80ff" relationship="4a089060"/>
+        </child>
+        <documentation>Este punto de vista es una ampliación del punto de vista introductorio. En este punto de vista es posible observar la visión que han tenido los autores para mostrar una red social deportiva real, todas las funciones que cumple y servicios que realiza/consume un actor deportivo sobre la red. A su vez, es posible observar la ampliación y la aparición de nuevas funcionalidades que soportaría el SNS, teniendo como base la orientación de la red social al deporte amateur o en camino de ser profesional. Entre las nuevas funcionalidades puede observarse la gestión de patrocinios deportivos, la gestión de compra/venta sobre el SNS, la realización de predicciones estadísticas (y, por ende, la producción de las estadísticas mismas) de eventos deportivos y actores deportivos en la red social y la gestión de eventos deportivos. En cuanto al elemento ampliado, se puede observar la ampliación de la geolocalización al ambito de los actores deportivos en la red social así como también de los eventos que en ella se produzcan.
+
+En la capa tecnológica puede observarse la arquitectura cliente/servidor sobre internet, teniendo como terminales los dispositivos móbiles que, en este caso, serán dispositivos Android.</documentation>
       </element>
     </folder>
     <element xsi:type="archimate:ArchimateDiagramModel" id="905ee086" name="Application Usage - Buscador Deportivo" viewpoint="5">
