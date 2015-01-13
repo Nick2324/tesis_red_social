@@ -4,58 +4,74 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio\relax }}{80}{table.caption.32}
-\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{81}{table.caption.33}
-\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de tecnolog\IeC {\'\i }a\relax }}{82}{table.caption.34}
-\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{83}{table.caption.35}
-\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{84}{table.caption.36}
-\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{84}{table.caption.37}
-\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{85}{table.caption.38}
-\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{86}{table.caption.39}
-\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'o}n\relax }}{86}{table.caption.40}
-\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{87}{table.caption.41}
-\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{88}{table.caption.42}
-\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.43}
-\contentsline {table}{\numberline {13}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.44}
-\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 1\relax }}{90}{table.caption.45}
-\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 2\relax }}{91}{table.caption.46}
-\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 3\relax }}{92}{table.caption.47}
-\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 4\relax }}{93}{table.caption.48}
-\contentsline {table}{\numberline {18}{\ignorespaces Comparacion de redes, parte 5\relax }}{94}{table.caption.49}
+\contentsline {table}{\numberline {1}{\ignorespaces Artefactos de la capa de negocio }}{79}{table.5.1}
+\contentsline {table}{\numberline {2}{\ignorespaces Artefactos de la capa de aplicaci\IeC {\'o}n\relax }}{81}{table.caption.32}
+\contentsline {table}{\numberline {3}{\ignorespaces Artefactos de la capa de tecnolog\IeC {\'\i }a\relax }}{82}{table.caption.33}
+\contentsline {table}{\numberline {4}{\ignorespaces Relaciones estructurales\relax }}{83}{table.caption.34}
+\contentsline {table}{\numberline {5}{\ignorespaces Relaciones din\IeC {\'a}micas\relax }}{84}{table.caption.35}
+\contentsline {table}{\numberline {6}{\ignorespaces Otras relaciones\relax }}{84}{table.caption.36}
+\contentsline {table}{\numberline {7}{\ignorespaces Punto de vista introductorio\relax }}{85}{table.caption.37}
+\contentsline {table}{\numberline {8}{\ignorespaces Punto de vista en capas\relax }}{86}{table.caption.38}
+\contentsline {table}{\numberline {9}{\ignorespaces Punto de vista de funci\IeC {\'o}n\relax }}{86}{table.caption.39}
+\contentsline {table}{\numberline {10}{\ignorespaces Punto de vista de proceso\relax }}{87}{table.caption.40}
+\contentsline {table}{\numberline {11}{\ignorespaces Punto de vista de uso de aplicaci\IeC {\'o}n\relax }}{88}{table.caption.41}
+\contentsline {table}{\numberline {12}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.42}
+\contentsline {table}{\numberline {13}{\ignorespaces Punto de vista de producto\relax }}{89}{table.caption.43}
+\contentsline {table}{\numberline {14}{\ignorespaces Comparacion de redes, parte 1\relax }}{90}{table.caption.44}
+\contentsline {table}{\numberline {15}{\ignorespaces Comparacion de redes, parte 2\relax }}{91}{table.caption.45}
+\contentsline {table}{\numberline {16}{\ignorespaces Comparacion de redes, parte 3\relax }}{92}{table.caption.46}
+\contentsline {table}{\numberline {17}{\ignorespaces Comparacion de redes, parte 4\relax }}{93}{table.caption.47}
+\contentsline {table}{\numberline {18}{\ignorespaces Comparacion de redes, parte 5\relax }}{94}{table.caption.48}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {19}{\ignorespaces Product backlog inicial\relax }}{105}{table.caption.50}
+\contentsline {table}{\numberline {19}{\ignorespaces Product backlog inicial\relax }}{105}{table.caption.49}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {20}{\ignorespaces Requerimientos funcionales }}{108}{table.9.20}
-\contentsline {table}{\numberline {21}{\ignorespaces QiU - Escenario de calidad 1\relax }}{122}{table.caption.51}
-\contentsline {table}{\numberline {22}{\ignorespaces QiU - Escenario de calidad 2\relax }}{122}{table.caption.52}
-\contentsline {table}{\numberline {23}{\ignorespaces QiU - Escenario de calidad 3\relax }}{123}{table.caption.53}
-\contentsline {table}{\numberline {24}{\ignorespaces QiU - Escenario de calidad 4\relax }}{123}{table.caption.54}
-\contentsline {table}{\numberline {25}{\ignorespaces QiU - Escenario de calidad 5\relax }}{124}{table.caption.55}
-\contentsline {table}{\numberline {26}{\ignorespaces QiU - Escenario de calidad 6\relax }}{124}{table.caption.56}
-\contentsline {table}{\numberline {27}{\ignorespaces QiU - Escenario de calidad 7\relax }}{125}{table.caption.57}
-\contentsline {table}{\numberline {28}{\ignorespaces QiU - Escenario de calidad 8\relax }}{125}{table.caption.58}
-\contentsline {table}{\numberline {29}{\ignorespaces Reusabilidad - Escenario de calidad 1\relax }}{126}{table.caption.59}
-\contentsline {table}{\numberline {30}{\ignorespaces Reusabilidad - Escenario de calidad 2\relax }}{127}{table.caption.60}
-\contentsline {table}{\numberline {31}{\ignorespaces Reusabilidad - Escenario de calidad 3\relax }}{127}{table.caption.61}
-\contentsline {table}{\numberline {32}{\ignorespaces Mantenibilidad - Escenario de calidad 1\relax }}{128}{table.caption.62}
-\contentsline {table}{\numberline {33}{\ignorespaces Mantenibilidad - Escenario de calidad 2\relax }}{128}{table.caption.63}
-\contentsline {table}{\numberline {34}{\ignorespaces Mantenibilidad - Escenario de calidad 3\relax }}{129}{table.caption.64}
-\contentsline {table}{\numberline {35}{\ignorespaces Interoperabilidad - Escenario de calidad 1\relax }}{129}{table.caption.65}
-\contentsline {table}{\numberline {36}{\ignorespaces Seguridad - Escenario de calidad 1\relax }}{130}{table.caption.66}
-\contentsline {table}{\numberline {37}{\ignorespaces Seguridad - Escenario de calidad 2\relax }}{131}{table.caption.67}
-\contentsline {table}{\numberline {38}{\ignorespaces Seguridad - Escenario de calidad 3\relax }}{132}{table.caption.68}
-\contentsline {table}{\numberline {39}{\ignorespaces Seguridad - Escenario de calidad 4\relax }}{133}{table.caption.69}
+\contentsline {table}{\numberline {21}{\ignorespaces QiU - Escenario de calidad 1\relax }}{122}{table.caption.50}
+\contentsline {table}{\numberline {22}{\ignorespaces QiU - Escenario de calidad 2\relax }}{122}{table.caption.51}
+\contentsline {table}{\numberline {23}{\ignorespaces QiU - Escenario de calidad 3\relax }}{123}{table.caption.52}
+\contentsline {table}{\numberline {24}{\ignorespaces QiU - Escenario de calidad 4\relax }}{123}{table.caption.53}
+\contentsline {table}{\numberline {25}{\ignorespaces QiU - Escenario de calidad 5\relax }}{124}{table.caption.54}
+\contentsline {table}{\numberline {26}{\ignorespaces QiU - Escenario de calidad 6\relax }}{124}{table.caption.55}
+\contentsline {table}{\numberline {27}{\ignorespaces QiU - Escenario de calidad 7\relax }}{125}{table.caption.56}
+\contentsline {table}{\numberline {28}{\ignorespaces QiU - Escenario de calidad 8\relax }}{125}{table.caption.57}
+\contentsline {table}{\numberline {29}{\ignorespaces Reusabilidad - Escenario de calidad 1\relax }}{126}{table.caption.58}
+\contentsline {table}{\numberline {30}{\ignorespaces Reusabilidad - Escenario de calidad 2\relax }}{127}{table.caption.59}
+\contentsline {table}{\numberline {31}{\ignorespaces Reusabilidad - Escenario de calidad 3\relax }}{127}{table.caption.60}
+\contentsline {table}{\numberline {32}{\ignorespaces Mantenibilidad - Escenario de calidad 1\relax }}{128}{table.caption.61}
+\contentsline {table}{\numberline {33}{\ignorespaces Mantenibilidad - Escenario de calidad 2\relax }}{128}{table.caption.62}
+\contentsline {table}{\numberline {34}{\ignorespaces Mantenibilidad - Escenario de calidad 3\relax }}{129}{table.caption.63}
+\contentsline {table}{\numberline {35}{\ignorespaces Interoperabilidad - Escenario de calidad 1\relax }}{129}{table.caption.64}
+\contentsline {table}{\numberline {36}{\ignorespaces Seguridad - Escenario de calidad 1\relax }}{130}{table.caption.65}
+\contentsline {table}{\numberline {37}{\ignorespaces Seguridad - Escenario de calidad 2\relax }}{131}{table.caption.66}
+\contentsline {table}{\numberline {38}{\ignorespaces Seguridad - Escenario de calidad 3\relax }}{132}{table.caption.67}
+\contentsline {table}{\numberline {39}{\ignorespaces Seguridad - Escenario de calidad 4\relax }}{133}{table.caption.68}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {40}{\ignorespaces Actividades generales a llevar a cabo\relax }}{167}{table.caption.105}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {41}{\ignorespaces Recursos de hardware\relax }}{170}{table.caption.107}
-\contentsline {table}{\numberline {42}{\ignorespaces Recursos de software\relax }}{170}{table.caption.108}
-\contentsline {table}{\numberline {43}{\ignorespaces Recursos humanos\relax }}{171}{table.caption.109}
-\contentsline {table}{\numberline {44}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{171}{table.caption.110}
-\contentsline {table}{\numberline {45}{\ignorespaces Costos totales\relax }}{172}{table.caption.111}
+\contentsline {table}{\numberline {40}{\ignorespaces Actividades generales a llevar a cabo\relax }}{169}{table.caption.104}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {46}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{174}{table.caption.112}
+\contentsline {table}{\numberline {41}{\ignorespaces Recursos de hardware\relax }}{172}{table.caption.106}
+\contentsline {table}{\numberline {42}{\ignorespaces Recursos de software\relax }}{172}{table.caption.107}
+\contentsline {table}{\numberline {43}{\ignorespaces Recursos humanos\relax }}{173}{table.caption.108}
+\contentsline {table}{\numberline {44}{\ignorespaces Recursos miscel\IeC {\'a}neos\relax }}{173}{table.caption.109}
+\contentsline {table}{\numberline {45}{\ignorespaces Costos totales\relax }}{174}{table.caption.110}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {46}{\ignorespaces Actores de negocio }}{176}{table.15.46}
+\contentsline {table}{\numberline {47}{\ignorespaces Roles de negocio }}{177}{table.15.47}
+\contentsline {table}{\numberline {48}{\ignorespaces Eventos de negocio }}{179}{table.15.48}
+\contentsline {table}{\numberline {50}{\ignorespaces Objetos de negocio }}{181}{table.15.50}
+\contentsline {table}{\numberline {53}{\ignorespaces Servicios de negocio }}{184}{table.15.53}
+\contentsline {table}{\numberline {54}{\ignorespaces Funciones de negocio }}{187}{table.15.54}
+\contentsline {table}{\numberline {49}{\ignorespaces Interacciones de negocio\relax }}{191}{table.caption.111}
+\contentsline {table}{\numberline {51}{\ignorespaces Colaboraciones de negocio\relax }}{191}{table.caption.112}
+\contentsline {table}{\numberline {55}{\ignorespaces Procesos de negocio }}{191}{table.15.55}
+\contentsline {table}{\numberline {56}{\ignorespaces Componentes de aplicaci\IeC {\'o}n }}{201}{table.15.56}
+\contentsline {table}{\numberline {52}{\ignorespaces Producto de negocio\relax }}{204}{table.caption.113}
+\contentsline {table}{\numberline {57}{\ignorespaces Colaboraciones de aplicaci\IeC {\'o}n }}{204}{table.15.57}
+\contentsline {table}{\numberline {58}{\ignorespaces Funciones de aplicaci\IeC {\'o}n }}{204}{table.15.58}
+\contentsline {table}{\numberline {59}{\ignorespaces Interacciones de aplicaci\IeC {\'o}n }}{205}{table.15.59}
+\contentsline {table}{\numberline {60}{\ignorespaces Servicios de aplicaci\IeC {\'o}n }}{205}{table.15.60}
+\contentsline {table}{\numberline {61}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{206}{table.caption.114}

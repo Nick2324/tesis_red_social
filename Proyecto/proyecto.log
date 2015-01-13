@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  13 JAN 2015 11:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  13 JAN 2015 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -604,30 +604,26 @@ LaTeX Info: Redefining \. on input line 97.
 LaTeX Info: Redefining \% on input line 97.
 
 [6]
-Overfull \hbox (0.1315pt too wide) detected at line 117
+Overfull \hbox (0.1315pt too wide) detected at line 116
 \OT1/lmr/m/n/12 10.1.2.10. 
  []
 
 LaTeX Info: Redefining \. on input line 125.
 LaTeX Info: Redefining \% on input line 125.
 [7]
-Overfull \hbox (0.1315pt too wide) detected at line 128
+Overfull \hbox (0.1315pt too wide) detected at line 127
 \OT1/lmr/m/n/12 10.1.3.10. 
  []
 
-
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 150.
 LaTeX Info: Redefining \% on input line 150.
- [8])
+[8])
 \tf@toc=\write4
 \openout4 = `proyecto.toc'.
 
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
-
-[9]
+ [9]
 LaTeX Info: Redefining \. on input line 103.
 LaTeX Info: Redefining \% on input line 103.
  [10
@@ -665,16 +661,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15
 
-])
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
+ [16])
 \tf@lot=\write6
 \openout6 = `proyecto.lot'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
- [16]
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
 
@@ -763,7 +758,7 @@ LaTeX Warning: Citation `dynamics' undefined on input line 3.
 ) [33
 
 ] (./Capitulos/Marco_teorico/Evolucion_web.tex
-<./imagenes/utilizacion_internet.png, id=1167, 746.79pt x 513.92pt>
+<./imagenes/utilizacion_internet.png, id=1197, 746.79pt x 513.92pt>
 File: ./imagenes/utilizacion_internet.png Graphic file (type png)
 
 <use ./imagenes/utilizacion_internet.png>
@@ -788,7 +783,7 @@ converted-to.pdf ./imagenes/Red_simple.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_simple-eps-converted-to.pdf, id=1173, 135.50626pt x 57.21375pt>
+<./imagenes/Red_simple-eps-converted-to.pdf, id=1203, 135.50626pt x 57.21375pt>
 File: ./imagenes/Red_simple-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/Red_simple-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/Red_simple-eps-converted-to.pdf used on inp
@@ -813,7 +808,7 @@ eps-converted-to.pdf ./imagenes/Red_asimetrica.eps>
 (epstopdf)             \includegraphics on input line 28.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=1182, 206.7725pt x 67.25125
+<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=1212, 206.7725pt x 67.25125
 pt>
 File: ./imagenes/Red_asimetrica-eps-converted-to.pdf Graphic file (type pdf)
  <use ./imagenes/Red_asimetrica-eps-converted-to.pdf>
@@ -853,19 +848,19 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
  [37]
-<./imagenes/1.png, id=1218, 539.01375pt x 415.5525pt>
+<./imagenes/1.png, id=1248, 539.01375pt x 415.5525pt>
 File: ./imagenes/1.png Graphic file (type png)
  <use ./imagenes/1.png>
 Package pdftex.def Info: ./imagenes/1.png used on input line 79.
 (pdftex.def)             Requested size: 312.9803pt x 241.29327pt.
 
-<./imagenes/2.png, id=1222, 606.01407pt x 417.81094pt>
+<./imagenes/2.png, id=1252, 606.01407pt x 417.81094pt>
 File: ./imagenes/2.png Graphic file (type png)
  <use ./imagenes/2.png>
 Package pdftex.def Info: ./imagenes/2.png used on input line 90.
 (pdftex.def)             Requested size: 312.9803pt x 215.78387pt.
 
-<./imagenes/3.png, id=1226, 397.485pt x 311.66437pt>
+<./imagenes/3.png, id=1256, 397.485pt x 311.66437pt>
 File: ./imagenes/3.png Graphic file (type png)
  <use ./imagenes/3.png>
 Package pdftex.def Info: ./imagenes/3.png used on input line 101.
@@ -877,7 +872,7 @@ LaTeX Info: Redefining \% on input line 115.
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
  [39 <./imagenes/1.png>]
-<./imagenes/5.png, id=1238, 461.47406pt x 143.78719pt>
+<./imagenes/5.png, id=1268, 461.47406pt x 143.78719pt>
 File: ./imagenes/5.png Graphic file (type png)
  <use ./imagenes/5.png>
 Package pdftex.def Info: ./imagenes/5.png used on input line 129.
@@ -891,7 +886,7 @@ Underfull \vbox (badness 2229) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
  [41 <./imagenes/3.png> <./imagenes/5.png>]
-<./imagenes/4.png, id=1250, 510.40688pt x 424.58624pt>
+<./imagenes/4.png, id=1280, 510.40688pt x 424.58624pt>
 File: ./imagenes/4.png Graphic file (type png)
  <use ./imagenes/4.png>
 Package pdftex.def Info: ./imagenes/4.png used on input line 145.
@@ -936,7 +931,7 @@ s-converted-to.pdf ./imagenes/red_estrella.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_estrella-eps-converted-to.pdf, id=1291, 230.8625pt x 212.795pt>
+<./imagenes/red_estrella-eps-converted-to.pdf, id=1321, 230.8625pt x 212.795pt>
 File: ./imagenes/red_estrella-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/red_estrella-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/red_estrella-eps-converted-to.pdf used on i
@@ -968,7 +963,7 @@ verted-to.pdf ./imagenes/bow_tie.eps>
 (epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/bow_tie-eps-converted-to.pdf, id=1324, 195.73125pt x 194.7275pt>
+<./imagenes/bow_tie-eps-converted-to.pdf, id=1354, 195.73125pt x 194.7275pt>
 File: ./imagenes/bow_tie-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/bow_tie-eps-converted-to.pdf>
@@ -986,7 +981,7 @@ verted-to.pdf ./imagenes/diada_1.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_1-eps-converted-to.pdf, id=1326, 136.51pt x 131.49126pt>
+<./imagenes/diada_1-eps-converted-to.pdf, id=1356, 136.51pt x 131.49126pt>
 File: ./imagenes/diada_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_1-eps-converted-to.pdf>
@@ -1004,7 +999,7 @@ verted-to.pdf ./imagenes/diada_2.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_2-eps-converted-to.pdf, id=1327, 135.50626pt x 82.3075pt>
+<./imagenes/diada_2-eps-converted-to.pdf, id=1357, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_2-eps-converted-to.pdf>
@@ -1022,7 +1017,7 @@ verted-to.pdf ./imagenes/diada_3.eps>
 (epstopdf)             \includegraphics on input line 99.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_3-eps-converted-to.pdf, id=1328, 135.50626pt x 82.3075pt>
+<./imagenes/diada_3-eps-converted-to.pdf, id=1358, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_3-eps-converted-to.pdf>
@@ -1040,7 +1035,7 @@ verted-to.pdf ./imagenes/diada_4.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_4-eps-converted-to.pdf, id=1329, 135.50626pt x 82.3075pt>
+<./imagenes/diada_4-eps-converted-to.pdf, id=1359, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_4-eps-converted-to.pdf>
@@ -1067,7 +1062,7 @@ a_1-eps-converted-to.pdf ./imagenes/triada_simetrica_1.eps>
 (epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=1340, 136.51pt x 133.49
+<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=1370, 136.51pt x 133.49
 875pt>
 File: ./imagenes/triada_simetrica_1-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1087,7 +1082,7 @@ a_2-eps-converted-to.pdf ./imagenes/triada_simetrica_2.eps>
 (epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=1341, 132.495pt x 196.7
+<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=1371, 132.495pt x 196.7
 35pt>
 File: ./imagenes/triada_simetrica_2-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1107,7 +1102,7 @@ a_3-eps-converted-to.pdf ./imagenes/triada_simetrica_3.eps>
 (epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=1342, 163.61125pt x 134
+<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=1372, 163.61125pt x 134
 .5025pt>
 File: ./imagenes/triada_simetrica_3-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1127,7 +1122,7 @@ a_4-eps-converted-to.pdf ./imagenes/triada_simetrica_4.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=1343, 142.5325pt x 149.
+<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=1373, 142.5325pt x 149.
 55875pt>
 File: ./imagenes/triada_simetrica_4-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1160,7 +1155,7 @@ converted-to.pdf ./imagenes/triada_003.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_003-eps-converted-to.pdf, id=1390, 142.5325pt x 175.65625pt>
+<./imagenes/triada_003-eps-converted-to.pdf, id=1420, 142.5325pt x 175.65625pt>
 File: ./imagenes/triada_003-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/triada_003-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/triada_003-eps-converted-to.pdf used on inp
@@ -1178,7 +1173,7 @@ converted-to.pdf ./imagenes/triada_012.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_012-eps-converted-to.pdf, id=1391, 163.61125pt x 160.6pt>
+<./imagenes/triada_012-eps-converted-to.pdf, id=1421, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_012-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_012-eps-converted-to.pdf>
@@ -1197,7 +1192,7 @@ f>
 (epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021C-eps-converted-to.pdf, id=1392, 132.495pt x 222.8325pt>
+<./imagenes/triada_021C-eps-converted-to.pdf, id=1422, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021C-eps-converted-to.pdf>
@@ -1216,7 +1211,7 @@ f>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021D-eps-converted-to.pdf, id=1393, 132.495pt x 223.83624pt>
+<./imagenes/triada_021D-eps-converted-to.pdf, id=1423, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_021D-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/triada_021D-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/triada_021D-eps-converted-to.pdf used on in
@@ -1234,7 +1229,7 @@ f>
 (epstopdf)             \includegraphics on input line 154.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021U-eps-converted-to.pdf, id=1394, 132.495pt x 222.8325pt>
+<./imagenes/triada_021U-eps-converted-to.pdf, id=1424, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021U-eps-converted-to.pdf>
@@ -1253,7 +1248,7 @@ f>
 (epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030C-eps-converted-to.pdf, id=1395, 136.51pt x 159.59625pt>
+<./imagenes/triada_030C-eps-converted-to.pdf, id=1425, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030C-eps-converted-to.pdf>
@@ -1272,7 +1267,7 @@ f>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030T-eps-converted-to.pdf, id=1396, 136.51pt x 159.59625pt>
+<./imagenes/triada_030T-eps-converted-to.pdf, id=1426, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030T-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030T-eps-converted-to.pdf>
@@ -1291,7 +1286,7 @@ converted-to.pdf ./imagenes/triada_102.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_102-eps-converted-to.pdf, id=1397, 163.61125pt x 160.6pt>
+<./imagenes/triada_102-eps-converted-to.pdf, id=1427, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_102-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_102-eps-converted-to.pdf>
@@ -1310,7 +1305,7 @@ f>
 (epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111D-eps-converted-to.pdf, id=1398, 132.495pt x 222.8325pt>
+<./imagenes/triada_111D-eps-converted-to.pdf, id=1428, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111D-eps-converted-to.pdf>
@@ -1329,7 +1324,7 @@ f>
 (epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111U-eps-converted-to.pdf, id=1399, 132.495pt x 222.8325pt>
+<./imagenes/triada_111U-eps-converted-to.pdf, id=1429, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111U-eps-converted-to.pdf>
@@ -1348,7 +1343,7 @@ f>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120C-eps-converted-to.pdf, id=1400, 136.51pt x 159.59625pt>
+<./imagenes/triada_120C-eps-converted-to.pdf, id=1430, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120C-eps-converted-to.pdf>
@@ -1367,7 +1362,7 @@ f>
 (epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120D-eps-converted-to.pdf, id=1401, 136.51pt x 159.59625pt>
+<./imagenes/triada_120D-eps-converted-to.pdf, id=1431, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120D-eps-converted-to.pdf>
@@ -1386,7 +1381,7 @@ f>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120U-eps-converted-to.pdf, id=1402, 136.51pt x 159.59625pt>
+<./imagenes/triada_120U-eps-converted-to.pdf, id=1432, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120U-eps-converted-to.pdf>
@@ -1405,7 +1400,7 @@ converted-to.pdf ./imagenes/triada_201.eps>
 (epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_201-eps-converted-to.pdf, id=1403, 132.495pt x 223.83624pt>
+<./imagenes/triada_201-eps-converted-to.pdf, id=1433, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_201-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_201-eps-converted-to.pdf>
@@ -1424,7 +1419,7 @@ converted-to.pdf ./imagenes/triada_210.eps>
 (epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_210-eps-converted-to.pdf, id=1404, 136.51pt x 159.59625pt>
+<./imagenes/triada_210-eps-converted-to.pdf, id=1434, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_210-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_210-eps-converted-to.pdf>
@@ -1443,7 +1438,7 @@ converted-to.pdf ./imagenes/triada_300.eps>
 (epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_300-eps-converted-to.pdf, id=1405, 136.51pt x 159.59625pt>
+<./imagenes/triada_300-eps-converted-to.pdf, id=1435, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_300-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_300-eps-converted-to.pdf>
@@ -1479,7 +1474,7 @@ kite-eps-converted-to.pdf ./imagenes/red_krackhardt_kite.eps>
 (epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=1492, 311.1625pt x 289
+<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=1522, 311.1625pt x 289
 .08pt>
 File: ./imagenes/red_krackhardt_kite-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1493,7 +1488,7 @@ Overfull \hbox (44.93935pt too wide) in paragraph at lines 1--1
 []\OT1/lmr/bx/n/17.28 Business Pro-cess Mo-de-ling No-ta-tion (BPMN) 
  []
 
-<./imagenes/gateway_exclusivo.png, id=1495, 784.9325pt x 270.00874pt>
+<./imagenes/gateway_exclusivo.png, id=1525, 784.9325pt x 270.00874pt>
 File: ./imagenes/gateway_exclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_exclusivo.png>
@@ -1503,7 +1498,7 @@ Package pdftex.def Info: ./imagenes/gateway_exclusivo.png used on input line 13
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
  [53]
-<./imagenes/gateway_paralelo.png, id=1504, 737.75626pt x 249.93375pt>
+<./imagenes/gateway_paralelo.png, id=1534, 737.75626pt x 249.93375pt>
 File: ./imagenes/gateway_paralelo.png Graphic file (type png)
 
 <use ./imagenes/gateway_paralelo.png>
@@ -1514,7 +1509,7 @@ LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
  [54 <./imagenes/red_krackhardt_kite-eps-converted-to.pdf> <./imagenes/gateway_
 exclusivo.png>]
-<./imagenes/gateway_inclusivo.png, id=1518, 785.93625pt x 306.14375pt>
+<./imagenes/gateway_inclusivo.png, id=1549, 785.93625pt x 306.14375pt>
 File: ./imagenes/gateway_inclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_inclusivo.png>
@@ -1522,7 +1517,7 @@ Package pdftex.def Info: ./imagenes/gateway_inclusivo.png used on input line 35
 .
 (pdftex.def)             Requested size: 312.9803pt x 121.9181pt.
 
-<./imagenes/gateway_complejo.png, id=1522, 959.585pt x 337.26pt>
+<./imagenes/gateway_complejo.png, id=1553, 959.585pt x 337.26pt>
 File: ./imagenes/gateway_complejo.png Graphic file (type png)
 
 <use ./imagenes/gateway_complejo.png>
@@ -1532,7 +1527,7 @@ Package pdftex.def Info: ./imagenes/gateway_complejo.png used on input line 47.
 LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
  [55 <./imagenes/gateway_paralelo.png> <./imagenes/gateway_inclusivo.png>]
-<./imagenes/diagrama_colaboracion.png, id=1535, 958.58125pt x 464.73625pt>
+<./imagenes/diagrama_colaboracion.png, id=1565, 958.58125pt x 464.73625pt>
 File: ./imagenes/diagrama_colaboracion.png Graphic file (type png)
 
 <use ./imagenes/diagrama_colaboracion.png>
@@ -1540,7 +1535,7 @@ Package pdftex.def Info: ./imagenes/diagrama_colaboracion.png used on input lin
 e 65.
 (pdftex.def)             Requested size: 312.9803pt x 151.73952pt.
 
-<./imagenes/diagrama_colaboracion_caja_negra.png, id=1539, 963.6pt x 434.62375p
+<./imagenes/diagrama_colaboracion_caja_negra.png, id=1569, 963.6pt x 434.62375p
 t>
 File: ./imagenes/diagrama_colaboracion_caja_negra.png Graphic file (type png)
  <use ./imagenes/diagrama_colaboracion_caja_negra.png>
@@ -1557,7 +1552,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
  [57 <./imagenes/diagrama_colaboracion.png> <./imagenes/diagrama_colaboracion_c
-aja_negra.png>] <./imagenes/6.png, id=1554, 386.19281pt x 241.65282pt>
+aja_negra.png>] <./imagenes/6.png, id=1584, 386.19281pt x 241.65282pt>
 File: ./imagenes/6.png Graphic file (type png)
 
 <use ./imagenes/6.png>
@@ -1600,7 +1595,7 @@ LaTeX Warning: Citation `measuring_maintainability' undefined on input line 5.
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
-[66] <./imagenes/mantainability1.png, id=1615, 356.83313pt x 259.7203pt>
+[66] <./imagenes/mantainability1.png, id=1646, 356.83313pt x 259.7203pt>
 File: ./imagenes/mantainability1.png Graphic file (type png)
 
 <use ./imagenes/mantainability1.png>
@@ -1615,14 +1610,14 @@ LaTeX Warning: Command \textendash invalid in math mode on input line 40.
 
 LaTeX Warning: Citation `cyclomatic_complexity' undefined on input line 40.
 
-<./imagenes/mantainability2.png, id=1626, 268.00125pt x 103.13531pt>
+<./imagenes/mantainability2.png, id=1656, 268.00125pt x 103.13531pt>
 File: ./imagenes/mantainability2.png Graphic file (type png)
 
 <use ./imagenes/mantainability2.png>
 Package pdftex.def Info: ./imagenes/mantainability2.png used on input line 44.
 (pdftex.def)             Requested size: 312.9803pt x 120.44434pt.
 
-<./imagenes/mantainability3.png, id=1629, 266.49562pt x 141.52875pt>
+<./imagenes/mantainability3.png, id=1659, 266.49562pt x 141.52875pt>
 File: ./imagenes/mantainability3.png Graphic file (type png)
 
 <use ./imagenes/mantainability3.png>
@@ -1633,7 +1628,7 @@ Package pdftex.def Info: ./imagenes/mantainability3.png used on input line 55.
 LaTeX Warning: Reference `mantainability4' on page 68 undefined on input line 6
 2.
 
-<./imagenes/mantainability4.png, id=1634, 141.52875pt x 123.46124pt>
+<./imagenes/mantainability4.png, id=1664, 141.52875pt x 123.46124pt>
 File: ./imagenes/mantainability4.png Graphic file (type png)
 
 <use ./imagenes/mantainability4.png>
@@ -1690,387 +1685,408 @@ LaTeX Info: Redefining \% on input line 210.
 
 LaTeX Warning: Citation `archimate2' undefined on input line 3.
 
-<./imagenes/Archimate/businessactor.png, id=1737, 161.85469pt x 69.25874pt>
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\OT1/lmr/m/n/12 Ente (per-so-na) or-ga-ni-za-cio-
+ []
+
+<./imagenes/Archimate/businessactor.png, id=1773, 161.85469pt x 69.25874pt>
 File: ./imagenes/Archimate/businessactor.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessactor.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessactor.png used on input l
-ine 63.
+ine 38.
 (pdftex.def)             Requested size: 42.67912pt x 18.26259pt.
 
-<./imagenes/Archimate/businesscollaboration.png, id=1738, 176.91093pt x 69.2587
+<./imagenes/Archimate/businesscollaboration.png, id=1774, 176.91093pt x 69.2587
 4pt>
 File: ./imagenes/Archimate/businesscollaboration.png Graphic file (type png)
  <use ./imagenes/Archimate/businesscollaboration.png>
 Package pdftex.def Info: ./imagenes/Archimate/businesscollaboration.png used on
- input line 63.
+ input line 42.
 (pdftex.def)             Requested size: 42.67912pt x 16.70802pt.
 
-<./imagenes/Archimate/businessrole.png, id=1739, 209.28188pt x 69.25874pt>
+<./imagenes/Archimate/businessrole.png, id=1775, 209.28188pt x 69.25874pt>
 File: ./imagenes/Archimate/businessrole.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessrole.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessrole.png used on input li
-ne 63.
+ne 46.
 (pdftex.def)             Requested size: 42.67912pt x 14.1231pt.
 
-<./imagenes/Archimate/businessprocess.png, id=1740, 204.765pt x 69.25874pt>
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/lmr/m/it/12 Proceso de ne-go-cio
+ []
+
+<./imagenes/Archimate/businessprocess.png, id=1776, 204.765pt x 69.25874pt>
 File: ./imagenes/Archimate/businessprocess.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessprocess.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessprocess.png used on input
- line 63.
+ line 50.
 (pdftex.def)             Requested size: 42.67912pt x 14.43484pt.
 
-<./imagenes/Archimate/businessfunction.png, id=1741, 190.46156pt x 69.25874pt>
+Underfull \hbox (badness 8038) in paragraph at lines 52--52
+[]|\OT1/lmr/m/it/12 Funci^^Son de ne-go-cio
+ []
+
+
+<./imagenes/Archimate/businessfunction.png, id=1777, 190.46156pt x 69.25874pt>
 File: ./imagenes/Archimate/businessfunction.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessfunction.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessfunction.png used on inpu
-t line 63.
+t line 54.
 (pdftex.def)             Requested size: 42.67912pt x 15.51912pt.
 
-<./imagenes/Archimate/businessinteraction.png, id=1742, 158.84344pt x 69.25874p
+<./imagenes/Archimate/businessinteraction.png, id=1778, 158.84344pt x 69.25874p
 t>
 File: ./imagenes/Archimate/businessinteraction.png Graphic file (type png)
  <use ./imagenes/Archimate/businessinteraction.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessinteraction.png used on i
-nput line 63.
+nput line 58.
 (pdftex.def)             Requested size: 42.67912pt x 18.6092pt.
 
-<./imagenes/Archimate/businessevent.png, id=1743, 184.43906pt x 69.25874pt>
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\OT1/lmr/m/it/12 Evento de ne-go-cio
+ []
+
+<./imagenes/Archimate/businessevent.png, id=1779, 184.43906pt x 69.25874pt>
 File: ./imagenes/Archimate/businessevent.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessevent.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessevent.png used on input l
-ine 63.
+ine 62.
 (pdftex.def)             Requested size: 42.67912pt x 16.0264pt.
 
-<./imagenes/Archimate/businessservice.png, id=1744, 211.54031pt x 69.25874pt>
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[]|\OT1/lmr/m/it/12 Servicio de ne-go-cio
+ []
+
+<./imagenes/Archimate/businessservice.png, id=1780, 211.54031pt x 69.25874pt>
 File: ./imagenes/Archimate/businessservice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessservice.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessservice.png used on input
- line 63.
+ line 66.
 (pdftex.def)             Requested size: 42.67912pt x 13.97302pt.
 
-<./imagenes/Archimate/businessproduct.png, id=1745, 105.39375pt x 69.25874pt>
+<./imagenes/Archimate/businessproduct.png, id=1781, 105.39375pt x 69.25874pt>
 File: ./imagenes/Archimate/businessproduct.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessproduct.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessproduct.png used on input
- line 63.
+ line 70.
 (pdftex.def)             Requested size: 42.67912pt x 28.04645pt.
 
-Overfull \hbox (36.79083pt too wide) in paragraph at lines 21--64
- [][] 
+Underfull \vbox (badness 10000) detected at line 72
  []
 
-
-LaTeX Warning: Float too large for page by 193.4798pt on input line 65.
-
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
-[78]
-<./imagenes/Archimate/applicationcomponent.png, id=1755, 246.1697pt x 69.25874p
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+[79 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscoll
+aboration.png> <./imagenes/Archimate/businessrole.png> <./imagenes/Archimate/bu
+sinessprocess.png> <./imagenes/Archimate/businessfunction.png> <./imagenes/Arch
+imate/businessinteraction.png> <./imagenes/Archimate/businessevent.png> <./imag
+enes/Archimate/businessservice.png>]
+<./imagenes/Archimate/applicationcomponent.png, id=1790, 246.1697pt x 69.25874p
 t>
 File: ./imagenes/Archimate/applicationcomponent.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationcomponent.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationcomponent.png used on 
-input line 105.
+input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 12.00737pt.
 
-<./imagenes/Archimate/applicationcollaboration.png, id=1756, 172.39406pt x 69.2
+<./imagenes/Archimate/applicationcollaboration.png, id=1791, 172.39406pt x 69.2
 5874pt>
 File: ./imagenes/Archimate/applicationcollaboration.png Graphic file (type png)
 
  <use ./imagenes/Archimate/applicationcollaboration.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationcollaboration.png used
- on input line 105.
+ on input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 17.14554pt.
 
-<./imagenes/Archimate/applicationfunction.png, id=1757, 181.42781pt x 69.25874p
+<./imagenes/Archimate/applicationfunction.png, id=1792, 181.42781pt x 69.25874p
 t>
 File: ./imagenes/Archimate/applicationfunction.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationfunction.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationfunction.png used on i
-nput line 105.
+nput line 113.
 (pdftex.def)             Requested size: 42.67912pt x 16.29164pt.
 
-<./imagenes/Archimate/applicationinteraction.png, id=1758, 151.3153pt x 69.2587
+<./imagenes/Archimate/applicationinteraction.png, id=1793, 151.3153pt x 69.2587
 4pt>
 File: ./imagenes/Archimate/applicationinteraction.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationinteraction.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationinteraction.png used o
-n input line 105.
+n input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 19.53497pt.
 
-<./imagenes/Archimate/applicationservice.png, id=1759, 209.28188pt x 69.25874pt
+<./imagenes/Archimate/applicationservice.png, id=1794, 209.28188pt x 69.25874pt
 >
 File: ./imagenes/Archimate/applicationservice.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationservice.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationservice.png used on in
-put line 105.
+put line 113.
 (pdftex.def)             Requested size: 42.67912pt x 14.1231pt.
 
-Overfull \hbox (36.79083pt too wide) in paragraph at lines 79--106
+Overfull \hbox (36.79083pt too wide) in paragraph at lines 87--114
  [][] 
  []
 
-<./imagenes/Archimate/technologynode.png, id=1763, 191.21437pt x 69.25874pt>
+<./imagenes/Archimate/technologynode.png, id=1798, 191.21437pt x 69.25874pt>
 File: ./imagenes/Archimate/technologynode.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologynode.png>
 Package pdftex.def Info: ./imagenes/Archimate/technologynode.png used on input 
-line 148.
+line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.45782pt.
 
-<./imagenes/Archimate/technologydevice.png, id=1764, 202.50656pt x 57.21375pt>
+<./imagenes/Archimate/technologydevice.png, id=1799, 202.50656pt x 57.21375pt>
 File: ./imagenes/Archimate/technologydevice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologydevice.png>
 Package pdftex.def Info: ./imagenes/Archimate/technologydevice.png used on inpu
-t line 148.
+t line 156.
 (pdftex.def)             Requested size: 42.67912pt x 12.05801pt.
 
-<./imagenes/Archimate/technologynetwork.png, id=1765, 179.92218pt x 67.0003pt>
+<./imagenes/Archimate/technologynetwork.png, id=1800, 179.92218pt x 67.0003pt>
 File: ./imagenes/Archimate/technologynetwork.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologynetwork.png>
 Package pdftex.def Info: ./imagenes/Archimate/technologynetwork.png used on inp
-ut line 148.
+ut line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.8933pt.
 
-<./imagenes/Archimate/technologyswsystem.png, id=1766, 194.22563pt x 67.75313pt
+<./imagenes/Archimate/technologyswsystem.png, id=1801, 194.22563pt x 67.75313pt
 >
 File: ./imagenes/Archimate/technologyswsystem.png Graphic file (type png)
  <use ./imagenes/Archimate/technologyswsystem.png>
 Package pdftex.def Info: ./imagenes/Archimate/technologyswsystem.png used on in
-put line 148.
+put line 156.
 (pdftex.def)             Requested size: 42.67912pt x 14.88815pt.
 
-<./imagenes/Archimate/technologyservice.png, id=1767, 210.7875pt x 71.51718pt>
+<./imagenes/Archimate/technologyservice.png, id=1802, 210.7875pt x 71.51718pt>
 File: ./imagenes/Archimate/technologyservice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologyservice.png>
 Package pdftex.def Info: ./imagenes/Archimate/technologyservice.png used on inp
-ut line 148.
+ut line 156.
 (pdftex.def)             Requested size: 42.67912pt x 14.47997pt.
 
-Overfull \hbox (36.79083pt too wide) in paragraph at lines 122--149
+Overfull \hbox (36.79083pt too wide) in paragraph at lines 130--157
  [][] 
  []
 
-<./imagenes/Archimate/relassociation.png, id=1771, 84.315pt x 18.0675pt>
+<./imagenes/Archimate/relassociation.png, id=1806, 84.315pt x 18.0675pt>
 File: ./imagenes/Archimate/relassociation.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relassociation.png>
 Package pdftex.def Info: ./imagenes/Archimate/relassociation.png used on input 
-line 198.
+line 206.
 (pdftex.def)             Requested size: 28.45274pt x 6.09682pt.
 
-<./imagenes/Archimate/relusedby.png, id=1772, 65.49469pt x 22.58438pt>
+<./imagenes/Archimate/relusedby.png, id=1807, 65.49469pt x 22.58438pt>
 File: ./imagenes/Archimate/relusedby.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relusedby.png>
 Package pdftex.def Info: ./imagenes/Archimate/relusedby.png used on input line 
-198.
+206.
 (pdftex.def)             Requested size: 28.45274pt x 9.81102pt.
 
-<./imagenes/Archimate/relrealization.png, id=1773, 79.04532pt x 26.34843pt>
+<./imagenes/Archimate/relrealization.png, id=1808, 79.04532pt x 26.34843pt>
 File: ./imagenes/Archimate/relrealization.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relrealization.png>
 Package pdftex.def Info: ./imagenes/Archimate/relrealization.png used on input 
-line 198.
+line 206.
 (pdftex.def)             Requested size: 28.45274pt x 9.4842pt.
 
-<./imagenes/Archimate/relassignment.png, id=1774, 93.34875pt x 15.05624pt>
+<./imagenes/Archimate/relassignment.png, id=1809, 93.34875pt x 15.05624pt>
 File: ./imagenes/Archimate/relassignment.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relassignment.png>
 Package pdftex.def Info: ./imagenes/Archimate/relassignment.png used on input l
-ine 198.
+ine 206.
 (pdftex.def)             Requested size: 28.45274pt x 4.58904pt.
 
-<./imagenes/Archimate/relaggregation.png, id=1775, 82.05656pt x 18.82031pt>
+<./imagenes/Archimate/relaggregation.png, id=1810, 82.05656pt x 18.82031pt>
 File: ./imagenes/Archimate/relaggregation.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relaggregation.png>
 Package pdftex.def Info: ./imagenes/Archimate/relaggregation.png used on input 
-line 198.
+line 206.
 (pdftex.def)             Requested size: 28.45274pt x 6.52574pt.
 
-<./imagenes/Archimate/relcomposition.png, id=1776, 82.05656pt x 18.82031pt>
+<./imagenes/Archimate/relcomposition.png, id=1811, 82.05656pt x 18.82031pt>
 File: ./imagenes/Archimate/relcomposition.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relcomposition.png>
 Package pdftex.def Info: ./imagenes/Archimate/relcomposition.png used on input 
-line 198.
+line 206.
 (pdftex.def)             Requested size: 28.45274pt x 6.52574pt.
 
-Overfull \hbox (36.80902pt too wide) in paragraph at lines 168--199
+Overfull \hbox (36.80902pt too wide) in paragraph at lines 176--207
  [][] 
  []
 
-<./imagenes/Archimate/relflow.png, id=1780, 57.96657pt x 21.07875pt>
-File: ./imagenes/Archimate/relflow.png Graphic file (type png)
-
-<use ./imagenes/Archimate/relflow.png>
-Package pdftex.def Info: ./imagenes/Archimate/relflow.png used on input line 22
-8.
-(pdftex.def)             Requested size: 42.67912pt x 15.51985pt.
-
-<./imagenes/Archimate/reltriggering.png, id=1781, 63.23625pt x 22.58438pt>
-File: ./imagenes/Archimate/reltriggering.png Graphic file (type png)
-
-<use ./imagenes/Archimate/reltriggering.png>
-Package pdftex.def Info: ./imagenes/Archimate/reltriggering.png used on input l
-ine 228.
-(pdftex.def)             Requested size: 42.67912pt x 15.24274pt.
-
-Overfull \hbox (36.80902pt too wide) in paragraph at lines 212--229
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
-[79]
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
- [80 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscol
-laboration.png> <./imagenes/Archimate/businessrole.png> <./imagenes/Archimate/b
-usinessprocess.png> <./imagenes/Archimate/businessfunction.png> <./imagenes/Arc
-himate/businessinteraction.png> <./imagenes/Archimate/businessevent.png> <./ima
-genes/Archimate/businessservice.png> <./imagenes/Archimate/businessproduct.png>
-]
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
+[80 <./imagenes/Archimate/businessproduct.png>]
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
  [81 <./imagenes/Archimate/applicationcomponent.png> <./imagenes/Archimate/appl
 icationcollaboration.png> <./imagenes/Archimate/applicationfunction.png> <./ima
 genes/Archimate/applicationinteraction.png> <./imagenes/Archimate/applicationse
 rvice.png>]
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
  [82 <./imagenes/Archimate/technologynode.png> <./imagenes/Archimate/technology
 device.png> <./imagenes/Archimate/technologynetwork.png> <./imagenes/Archimate/
 technologyswsystem.png> <./imagenes/Archimate/technologyservice.png>]
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
  [83 <./imagenes/Archimate/relassociation.png> <./imagenes/Archimate/relusedby.
 png> <./imagenes/Archimate/relrealization.png> <./imagenes/Archimate/relassignm
 ent.png> <./imagenes/Archimate/relaggregation.png> <./imagenes/Archimate/relcom
 position.png>]
-<./imagenes/Archimate/reljunction.png, id=1806, 22.58438pt x 16.56187pt>
+<./imagenes/Archimate/relflow.png, id=1831, 57.96657pt x 21.07875pt>
+File: ./imagenes/Archimate/relflow.png Graphic file (type png)
+
+<use ./imagenes/Archimate/relflow.png>
+Package pdftex.def Info: ./imagenes/Archimate/relflow.png used on input line 23
+6.
+(pdftex.def)             Requested size: 42.67912pt x 15.51985pt.
+
+<./imagenes/Archimate/reltriggering.png, id=1832, 63.23625pt x 22.58438pt>
+File: ./imagenes/Archimate/reltriggering.png Graphic file (type png)
+
+<use ./imagenes/Archimate/reltriggering.png>
+Package pdftex.def Info: ./imagenes/Archimate/reltriggering.png used on input l
+ine 236.
+(pdftex.def)             Requested size: 42.67912pt x 15.24274pt.
+
+Overfull \hbox (36.80902pt too wide) in paragraph at lines 220--237
+ [][] 
+ []
+
+<./imagenes/Archimate/reljunction.png, id=1836, 22.58438pt x 16.56187pt>
 File: ./imagenes/Archimate/reljunction.png Graphic file (type png)
 
 <use ./imagenes/Archimate/reljunction.png>
 Package pdftex.def Info: ./imagenes/Archimate/reljunction.png used on input lin
-e 256.
+e 264.
 (pdftex.def)             Requested size: 28.45274pt x 20.86552pt.
 
-<./imagenes/Archimate/relspecialization.png, id=1807, 92.59593pt x 27.10126pt>
+<./imagenes/Archimate/relspecialization.png, id=1837, 92.59593pt x 27.10126pt>
 File: ./imagenes/Archimate/relspecialization.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relspecialization.png>
 Package pdftex.def Info: ./imagenes/Archimate/relspecialization.png used on inp
-ut line 256.
+ut line 264.
 (pdftex.def)             Requested size: 28.45274pt x 8.32768pt.
 
-Overfull \hbox (36.80902pt too wide) in paragraph at lines 242--257
+Overfull \hbox (36.80902pt too wide) in paragraph at lines 250--265
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 267.
-LaTeX Info: Redefining \% on input line 267.
-[84 <./imagenes/Archimate/relflow.png> <./imagenes/Archimate/reltriggering.png>
- <./imagenes/Archimate/reljunction.png> <./imagenes/Archimate/relspecialization
-.png>]
-<./imagenes/Archimate/introductoryviewpoint.png, id=1816, 406.51875pt x 395.979
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 273.
+LaTeX Info: Redefining \% on input line 273.
+ [84 <./imagenes/Archimate/relflow.png> <./imagenes/Archimate/reltriggering.png
+> <./imagenes/Archimate/reljunction.png> <./imagenes/Archimate/relspecializatio
+n.png>]
+<./imagenes/Archimate/introductoryviewpoint.png, id=1846, 406.51875pt x 395.979
 37pt>
 File: ./imagenes/Archimate/introductoryviewpoint.png Graphic file (type png)
  <use ./imagenes/Archimate/introductoryviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/introductoryviewpoint.png used on
- input line 300.
+ input line 308.
 (pdftex.def)             Requested size: 199.16928pt x 194.00137pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 278--301
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 286--309
  [][] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 312--335
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 320--343
  [][] 
  []
 
 
-<./imagenes/Archimate/businessfunctionviewpoint.png, id=1821, 645.91313pt x 110
+<./imagenes/Archimate/businessfunctionviewpoint.png, id=1851, 645.91313pt x 110
 .66344pt>
 File: ./imagenes/Archimate/businessfunctionviewpoint.png Graphic file (type png
 )
  <use ./imagenes/Archimate/businessfunctionviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessfunctionviewpoint.png use
-d on input line 368.
+d on input line 376.
 (pdftex.def)             Requested size: 199.16928pt x 34.12292pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 346--369
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 354--377
  [][] 
  []
 
 
-<./imagenes/Archimate/businessprocessviewpoint.png, id=1824, 652.68843pt x 338.
+<./imagenes/Archimate/businessprocessviewpoint.png, id=1854, 652.68843pt x 338.
 76563pt>
 File: ./imagenes/Archimate/businessprocessviewpoint.png Graphic file (type png)
 
  <use ./imagenes/Archimate/businessprocessviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/businessprocessviewpoint.png used
- on input line 402.
+ on input line 410.
 (pdftex.def)             Requested size: 199.16928pt x 103.37247pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 380--403
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 388--411
  [][] 
  []
 
 
-<./imagenes/Archimate/applicationusageviewpoint.png, id=1827, 635.37375pt x 432
+<./imagenes/Archimate/applicationusageviewpoint.png, id=1857, 635.37375pt x 432
 .11438pt>
 File: ./imagenes/Archimate/applicationusageviewpoint.png Graphic file (type png
 )
  <use ./imagenes/Archimate/applicationusageviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/applicationusageviewpoint.png use
-d on input line 436.
+d on input line 444.
 (pdftex.def)             Requested size: 199.16928pt x 135.45079pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 414--437
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 422--445
  [][] 
  []
 
-<./imagenes/Archimate/productviewpoint.png, id=1830, 701.62125pt x 349.305pt>
+<./imagenes/Archimate/productviewpoint.png, id=1860, 701.62125pt x 349.305pt>
 File: ./imagenes/Archimate/productviewpoint.png Graphic file (type png)
 
 <use ./imagenes/Archimate/productviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/productviewpoint.png used on inpu
-t line 471.
+t line 479.
 (pdftex.def)             Requested size: 199.16928pt x 99.15854pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 448--472
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 456--480
  [][] 
  []
 
 
-<./imagenes/Archimate/infrastructureviewpoint.png, id=1833, 893.3375pt x 441.65
+<./imagenes/Archimate/infrastructureviewpoint.png, id=1863, 893.3375pt x 441.65
 pt>
 File: ./imagenes/Archimate/infrastructureviewpoint.png Graphic file (type png)
  <use ./imagenes/Archimate/infrastructureviewpoint.png>
 Package pdftex.def Info: ./imagenes/Archimate/infrastructureviewpoint.png used 
-on input line 506.
+on input line 514.
 (pdftex.def)             Requested size: 199.16928pt x 98.46393pt.
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 483--507
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 491--515
  [][] 
  []
 
 ) (./Capitulos/Marco_teorico/Estado_arte.tex
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
  [85 <./imagenes/Archimate/introductoryviewpoint.png>]
@@ -2079,11 +2095,11 @@ LaTeX Info: Redefining \% on input line 4.
  [86 <./imagenes/Archimate/businessfunctionviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
-
-[87 <./imagenes/Archimate/businessprocessviewpoint.png>]
+ [87 <./imagenes/Archimate/businessprocessviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- [88 <./imagenes/Archimate/applicationusageviewpoint.png>]
+
+[88 <./imagenes/Archimate/applicationusageviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
  [89 <./imagenes/Archimate/productviewpoint.png> <./imagenes/Archimate/infrastr
@@ -2241,8 +2257,8 @@ Overfull \hbox (36.80826pt too wide) in paragraph at lines 58--125
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
 [104]) [105]
-LaTeX Info: Redefining \. on input line 155.
-LaTeX Info: Redefining \% on input line 155.
+LaTeX Info: Redefining \. on input line 152.
+LaTeX Info: Redefining \% on input line 152.
  [106
 
 ]
@@ -3302,8 +3318,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
  [128]
-LaTeX Info: Redefining \. on input line 482.
-LaTeX Info: Redefining \% on input line 482.
+Overfull \vbox (15.99118pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 453.
+LaTeX Info: Redefining \% on input line 453.
 
 [129]
 LaTeX Info: Redefining \. on input line 482.
@@ -3322,61 +3340,62 @@ Underfull \hbox (badness 1968) in paragraph at lines 506--506
  []
 
 )))
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
  [132
 
 ]
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
  [133]
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
  [134
 
 ]
 Cap\'{\i }tulo 10.
+(./Capitulos/Arquitectura/Arquitectura.tex
 (./Capitulos/Arquitectura/Viewpoints.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<./imagenes/actores.png, id=2071, 717.68124pt x 279.0425pt>
+<./imagenes/actores.png, id=2103, 717.68124pt x 279.0425pt>
 File: ./imagenes/actores.png Graphic file (type png)
 
 <use ./imagenes/actores.png>
 Package pdftex.def Info: ./imagenes/actores.png used on input line 9.
 (pdftex.def)             Requested size: 312.9803pt x 121.69331pt.
- [135 <./imagenes/actores.png (PNG copy)>]
-<./imagenes/roles.png, id=2077, 730.73pt x 653.44125pt>
+
+<./imagenes/roles.png, id=2104, 730.73pt x 653.44125pt>
 File: ./imagenes/roles.png Graphic file (type png)
 
 <use ./imagenes/roles.png>
 Package pdftex.def Info: ./imagenes/roles.png used on input line 20.
 (pdftex.def)             Requested size: 312.9803pt x 279.87749pt.
-LaTeX Info: Redefining \. on input line 29.
-LaTeX Info: Redefining \% on input line 29.
- [136 <./imagenes/roles.png (PNG copy)>]
-<./imagenes/introductory.png, id=2082, 923.45pt x 834.11626pt>
+ [135]
+<./imagenes/introductory.png, id=2109, 923.45pt x 834.11626pt>
 File: ./imagenes/introductory.png Graphic file (type png)
 
 <use ./imagenes/introductory.png>
 Package pdftex.def Info: ./imagenes/introductory.png used on input line 33.
 (pdftex.def)             Requested size: 312.9803pt x 282.70485pt.
 
-<./imagenes/generallayered.png, id=2083, 1752.5475pt x 1075.01625pt>
+<./imagenes/generallayered.png, id=2110, 1752.5475pt x 1075.01625pt>
 File: ./imagenes/generallayered.png Graphic file (type png)
 
 <use ./imagenes/generallayered.png>
 Package pdftex.def Info: ./imagenes/generallayered.png used on input line 46.
 (pdftex.def)             Requested size: 312.9803pt x 191.96906pt.
-
-Underfull \vbox (badness 1755) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [137 <./imagenes/introductory.png (PNG copy)>]
-<./imagenes/business_functions/patrociniosdeportivos.png, id=2088, 826.08624pt 
+ [136 <./imagenes/actores.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+ [137 <./imagenes/roles.png (PNG copy)>]
+<./imagenes/business_functions/patrociniosdeportivos.png, id=2119, 826.08624pt 
 x 439.6425pt>
 File: ./imagenes/business_functions/patrociniosdeportivos.png Graphic file (typ
 e png)
@@ -3384,11 +3403,15 @@ e png)
 Package pdftex.def Info: ./imagenes/business_functions/patrociniosdeportivos.pn
 g used on input line 63.
 (pdftex.def)             Requested size: 312.9803pt x 166.56946pt.
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
 
-[138 <./imagenes/generallayered.png (PNG copy)>]
-<./imagenes/business_functions/organizacioneventosdeportivos.png, id=2093, 1081
+[138 <./imagenes/introductory.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+ [139 <./imagenes/generallayered.png (PNG copy)> <./imagenes/business_functions
+/patrociniosdeportivos.png (PNG copy)>]
+<./imagenes/business_functions/organizacioneventosdeportivos.png, id=2129, 1081
 .03876pt x 467.7475pt>
 File: ./imagenes/business_functions/organizacioneventosdeportivos.png Graphic f
 ile (type png)
@@ -3398,7 +3421,7 @@ Package pdftex.def Info: ./imagenes/business_functions/organizacioneventosdepor
 tivos.png used on input line 76.
 (pdftex.def)             Requested size: 312.9803pt x 135.4149pt.
 
-<./imagenes/business_functions/formaciongruposdeportivos.png, id=2094, 723.7037
+<./imagenes/business_functions/formaciongruposdeportivos.png, id=2130, 723.7037
 5pt x 545.03625pt>
 File: ./imagenes/business_functions/formaciongruposdeportivos.png Graphic file 
 (type png)
@@ -3407,14 +3430,8 @@ File: ./imagenes/business_functions/formaciongruposdeportivos.png Graphic file
 Package pdftex.def Info: ./imagenes/business_functions/formaciongruposdeportivo
 s.png used on input line 89.
 (pdftex.def)             Requested size: 312.9803pt x 235.71661pt.
-LaTeX Info: Redefining \. on input line 94.
-LaTeX Info: Redefining \% on input line 94.
- [139 <./imagenes/business_functions/patrociniosdeportivos.png (PNG copy)>]
-LaTeX Info: Redefining \. on input line 97.
-LaTeX Info: Redefining \% on input line 97.
- [140 <./imagenes/business_functions/organizacioneventosdeportivos.png (PNG cop
-y)> <./imagenes/business_functions/formaciongruposdeportivos.png (PNG copy)>]
-<./imagenes/business_functions/estadisticasdeportivas.png, id=2104, 819.06pt x 
+
+<./imagenes/business_functions/estadisticasdeportivas.png, id=2131, 819.06pt x 
 280.04625pt>
 File: ./imagenes/business_functions/estadisticasdeportivas.png Graphic file (ty
 pe png)
@@ -3422,8 +3439,12 @@ pe png)
 Package pdftex.def Info: ./imagenes/business_functions/estadisticasdeportivas.p
 ng used on input line 102.
 (pdftex.def)             Requested size: 312.9803pt x 107.01263pt.
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
 
-<./imagenes/business_functions/entrenamientodeportivo.png, id=2105, 1489.565pt 
+[140 <./imagenes/business_functions/organizacioneventosdeportivos.png (PNG copy
+)>]
+<./imagenes/business_functions/entrenamientodeportivo.png, id=2136, 1489.565pt 
 x 707.64375pt>
 File: ./imagenes/business_functions/entrenamientodeportivo.png Graphic file (ty
 pe png)
@@ -3431,8 +3452,12 @@ pe png)
 Package pdftex.def Info: ./imagenes/business_functions/entrenamientodeportivo.p
 ng used on input line 115.
 (pdftex.def)             Requested size: 312.9803pt x 148.68515pt.
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
 
-<./imagenes/business_functions/buscadordeportivo.png, id=2106, 443.40656pt x 76
+[141 <./imagenes/business_functions/formaciongruposdeportivos.png (PNG copy)> <
+./imagenes/business_functions/estadisticasdeportivas.png (PNG copy)>]
+<./imagenes/business_functions/buscadordeportivo.png, id=2141, 443.40656pt x 76
 .03406pt>
 File: ./imagenes/business_functions/buscadordeportivo.png Graphic file (type pn
 g)
@@ -3440,10 +3465,8 @@ g)
 Package pdftex.def Info: ./imagenes/business_functions/buscadordeportivo.png us
 ed on input line 128.
 (pdftex.def)             Requested size: 312.9803pt x 53.67245pt.
-LaTeX Info: Redefining \. on input line 133.
-LaTeX Info: Redefining \% on input line 133.
- [141 <./imagenes/business_functions/estadisticasdeportivas.png (PNG copy)>]
-<./imagenes/business_functions/Consejos.png, id=2111, 443.40656pt x 240.14719pt
+
+<./imagenes/business_functions/Consejos.png, id=2142, 443.40656pt x 240.14719pt
 >
 File: ./imagenes/business_functions/Consejos.png Graphic file (type png)
  <use ./imagenes/business_functions/Consejos.png>
@@ -3451,14 +3474,17 @@ Package pdftex.def Info: ./imagenes/business_functions/Consejos.png used on inp
 ut line 139.
 (pdftex.def)             Requested size: 312.9803pt x 169.51996pt.
 
-<./imagenes/business_functions/Periodismo.png, id=2112, 443.40656pt x 84.315pt>
+<./imagenes/business_functions/Periodismo.png, id=2143, 443.40656pt x 84.315pt>
 File: ./imagenes/business_functions/Periodismo.png Graphic file (type png)
 <use ./imagenes/business_functions/Periodismo.png>
 Package pdftex.def Info: ./imagenes/business_functions/Periodismo.png used on i
 nput line 150.
 (pdftex.def)             Requested size: 312.9803pt x 59.51797pt.
-
-<./imagenes/business_functions/Servicios.png, id=2113, 443.40656pt x 67.75313pt
+LaTeX Info: Redefining \. on input line 155.
+LaTeX Info: Redefining \% on input line 155.
+ [142 <./imagenes/business_functions/entrenamientodeportivo.png (PNG copy)> <./
+imagenes/business_functions/buscadordeportivo.png>]
+<./imagenes/business_functions/Servicios.png, id=2148, 443.40656pt x 67.75313pt
 >
 File: ./imagenes/business_functions/Servicios.png Graphic file (type png)
  <use ./imagenes/business_functions/Servicios.png>
@@ -3466,7 +3492,7 @@ Package pdftex.def Info: ./imagenes/business_functions/Servicios.png used on in
 put line 161.
 (pdftex.def)             Requested size: 312.9803pt x 47.82693pt.
 
-<./imagenes/business_process/patrociniosdeportivos.png, id=2114, 1550.79375pt x
+<./imagenes/business_process/patrociniosdeportivos.png, id=2149, 1550.79375pt x
  955.57pt>
 File: ./imagenes/business_process/patrociniosdeportivos.png Graphic file (type 
 png)
@@ -3479,15 +3505,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 182.
 LaTeX Info: Redefining \% on input line 182.
- [142 <./imagenes/business_functions/entrenamientodeportivo.png (PNG copy)> <./
-imagenes/business_functions/buscadordeportivo.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 182.
-LaTeX Info: Redefining \% on input line 182.
  [143 <./imagenes/business_functions/Consejos.png> <./imagenes/business_functio
-ns/Periodismo.png> <./imagenes/business_functions/Servicios.png>]
-<./imagenes/business_process/organizacioneventosdeportivos.png, id=2123, 2210.2
+ns/Periodismo.png>]
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+ [144 <./imagenes/business_functions/Servicios.png> <./imagenes/business_proces
+s/patrociniosdeportivos.png (PNG copy)>]
+<./imagenes/business_process/organizacioneventosdeportivos.png, id=2158, 2210.2
 575pt x 855.195pt>
 File: ./imagenes/business_process/organizacioneventosdeportivos.png Graphic fil
 e (type png)
@@ -3497,12 +3521,7 @@ Package pdftex.def Info: ./imagenes/business_process/organizacioneventosdeporti
 vos.png used on input line 187.
 (pdftex.def)             Requested size: 312.9803pt x 121.09665pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 195.
-LaTeX Info: Redefining \% on input line 195.
- [144 <./imagenes/business_process/patrociniosdeportivos.png (PNG copy)>]
-<./imagenes/business_process/formaciongruposdeportivos.png, id=2128, 1899.095pt
+<./imagenes/business_process/formaciongruposdeportivos.png, id=2159, 1899.095pt
  x 532.99126pt>
 File: ./imagenes/business_process/formaciongruposdeportivos.png Graphic file (t
 ype png)
@@ -3515,7 +3534,7 @@ LaTeX Info: Redefining \. on input line 208.
 LaTeX Info: Redefining \% on input line 208.
  [145 <./imagenes/business_process/organizacioneventosdeportivos.png (PNG copy)
 >]
-<./imagenes/business_process/estadisticasdeportivas.png, id=2134, 1899.095pt x 
+<./imagenes/business_process/estadisticasdeportivas.png, id=2165, 1899.095pt x 
 532.99126pt>
 File: ./imagenes/business_process/estadisticasdeportivas.png Graphic file (type
  png)
@@ -3523,12 +3542,11 @@ File: ./imagenes/business_process/estadisticasdeportivas.png Graphic file (type
 Package pdftex.def Info: ./imagenes/business_process/estadisticasdeportivas.png
  used on input line 215.
 (pdftex.def)             Requested size: 312.9803pt x 87.83403pt.
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
+LaTeX Info: Redefining \. on input line 225.
+LaTeX Info: Redefining \% on input line 225.
 
-[146 <./imagenes/business_process/formaciongruposdeportivos.png (PNG copy)> <./
-imagenes/business_process/estadisticasdeportivas.png (PNG copy)>]
-<./imagenes/business_process/entrenamientodeportivo.png, id=2139, 1465.475pt x 
+[146 <./imagenes/business_process/formaciongruposdeportivos.png (PNG copy)>]
+<./imagenes/business_process/entrenamientodeportivo.png, id=2170, 1465.475pt x 
 707.64375pt>
 File: ./imagenes/business_process/entrenamientodeportivo.png Graphic file (type
  png)
@@ -3536,11 +3554,12 @@ File: ./imagenes/business_process/entrenamientodeportivo.png Graphic file (type
 Package pdftex.def Info: ./imagenes/business_process/entrenamientodeportivo.png
  used on input line 230.
 (pdftex.def)             Requested size: 312.9803pt x 151.12544pt.
-LaTeX Info: Redefining \. on input line 240.
-LaTeX Info: Redefining \% on input line 240.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
 
-[147 <./imagenes/business_process/entrenamientodeportivo.png (PNG copy)>]
-<./imagenes/business_process/buscadorconsejosdeportivos.png, id=2144, 443.40656
+[147 <./imagenes/business_process/estadisticasdeportivas.png (PNG copy)> <./ima
+genes/business_process/entrenamientodeportivo.png (PNG copy)>]
+<./imagenes/business_process/buscadorconsejosdeportivos.png, id=2175, 443.40656
 pt x 59.47218pt>
 File: ./imagenes/business_process/buscadorconsejosdeportivos.png Graphic file (
 type png)
@@ -3550,7 +3569,7 @@ Package pdftex.def Info: ./imagenes/business_process/buscadorconsejosdeportivos
 .png used on input line 245.
 (pdftex.def)             Requested size: 312.9803pt x 41.98143pt.
 
-<./imagenes/business_process/buscadordeportivo.png, id=2145, 239.39438pt x 97.1
+<./imagenes/business_process/buscadordeportivo.png, id=2176, 239.39438pt x 97.1
 1281pt>
 File: ./imagenes/business_process/buscadordeportivo.png Graphic file (type png)
 
@@ -3559,7 +3578,7 @@ Package pdftex.def Info: ./imagenes/business_process/buscadordeportivo.png used
  on input line 256.
 (pdftex.def)             Requested size: 312.9803pt x 126.97272pt.
 
-<./imagenes/business_process/evaluadorconsejossalud.png, id=2146, 443.40656pt x
+<./imagenes/business_process/evaluadorconsejossalud.png, id=2177, 443.40656pt x
  63.98906pt>
 File: ./imagenes/business_process/evaluadorconsejossalud.png Graphic file (type
  png)
@@ -3567,8 +3586,12 @@ File: ./imagenes/business_process/evaluadorconsejossalud.png Graphic file (type
 Package pdftex.def Info: ./imagenes/business_process/evaluadorconsejossalud.png
  used on input line 267.
 (pdftex.def)             Requested size: 312.9803pt x 45.16989pt.
+LaTeX Info: Redefining \. on input line 272.
+LaTeX Info: Redefining \% on input line 272.
 
-<./imagenes/business_process/generadorconsejosdeportivos.png, id=2147, 359.0915
+[148 <./imagenes/business_process/buscadorconsejosdeportivos.png> <./imagenes/b
+usiness_process/buscadordeportivo.png>]
+<./imagenes/business_process/generadorconsejosdeportivos.png, id=2182, 359.0915
 7pt x 113.67468pt>
 File: ./imagenes/business_process/generadorconsejosdeportivos.png Graphic file 
 (type png)
@@ -3578,7 +3601,7 @@ Package pdftex.def Info: ./imagenes/business_process/generadorconsejosdeportivo
 s.png used on input line 278.
 (pdftex.def)             Requested size: 312.9803pt x 99.08522pt.
 
-<./imagenes/business_process/generadorcontenidossalud.png, id=2148, 340.27126pt
+<./imagenes/business_process/generadorcontenidossalud.png, id=2183, 340.27126pt
  x 103.88812pt>
 File: ./imagenes/business_process/generadorcontenidossalud.png Graphic file (ty
 pe png)
@@ -3586,12 +3609,8 @@ pe png)
 Package pdftex.def Info: ./imagenes/business_process/generadorcontenidossalud.p
 ng used on input line 289.
 (pdftex.def)             Requested size: 312.9803pt x 95.56079pt.
-LaTeX Info: Redefining \. on input line 294.
-LaTeX Info: Redefining \% on input line 294.
 
-[148 <./imagenes/business_process/buscadorconsejosdeportivos.png> <./imagenes/b
-usiness_process/buscadordeportivo.png>]
-<./imagenes/application_usage/patrociniosdeportivos.png, id=2153, 1791.69376pt 
+<./imagenes/application_usage/patrociniosdeportivos.png, id=2184, 1791.69376pt 
 x 978.65625pt>
 File: ./imagenes/application_usage/patrociniosdeportivos.png Graphic file (type
  png)
@@ -3599,16 +3618,16 @@ File: ./imagenes/application_usage/patrociniosdeportivos.png Graphic file (type
 Package pdftex.def Info: ./imagenes/application_usage/patrociniosdeportivos.png
  used on input line 302.
 (pdftex.def)             Requested size: 312.9803pt x 170.95381pt.
-LaTeX Info: Redefining \. on input line 307.
-LaTeX Info: Redefining \% on input line 307.
+LaTeX Info: Redefining \. on input line 310.
+LaTeX Info: Redefining \% on input line 310.
 
 [149 <./imagenes/business_process/evaluadorconsejossalud.png> <./imagenes/busin
-ess_process/generadorconsejosdeportivos.png> <./imagenes/business_process/gener
-adorcontenidossalud.png>]
-LaTeX Info: Redefining \. on input line 313.
-LaTeX Info: Redefining \% on input line 313.
- [150 <./imagenes/application_usage/patrociniosdeportivos.png (PNG copy)>]
-<./imagenes/application_usage/organizacioneventosdeportivos.png, id=2162, 1611.
+ess_process/generadorconsejosdeportivos.png>]
+LaTeX Info: Redefining \. on input line 312.
+LaTeX Info: Redefining \% on input line 312.
+ [150 <./imagenes/business_process/generadorcontenidossalud.png> <./imagenes/ap
+plication_usage/patrociniosdeportivos.png (PNG copy)>]
+<./imagenes/application_usage/organizacioneventosdeportivos.png, id=2194, 1611.
 01875pt x 1123.19624pt>
 File: ./imagenes/application_usage/organizacioneventosdeportivos.png Graphic fi
 le (type png)
@@ -3618,7 +3637,7 @@ Package pdftex.def Info: ./imagenes/application_usage/organizacioneventosdeport
 ivos.png used on input line 317.
 (pdftex.def)             Requested size: 312.9803pt x 218.2083pt.
 
-<./imagenes/application_usage/formaciongruposdeportivos.png, id=2163, 1959.32pt
+<./imagenes/application_usage/formaciongruposdeportivos.png, id=2195, 1959.32pt
  x 708.6475pt>
 File: ./imagenes/application_usage/formaciongruposdeportivos.png Graphic file (
 type png)
@@ -3631,7 +3650,7 @@ LaTeX Info: Redefining \. on input line 337.
 LaTeX Info: Redefining \% on input line 337.
  [151 <./imagenes/application_usage/organizacioneventosdeportivos.png (PNG copy
 )>]
-<./imagenes/application_usage/estadisticasdeportivas.png, id=2169, 1466.47874pt
+<./imagenes/application_usage/estadisticasdeportivas.png, id=2201, 1466.47874pt
  x 566.115pt>
 File: ./imagenes/application_usage/estadisticasdeportivas.png Graphic file (typ
 e png)
@@ -3644,7 +3663,7 @@ LaTeX Info: Redefining \% on input line 353.
 
 [152 <./imagenes/application_usage/formaciongruposdeportivos.png (PNG copy)> <.
 /imagenes/application_usage/estadisticasdeportivas.png (PNG copy)>]
-<./imagenes/application_usage/entrenamientodeportivo.png, id=2175, 1703.36375pt
+<./imagenes/application_usage/entrenamientodeportivo.png, id=2206, 1703.36375pt
  x 653.44125pt>
 File: ./imagenes/application_usage/entrenamientodeportivo.png Graphic file (typ
 e png)
@@ -3653,7 +3672,7 @@ Package pdftex.def Info: ./imagenes/application_usage/entrenamientodeportivo.pn
 g used on input line 358.
 (pdftex.def)             Requested size: 312.9803pt x 120.05716pt.
 
-<./imagenes/application_usage/buscadorconsejosdeportivos.png, id=2176, 443.4065
+<./imagenes/application_usage/buscadorconsejosdeportivos.png, id=2207, 443.4065
 6pt x 197.23688pt>
 File: ./imagenes/application_usage/buscadorconsejosdeportivos.png Graphic file 
 (type png)
@@ -3663,7 +3682,7 @@ Package pdftex.def Info: ./imagenes/application_usage/buscadorconsejosdeportivo
 s.png used on input line 371.
 (pdftex.def)             Requested size: 312.9803pt x 139.22957pt.
 
-<./imagenes/application_usage/buscadordeportivo.png, id=2177, 384.6872pt x 302.
+<./imagenes/application_usage/buscadordeportivo.png, id=2208, 384.6872pt x 302.
 63063pt>
 File: ./imagenes/application_usage/buscadordeportivo.png Graphic file (type png
 )
@@ -3672,7 +3691,7 @@ Package pdftex.def Info: ./imagenes/application_usage/buscadordeportivo.png use
 d on input line 382.
 (pdftex.def)             Requested size: 312.9803pt x 246.23772pt.
 
-<./imagenes/application_usage/evaluadorconsejossalud.png, id=2178, 443.40656pt 
+<./imagenes/application_usage/evaluadorconsejossalud.png, id=2209, 443.40656pt 
 x 168.63pt>
 File: ./imagenes/application_usage/evaluadorconsejossalud.png Graphic file (typ
 e png)
@@ -3693,7 +3712,7 @@ LaTeX Info: Redefining \. on input line 398.
 LaTeX Info: Redefining \% on input line 398.
 [154 <./imagenes/application_usage/buscadorconsejosdeportivos.png> <./imagenes/
 application_usage/buscadordeportivo.png>]
-<./imagenes/application_usage/generadorconsejosdeportivos.png, id=2187, 378.664
+<./imagenes/application_usage/generadorconsejosdeportivos.png, id=2218, 378.664
 69pt x 265.74281pt>
 File: ./imagenes/application_usage/generadorconsejosdeportivos.png Graphic file
  (type png)
@@ -3703,7 +3722,7 @@ Package pdftex.def Info: ./imagenes/application_usage/generadorconsejosdeportiv
 os.png used on input line 404.
 (pdftex.def)             Requested size: 312.9803pt x 219.65005pt.
 
-<./imagenes/application_usage/generadorcontenidossalud.png, id=2188, 369.63094p
+<./imagenes/application_usage/generadorcontenidossalud.png, id=2219, 369.63094p
 t x 294.34969pt>
 File: ./imagenes/application_usage/generadorcontenidossalud.png Graphic file (t
 ype png)
@@ -3713,45 +3732,52 @@ Package pdftex.def Info: ./imagenes/application_usage/generadorcontenidossalud.
 png used on input line 415.
 (pdftex.def)             Requested size: 312.9803pt x 249.23724pt.
 
-<./imagenes/Product.png, id=2189, 443.40656pt x 288.3272pt>
+<./imagenes/Product.png, id=2220, 443.40656pt x 288.3272pt>
 File: ./imagenes/Product.png Graphic file (type png)
 
 <use ./imagenes/Product.png>
 Package pdftex.def Info: ./imagenes/Product.png used on input line 428.
 (pdftex.def)             Requested size: 312.9803pt x 203.53026pt.
 
-<./imagenes/infrastructure.png, id=2190, 1081.03876pt x 310.15875pt>
+<./imagenes/infrastructure.png, id=2221, 1081.03876pt x 310.15875pt>
 File: ./imagenes/infrastructure.png Graphic file (type png)
 
 <use ./imagenes/infrastructure.png>
 Package pdftex.def Info: ./imagenes/infrastructure.png used on input line 439.
 (pdftex.def)             Requested size: 312.9803pt x 89.79228pt.
-)
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+))
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [155 <./imagenes/application_usage/evaluadorconsejossalud.png>]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [156 <./imagenes/application_usage/generadorconsejosdeportivos.png>]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [157 <./imagenes/application_usage/generadorcontenidossalud.png>]
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
 
 [158 <./imagenes/Product.png> <./imagenes/infrastructure.png (PNG copy)>]
 Cap\'{\i }tulo 11.
+[159
+
+]
+LaTeX Info: Redefining \. on input line 163.
+LaTeX Info: Redefining \% on input line 163.
+ [160
+
+]
+Cap\'{\i }tulo 12.
 (./Capitulos/Metodos/Encuesta.tex
 Overfull \hbox (3.32678pt too wide) in paragraph at lines 15--16
 []\OT1/lmr/m/n/12 El ti-po de en-cues-ta ele-gi-do pa-ra rea-li-zar el es-tu-di
 o fue la en-cues-ta electr^^Soni-
  []
 
-[159
+[161]
 
-]
-
-LaTeX Warning: Reference `anexo1' on page 160 undefined on input line 25.
+LaTeX Warning: Reference `anexo1' on page 162 undefined on input line 25.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -3760,7 +3786,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[160]
+[162]
 Overfull \hbox (3.86702pt too wide) in paragraph at lines 42--44
 \OT1/lmr/m/n/12 En los de-por-tes prac-ti-ca-dos, re-sal-tan el F^^Sutbol (27$ 
 $%), Ba-lon-ces-to (13$ $%)
@@ -3768,13 +3794,13 @@ $%), Ba-lon-ces-to (13$ $%)
 
 LaTeX Info: Redefining \. on input line 46.
 LaTeX Info: Redefining \% on input line 46.
-[161]
+[163]
 LaTeX Info: Redefining \. on input line 81.
 LaTeX Info: Redefining \% on input line 81.
- [162]
+ [164]
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
- [163]
+ [165]
 Overfull \hbox (4.30739pt too wide) in paragraph at lines 117--118
 []\OT1/lmr/m/n/12 Cuando quie-re bus-car per-so-nas con quien prac-ti-car de-po
 r-te ?`Por qu^^Se me-
@@ -3782,22 +3808,22 @@ r-te ?`Por qu^^Se me-
 
 LaTeX Info: Redefining \. on input line 147.
 LaTeX Info: Redefining \% on input line 147.
-[164])
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
- [165]
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
- [166
+[166])
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+ [167]
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+ [168
 
 ]
-Cap\'{\i }tulo 12.
+Cap\'{\i }tulo 13.
 (./Capitulos/Cronograma/Cronograma.tex
 Overfull \hbox (8.35382pt too wide) in paragraph at lines 8--29
  [] 
  []
 
-<./imagenes/cronograma_completo.PNG, id=2256, 917.67844pt x 281.55188pt>
+<./imagenes/cronograma_completo.PNG, id=2296, 917.67844pt x 281.55188pt>
 File: ./imagenes/cronograma_completo.PNG Graphic file (type png)
 
 <use ./imagenes/cronograma_completo.PNG>
@@ -3808,11 +3834,11 @@ Package pdftex.def Info: ./imagenes/cronograma_completo.PNG used on input line
 
 LaTeX Warning: Float too large for page by 11.17409pt on input line 38.
 
-) [167]
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
- [168 <./imagenes/cronograma_completo.PNG>]
-Cap\'{\i }tulo 13.
+) [169]
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+ [170 <./imagenes/cronograma_completo.PNG>]
+Cap\'{\i }tulo 14.
 (./Capitulos/Recursos/Hardware.tex
 Underfull \hbox (badness 1281) in paragraph at lines 27--27
 \OT1/lmr/m/n/12 1.0GHz 1 n^^Sucleo, 512MB
@@ -3845,25 +3871,2939 @@ LaTeX Warning: Citation `manual_referencia_costos' undefined on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 23.
 ) (./Capitulos/Recursos/Miscelaneos.tex) (./Capitulos/Recursos/Totales.tex
-[169
+[171
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [170]
+ [172]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [171])
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [172
+ [173])
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
+ [174
 
 ]
-Cap\'{\i }tulo 14.
+Cap\'{\i }tulo 15.
 (./Capitulos/Anexos/Anexos.tex (./Capitulos/Anexos/Artefactos_arquitectura.tex
-(./Capitulos/Anexos/Artefactos_negocio.tex)
-(./Capitulos/Anexos/Artefactos_aplicacion.tex)
-(./Capitulos/Anexos/Artefactos_infraestructura.tex
+(./Capitulos/Anexos/Artefactos_negocio.tex
+Overfull \hbox (74.3913pt too wide) in alignment at lines 4--11
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 11--17
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 17--19
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 19--21
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 27--27
+\OT1/lmr/m/n/12 ac-to-res de-por-ti-vos (ju-ga-do-res/grupos
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 21--54
+ [] [] [] 
+ []
+
+[175
+
+]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 59--66
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 66--72
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 72--74
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 74--76
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 de ne-go-cio (En-tre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 na-mien-to de-por-ti-vo,
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 Es-tad^^S^^Psti-cas de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 de-por-ti-vos, Pa-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 ci-nios de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 Fun-ci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 En-tre-na-mien-to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 por-ti-vo, Es-tad^^S^^Psti-cas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+\OT1/lmr/m/n/12 de gru-pos de-por-ti-
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 82--82
+[]|\OT1/lmr/m/n/12 Jugador/entrenador/organizaci^^Son en-
+ []
+
+
+Underfull \hbox (badness 2799) in paragraph at lines 88--90
+[]|\OT1/lmr/m/n/12 Rol - ac-tor, Pro-ce-
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 88--90
+\OT1/lmr/m/n/12 so de ne-go-cio (En-
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 88--90
+\OT1/lmr/m/n/12 tre-na-mien-to de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 88--90
+\OT1/lmr/m/n/12 vo), Fun-ci^^Son de ne-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 de ne-go-cio (En-tre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 na-mien-to de-por-ti-vo,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 Es-tad^^S^^Psti-cas de-por-
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 ti-vas, For-ma-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 gru-pos de-por-ti-vos,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 Pa-tro-ci-nios de-por-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 ti-vos), Fun-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 ne-go-cio (Pa-tro-ci-nio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 de-por-ti-vo, En-tre-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 mien-to de-por-ti-vo,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 Es-tad^^S^^Psti-cas de-por-
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 98--100
+\OT1/lmr/m/n/12 ti-vas, For-ma-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+[]|\OT1/lmr/m/n/12 Rol - ac-tor, Pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 ce-so de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 ti-vo, Or-ga-ni-za-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 even-to de-por-ti-vo),
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 Fun-ci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+\OT1/lmr/m/n/12 de-por-ti-vos, Pa-tro-ci-
+ []
+
+
+Underfull \hbox (badness 2799) in paragraph at lines 108--110
+[]|\OT1/lmr/m/n/12 Rol - ac-tor, Pro-ce-
+ []
+
+
+Underfull \hbox (badness 3701) in paragraph at lines 108--110
+\OT1/lmr/m/n/12 so de ne-go-cio (Pa-
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 108--110
+\OT1/lmr/m/n/12 tad^^S^^Psti-cas de-por-ti-vas,
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 108--110
+\OT1/lmr/m/n/12 tad^^S^^Psti-cas de-por-ti-vas,
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 76--121
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+[176]
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+ [177]
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+ [178]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 126--133
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 133--139
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 139--141
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 141--143
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 144--144
+[]|\OT1/lmr/m/n/12 Coevaluaci^^Son rea-li-za-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 2970) in paragraph at lines 149--149
+[]|\OT1/lmr/m/n/12 Estad^^S^^Psti-cas pro-du-ci-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 151--153
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 151--153
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 151--153
+\OT1/lmr/m/n/12 vos), Uso de apli-ca-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 156--158
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 156--158
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 156--158
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 159--159
+[]|\OT1/lmr/m/n/12 Inter^^Ses de for-ma-ci^^Son
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 161--163
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 161--163
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
+[]|\OT1/lmr/m/n/12 Necesidad de es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 166--168
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 176--178
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 181--183
+\OT1/lmr/m/n/12 ga-ni-za-ci^^Son de even-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 186--188
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 191--193
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 de-por-ti-vo, Pa-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 ci-nios de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 (En-tre-na-mien-to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+\OT1/lmr/m/n/12 por-ti-vo, Pa-tro-ci-nios
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 206--208
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
+\OT1/lmr/m/n/12 de-por-ti-vos, Pa-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
+\OT1/lmr/m/n/12 ci-nios de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--208
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 143--209
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
+[179]
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
+ [180]
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 240--240
+[]|\OT1/lmr/m/n/12 Interiorizaci^^Son del plan de en-tre-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--240
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Overfull \hbox (36.79337pt too wide) in paragraph at lines 217--240
+ [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 246--253
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 253--259
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 259--261
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 261--263
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 270--270
+[]|\OT1/lmr/m/n/12 Representa un dato-informaci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 271--273
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 275--275
+[]|\OT1/lmr/m/n/12 Representa un dato-informaci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 276--278
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 280--280
+[]|\OT1/lmr/m/n/12 Representa un dato-informaci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 281--283
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 285--285
+[]|\OT1/lmr/m/n/12 Representa un dato-informaci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 286--288
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--289
+[]|\OT1/lmr/m/n/12 Estad^^S^^Psti-ca geo-es-pa-
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 290--290
+[]|\OT1/lmr/m/n/12 Representa un dato-informaci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 291--293
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 301--303
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--304
+[]|\OT1/lmr/m/n/12 Evento in-for-ma-ti-vo
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 306--308
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 310--310
+\OT1/lmr/m/n/12 me-jo-rar un con-jun-to de ha-bi-li-da-des
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 316--318
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--318
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 321--323
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 321--323
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 321--323
+\OT1/lmr/m/n/12 vos), Uso de apli-ca-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 326--328
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 326--328
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 326--328
+\OT1/lmr/m/n/12 vos), Uso de apli-ca-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 331--333
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 331--333
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 331--333
+\OT1/lmr/m/n/12 vos), Uso de apli-ca-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 336--338
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 341--343
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 263--344
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 344.
+LaTeX Info: Redefining \% on input line 344.
+[181]
+LaTeX Info: Redefining \. on input line 344.
+LaTeX Info: Redefining \% on input line 344.
+ [182]
+LaTeX Info: Redefining \. on input line 344.
+LaTeX Info: Redefining \% on input line 344.
+ [183]
+Underfull \hbox (badness 7221) in paragraph at lines 370--370
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 5696) in paragraph at lines 370--370
+\OT1/lmr/m/n/12 (For-ma-ci^^Son de gru-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 370--370
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (36.79337pt too wide) in paragraph at lines 352--370
+ [] 
+ []
+
+
+Overfull \hbox (36.79337pt too wide) in paragraph at lines 379--387
+ [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 393--400
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 400--406
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 406--408
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 408--410
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 423--425
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 438--440
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 446--446
+[]|\OT1/lmr/m/n/12 Compra de ser-vi-cios
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 447--447
+\OT1/lmr/m/n/12 pro-duc-tos y ser-vi-cios de-por-ti-vos a
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 457--457
+[]|\OT1/lmr/m/n/12 Servicio uti-li-za-do pa-ra ge-ne-rar es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 458--460
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 463--465
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
+\OT1/lmr/m/n/12 Pro-ce-so de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 7613) in paragraph at lines 478--480
+[]|\OT1/lmr/m/n/12 Introductorio, Ge-ne-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 483--485
+\OT1/lmr/m/n/12 Pro-ce-so de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 483--485
+\OT1/lmr/m/n/12 vo, Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 488--490
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--490
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 493--495
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 501--501
+[]|\OT1/lmr/m/n/12 Seguimiento de pro-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 503--505
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 503--505
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 503--505
+\OT1/lmr/m/n/12 vos), Uso de apli-ca-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 508--510
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 410--510
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 518--520
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 522--522
+[]|\OT1/lmr/m/n/12 Servicio que per-mi-te la in-ter-ac-ci^^Son
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 523--525
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 510--526
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+[184]
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+ [185]
+LaTeX Info: Redefining \. on input line 526.
+LaTeX Info: Redefining \% on input line 526.
+ [186]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 531--538
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 538--544
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 544--546
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 546--548
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--554
+[]|\OT1/lmr/m/n/12 Analizador de es-
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 556--558
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 566--568
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--573
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 571--573
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--578
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--578
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 586--588
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 591--593
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--598
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--598
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 601--603
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 606--608
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 611--613
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--613
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--618
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--623
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--623
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--624
+[]|\OT1/lmr/m/n/12 Estructuraci^^Son del
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 626--628
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--628
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 3219) in paragraph at lines 629--629
+[]|\OT1/lmr/m/n/12 Evaluador de gru-po
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--633
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 de-por-ti-vos), Fun-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 de-por-ti-vos,patrocinios
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 de-por-ti-vos), Pro-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 636--638
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 639--639
+[]|\OT1/lmr/m/n/12 Generador de in-for-
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 646--648
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 548--648
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 651--653
+[]|\OT1/lmr/m/n/12 General por ca-pas -
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 661--663
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--663
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 666--668
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 666--668
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 de-por-ti-vos), Fun-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 de-por-ti-vos,patrocinios
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 de-por-ti-vos), Pro-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 676--678
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 de-por-ti-vos), Fun-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 de-por-ti-vos,patrocinios
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 de-por-ti-vos), Pro-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 de ne-go-cio (Or-ga-
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 681--683
+\OT1/lmr/m/n/12 ni-za-ci^^Son de even-tos
+ []
+
+
+Underfull \hbox (badness 6078) in paragraph at lines 691--693
+[]|\OT1/lmr/m/n/12 Funci^^Son de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--693
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 648--694
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+[187]
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+ [188]
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+ [189]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 699--706
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 706--712
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 712--714
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 714--716
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 719--721
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--721
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--721
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--721
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--721
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 724--726
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 729--731
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 729--731
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 732--732
+[]|\OT1/lmr/m/n/12 Buscar in-for-ma-ci^^Son
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 733--733
+[]|\OT1/lmr/m/n/12 Proceso que bus-ca in-for-ma-ci^^Son es-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 734--736
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 737--737
+[]|\OT1/lmr/m/n/12 Buscar ma-te-rial de-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 739--741
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--741
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 744--746
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 744--746
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 747--747
+[]|\OT1/lmr/m/n/12 Buscar ser-vi-cios de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 749--751
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--751
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+[]|\OT1/lmr/m/n/12 Calcular cos-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--752
+\OT1/lmr/m/n/12 to/beneficio de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 754--756
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--756
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 759--761
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 759--761
+\OT1/lmr/m/n/12 - Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--761
+\OT1/lmr/m/n/12 - (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 764--766
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--766
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--766
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--766
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--766
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 768--768
+[]|\OT1/lmr/m/n/12 Construcci^^Son de un plan de en-tre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 774--776
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 774--776
+\OT1/lmr/m/n/12 - Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 774--776
+\OT1/lmr/m/n/12 - (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 777--777
+[]|\OT1/lmr/m/n/12 Contratar ser-vi-cios
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 779--781
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 779--781
+\OT1/lmr/m/n/12 - Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--781
+\OT1/lmr/m/n/12 - (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 784--786
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 784--786
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 789--791
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 794--796
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 794--796
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 797--797
+[]|\OT1/lmr/m/n/12 Definir de-ta-lles de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 799--801
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 799--801
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 802--802
+[]|\OT1/lmr/m/n/12 Definir de-ta-lles del
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 804--806
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 809--811
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 812--812
+[]|\OT1/lmr/m/n/12 Definir re-qui-si-tos de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 814--816
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 716--816
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 816.
+LaTeX Info: Redefining \% on input line 816.
+[190]
+Underfull \hbox (badness 10000) in paragraph at lines 817--817
+[]|\OT1/lmr/m/n/12 Definir ser-vi-cios a
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 819--821
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 824--826
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son -
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 829--831
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--831
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 832--832
+[]|\OT1/lmr/m/n/12 Ejecutar even-to pla-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 834--836
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 834--836
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 844--846
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 844--846
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 853--853
+[]|\OT1/lmr/m/n/12 Acci^^Son de en-tre-nar a un ju-ga-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 859--861
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--861
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 864--866
+\OT1/lmr/m/n/12 ga-ni-za-ci^^Son de even-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 869--871
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--871
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
+[]|\OT1/lmr/m/n/12 Evaluar fun-cio-na-
+ []
+
+
+Underfull \hbox (badness 2951) in paragraph at lines 872--872
+\OT1/lmr/m/n/12 mien-to del plan de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 879--881
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--881
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 884--886
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--886
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 887--887
+[]|\OT1/lmr/m/n/12 Financiar even-to de-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 889--891
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 889--891
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 892--892
+[]|\OT1/lmr/m/n/12 Financiar gru-po de-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 894--896
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 894--896
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 899--901
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 899--901
+\OT1/lmr/m/n/12 - Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--901
+\OT1/lmr/m/n/12 - (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 904--906
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--906
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--906
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--906
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--906
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 907--907
+[]|\OT1/lmr/m/n/12 Inscribir gru-pos de-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 909--911
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--911
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 912--912
+[]|\OT1/lmr/m/n/12 Inscribir per-so-nas al
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 914--916
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 816--916
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
+[191]
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
+ [192]
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
+ [193]
+Underfull \hbox (badness 7221) in paragraph at lines 919--921
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 919--921
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 2521) in paragraph at lines 922--922
+[]|\OT1/lmr/m/n/12 Leer in-for-ma-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 924--926
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 924--926
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 929--931
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 929--931
+\OT1/lmr/m/n/12 - Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 929--931
+\OT1/lmr/m/n/12 - (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 932--932
+[]|\OT1/lmr/m/n/12 Participar en even-to
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 934--936
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--936
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 939--941
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 939--941
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 944--946
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--946
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 949--951
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 954--956
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--956
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 959--961
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 964--966
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 969--971
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 969--971
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 972--972
+[]|\OT1/lmr/m/n/12 Publicar in-for-ma-ci^^Son
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 974--976
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 974--976
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 977--977
+[]|\OT1/lmr/m/n/12 Publicar in-for-ma-ci^^Son
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 979--981
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 979--981
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--986
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 987--987
+[]|\OT1/lmr/m/n/12 Realizar pro-yec-to a
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 989--991
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--991
+\OT1/lmr/m/n/12 (Pa-tro-ci-nio de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 994--996
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 997--997
+[]|\OT1/lmr/m/n/12 Retroalimentar in-for-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 999--1001
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 999--1001
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1002
+[]|\OT1/lmr/m/n/12 Retroalimentar plan
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1006
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1006
+\OT1/lmr/m/n/12 cio (En-tre-na-mien-to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1006
+\OT1/lmr/m/n/12 de-por-ti-vo), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1004--1006
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (En-tre-na-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 1009--1011
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 (Pa-tro-ci-nios de-por-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 ti-vos, Es-tad^^S^^Psti-cas
+ []
+
+
+Underfull \hbox (badness 4686) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 de-por-ti-vas), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (Pa-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 ci-nios de-por-ti-vos,
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 1009--1011
+\OT1/lmr/m/n/12 Es-tad^^S^^Psti-cas de-por-ti-
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 1014--1016
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 916--1016
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1016.
+LaTeX Info: Redefining \% on input line 1016.
+[194]
+LaTeX Info: Redefining \. on input line 1016.
+LaTeX Info: Redefining \% on input line 1016.
+ [195]
+LaTeX Info: Redefining \. on input line 1016.
+LaTeX Info: Redefining \% on input line 1016.
+ [196]
+Underfull \hbox (badness 7221) in paragraph at lines 1019--1021
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 1019--1021
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 1024--1026
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 1024--1026
+\OT1/lmr/m/n/12 de-por-ti-vos), Uso de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1027
+[]|\OT1/lmr/m/n/12 Verificar via-bi-li-dad
+ []
+
+
+Underfull \hbox (badness 7221) in paragraph at lines 1029--1031
+[]|\OT1/lmr/m/n/12 Proceso de ne-go-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+\OT1/lmr/m/n/12 even-tos de-por-ti-vos),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+\OT1/lmr/m/n/12 (Or-ga-ni-za-ci^^Son de
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 1016--1032
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1032.
+LaTeX Info: Redefining \% on input line 1032.
+[197]
+LaTeX Info: Redefining \. on input line 1032.
+LaTeX Info: Redefining \% on input line 1032.
+ [198]
+LaTeX Info: Redefining \. on input line 1032.
+LaTeX Info: Redefining \% on input line 1032.
+ [199]
+LaTeX Info: Redefining \. on input line 1032.
+LaTeX Info: Redefining \% on input line 1032.
+ [200]) (./Capitulos/Anexos/Artefactos_aplicacion.tex
+Overfull \hbox (74.3913pt too wide) in alignment at lines 4--11
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 11--17
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 17--19
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 19--21
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 29--31
+\OT1/lmr/m/n/12 tre-na-mien-to de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 1924) in paragraph at lines 39--41
+\OT1/lmr/m/n/12 tad^^S^^Psti-cas de-por-ti-vas,
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 39--41
+\OT1/lmr/m/n/12 Or-ga-ni-za-ci^^Son even-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+\OT1/lmr/m/n/12 de-por-ti-vos, Pa-tro-ci-
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 44--46
+\OT1/lmr/m/n/12 tro-duc-to-rio, Uso de
+ []
+
+
+Underfull \hbox (badness 1824) in paragraph at lines 44--46
+\OT1/lmr/m/n/12 apli-ca-ci^^Son (Es-tad^^S^^Psti-
+ []
+
+
+Underfull \hbox (badness 2173) in paragraph at lines 44--46
+\OT1/lmr/m/n/12 ni-za-ci^^Son even-tos de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+[]|\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+\OT1/lmr/m/n/12 de-por-ti-vo, En-tre-na-
+ []
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 54--56
+[]|\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son -
+ []
+
+
+Underfull \hbox (badness 4229) in paragraph at lines 57--57
+[]|\OT1/lmr/m/n/12 Gesti^^Son de re-cur-sos
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 64--66
+\OT1/lmr/m/n/12 tre-na-mien-to de-por-ti-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+\OT1/lmr/m/n/12 (En-tre-na-mien-to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+\OT1/lmr/m/n/12 por-ti-vo, Es-ta-dis-ti-cas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+\OT1/lmr/m/n/12 de-por-ti-vas, Pa-tro-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+\OT1/lmr/m/n/12 (En-tre-na-mien-to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+\OT1/lmr/m/n/12 por-ti-vo, Es-tad^^S^^Psti-cas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 (En-tre-na-mien-to de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 por-ti-vo, Es-ta-dis-ti-cas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 de-por-ti-vas, Pa-tro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 ci-nios de-por-ti-vos,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+\OT1/lmr/m/n/12 Or-ga-ni-za-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+[]|\OT1/lmr/m/n/12 General por ca-pas,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+\OT1/lmr/m/n/12 In-tro-duc-to-rio, Uso
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
+\OT1/lmr/m/n/12 na-mien-to de-por-ti-vo,
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 84--86
+\OT1/lmr/m/n/12 Es-tad^^S^^Psti-cas de-por-ti-
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 21--92
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+[201]
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+ [202]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 97--104
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 104--110
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 110--112
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 112--114
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
+[]|\OT1/lmr/m/n/12 Uso de apli-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 122--124
+\OT1/lmr/m/n/12 tre-na-mien-to de-por-ti-
+ []
+
+
+Underfull \hbox (badness 1874) in paragraph at lines 131--131
+[]|\OT1/lmr/m/n/12 Colaboraci^^Son que in-te-gra to-dos los
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 131--131
+\OT1/lmr/m/n/12 com-po-nen-tes ne-ce-sa-rios pa-ra lo-grar
+ []
+
+
+Underfull \hbox (badness 5403) in paragraph at lines 132--134
+\OT1/lmr/m/n/12 tre-na-mien-to de-por-ti-
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 114--145
+ [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
+[203]
+Overfull \hbox (74.3913pt too wide) in alignment at lines 150--157
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 157--163
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 163--165
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 165--167
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 167--168
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 173--180
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 180--186
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 186--188
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 188--190
+ [] [] [] 
+ []
+
+
+Overfull \hbox (74.3913pt too wide) in alignment at lines 190--191
+ [] [] [] 
+ []
+
+
+Overfull \vbox (98.95009pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+
+[204]
+Overfull \hbox (89.19128pt too wide) in alignment at lines 196--204
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (89.19128pt too wide) in alignment at lines 204--211
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (89.19128pt too wide) in alignment at lines 211--213
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (89.19128pt too wide) in alignment at lines 213--215
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (89.19128pt too wide) in alignment at lines 215--216
+ [] [] [] [] 
+ []
+
+) (./Capitulos/Anexos/Artefactos_infraestructura.tex
 Underfull \hbox (badness 7613) in paragraph at lines 77--77
 []|\OT1/lmr/m/n/12 Introductorio, Ge-ne-
  []
@@ -3885,29 +6825,29 @@ Overfull \hbox (36.81209pt too wide) in paragraph at lines 7--77
 
 )))
 No file proyecto.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[173
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 192.
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
+[205]
 
-]
-
-LaTeX Warning: Text page 174 contains only floats.
+LaTeX Warning: Text page 206 contains only floats.
 
 
 Underfull \vbox (badness 4001) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
- [174]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
+ [206]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 192.
 
 (./proyecto.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 192.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 192.
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: FB37F63038753C3D3232C5808BD0633D;11887.
+(rerunfilecheck)             Checksum: FD6311FABE52C30BCFE68C57E6D69C0F;11886.
 
 
 LaTeX Warning: There were undefined references.
@@ -3915,20 +6855,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 192.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 59 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11115 strings out of 493485
- 181525 string characters out of 3143525
- 312893 words of memory out of 3000000
- 13551 multiletter control sequences out of 15000+200000
+ 11197 strings out of 493485
+ 182568 string characters out of 3143525
+ 315667 words of memory out of 3000000
+ 13583 multiletter control sequences out of 15000+200000
  56516 words of font info for 40 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 43i,15n,43p,1762b,680s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,15n,43p,1762b,719s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{cite.manual_referencia_costos} has 
 been referenced but does not exist, replaced by a fixed one
 
@@ -4012,10 +6952,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy10.pfb>
-Output written on proyecto.pdf (174 pages, 4538522 bytes).
+Output written on proyecto.pdf (206 pages, 4594874 bytes).
 PDF statistics:
- 2456 PDF objects out of 2487 (max. 8388607)
- 2092 compressed objects within 21 object streams
- 490 named destinations out of 1000 (max. 500000)
+ 2638 PDF objects out of 2984 (max. 8388607)
+ 2240 compressed objects within 23 object streams
+ 537 named destinations out of 1000 (max. 500000)
  1791 words of extra memory for PDF output out of 10000 (max. 10000000)
 

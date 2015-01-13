@@ -87,64 +87,64 @@
 \BOOKMARK [3][-]{subsubsection.9.1.2.3}{Mantenibilidad}{subsection.9.1.2}% 87
 \BOOKMARK [3][-]{subsubsection.9.1.2.4}{Interoperabilidad}{subsection.9.1.2}% 88
 \BOOKMARK [3][-]{subsubsection.9.1.2.5}{Seguridad}{subsection.9.1.2}% 89
-\BOOKMARK [1][-]{section.9.2}{Casos de uso}{chapter.9}% 90
-\BOOKMARK [0][-]{chapter.10}{Arquitectura}{}% 91
-\BOOKMARK [1][-]{section.10.1}{Vistas archimate}{chapter.10}% 92
-\BOOKMARK [2][-]{subsubsection.10.1.0.6}{Actores y Roles}{section.10.1}% 93
-\BOOKMARK [3][-]{subsubsection.10.1.0.7}{Introductory viewpoint}{subsubsection.10.1.0.6}% 94
-\BOOKMARK [3][-]{subsubsection.10.1.0.8}{Layered viewpoint}{subsubsection.10.1.0.6}% 95
-\BOOKMARK [2][-]{subsection.10.1.1}{Business Functions Viewpoints}{section.10.1}% 96
-\BOOKMARK [3][-]{subsubsection.10.1.1.1}{Patrocinios Deportivos}{subsection.10.1.1}% 97
-\BOOKMARK [3][-]{subsubsection.10.1.1.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.1}% 98
-\BOOKMARK [3][-]{subsubsection.10.1.1.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.1}% 99
-\BOOKMARK [3][-]{subsubsection.10.1.1.4}{Estad\355sticas Deportivas}{subsection.10.1.1}% 100
-\BOOKMARK [3][-]{subsubsection.10.1.1.5}{Entrenamiento Deportivo}{subsection.10.1.1}% 101
-\BOOKMARK [3][-]{subsubsection.10.1.1.6}{Buscador Deportivo}{subsection.10.1.1}% 102
-\BOOKMARK [3][-]{subsubsection.10.1.1.7}{Consejos}{subsection.10.1.1}% 103
-\BOOKMARK [3][-]{subsubsection.10.1.1.8}{Periodismo}{subsection.10.1.1}% 104
-\BOOKMARK [3][-]{subsubsection.10.1.1.9}{Servicios}{subsection.10.1.1}% 105
-\BOOKMARK [2][-]{subsection.10.1.2}{Business Process Viewpoints}{section.10.1}% 106
-\BOOKMARK [3][-]{subsubsection.10.1.2.1}{Patrocinios Deportivos}{subsection.10.1.2}% 107
-\BOOKMARK [3][-]{subsubsection.10.1.2.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.2}% 108
-\BOOKMARK [3][-]{subsubsection.10.1.2.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.2}% 109
-\BOOKMARK [3][-]{subsubsection.10.1.2.4}{Estad\355sticas Deportivas}{subsection.10.1.2}% 110
-\BOOKMARK [3][-]{subsubsection.10.1.2.5}{Entrenamiento Deportivo}{subsection.10.1.2}% 111
-\BOOKMARK [3][-]{subsubsection.10.1.2.6}{Buscador de consejos deportivos}{subsection.10.1.2}% 112
-\BOOKMARK [3][-]{subsubsection.10.1.2.7}{Buscador deportivo}{subsection.10.1.2}% 113
-\BOOKMARK [3][-]{subsubsection.10.1.2.8}{Evaluador consejos de salud}{subsection.10.1.2}% 114
-\BOOKMARK [3][-]{subsubsection.10.1.2.9}{Generador de consejos deportivos}{subsection.10.1.2}% 115
-\BOOKMARK [3][-]{subsubsection.10.1.2.10}{Generador de contenidos de salud}{subsection.10.1.2}% 116
-\BOOKMARK [2][-]{subsection.10.1.3}{Application Usage Viewpoints}{section.10.1}% 117
-\BOOKMARK [3][-]{subsubsection.10.1.3.1}{Patrocinios Deportivos}{subsection.10.1.3}% 118
-\BOOKMARK [3][-]{subsubsection.10.1.3.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.3}% 119
-\BOOKMARK [3][-]{subsubsection.10.1.3.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.3}% 120
-\BOOKMARK [3][-]{subsubsection.10.1.3.4}{Estad\355sticas Deportivas}{subsection.10.1.3}% 121
-\BOOKMARK [3][-]{subsubsection.10.1.3.5}{Entrenamiento Deportivo}{subsection.10.1.3}% 122
-\BOOKMARK [3][-]{subsubsection.10.1.3.6}{Buscador de consejos deportivos}{subsection.10.1.3}% 123
-\BOOKMARK [3][-]{subsubsection.10.1.3.7}{Buscador deportivo}{subsection.10.1.3}% 124
-\BOOKMARK [3][-]{subsubsection.10.1.3.8}{Evaluador consejos de salud}{subsection.10.1.3}% 125
-\BOOKMARK [3][-]{subsubsection.10.1.3.9}{Generador de consejos deportivos}{subsection.10.1.3}% 126
-\BOOKMARK [3][-]{subsubsection.10.1.3.10}{Generador de contenidos de salud}{subsection.10.1.3}% 127
-\BOOKMARK [2][-]{subsection.10.1.4}{Product Viewpoint}{section.10.1}% 128
-\BOOKMARK [3][-]{subsubsection.10.1.4.1}{Product}{subsection.10.1.4}% 129
-\BOOKMARK [2][-]{subsection.10.1.5}{Punto de vista de infraestructura}{section.10.1}% 130
-\BOOKMARK [0][-]{chapter.11}{M\351todos utilizados}{}% 131
-\BOOKMARK [1][-]{section.11.1}{Encuesta inicial}{chapter.11}% 132
-\BOOKMARK [2][-]{subsection.11.1.1}{Informaci\363n necesaria}{section.11.1}% 133
-\BOOKMARK [2][-]{subsection.11.1.2}{Naturaleza de la encuesta}{section.11.1}% 134
-\BOOKMARK [2][-]{subsection.11.1.3}{T\351cnicas de escalamiento utilizadas}{section.11.1}% 135
-\BOOKMARK [2][-]{subsection.11.1.4}{Trabajo de campo}{section.11.1}% 136
-\BOOKMARK [2][-]{subsection.11.1.5}{An\341lisis de resultados}{section.11.1}% 137
-\BOOKMARK [2][-]{subsection.11.1.6}{Formato de encuesta}{section.11.1}% 138
-\BOOKMARK [0][-]{chapter.12}{Cronograma}{}% 139
-\BOOKMARK [0][-]{chapter.13}{Costos}{}% 140
-\BOOKMARK [1][-]{section.13.1}{Recursos de Hardware}{chapter.13}% 141
-\BOOKMARK [1][-]{section.13.2}{Recursos de Software}{chapter.13}% 142
-\BOOKMARK [1][-]{section.13.3}{Recursos humanos}{chapter.13}% 143
-\BOOKMARK [1][-]{section.13.4}{Recursos miscel\341neos}{chapter.13}% 144
-\BOOKMARK [1][-]{section.13.5}{Costos totales}{chapter.13}% 145
-\BOOKMARK [0][-]{chapter.14}{Anexos}{}% 146
-\BOOKMARK [1][-]{section.14.1}{Artefactos de la arquitectura}{chapter.14}% 147
-\BOOKMARK [2][-]{subsection.14.1.1}{Artefactos de la capa de negocio}{section.14.1}% 148
-\BOOKMARK [2][-]{subsection.14.1.2}{Artefactos de la capa de aplicaci\363n}{section.14.1}% 149
-\BOOKMARK [2][-]{subsection.14.1.3}{Artefactos de la capa de infraestructura}{section.14.1}% 150
+\BOOKMARK [0][-]{chapter.10}{Arquitectura}{}% 90
+\BOOKMARK [1][-]{section.10.1}{Vistas archimate}{chapter.10}% 91
+\BOOKMARK [2][-]{subsubsection.10.1.0.6}{Actores y Roles}{section.10.1}% 92
+\BOOKMARK [3][-]{subsubsection.10.1.0.7}{Introductory viewpoint}{subsubsection.10.1.0.6}% 93
+\BOOKMARK [3][-]{subsubsection.10.1.0.8}{Layered viewpoint}{subsubsection.10.1.0.6}% 94
+\BOOKMARK [2][-]{subsection.10.1.1}{Business Functions Viewpoints}{section.10.1}% 95
+\BOOKMARK [3][-]{subsubsection.10.1.1.1}{Patrocinios Deportivos}{subsection.10.1.1}% 96
+\BOOKMARK [3][-]{subsubsection.10.1.1.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.1}% 97
+\BOOKMARK [3][-]{subsubsection.10.1.1.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.1}% 98
+\BOOKMARK [3][-]{subsubsection.10.1.1.4}{Estad\355sticas Deportivas}{subsection.10.1.1}% 99
+\BOOKMARK [3][-]{subsubsection.10.1.1.5}{Entrenamiento Deportivo}{subsection.10.1.1}% 100
+\BOOKMARK [3][-]{subsubsection.10.1.1.6}{Buscador Deportivo}{subsection.10.1.1}% 101
+\BOOKMARK [3][-]{subsubsection.10.1.1.7}{Consejos}{subsection.10.1.1}% 102
+\BOOKMARK [3][-]{subsubsection.10.1.1.8}{Periodismo}{subsection.10.1.1}% 103
+\BOOKMARK [3][-]{subsubsection.10.1.1.9}{Servicios}{subsection.10.1.1}% 104
+\BOOKMARK [2][-]{subsection.10.1.2}{Business Process Viewpoints}{section.10.1}% 105
+\BOOKMARK [3][-]{subsubsection.10.1.2.1}{Patrocinios Deportivos}{subsection.10.1.2}% 106
+\BOOKMARK [3][-]{subsubsection.10.1.2.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.2}% 107
+\BOOKMARK [3][-]{subsubsection.10.1.2.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.2}% 108
+\BOOKMARK [3][-]{subsubsection.10.1.2.4}{Estad\355sticas Deportivas}{subsection.10.1.2}% 109
+\BOOKMARK [3][-]{subsubsection.10.1.2.5}{Entrenamiento Deportivo}{subsection.10.1.2}% 110
+\BOOKMARK [3][-]{subsubsection.10.1.2.6}{Buscador de consejos deportivos}{subsection.10.1.2}% 111
+\BOOKMARK [3][-]{subsubsection.10.1.2.7}{Buscador deportivo}{subsection.10.1.2}% 112
+\BOOKMARK [3][-]{subsubsection.10.1.2.8}{Evaluador consejos de salud}{subsection.10.1.2}% 113
+\BOOKMARK [3][-]{subsubsection.10.1.2.9}{Generador de consejos deportivos}{subsection.10.1.2}% 114
+\BOOKMARK [3][-]{subsubsection.10.1.2.10}{Generador de contenidos de salud}{subsection.10.1.2}% 115
+\BOOKMARK [2][-]{subsection.10.1.3}{Application Usage Viewpoints}{section.10.1}% 116
+\BOOKMARK [3][-]{subsubsection.10.1.3.1}{Patrocinios Deportivos}{subsection.10.1.3}% 117
+\BOOKMARK [3][-]{subsubsection.10.1.3.2}{Organizaci\363n de Eventos Deportivos}{subsection.10.1.3}% 118
+\BOOKMARK [3][-]{subsubsection.10.1.3.3}{Formaci\363n de Grupos Deportivos}{subsection.10.1.3}% 119
+\BOOKMARK [3][-]{subsubsection.10.1.3.4}{Estad\355sticas Deportivas}{subsection.10.1.3}% 120
+\BOOKMARK [3][-]{subsubsection.10.1.3.5}{Entrenamiento Deportivo}{subsection.10.1.3}% 121
+\BOOKMARK [3][-]{subsubsection.10.1.3.6}{Buscador de consejos deportivos}{subsection.10.1.3}% 122
+\BOOKMARK [3][-]{subsubsection.10.1.3.7}{Buscador deportivo}{subsection.10.1.3}% 123
+\BOOKMARK [3][-]{subsubsection.10.1.3.8}{Evaluador consejos de salud}{subsection.10.1.3}% 124
+\BOOKMARK [3][-]{subsubsection.10.1.3.9}{Generador de consejos deportivos}{subsection.10.1.3}% 125
+\BOOKMARK [3][-]{subsubsection.10.1.3.10}{Generador de contenidos de salud}{subsection.10.1.3}% 126
+\BOOKMARK [2][-]{subsection.10.1.4}{Product Viewpoint}{section.10.1}% 127
+\BOOKMARK [3][-]{subsubsection.10.1.4.1}{Product}{subsection.10.1.4}% 128
+\BOOKMARK [2][-]{subsection.10.1.5}{Punto de vista de infraestructura}{section.10.1}% 129
+\BOOKMARK [0][-]{chapter.11}{An\341lisis funcional}{}% 130
+\BOOKMARK [0][-]{chapter.12}{M\351todos utilizados}{}% 131
+\BOOKMARK [1][-]{section.12.1}{Encuesta inicial}{chapter.12}% 132
+\BOOKMARK [2][-]{subsection.12.1.1}{Informaci\363n necesaria}{section.12.1}% 133
+\BOOKMARK [2][-]{subsection.12.1.2}{Naturaleza de la encuesta}{section.12.1}% 134
+\BOOKMARK [2][-]{subsection.12.1.3}{T\351cnicas de escalamiento utilizadas}{section.12.1}% 135
+\BOOKMARK [2][-]{subsection.12.1.4}{Trabajo de campo}{section.12.1}% 136
+\BOOKMARK [2][-]{subsection.12.1.5}{An\341lisis de resultados}{section.12.1}% 137
+\BOOKMARK [2][-]{subsection.12.1.6}{Formato de encuesta}{section.12.1}% 138
+\BOOKMARK [0][-]{chapter.13}{Cronograma}{}% 139
+\BOOKMARK [0][-]{chapter.14}{Costos}{}% 140
+\BOOKMARK [1][-]{section.14.1}{Recursos de Hardware}{chapter.14}% 141
+\BOOKMARK [1][-]{section.14.2}{Recursos de Software}{chapter.14}% 142
+\BOOKMARK [1][-]{section.14.3}{Recursos humanos}{chapter.14}% 143
+\BOOKMARK [1][-]{section.14.4}{Recursos miscel\341neos}{chapter.14}% 144
+\BOOKMARK [1][-]{section.14.5}{Costos totales}{chapter.14}% 145
+\BOOKMARK [0][-]{chapter.15}{Anexos}{}% 146
+\BOOKMARK [1][-]{section.15.1}{Artefactos de la arquitectura}{chapter.15}% 147
+\BOOKMARK [2][-]{subsection.15.1.1}{Artefactos de la capa de negocio}{section.15.1}% 148
+\BOOKMARK [2][-]{subsection.15.1.2}{Artefactos de la capa de aplicaci\363n}{section.15.1}% 149
+\BOOKMARK [2][-]{subsection.15.1.3}{Artefactos de la capa de infraestructura}{section.15.1}% 150

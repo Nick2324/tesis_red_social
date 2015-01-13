@@ -68,11 +68,11 @@
 \contentsline {section}{\numberline {5.6}Archimate 2.0}{78}{section.5.6}
 \contentsline {subsection}{\numberline {5.6.1}Capas de archimate}{78}{subsection.5.6.1}
 \contentsline {subsubsection}{\numberline {5.6.1.1}Capa de negocio}{78}{subsubsection.5.6.1.1}
-\contentsline {subsubsection}{\numberline {5.6.1.2}Capa de aplicaci\IeC {\'o}n}{79}{subsubsection.5.6.1.2}
-\contentsline {subsubsection}{\numberline {5.6.1.3}Capa de tecnolog\IeC {\'\i }a}{79}{subsubsection.5.6.1.3}
-\contentsline {subsection}{\numberline {5.6.2}Relaciones}{79}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Vistas archimate}{84}{subsection.5.6.3}
-\contentsline {section}{\numberline {5.7}Estado del arte}{85}{section.5.7}
+\contentsline {subsubsection}{\numberline {5.6.1.2}Capa de aplicaci\IeC {\'o}n}{80}{subsubsection.5.6.1.2}
+\contentsline {subsubsection}{\numberline {5.6.1.3}Capa de tecnolog\IeC {\'\i }a}{80}{subsubsection.5.6.1.3}
+\contentsline {subsection}{\numberline {5.6.2}Relaciones}{80}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Vistas archimate}{85}{subsection.5.6.3}
+\contentsline {section}{\numberline {5.7}Estado del arte}{87}{section.5.7}
 \contentsline {chapter}{\numberline {6}Marco legal}{95}{chapter.6}
 \contentsline {chapter}{\numberline {7}Alcances y limitaciones}{99}{chapter.7}
 \contentsline {section}{\numberline {7.1}Alcances y limitaciones}{99}{section.7.1}
@@ -88,21 +88,20 @@
 \contentsline {subsubsection}{\numberline {9.1.2.3}Mantenibilidad}{126}{subsubsection.9.1.2.3}
 \contentsline {subsubsection}{\numberline {9.1.2.4}Interoperabilidad}{126}{subsubsection.9.1.2.4}
 \contentsline {subsubsection}{\numberline {9.1.2.5}Seguridad}{129}{subsubsection.9.1.2.5}
-\contentsline {section}{\numberline {9.2}Casos de uso}{132}{section.9.2}
 \contentsline {chapter}{\numberline {10}Arquitectura}{135}{chapter.10}
 \contentsline {section}{\numberline {10.1}Vistas archimate}{135}{section.10.1}
 \contentsline {subsubsection}{\numberline {10.1.0.6}Actores y Roles}{135}{subsubsection.10.1.0.6}
-\contentsline {subsubsection}{\numberline {10.1.0.7}Introductory viewpoint}{137}{subsubsection.10.1.0.7}
-\contentsline {subsubsection}{\numberline {10.1.0.8}Layered viewpoint}{138}{subsubsection.10.1.0.8}
-\contentsline {subsection}{\numberline {10.1.1}Business Functions Viewpoints}{139}{subsection.10.1.1}
-\contentsline {subsubsection}{\numberline {10.1.1.1}Patrocinios Deportivos}{139}{subsubsection.10.1.1.1}
-\contentsline {subsubsection}{\numberline {10.1.1.2}Organizaci\IeC {\'o}n de Eventos Deportivos}{139}{subsubsection.10.1.1.2}
+\contentsline {subsubsection}{\numberline {10.1.0.7}Introductory viewpoint}{136}{subsubsection.10.1.0.7}
+\contentsline {subsubsection}{\numberline {10.1.0.8}Layered viewpoint}{136}{subsubsection.10.1.0.8}
+\contentsline {subsection}{\numberline {10.1.1}Business Functions Viewpoints}{138}{subsection.10.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.1}Patrocinios Deportivos}{138}{subsubsection.10.1.1.1}
+\contentsline {subsubsection}{\numberline {10.1.1.2}Organizaci\IeC {\'o}n de Eventos Deportivos}{140}{subsubsection.10.1.1.2}
 \contentsline {subsubsection}{\numberline {10.1.1.3}Formaci\IeC {\'o}n de Grupos Deportivos}{140}{subsubsection.10.1.1.3}
-\contentsline {subsubsection}{\numberline {10.1.1.4}Estad\IeC {\'\i }sticas Deportivas}{141}{subsubsection.10.1.1.4}
-\contentsline {subsubsection}{\numberline {10.1.1.5}Entrenamiento Deportivo}{141}{subsubsection.10.1.1.5}
+\contentsline {subsubsection}{\numberline {10.1.1.4}Estad\IeC {\'\i }sticas Deportivas}{140}{subsubsection.10.1.1.4}
+\contentsline {subsubsection}{\numberline {10.1.1.5}Entrenamiento Deportivo}{142}{subsubsection.10.1.1.5}
 \contentsline {subsubsection}{\numberline {10.1.1.6}Buscador Deportivo}{142}{subsubsection.10.1.1.6}
-\contentsline {subsubsection}{\numberline {10.1.1.7}Consejos}{144}{subsubsection.10.1.1.7}
-\contentsline {subsubsection}{\numberline {10.1.1.8}Periodismo}{144}{subsubsection.10.1.1.8}
+\contentsline {subsubsection}{\numberline {10.1.1.7}Consejos}{143}{subsubsection.10.1.1.7}
+\contentsline {subsubsection}{\numberline {10.1.1.8}Periodismo}{143}{subsubsection.10.1.1.8}
 \contentsline {subsubsection}{\numberline {10.1.1.9}Servicios}{144}{subsubsection.10.1.1.9}
 \contentsline {subsection}{\numberline {10.1.2}Business Process Viewpoints}{144}{subsection.10.1.2}
 \contentsline {subsubsection}{\numberline {10.1.2.1}Patrocinios Deportivos}{144}{subsubsection.10.1.2.1}
@@ -115,8 +114,8 @@
 \contentsline {subsubsection}{\numberline {10.1.2.8}Evaluador consejos de salud}{149}{subsubsection.10.1.2.8}
 \contentsline {subsubsection}{\numberline {10.1.2.9}Generador de consejos deportivos}{149}{subsubsection.10.1.2.9}
 \contentsline {subsubsection}{\numberline {10.1.2.10}Generador de contenidos de salud}{149}{subsubsection.10.1.2.10}
-\contentsline {subsection}{\numberline {10.1.3}Application Usage Viewpoints}{150}{subsection.10.1.3}
-\contentsline {subsubsection}{\numberline {10.1.3.1}Patrocinios Deportivos}{150}{subsubsection.10.1.3.1}
+\contentsline {subsection}{\numberline {10.1.3}Application Usage Viewpoints}{149}{subsection.10.1.3}
+\contentsline {subsubsection}{\numberline {10.1.3.1}Patrocinios Deportivos}{149}{subsubsection.10.1.3.1}
 \contentsline {subsubsection}{\numberline {10.1.3.2}Organizaci\IeC {\'o}n de Eventos Deportivos}{151}{subsubsection.10.1.3.2}
 \contentsline {subsubsection}{\numberline {10.1.3.3}Formaci\IeC {\'o}n de Grupos Deportivos}{152}{subsubsection.10.1.3.3}
 \contentsline {subsubsection}{\numberline {10.1.3.4}Estad\IeC {\'\i }sticas Deportivas}{152}{subsubsection.10.1.3.4}
@@ -129,23 +128,24 @@
 \contentsline {subsection}{\numberline {10.1.4}Product Viewpoint}{155}{subsection.10.1.4}
 \contentsline {subsubsection}{\numberline {10.1.4.1}Product}{155}{subsubsection.10.1.4.1}
 \contentsline {subsection}{\numberline {10.1.5}Punto de vista de infraestructura}{155}{subsection.10.1.5}
-\contentsline {chapter}{\numberline {11}M\IeC {\'e}todos utilizados}{159}{chapter.11}
-\contentsline {section}{\numberline {11.1}Encuesta inicial}{159}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Informaci\IeC {\'o}n necesaria}{159}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Naturaleza de la encuesta}{159}{subsection.11.1.2}
-\contentsline {subsection}{\numberline {11.1.3}T\IeC {\'e}cnicas de escalamiento utilizadas}{160}{subsection.11.1.3}
-\contentsline {subsection}{\numberline {11.1.4}Trabajo de campo}{160}{subsection.11.1.4}
-\contentsline {subsection}{\numberline {11.1.5}An\IeC {\'a}lisis de resultados}{160}{subsection.11.1.5}
-\contentsline {subsection}{\numberline {11.1.6}Formato de encuesta}{162}{subsection.11.1.6}
-\contentsline {chapter}{\numberline {12}Cronograma}{167}{chapter.12}
-\contentsline {chapter}{\numberline {13}Costos}{169}{chapter.13}
-\contentsline {section}{\numberline {13.1}Recursos de Hardware}{169}{section.13.1}
-\contentsline {section}{\numberline {13.2}Recursos de Software}{169}{section.13.2}
-\contentsline {section}{\numberline {13.3}Recursos humanos}{169}{section.13.3}
-\contentsline {section}{\numberline {13.4}Recursos miscel\IeC {\'a}neos}{169}{section.13.4}
-\contentsline {section}{\numberline {13.5}Costos totales}{172}{section.13.5}
-\contentsline {chapter}{\numberline {14}Anexos}{173}{chapter.14}
-\contentsline {section}{\numberline {14.1}Artefactos de la arquitectura}{173}{section.14.1}
-\contentsline {subsection}{\numberline {14.1.1}Artefactos de la capa de negocio}{173}{subsection.14.1.1}
-\contentsline {subsection}{\numberline {14.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{173}{subsection.14.1.2}
-\contentsline {subsection}{\numberline {14.1.3}Artefactos de la capa de infraestructura}{173}{subsection.14.1.3}
+\contentsline {chapter}{\numberline {11}An\IeC {\'a}lisis funcional}{159}{chapter.11}
+\contentsline {chapter}{\numberline {12}M\IeC {\'e}todos utilizados}{161}{chapter.12}
+\contentsline {section}{\numberline {12.1}Encuesta inicial}{161}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Informaci\IeC {\'o}n necesaria}{161}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Naturaleza de la encuesta}{161}{subsection.12.1.2}
+\contentsline {subsection}{\numberline {12.1.3}T\IeC {\'e}cnicas de escalamiento utilizadas}{162}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.4}Trabajo de campo}{162}{subsection.12.1.4}
+\contentsline {subsection}{\numberline {12.1.5}An\IeC {\'a}lisis de resultados}{162}{subsection.12.1.5}
+\contentsline {subsection}{\numberline {12.1.6}Formato de encuesta}{164}{subsection.12.1.6}
+\contentsline {chapter}{\numberline {13}Cronograma}{169}{chapter.13}
+\contentsline {chapter}{\numberline {14}Costos}{171}{chapter.14}
+\contentsline {section}{\numberline {14.1}Recursos de Hardware}{171}{section.14.1}
+\contentsline {section}{\numberline {14.2}Recursos de Software}{171}{section.14.2}
+\contentsline {section}{\numberline {14.3}Recursos humanos}{171}{section.14.3}
+\contentsline {section}{\numberline {14.4}Recursos miscel\IeC {\'a}neos}{171}{section.14.4}
+\contentsline {section}{\numberline {14.5}Costos totales}{174}{section.14.5}
+\contentsline {chapter}{\numberline {15}Anexos}{175}{chapter.15}
+\contentsline {section}{\numberline {15.1}Artefactos de la arquitectura}{175}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Artefactos de la capa de negocio}{175}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{201}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}Artefactos de la capa de infraestructura}{205}{subsection.15.1.3}

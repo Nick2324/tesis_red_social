@@ -10,18 +10,28 @@ A continuación serán descritas las tres capas definidas en el estandar archima
 
 Esta capa envuelve todos los conceptos relacionados con la organización sobre la cual se aplicará el software a desarrollar, esto es, los roles, los servicios ofrecidos, los procesos, los productos y demás conceptos aplicados sobre su estructura y dinámica. Los artefactos de esta capa utilizados en el proyecto se enuncian en el cuadro \ref{tab:artefactos_capa_negocio}.
 
-\begin{table}
-  \caption{Artefactos de la capa de negocio}
-  \label{tab:artefactos_capa_negocio}
-
-  \begin{center}
-  
-  \textbf{Fuente:} \cite{archimate2}
-  
-  \resizebox{15cm}{!}{
-  \begin{tabular}{|L{3cm}|L{6cm}|c|}
+ \begin{center}
+ 
+ 	\textbf{Fuente:} \cite{archimate2}
+ 	
+	\begin{longtable}{|p{4cm}|p{6cm}|c|}
+	\caption{Artefactos de la capa de negocio \label{tab:artefactos_capa_negocio}} \\
+	\hline
+    \textbf{Artefacto} & 
+    \textbf{Descripción} & 
+    \textbf{Notación} \\ 
     \hline
-    \textbf{Artefacto} & \textbf{Descripción} & \textbf{Notación} \\ 
+	\endfirsthead
+    \hline
+    \textbf{Artefacto} & 
+    \textbf{Descripción} & 
+    \textbf{Notación} \\ 
+    \hline
+	\endhead
+    \hline
+	\endfoot
+	\hline
+	\endlastfoot
     \hline
     \textit{Actor de negocio (Business actor)} & 
     Ente (persona) organizacional quien cumple tareas en la organización &  
@@ -59,10 +69,8 @@ Esta capa envuelve todos los conceptos relacionados con la organización sobre l
     Agrupación de servicios que, definidos por un contrato, serán compartidos a clientes (tanto roles dentro de la organización como para clientes externos) &  
     \includegraphics[width=1.5cm]{./imagenes/Archimate/businessproduct.png}\\
 	\hline
-  \end{tabular}
-  }
-    \end{center}
-\end{table}
+  \end{longtable}
+\end{center}
 
 \subsubsection{Capa de aplicación} 
 
