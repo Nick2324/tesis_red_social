@@ -1,6 +1,0 @@
-graph diada{
-	concentrate=true
-	label="Triada cerrada"
-	A -- B -- C
-	A -- C
-}

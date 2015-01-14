@@ -1,5 +1,0 @@
-graph abierta{
-	rankdir=LR
-	label="Triada abierta"
-	A -- B -- C
-}

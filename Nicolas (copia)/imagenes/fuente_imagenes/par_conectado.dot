@@ -1,6 +1,0 @@
-graph par{
-	rankdir=LR
-	label="Par conexo"
-	A -- C
-	B
-}

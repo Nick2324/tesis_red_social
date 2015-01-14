@@ -1,7 +1,0 @@
-graph diada{
-	concentrate=true
-	label="Disconexo"
-	A
-	B
-	C
-}

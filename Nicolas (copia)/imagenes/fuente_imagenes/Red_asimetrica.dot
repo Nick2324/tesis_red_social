@@ -1,4 +1,0 @@
-digraph asimetrica{
-	rankdir=LR
-	N1 -> N2 [label="Sigue a", len=2]
-}
