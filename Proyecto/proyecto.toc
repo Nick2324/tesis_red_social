@@ -146,12 +146,14 @@
 \contentsline {chapter}{\numberline {14}An\IeC {\'a}lisis funcional}{179}{chapter.14}
 \contentsline {section}{\numberline {14.1}M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores}{179}{section.14.1}
 \contentsline {section}{\numberline {14.2}M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos}{211}{section.14.2}
-\contentsline {section}{\numberline {14.3}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{227}{section.14.3}
-\contentsline {section}{\numberline {14.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{227}{section.14.4}
-\contentsline {section}{\numberline {14.5}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{240}{section.14.5}
-\contentsline {section}{\numberline {14.6}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{266}{section.14.6}
-\contentsline {chapter}{\numberline {15}Anexos}{297}{chapter.15}
-\contentsline {section}{\numberline {15.1}Artefactos de la arquitectura}{297}{section.15.1}
-\contentsline {subsection}{\numberline {15.1.1}Artefactos de la capa de negocio}{297}{subsection.15.1.1}
-\contentsline {subsection}{\numberline {15.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{323}{subsection.15.1.2}
-\contentsline {subsection}{\numberline {15.1.3}Artefactos de la capa de infraestructura}{327}{subsection.15.1.3}
+\contentsline {section}{\numberline {14.3}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{228}{section.14.3}
+\contentsline {section}{\numberline {14.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{228}{section.14.4}
+\contentsline {section}{\numberline {14.5}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{241}{section.14.5}
+\contentsline {section}{\numberline {14.6}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{267}{section.14.6}
+\contentsline {section}{\numberline {14.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de jugadores}{297}{section.14.7}
+\contentsline {section}{\numberline {14.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-sharing}{303}{section.14.8}
+\contentsline {chapter}{\numberline {15}Anexos}{311}{chapter.15}
+\contentsline {section}{\numberline {15.1}Artefactos de la arquitectura}{311}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Artefactos de la capa de negocio}{311}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{337}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}Artefactos de la capa de infraestructura}{341}{subsection.15.1.3}

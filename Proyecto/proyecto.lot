@@ -108,110 +108,136 @@
 \contentsline {table}{\numberline {93}{\ignorespaces CU023-A\IeC {\~n}adir participante: Flujos de hechos\relax }}{223}{table.caption.158}
 \contentsline {table}{\numberline {94}{\ignorespaces CU024-Retirar participante: Descripci\IeC {\'o}n\relax }}{223}{table.caption.159}
 \contentsline {table}{\numberline {95}{\ignorespaces CU024-Retirar participante: Flujos de hechos\relax }}{224}{table.caption.160}
-\contentsline {table}{\numberline {96}{\ignorespaces CU025-A\IeC {\~n}adir espectador: Descripci\IeC {\'o}n\relax }}{225}{table.caption.161}
-\contentsline {table}{\numberline {97}{\ignorespaces CU025-A\IeC {\~n}adir espectador: Flujos de hechos\relax }}{225}{table.caption.162}
-\contentsline {table}{\numberline {98}{\ignorespaces CU026-Retirar espectador: Descripci\IeC {\'o}n\relax }}{226}{table.caption.163}
-\contentsline {table}{\numberline {99}{\ignorespaces CU026-Retirar espectador: Flujos de hechos\relax }}{226}{table.caption.164}
-\contentsline {table}{\numberline {100}{\ignorespaces CU027-Administrar torneos: Descripci\IeC {\'o}n\relax }}{228}{table.caption.165}
-\contentsline {table}{\numberline {101}{\ignorespaces CU027-Administrar torneos: Flujos de hechos\relax }}{229}{table.caption.166}
-\contentsline {table}{\numberline {102}{\ignorespaces CU028-Crear un torneo: Descripci\IeC {\'o}n\relax }}{229}{table.caption.167}
-\contentsline {table}{\numberline {103}{\ignorespaces CU028-Crear un torneo: Flujos de hechos\relax }}{230}{table.caption.168}
-\contentsline {table}{\numberline {104}{\ignorespaces CU029-Actualizar informaci\IeC {\'o}n de torneo: Descripci\IeC {\'o}n\relax }}{231}{table.caption.169}
-\contentsline {table}{\numberline {105}{\ignorespaces CU029-Actualizar informaci\IeC {\'o}n de torneo: Flujos de hechos\relax }}{232}{table.caption.170}
-\contentsline {table}{\numberline {106}{\ignorespaces CU030-Gestionar formato de torneo: Descripci\IeC {\'o}n\relax }}{232}{table.caption.171}
-\contentsline {table}{\numberline {107}{\ignorespaces CU030-Gestionar formato de torneo: Flujos de hechos\relax }}{233}{table.caption.172}
-\contentsline {table}{\numberline {108}{\ignorespaces CU031-Agregar participante a torneo: Descripci\IeC {\'o}n\relax }}{233}{table.caption.173}
-\contentsline {table}{\numberline {109}{\ignorespaces CU031-Agregar participante a torneo: Flujos de hechos\relax }}{234}{table.caption.174}
-\contentsline {table}{\numberline {110}{\ignorespaces CU032-Retirar participante de torneo: Descripci\IeC {\'o}n\relax }}{234}{table.caption.175}
-\contentsline {table}{\numberline {111}{\ignorespaces CU032-Retirar equipo de torneo: Flujos de hechos\relax }}{235}{table.caption.176}
-\contentsline {table}{\numberline {112}{\ignorespaces CU033-Generar calendario de encuentros: Descripci\IeC {\'o}n\relax }}{235}{table.caption.177}
-\contentsline {table}{\numberline {113}{\ignorespaces CU033-Generar calendario de encuentros: Flujos de hechos\relax }}{236}{table.caption.178}
-\contentsline {table}{\numberline {114}{\ignorespaces CU034-Reportar resultado de encuentro: Descripci\IeC {\'o}n\relax }}{237}{table.caption.179}
-\contentsline {table}{\numberline {115}{\ignorespaces CU034-Reportar resultado de encuentro: Flujos de hechos\relax }}{238}{table.caption.180}
-\contentsline {table}{\numberline {116}{\ignorespaces CU035-Administrar equipos/grupos: Descripci\IeC {\'o}n\relax }}{239}{table.caption.181}
-\contentsline {table}{\numberline {117}{\ignorespaces CU035-Administrar equipos/grupos: Flujos de hechos\relax }}{240}{table.caption.182}
-\contentsline {table}{\numberline {118}{\ignorespaces CU036-Crear un equipo: Descripci\IeC {\'o}n\relax }}{241}{table.caption.183}
-\contentsline {table}{\numberline {119}{\ignorespaces CU036-Crear un equipo: Flujos de hechos\relax }}{241}{table.caption.184}
-\contentsline {table}{\numberline {120}{\ignorespaces CU037-Actualizar informaci\IeC {\'o}n de equipo/grupo: Descripci\IeC {\'o}n\relax }}{242}{table.caption.185}
-\contentsline {table}{\numberline {121}{\ignorespaces CU037-Actualizar informaci\IeC {\'o}n de equipo/grupo: Flujos de hechos\relax }}{243}{table.caption.186}
-\contentsline {table}{\numberline {122}{\ignorespaces CU038-Agregar un integrante a un equipo/grupo: Descripci\IeC {\'o}n\relax }}{243}{table.caption.187}
-\contentsline {table}{\numberline {123}{\ignorespaces CU038-Agregar un integrante a un equipo/grupo: Flujos de hechos\relax }}{244}{table.caption.188}
-\contentsline {table}{\numberline {124}{\ignorespaces CU039-Actualizar informaci\IeC {\'o}n de integrante de equipo/grupo: Descripci\IeC {\'o}n\relax }}{245}{table.caption.189}
-\contentsline {table}{\numberline {125}{\ignorespaces CU039-Actualizar informaci\IeC {\'o}n de integrante de equipo/grupo: Flujos de hechos\relax }}{246}{table.caption.190}
-\contentsline {table}{\numberline {126}{\ignorespaces CU040-Dar de baja a integrante de equipo/grupo: Descripci\IeC {\'o}n\relax }}{247}{table.caption.191}
-\contentsline {table}{\numberline {127}{\ignorespaces CU040-Dar de baja a integrante de equipo/grupo: Flujos de hechos\relax }}{248}{table.caption.192}
-\contentsline {table}{\numberline {128}{\ignorespaces CU041-Crear grupo deportivo: Descripci\IeC {\'o}n\relax }}{248}{table.caption.193}
-\contentsline {table}{\numberline {129}{\ignorespaces CU041-Crear grupo deportivo: Flujos de hechos\relax }}{249}{table.caption.194}
-\contentsline {table}{\numberline {130}{\ignorespaces CU031-Gestionar estad\IeC {\'\i }sticas: Descripci\IeC {\'o}n\relax }}{251}{table.caption.195}
-\contentsline {table}{\numberline {131}{\ignorespaces CU031-Gestionar estad\IeC {\'\i }sticas: Flujos de hechos\relax }}{252}{table.caption.196}
-\contentsline {table}{\numberline {132}{\ignorespaces CU032-Llevar estad\IeC {\'\i }stica de jugador: Descripci\IeC {\'o}n\relax }}{253}{table.caption.197}
-\contentsline {table}{\numberline {133}{\ignorespaces CU032-Llevar estad\IeC {\'\i }stica de jugador: Flujos de hechos\relax }}{254}{table.caption.198}
-\contentsline {table}{\numberline {134}{\ignorespaces CU033-Llevar estad\IeC {\'\i }stica de equipo: Descripci\IeC {\'o}n\relax }}{255}{table.caption.199}
-\contentsline {table}{\numberline {135}{\ignorespaces CU033-Llevar estad\IeC {\'\i }stica de equipo: Flujos de hechos\relax }}{256}{table.caption.200}
-\contentsline {table}{\numberline {136}{\ignorespaces CU034-Gesti\IeC {\'o}n de niveles de juego: Descripci\IeC {\'o}n\relax }}{257}{table.caption.201}
-\contentsline {table}{\numberline {137}{\ignorespaces CU034-Gesti\IeC {\'o}n de niveles de juego: Flujos de hechos\relax }}{258}{table.caption.202}
-\contentsline {table}{\numberline {138}{\ignorespaces CU035-Calificar ligas deportivas: Descripci\IeC {\'o}n\relax }}{259}{table.caption.203}
-\contentsline {table}{\numberline {139}{\ignorespaces CU035-Gesti\IeC {\'o}n de niveles de juego: Flujos de hechos\relax }}{260}{table.caption.204}
-\contentsline {table}{\numberline {140}{\ignorespaces CU036-Calificar entrenadores: Descripci\IeC {\'o}n\relax }}{261}{table.caption.205}
-\contentsline {table}{\numberline {141}{\ignorespaces CU036-Calificar entrenadores: Flujos de hechos\relax }}{262}{table.caption.206}
-\contentsline {table}{\numberline {142}{\ignorespaces CU037-Calificar organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{263}{table.caption.207}
-\contentsline {table}{\numberline {143}{\ignorespaces CU037-Calificar organizaci\IeC {\'o}n: Flujos de hechos\relax }}{264}{table.caption.208}
-\contentsline {table}{\numberline {144}{\ignorespaces CU038-Llevar calificaci\IeC {\'o}n de "mejor por categor\IeC {\'\i }a": Descripci\IeC {\'o}n\relax }}{265}{table.caption.209}
-\contentsline {table}{\numberline {145}{\ignorespaces CU038-Llevar calificaci\IeC {\'o}n de "mejor por categor\IeC {\'\i }a": Flujos de hechos\relax }}{266}{table.caption.210}
-\contentsline {table}{\numberline {146}{\ignorespaces CU038-Llevar estad\IeC {\'\i }stica de ubicaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{267}{table.caption.211}
-\contentsline {table}{\numberline {147}{\ignorespaces CU038-Llevar estad\IeC {\'\i }stica de ubicaci\IeC {\'o}n: Flujos de hechos\relax }}{268}{table.caption.212}
-\contentsline {table}{\numberline {148}{\ignorespaces CU039-Administrar patrocinios: Descripci\IeC {\'o}n\relax }}{270}{table.caption.213}
-\contentsline {table}{\numberline {149}{\ignorespaces CU039-Administrar patrocinios: Flujos de hechos\relax }}{271}{table.caption.214}
-\contentsline {table}{\numberline {150}{\ignorespaces CU039-Gestionar patrocinios de patrocinador: Descripci\IeC {\'o}n\relax }}{272}{table.caption.215}
-\contentsline {table}{\numberline {151}{\ignorespaces CU039-Gestionar patrocinios de patrocinador: Flujos de hechos\relax }}{273}{table.caption.216}
-\contentsline {table}{\numberline {152}{\ignorespaces CU041-Aceptar ser patrocinador: Descripci\IeC {\'o}n\relax }}{274}{table.caption.217}
-\contentsline {table}{\numberline {153}{\ignorespaces CU041-Aceptar ser patrocinador: Flujos de hechos\relax }}{275}{table.caption.218}
-\contentsline {table}{\numberline {154}{\ignorespaces CU041-Solicitar ser patrocinador: Descripci\IeC {\'o}n\relax }}{276}{table.caption.219}
-\contentsline {table}{\numberline {155}{\ignorespaces CU041-Solicitar ser patrocinador: Flujos de hechos\relax }}{277}{table.caption.220}
-\contentsline {table}{\numberline {156}{\ignorespaces CU041-Dejar de ser patrocinador: Descripci\IeC {\'o}n\relax }}{278}{table.caption.221}
-\contentsline {table}{\numberline {157}{\ignorespaces CU041-Dejar de ser patrocinador: Flujos de hechos\relax }}{279}{table.caption.222}
-\contentsline {table}{\numberline {158}{\ignorespaces CU041-Consultar historial de patrocinios: Descripci\IeC {\'o}n\relax }}{280}{table.caption.223}
-\contentsline {table}{\numberline {159}{\ignorespaces CU041-Consultar historial de patrocinios: Flujos de hechos\relax }}{281}{table.caption.224}
-\contentsline {table}{\numberline {160}{\ignorespaces CU043-Gestionar tracking: Descripci\IeC {\'o}n\relax }}{281}{table.caption.225}
-\contentsline {table}{\numberline {161}{\ignorespaces CU042-Gestionar tracking: Flujos de hechos\relax }}{282}{table.caption.226}
-\contentsline {table}{\numberline {162}{\ignorespaces CU043-Seguir jugador: Descripci\IeC {\'o}n\relax }}{282}{table.caption.227}
-\contentsline {table}{\numberline {163}{\ignorespaces CU042-Seguir jugador: Flujos de hechos\relax }}{283}{table.caption.228}
-\contentsline {table}{\numberline {164}{\ignorespaces CU043-Dejar de seguir jugador: Descripci\IeC {\'o}n\relax }}{283}{table.caption.229}
-\contentsline {table}{\numberline {165}{\ignorespaces CU042-Dejar de seguir jugador: Flujos de hechos\relax }}{284}{table.caption.230}
-\contentsline {table}{\numberline {166}{\ignorespaces CU043-Seguir equipo: Descripci\IeC {\'o}n\relax }}{284}{table.caption.231}
-\contentsline {table}{\numberline {167}{\ignorespaces CU042-Seguir equipo: Flujos de hechos\relax }}{285}{table.caption.232}
-\contentsline {table}{\numberline {168}{\ignorespaces CU043-Dejar de seguir equipo: Descripci\IeC {\'o}n\relax }}{285}{table.caption.233}
-\contentsline {table}{\numberline {169}{\ignorespaces CU042-Dejar de seguir equipo: Flujos de hechos\relax }}{286}{table.caption.234}
-\contentsline {table}{\numberline {170}{\ignorespaces CU043-Seguir organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{286}{table.caption.235}
-\contentsline {table}{\numberline {171}{\ignorespaces CU042-Seguir organizaci\IeC {\'o}n: Flujos de hechos\relax }}{287}{table.caption.236}
-\contentsline {table}{\numberline {172}{\ignorespaces CU043-Dejar de seguir organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{287}{table.caption.237}
-\contentsline {table}{\numberline {173}{\ignorespaces CU042-Dejar de seguir organizaci\IeC {\'o}n: Flujos de hechos\relax }}{288}{table.caption.238}
-\contentsline {table}{\numberline {174}{\ignorespaces CU043-******************Tracking a jugadores/equipos/eventos deportivos: Descripci\IeC {\'o}n\relax }}{289}{table.caption.239}
-\contentsline {table}{\numberline {175}{\ignorespaces CU043-Tracking a jugadores/equipos/eventos deportivos: Flujos de hechos\relax }}{290}{table.caption.240}
-\contentsline {table}{\numberline {176}{\ignorespaces CU042-Gestionar patrocinios de equipo/jugador: Descripci\IeC {\'o}n\relax }}{290}{table.caption.241}
-\contentsline {table}{\numberline {177}{\ignorespaces CU041-Gestionar patrocinios de equipo/jugador: Flujos de hechos\relax }}{291}{table.caption.242}
-\contentsline {table}{\numberline {178}{\ignorespaces CU042-Solicitar patrocinio: Descripci\IeC {\'o}n\relax }}{292}{table.caption.243}
-\contentsline {table}{\numberline {179}{\ignorespaces CU041-Solicitar patrocinio: Flujos de hechos\relax }}{293}{table.caption.244}
-\contentsline {table}{\numberline {180}{\ignorespaces CU042-Dejar patrocinio: Descripci\IeC {\'o}n\relax }}{293}{table.caption.245}
-\contentsline {table}{\numberline {181}{\ignorespaces CU041-Dejar patrocinio: Flujos de hechos\relax }}{294}{table.caption.246}
-\contentsline {table}{\numberline {182}{\ignorespaces CU042-Consultar patrocinios: Descripci\IeC {\'o}n\relax }}{294}{table.caption.247}
-\contentsline {table}{\numberline {183}{\ignorespaces CU041-Consultar patrocinios: Flujos de hechos\relax }}{295}{table.caption.248}
-\contentsline {table}{\numberline {184}{\ignorespaces CU042-Aceptar solicitud de patrocinio: Descripci\IeC {\'o}n\relax }}{295}{table.caption.249}
-\contentsline {table}{\numberline {185}{\ignorespaces CU041-Aceptar solicitud de patrocinio: Flujos de hechos\relax }}{296}{table.caption.250}
+\contentsline {table}{\numberline {96}{\ignorespaces CU024-Consultar participantes: Descripci\IeC {\'o}n\relax }}{225}{table.caption.161}
+\contentsline {table}{\numberline {97}{\ignorespaces CU024-Retirar participante: Flujos de hechos\relax }}{225}{table.caption.162}
+\contentsline {table}{\numberline {98}{\ignorespaces CU025-A\IeC {\~n}adir espectador: Descripci\IeC {\'o}n\relax }}{226}{table.caption.163}
+\contentsline {table}{\numberline {99}{\ignorespaces CU025-A\IeC {\~n}adir espectador: Flujos de hechos\relax }}{226}{table.caption.164}
+\contentsline {table}{\numberline {100}{\ignorespaces CU026-Retirar espectador: Descripci\IeC {\'o}n\relax }}{227}{table.caption.165}
+\contentsline {table}{\numberline {101}{\ignorespaces CU026-Retirar espectador: Flujos de hechos\relax }}{227}{table.caption.166}
+\contentsline {table}{\numberline {102}{\ignorespaces CU027-Administrar torneos: Descripci\IeC {\'o}n\relax }}{229}{table.caption.167}
+\contentsline {table}{\numberline {103}{\ignorespaces CU027-Administrar torneos: Flujos de hechos\relax }}{230}{table.caption.168}
+\contentsline {table}{\numberline {104}{\ignorespaces CU028-Crear un torneo: Descripci\IeC {\'o}n\relax }}{230}{table.caption.169}
+\contentsline {table}{\numberline {105}{\ignorespaces CU028-Crear un torneo: Flujos de hechos\relax }}{231}{table.caption.170}
+\contentsline {table}{\numberline {106}{\ignorespaces CU029-Actualizar informaci\IeC {\'o}n de torneo: Descripci\IeC {\'o}n\relax }}{232}{table.caption.171}
+\contentsline {table}{\numberline {107}{\ignorespaces CU029-Actualizar informaci\IeC {\'o}n de torneo: Flujos de hechos\relax }}{233}{table.caption.172}
+\contentsline {table}{\numberline {108}{\ignorespaces CU030-Gestionar formato de torneo: Descripci\IeC {\'o}n\relax }}{233}{table.caption.173}
+\contentsline {table}{\numberline {109}{\ignorespaces CU030-Gestionar formato de torneo: Flujos de hechos\relax }}{234}{table.caption.174}
+\contentsline {table}{\numberline {110}{\ignorespaces CU031-Agregar participante a torneo: Descripci\IeC {\'o}n\relax }}{234}{table.caption.175}
+\contentsline {table}{\numberline {111}{\ignorespaces CU031-Agregar participante a torneo: Flujos de hechos\relax }}{235}{table.caption.176}
+\contentsline {table}{\numberline {112}{\ignorespaces CU032-Retirar participante de torneo: Descripci\IeC {\'o}n\relax }}{235}{table.caption.177}
+\contentsline {table}{\numberline {113}{\ignorespaces CU032-Retirar equipo de torneo: Flujos de hechos\relax }}{236}{table.caption.178}
+\contentsline {table}{\numberline {114}{\ignorespaces CU033-Generar calendario de encuentros: Descripci\IeC {\'o}n\relax }}{236}{table.caption.179}
+\contentsline {table}{\numberline {115}{\ignorespaces CU033-Generar calendario de encuentros: Flujos de hechos\relax }}{237}{table.caption.180}
+\contentsline {table}{\numberline {116}{\ignorespaces CU034-Reportar resultado de encuentro: Descripci\IeC {\'o}n\relax }}{238}{table.caption.181}
+\contentsline {table}{\numberline {117}{\ignorespaces CU034-Reportar resultado de encuentro: Flujos de hechos\relax }}{239}{table.caption.182}
+\contentsline {table}{\numberline {118}{\ignorespaces CU035-Administrar equipos/grupos: Descripci\IeC {\'o}n\relax }}{240}{table.caption.183}
+\contentsline {table}{\numberline {119}{\ignorespaces CU035-Administrar equipos/grupos: Flujos de hechos\relax }}{241}{table.caption.184}
+\contentsline {table}{\numberline {120}{\ignorespaces CU036-Crear un equipo: Descripci\IeC {\'o}n\relax }}{242}{table.caption.185}
+\contentsline {table}{\numberline {121}{\ignorespaces CU036-Crear un equipo: Flujos de hechos\relax }}{242}{table.caption.186}
+\contentsline {table}{\numberline {122}{\ignorespaces CU037-Actualizar informaci\IeC {\'o}n de equipo/grupo: Descripci\IeC {\'o}n\relax }}{243}{table.caption.187}
+\contentsline {table}{\numberline {123}{\ignorespaces CU037-Actualizar informaci\IeC {\'o}n de equipo/grupo: Flujos de hechos\relax }}{244}{table.caption.188}
+\contentsline {table}{\numberline {124}{\ignorespaces CU038-Agregar un integrante a un equipo/grupo: Descripci\IeC {\'o}n\relax }}{244}{table.caption.189}
+\contentsline {table}{\numberline {125}{\ignorespaces CU038-Agregar un integrante a un equipo/grupo: Flujos de hechos\relax }}{245}{table.caption.190}
+\contentsline {table}{\numberline {126}{\ignorespaces CU039-Actualizar informaci\IeC {\'o}n de integrante de equipo/grupo: Descripci\IeC {\'o}n\relax }}{246}{table.caption.191}
+\contentsline {table}{\numberline {127}{\ignorespaces CU039-Actualizar informaci\IeC {\'o}n de integrante de equipo/grupo: Flujos de hechos\relax }}{247}{table.caption.192}
+\contentsline {table}{\numberline {128}{\ignorespaces CU040-Dar de baja a integrante de equipo/grupo: Descripci\IeC {\'o}n\relax }}{248}{table.caption.193}
+\contentsline {table}{\numberline {129}{\ignorespaces CU040-Dar de baja a integrante de equipo/grupo: Flujos de hechos\relax }}{249}{table.caption.194}
+\contentsline {table}{\numberline {130}{\ignorespaces CU041-Crear grupo deportivo: Descripci\IeC {\'o}n\relax }}{249}{table.caption.195}
+\contentsline {table}{\numberline {131}{\ignorespaces CU041-Crear grupo deportivo: Flujos de hechos\relax }}{250}{table.caption.196}
+\contentsline {table}{\numberline {132}{\ignorespaces CU031-Gestionar estad\IeC {\'\i }sticas: Descripci\IeC {\'o}n\relax }}{252}{table.caption.197}
+\contentsline {table}{\numberline {133}{\ignorespaces CU031-Gestionar estad\IeC {\'\i }sticas: Flujos de hechos\relax }}{253}{table.caption.198}
+\contentsline {table}{\numberline {134}{\ignorespaces CU032-Llevar estad\IeC {\'\i }stica de jugador: Descripci\IeC {\'o}n\relax }}{254}{table.caption.199}
+\contentsline {table}{\numberline {135}{\ignorespaces CU032-Llevar estad\IeC {\'\i }stica de jugador: Flujos de hechos\relax }}{255}{table.caption.200}
+\contentsline {table}{\numberline {136}{\ignorespaces CU033-Llevar estad\IeC {\'\i }stica de equipo: Descripci\IeC {\'o}n\relax }}{256}{table.caption.201}
+\contentsline {table}{\numberline {137}{\ignorespaces CU033-Llevar estad\IeC {\'\i }stica de equipo: Flujos de hechos\relax }}{257}{table.caption.202}
+\contentsline {table}{\numberline {138}{\ignorespaces CU034-Gesti\IeC {\'o}n de niveles de juego: Descripci\IeC {\'o}n\relax }}{258}{table.caption.203}
+\contentsline {table}{\numberline {139}{\ignorespaces CU034-Gesti\IeC {\'o}n de niveles de juego: Flujos de hechos\relax }}{259}{table.caption.204}
+\contentsline {table}{\numberline {140}{\ignorespaces CU035-Calificar ligas deportivas: Descripci\IeC {\'o}n\relax }}{260}{table.caption.205}
+\contentsline {table}{\numberline {141}{\ignorespaces CU035-Gesti\IeC {\'o}n de niveles de juego: Flujos de hechos\relax }}{261}{table.caption.206}
+\contentsline {table}{\numberline {142}{\ignorespaces CU036-Calificar entrenadores: Descripci\IeC {\'o}n\relax }}{262}{table.caption.207}
+\contentsline {table}{\numberline {143}{\ignorespaces CU036-Calificar entrenadores: Flujos de hechos\relax }}{263}{table.caption.208}
+\contentsline {table}{\numberline {144}{\ignorespaces CU037-Calificar organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{264}{table.caption.209}
+\contentsline {table}{\numberline {145}{\ignorespaces CU037-Calificar organizaci\IeC {\'o}n: Flujos de hechos\relax }}{265}{table.caption.210}
+\contentsline {table}{\numberline {146}{\ignorespaces CU038-Llevar calificaci\IeC {\'o}n de "mejor por categor\IeC {\'\i }a": Descripci\IeC {\'o}n\relax }}{266}{table.caption.211}
+\contentsline {table}{\numberline {147}{\ignorespaces CU038-Llevar calificaci\IeC {\'o}n de "mejor por categor\IeC {\'\i }a": Flujos de hechos\relax }}{267}{table.caption.212}
+\contentsline {table}{\numberline {148}{\ignorespaces CU038-Llevar estad\IeC {\'\i }stica de ubicaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{268}{table.caption.213}
+\contentsline {table}{\numberline {149}{\ignorespaces CU038-Llevar estad\IeC {\'\i }stica de ubicaci\IeC {\'o}n: Flujos de hechos\relax }}{269}{table.caption.214}
+\contentsline {table}{\numberline {150}{\ignorespaces CU039-Administrar patrocinios: Descripci\IeC {\'o}n\relax }}{271}{table.caption.215}
+\contentsline {table}{\numberline {151}{\ignorespaces CU039-Administrar patrocinios: Flujos de hechos\relax }}{272}{table.caption.216}
+\contentsline {table}{\numberline {152}{\ignorespaces CU039-Gestionar patrocinios de patrocinador: Descripci\IeC {\'o}n\relax }}{273}{table.caption.217}
+\contentsline {table}{\numberline {153}{\ignorespaces CU039-Gestionar patrocinios de patrocinador: Flujos de hechos\relax }}{274}{table.caption.218}
+\contentsline {table}{\numberline {154}{\ignorespaces CU041-Gestionar elementos de patrocinio: Descripci\IeC {\'o}n\relax }}{274}{table.caption.219}
+\contentsline {table}{\numberline {155}{\ignorespaces CU041-Gestionar elementos de patrocinio: Flujos de hechos\relax }}{275}{table.caption.220}
+\contentsline {table}{\numberline {156}{\ignorespaces CU041-Gestionar material de patrocinio: Descripci\IeC {\'o}n\relax }}{275}{table.caption.221}
+\contentsline {table}{\numberline {157}{\ignorespaces CU041-Gestionar material de patrocinio: Flujos de hechos\relax }}{276}{table.caption.222}
+\contentsline {table}{\numberline {158}{\ignorespaces CU041-Gestionar servicios de patrocinio: Descripci\IeC {\'o}n\relax }}{276}{table.caption.223}
+\contentsline {table}{\numberline {159}{\ignorespaces CU041-estionar servicios de patrocinio: Flujos de hechos\relax }}{277}{table.caption.224}
+\contentsline {table}{\numberline {160}{\ignorespaces CU041-Gestionar capacidad de financiamiento: Descripci\IeC {\'o}n\relax }}{277}{table.caption.225}
+\contentsline {table}{\numberline {161}{\ignorespaces CU041-Gestionar capacidad de financiamiento: Flujos de hechos\relax }}{278}{table.caption.226}
+\contentsline {table}{\numberline {162}{\ignorespaces CU041-Aceptar ser patrocinador: Descripci\IeC {\'o}n\relax }}{279}{table.caption.227}
+\contentsline {table}{\numberline {163}{\ignorespaces CU041-Aceptar ser patrocinador: Flujos de hechos\relax }}{280}{table.caption.228}
+\contentsline {table}{\numberline {164}{\ignorespaces CU041-Solicitar ser patrocinador: Descripci\IeC {\'o}n\relax }}{281}{table.caption.229}
+\contentsline {table}{\numberline {165}{\ignorespaces CU041-Solicitar ser patrocinador: Flujos de hechos\relax }}{282}{table.caption.230}
+\contentsline {table}{\numberline {166}{\ignorespaces CU041-Dejar de ser patrocinador: Descripci\IeC {\'o}n\relax }}{283}{table.caption.231}
+\contentsline {table}{\numberline {167}{\ignorespaces CU041-Dejar de ser patrocinador: Flujos de hechos\relax }}{284}{table.caption.232}
+\contentsline {table}{\numberline {168}{\ignorespaces CU041-Consultar historial de patrocinios: Descripci\IeC {\'o}n\relax }}{285}{table.caption.233}
+\contentsline {table}{\numberline {169}{\ignorespaces CU041-Consultar historial de patrocinios: Flujos de hechos\relax }}{286}{table.caption.234}
+\contentsline {table}{\numberline {170}{\ignorespaces CU041-Actualizar detalles de patrocinio: Descripci\IeC {\'o}n\relax }}{286}{table.caption.235}
+\contentsline {table}{\numberline {171}{\ignorespaces CU041-Actualizar detalles de patrocinio: Flujos de hechos\relax }}{287}{table.caption.236}
+\contentsline {table}{\numberline {172}{\ignorespaces CU043-Gestionar tracking: Descripci\IeC {\'o}n\relax }}{287}{table.caption.237}
+\contentsline {table}{\numberline {173}{\ignorespaces CU042-Gestionar tracking: Flujos de hechos\relax }}{288}{table.caption.238}
+\contentsline {table}{\numberline {174}{\ignorespaces CU043-Seguir jugador: Descripci\IeC {\'o}n\relax }}{288}{table.caption.239}
+\contentsline {table}{\numberline {175}{\ignorespaces CU042-Seguir jugador: Flujos de hechos\relax }}{289}{table.caption.240}
+\contentsline {table}{\numberline {176}{\ignorespaces CU043-Dejar de seguir jugador: Descripci\IeC {\'o}n\relax }}{289}{table.caption.241}
+\contentsline {table}{\numberline {177}{\ignorespaces CU042-Dejar de seguir jugador: Flujos de hechos\relax }}{290}{table.caption.242}
+\contentsline {table}{\numberline {178}{\ignorespaces CU043-Seguir equipo: Descripci\IeC {\'o}n\relax }}{290}{table.caption.243}
+\contentsline {table}{\numberline {179}{\ignorespaces CU042-Seguir equipo: Flujos de hechos\relax }}{291}{table.caption.244}
+\contentsline {table}{\numberline {180}{\ignorespaces CU043-Dejar de seguir equipo: Descripci\IeC {\'o}n\relax }}{291}{table.caption.245}
+\contentsline {table}{\numberline {181}{\ignorespaces CU042-Dejar de seguir equipo: Flujos de hechos\relax }}{292}{table.caption.246}
+\contentsline {table}{\numberline {182}{\ignorespaces CU043-Seguir organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{292}{table.caption.247}
+\contentsline {table}{\numberline {183}{\ignorespaces CU042-Seguir organizaci\IeC {\'o}n: Flujos de hechos\relax }}{293}{table.caption.248}
+\contentsline {table}{\numberline {184}{\ignorespaces CU043-Dejar de seguir organizaci\IeC {\'o}n: Descripci\IeC {\'o}n\relax }}{293}{table.caption.249}
+\contentsline {table}{\numberline {185}{\ignorespaces CU042-Dejar de seguir organizaci\IeC {\'o}n: Flujos de hechos\relax }}{294}{table.caption.250}
+\contentsline {table}{\numberline {186}{\ignorespaces CU043-Consultar informaci\IeC {\'o}n de seguido: Descripci\IeC {\'o}n\relax }}{295}{table.caption.251}
+\contentsline {table}{\numberline {187}{\ignorespaces CU043-Consultar informaci\IeC {\'o}n de seguido: Flujos de hechos\relax }}{296}{table.caption.252}
+\contentsline {table}{\numberline {188}{\ignorespaces CU042-Gestionar patrocinios de equipo/jugador: Descripci\IeC {\'o}n\relax }}{296}{table.caption.253}
+\contentsline {table}{\numberline {189}{\ignorespaces CU041-Gestionar patrocinios de equipo/jugador: Flujos de hechos\relax }}{297}{table.caption.254}
+\contentsline {table}{\numberline {190}{\ignorespaces CU042-Solicitar patrocinio: Descripci\IeC {\'o}n\relax }}{298}{table.caption.255}
+\contentsline {table}{\numberline {191}{\ignorespaces CU041-Solicitar patrocinio: Flujos de hechos\relax }}{299}{table.caption.256}
+\contentsline {table}{\numberline {192}{\ignorespaces CU042-Dejar patrocinio: Descripci\IeC {\'o}n\relax }}{299}{table.caption.257}
+\contentsline {table}{\numberline {193}{\ignorespaces CU041-Dejar patrocinio: Flujos de hechos\relax }}{300}{table.caption.258}
+\contentsline {table}{\numberline {194}{\ignorespaces CU042-Consultar patrocinios: Descripci\IeC {\'o}n\relax }}{300}{table.caption.259}
+\contentsline {table}{\numberline {195}{\ignorespaces CU041-Consultar patrocinios: Flujos de hechos\relax }}{301}{table.caption.260}
+\contentsline {table}{\numberline {196}{\ignorespaces CU042-Aceptar solicitud de patrocinio: Descripci\IeC {\'o}n\relax }}{301}{table.caption.261}
+\contentsline {table}{\numberline {197}{\ignorespaces CU041-Aceptar solicitud de patrocinio: Flujos de hechos\relax }}{302}{table.caption.262}
+\contentsline {table}{\numberline {198}{\ignorespaces CU001-Administrar jugador: Descripci\IeC {\'o}n\relax }}{303}{table.caption.263}
+\contentsline {table}{\numberline {199}{\ignorespaces CU001-Administrar jugador: Flujos de hechos \relax }}{304}{table.caption.264}
+\contentsline {table}{\numberline {200}{\ignorespaces CU001-Actualizar informaci\IeC {\'o}n de jugador: Descripci\IeC {\'o}n\relax }}{304}{table.caption.265}
+\contentsline {table}{\numberline {201}{\ignorespaces CU001-Actualizar informaci\IeC {\'o}n de jugador: Flujos de hechos \relax }}{305}{table.caption.266}
+\contentsline {table}{\numberline {202}{\ignorespaces CU001-Gestionar deportes practicados: Descripci\IeC {\'o}n\relax }}{306}{table.caption.267}
+\contentsline {table}{\numberline {203}{\ignorespaces CU001-Gestionar deportes practicados: Flujos de hechos \relax }}{307}{table.caption.268}
+\contentsline {table}{\numberline {204}{\ignorespaces CU001-Agregar deporte practicado: Descripci\IeC {\'o}n\relax }}{307}{table.caption.269}
+\contentsline {table}{\numberline {205}{\ignorespaces CU001-Agregar deporte practicado: Flujos de hechos \relax }}{308}{table.caption.270}
+\contentsline {table}{\numberline {206}{\ignorespaces CU001-Eliminar deporte practicado: Descripci\IeC {\'o}n\relax }}{308}{table.caption.271}
+\contentsline {table}{\numberline {207}{\ignorespaces CU001-Eliminar deporte practicado: Flujos de hechos \relax }}{309}{table.caption.272}
+\contentsline {table}{\numberline {208}{\ignorespaces CU001-Actualizar deporte practicado: Descripci\IeC {\'o}n\relax }}{309}{table.caption.273}
+\contentsline {table}{\numberline {209}{\ignorespaces CU001-Actualizar deporte practicado: Flujos de hechos \relax }}{310}{table.caption.274}
+\contentsline {table}{\numberline {210}{\ignorespaces CU001-NOMBRE: Descripci\IeC {\'o}n\relax }}{310}{table.caption.275}
+\contentsline {table}{\numberline {211}{\ignorespaces CU001-NOMBRE: Flujos de hechos\relax }}{310}{table.caption.276}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {186}{\ignorespaces Actores de negocio }}{298}{table.15.186}
-\contentsline {table}{\numberline {187}{\ignorespaces Roles de negocio }}{299}{table.15.187}
-\contentsline {table}{\numberline {188}{\ignorespaces Eventos de negocio }}{301}{table.15.188}
-\contentsline {table}{\numberline {190}{\ignorespaces Objetos de negocio }}{303}{table.15.190}
-\contentsline {table}{\numberline {193}{\ignorespaces Servicios de negocio }}{306}{table.15.193}
-\contentsline {table}{\numberline {194}{\ignorespaces Funciones de negocio }}{309}{table.15.194}
-\contentsline {table}{\numberline {189}{\ignorespaces Interacciones de negocio\relax }}{313}{table.caption.251}
-\contentsline {table}{\numberline {191}{\ignorespaces Colaboraciones de negocio\relax }}{313}{table.caption.252}
-\contentsline {table}{\numberline {195}{\ignorespaces Procesos de negocio }}{313}{table.15.195}
-\contentsline {table}{\numberline {196}{\ignorespaces Componentes de aplicaci\IeC {\'o}n }}{323}{table.15.196}
-\contentsline {table}{\numberline {192}{\ignorespaces Producto de negocio\relax }}{326}{table.caption.253}
-\contentsline {table}{\numberline {197}{\ignorespaces Colaboraciones de aplicaci\IeC {\'o}n }}{326}{table.15.197}
-\contentsline {table}{\numberline {198}{\ignorespaces Funciones de aplicaci\IeC {\'o}n }}{326}{table.15.198}
-\contentsline {table}{\numberline {199}{\ignorespaces Interacciones de aplicaci\IeC {\'o}n }}{327}{table.15.199}
-\contentsline {table}{\numberline {200}{\ignorespaces Servicios de aplicaci\IeC {\'o}n }}{327}{table.15.200}
-\contentsline {table}{\numberline {201}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{328}{table.caption.254}
+\contentsline {table}{\numberline {212}{\ignorespaces Actores de negocio }}{312}{table.15.212}
+\contentsline {table}{\numberline {213}{\ignorespaces Roles de negocio }}{313}{table.15.213}
+\contentsline {table}{\numberline {214}{\ignorespaces Eventos de negocio }}{315}{table.15.214}
+\contentsline {table}{\numberline {216}{\ignorespaces Objetos de negocio }}{317}{table.15.216}
+\contentsline {table}{\numberline {219}{\ignorespaces Servicios de negocio }}{320}{table.15.219}
+\contentsline {table}{\numberline {220}{\ignorespaces Funciones de negocio }}{323}{table.15.220}
+\contentsline {table}{\numberline {215}{\ignorespaces Interacciones de negocio\relax }}{327}{table.caption.277}
+\contentsline {table}{\numberline {217}{\ignorespaces Colaboraciones de negocio\relax }}{327}{table.caption.278}
+\contentsline {table}{\numberline {221}{\ignorespaces Procesos de negocio }}{327}{table.15.221}
+\contentsline {table}{\numberline {222}{\ignorespaces Componentes de aplicaci\IeC {\'o}n }}{337}{table.15.222}
+\contentsline {table}{\numberline {218}{\ignorespaces Producto de negocio\relax }}{340}{table.caption.279}
+\contentsline {table}{\numberline {223}{\ignorespaces Colaboraciones de aplicaci\IeC {\'o}n }}{340}{table.15.223}
+\contentsline {table}{\numberline {224}{\ignorespaces Funciones de aplicaci\IeC {\'o}n }}{340}{table.15.224}
+\contentsline {table}{\numberline {225}{\ignorespaces Interacciones de aplicaci\IeC {\'o}n }}{341}{table.15.225}
+\contentsline {table}{\numberline {226}{\ignorespaces Servicios de aplicaci\IeC {\'o}n }}{341}{table.15.226}
+\contentsline {table}{\numberline {227}{\ignorespaces Artefactos de la capa de infraestructura\relax }}{342}{table.caption.280}

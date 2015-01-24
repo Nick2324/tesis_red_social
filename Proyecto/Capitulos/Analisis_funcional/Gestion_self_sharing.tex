@@ -1,0 +1,1422 @@
+\clearpage
+\begin{table}[!htb]
+	\caption{CU001-Gestionar self-sharing: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar self-sharing \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la gestión de todas las características self-sharing proporcionadas por el SNS \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar las opciones proporcionadas por el módulo de self-sharing para él, una organización, un equipo/grupo deportivo o un evento deportivo \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalización de:
+				\begin{itemize}
+					\item Gestionar timelines
+					\item Gestionar material multimedia
+					\item Gestionar mensajería instantánea
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar self-sharing: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar timeline: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar timeline \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la gestión de un timeline para cada actor/evento en la red social \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar el timeline de él, una organización, un equipo/grupo deportivo o un evento deportivo \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalización de:
+				\begin{itemize}
+					\item Crear post
+					\item Comentar un post
+					\item Eliminar un post
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar timeline: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Crear post: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear post \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la creación de un post sobre un timeline \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea crear un post sobre un timeline propio o ageno, según sus privilegios se lo permitan \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para la creación del post
+			\end{itemize}
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor crea un post sobre el timeline elegido
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Crear post: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Comentar un post: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Comentar un post \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite comentar un post creado sobre un timeline \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea comentar un post creado sobre un timeline propio o ageno, según sus privilegios se lo permitan \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para comentar el post creado
+			\end{itemize}
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor comenta un post creado sobre el timeline elegido
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Comentar un post: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar un post: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Eliminar un post \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite eliminar un post creado sobre un timeline administrado por el actor o creado por este \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea eliminar un post creado sobre un timeline propio o uno creado por él \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para eliminar el post creado
+			\end{itemize}
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor elimina un post creado sobre el timeline elegido
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar un post: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar material multimedia: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar material multimedia \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la gestión del material multimedia del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar material multimedia del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalización de:
+				\begin{itemize}
+					\item Gestionar albumes de fotos
+					\item Gestionar videos
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar material multimedia: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar albumes de fotos: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar albumes de fotos \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la gestión de albumes de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar albumes de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalización de:
+				\begin{itemize}
+					\item Crear album de fotos
+					\item Subir fotos a album
+					\item Eliminar album
+					\item Ver album
+					\item Gestionar fotos de album
+					\item Actualizar album de fotos
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar albumes de fotos: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Crear album de fotos: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear album de fotos \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la creación de un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea crear album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestionar fotos de album
+			\end{itemize}						
+			\\
+			\hline
+			Precondiciones &  \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El actor crea un album de fotos
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+\clearpage
+\begin{table}[!htb]
+	\caption{CU001-Crear album de fotos: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar album: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Eliminar album \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la eliminación de un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea eliminar album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones &  \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El actor elimina un album de fotos
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar album: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Actualizar album de fotos: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar album de fotos \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la actualización de la información del album de fotos elegido \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea actualizar la información del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestionar fotos de album
+			\end{itemize}						
+			\\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El actor actualiza la información del album de fotos
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Actualizar album de fotos: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Ver album: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Ver album \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite ver un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea ver album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & 
+			\begin{itemize}
+				\item Gestionar fotos de album
+			\end{itemize}						
+			\\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para poder ver el album de fotos
+			\end{itemize} \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Ver album: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar fotos de album: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar fotos de album\\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la gestión de las fotos del album que ha sido elegido \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar las fotos del album elegido \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalización de:
+				\begin{itemize}
+					\item Subir fotos a album
+					\item Eliminar foto de album
+					\item Ver foto
+					\item Actualizar foto
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar fotos de album: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Subir fotos a album: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Subir fotos a album \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite subir fotos a algún album en creación o ya creado \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea subir fotos a algún album en creación o ya creado \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor sube la cantidad de fotos que él requiera al album elegido
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Subir fotos a album: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar foto de album: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Eliminar foto de album \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite eliminar una foto de algún album en creación o ya creado \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea eliminar una foto de algún album en creación o ya creado \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor elimina la foto que él requiere del album elegido
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar foto de album: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Ver foto: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Ver foto \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite ver una foto de algún album elegido \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea ver una foto de algún album elegido \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+\clearpage
+\begin{table}[!htb]
+	\caption{CU001-Ver foto: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Actualizar foto: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar foto \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite actualizar la información de una foto de un album \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea actualizar la información de una foto de un album \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor actualiza la información de una foto de un album
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Actualizar foto: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar videos: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar videos \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite al usuario gestionar videos suyos o de cualquier organización/grupo/equipo o evento que él administre o sobre los que tenga dicho privilegio \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea gestionar los videos suyos o de cualquier organización/grupo/equipo o evento que él administre o sobre los que tenga dicho privilegio \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+				\item Generalizacion de:
+				\begin{itemize}
+					\item Reproducir un video
+					\item Modificar detalles de video
+					\item Subir un video
+					\item Eliminar un video
+				\end{itemize}
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Gestionar videos: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Reproducir un video: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Reproducir un video \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la reproducción de un video subido al SNS \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea reproducir un video subido al SNS \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para reproducir el video
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 						
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Reproducir un video: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Subir un video: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Subir un video \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la subida de un video al SNS \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea subir un video al SNS \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para subir el video
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor sube un video al SNS
+			\end{itemize}			 						
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Subir un video: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar un video: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Eliminar un video \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la eliminación de un video subido al SNS \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea eliminar un video subido al SNS \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para eliminar el video
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor elimina un video del SNS
+			\end{itemize}			 						
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Eliminar un video: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Modificar detalles de un video: Descripción}
+	\label{tab:cu001_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Modificar detalles de un video \\
+			\hline
+			Identificador & CU \\
+			\hline
+			Descripción & Permite la modificación de los detalles de un video subido al SNS \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea modificar los detalles de un video subido al SNS \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor modifica los detalles de un video del subido por él al SNS
+			\end{itemize}			 						
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU001-Modificar detalles de un video: Flujos de hechos }
+	\label{tab:cu001_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 & & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+\clearpage
