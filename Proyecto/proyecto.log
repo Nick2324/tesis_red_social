@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  1 FEB 2015 00:24
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  1 FEB 2015 06:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,12 +672,6 @@ LaTeX Warning: Label `tab:cu001_desc' multiply defined.
 LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu001_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
-
-
 LaTeX Warning: Label `tab:cu027_desc' multiply defined.
 
 
@@ -726,40 +720,7 @@ LaTeX Warning: Label `tab:cu034_desc' multiply defined.
 LaTeX Warning: Label `tab:cu034_flujo' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu035_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu035_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu036_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu036_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu037_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu037_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu038_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu038_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu039_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu039_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu040_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu040_flujo' multiply defined.
+LaTeX Warning: Label `tab:cu055_flujo' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu031_desc' multiply defined.
@@ -826,12 +787,6 @@ LaTeX Warning: Label `tab:cu039_desc' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu039_flujo' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu041_desc' multiply defined.
-
-
-LaTeX Warning: Label `tab:cu041_flujo' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu041_desc' multiply defined.
@@ -1282,32 +1237,34 @@ Underfull \vbox (badness 5592) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 111.
 LaTeX Info: Redefining \% on input line 111.
  [18]
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[19]
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
- [20]
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+ [19]
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+
+[20]
 Underfull \vbox (badness 1629) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
  [21]
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
 
 [22]
-LaTeX Info: Redefining \. on input line 243.
-LaTeX Info: Redefining \% on input line 243.
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
  [23]
-LaTeX Info: Redefining \. on input line 271.
-LaTeX Info: Redefining \% on input line 271.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
  [24]
 Underfull \vbox (badness 2478) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 299.
-LaTeX Info: Redefining \% on input line 299.
+LaTeX Info: Redefining \. on input line 298.
+LaTeX Info: Redefining \% on input line 298.
  [25])
 \tf@lot=\write6
 \openout6 = `proyecto.lot'.
@@ -4522,22 +4479,9 @@ LaTeX Warning: Reference `fig:cu1' on page 181 undefined on input line 1.
 
 LaTeX Warning: Reference `fig:cu70' on page 181 undefined on input line 1.
 
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 9--35
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 44--56
- [] 
- []
-
 (./Capitulos/Analisis_funcional/Administracion_deportes.tex [181
 
 ]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [182]
 (./Capitulos/Analisis_funcional/Administracion_deportes/CU001-Administrar_depor
 tes.tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
@@ -4643,15 +4587,18 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 62--74
 
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
+[182
+
+]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
 
 Overfull \hbox (5.58177pt too wide) has occurred while \output is active
 \OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
 1/lmr/m/n/12 183
  []
 
-[183
-
-]
+[183]
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
  [184]
@@ -4723,13 +4670,10 @@ Overfull \hbox (5.58177pt too wide) has occurred while \output is active
 1/lmr/m/n/12 195
  []
 
-[195]
-LaTeX Info: Redefining \. on input line 79.
-LaTeX Info: Redefining \% on input line 79.
- [196]) (./Capitulos/Analisis_funcional/Gestion_entrenador.tex
+[195]) (./Capitulos/Analisis_funcional/Gestion_entrenador.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [197
+ [196
 
 ]
 (./Capitulos/Analisis_funcional/Gestion_entrenador/CU008-Gestionar_entrenadores
@@ -4848,9 +4792,12 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 56--80
 )
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
- [198
+ [197
 
 ]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [198]
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
  [199]
@@ -4883,20 +4830,17 @@ LaTeX Info: Redefining \% on input line 18.
  [208]
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
- [209]
+
+[209]
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
-
-[210]
+ [210]
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
  [211]
 LaTeX Info: Redefining \. on input line 18.
 LaTeX Info: Redefining \% on input line 18.
  [212]
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
- [213]
 (./Capitulos/Analisis_funcional/Gestion_entrenador/CU016-Crear_rutina_de_plan_d
 e_entrenamiento.tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
@@ -5038,9 +4982,12 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--77
 )
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [214
+ [213
 
 ]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [214]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
  [215]
@@ -5073,17 +5020,20 @@ LaTeX Info: Redefining \% on input line 33.
  [224]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [225]
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
 
-[226]
+[225]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [227]) (./Capitulos/Analisis_funcional/Gestion_evento.tex
+ [226]) (./Capitulos/Analisis_funcional/Gestion_evento.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [228
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 227
+ []
+
+[227
 
 ]
 (./Capitulos/Analisis_funcional/Gestion_evento/CU023-Administrar_eventos_deport
@@ -5163,15 +5113,18 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--69
 )
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
+ [228
+
+]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 
 Overfull \hbox (3.2131pt too wide) has occurred while \output is active
 \OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
 /lmr/m/n/12 229
  []
 
-[229
-
-]
+[229]
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
  [230]
@@ -5211,15 +5164,6 @@ Overfull \hbox (3.2131pt too wide) has occurred while \output is active
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
  [236]
-LaTeX Info: Redefining \. on input line 13.
-LaTeX Info: Redefining \% on input line 13.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 237
- []
-
-[237]
 (./Capitulos/Analisis_funcional/Gestion_evento/CU028-Administrar_colaboradores.
 tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
@@ -5299,9 +5243,18 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 49--63
 )
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [238
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 237
+ []
+
+[237
 
 ]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [238]
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 
@@ -5347,9 +5300,6 @@ Overfull \hbox (3.2131pt too wide) has occurred while \output is active
  []
 
 [245]
-LaTeX Info: Redefining \. on input line 25.
-LaTeX Info: Redefining \% on input line 25.
- [246]
 (./Capitulos/Analisis_funcional/Gestion_evento/CU033-Retirar_participante.tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
  [] 
@@ -5477,15 +5427,18 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 45--63
 )
 LaTeX Info: Redefining \. on input line 43.
 LaTeX Info: Redefining \% on input line 43.
+ [246
+
+]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
 
 Overfull \hbox (3.2131pt too wide) has occurred while \output is active
 \OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
 /lmr/m/n/12 247
  []
 
-[247
-
-]
+[247]
 LaTeX Info: Redefining \. on input line 43.
 LaTeX Info: Redefining \% on input line 43.
  [248]
@@ -5545,10 +5498,7 @@ Overfull \hbox (3.2131pt too wide) has occurred while \output is active
 /lmr/m/n/12 257
  []
 
-[257]
-LaTeX Info: Redefining \. on input line 43.
-LaTeX Info: Redefining \% on input line 43.
- [258]) (./Capitulos/Analisis_funcional/Gestion_torneo.tex
+[257]) (./Capitulos/Analisis_funcional/Gestion_torneo.tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 7--53
  [] 
  []
@@ -5631,9 +5581,18 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 561--573
 ) (./Capitulos/Analisis_funcional/Gestion_equipo_grupo.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [259
+ [258
 
 ]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 259
+ []
+
+[259]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
  [260]
@@ -5694,126 +5653,242 @@ IVOS \OT1/lmr/m/n/12 269
  []
 
 [269]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [270]
-Underfull \hbox (badness 1603) in paragraph at lines 58--58
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU054-Administrar_equipos_
+grupos.tex
+Underfull \hbox (badness 1603) in paragraph at lines 48--48
 []\OT1/lmr/m/n/12 Actualizar in-for-ma-ci^^Son de in-te-gran-te de equi-
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 9--58
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--48
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 67--79
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 88--128
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 137--149
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 158--198
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 207--219
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 228--268
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 277--289
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 298--338
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 347--359
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 368--408
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 417--429
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 438--478
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 487--499
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--69
  [] 
  []
 
 )
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU055-Crear_un_equipo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 71--71
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--71
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU056-Actualizar_informaci
+on_de_equipo_grupo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--49
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 80--80
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 58--80
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU057-Gestionar_integrante
+s_equipo_grupo.tex
+Underfull \hbox (badness 2582) in paragraph at lines 46--46
+[]\OT1/lmr/m/n/12 Actualizar in-for-ma-ci^^Son de in-te-gran-te de gru-
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--46
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--69
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU058-Agregar_un_integrant
+e_a_un_equipo_grupo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 73--73
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--73
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU059-Actualizar_informaci
+on_de_integrante_de_equipo_grupo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 72--72
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 72--72
+\OT1/lmr/m/n/12 ges-ti^^Son de in-te-gran-tes de equi-
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--72
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU060-Dar_de_baja_a_integr
+ante_de_equipo_grupo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 71--71
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 71--71
+\OT1/lmr/m/n/12 ges-ti^^Son de in-te-gran-tes de equi-
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--71
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_equipo_grupo/CU061-Crear_grupo_deportiv
+o.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 71--71
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--71
+ [] 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+ [270
+
+]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
 \OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
 IVOS \OT1/lmr/m/n/12 271
  []
 
-[271
-
-] (./Capitulos/Analisis_funcional/Gestion_estadisticas.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+[271]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
  [272]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [273]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
 
-[274]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [275]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 273
+ []
+
+[273]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+ [274]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 275
+ []
+
+[275]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
  [276]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [277]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 277
+ []
+
+[277]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
  [278]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [279]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 279
+ []
+
+[279]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
  [280]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 281
+ []
+
+[281]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+ [282]
+LaTeX Info: Redefining \. on input line 19.
+LaTeX Info: Redefining \% on input line 19.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 283
+ []
+
+[283]) (./Capitulos/Analisis_funcional/Gestion_estadisticas.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [281]
+ [284
+
+]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 8--58
  [] 
  []
@@ -5885,18 +5960,9 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 513--525
 
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
-[282
+[285
 
 ]
-LaTeX Info: Redefining \. on input line 530.
-LaTeX Info: Redefining \% on input line 530.
- [283]
-LaTeX Info: Redefining \. on input line 530.
-LaTeX Info: Redefining \% on input line 530.
- [284]
-LaTeX Info: Redefining \. on input line 530.
-LaTeX Info: Redefining \% on input line 530.
- [285]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
  [286]
@@ -5923,14 +5989,23 @@ LaTeX Info: Redefining \% on input line 530.
  [293]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
-
-[294]
+ [294]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
  [295]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
  [296]
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
+
+[297]
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
+ [298]
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
+ [299]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 536--580
  [] 
  []
@@ -5953,21 +6028,21 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 663--675
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 114.
-LaTeX Info: Redefining \% on input line 114.
- [297
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+ [300
 
 ]
 (./Capitulos/Analisis_funcional/Gestion_patrocinios.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [298]
+ [301]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [299]
+ [302]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [300]
+ [303]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 8--57
  [] 
  []
@@ -6057,18 +6132,9 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 593--635
 
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
-[301
+[304
 
 ]
-LaTeX Info: Redefining \. on input line 640.
-LaTeX Info: Redefining \% on input line 640.
- [302]
-LaTeX Info: Redefining \. on input line 640.
-LaTeX Info: Redefining \% on input line 640.
- [303]
-LaTeX Info: Redefining \. on input line 640.
-LaTeX Info: Redefining \% on input line 640.
- [304]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
  [305]
@@ -6095,11 +6161,20 @@ LaTeX Info: Redefining \% on input line 640.
  [312]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
-
-[313]
+ [313]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
  [314]
+LaTeX Info: Redefining \. on input line 640.
+LaTeX Info: Redefining \% on input line 640.
+ [315]
+LaTeX Info: Redefining \. on input line 640.
+LaTeX Info: Redefining \% on input line 640.
+
+[316]
+LaTeX Info: Redefining \. on input line 640.
+LaTeX Info: Redefining \% on input line 640.
+ [317]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 646--658
  [] 
  []
@@ -6151,24 +6226,24 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 951--992
 
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
-[315
+[318
 
 ]
-LaTeX Info: Redefining \. on input line 997.
-LaTeX Info: Redefining \% on input line 997.
- [316]
-LaTeX Info: Redefining \. on input line 997.
-LaTeX Info: Redefining \% on input line 997.
- [317]
-LaTeX Info: Redefining \. on input line 997.
-LaTeX Info: Redefining \% on input line 997.
- [318]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
  [319]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
  [320]
+LaTeX Info: Redefining \. on input line 997.
+LaTeX Info: Redefining \% on input line 997.
+ [321]
+LaTeX Info: Redefining \. on input line 997.
+LaTeX Info: Redefining \% on input line 997.
+ [322]
+LaTeX Info: Redefining \. on input line 997.
+LaTeX Info: Redefining \% on input line 997.
+ [323]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 1003--1015
  [] 
  []
@@ -6246,18 +6321,9 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 1380--1418
 
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
-[321
+[324
 
 ]
-LaTeX Info: Redefining \. on input line 1423.
-LaTeX Info: Redefining \% on input line 1423.
- [322]
-LaTeX Info: Redefining \. on input line 1423.
-LaTeX Info: Redefining \% on input line 1423.
- [323]
-LaTeX Info: Redefining \. on input line 1423.
-LaTeX Info: Redefining \% on input line 1423.
- [324]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
  [325]
@@ -6267,6 +6333,15 @@ LaTeX Info: Redefining \% on input line 1423.
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
  [327]
+LaTeX Info: Redefining \. on input line 1423.
+LaTeX Info: Redefining \% on input line 1423.
+ [328]
+LaTeX Info: Redefining \. on input line 1423.
+LaTeX Info: Redefining \% on input line 1423.
+ [329]
+LaTeX Info: Redefining \. on input line 1423.
+LaTeX Info: Redefining \% on input line 1423.
+ [330]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 1429--1441
  [] 
  []
@@ -6312,30 +6387,30 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 1707--1719
  []
 
 )
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
- [328
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [331
 
 ]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
- [329]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
- [330]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
- [331]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
  [332]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
  [333]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [334]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [335]
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [336]
 (./Capitulos/Analisis_funcional/Gestion_self_sharing.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [334
+ [337
 
 ]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 6--44
@@ -6414,18 +6489,9 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 484--523
 
 LaTeX Info: Redefining \. on input line 527.
 LaTeX Info: Redefining \% on input line 527.
-[335
+[338
 
 ]
-LaTeX Info: Redefining \. on input line 527.
-LaTeX Info: Redefining \% on input line 527.
- [336]
-LaTeX Info: Redefining \. on input line 527.
-LaTeX Info: Redefining \% on input line 527.
- [337]
-LaTeX Info: Redefining \. on input line 527.
-LaTeX Info: Redefining \% on input line 527.
- [338]
 LaTeX Info: Redefining \. on input line 527.
 LaTeX Info: Redefining \% on input line 527.
  [339]
@@ -6452,8 +6518,17 @@ LaTeX Info: Redefining \% on input line 527.
  [346]
 LaTeX Info: Redefining \. on input line 527.
 LaTeX Info: Redefining \% on input line 527.
+ [347]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [348]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [349]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
 
-[347]
+[350]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 532--544
  [] 
  []
@@ -6525,18 +6600,9 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 957--989
 
 LaTeX Info: Redefining \. on input line 993.
 LaTeX Info: Redefining \% on input line 993.
-[348
+[351
 
 ]
-LaTeX Info: Redefining \. on input line 993.
-LaTeX Info: Redefining \% on input line 993.
- [349]
-LaTeX Info: Redefining \. on input line 993.
-LaTeX Info: Redefining \% on input line 993.
- [350]
-LaTeX Info: Redefining \. on input line 993.
-LaTeX Info: Redefining \% on input line 993.
- [351]
 LaTeX Info: Redefining \. on input line 993.
 LaTeX Info: Redefining \% on input line 993.
  [352]
@@ -6555,6 +6621,15 @@ LaTeX Info: Redefining \% on input line 993.
 LaTeX Info: Redefining \. on input line 993.
 LaTeX Info: Redefining \% on input line 993.
  [357]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [358]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [359]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [360]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 998--1010
  [] 
  []
@@ -6621,18 +6696,9 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 1406--1418
 
 LaTeX Info: Redefining \. on input line 1422.
 LaTeX Info: Redefining \% on input line 1422.
-[358
+[361
 
 ]
-LaTeX Info: Redefining \. on input line 1422.
-LaTeX Info: Redefining \% on input line 1422.
- [359]
-LaTeX Info: Redefining \. on input line 1422.
-LaTeX Info: Redefining \% on input line 1422.
- [360]
-LaTeX Info: Redefining \. on input line 1422.
-LaTeX Info: Redefining \% on input line 1422.
- [361]
 LaTeX Info: Redefining \. on input line 1422.
 LaTeX Info: Redefining \% on input line 1422.
  [362]
@@ -6644,13 +6710,16 @@ LaTeX Info: Redefining \% on input line 1422.
  [364]
 LaTeX Info: Redefining \. on input line 1422.
 LaTeX Info: Redefining \% on input line 1422.
- [365]))
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [366
-
-
-]
+ [365]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [366]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [367]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [368]))
 Cap\'{\i }tulo 15.
 (./Capitulos/Anexos/Anexos.tex (./Capitulos/Anexos/Artefactos_arquitectura.tex
 (./Capitulos/Anexos/Artefactos_negocio.tex
@@ -6683,7 +6752,10 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 21--54
  [] [] [] 
  []
 
-[367]
+[369
+
+
+]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 59--66
  [] [] [] 
  []
@@ -6900,13 +6972,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 76--121
 
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
-[368]
+[370]
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
- [369]
+ [371]
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
- [370]
+ [372]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 126--133
  [] [] [] 
  []
@@ -7153,10 +7225,10 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 143--209
 
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
-[371]
+[373]
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
- [372]
+ [374]
 Underfull \hbox (badness 10000) in paragraph at lines 240--240
 []|\OT1/lmr/m/n/12 Proceso de ne-go-
  []
@@ -7548,13 +7620,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 263--344
 
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
-[373]
+[375]
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
- [374]
+ [376]
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
- [375]
+ [377]
 Underfull \hbox (badness 7221) in paragraph at lines 370--370
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -7766,13 +7838,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 510--526
 
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
-[376]
+[378]
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
- [377]
+ [379]
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
- [378]
+ [380]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 531--538
  [] [] [] 
  []
@@ -8079,13 +8151,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 648--694
 
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
-[379]
+[381]
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
- [380]
+ [382]
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
- [381]
+ [383]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 699--706
  [] [] [] 
  []
@@ -8467,7 +8539,7 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 716--816
 
 LaTeX Info: Redefining \. on input line 816.
 LaTeX Info: Redefining \% on input line 816.
-[382]
+[384]
 Underfull \hbox (badness 10000) in paragraph at lines 817--817
 []|\OT1/lmr/m/n/12 Definir ser-vi-cios a
  []
@@ -8859,13 +8931,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 816--916
 
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
-[383]
+[385]
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
- [384]
+ [386]
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
- [385]
+ [387]
 Underfull \hbox (badness 7221) in paragraph at lines 919--921
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -9167,13 +9239,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 916--1016
 
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
-[386]
+[388]
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
- [387]
+ [389]
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
- [388]
+ [390]
 Underfull \hbox (badness 7221) in paragraph at lines 1019--1021
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -9230,16 +9302,16 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 1016--1032
 
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
-[389]
+[391]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [390]
+ [392]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [391]
+ [393]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [392]) (./Capitulos/Anexos/Artefactos_aplicacion.tex
+ [394]) (./Capitulos/Anexos/Artefactos_aplicacion.tex
 Overfull \hbox (74.3913pt too wide) in alignment at lines 4--11
  [] [] [] 
  []
@@ -9431,10 +9503,10 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 21--92
 
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
-[393]
+[395]
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
- [394]
+ [396]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 97--104
  [] [] [] 
  []
@@ -9486,7 +9558,7 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 114--145
 
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
-[395]
+[397]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 150--157
  [] [] [] 
  []
@@ -9542,7 +9614,7 @@ Overfull \vbox (98.95009pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
 
-[396]
+[398]
 Overfull \hbox (89.19128pt too wide) in alignment at lines 196--204
  [] [] [] [] 
  []
@@ -9592,16 +9664,16 @@ No file proyecto.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
-[397]
+[399]
 
-LaTeX Warning: Text page 398 contains only floats.
+LaTeX Warning: Text page 400 contains only floats.
 
 
 Underfull \vbox (badness 4001) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
- [398]
+ [400]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
 
 (./proyecto.aux
@@ -9626,10 +9698,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
 ### simple group (level 1) entered at line 59 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11084 strings out of 493485
- 188327 string characters out of 3143525
- 315686 words of memory out of 3000000
- 12905 multiletter control sequences out of 15000+200000
+ 11127 strings out of 493485
+ 190494 string characters out of 3143525
+ 317052 words of memory out of 3000000
+ 12921 multiletter control sequences out of 15000+200000
  56516 words of font info for 40 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  43i,15n,43p,1758b,719s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -9716,10 +9788,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy10.pfb>
-Output written on proyecto.pdf (398 pages, 4878387 bytes).
+Output written on proyecto.pdf (400 pages, 4884642 bytes).
 PDF statistics:
- 4047 PDF objects out of 4296 (max. 8388607)
- 3445 compressed objects within 35 object streams
- 959 named destinations out of 1000 (max. 500000)
+ 4056 PDF objects out of 4296 (max. 8388607)
+ 3452 compressed objects within 35 object streams
+ 961 named destinations out of 1000 (max. 500000)
  1855 words of extra memory for PDF output out of 10000 (max. 10000000)
 

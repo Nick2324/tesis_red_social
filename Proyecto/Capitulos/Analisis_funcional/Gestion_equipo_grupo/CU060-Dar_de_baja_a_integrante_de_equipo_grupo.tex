@@ -1,0 +1,74 @@
+\begin{table}[!htb]
+	\caption{CU060-Dar de baja a integrante de equipo/grupo: Descripción}
+	\label{tab:cu060_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Dar de baja a integrante de equipo/grupo \\
+			\hline
+			Identificador & CU060 \\
+			\hline
+			Descripción & Permite eliminar un jugador de un equipo deportivo, así como desvincularse del mismo \\
+			\hline
+			Actor & Todo actor de la red social
+			\\
+			\hline
+			Disparador & El usuario elige dar de baja a un integrante del equipo/grupo (darse de baja también) \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & 
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos o un jugador del equipo/grupo intenta acceder a la funcionalidad
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario da de baja a un jugador del equipo/grupo (o se da de baja a si mismo)
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU060-Dar de baja a integrante de equipo/grupo: Flujos de hechos}
+	\label{tab:cu060_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido un equipo/grupo deportivo & El sistema ha mostrado los detalles del equipo/grupo elegido \\
+			\hline
+			2 & El usuario elige, en las acciones del equipo/grupo, gestionar integrantes & El sistema muestra la lista de integrantes del grupo/equipo \\
+			\hline
+			3 & El usuario busca un integrante del grupo/equipo & El sistema muestra los resultados de la búsqueda \\
+			4 & El usuario elige un integrante entre los resultados de la búsqueda y pulsa el botón designado para retirarlo & El sistema retira al integrante del grupo/equipo  \\
+			5 &  & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			6 & El usuario continua & El sistema muestra la interfaz de gestión de integrantes de equipos/grupos deportivos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
