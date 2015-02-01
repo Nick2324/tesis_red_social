@@ -151,9 +151,9 @@
 \contentsline {section}{\numberline {14.5}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{258}{section.14.5}
 \contentsline {section}{\numberline {14.6}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{284}{section.14.6}
 \contentsline {section}{\numberline {14.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{301}{section.14.7}
-\contentsline {section}{\numberline {14.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-sharing}{337}{section.14.8}
-\contentsline {chapter}{\numberline {15}Anexos}{369}{chapter.15}
-\contentsline {section}{\numberline {15.1}Artefactos de la arquitectura}{369}{section.15.1}
-\contentsline {subsection}{\numberline {15.1.1}Artefactos de la capa de negocio}{369}{subsection.15.1.1}
-\contentsline {subsection}{\numberline {15.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{395}{subsection.15.1.2}
-\contentsline {subsection}{\numberline {15.1.3}Artefactos de la capa de infraestructura}{399}{subsection.15.1.3}
+\contentsline {section}{\numberline {14.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-sharing}{335}{section.14.8}
+\contentsline {chapter}{\numberline {15}Anexos}{367}{chapter.15}
+\contentsline {section}{\numberline {15.1}Artefactos de la arquitectura}{367}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Artefactos de la capa de negocio}{367}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{393}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}Artefactos de la capa de infraestructura}{397}{subsection.15.1.3}
