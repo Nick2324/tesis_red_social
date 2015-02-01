@@ -1,0 +1,75 @@
+\begin{table}[!htb]
+	\caption{CU024-Crear evento deportivo: Descripción}
+	\label{tab:cu024_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear evento deportivo \\
+			\hline
+			Identificador & CU024 \\
+			\hline
+			Descripción & Permite la creación de un evento deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de crear un evento deportivo \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario crea un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU024-Crear evento deportivo: Flujos de hechos}
+	\label{tab:cu024_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha escogido administrar eventos deportivos & El sistema ha mostrado la interfaz de administración de eventos deportivos \\
+			\hline
+			2 & El usuario pulsa el botón de creación de eventos deportivos & El sistema muestra la interfaz para elegir el tipo de evento que desea crear el usuario \\
+			\hline
+			3 & El usuario elige el tipo de evento y pulsa el botón de crear evento & El sistema muestra la interfaz para la adición de todos los datos del evento deportivo según su tipo (colaboradores, participantes, ubicaciones y datos generales) \\
+			\hline
+			4 & El usuario ingresa todos los datos que desea y salva la información & El sistema crea el evento deportivo \\
+			\hline
+			5 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			6 & El usuario continua & El sistema muestra la interfaz de administración de eventos deportivos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

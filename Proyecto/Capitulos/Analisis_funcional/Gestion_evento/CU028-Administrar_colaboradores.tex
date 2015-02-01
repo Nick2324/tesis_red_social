@@ -1,0 +1,71 @@
+\begin{table}[!htb]
+	\caption{CU028-Administrar colaboradores: Descripción}
+	\label{tab:cu028_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administrar colaboradores\\
+			\hline
+			Identificador & CU028 \\
+			\hline
+			Descripción & Permite entrar a la administración de información de los colaboradores de un evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de administración de colaboradores \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+				\item Solo el creador/administrador principal del evento puede activar esta opcionalidad
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas &
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Añadir colaborador
+					\item Retirar colaborador
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU028-Administrar colaboradores: Flujos de hechos}
+	\label{tab:cu028_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario a elegido un evento para administrar sus involucrados & El sistema ha mostrado el menú de administración de involucrados \\
+			\hline
+			2 & El usuario a elegido administrar colaboradores & El sistema realiza una búsqueda de los colaboradores y situa al usuario en la interfaz para manejarlos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

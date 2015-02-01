@@ -3,75 +3,75 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Cambio de la utilizaci\IeC {\'o}n de internet en funci\IeC {\'o}n de los servicios de conectividad social que son creados y soportados en ella\relax }}{41}{figure.caption.7}
-\contentsline {figure}{\numberline {2}{\ignorespaces La red mas simple.\relax }}{41}{figure.caption.8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de una red asim\IeC {\'e}trica.\relax }}{42}{figure.caption.9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Acercamiento a c\IeC {\'o}mo se desarrollan los principios de dise\IeC {\~n}o con los dem\IeC {\'a}s conceptos nombrados.\relax }}{45}{figure.caption.10}
-\contentsline {figure}{\numberline {5}{\ignorespaces Como extiende o soporta un patr\IeC {\'o}n de dise\IeC {\~n}o el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n de software.\relax }}{46}{figure.caption.11}
-\contentsline {figure}{\numberline {6}{\ignorespaces Componentes que hacen que el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n sea acorde al paradigma escogido.\relax }}{47}{figure.caption.12}
-\contentsline {figure}{\numberline {7}{\ignorespaces diferenciaci\IeC {\'o}n entre tipos de servicio da lugar a la estructura en capas\relax }}{47}{figure.caption.13}
-\contentsline {figure}{\numberline {8}{\ignorespaces Interacci\IeC {\'o}n de los conceptos clave en la computaci\IeC {\'o}n orientada a servicios\relax }}{48}{figure.caption.14}
+\contentsline {figure}{\numberline {1}{\ignorespaces Cambio de la utilizaci\IeC {\'o}n de internet en funci\IeC {\'o}n de los servicios de conectividad social que son creados y soportados en ella\relax }}{43}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces La red mas simple.\relax }}{43}{figure.caption.8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de una red asim\IeC {\'e}trica.\relax }}{44}{figure.caption.9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Acercamiento a c\IeC {\'o}mo se desarrollan los principios de dise\IeC {\~n}o con los dem\IeC {\'a}s conceptos nombrados.\relax }}{47}{figure.caption.10}
+\contentsline {figure}{\numberline {5}{\ignorespaces Como extiende o soporta un patr\IeC {\'o}n de dise\IeC {\~n}o el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n de software.\relax }}{48}{figure.caption.11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Componentes que hacen que el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n sea acorde al paradigma escogido.\relax }}{49}{figure.caption.12}
+\contentsline {figure}{\numberline {7}{\ignorespaces diferenciaci\IeC {\'o}n entre tipos de servicio da lugar a la estructura en capas\relax }}{49}{figure.caption.13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Interacci\IeC {\'o}n de los conceptos clave en la computaci\IeC {\'o}n orientada a servicios\relax }}{50}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9}{\ignorespaces Red de estrella.\relax }}{53}{figure.caption.15}
-\contentsline {figure}{\numberline {10}{\ignorespaces red corbat\IeC {\'\i }n.\relax }}{56}{figure.caption.16}
-\contentsline {figure}{\numberline {11}{\ignorespaces Tipos de diadas asim\IeC {\'e}tricas.\relax }}{57}{figure.caption.17}
-\contentsline {figure}{\numberline {12}{\ignorespaces Tipos de triadas sim\IeC {\'e}tricas.\relax }}{57}{figure.caption.18}
-\contentsline {figure}{\numberline {13}{\ignorespaces Tipos de triadas asim\IeC {\'e}tricas.\relax }}{58}{figure.caption.19}
-\contentsline {figure}{\numberline {14}{\ignorespaces Red social de Krackhardt kite.\relax }}{60}{figure.caption.20}
-\contentsline {figure}{\numberline {15}{\ignorespaces Ejemplo de uso del enlace exclusivo\relax }}{60}{figure.caption.21}
-\contentsline {figure}{\numberline {16}{\ignorespaces Ejemplo de uso del enlace paralelo\relax }}{61}{figure.caption.22}
-\contentsline {figure}{\numberline {17}{\ignorespaces Ejemplo de uso del enlace inclusivo\relax }}{61}{figure.caption.23}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ejemplo de uso del enlace complejo\relax }}{62}{figure.caption.24}
-\contentsline {figure}{\numberline {19}{\ignorespaces Ejemplo de diagrama de colaboraci\IeC {\'o}n\relax }}{63}{figure.caption.25}
-\contentsline {figure}{\numberline {20}{\ignorespaces Ejemplo de diagrama de colaboraci\IeC {\'o}n con caja negra\relax }}{63}{figure.caption.26}
-\contentsline {figure}{\numberline {21}{\ignorespaces proceso de an\IeC {\'a}lisis y dise\IeC {\~n}o orientado a servicios\relax }}{64}{figure.caption.27}
-\contentsline {figure}{\numberline {22}{\ignorespaces Cruce entre las subcaracter\IeC {\'\i }sticas atribuidas a la mantenibilidad del software en el estandar ISO/IEC 9126 y las propiedades a nivel de c\IeC {\'o}digo. Cada cruce es indicado por una $x$\relax }}{73}{figure.caption.28}
-\contentsline {figure}{\numberline {23}{\ignorespaces correspondiente al nivel de riesgo en el software presentado por la complejidad ciclom\IeC {\'a}tica promedio del sistema\relax }}{74}{figure.caption.29}
-\contentsline {figure}{\numberline {24}{\ignorespaces correspondiente al nivel m\IeC {\'a}ximo relativo de LOC que podr\IeC {\'\i }an ser riesgosas al momento de mantener el software\relax }}{75}{figure.caption.30}
-\contentsline {figure}{\numberline {25}{\ignorespaces clasificaci\IeC {\'o}n de duplicaci\IeC {\'o}n de c\IeC {\'o}digo\relax }}{76}{figure.caption.31}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {26}{\ignorespaces Distribuci\IeC {\'o}n de las diferentes actividades a realizar\relax }}{114}{figure.caption.51}
+\contentsline {figure}{\numberline {9}{\ignorespaces Red de estrella.\relax }}{55}{figure.caption.15}
+\contentsline {figure}{\numberline {10}{\ignorespaces red corbat\IeC {\'\i }n.\relax }}{58}{figure.caption.16}
+\contentsline {figure}{\numberline {11}{\ignorespaces Tipos de diadas asim\IeC {\'e}tricas.\relax }}{59}{figure.caption.17}
+\contentsline {figure}{\numberline {12}{\ignorespaces Tipos de triadas sim\IeC {\'e}tricas.\relax }}{59}{figure.caption.18}
+\contentsline {figure}{\numberline {13}{\ignorespaces Tipos de triadas asim\IeC {\'e}tricas.\relax }}{60}{figure.caption.19}
+\contentsline {figure}{\numberline {14}{\ignorespaces Red social de Krackhardt kite.\relax }}{62}{figure.caption.20}
+\contentsline {figure}{\numberline {15}{\ignorespaces Ejemplo de uso del enlace exclusivo\relax }}{62}{figure.caption.21}
+\contentsline {figure}{\numberline {16}{\ignorespaces Ejemplo de uso del enlace paralelo\relax }}{63}{figure.caption.22}
+\contentsline {figure}{\numberline {17}{\ignorespaces Ejemplo de uso del enlace inclusivo\relax }}{63}{figure.caption.23}
+\contentsline {figure}{\numberline {18}{\ignorespaces Ejemplo de uso del enlace complejo\relax }}{64}{figure.caption.24}
+\contentsline {figure}{\numberline {19}{\ignorespaces Ejemplo de diagrama de colaboraci\IeC {\'o}n\relax }}{65}{figure.caption.25}
+\contentsline {figure}{\numberline {20}{\ignorespaces Ejemplo de diagrama de colaboraci\IeC {\'o}n con caja negra\relax }}{65}{figure.caption.26}
+\contentsline {figure}{\numberline {21}{\ignorespaces proceso de an\IeC {\'a}lisis y dise\IeC {\~n}o orientado a servicios\relax }}{66}{figure.caption.27}
+\contentsline {figure}{\numberline {22}{\ignorespaces Cruce entre las subcaracter\IeC {\'\i }sticas atribuidas a la mantenibilidad del software en el estandar ISO/IEC 9126 y las propiedades a nivel de c\IeC {\'o}digo. Cada cruce es indicado por una $x$\relax }}{75}{figure.caption.28}
+\contentsline {figure}{\numberline {23}{\ignorespaces correspondiente al nivel de riesgo en el software presentado por la complejidad ciclom\IeC {\'a}tica promedio del sistema\relax }}{76}{figure.caption.29}
+\contentsline {figure}{\numberline {24}{\ignorespaces correspondiente al nivel m\IeC {\'a}ximo relativo de LOC que podr\IeC {\'\i }an ser riesgosas al momento de mantener el software\relax }}{77}{figure.caption.30}
+\contentsline {figure}{\numberline {25}{\ignorespaces clasificaci\IeC {\'o}n de duplicaci\IeC {\'o}n de c\IeC {\'o}digo\relax }}{78}{figure.caption.31}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {27}{\ignorespaces Actores\relax }}{156}{figure.caption.76}
-\contentsline {figure}{\numberline {28}{\ignorespaces Roles\relax }}{157}{figure.caption.77}
-\contentsline {figure}{\numberline {29}{\ignorespaces Punto de vista introductorio\relax }}{158}{figure.caption.78}
-\contentsline {figure}{\numberline {30}{\ignorespaces Punto de Vista General por Capas\relax }}{159}{figure.caption.79}
-\contentsline {figure}{\numberline {31}{\ignorespaces Patrocinios Deportivos\relax }}{159}{figure.caption.80}
-\contentsline {figure}{\numberline {32}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{160}{figure.caption.81}
-\contentsline {figure}{\numberline {33}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{161}{figure.caption.82}
-\contentsline {figure}{\numberline {34}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{161}{figure.caption.83}
-\contentsline {figure}{\numberline {35}{\ignorespaces Entrenamiento Deportivo\relax }}{162}{figure.caption.84}
-\contentsline {figure}{\numberline {36}{\ignorespaces Buscador deportivo\relax }}{162}{figure.caption.85}
-\contentsline {figure}{\numberline {37}{\ignorespaces Consejos\relax }}{163}{figure.caption.86}
-\contentsline {figure}{\numberline {38}{\ignorespaces Periodismo\relax }}{163}{figure.caption.87}
-\contentsline {figure}{\numberline {39}{\ignorespaces Servicios\relax }}{164}{figure.caption.88}
-\contentsline {figure}{\numberline {40}{\ignorespaces Patrocinios Deportivos\relax }}{164}{figure.caption.89}
-\contentsline {figure}{\numberline {41}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{165}{figure.caption.90}
-\contentsline {figure}{\numberline {42}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{166}{figure.caption.91}
-\contentsline {figure}{\numberline {43}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{167}{figure.caption.92}
-\contentsline {figure}{\numberline {44}{\ignorespaces Entrenamiento Deportivo\relax }}{167}{figure.caption.93}
-\contentsline {figure}{\numberline {45}{\ignorespaces Buscador de consejos deportivos\relax }}{168}{figure.caption.94}
-\contentsline {figure}{\numberline {46}{\ignorespaces Buscador deportivo\relax }}{168}{figure.caption.95}
-\contentsline {figure}{\numberline {47}{\ignorespaces Evaluador consejos de salud\relax }}{169}{figure.caption.96}
-\contentsline {figure}{\numberline {48}{\ignorespaces Generador de consejos deportivos\relax }}{169}{figure.caption.97}
-\contentsline {figure}{\numberline {49}{\ignorespaces Generador de contenidos de salud\relax }}{170}{figure.caption.98}
-\contentsline {figure}{\numberline {50}{\ignorespaces Patrocinios Deportivos\relax }}{170}{figure.caption.99}
-\contentsline {figure}{\numberline {51}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{171}{figure.caption.100}
-\contentsline {figure}{\numberline {52}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{172}{figure.caption.101}
-\contentsline {figure}{\numberline {53}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{172}{figure.caption.102}
-\contentsline {figure}{\numberline {54}{\ignorespaces Entrenamiento Deportivo\relax }}{173}{figure.caption.103}
-\contentsline {figure}{\numberline {55}{\ignorespaces Buscador de consejos deportivos\relax }}{174}{figure.caption.104}
-\contentsline {figure}{\numberline {56}{\ignorespaces Buscador deportivo\relax }}{174}{figure.caption.105}
-\contentsline {figure}{\numberline {57}{\ignorespaces Evaluador consejos de salud\relax }}{175}{figure.caption.106}
-\contentsline {figure}{\numberline {58}{\ignorespaces Generador de consejos deportivos\relax }}{176}{figure.caption.107}
-\contentsline {figure}{\numberline {59}{\ignorespaces Generador de contenidos de salud\relax }}{177}{figure.caption.108}
-\contentsline {figure}{\numberline {60}{\ignorespaces Producto\relax }}{178}{figure.caption.109}
-\contentsline {figure}{\numberline {61}{\ignorespaces Punto de vista de infraestructura\relax }}{178}{figure.caption.110}
+\contentsline {figure}{\numberline {26}{\ignorespaces Distribuci\IeC {\'o}n de las diferentes actividades a realizar\relax }}{116}{figure.caption.51}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {27}{\ignorespaces Actores\relax }}{158}{figure.caption.76}
+\contentsline {figure}{\numberline {28}{\ignorespaces Roles\relax }}{159}{figure.caption.77}
+\contentsline {figure}{\numberline {29}{\ignorespaces Punto de vista introductorio\relax }}{160}{figure.caption.78}
+\contentsline {figure}{\numberline {30}{\ignorespaces Punto de Vista General por Capas\relax }}{161}{figure.caption.79}
+\contentsline {figure}{\numberline {31}{\ignorespaces Patrocinios Deportivos\relax }}{161}{figure.caption.80}
+\contentsline {figure}{\numberline {32}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{162}{figure.caption.81}
+\contentsline {figure}{\numberline {33}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{163}{figure.caption.82}
+\contentsline {figure}{\numberline {34}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{163}{figure.caption.83}
+\contentsline {figure}{\numberline {35}{\ignorespaces Entrenamiento Deportivo\relax }}{164}{figure.caption.84}
+\contentsline {figure}{\numberline {36}{\ignorespaces Buscador deportivo\relax }}{164}{figure.caption.85}
+\contentsline {figure}{\numberline {37}{\ignorespaces Consejos\relax }}{165}{figure.caption.86}
+\contentsline {figure}{\numberline {38}{\ignorespaces Periodismo\relax }}{165}{figure.caption.87}
+\contentsline {figure}{\numberline {39}{\ignorespaces Servicios\relax }}{166}{figure.caption.88}
+\contentsline {figure}{\numberline {40}{\ignorespaces Patrocinios Deportivos\relax }}{166}{figure.caption.89}
+\contentsline {figure}{\numberline {41}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{167}{figure.caption.90}
+\contentsline {figure}{\numberline {42}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{168}{figure.caption.91}
+\contentsline {figure}{\numberline {43}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{169}{figure.caption.92}
+\contentsline {figure}{\numberline {44}{\ignorespaces Entrenamiento Deportivo\relax }}{169}{figure.caption.93}
+\contentsline {figure}{\numberline {45}{\ignorespaces Buscador de consejos deportivos\relax }}{170}{figure.caption.94}
+\contentsline {figure}{\numberline {46}{\ignorespaces Buscador deportivo\relax }}{170}{figure.caption.95}
+\contentsline {figure}{\numberline {47}{\ignorespaces Evaluador consejos de salud\relax }}{171}{figure.caption.96}
+\contentsline {figure}{\numberline {48}{\ignorespaces Generador de consejos deportivos\relax }}{171}{figure.caption.97}
+\contentsline {figure}{\numberline {49}{\ignorespaces Generador de contenidos de salud\relax }}{172}{figure.caption.98}
+\contentsline {figure}{\numberline {50}{\ignorespaces Patrocinios Deportivos\relax }}{172}{figure.caption.99}
+\contentsline {figure}{\numberline {51}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{173}{figure.caption.100}
+\contentsline {figure}{\numberline {52}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{174}{figure.caption.101}
+\contentsline {figure}{\numberline {53}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{174}{figure.caption.102}
+\contentsline {figure}{\numberline {54}{\ignorespaces Entrenamiento Deportivo\relax }}{175}{figure.caption.103}
+\contentsline {figure}{\numberline {55}{\ignorespaces Buscador de consejos deportivos\relax }}{176}{figure.caption.104}
+\contentsline {figure}{\numberline {56}{\ignorespaces Buscador deportivo\relax }}{176}{figure.caption.105}
+\contentsline {figure}{\numberline {57}{\ignorespaces Evaluador consejos de salud\relax }}{177}{figure.caption.106}
+\contentsline {figure}{\numberline {58}{\ignorespaces Generador de consejos deportivos\relax }}{178}{figure.caption.107}
+\contentsline {figure}{\numberline {59}{\ignorespaces Generador de contenidos de salud\relax }}{179}{figure.caption.108}
+\contentsline {figure}{\numberline {60}{\ignorespaces Producto\relax }}{180}{figure.caption.109}
+\contentsline {figure}{\numberline {61}{\ignorespaces Punto de vista de infraestructura\relax }}{180}{figure.caption.110}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

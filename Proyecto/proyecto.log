@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  24 JAN 2015 12:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  1 FEB 2015 00:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,19 +672,94 @@ LaTeX Warning: Label `tab:cu001_desc' multiply defined.
 LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu011_desc' multiply defined.
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu011_flujo' multiply defined.
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu009_flujo' multiply defined.
+LaTeX Warning: Label `tab:cu027_desc' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu024_desc' multiply defined.
+LaTeX Warning: Label `tab:cu027_flujo' multiply defined.
 
 
-LaTeX Warning: Label `tab:cu024_flujo' multiply defined.
+LaTeX Warning: Label `tab:cu028_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu028_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu029_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu029_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu030_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu030_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu031_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu031_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu032_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu032_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu033_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu033_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu034_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu034_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu035_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu035_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu036_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu036_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu037_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu037_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu038_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu038_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu039_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu039_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu040_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu040_flujo' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu031_desc' multiply defined.
@@ -871,6 +946,90 @@ LaTeX Warning: Label `tab:cu042_desc' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu041_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_desc' multiply defined.
+
+
+LaTeX Warning: Label `tab:cu001_flujo' multiply defined.
 
 
 LaTeX Warning: Label `tab:cu001_desc' multiply defined.
@@ -1114,53 +1273,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 62.
 LaTeX Info: Redefining \% on input line 62.
  [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
 
-LaTeX Info: Redefining \. on input line 85.
-LaTeX Info: Redefining \% on input line 85.
- [17]
-LaTeX Info: Redefining \. on input line 108.
-LaTeX Info: Redefining \% on input line 108.
+[17]
+Underfull \vbox (badness 5592) has occurred while \output is active []
 
-[18]
-LaTeX Info: Redefining \. on input line 136.
-LaTeX Info: Redefining \% on input line 136.
- [19]
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
+ [18]
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+
+[19]
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+ [20]
 Underfull \vbox (badness 1629) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 160.
-LaTeX Info: Redefining \% on input line 160.
- [20]
-LaTeX Info: Redefining \. on input line 187.
-LaTeX Info: Redefining \% on input line 187.
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [21]
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
 
-[21]
-LaTeX Info: Redefining \. on input line 214.
-LaTeX Info: Redefining \% on input line 214.
- [22]
+[22]
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+ [23]
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+ [24]
 Underfull \vbox (badness 2478) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 242.
-LaTeX Info: Redefining \% on input line 242.
- [23])
+LaTeX Info: Redefining \. on input line 299.
+LaTeX Info: Redefining \% on input line 299.
+ [25])
 \tf@lot=\write6
 \openout6 = `proyecto.lot'.
 
 LaTeX Info: Redefining \. on input line 114.
 LaTeX Info: Redefining \% on input line 114.
 
-[24] (./Capitulos/Introduccion/Introduccion.tex) [25
+[26] (./Capitulos/Introduccion/Introduccion.tex) [27
 
 ]
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
- [26
+ [28
 
 ]
-(./Capitulos/Glosario/Glosario.tex [27])
+(./Capitulos/Glosario/Glosario.tex [29])
 LaTeX Info: Redefining \. on input line 124.
 LaTeX Info: Redefining \% on input line 124.
- [28]
+ [30]
 Cap\'{\i }tulo 1.
 (./Capitulos/Descripcion_problema/Descripcion_problema.tex
 
@@ -1169,18 +1335,18 @@ LaTeX Warning: Citation `judging' undefined on input line 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29
+ [31
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
- [30])
-[31]
+ [32])
+[33]
 LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
- [32
+ [34
 
 ]
 Cap\'{\i }tulo 2.
@@ -1191,9 +1357,9 @@ LaTeX Warning: Citation `sna_startups' undefined on input line 7.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [35]
 
-LaTeX Warning: Reference `sec:UX' on page 34 undefined on input line 9.
+LaTeX Warning: Reference `sec:UX' on page 36 undefined on input line 9.
 
 
 LaTeX Warning: Citation `user_behavior_online' undefined on input line 11.
@@ -1206,29 +1372,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 130.
 LaTeX Info: Redefining \% on input line 130.
- [34]
-[35]
+ [36]
+[37]
 LaTeX Info: Redefining \. on input line 131.
 LaTeX Info: Redefining \% on input line 131.
- [36
+ [38
 
 ]
 Cap\'{\i }tulo 3.
 (./Capitulos/Objetivos/General.tex) (./Capitulos/Objetivos/Especificos.tex
-[37])
+[39])
 LaTeX Info: Redefining \. on input line 137.
 LaTeX Info: Redefining \% on input line 137.
- [38]
+ [40]
 Cap\'{\i }tulo 4.
 (./Capitulos/Marco_teorico/Marco_conceptual.tex
 (./Capitulos/Marco_teorico/Comunicacion.tex
 
 LaTeX Warning: Citation `dynamics' undefined on input line 3.
 
-) [39
+) [41
 
 ] (./Capitulos/Marco_teorico/Evolucion_web.tex
-<./imagenes/utilizacion_internet.png, id=1615, 746.79pt x 513.92pt>
+<./imagenes/utilizacion_internet.png, id=1735, 746.79pt x 513.92pt>
 File: ./imagenes/utilizacion_internet.png Graphic file (type png)
 
 <use ./imagenes/utilizacion_internet.png>
@@ -1253,7 +1419,7 @@ converted-to.pdf ./imagenes/Red_simple.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_simple-eps-converted-to.pdf, id=1621, 135.50626pt x 57.21375pt>
+<./imagenes/Red_simple-eps-converted-to.pdf, id=1741, 135.50626pt x 57.21375pt>
 File: ./imagenes/Red_simple-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/Red_simple-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/Red_simple-eps-converted-to.pdf used on inp
@@ -1265,7 +1431,7 @@ LaTeX Warning: Citation `analysis' undefined on input line 22.
 
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
-[40]
+[42]
 Package epstopdf Info: Source file: <./imagenes/Red_asimetrica.eps>
 (epstopdf)                    date: 2014-09-07 10:14:55
 (epstopdf)                    size: 4769 bytes
@@ -1278,7 +1444,7 @@ eps-converted-to.pdf ./imagenes/Red_asimetrica.eps>
 (epstopdf)             \includegraphics on input line 28.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=1630, 206.7725pt x 67.25125
+<./imagenes/Red_asimetrica-eps-converted-to.pdf, id=1750, 206.7725pt x 67.25125
 pt>
 File: ./imagenes/Red_asimetrica-eps-converted-to.pdf Graphic file (type pdf)
  <use ./imagenes/Red_asimetrica-eps-converted-to.pdf>
@@ -1290,7 +1456,7 @@ Underfull \vbox (badness 2707) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [41 <./imagenes/utilizacion_internet.png (PNG copy)> <./imagenes/Red_simple-ep
+ [43 <./imagenes/utilizacion_internet.png (PNG copy)> <./imagenes/Red_simple-ep
 s-converted-to.pdf>]
 
 LaTeX Warning: Citation `cap_sna' undefined on input line 35.
@@ -1305,7 +1471,7 @@ LaTeX Warning: Citation `bpmn2' undefined on input line 40.
 
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
-[42 <./imagenes/Red_asimetrica-eps-converted-to.pdf>]
+[44 <./imagenes/Red_asimetrica-eps-converted-to.pdf>]
 
 LaTeX Warning: Citation `soa_principles' undefined on input line 55.
 
@@ -1317,20 +1483,20 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 67.
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
- [43]
-<./imagenes/1.png, id=1666, 539.01375pt x 415.5525pt>
+ [45]
+<./imagenes/1.png, id=1786, 539.01375pt x 415.5525pt>
 File: ./imagenes/1.png Graphic file (type png)
  <use ./imagenes/1.png>
 Package pdftex.def Info: ./imagenes/1.png used on input line 79.
 (pdftex.def)             Requested size: 312.9803pt x 241.29327pt.
 
-<./imagenes/2.png, id=1670, 606.01407pt x 417.81094pt>
+<./imagenes/2.png, id=1790, 606.01407pt x 417.81094pt>
 File: ./imagenes/2.png Graphic file (type png)
  <use ./imagenes/2.png>
 Package pdftex.def Info: ./imagenes/2.png used on input line 90.
 (pdftex.def)             Requested size: 312.9803pt x 215.78387pt.
 
-<./imagenes/3.png, id=1674, 397.485pt x 311.66437pt>
+<./imagenes/3.png, id=1794, 397.485pt x 311.66437pt>
 File: ./imagenes/3.png Graphic file (type png)
  <use ./imagenes/3.png>
 Package pdftex.def Info: ./imagenes/3.png used on input line 101.
@@ -1338,11 +1504,11 @@ Package pdftex.def Info: ./imagenes/3.png used on input line 101.
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
 
-[44]
+[46]
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
- [45 <./imagenes/1.png>]
-<./imagenes/5.png, id=1687, 461.47406pt x 143.78719pt>
+ [47 <./imagenes/1.png>]
+<./imagenes/5.png, id=1806, 461.47406pt x 143.78719pt>
 File: ./imagenes/5.png Graphic file (type png)
  <use ./imagenes/5.png>
 Package pdftex.def Info: ./imagenes/5.png used on input line 129.
@@ -1350,13 +1516,13 @@ Package pdftex.def Info: ./imagenes/5.png used on input line 129.
 LaTeX Info: Redefining \. on input line 139.
 LaTeX Info: Redefining \% on input line 139.
 
-[46 <./imagenes/2.png>]
+[48 <./imagenes/2.png>]
 Underfull \vbox (badness 2229) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
- [47 <./imagenes/3.png> <./imagenes/5.png>]
-<./imagenes/4.png, id=1699, 510.40688pt x 424.58624pt>
+ [49 <./imagenes/3.png> <./imagenes/5.png>]
+<./imagenes/4.png, id=1819, 510.40688pt x 424.58624pt>
 File: ./imagenes/4.png Graphic file (type png)
  <use ./imagenes/4.png>
 Package pdftex.def Info: ./imagenes/4.png used on input line 145.
@@ -1366,17 +1532,17 @@ Underfull \vbox (badness 1968) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 157.
 LaTeX Info: Redefining \% on input line 157.
- [48 <./imagenes/4.png>]
+ [50 <./imagenes/4.png>]
 
 LaTeX Warning: Citation `scrum_guide' undefined on input line 164.
 
 )
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
- [49]
+ [51]
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
- [50
+ [52
 
 ]
 Cap\'{\i }tulo 5.
@@ -1385,10 +1551,10 @@ Cap\'{\i }tulo 5.
 
 LaTeX Warning: Citation `user_behavior' undefined on input line 11.
 
-[51]
+[53]
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
- [52]
+ [54]
 Package epstopdf Info: Source file: <./imagenes/red_estrella.eps>
 (epstopdf)                    date: 2014-09-07 10:14:55
 (epstopdf)                    size: 8349 bytes
@@ -1401,7 +1567,7 @@ s-converted-to.pdf ./imagenes/red_estrella.eps>
 (epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_estrella-eps-converted-to.pdf, id=1739, 230.8625pt x 212.795pt>
+<./imagenes/red_estrella-eps-converted-to.pdf, id=1859, 230.8625pt x 212.795pt>
 File: ./imagenes/red_estrella-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/red_estrella-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/red_estrella-eps-converted-to.pdf used on i
@@ -1412,16 +1578,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 47.
 LaTeX Info: Redefining \% on input line 47.
- [53 <./imagenes/red_estrella-eps-converted-to.pdf>]
+ [55 <./imagenes/red_estrella-eps-converted-to.pdf>]
 
 LaTeX Warning: Citation `evolution' undefined on input line 65.
 
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
-[54]
+[56]
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
- [55]
+ [57]
 Package epstopdf Info: Source file: <./imagenes/bow_tie.eps>
 (epstopdf)                    date: 2014-09-07 10:14:55
 (epstopdf)                    size: 6779 bytes
@@ -1433,7 +1599,7 @@ verted-to.pdf ./imagenes/bow_tie.eps>
 (epstopdf)             \includegraphics on input line 83.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/bow_tie-eps-converted-to.pdf, id=1772, 195.73125pt x 194.7275pt>
+<./imagenes/bow_tie-eps-converted-to.pdf, id=1892, 195.73125pt x 194.7275pt>
 File: ./imagenes/bow_tie-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/bow_tie-eps-converted-to.pdf>
@@ -1451,7 +1617,7 @@ verted-to.pdf ./imagenes/diada_1.eps>
 (epstopdf)             \includegraphics on input line 97.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_1-eps-converted-to.pdf, id=1774, 136.51pt x 131.49126pt>
+<./imagenes/diada_1-eps-converted-to.pdf, id=1894, 136.51pt x 131.49126pt>
 File: ./imagenes/diada_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_1-eps-converted-to.pdf>
@@ -1469,7 +1635,7 @@ verted-to.pdf ./imagenes/diada_2.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_2-eps-converted-to.pdf, id=1775, 135.50626pt x 82.3075pt>
+<./imagenes/diada_2-eps-converted-to.pdf, id=1895, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_2-eps-converted-to.pdf>
@@ -1487,7 +1653,7 @@ verted-to.pdf ./imagenes/diada_3.eps>
 (epstopdf)             \includegraphics on input line 99.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_3-eps-converted-to.pdf, id=1776, 135.50626pt x 82.3075pt>
+<./imagenes/diada_3-eps-converted-to.pdf, id=1896, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_3-eps-converted-to.pdf>
@@ -1505,7 +1671,7 @@ verted-to.pdf ./imagenes/diada_4.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/diada_4-eps-converted-to.pdf, id=1777, 135.50626pt x 82.3075pt>
+<./imagenes/diada_4-eps-converted-to.pdf, id=1897, 135.50626pt x 82.3075pt>
 File: ./imagenes/diada_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/diada_4-eps-converted-to.pdf>
@@ -1519,7 +1685,7 @@ Overfull \hbox (0.63303pt too wide) in paragraph at lines 96--102
 
 LaTeX Info: Redefining \. on input line 110.
 LaTeX Info: Redefining \% on input line 110.
-[56 <./imagenes/bow_tie-eps-converted-to.pdf>]
+[58 <./imagenes/bow_tie-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./imagenes/triada_simetrica_1.eps>
 (epstopdf)                    date: 2014-09-07 10:14:55
 (epstopdf)                    size: 4983 bytes
@@ -1532,7 +1698,7 @@ a_1-eps-converted-to.pdf ./imagenes/triada_simetrica_1.eps>
 (epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=1789, 136.51pt x 133.49
+<./imagenes/triada_simetrica_1-eps-converted-to.pdf, id=1908, 136.51pt x 133.49
 875pt>
 File: ./imagenes/triada_simetrica_1-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1552,7 +1718,7 @@ a_2-eps-converted-to.pdf ./imagenes/triada_simetrica_2.eps>
 (epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=1790, 132.495pt x 196.7
+<./imagenes/triada_simetrica_2-eps-converted-to.pdf, id=1909, 132.495pt x 196.7
 35pt>
 File: ./imagenes/triada_simetrica_2-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1572,7 +1738,7 @@ a_3-eps-converted-to.pdf ./imagenes/triada_simetrica_3.eps>
 (epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=1791, 163.61125pt x 134
+<./imagenes/triada_simetrica_3-eps-converted-to.pdf, id=1910, 163.61125pt x 134
 .5025pt>
 File: ./imagenes/triada_simetrica_3-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1592,7 +1758,7 @@ a_4-eps-converted-to.pdf ./imagenes/triada_simetrica_4.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=1792, 142.5325pt x 149.
+<./imagenes/triada_simetrica_4-eps-converted-to.pdf, id=1911, 142.5325pt x 149.
 55875pt>
 File: ./imagenes/triada_simetrica_4-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1607,7 +1773,7 @@ Overfull \hbox (0.63303pt too wide) in paragraph at lines 117--123
 
 LaTeX Info: Redefining \. on input line 131.
 LaTeX Info: Redefining \% on input line 131.
-[57 <./imagenes/diada_1-eps-converted-to.pdf> <./imagenes/diada_2-eps-converted
+[59 <./imagenes/diada_1-eps-converted-to.pdf> <./imagenes/diada_2-eps-converted
 -to.pdf> <./imagenes/diada_3-eps-converted-to.pdf> <./imagenes/diada_4-eps-conv
 erted-to.pdf> <./imagenes/triada_simetrica_1-eps-converted-to.pdf> <./imagenes/
 triada_simetrica_2-eps-converted-to.pdf> <./imagenes/triada_simetrica_3-eps-con
@@ -1625,7 +1791,7 @@ converted-to.pdf ./imagenes/triada_003.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_003-eps-converted-to.pdf, id=1838, 142.5325pt x 175.65625pt>
+<./imagenes/triada_003-eps-converted-to.pdf, id=1958, 142.5325pt x 175.65625pt>
 File: ./imagenes/triada_003-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/triada_003-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/triada_003-eps-converted-to.pdf used on inp
@@ -1643,7 +1809,7 @@ converted-to.pdf ./imagenes/triada_012.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_012-eps-converted-to.pdf, id=1839, 163.61125pt x 160.6pt>
+<./imagenes/triada_012-eps-converted-to.pdf, id=1959, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_012-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_012-eps-converted-to.pdf>
@@ -1662,7 +1828,7 @@ f>
 (epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021C-eps-converted-to.pdf, id=1840, 132.495pt x 222.8325pt>
+<./imagenes/triada_021C-eps-converted-to.pdf, id=1960, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021C-eps-converted-to.pdf>
@@ -1681,7 +1847,7 @@ f>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021D-eps-converted-to.pdf, id=1841, 132.495pt x 223.83624pt>
+<./imagenes/triada_021D-eps-converted-to.pdf, id=1961, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_021D-eps-converted-to.pdf Graphic file (type pdf)
 <use ./imagenes/triada_021D-eps-converted-to.pdf>
 Package pdftex.def Info: ./imagenes/triada_021D-eps-converted-to.pdf used on in
@@ -1699,7 +1865,7 @@ f>
 (epstopdf)             \includegraphics on input line 154.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_021U-eps-converted-to.pdf, id=1842, 132.495pt x 222.8325pt>
+<./imagenes/triada_021U-eps-converted-to.pdf, id=1962, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_021U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_021U-eps-converted-to.pdf>
@@ -1718,7 +1884,7 @@ f>
 (epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030C-eps-converted-to.pdf, id=1843, 136.51pt x 159.59625pt>
+<./imagenes/triada_030C-eps-converted-to.pdf, id=1963, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030C-eps-converted-to.pdf>
@@ -1737,7 +1903,7 @@ f>
 (epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_030T-eps-converted-to.pdf, id=1844, 136.51pt x 159.59625pt>
+<./imagenes/triada_030T-eps-converted-to.pdf, id=1964, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_030T-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_030T-eps-converted-to.pdf>
@@ -1756,7 +1922,7 @@ converted-to.pdf ./imagenes/triada_102.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_102-eps-converted-to.pdf, id=1845, 163.61125pt x 160.6pt>
+<./imagenes/triada_102-eps-converted-to.pdf, id=1965, 163.61125pt x 160.6pt>
 File: ./imagenes/triada_102-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_102-eps-converted-to.pdf>
@@ -1775,7 +1941,7 @@ f>
 (epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111D-eps-converted-to.pdf, id=1846, 132.495pt x 222.8325pt>
+<./imagenes/triada_111D-eps-converted-to.pdf, id=1966, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111D-eps-converted-to.pdf>
@@ -1794,7 +1960,7 @@ f>
 (epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_111U-eps-converted-to.pdf, id=1847, 132.495pt x 222.8325pt>
+<./imagenes/triada_111U-eps-converted-to.pdf, id=1967, 132.495pt x 222.8325pt>
 File: ./imagenes/triada_111U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_111U-eps-converted-to.pdf>
@@ -1813,7 +1979,7 @@ f>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120C-eps-converted-to.pdf, id=1848, 136.51pt x 159.59625pt>
+<./imagenes/triada_120C-eps-converted-to.pdf, id=1968, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120C-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120C-eps-converted-to.pdf>
@@ -1832,7 +1998,7 @@ f>
 (epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120D-eps-converted-to.pdf, id=1849, 136.51pt x 159.59625pt>
+<./imagenes/triada_120D-eps-converted-to.pdf, id=1969, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120D-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120D-eps-converted-to.pdf>
@@ -1851,7 +2017,7 @@ f>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_120U-eps-converted-to.pdf, id=1850, 136.51pt x 159.59625pt>
+<./imagenes/triada_120U-eps-converted-to.pdf, id=1970, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_120U-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_120U-eps-converted-to.pdf>
@@ -1870,7 +2036,7 @@ converted-to.pdf ./imagenes/triada_201.eps>
 (epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_201-eps-converted-to.pdf, id=1851, 132.495pt x 223.83624pt>
+<./imagenes/triada_201-eps-converted-to.pdf, id=1971, 132.495pt x 223.83624pt>
 File: ./imagenes/triada_201-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_201-eps-converted-to.pdf>
@@ -1889,7 +2055,7 @@ converted-to.pdf ./imagenes/triada_210.eps>
 (epstopdf)             \includegraphics on input line 164.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_210-eps-converted-to.pdf, id=1852, 136.51pt x 159.59625pt>
+<./imagenes/triada_210-eps-converted-to.pdf, id=1972, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_210-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_210-eps-converted-to.pdf>
@@ -1908,7 +2074,7 @@ converted-to.pdf ./imagenes/triada_300.eps>
 (epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/triada_300-eps-converted-to.pdf, id=1853, 136.51pt x 159.59625pt>
+<./imagenes/triada_300-eps-converted-to.pdf, id=1973, 136.51pt x 159.59625pt>
 File: ./imagenes/triada_300-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./imagenes/triada_300-eps-converted-to.pdf>
@@ -1922,7 +2088,7 @@ Overfull \hbox (4.70926pt too wide) in paragraph at lines 149--167
 
 LaTeX Info: Redefining \. on input line 179.
 LaTeX Info: Redefining \% on input line 179.
-[58 <./imagenes/triada_003-eps-converted-to.pdf> <./imagenes/triada_012-eps-con
+[60 <./imagenes/triada_003-eps-converted-to.pdf> <./imagenes/triada_012-eps-con
 verted-to.pdf> <./imagenes/triada_021C-eps-converted-to.pdf> <./imagenes/triada
 _021D-eps-converted-to.pdf> <./imagenes/triada_021U-eps-converted-to.pdf> <./im
 agenes/triada_030C-eps-converted-to.pdf> <./imagenes/triada_030T-eps-converted-
@@ -1944,7 +2110,7 @@ kite-eps-converted-to.pdf ./imagenes/red_krackhardt_kite.eps>
 (epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=1941, 311.1625pt x 289
+<./imagenes/red_krackhardt_kite-eps-converted-to.pdf, id=2060, 311.1625pt x 289
 .08pt>
 File: ./imagenes/red_krackhardt_kite-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1958,7 +2124,7 @@ Overfull \hbox (44.93935pt too wide) in paragraph at lines 1--1
 []\OT1/lmr/bx/n/17.28 Business Pro-cess Mo-de-ling No-ta-tion (BPMN) 
  []
 
-<./imagenes/gateway_exclusivo.png, id=1944, 784.9325pt x 270.00874pt>
+<./imagenes/gateway_exclusivo.png, id=2063, 784.9325pt x 270.00874pt>
 File: ./imagenes/gateway_exclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_exclusivo.png>
@@ -1967,8 +2133,8 @@ Package pdftex.def Info: ./imagenes/gateway_exclusivo.png used on input line 13
 (pdftex.def)             Requested size: 312.9803pt x 107.66373pt.
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
- [59]
-<./imagenes/gateway_paralelo.png, id=1953, 737.75626pt x 249.93375pt>
+ [61]
+<./imagenes/gateway_paralelo.png, id=2073, 737.75626pt x 249.93375pt>
 File: ./imagenes/gateway_paralelo.png Graphic file (type png)
 
 <use ./imagenes/gateway_paralelo.png>
@@ -1977,9 +2143,9 @@ Package pdftex.def Info: ./imagenes/gateway_paralelo.png used on input line 24.
 (pdftex.def)             Requested size: 312.9803pt x 106.02785pt.
 LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
- [60 <./imagenes/red_krackhardt_kite-eps-converted-to.pdf> <./imagenes/gateway_
+ [62 <./imagenes/red_krackhardt_kite-eps-converted-to.pdf> <./imagenes/gateway_
 exclusivo.png>]
-<./imagenes/gateway_inclusivo.png, id=1967, 785.93625pt x 306.14375pt>
+<./imagenes/gateway_inclusivo.png, id=2087, 785.93625pt x 306.14375pt>
 File: ./imagenes/gateway_inclusivo.png Graphic file (type png)
 
 <use ./imagenes/gateway_inclusivo.png>
@@ -1987,7 +2153,7 @@ Package pdftex.def Info: ./imagenes/gateway_inclusivo.png used on input line 35
 .
 (pdftex.def)             Requested size: 312.9803pt x 121.9181pt.
 
-<./imagenes/gateway_complejo.png, id=1971, 959.585pt x 337.26pt>
+<./imagenes/gateway_complejo.png, id=2091, 959.585pt x 337.26pt>
 File: ./imagenes/gateway_complejo.png Graphic file (type png)
 
 <use ./imagenes/gateway_complejo.png>
@@ -1996,8 +2162,8 @@ Package pdftex.def Info: ./imagenes/gateway_complejo.png used on input line 47.
 (pdftex.def)             Requested size: 312.9803pt x 109.9993pt.
 LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
- [61 <./imagenes/gateway_paralelo.png> <./imagenes/gateway_inclusivo.png>]
-<./imagenes/diagrama_colaboracion.png, id=1983, 958.58125pt x 464.73625pt>
+ [63 <./imagenes/gateway_paralelo.png> <./imagenes/gateway_inclusivo.png>]
+<./imagenes/diagrama_colaboracion.png, id=2103, 958.58125pt x 464.73625pt>
 File: ./imagenes/diagrama_colaboracion.png Graphic file (type png)
 
 <use ./imagenes/diagrama_colaboracion.png>
@@ -2005,7 +2171,7 @@ Package pdftex.def Info: ./imagenes/diagrama_colaboracion.png used on input lin
 e 65.
 (pdftex.def)             Requested size: 312.9803pt x 151.73952pt.
 
-<./imagenes/diagrama_colaboracion_caja_negra.png, id=1987, 963.6pt x 434.62375p
+<./imagenes/diagrama_colaboracion_caja_negra.png, id=2107, 963.6pt x 434.62375p
 t>
 File: ./imagenes/diagrama_colaboracion_caja_negra.png Graphic file (type png)
  <use ./imagenes/diagrama_colaboracion_caja_negra.png>
@@ -2016,13 +2182,13 @@ n input line 79.
 (./Capitulos/Marco_teorico/SOA.tex
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
- [62 <./imagenes/gateway_complejo.png>]
+ [64 <./imagenes/gateway_complejo.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
- [63 <./imagenes/diagrama_colaboracion.png> <./imagenes/diagrama_colaboracion_c
-aja_negra.png>] <./imagenes/6.png, id=2002, 386.19281pt x 241.65282pt>
+ [65 <./imagenes/diagrama_colaboracion.png> <./imagenes/diagrama_colaboracion_c
+aja_negra.png>] <./imagenes/6.png, id=2122, 386.19281pt x 241.65282pt>
 File: ./imagenes/6.png Graphic file (type png)
 
 <use ./imagenes/6.png>
@@ -2033,16 +2199,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
- [64 <./imagenes/6.png>]
+ [66 <./imagenes/6.png>]
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
- [65]
+ [67]
 LaTeX Info: Redefining \. on input line 43.
 LaTeX Info: Redefining \% on input line 43.
- [66]) (./Capitulos/Marco_teorico/Scrum.tex
+ [68]) (./Capitulos/Marco_teorico/Scrum.tex
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
- [67]
+ [69]
 Overfull \hbox (1.93153pt too wide) in paragraph at lines 24--25
 []\OT1/lmr/m/n/12 Son mul-ti-fun-cio-na-les: Se tie-nen in-te-gran-tes que ma-n
 e-jan di-fe-ren-tes ^^Sareas
@@ -2050,22 +2216,22 @@ e-jan di-fe-ren-tes ^^Sareas
 
 LaTeX Info: Redefining \. on input line 41.
 LaTeX Info: Redefining \% on input line 41.
-[68]
+[70]
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
- [69]
+ [71]
 LaTeX Info: Redefining \. on input line 85.
 LaTeX Info: Redefining \% on input line 85.
- [70])
+ [72])
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
- [71] (./Capitulos/Marco_teorico/Requerimientos.tex
+ [73] (./Capitulos/Marco_teorico/Requerimientos.tex
 
 LaTeX Warning: Citation `measuring_maintainability' undefined on input line 5.
 
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
-[72] <./imagenes/mantainability1.png, id=2064, 356.83313pt x 259.7203pt>
+[74] <./imagenes/mantainability1.png, id=2184, 356.83313pt x 259.7203pt>
 File: ./imagenes/mantainability1.png Graphic file (type png)
 
 <use ./imagenes/mantainability1.png>
@@ -2073,21 +2239,21 @@ Package pdftex.def Info: ./imagenes/mantainability1.png used on input line 29.
 (pdftex.def)             Requested size: 312.9803pt x 227.81348pt.
 LaTeX Info: Redefining \. on input line 40.
 LaTeX Info: Redefining \% on input line 40.
- [73 <./imagenes/mantainability1.png>]
+ [75 <./imagenes/mantainability1.png>]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 40.
 
 
 LaTeX Warning: Citation `cyclomatic_complexity' undefined on input line 40.
 
-<./imagenes/mantainability2.png, id=2074, 268.00125pt x 103.13531pt>
+<./imagenes/mantainability2.png, id=2194, 268.00125pt x 103.13531pt>
 File: ./imagenes/mantainability2.png Graphic file (type png)
 
 <use ./imagenes/mantainability2.png>
 Package pdftex.def Info: ./imagenes/mantainability2.png used on input line 44.
 (pdftex.def)             Requested size: 312.9803pt x 120.44434pt.
 
-<./imagenes/mantainability3.png, id=2077, 266.49562pt x 141.52875pt>
+<./imagenes/mantainability3.png, id=2197, 266.49562pt x 141.52875pt>
 File: ./imagenes/mantainability3.png Graphic file (type png)
 
 <use ./imagenes/mantainability3.png>
@@ -2095,10 +2261,10 @@ Package pdftex.def Info: ./imagenes/mantainability3.png used on input line 55.
 (pdftex.def)             Requested size: 312.9803pt x 166.2315pt.
 
 
-LaTeX Warning: Reference `mantainability4' on page 74 undefined on input line 6
+LaTeX Warning: Reference `mantainability4' on page 76 undefined on input line 6
 2.
 
-<./imagenes/mantainability4.png, id=2082, 141.52875pt x 123.46124pt>
+<./imagenes/mantainability4.png, id=2202, 141.52875pt x 123.46124pt>
 File: ./imagenes/mantainability4.png Graphic file (type png)
 
 <use ./imagenes/mantainability4.png>
@@ -2106,34 +2272,34 @@ Package pdftex.def Info: ./imagenes/mantainability4.png used on input line 66.
 (pdftex.def)             Requested size: 312.9803pt x 273.07928pt.
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
- [74 <./imagenes/mantainability2.png>]
+ [76 <./imagenes/mantainability2.png>]
 
 LaTeX Warning: Citation `complexity_mesure' undefined on input line 77.
 
 LaTeX Info: Redefining \. on input line 83.
 LaTeX Info: Redefining \% on input line 83.
-[75 <./imagenes/mantainability3.png>]
+[77 <./imagenes/mantainability3.png>]
 LaTeX Info: Redefining \. on input line 84.
 LaTeX Info: Redefining \% on input line 84.
- [76 <./imagenes/mantainability4.png>]
+ [78 <./imagenes/mantainability4.png>]
 
 LaTeX Warning: Citation `computer_science' undefined on input line 90.
 
 LaTeX Info: Redefining \. on input line 107.
 LaTeX Info: Redefining \% on input line 107.
-[77]
+[79]
 LaTeX Info: Redefining \. on input line 119.
 LaTeX Info: Redefining \% on input line 119.
- [78]
+ [80]
 
 LaTeX Warning: Citation `quality_in_use' undefined on input line 122.
 
 LaTeX Info: Redefining \. on input line 141.
 LaTeX Info: Redefining \% on input line 141.
-[79]
+[81]
 LaTeX Info: Redefining \. on input line 158.
 LaTeX Info: Redefining \% on input line 158.
- [80]
+ [82]
 
 LaTeX Warning: Citation `social_experience' undefined on input line 159.
 
@@ -2142,27 +2308,27 @@ LaTeX Warning: Citation `usability_ux' undefined on input line 166.
 
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
-[81]
+[83]
 
 LaTeX Warning: Citation `security_ws' undefined on input line 180.
 
 LaTeX Info: Redefining \. on input line 197.
 LaTeX Info: Redefining \% on input line 197.
-[82]
+[84]
 LaTeX Info: Redefining \. on input line 210.
 LaTeX Info: Redefining \% on input line 210.
- [83]) (./Capitulos/Marco_teorico/Archimate.tex
+ [85]) (./Capitulos/Marco_teorico/Archimate.tex
 
 LaTeX Warning: Citation `archimate2' undefined on input line 3.
 
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
-[84]
+[86]
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
 []|\OT1/lmr/m/n/12 Ente (per-so-na) or-ga-ni-za-cio-
  []
 
-<./imagenes/Archimate/businessactor.png, id=2191, 161.85469pt x 69.25874pt>
+<./imagenes/Archimate/businessactor.png, id=2312, 161.85469pt x 69.25874pt>
 File: ./imagenes/Archimate/businessactor.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessactor.png>
@@ -2170,7 +2336,7 @@ Package pdftex.def Info: ./imagenes/Archimate/businessactor.png used on input l
 ine 38.
 (pdftex.def)             Requested size: 42.67912pt x 18.26259pt.
 
-<./imagenes/Archimate/businesscollaboration.png, id=2192, 176.91093pt x 69.2587
+<./imagenes/Archimate/businesscollaboration.png, id=2313, 176.91093pt x 69.2587
 4pt>
 File: ./imagenes/Archimate/businesscollaboration.png Graphic file (type png)
  <use ./imagenes/Archimate/businesscollaboration.png>
@@ -2178,7 +2344,7 @@ Package pdftex.def Info: ./imagenes/Archimate/businesscollaboration.png used on
  input line 42.
 (pdftex.def)             Requested size: 42.67912pt x 16.70802pt.
 
-<./imagenes/Archimate/businessrole.png, id=2193, 209.28188pt x 69.25874pt>
+<./imagenes/Archimate/businessrole.png, id=2314, 209.28188pt x 69.25874pt>
 File: ./imagenes/Archimate/businessrole.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessrole.png>
@@ -2190,7 +2356,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
 []|\OT1/lmr/m/it/12 Proceso de ne-go-cio
  []
 
-<./imagenes/Archimate/businessprocess.png, id=2194, 204.765pt x 69.25874pt>
+<./imagenes/Archimate/businessprocess.png, id=2315, 204.765pt x 69.25874pt>
 File: ./imagenes/Archimate/businessprocess.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessprocess.png>
@@ -2203,7 +2369,7 @@ Underfull \hbox (badness 8038) in paragraph at lines 52--52
  []
 
 
-<./imagenes/Archimate/businessfunction.png, id=2195, 190.46156pt x 69.25874pt>
+<./imagenes/Archimate/businessfunction.png, id=2316, 190.46156pt x 69.25874pt>
 File: ./imagenes/Archimate/businessfunction.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessfunction.png>
@@ -2211,7 +2377,7 @@ Package pdftex.def Info: ./imagenes/Archimate/businessfunction.png used on inpu
 t line 54.
 (pdftex.def)             Requested size: 42.67912pt x 15.51912pt.
 
-<./imagenes/Archimate/businessinteraction.png, id=2196, 158.84344pt x 69.25874p
+<./imagenes/Archimate/businessinteraction.png, id=2317, 158.84344pt x 69.25874p
 t>
 File: ./imagenes/Archimate/businessinteraction.png Graphic file (type png)
  <use ./imagenes/Archimate/businessinteraction.png>
@@ -2223,7 +2389,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
 []|\OT1/lmr/m/it/12 Evento de ne-go-cio
  []
 
-<./imagenes/Archimate/businessevent.png, id=2197, 184.43906pt x 69.25874pt>
+<./imagenes/Archimate/businessevent.png, id=2318, 184.43906pt x 69.25874pt>
 File: ./imagenes/Archimate/businessevent.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessevent.png>
@@ -2235,7 +2401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--64
 []|\OT1/lmr/m/it/12 Servicio de ne-go-cio
  []
 
-<./imagenes/Archimate/businessservice.png, id=2198, 211.54031pt x 69.25874pt>
+<./imagenes/Archimate/businessservice.png, id=2319, 211.54031pt x 69.25874pt>
 File: ./imagenes/Archimate/businessservice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessservice.png>
@@ -2243,7 +2409,7 @@ Package pdftex.def Info: ./imagenes/Archimate/businessservice.png used on input
  line 66.
 (pdftex.def)             Requested size: 42.67912pt x 13.97302pt.
 
-<./imagenes/Archimate/businessproduct.png, id=2199, 105.39375pt x 69.25874pt>
+<./imagenes/Archimate/businessproduct.png, id=2320, 105.39375pt x 69.25874pt>
 File: ./imagenes/Archimate/businessproduct.png Graphic file (type png)
 
 <use ./imagenes/Archimate/businessproduct.png>
@@ -2256,12 +2422,12 @@ Underfull \vbox (badness 10000) detected at line 72
 
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
-[85 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscoll
+[87 <./imagenes/Archimate/businessactor.png> <./imagenes/Archimate/businesscoll
 aboration.png> <./imagenes/Archimate/businessrole.png> <./imagenes/Archimate/bu
 sinessprocess.png> <./imagenes/Archimate/businessfunction.png> <./imagenes/Arch
 imate/businessinteraction.png> <./imagenes/Archimate/businessevent.png> <./imag
 enes/Archimate/businessservice.png>]
-<./imagenes/Archimate/applicationcomponent.png, id=2208, 246.1697pt x 69.25874p
+<./imagenes/Archimate/applicationcomponent.png, id=2328, 246.1697pt x 69.25874p
 t>
 File: ./imagenes/Archimate/applicationcomponent.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationcomponent.png>
@@ -2269,7 +2435,7 @@ Package pdftex.def Info: ./imagenes/Archimate/applicationcomponent.png used on
 input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 12.00737pt.
 
-<./imagenes/Archimate/applicationcollaboration.png, id=2209, 172.39406pt x 69.2
+<./imagenes/Archimate/applicationcollaboration.png, id=2329, 172.39406pt x 69.2
 5874pt>
 File: ./imagenes/Archimate/applicationcollaboration.png Graphic file (type png)
 
@@ -2278,7 +2444,7 @@ Package pdftex.def Info: ./imagenes/Archimate/applicationcollaboration.png used
  on input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 17.14554pt.
 
-<./imagenes/Archimate/applicationfunction.png, id=2210, 181.42781pt x 69.25874p
+<./imagenes/Archimate/applicationfunction.png, id=2330, 181.42781pt x 69.25874p
 t>
 File: ./imagenes/Archimate/applicationfunction.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationfunction.png>
@@ -2286,7 +2452,7 @@ Package pdftex.def Info: ./imagenes/Archimate/applicationfunction.png used on i
 nput line 113.
 (pdftex.def)             Requested size: 42.67912pt x 16.29164pt.
 
-<./imagenes/Archimate/applicationinteraction.png, id=2211, 151.3153pt x 69.2587
+<./imagenes/Archimate/applicationinteraction.png, id=2331, 151.3153pt x 69.2587
 4pt>
 File: ./imagenes/Archimate/applicationinteraction.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationinteraction.png>
@@ -2294,7 +2460,7 @@ Package pdftex.def Info: ./imagenes/Archimate/applicationinteraction.png used o
 n input line 113.
 (pdftex.def)             Requested size: 42.67912pt x 19.53497pt.
 
-<./imagenes/Archimate/applicationservice.png, id=2212, 209.28188pt x 69.25874pt
+<./imagenes/Archimate/applicationservice.png, id=2332, 209.28188pt x 69.25874pt
 >
 File: ./imagenes/Archimate/applicationservice.png Graphic file (type png)
  <use ./imagenes/Archimate/applicationservice.png>
@@ -2306,7 +2472,7 @@ Overfull \hbox (36.79083pt too wide) in paragraph at lines 87--114
  [][] 
  []
 
-<./imagenes/Archimate/technologynode.png, id=2216, 191.21437pt x 69.25874pt>
+<./imagenes/Archimate/technologynode.png, id=2336, 191.21437pt x 69.25874pt>
 File: ./imagenes/Archimate/technologynode.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologynode.png>
@@ -2314,7 +2480,7 @@ Package pdftex.def Info: ./imagenes/Archimate/technologynode.png used on input
 line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.45782pt.
 
-<./imagenes/Archimate/technologydevice.png, id=2217, 202.50656pt x 57.21375pt>
+<./imagenes/Archimate/technologydevice.png, id=2337, 202.50656pt x 57.21375pt>
 File: ./imagenes/Archimate/technologydevice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologydevice.png>
@@ -2322,7 +2488,7 @@ Package pdftex.def Info: ./imagenes/Archimate/technologydevice.png used on inpu
 t line 156.
 (pdftex.def)             Requested size: 42.67912pt x 12.05801pt.
 
-<./imagenes/Archimate/technologynetwork.png, id=2218, 179.92218pt x 67.0003pt>
+<./imagenes/Archimate/technologynetwork.png, id=2338, 179.92218pt x 67.0003pt>
 File: ./imagenes/Archimate/technologynetwork.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologynetwork.png>
@@ -2330,7 +2496,7 @@ Package pdftex.def Info: ./imagenes/Archimate/technologynetwork.png used on inp
 ut line 156.
 (pdftex.def)             Requested size: 42.67912pt x 15.8933pt.
 
-<./imagenes/Archimate/technologyswsystem.png, id=2219, 194.22563pt x 67.75313pt
+<./imagenes/Archimate/technologyswsystem.png, id=2339, 194.22563pt x 67.75313pt
 >
 File: ./imagenes/Archimate/technologyswsystem.png Graphic file (type png)
  <use ./imagenes/Archimate/technologyswsystem.png>
@@ -2338,7 +2504,7 @@ Package pdftex.def Info: ./imagenes/Archimate/technologyswsystem.png used on in
 put line 156.
 (pdftex.def)             Requested size: 42.67912pt x 14.88815pt.
 
-<./imagenes/Archimate/technologyservice.png, id=2220, 210.7875pt x 71.51718pt>
+<./imagenes/Archimate/technologyservice.png, id=2340, 210.7875pt x 71.51718pt>
 File: ./imagenes/Archimate/technologyservice.png Graphic file (type png)
 
 <use ./imagenes/Archimate/technologyservice.png>
@@ -2350,7 +2516,7 @@ Overfull \hbox (36.79083pt too wide) in paragraph at lines 130--157
  [][] 
  []
 
-<./imagenes/Archimate/relassociation.png, id=2224, 84.315pt x 18.0675pt>
+<./imagenes/Archimate/relassociation.png, id=2344, 84.315pt x 18.0675pt>
 File: ./imagenes/Archimate/relassociation.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relassociation.png>
@@ -2358,7 +2524,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relassociation.png used on input
 line 206.
 (pdftex.def)             Requested size: 28.45274pt x 6.09682pt.
 
-<./imagenes/Archimate/relusedby.png, id=2225, 65.49469pt x 22.58438pt>
+<./imagenes/Archimate/relusedby.png, id=2345, 65.49469pt x 22.58438pt>
 File: ./imagenes/Archimate/relusedby.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relusedby.png>
@@ -2366,7 +2532,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relusedby.png used on input line
 206.
 (pdftex.def)             Requested size: 28.45274pt x 9.81102pt.
 
-<./imagenes/Archimate/relrealization.png, id=2226, 79.04532pt x 26.34843pt>
+<./imagenes/Archimate/relrealization.png, id=2346, 79.04532pt x 26.34843pt>
 File: ./imagenes/Archimate/relrealization.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relrealization.png>
@@ -2374,7 +2540,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relrealization.png used on input
 line 206.
 (pdftex.def)             Requested size: 28.45274pt x 9.4842pt.
 
-<./imagenes/Archimate/relassignment.png, id=2227, 93.34875pt x 15.05624pt>
+<./imagenes/Archimate/relassignment.png, id=2347, 93.34875pt x 15.05624pt>
 File: ./imagenes/Archimate/relassignment.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relassignment.png>
@@ -2382,7 +2548,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relassignment.png used on input l
 ine 206.
 (pdftex.def)             Requested size: 28.45274pt x 4.58904pt.
 
-<./imagenes/Archimate/relaggregation.png, id=2228, 82.05656pt x 18.82031pt>
+<./imagenes/Archimate/relaggregation.png, id=2348, 82.05656pt x 18.82031pt>
 File: ./imagenes/Archimate/relaggregation.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relaggregation.png>
@@ -2390,7 +2556,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relaggregation.png used on input
 line 206.
 (pdftex.def)             Requested size: 28.45274pt x 6.52574pt.
 
-<./imagenes/Archimate/relcomposition.png, id=2229, 82.05656pt x 18.82031pt>
+<./imagenes/Archimate/relcomposition.png, id=2349, 82.05656pt x 18.82031pt>
 File: ./imagenes/Archimate/relcomposition.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relcomposition.png>
@@ -2404,25 +2570,25 @@ Overfull \hbox (36.80902pt too wide) in paragraph at lines 176--207
 
 LaTeX Info: Redefining \. on input line 211.
 LaTeX Info: Redefining \% on input line 211.
-[86 <./imagenes/Archimate/businessproduct.png>]
+[88 <./imagenes/Archimate/businessproduct.png>]
 LaTeX Info: Redefining \. on input line 211.
 LaTeX Info: Redefining \% on input line 211.
- [87 <./imagenes/Archimate/applicationcomponent.png> <./imagenes/Archimate/appl
+ [89 <./imagenes/Archimate/applicationcomponent.png> <./imagenes/Archimate/appl
 icationcollaboration.png> <./imagenes/Archimate/applicationfunction.png> <./ima
 genes/Archimate/applicationinteraction.png> <./imagenes/Archimate/applicationse
 rvice.png>]
 LaTeX Info: Redefining \. on input line 211.
 LaTeX Info: Redefining \% on input line 211.
- [88 <./imagenes/Archimate/technologynode.png> <./imagenes/Archimate/technology
+ [90 <./imagenes/Archimate/technologynode.png> <./imagenes/Archimate/technology
 device.png> <./imagenes/Archimate/technologynetwork.png> <./imagenes/Archimate/
 technologyswsystem.png> <./imagenes/Archimate/technologyservice.png>]
 LaTeX Info: Redefining \. on input line 211.
 LaTeX Info: Redefining \% on input line 211.
- [89 <./imagenes/Archimate/relassociation.png> <./imagenes/Archimate/relusedby.
+ [91 <./imagenes/Archimate/relassociation.png> <./imagenes/Archimate/relusedby.
 png> <./imagenes/Archimate/relrealization.png> <./imagenes/Archimate/relassignm
 ent.png> <./imagenes/Archimate/relaggregation.png> <./imagenes/Archimate/relcom
 position.png>]
-<./imagenes/Archimate/relflow.png, id=2249, 57.96657pt x 21.07875pt>
+<./imagenes/Archimate/relflow.png, id=2370, 57.96657pt x 21.07875pt>
 File: ./imagenes/Archimate/relflow.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relflow.png>
@@ -2430,7 +2596,7 @@ Package pdftex.def Info: ./imagenes/Archimate/relflow.png used on input line 23
 6.
 (pdftex.def)             Requested size: 42.67912pt x 15.51985pt.
 
-<./imagenes/Archimate/reltriggering.png, id=2250, 63.23625pt x 22.58438pt>
+<./imagenes/Archimate/reltriggering.png, id=2371, 63.23625pt x 22.58438pt>
 File: ./imagenes/Archimate/reltriggering.png Graphic file (type png)
 
 <use ./imagenes/Archimate/reltriggering.png>
@@ -2442,7 +2608,7 @@ Overfull \hbox (36.80902pt too wide) in paragraph at lines 220--237
  [][] 
  []
 
-<./imagenes/Archimate/reljunction.png, id=2254, 22.58438pt x 16.56187pt>
+<./imagenes/Archimate/reljunction.png, id=2375, 22.58438pt x 16.56187pt>
 File: ./imagenes/Archimate/reljunction.png Graphic file (type png)
 
 <use ./imagenes/Archimate/reljunction.png>
@@ -2450,7 +2616,7 @@ Package pdftex.def Info: ./imagenes/Archimate/reljunction.png used on input lin
 e 264.
 (pdftex.def)             Requested size: 28.45274pt x 20.86552pt.
 
-<./imagenes/Archimate/relspecialization.png, id=2255, 92.59593pt x 27.10126pt>
+<./imagenes/Archimate/relspecialization.png, id=2376, 92.59593pt x 27.10126pt>
 File: ./imagenes/Archimate/relspecialization.png Graphic file (type png)
 
 <use ./imagenes/Archimate/relspecialization.png>
@@ -2467,10 +2633,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 273.
 LaTeX Info: Redefining \% on input line 273.
- [90 <./imagenes/Archimate/relflow.png> <./imagenes/Archimate/reltriggering.png
+ [92 <./imagenes/Archimate/relflow.png> <./imagenes/Archimate/reltriggering.png
 > <./imagenes/Archimate/reljunction.png> <./imagenes/Archimate/relspecializatio
 n.png>]
-<./imagenes/Archimate/introductoryviewpoint.png, id=2264, 406.51875pt x 395.979
+<./imagenes/Archimate/introductoryviewpoint.png, id=2385, 406.51875pt x 395.979
 37pt>
 File: ./imagenes/Archimate/introductoryviewpoint.png Graphic file (type png)
  <use ./imagenes/Archimate/introductoryviewpoint.png>
@@ -2488,7 +2654,7 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 320--343
  []
 
 
-<./imagenes/Archimate/businessfunctionviewpoint.png, id=2269, 645.91313pt x 110
+<./imagenes/Archimate/businessfunctionviewpoint.png, id=2390, 645.91313pt x 110
 .66344pt>
 File: ./imagenes/Archimate/businessfunctionviewpoint.png Graphic file (type png
 )
@@ -2502,7 +2668,7 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 354--377
  []
 
 
-<./imagenes/Archimate/businessprocessviewpoint.png, id=2272, 652.68843pt x 338.
+<./imagenes/Archimate/businessprocessviewpoint.png, id=2393, 652.68843pt x 338.
 76563pt>
 File: ./imagenes/Archimate/businessprocessviewpoint.png Graphic file (type png)
 
@@ -2516,7 +2682,7 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 388--411
  []
 
 
-<./imagenes/Archimate/applicationusageviewpoint.png, id=2275, 635.37375pt x 432
+<./imagenes/Archimate/applicationusageviewpoint.png, id=2396, 635.37375pt x 432
 .11438pt>
 File: ./imagenes/Archimate/applicationusageviewpoint.png Graphic file (type png
 )
@@ -2529,7 +2695,7 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 422--445
  [][] 
  []
 
-<./imagenes/Archimate/productviewpoint.png, id=2278, 701.62125pt x 349.305pt>
+<./imagenes/Archimate/productviewpoint.png, id=2399, 701.62125pt x 349.305pt>
 File: ./imagenes/Archimate/productviewpoint.png Graphic file (type png)
 
 <use ./imagenes/Archimate/productviewpoint.png>
@@ -2542,7 +2708,7 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 456--480
  []
 
 
-<./imagenes/Archimate/infrastructureviewpoint.png, id=2281, 893.3375pt x 441.65
+<./imagenes/Archimate/infrastructureviewpoint.png, id=2402, 893.3375pt x 441.65
 pt>
 File: ./imagenes/Archimate/infrastructureviewpoint.png Graphic file (type png)
  <use ./imagenes/Archimate/infrastructureviewpoint.png>
@@ -2559,20 +2725,20 @@ Underfull \vbox (badness 1184) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [91 <./imagenes/Archimate/introductoryviewpoint.png>]
+ [93 <./imagenes/Archimate/introductoryviewpoint.png>]
 LaTeX Info: Redefining \. on input line 4.
 LaTeX Info: Redefining \% on input line 4.
- [92 <./imagenes/Archimate/businessfunctionviewpoint.png>]
+ [94 <./imagenes/Archimate/businessfunctionviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- [93 <./imagenes/Archimate/businessprocessviewpoint.png>]
+ [95 <./imagenes/Archimate/businessprocessviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 
-[94 <./imagenes/Archimate/applicationusageviewpoint.png>]
+[96 <./imagenes/Archimate/applicationusageviewpoint.png>]
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- [95 <./imagenes/Archimate/productviewpoint.png> <./imagenes/Archimate/infrastr
+ [97 <./imagenes/Archimate/productviewpoint.png> <./imagenes/Archimate/infrastr
 uctureviewpoint.png (PNG copy)>]
 Overfull \hbox (20.58249pt too wide) in paragraph at lines 17--69
  [][] 
@@ -2662,35 +2828,35 @@ LaTeX Warning: Float too large for page by 47.49173pt on input line 321.
 
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
-[96]
-LaTeX Info: Redefining \. on input line 323.
-LaTeX Info: Redefining \% on input line 323.
- [97]
-LaTeX Info: Redefining \. on input line 323.
-LaTeX Info: Redefining \% on input line 323.
- [98]
+[98]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
  [99]
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
- [100]))
+ [100]
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
+ [101]
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
+ [102]))
 Cap\'{\i }tulo 6.
-(./Capitulos/Marco_teorico/Marco_legal.tex [101
+(./Capitulos/Marco_teorico/Marco_legal.tex [103
 
 
 
 ]
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
- [102]
+ [104]
 
 LaTeX Warning: Citation `leg_int' undefined on input line 17.
 
-) [103]
+) [105]
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
- [104
+ [106
 
 ]
 Cap\'{\i }tulo 7.
@@ -2700,20 +2866,20 @@ Overfull \hbox (6.16432pt too wide) in paragraph at lines 12--13
 -la-ci^^Son (sea sim^^Setri-
  []
 
-[105]
+[107]
 LaTeX Info: Redefining \. on input line 33.
 LaTeX Info: Redefining \% on input line 33.
- [106])
+ [108])
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
- [107]
+ [109]
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
- [108
+ [110
 
 ]
 Cap\'{\i }tulo 8.
-(./Capitulos/Metodologia/Metodologia.tex [109]
+(./Capitulos/Metodologia/Metodologia.tex [111]
 Overfull \hbox (0.58981pt too wide) in paragraph at lines 29--31
 []\OT1/lmr/m/n/12 Daily Scrum (15 mi-nu-tos m^^Saxi-mo)[Solo par-ti-ci-pa el de
 -ve-lo-pe-ment team] 
@@ -2726,10 +2892,10 @@ Overfull \hbox (36.80826pt too wide) in paragraph at lines 58--125
 
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
-[110]) [111]
+[112]) [113]
 LaTeX Info: Redefining \. on input line 152.
 LaTeX Info: Redefining \% on input line 152.
- [112
+ [114
 
 ]
 Cap\'{\i }tulo 9.
@@ -2738,7 +2904,7 @@ Overfull \hbox (8.35382pt too wide) in paragraph at lines 8--29
  [] 
  []
 
-<./imagenes/cronograma_completo.PNG, id=2384, 917.67844pt x 281.55188pt>
+<./imagenes/cronograma_completo.PNG, id=2503, 917.67844pt x 281.55188pt>
 File: ./imagenes/cronograma_completo.PNG Graphic file (type png)
 
 <use ./imagenes/cronograma_completo.PNG>
@@ -2749,10 +2915,10 @@ Package pdftex.def Info: ./imagenes/cronograma_completo.PNG used on input line
 
 LaTeX Warning: Float too large for page by 11.17409pt on input line 38.
 
-) [113]
+) [115]
 LaTeX Info: Redefining \. on input line 155.
 LaTeX Info: Redefining \% on input line 155.
- [114 <./imagenes/cronograma_completo.PNG>]
+ [116 <./imagenes/cronograma_completo.PNG>]
 Cap\'{\i }tulo 10.
 (./Capitulos/Recursos/Hardware.tex
 Underfull \hbox (badness 1281) in paragraph at lines 27--27
@@ -2786,18 +2952,18 @@ LaTeX Warning: Citation `manual_referencia_costos' undefined on input line 22.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 23.
 ) (./Capitulos/Recursos/Miscelaneos.tex) (./Capitulos/Recursos/Totales.tex
-[115
+[117
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [116]
+ [118]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [117])
+ [119])
 LaTeX Info: Redefining \. on input line 163.
 LaTeX Info: Redefining \% on input line 163.
- [118
+ [120
 
 ]
 Cap\'{\i }tulo 11.
@@ -2807,11 +2973,11 @@ Overfull \hbox (3.32678pt too wide) in paragraph at lines 15--16
 o fue la en-cues-ta electr^^Soni-
  []
 
-[119
+[121
 
 ]
 
-LaTeX Warning: Reference `anexo1' on page 120 undefined on input line 25.
+LaTeX Warning: Reference `anexo1' on page 122 undefined on input line 25.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
@@ -2820,7 +2986,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[120]
+[122]
 Overfull \hbox (3.86702pt too wide) in paragraph at lines 42--44
 \OT1/lmr/m/n/12 En los de-por-tes prac-ti-ca-dos, re-sal-tan el F^^Sutbol (27$ 
 $%), Ba-lon-ces-to (13$ $%)
@@ -2828,13 +2994,13 @@ $%), Ba-lon-ces-to (13$ $%)
 
 LaTeX Info: Redefining \. on input line 46.
 LaTeX Info: Redefining \% on input line 46.
-[121]
+[123]
 LaTeX Info: Redefining \. on input line 81.
 LaTeX Info: Redefining \% on input line 81.
- [122]
+ [124]
 LaTeX Info: Redefining \. on input line 115.
 LaTeX Info: Redefining \% on input line 115.
- [123]
+ [125]
 Overfull \hbox (4.30739pt too wide) in paragraph at lines 117--118
 []\OT1/lmr/m/n/12 Cuando quie-re bus-car per-so-nas con quien prac-ti-car de-po
 r-te ?`Por qu^^Se me-
@@ -2842,13 +3008,13 @@ r-te ?`Por qu^^Se me-
 
 LaTeX Info: Redefining \. on input line 147.
 LaTeX Info: Redefining \% on input line 147.
-[124])
+[126])
 LaTeX Info: Redefining \. on input line 166.
 LaTeX Info: Redefining \% on input line 166.
- [125]
+ [127]
 LaTeX Info: Redefining \. on input line 166.
 LaTeX Info: Redefining \% on input line 166.
- [126
+ [128
 
 ]
 Cap\'{\i }tulo 12.
@@ -3014,7 +3180,7 @@ Overfull \hbox (84.96489pt too wide) in alignment at lines 19--128
  [] [] [] [] [] 
  []
 
-[127]
+[129]
 Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []|\OT1/lmr/m/n/12 Actualizar tor-
  []
@@ -3276,10 +3442,10 @@ Overfull \hbox (84.96489pt too wide) in alignment at lines 128--246
 
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
-[128]
+[130]
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
- [129]
+ [131]
 Underfull \hbox (badness 2591) in paragraph at lines 248--248
 []|\OT1/lmr/m/n/12 Manejo de pa-
  []
@@ -3606,13 +3772,13 @@ Overfull \hbox (84.96489pt too wide) in alignment at lines 246--358
 
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
-[130]
+[132]
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
- [131]
+ [133]
 LaTeX Info: Redefining \. on input line 358.
 LaTeX Info: Redefining \% on input line 358.
- [132]
+ [134]
 Underfull \hbox (badness 1609) in paragraph at lines 364--364
 \OT1/lmr/m/n/12 son uti-li-za-dos pa-ra even-
  []
@@ -3764,16 +3930,16 @@ Overfull \hbox (84.96489pt too wide) in alignment at lines 358--470
 
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
-[133]
-LaTeX Info: Redefining \. on input line 470.
-LaTeX Info: Redefining \% on input line 470.
- [134]
-LaTeX Info: Redefining \. on input line 470.
-LaTeX Info: Redefining \% on input line 470.
- [135]
+[135]
 LaTeX Info: Redefining \. on input line 470.
 LaTeX Info: Redefining \% on input line 470.
  [136]
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
+ [137]
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
+ [138]
 Underfull \hbox (badness 10000) in paragraph at lines 472--472
 []|\OT1/lmr/m/n/12 Difusi^^Son de
  []
@@ -3830,16 +3996,16 @@ Overfull \hbox (84.96489pt too wide) in alignment at lines 470--511
 
 LaTeX Info: Redefining \. on input line 511.
 LaTeX Info: Redefining \% on input line 511.
-[137]
+[139]
 LaTeX Info: Redefining \. on input line 511.
 LaTeX Info: Redefining \% on input line 511.
- [138]
+ [140]
 LaTeX Info: Redefining \. on input line 511.
 LaTeX Info: Redefining \% on input line 511.
- [139]
+ [141]
 LaTeX Info: Redefining \. on input line 511.
 LaTeX Info: Redefining \% on input line 511.
- [140])
+ [142])
 (./Capitulos/Analisis_requerimientos/Requerimientos_no_funcionales.tex
 Underfull \hbox (badness 3471) in paragraph at lines 218--218
 []|\OT1/lmr/m/n/12 El usua-rio sa-be que fun-cio-na-li-dad
@@ -3847,20 +4013,20 @@ Underfull \hbox (badness 3471) in paragraph at lines 218--218
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
-[141]
+[143]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
- [142]
+ [144]
 Overfull \vbox (15.99117pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
 
-[143]
+[145]
 
-LaTeX Warning: Text page 144 contains only floats.
+LaTeX Warning: Text page 146 contains only floats.
 
 
 Overfull \vbox (0.30664pt too high) has occurred while \output is active []
@@ -3868,13 +4034,13 @@ Overfull \vbox (0.30664pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
 
-[144]
+[146]
 
-LaTeX Warning: Text page 145 contains only floats.
+LaTeX Warning: Text page 147 contains only floats.
 
 LaTeX Info: Redefining \. on input line 226.
 LaTeX Info: Redefining \% on input line 226.
-[145]
+[147]
 Underfull \hbox (badness 2119) in paragraph at lines 303--303
 []|\OT1/lmr/m/n/12 Hay es-tan-da-res con-ci-sos pa-ra ca-da
  []
@@ -3891,9 +4057,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 388--388
 
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
-[146]
+[148]
 
-LaTeX Warning: Text page 147 contains only floats.
+LaTeX Warning: Text page 149 contains only floats.
 
 
 Overfull \vbox (0.30664pt too high) has occurred while \output is active []
@@ -3901,24 +4067,24 @@ Overfull \vbox (0.30664pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
 
-[147]
+[149]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
- [148]
+ [150]
 Overfull \vbox (15.99118pt too high) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
 
-[149]
+[151]
 LaTeX Info: Redefining \. on input line 482.
 LaTeX Info: Redefining \% on input line 482.
- [150]
+ [152]
 LaTeX Info: Redefining \. on input line 482.
 LaTeX Info: Redefining \% on input line 482.
- [151]
+ [153]
 Underfull \hbox (badness 5519) in paragraph at lines 506--506
 []|\OT1/lmr/m/n/12 La can-ti-dad de ser-vi-cios que no
  []
@@ -3931,15 +4097,15 @@ Underfull \hbox (badness 1968) in paragraph at lines 506--506
 )))
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
- [152
+ [154
 
 ]
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
- [153]
+ [155]
 LaTeX Info: Redefining \. on input line 170.
 LaTeX Info: Redefining \% on input line 170.
- [154
+ [156
 
 ]
 Cap\'{\i }tulo 13.
@@ -3949,28 +4115,28 @@ Cap\'{\i }tulo 13.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<./imagenes/actores.png, id=2606, 717.68124pt x 279.0425pt>
+<./imagenes/actores.png, id=2725, 717.68124pt x 279.0425pt>
 File: ./imagenes/actores.png Graphic file (type png)
 
 <use ./imagenes/actores.png>
 Package pdftex.def Info: ./imagenes/actores.png used on input line 9.
 (pdftex.def)             Requested size: 312.9803pt x 121.69331pt.
 
-<./imagenes/roles.png, id=2607, 730.73pt x 653.44125pt>
+<./imagenes/roles.png, id=2726, 730.73pt x 653.44125pt>
 File: ./imagenes/roles.png Graphic file (type png)
 
 <use ./imagenes/roles.png>
 Package pdftex.def Info: ./imagenes/roles.png used on input line 20.
 (pdftex.def)             Requested size: 312.9803pt x 279.87749pt.
- [155]
-<./imagenes/introductory.png, id=2612, 923.45pt x 834.11626pt>
+ [157]
+<./imagenes/introductory.png, id=2732, 923.45pt x 834.11626pt>
 File: ./imagenes/introductory.png Graphic file (type png)
 
 <use ./imagenes/introductory.png>
 Package pdftex.def Info: ./imagenes/introductory.png used on input line 33.
 (pdftex.def)             Requested size: 312.9803pt x 282.70485pt.
 
-<./imagenes/generallayered.png, id=2613, 1752.5475pt x 1075.01625pt>
+<./imagenes/generallayered.png, id=2733, 1752.5475pt x 1075.01625pt>
 File: ./imagenes/generallayered.png Graphic file (type png)
 
 <use ./imagenes/generallayered.png>
@@ -3978,13 +4144,13 @@ Package pdftex.def Info: ./imagenes/generallayered.png used on input line 46.
 (pdftex.def)             Requested size: 312.9803pt x 191.96906pt.
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
- [156 <./imagenes/actores.png (PNG copy)>]
+ [158 <./imagenes/actores.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
- [157 <./imagenes/roles.png (PNG copy)>]
-<./imagenes/business_functions/patrociniosdeportivos.png, id=2623, 826.08624pt 
+ [159 <./imagenes/roles.png (PNG copy)>]
+<./imagenes/business_functions/patrociniosdeportivos.png, id=2742, 826.08624pt 
 x 439.6425pt>
 File: ./imagenes/business_functions/patrociniosdeportivos.png Graphic file (typ
 e png)
@@ -3995,12 +4161,12 @@ g used on input line 63.
 LaTeX Info: Redefining \. on input line 71.
 LaTeX Info: Redefining \% on input line 71.
 
-[158 <./imagenes/introductory.png (PNG copy)>]
+[160 <./imagenes/introductory.png (PNG copy)>]
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
- [159 <./imagenes/generallayered.png (PNG copy)> <./imagenes/business_functions
+ [161 <./imagenes/generallayered.png (PNG copy)> <./imagenes/business_functions
 /patrociniosdeportivos.png (PNG copy)>]
-<./imagenes/business_functions/organizacioneventosdeportivos.png, id=2632, 1081
+<./imagenes/business_functions/organizacioneventosdeportivos.png, id=2752, 1081
 .03876pt x 467.7475pt>
 File: ./imagenes/business_functions/organizacioneventosdeportivos.png Graphic f
 ile (type png)
@@ -4010,7 +4176,7 @@ Package pdftex.def Info: ./imagenes/business_functions/organizacioneventosdepor
 tivos.png used on input line 76.
 (pdftex.def)             Requested size: 312.9803pt x 135.4149pt.
 
-<./imagenes/business_functions/formaciongruposdeportivos.png, id=2633, 723.7037
+<./imagenes/business_functions/formaciongruposdeportivos.png, id=2753, 723.7037
 5pt x 545.03625pt>
 File: ./imagenes/business_functions/formaciongruposdeportivos.png Graphic file 
 (type png)
@@ -4020,7 +4186,7 @@ Package pdftex.def Info: ./imagenes/business_functions/formaciongruposdeportivo
 s.png used on input line 89.
 (pdftex.def)             Requested size: 312.9803pt x 235.71661pt.
 
-<./imagenes/business_functions/estadisticasdeportivas.png, id=2634, 819.06pt x 
+<./imagenes/business_functions/estadisticasdeportivas.png, id=2754, 819.06pt x 
 280.04625pt>
 File: ./imagenes/business_functions/estadisticasdeportivas.png Graphic file (ty
 pe png)
@@ -4031,9 +4197,9 @@ ng used on input line 102.
 LaTeX Info: Redefining \. on input line 110.
 LaTeX Info: Redefining \% on input line 110.
 
-[160 <./imagenes/business_functions/organizacioneventosdeportivos.png (PNG copy
+[162 <./imagenes/business_functions/organizacioneventosdeportivos.png (PNG copy
 )>]
-<./imagenes/business_functions/entrenamientodeportivo.png, id=2639, 1489.565pt 
+<./imagenes/business_functions/entrenamientodeportivo.png, id=2759, 1489.565pt 
 x 707.64375pt>
 File: ./imagenes/business_functions/entrenamientodeportivo.png Graphic file (ty
 pe png)
@@ -4044,9 +4210,9 @@ ng used on input line 115.
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
 
-[161 <./imagenes/business_functions/formaciongruposdeportivos.png (PNG copy)> <
+[163 <./imagenes/business_functions/formaciongruposdeportivos.png (PNG copy)> <
 ./imagenes/business_functions/estadisticasdeportivas.png (PNG copy)>]
-<./imagenes/business_functions/buscadordeportivo.png, id=2644, 443.40656pt x 76
+<./imagenes/business_functions/buscadordeportivo.png, id=2765, 443.40656pt x 76
 .03406pt>
 File: ./imagenes/business_functions/buscadordeportivo.png Graphic file (type pn
 g)
@@ -4055,7 +4221,7 @@ Package pdftex.def Info: ./imagenes/business_functions/buscadordeportivo.png us
 ed on input line 128.
 (pdftex.def)             Requested size: 312.9803pt x 53.67245pt.
 
-<./imagenes/business_functions/Consejos.png, id=2645, 443.40656pt x 240.14719pt
+<./imagenes/business_functions/Consejos.png, id=2766, 443.40656pt x 240.14719pt
 >
 File: ./imagenes/business_functions/Consejos.png Graphic file (type png)
  <use ./imagenes/business_functions/Consejos.png>
@@ -4063,7 +4229,7 @@ Package pdftex.def Info: ./imagenes/business_functions/Consejos.png used on inp
 ut line 139.
 (pdftex.def)             Requested size: 312.9803pt x 169.51996pt.
 
-<./imagenes/business_functions/Periodismo.png, id=2646, 443.40656pt x 84.315pt>
+<./imagenes/business_functions/Periodismo.png, id=2767, 443.40656pt x 84.315pt>
 File: ./imagenes/business_functions/Periodismo.png Graphic file (type png)
 <use ./imagenes/business_functions/Periodismo.png>
 Package pdftex.def Info: ./imagenes/business_functions/Periodismo.png used on i
@@ -4071,9 +4237,9 @@ nput line 150.
 (pdftex.def)             Requested size: 312.9803pt x 59.51797pt.
 LaTeX Info: Redefining \. on input line 155.
 LaTeX Info: Redefining \% on input line 155.
- [162 <./imagenes/business_functions/entrenamientodeportivo.png (PNG copy)> <./
+ [164 <./imagenes/business_functions/entrenamientodeportivo.png (PNG copy)> <./
 imagenes/business_functions/buscadordeportivo.png>]
-<./imagenes/business_functions/Servicios.png, id=2651, 443.40656pt x 67.75313pt
+<./imagenes/business_functions/Servicios.png, id=2772, 443.40656pt x 67.75313pt
 >
 File: ./imagenes/business_functions/Servicios.png Graphic file (type png)
  <use ./imagenes/business_functions/Servicios.png>
@@ -4081,7 +4247,7 @@ Package pdftex.def Info: ./imagenes/business_functions/Servicios.png used on in
 put line 161.
 (pdftex.def)             Requested size: 312.9803pt x 47.82693pt.
 
-<./imagenes/business_process/patrociniosdeportivos.png, id=2652, 1550.79375pt x
+<./imagenes/business_process/patrociniosdeportivos.png, id=2773, 1550.79375pt x
  955.57pt>
 File: ./imagenes/business_process/patrociniosdeportivos.png Graphic file (type 
 png)
@@ -4094,13 +4260,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 182.
 LaTeX Info: Redefining \% on input line 182.
- [163 <./imagenes/business_functions/Consejos.png> <./imagenes/business_functio
+ [165 <./imagenes/business_functions/Consejos.png> <./imagenes/business_functio
 ns/Periodismo.png>]
 LaTeX Info: Redefining \. on input line 183.
 LaTeX Info: Redefining \% on input line 183.
- [164 <./imagenes/business_functions/Servicios.png> <./imagenes/business_proces
+ [166 <./imagenes/business_functions/Servicios.png> <./imagenes/business_proces
 s/patrociniosdeportivos.png (PNG copy)>]
-<./imagenes/business_process/organizacioneventosdeportivos.png, id=2662, 2210.2
+<./imagenes/business_process/organizacioneventosdeportivos.png, id=2782, 2210.2
 575pt x 855.195pt>
 File: ./imagenes/business_process/organizacioneventosdeportivos.png Graphic fil
 e (type png)
@@ -4110,7 +4276,7 @@ Package pdftex.def Info: ./imagenes/business_process/organizacioneventosdeporti
 vos.png used on input line 187.
 (pdftex.def)             Requested size: 312.9803pt x 121.09665pt.
 
-<./imagenes/business_process/formaciongruposdeportivos.png, id=2663, 1899.095pt
+<./imagenes/business_process/formaciongruposdeportivos.png, id=2783, 1899.095pt
  x 532.99126pt>
 File: ./imagenes/business_process/formaciongruposdeportivos.png Graphic file (t
 ype png)
@@ -4121,9 +4287,9 @@ png used on input line 200.
 (pdftex.def)             Requested size: 312.9803pt x 87.83403pt.
 LaTeX Info: Redefining \. on input line 208.
 LaTeX Info: Redefining \% on input line 208.
- [165 <./imagenes/business_process/organizacioneventosdeportivos.png (PNG copy)
+ [167 <./imagenes/business_process/organizacioneventosdeportivos.png (PNG copy)
 >]
-<./imagenes/business_process/estadisticasdeportivas.png, id=2668, 1899.095pt x 
+<./imagenes/business_process/estadisticasdeportivas.png, id=2788, 1899.095pt x 
 532.99126pt>
 File: ./imagenes/business_process/estadisticasdeportivas.png Graphic file (type
  png)
@@ -4134,8 +4300,8 @@ Package pdftex.def Info: ./imagenes/business_process/estadisticasdeportivas.png
 LaTeX Info: Redefining \. on input line 225.
 LaTeX Info: Redefining \% on input line 225.
 
-[166 <./imagenes/business_process/formaciongruposdeportivos.png (PNG copy)>]
-<./imagenes/business_process/entrenamientodeportivo.png, id=2673, 1465.475pt x 
+[168 <./imagenes/business_process/formaciongruposdeportivos.png (PNG copy)>]
+<./imagenes/business_process/entrenamientodeportivo.png, id=2793, 1465.475pt x 
 707.64375pt>
 File: ./imagenes/business_process/entrenamientodeportivo.png Graphic file (type
  png)
@@ -4146,9 +4312,9 @@ Package pdftex.def Info: ./imagenes/business_process/entrenamientodeportivo.png
 LaTeX Info: Redefining \. on input line 238.
 LaTeX Info: Redefining \% on input line 238.
 
-[167 <./imagenes/business_process/estadisticasdeportivas.png (PNG copy)> <./ima
+[169 <./imagenes/business_process/estadisticasdeportivas.png (PNG copy)> <./ima
 genes/business_process/entrenamientodeportivo.png (PNG copy)>]
-<./imagenes/business_process/buscadorconsejosdeportivos.png, id=2678, 443.40656
+<./imagenes/business_process/buscadorconsejosdeportivos.png, id=2799, 443.40656
 pt x 59.47218pt>
 File: ./imagenes/business_process/buscadorconsejosdeportivos.png Graphic file (
 type png)
@@ -4158,7 +4324,7 @@ Package pdftex.def Info: ./imagenes/business_process/buscadorconsejosdeportivos
 .png used on input line 245.
 (pdftex.def)             Requested size: 312.9803pt x 41.98143pt.
 
-<./imagenes/business_process/buscadordeportivo.png, id=2679, 239.39438pt x 97.1
+<./imagenes/business_process/buscadordeportivo.png, id=2800, 239.39438pt x 97.1
 1281pt>
 File: ./imagenes/business_process/buscadordeportivo.png Graphic file (type png)
 
@@ -4167,7 +4333,7 @@ Package pdftex.def Info: ./imagenes/business_process/buscadordeportivo.png used
  on input line 256.
 (pdftex.def)             Requested size: 312.9803pt x 126.97272pt.
 
-<./imagenes/business_process/evaluadorconsejossalud.png, id=2680, 443.40656pt x
+<./imagenes/business_process/evaluadorconsejossalud.png, id=2801, 443.40656pt x
  63.98906pt>
 File: ./imagenes/business_process/evaluadorconsejossalud.png Graphic file (type
  png)
@@ -4178,9 +4344,9 @@ Package pdftex.def Info: ./imagenes/business_process/evaluadorconsejossalud.png
 LaTeX Info: Redefining \. on input line 272.
 LaTeX Info: Redefining \% on input line 272.
 
-[168 <./imagenes/business_process/buscadorconsejosdeportivos.png> <./imagenes/b
+[170 <./imagenes/business_process/buscadorconsejosdeportivos.png> <./imagenes/b
 usiness_process/buscadordeportivo.png>]
-<./imagenes/business_process/generadorconsejosdeportivos.png, id=2686, 359.0915
+<./imagenes/business_process/generadorconsejosdeportivos.png, id=2806, 359.0915
 7pt x 113.67468pt>
 File: ./imagenes/business_process/generadorconsejosdeportivos.png Graphic file 
 (type png)
@@ -4190,7 +4356,7 @@ Package pdftex.def Info: ./imagenes/business_process/generadorconsejosdeportivo
 s.png used on input line 278.
 (pdftex.def)             Requested size: 312.9803pt x 99.08522pt.
 
-<./imagenes/business_process/generadorcontenidossalud.png, id=2687, 340.27126pt
+<./imagenes/business_process/generadorcontenidossalud.png, id=2807, 340.27126pt
  x 103.88812pt>
 File: ./imagenes/business_process/generadorcontenidossalud.png Graphic file (ty
 pe png)
@@ -4199,7 +4365,7 @@ Package pdftex.def Info: ./imagenes/business_process/generadorcontenidossalud.p
 ng used on input line 289.
 (pdftex.def)             Requested size: 312.9803pt x 95.56079pt.
 
-<./imagenes/application_usage/patrociniosdeportivos.png, id=2688, 1791.69376pt 
+<./imagenes/application_usage/patrociniosdeportivos.png, id=2808, 1791.69376pt 
 x 978.65625pt>
 File: ./imagenes/application_usage/patrociniosdeportivos.png Graphic file (type
  png)
@@ -4210,13 +4376,13 @@ Package pdftex.def Info: ./imagenes/application_usage/patrociniosdeportivos.png
 LaTeX Info: Redefining \. on input line 310.
 LaTeX Info: Redefining \% on input line 310.
 
-[169 <./imagenes/business_process/evaluadorconsejossalud.png> <./imagenes/busin
+[171 <./imagenes/business_process/evaluadorconsejossalud.png> <./imagenes/busin
 ess_process/generadorconsejosdeportivos.png>]
 LaTeX Info: Redefining \. on input line 312.
 LaTeX Info: Redefining \% on input line 312.
- [170 <./imagenes/business_process/generadorcontenidossalud.png> <./imagenes/ap
+ [172 <./imagenes/business_process/generadorcontenidossalud.png> <./imagenes/ap
 plication_usage/patrociniosdeportivos.png (PNG copy)>]
-<./imagenes/application_usage/organizacioneventosdeportivos.png, id=2698, 1611.
+<./imagenes/application_usage/organizacioneventosdeportivos.png, id=2817, 1611.
 01875pt x 1123.19624pt>
 File: ./imagenes/application_usage/organizacioneventosdeportivos.png Graphic fi
 le (type png)
@@ -4226,7 +4392,7 @@ Package pdftex.def Info: ./imagenes/application_usage/organizacioneventosdeport
 ivos.png used on input line 317.
 (pdftex.def)             Requested size: 312.9803pt x 218.2083pt.
 
-<./imagenes/application_usage/formaciongruposdeportivos.png, id=2699, 1959.32pt
+<./imagenes/application_usage/formaciongruposdeportivos.png, id=2818, 1959.32pt
  x 708.6475pt>
 File: ./imagenes/application_usage/formaciongruposdeportivos.png Graphic file (
 type png)
@@ -4237,9 +4403,9 @@ Package pdftex.def Info: ./imagenes/application_usage/formaciongruposdeportivos
 (pdftex.def)             Requested size: 312.9803pt x 113.19128pt.
 LaTeX Info: Redefining \. on input line 337.
 LaTeX Info: Redefining \% on input line 337.
- [171 <./imagenes/application_usage/organizacioneventosdeportivos.png (PNG copy
+ [173 <./imagenes/application_usage/organizacioneventosdeportivos.png (PNG copy
 )>]
-<./imagenes/application_usage/estadisticasdeportivas.png, id=2704, 1466.47874pt
+<./imagenes/application_usage/estadisticasdeportivas.png, id=2823, 1466.47874pt
  x 566.115pt>
 File: ./imagenes/application_usage/estadisticasdeportivas.png Graphic file (typ
 e png)
@@ -4250,9 +4416,9 @@ g used on input line 345.
 LaTeX Info: Redefining \. on input line 353.
 LaTeX Info: Redefining \% on input line 353.
 
-[172 <./imagenes/application_usage/formaciongruposdeportivos.png (PNG copy)> <.
+[174 <./imagenes/application_usage/formaciongruposdeportivos.png (PNG copy)> <.
 /imagenes/application_usage/estadisticasdeportivas.png (PNG copy)>]
-<./imagenes/application_usage/entrenamientodeportivo.png, id=2709, 1703.36375pt
+<./imagenes/application_usage/entrenamientodeportivo.png, id=2828, 1703.36375pt
  x 653.44125pt>
 File: ./imagenes/application_usage/entrenamientodeportivo.png Graphic file (typ
 e png)
@@ -4261,7 +4427,7 @@ Package pdftex.def Info: ./imagenes/application_usage/entrenamientodeportivo.pn
 g used on input line 358.
 (pdftex.def)             Requested size: 312.9803pt x 120.05716pt.
 
-<./imagenes/application_usage/buscadorconsejosdeportivos.png, id=2710, 443.4065
+<./imagenes/application_usage/buscadorconsejosdeportivos.png, id=2829, 443.4065
 6pt x 197.23688pt>
 File: ./imagenes/application_usage/buscadorconsejosdeportivos.png Graphic file 
 (type png)
@@ -4271,7 +4437,7 @@ Package pdftex.def Info: ./imagenes/application_usage/buscadorconsejosdeportivo
 s.png used on input line 371.
 (pdftex.def)             Requested size: 312.9803pt x 139.22957pt.
 
-<./imagenes/application_usage/buscadordeportivo.png, id=2711, 384.6872pt x 302.
+<./imagenes/application_usage/buscadordeportivo.png, id=2830, 384.6872pt x 302.
 63063pt>
 File: ./imagenes/application_usage/buscadordeportivo.png Graphic file (type png
 )
@@ -4280,7 +4446,7 @@ Package pdftex.def Info: ./imagenes/application_usage/buscadordeportivo.png use
 d on input line 382.
 (pdftex.def)             Requested size: 312.9803pt x 246.23772pt.
 
-<./imagenes/application_usage/evaluadorconsejossalud.png, id=2712, 443.40656pt 
+<./imagenes/application_usage/evaluadorconsejossalud.png, id=2831, 443.40656pt 
 x 168.63pt>
 File: ./imagenes/application_usage/evaluadorconsejossalud.png Graphic file (typ
 e png)
@@ -4293,15 +4459,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 398.
 LaTeX Info: Redefining \% on input line 398.
- [173 <./imagenes/application_usage/entrenamientodeportivo.png (PNG copy)>]
+ [175 <./imagenes/application_usage/entrenamientodeportivo.png (PNG copy)>]
 
-LaTeX Warning: Text page 174 contains only floats.
+LaTeX Warning: Text page 176 contains only floats.
 
 LaTeX Info: Redefining \. on input line 398.
 LaTeX Info: Redefining \% on input line 398.
-[174 <./imagenes/application_usage/buscadorconsejosdeportivos.png> <./imagenes/
+[176 <./imagenes/application_usage/buscadorconsejosdeportivos.png> <./imagenes/
 application_usage/buscadordeportivo.png>]
-<./imagenes/application_usage/generadorconsejosdeportivos.png, id=2721, 378.664
+<./imagenes/application_usage/generadorconsejosdeportivos.png, id=2842, 378.664
 69pt x 265.74281pt>
 File: ./imagenes/application_usage/generadorconsejosdeportivos.png Graphic file
  (type png)
@@ -4311,7 +4477,7 @@ Package pdftex.def Info: ./imagenes/application_usage/generadorconsejosdeportiv
 os.png used on input line 404.
 (pdftex.def)             Requested size: 312.9803pt x 219.65005pt.
 
-<./imagenes/application_usage/generadorcontenidossalud.png, id=2722, 369.63094p
+<./imagenes/application_usage/generadorcontenidossalud.png, id=2843, 369.63094p
 t x 294.34969pt>
 File: ./imagenes/application_usage/generadorcontenidossalud.png Graphic file (t
 ype png)
@@ -4321,14 +4487,14 @@ Package pdftex.def Info: ./imagenes/application_usage/generadorcontenidossalud.
 png used on input line 415.
 (pdftex.def)             Requested size: 312.9803pt x 249.23724pt.
 
-<./imagenes/Product.png, id=2723, 443.40656pt x 288.3272pt>
+<./imagenes/Product.png, id=2844, 443.40656pt x 288.3272pt>
 File: ./imagenes/Product.png Graphic file (type png)
 
 <use ./imagenes/Product.png>
 Package pdftex.def Info: ./imagenes/Product.png used on input line 428.
 (pdftex.def)             Requested size: 312.9803pt x 203.53026pt.
 
-<./imagenes/infrastructure.png, id=2724, 1081.03876pt x 310.15875pt>
+<./imagenes/infrastructure.png, id=2845, 1081.03876pt x 310.15875pt>
 File: ./imagenes/infrastructure.png Graphic file (type png)
 
 <use ./imagenes/infrastructure.png>
@@ -4337,24 +4503,24 @@ Package pdftex.def Info: ./imagenes/infrastructure.png used on input line 439.
 ))
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [175 <./imagenes/application_usage/evaluadorconsejossalud.png>]
+ [177 <./imagenes/application_usage/evaluadorconsejossalud.png>]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [176 <./imagenes/application_usage/generadorconsejosdeportivos.png>]
+ [178 <./imagenes/application_usage/generadorconsejosdeportivos.png>]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
- [177 <./imagenes/application_usage/generadorcontenidossalud.png>]
+ [179 <./imagenes/application_usage/generadorcontenidossalud.png>]
 LaTeX Info: Redefining \. on input line 174.
 LaTeX Info: Redefining \% on input line 174.
 
-[178 <./imagenes/Product.png> <./imagenes/infrastructure.png (PNG copy)>]
+[180 <./imagenes/Product.png> <./imagenes/infrastructure.png (PNG copy)>]
 Cap\'{\i }tulo 14.
 (./Capitulos/Analisis_funcional/Casos_de_uso.tex
 
-LaTeX Warning: Reference `fig:cu1' on page 179 undefined on input line 1.
+LaTeX Warning: Reference `fig:cu1' on page 181 undefined on input line 1.
 
 
-LaTeX Warning: Reference `fig:cu70' on page 179 undefined on input line 1.
+LaTeX Warning: Reference `fig:cu70' on page 181 undefined on input line 1.
 
 
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 9--35
@@ -4366,506 +4532,1023 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 44--56
  [] 
  []
 
-(./Capitulos/Analisis_funcional/Gestion_entrenador.tex
-Underfull \vbox (badness 1424) has occurred while \output is active []
-
- [179
+(./Capitulos/Analisis_funcional/Administracion_deportes.tex [181
 
 ]
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 7--56
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 65--77
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 86--128
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 137--149
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 158--201
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 210--222
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 231--273
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 282--294
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 303--352
- [] 
- []
-
-
-LaTeX Warning: Float too large for page by 7.20387pt on input line 355.
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 361--373
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 382--426
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 435--447
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 456--510
- [] 
- []
-
-
-LaTeX Warning: Float too large for page by 84.24257pt on input line 513.
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 519--531
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 540--582
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 591--603
- [] 
- []
-
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
-[180]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [181]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
  [182]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [183]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU001-Administrar_depor
+tes.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--63
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU002-Agregar_un_deport
+e.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--72
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU003-Actualizar_deport
+e.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--48
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--75
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU004-Gestionar_impleme
+ntos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--37
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 46--66
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU005-Gestionar_movimie
+ntos_tecnicos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--37
+ [] 
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 68--68
+\OT1/lmr/m/n/12 mi-nar o crea-ci^^Son mo-vi-mien-tos
+ []
+
+
+Underfull \hbox (badness 1331) in paragraph at lines 68--68
+[]|\OT1/lmr/m/n/12 El usua-rio rea-li-za los cam-bios
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 46--68
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU006-Gestionar_movimie
+ntos_tacticos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--37
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 46--70
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Administracion_deportes/CU007-Dar_de_baja_un_de
+porte.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--40
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 49--67
+ [] 
+ []
+
+)
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 21--53
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 62--74
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 183
+ []
+
+[183
+
+]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [184]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [185]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 185
+ []
+
+[185]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [186]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [187]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 187
+ []
+
+[187]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [188]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [189]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 189
+ []
+
+[189]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [190]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [191]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
 
-[192]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [193]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 191
+ []
+
+[191]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+ [192]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 193
+ []
+
+[193]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
  [194]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [195]
-LaTeX Info: Redefining \. on input line 608.
-LaTeX Info: Redefining \% on input line 608.
- [196]
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 614--657
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+
+Overfull \hbox (5.58177pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.1.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE DEPORTES \OT
+1/lmr/m/n/12 195
+ []
+
+[195]
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+ [196]) (./Capitulos/Analisis_funcional/Gestion_entrenador.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [197
+
+]
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU008-Gestionar_entrenadores
+.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--50
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 666--678
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 59--71
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU009-Convertirse_en_entrena
+dor_de_jugador_equipo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 687--730
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU010-Dejar_de_entrenar_a_ju
+gador_equipo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--46
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 739--751
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--75
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU011-Promocionar_servicios_
+de_entrenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--46
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 760--803
+Underfull \hbox (badness 1852) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU012-Gestionar_planes_de_en
+trenamientos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--49
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 812--824
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 58--72
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU013-Llevar_seguimiento_de_
+entrenamientos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--49
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 833--876
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 58--72
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU014-Administrar_plan_de_en
+trenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--59
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 885--897
+LaTeX Warning: Float too large for page by 84.24257pt on input line 62.
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 68--80
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU015-Crear_plan_de_entrenam
+iento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--47
  [] 
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 949--949
+Underfull \hbox (badness 1902) in paragraph at lines 80--80
+[]|\OT1/lmr/m/n/12 El usua-rio de-ci-de guar-dar los
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 80--80
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 56--80
+ [] 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [198
+
+]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [199]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [200]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [201]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [202]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [203]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [204]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [205]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [206]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [207]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [208]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [209]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+
+[210]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [211]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [212]
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
+ [213]
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU016-Crear_rutina_de_plan_d
+e_entrenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU017-Adicionar_rutina_a_pla
+n_de_entrenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
+ [] 
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El usua-rio eli-ge la ru-ti-na que
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU018-Modifcar_rutina_de_pla
+n_de_entrenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
+ [] 
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El usua-rio eli-ge la ru-ti-na que
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU019-Eliminar_rutina_de_pla
+n_de_entrenamiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--48
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 77--77
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--77
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU020-Asignar_plan_de_entren
+amiento_a_jugador_equipo.tex
+Underfull \hbox (badness 1946) in paragraph at lines 48--48
 []\OT1/lmr/m/n/12 El usua-rio asig-na plan de en-tre-na-mien-to a ju-ga-
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 906--949
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--48
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 958--970
- [] 
+Underfull \hbox (badness 1852) in paragraph at lines 79--79
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
  []
 
 
-Underfull \hbox (badness 2644) in paragraph at lines 1022--1022
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--79
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU021-Retirar_plan_de_entren
+amiento_a_jugador_equipo.tex
+Underfull \hbox (badness 2644) in paragraph at lines 45--45
 []\OT1/lmr/m/n/12 El usua-rio re-ti-ra plan de en-tre-na-mien-to a ju-ga-
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 979--1022
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 1031--1043
+Underfull \hbox (badness 1019) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El usua-rio pul-sa el bot^^Son pa-
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 76--76
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--76
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_entrenador/CU022-Eliminar_plan_de_entre
+namiento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--46
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 1052--1095
- [] 
+Underfull \hbox (badness 1852) in paragraph at lines 77--77
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 1104--1116
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--77
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
-[197
+)
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [214
 
 ]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [198]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [199]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [200]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [201]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [202]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [203]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [204]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [205]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [206]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [207]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [208]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
-
-[209]
-LaTeX Info: Redefining \. on input line 1120.
-LaTeX Info: Redefining \% on input line 1120.
- [210]) (./Capitulos/Analisis_funcional/Gestion_evento.tex
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 7--52
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 61--73
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 82--120
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 129--141
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 150--188
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 197--209
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 218--256
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 265--277
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 286--334
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 343--355
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 364--403
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 412--424
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 433--472
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 481--493
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 502--540
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 549--561
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 570--608
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 617--629
- [] 
- []
-
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 211
- []
-
-[211
-
-]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
- [212]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 213
- []
-
-[213]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
- [214]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 215
- []
-
-[215]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [215]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
  [216]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 217
- []
-
-[217]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [217]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
  [218]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 219
- []
-
-[219]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [219]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
  [220]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 221
- []
-
-[221]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [221]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
  [222]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 223
- []
-
-[223]
-LaTeX Info: Redefining \. on input line 634.
-LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [223]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
  [224]
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 640--677
- [] 
- []
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [225]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
 
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 686--698
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 707--745
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 754--766
- [] 
- []
-
-
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 775--813
- [] 
- []
-
-
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 822--834
- [] 
- []
-
-LaTeX Info: Redefining \. on input line 838.
-LaTeX Info: Redefining \% on input line 838.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 225
- []
-
-[225
+[226]
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+ [227]) (./Capitulos/Analisis_funcional/Gestion_evento.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [228
 
 ]
-
-LaTeX Warning: Text page 226 contains only floats.
-
-LaTeX Info: Redefining \. on input line 838.
-LaTeX Info: Redefining \% on input line 838.
-[226]
-
-LaTeX Warning: Text page 227 contains only floats.
-
-LaTeX Info: Redefining \. on input line 838.
-LaTeX Info: Redefining \% on input line 838.
-
-Overfull \hbox (3.2131pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.2.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
-/lmr/m/n/12 227
+(./Capitulos/Analisis_funcional/Gestion_evento/CU023-Administrar_eventos_deport
+ivos.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--46
+ [] 
  []
 
-[227]) (./Capitulos/Analisis_funcional/Gestion_torneo.tex
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 55--67
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU024-Crear_evento_deportivo.tex
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 72--72
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--72
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU025-Cancelar_evento_deportivo.
+tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 67--67
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--67
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU026-Actualizar_informacion_de_
+evento_deportivo.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 68--68
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--68
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU027-Administrar_involucrados.t
+ex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--48
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 57--69
+ [] 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 229
+ []
+
+[229
+
+]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+ [230]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 231
+ []
+
+[231]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+ [232]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 233
+ []
+
+[233]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+ [234]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 235
+ []
+
+[235]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+ [236]
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 237
+ []
+
+[237]
+(./Capitulos/Analisis_funcional/Gestion_evento/CU028-Administrar_colaboradores.
+tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--45
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 54--68
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU029-Adicionar_colaborador.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 72--72
+[]|\OT1/lmr/m/n/12 El usua-rio pul-sa el bot^^Son de
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 72--72
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--72
+ [] 
+ []
+
+) (./Capitulos/Analisis_funcional/Gestion_evento/CU030-Retirar_colaborador.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--42
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 70--70
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 51--70
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU031-Adicionar_participante.tex
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 71--71
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--71
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU032-Consultar_participantes.te
+x
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--40
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 49--63
+ [] 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [238
+
+]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 239
+ []
+
+[239]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [240]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 241
+ []
+
+[241]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [242]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 243
+ []
+
+[243]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [244]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 245
+ []
+
+[245]
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+ [246]
+(./Capitulos/Analisis_funcional/Gestion_evento/CU033-Retirar_participante.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 70--70
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--70
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU034-Consultar_espectadores.tex
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--40
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 49--63
+ [] 
+ []
+
+) (./Capitulos/Analisis_funcional/Gestion_evento/CU035-Retirar_espectador.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 70--70
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--70
+ [] 
+ []
+
+) (./Capitulos/Analisis_funcional/Gestion_evento/CU036-Adicionar_espectador.tex
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--44
+ [] 
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 75--75
+\OT1/lmr/m/n/12 rios que apa-re-ci^^So lue-go de la
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 75--75
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 53--75
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU037-Modificar_caracteristicas_
+de_participantes.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--41
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 69--69
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 50--69
+ [] 
+ []
+
+) (./Capitulos/Analisis_funcional/Gestion_evento/CU038-Unir_al_evento.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--40
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 49--61
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU039-Unir_al_evento_como_partic
+ipante.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--36
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 63--63
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 45--63
+ [] 
+ []
+
+)
+(./Capitulos/Analisis_funcional/Gestion_evento/CU040-Unir_al_evento_como_espect
+ador.tex
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--36
+ [] 
+ []
+
+
+Underfull \hbox (badness 1852) in paragraph at lines 63--63
+[]|\OT1/lmr/m/n/12 El sis-te-ma mues-tra un ele-men-to
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 45--63
+ [] 
+ []
+
+)
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 247
+ []
+
+[247
+
+]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [248]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 249
+ []
+
+[249]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [250]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 251
+ []
+
+[251]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [252]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 253
+ []
+
+[253]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [254]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 255
+ []
+
+[255]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [256]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+
+Overfull \hbox (3.2131pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.3.  M[]ODULO DE ADMINISTRACI[]ON DE EVENTOS DEPORTIVOS \OT1
+/lmr/m/n/12 257
+ []
+
+[257]
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+ [258]) (./Capitulos/Analisis_funcional/Gestion_torneo.tex
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 7--53
  [] 
  []
@@ -4948,78 +5631,72 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 561--573
 ) (./Capitulos/Analisis_funcional/Gestion_equipo_grupo.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [228
+ [259
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 229
- []
-
-[229]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [230]
+ [260]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 231
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 261
  []
 
-[231]
+[261]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [232]
+ [262]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 233
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 263
  []
 
-[233]
+[263]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [234]
+ [264]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 235
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 265
  []
 
-[235]
+[265]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [236]
+ [266]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 237
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 267
  []
 
-[237]
+[267]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [238]
+ [268]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
 Overfull \hbox (63.33376pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.4.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
-IVOS \OT1/lmr/m/n/12 239
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 269
  []
 
-[239]
+[269]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [270]
 Underfull \hbox (badness 1603) in paragraph at lines 58--58
 []\OT1/lmr/m/n/12 Actualizar in-for-ma-ci^^Son de in-te-gran-te de equi-
  []
@@ -5095,42 +5772,48 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 487--499
  []
 
 )
-LaTeX Info: Redefining \. on input line 98.
-LaTeX Info: Redefining \% on input line 98.
- [240
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+
+Overfull \hbox (63.33376pt too wide) has occurred while \output is active
+\OT1/lmr/m/sl/12 14.5.  M[]ODULO DE ADMINISTRACI[]ON DE EQUIPOS Y GRUPOS DEPORT
+IVOS \OT1/lmr/m/n/12 271
+ []
+
+[271
 
 ] (./Capitulos/Analisis_funcional/Gestion_estadisticas.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [241]
+ [272]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [242]
+ [273]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-[243]
+[274]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [244]
+ [275]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [245]
+ [276]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [246]
+ [277]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [247]
+ [278]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [248]
+ [279]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [249]
+ [280]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [250]
+ [281]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 8--58
  [] 
  []
@@ -5202,52 +5885,52 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 513--525
 
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
-[251
+[282
 
 ]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [252]
+ [283]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [253]
+ [284]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [254]
+ [285]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [255]
+ [286]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [256]
+ [287]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [257]
+ [288]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [258]
+ [289]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [259]
+ [290]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [260]
+ [291]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [261]
+ [292]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [262]
+ [293]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
 
-[263]
+[294]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [264]
+ [295]
 LaTeX Info: Redefining \. on input line 530.
 LaTeX Info: Redefining \% on input line 530.
- [265]
+ [296]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 536--580
  [] 
  []
@@ -5270,21 +5953,21 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 663--675
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
- [266
+LaTeX Info: Redefining \. on input line 114.
+LaTeX Info: Redefining \% on input line 114.
+ [297
 
 ]
 (./Capitulos/Analisis_funcional/Gestion_patrocinios.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [267]
+ [298]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [268]
+ [299]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [269]
+ [300]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 8--57
  [] 
  []
@@ -5374,49 +6057,49 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 593--635
 
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
-[270
+[301
 
 ]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [271]
+ [302]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [272]
+ [303]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [273]
+ [304]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [274]
+ [305]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [275]
+ [306]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [276]
+ [307]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [277]
+ [308]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [278]
+ [309]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [279]
+ [310]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [280]
+ [311]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [281]
+ [312]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
 
-[282]
+[313]
 LaTeX Info: Redefining \. on input line 640.
 LaTeX Info: Redefining \% on input line 640.
- [283]
+ [314]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 646--658
  [] 
  []
@@ -5468,24 +6151,24 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 951--992
 
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
-[284
+[315
 
 ]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
- [285]
+ [316]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
- [286]
+ [317]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
- [287]
+ [318]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
- [288]
+ [319]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
- [289]
+ [320]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 1003--1015
  [] 
  []
@@ -5563,27 +6246,27 @@ Overfull \hbox (36.79848pt too wide) in paragraph at lines 1380--1418
 
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
-[290
+[321
 
 ]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [291]
+ [322]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [292]
+ [323]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [293]
+ [324]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [294]
+ [325]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [295]
+ [326]
 LaTeX Info: Redefining \. on input line 1423.
 LaTeX Info: Redefining \% on input line 1423.
- [296]
+ [327]
 Overfull \hbox (36.80933pt too wide) in paragraph at lines 1429--1441
  [] 
  []
@@ -5628,45 +6311,33 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 1707--1719
  [] 
  []
 
-) (./Capitulos/Analisis_funcional/Administracion_jugadores.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-Overfull \hbox (14.95691pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.7.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE JUGADORES \O
-T1/lmr/m/n/12 297
- []
-
-[297
+)
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [328
 
 ]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [329]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [330]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [331]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [332]
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [333]
+(./Capitulos/Analisis_funcional/Gestion_self_sharing.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [298]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+ [334
 
-Overfull \hbox (14.95691pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.7.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE JUGADORES \O
-T1/lmr/m/n/12 299
- []
-
-[299]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [300]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-
-Overfull \hbox (14.95691pt too wide) has occurred while \output is active
-\OT1/lmr/m/sl/12 14.7.  M[]ODULO DE GESTI[]ON DE ADMINISTRACION DE JUGADORES \O
-T1/lmr/m/n/12 301
- []
-
-[301]
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [302]
+]
 Overfull \hbox (36.79848pt too wide) in paragraph at lines 6--44
  [] 
  []
@@ -5687,85 +6358,299 @@ Overfull \hbox (36.80933pt too wide) in paragraph at lines 121--133
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 142--182
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 142--180
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 191--203
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 189--201
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 212--247
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 210--248
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 256--268
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 257--269
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 277--312
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 278--316
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 321--333
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 325--337
  [] 
  []
 
 
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 342--377
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 346--383
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 386--398
- [] 
- []
-
-) (./Capitulos/Analisis_funcional/Gestion_self_sharing.tex
-Overfull \hbox (36.79848pt too wide) in paragraph at lines 5--31
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 392--404
  [] 
  []
 
 
-Overfull \hbox (36.80933pt too wide) in paragraph at lines 40--52
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 413--454
  [] 
  []
 
-))
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [303
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 463--475
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 484--523
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+[335
 
 ]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [336]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [337]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [338]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [339]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [340]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [341]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [342]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [343]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [344]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [345]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
+ [346]
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
 
-LaTeX Warning: Text page 304 contains only floats.
+[347]
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 532--544
+ [] 
+ []
 
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 553--588
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 597--609
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 618--657
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 666--678
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 687--726
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 735--747
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 756--795
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 804--816
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 825--861
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 870--882
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 891--927
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 936--948
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 957--989
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+[348
+
+]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [349]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [350]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [351]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [352]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [353]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [354]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [355]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [356]
+LaTeX Info: Redefining \. on input line 993.
+LaTeX Info: Redefining \% on input line 993.
+ [357]
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 998--1010
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1019--1055
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1064--1076
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1085--1124
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1133--1145
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1154--1191
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1200--1212
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1221--1261
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1270--1282
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1291--1331
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1340--1352
+ [] 
+ []
+
+
+Overfull \hbox (36.79848pt too wide) in paragraph at lines 1361--1397
+ [] 
+ []
+
+
+Overfull \hbox (36.80933pt too wide) in paragraph at lines 1406--1418
+ [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+[358
+
+]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [359]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [360]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [361]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [362]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [363]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [364]
+LaTeX Info: Redefining \. on input line 1422.
+LaTeX Info: Redefining \% on input line 1422.
+ [365]))
 LaTeX Info: Redefining \. on input line 177.
 LaTeX Info: Redefining \% on input line 177.
-[304]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [305]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [306]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [307]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [308]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [309]
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
- [310]
+ [366
+
+
+]
 Cap\'{\i }tulo 15.
 (./Capitulos/Anexos/Anexos.tex (./Capitulos/Anexos/Artefactos_arquitectura.tex
 (./Capitulos/Anexos/Artefactos_negocio.tex
@@ -5798,9 +6683,7 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 21--54
  [] [] [] 
  []
 
-[311
-
-]
+[367]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 59--66
  [] [] [] 
  []
@@ -6017,13 +6900,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 76--121
 
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
-[312]
+[368]
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
- [313]
+ [369]
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
- [314]
+ [370]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 126--133
  [] [] [] 
  []
@@ -6270,10 +7153,10 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 143--209
 
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
-[315]
+[371]
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
- [316]
+ [372]
 Underfull \hbox (badness 10000) in paragraph at lines 240--240
 []|\OT1/lmr/m/n/12 Proceso de ne-go-
  []
@@ -6665,13 +7548,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 263--344
 
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
-[317]
+[373]
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
- [318]
+ [374]
 LaTeX Info: Redefining \. on input line 344.
 LaTeX Info: Redefining \% on input line 344.
- [319]
+ [375]
 Underfull \hbox (badness 7221) in paragraph at lines 370--370
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -6883,13 +7766,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 510--526
 
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
-[320]
+[376]
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
- [321]
+ [377]
 LaTeX Info: Redefining \. on input line 526.
 LaTeX Info: Redefining \% on input line 526.
- [322]
+ [378]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 531--538
  [] [] [] 
  []
@@ -7196,13 +8079,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 648--694
 
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
-[323]
+[379]
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
- [324]
+ [380]
 LaTeX Info: Redefining \. on input line 694.
 LaTeX Info: Redefining \% on input line 694.
- [325]
+ [381]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 699--706
  [] [] [] 
  []
@@ -7584,7 +8467,7 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 716--816
 
 LaTeX Info: Redefining \. on input line 816.
 LaTeX Info: Redefining \% on input line 816.
-[326]
+[382]
 Underfull \hbox (badness 10000) in paragraph at lines 817--817
 []|\OT1/lmr/m/n/12 Definir ser-vi-cios a
  []
@@ -7976,13 +8859,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 816--916
 
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
-[327]
+[383]
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
- [328]
+ [384]
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
- [329]
+ [385]
 Underfull \hbox (badness 7221) in paragraph at lines 919--921
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -8284,13 +9167,13 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 916--1016
 
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
-[330]
+[386]
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
- [331]
+ [387]
 LaTeX Info: Redefining \. on input line 1016.
 LaTeX Info: Redefining \% on input line 1016.
- [332]
+ [388]
 Underfull \hbox (badness 7221) in paragraph at lines 1019--1021
 []|\OT1/lmr/m/n/12 Proceso de ne-go-cio
  []
@@ -8347,16 +9230,16 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 1016--1032
 
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
-[333]
+[389]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [334]
+ [390]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [335]
+ [391]
 LaTeX Info: Redefining \. on input line 1032.
 LaTeX Info: Redefining \% on input line 1032.
- [336]) (./Capitulos/Anexos/Artefactos_aplicacion.tex
+ [392]) (./Capitulos/Anexos/Artefactos_aplicacion.tex
 Overfull \hbox (74.3913pt too wide) in alignment at lines 4--11
  [] [] [] 
  []
@@ -8548,10 +9431,10 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 21--92
 
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
-[337]
+[393]
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
- [338]
+ [394]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 97--104
  [] [] [] 
  []
@@ -8603,7 +9486,7 @@ Overfull \hbox (74.3913pt too wide) in alignment at lines 114--145
 
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
-[339]
+[395]
 Overfull \hbox (74.3913pt too wide) in alignment at lines 150--157
  [] [] [] 
  []
@@ -8659,7 +9542,7 @@ Overfull \vbox (98.95009pt too high) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
 
-[340]
+[396]
 Overfull \hbox (89.19128pt too wide) in alignment at lines 196--204
  [] [] [] [] 
  []
@@ -8709,16 +9592,16 @@ No file proyecto.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
-[341]
+[397]
 
-LaTeX Warning: Text page 342 contains only floats.
+LaTeX Warning: Text page 398 contains only floats.
 
 
 Underfull \vbox (badness 4001) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 191.
 LaTeX Info: Redefining \% on input line 191.
- [342]
+ [398]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
 
 (./proyecto.aux
@@ -8728,7 +9611,7 @@ LaTeX Info: Redefining \% on input line 21.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
 Package rerunfilecheck Info: File `proyecto.out' has not changed.
-(rerunfilecheck)             Checksum: 97AB110A649DB028E9B1D0BA05B95E8C;12661.
+(rerunfilecheck)             Checksum: 0A3CE6C9803ABD007BC9B275FC533B05;12660.
 
 
 LaTeX Warning: There were undefined references.
@@ -8743,10 +9626,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
 ### simple group (level 1) entered at line 59 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10846 strings out of 493485
- 178295 string characters out of 3143525
- 312172 words of memory out of 3000000
- 12902 multiletter control sequences out of 15000+200000
+ 11084 strings out of 493485
+ 188327 string characters out of 3143525
+ 315686 words of memory out of 3000000
+ 12905 multiletter control sequences out of 15000+200000
  56516 words of font info for 40 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  43i,15n,43p,1758b,719s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -8833,10 +9716,10 @@ fb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy10.pfb>
-Output written on proyecto.pdf (342 pages, 4791487 bytes).
+Output written on proyecto.pdf (398 pages, 4878387 bytes).
 PDF statistics:
- 3675 PDF objects out of 4296 (max. 8388607)
- 3132 compressed objects within 32 object streams
- 847 named destinations out of 1000 (max. 500000)
+ 4047 PDF objects out of 4296 (max. 8388607)
+ 3445 compressed objects within 35 object streams
+ 959 named destinations out of 1000 (max. 500000)
  1855 words of extra memory for PDF output out of 10000 (max. 10000000)
 

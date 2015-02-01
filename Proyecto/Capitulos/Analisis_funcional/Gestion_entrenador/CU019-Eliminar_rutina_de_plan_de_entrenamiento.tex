@@ -1,0 +1,80 @@
+\begin{table}[!htb]
+	\caption{CU019-Eliminar rutina de plan de entrenamiento: Descripción}
+	\label{tab:cu019_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Eliminar rutina de plan de entrenamiento \\
+			\hline
+			Identificador & CU019 \\
+			\hline
+			Descripción & Permite al entrenador eliminar una rutina del plan de entrenamiento. Esta acción no elimina la rutina \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 
+			\\
+			\hline
+			Disparador & Actor deportivo con rol de entrenador elige eliminar rutina de plan de entrenamiento \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+				\item El entrenador ha elegido un plan de entrenamiento en particular
+				\item Se ha elegido la opción de eliminar rutina de plan de entrenamiento
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario elimina una rutina del plan de entrenamiento
+				\item El usuario se encuentra en la pantalla de administración de planes de entrenamiento
+			\end{itemize}
+			\\
+			\hline
+			Notas & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU019-Eliminar rutina de plan de entrenamiento: Flujos de hechos}
+	\label{tab:cu019_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario a elegido un plan de entrenamiento en específico & El sistema ha mostrado los detalles del plan de entrenamiento elegido \\
+			\hline
+			2 & El usuario busca la rutina que desea eliminar & El sistema devuelve los resultados de la búsqueda de la rutina \\
+			\hline
+			3 & El usuario pulsa el botón de eliminación de la rutina del plan de entrenamiento & El sistema elimina la rutina del plan de entrenamiento \\
+			\hline
+			4 & & El sistema muestra un elemento emergente que informa del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema sitúa al usuario en los detalles del plan de entrenamiento \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
