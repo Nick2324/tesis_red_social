@@ -1,0 +1,77 @@
+\begin{table}[!htb]
+	\caption{CU078-Solicitar ser patrocinador: Descripción}
+	\label{tab:cu078_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Solicitar ser patrocinador \\
+			\hline
+			Identificador & CU078 \\
+			\hline
+			Descripción & Permite a un patrocinador solicitar serlo de un actor/evento deportivo \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Patrocinador
+			\end{itemize}
+			\\
+			\hline
+			Disparador & El patrocinador elige la opción solicitar ser patrocinador \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item Se ha iniciado el SNS con un rol de patrocinador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha solicitado de ser patrocinador de un actor/evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU078-Solicitar ser patrocinador: Flujos de hechos}
+	\label{tab:cu078_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario elige gestionar solicitudes de patrocinio & El sistema muestra una interfaz para buscar usuarios a quienes se quiere solicitar patrocinio \\
+			\hline
+			2 & El usuario busca el usuario a ofrecer patrocinio & El sistema muestra el resultado de la búsqueda \\
+			\hline
+			3 & El usuario elige a aquel a quien va a ofrecer patrocinio & El sistema muestra una ventana de confirmación \\
+			\hline
+			4 & El usuario continua & El sistema envía el ofrecimiento de patrocinio \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de gestión de solicitudes de patrocinio \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

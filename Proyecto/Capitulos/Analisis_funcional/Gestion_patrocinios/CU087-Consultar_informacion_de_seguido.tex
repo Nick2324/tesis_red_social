@@ -1,0 +1,75 @@
+\begin{table}[!htb]
+	\caption{CU087-Consultar información de seguido: Descripción}
+	\label{tab:cu087_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Consultar información de seguido \\
+			\hline
+			Identificador & CU087 \\
+			\hline
+			Descripción & Permite consultar noticias de jugadores/equipos/organizaciones deportivas de los que se quiere ser patrocinador, siempre que éste actor deportivo tenga habilitada dicha opción \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Patrocinador
+			\end{itemize}
+			\\
+			\hline
+			Disparador & El patrocinador elige hacer tracking de un jugador/equipo/organización deportiva \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item Se ha iniciado el SNS con un rol de patrocinador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas &
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Dejar de seguir actor/evento deportivo
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU087-Consultar información de seguido: Flujos de hechos}
+	\label{tab:cu087_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido la gestión de tracking & El sistema ha mostrado la interfaz para ver los actores/eventos deportivos que sigue \\
+			\hline
+			2 & El usuario busca un actor/evento deportivo seguido por él & El sistema muestra el resultado de la búsqueda \\
+			\hline
+			3 & El usuario elige un actor/evento deportivo de los que ha mostrado el sistema & El sistema muestra los detalles relevantes para el patrocinado acerca del actor/evento deportivo seguido \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

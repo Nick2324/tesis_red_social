@@ -1,0 +1,76 @@
+\begin{table}[!htb]
+	\caption{CU091-Aceptar solicitud de patrocinio: Descripción}
+	\label{tab:cu091_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Aceptar solicitud de patrocinio \\
+			\hline
+			Identificador & CU091 \\
+			\hline
+			Descripción & Permite al jugador/equipo aceptar la propuesta de patrocinio de un patrocinador \\
+			\hline
+			Actor & Todo actor de la red social
+			\\
+			\hline
+			Disparador & El usuario elige aceptar solicitud de patrocinio \\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un jugador o actor con rol de formador de grupos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se adición un patrocinador al usuario
+			\end{itemize}
+			\\
+			\hline
+			Notas & N/A
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU091-Aceptar solicitud de patrocinio: Flujos de hechos}
+	\label{tab:cu091_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido gestionar patrocinos & El sistema ha mostrado las opciones de gestión de patrocinios \\
+			\hline
+			2 & El usuario elige solicitar un patrocinio & El sistema muestra la interfaz para gestionar solicitud de patrocinio \\
+			\hline
+			3 & El usuario busca una solicitud de un patrocinador hacia él & El sistema muestra los resultados \\
+			\hline
+			4 & El usuario elige una de las solicitudes de patrocinio que resultaron de la búsqueda & El sistema acepta la solicitud \\					
+			\hline
+			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de gestión de patrocinio \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
