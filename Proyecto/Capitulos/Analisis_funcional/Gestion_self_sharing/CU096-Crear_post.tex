@@ -1,43 +1,42 @@
 \begin{table}[!htb]
-	\caption{CU095-Gestionar timeline: Descripción}
-	\label{tab:cu095_desc}
+	\caption{CU096-Crear post: Descripción}
+	\label{tab:cu096_desc}
 	\begin{center}
 		\resizebox{15cm}{!}{
 		\begin{tabular}{|p{4cm}|p{11cm}|}
 			\hline
 			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
 			\hline
-			Nombre & Gestionar timeline \\
+			Nombre & Crear post \\
 			\hline
-			Identificador & CU095 \\
+			Identificador & CU096 \\
 			\hline
-			Descripción & Permite la gestión de un timeline para cada actor/evento en la red social \\
+			Descripción & Permite la creación de un post sobre un timeline \\
 			\hline
 			Actor & 
 			\begin{itemize}
 				\item Todos
 			\end{itemize} \\
 			\hline
-			Disparador & El actor desea gestionar el timeline de él, una organización, un equipo/grupo deportivo o un evento deportivo \\
+			Disparador & El actor desea crear un post sobre un timeline propio o ajeno, según sus privilegios se lo permitan \\
 			\hline
 			Inclusiones & \\
 			\hline
 			Puntos de extensión & \\
 			\hline
-			Precondiciones & \\
+			Precondiciones & 
+			\begin{itemize}
+				\item El actor tiene privilegios para la creación del post
+			\end{itemize} \\
 			\hline
-			Postcondiciones & \\
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor crea un post sobre el timeline elegido
+			\end{itemize} \\
 			\hline
 			Notas & 
 			\begin{itemize}
 				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
-				\item Generalización de:
-				\begin{itemize}
-					\item Crear post
-					\item Comentar un post
-					\item Eliminar un post
-				\end{itemize}
-				\item Si se desea ver el timeline de un actor/evento deportivo, se ha de buscar primero
 			\end{itemize} \\
 			\hline 
 		\end{tabular}
@@ -47,8 +46,8 @@
 \end{table}
 
 \begin{table}[!htb]
-	\caption{CU095-Gestionar timeline: Flujos de hechos }
-	\label{tab:cu095_flujo}
+	\caption{CU096-Crear post: Flujos de hechos}
+	\label{tab:cu096_flujo}
 	\begin{center}
 		\resizebox{15cm}{!}{
 		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
@@ -59,9 +58,13 @@
 			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
-			1 & El usuario ha elegido gestionar self-sharing & El sistema ha mostrado las opciones de self-sharing que tiene el usuario a disposición \\
+			1 & El usuario ha elegido gestionar timeline & El sistema ha mostrado el timeline propio o de otro actor/evento en la red social \\
 			\hline
-			2 & El usuario elige gestionar su timeline, el timeline general o el timeline de un actor/evento deportivo & El sistema muestra el timeline elegido \\
+			2 & El usuario escribe en el cuadro de texto dirigido a la escritura de posts y elige publicarlo & El sistema guarda el post y lo publica en el timeline \\
+			\hline
+			3 & & De haber un error, el sistema mostrará un mensaje indicándolo \\
+			\hline
+			4 & & El sistema ubica al usuario en el timeline \\
 			\hline
 		\end{tabular}
 		} \\
