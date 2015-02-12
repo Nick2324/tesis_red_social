@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{CU102-Eliminar album: Descripción}
+	\caption{CU116-Responder conversación: Descripción}
 	\label{tab:cu102_desc}
 	\begin{center}
 		\resizebox{15cm}{!}{
@@ -11,14 +11,14 @@
 			\hline
 			Identificador & CU102 \\
 			\hline
-			Descripción & Permite la eliminación de un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Descripción & Permite responder/escribir las conversaciones en chats \\
 			\hline
 			Actor & 
 			\begin{itemize}
 				\item Todos
 			\end{itemize} \\
 			\hline
-			Disparador & El actor desea eliminar album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Disparador & El actor desea contestar/escribir un mensaje \\
 			\hline
 			Inclusiones & \\
 			\hline
@@ -28,7 +28,7 @@
 			\hline
 			Postcondiciones & 
 			\begin{itemize}
-				\item El actor elimina un album de fotos
+				\item El actor contesta/escribe un mensaje
 			\end{itemize} \\
 			\hline
 			Notas & 
@@ -55,15 +55,13 @@
 			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
-			1 & El usuario ha elegido gestionar sus albumes de fotos & El sistema ha mostrado la interfaz de getstión de álbumes \\
+			1 & El usuario ha elegido gestionar su mensajería instantánea & El sistema ha mostrado la interfaz de búsqueda de actores/eventos con los que puede entablar mensaje el usuario \\
 			\hline
-			2 & El usuario busca un album entre los existentes & El sistema muestra el resultado de la búsqueda \\
+			2 & El usuario busca otro o un evento en las conversaciones & El sistema arroja los resultados  \\
 			\hline
-			3 & El usuario elige borrar uno de los albumes que le arrojó la búsqueda & El sistema elimina el album  \\
+			3 & El usuario elige uno de los resultados de la búsqueda & El sistema muestra el chat con los mensajes que le han llegado al usuario, así como los que él ha enviado \\
 			\hline
-			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
-			\hline
-			5 & El usuario continua & El sistema muestra la interfaz de gestión de albumes de fotos \\
+			4 & El usuario responde/escribe al otro usuario/evento en la conversación & El sistema envía el mensaje \\
 			\hline
 		\end{tabular}
 		} \\

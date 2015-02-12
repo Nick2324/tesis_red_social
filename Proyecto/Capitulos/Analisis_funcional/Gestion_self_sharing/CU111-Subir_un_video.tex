@@ -1,35 +1,40 @@
 \begin{table}[!htb]
-	\caption{CU102-Eliminar album: Descripción}
-	\label{tab:cu102_desc}
+	\caption{CU111-Subir un video: Descripción}
+	\label{tab:cu111_desc}
 	\begin{center}
 		\resizebox{15cm}{!}{
 		\begin{tabular}{|p{4cm}|p{11cm}|}
 			\hline
 			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
 			\hline
-			Nombre & Eliminar album \\
+			Nombre & Subir un video \\
 			\hline
-			Identificador & CU102 \\
+			Identificador & CU111 \\
 			\hline
-			Descripción & Permite la eliminación de un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Descripción & Permite la subida de un video al SNS \\
 			\hline
 			Actor & 
 			\begin{itemize}
 				\item Todos
 			\end{itemize} \\
 			\hline
-			Disparador & El actor desea eliminar album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Disparador & El actor desea subir un video al SNS \\
 			\hline
 			Inclusiones & \\
 			\hline
 			Puntos de extensión & \\
 			\hline
-			Precondiciones &  \\
-			\hline
-			Postcondiciones & 
+			Precondiciones & 
 			\begin{itemize}
-				\item El actor elimina un album de fotos
-			\end{itemize} \\
+				\item El actor tiene privilegios para subir el video
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones &
+			\begin{itemize}
+				\item El actor sube un video al SNS
+			\end{itemize}			 						
+			\\
 			\hline
 			Notas & 
 			\begin{itemize}
@@ -43,8 +48,8 @@
 \end{table}
 
 \begin{table}[!htb]
-	\caption{CU102-Eliminar album: Flujos de hechos }
-	\label{tab:cu102_flujo}
+	\caption{CU111-Subir un video: Flujos de hechos }
+	\label{tab:cu111_flujo}
 	\begin{center}
 		\resizebox{15cm}{!}{
 		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
@@ -55,15 +60,15 @@
 			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
-			1 & El usuario ha elegido gestionar sus albumes de fotos & El sistema ha mostrado la interfaz de getstión de álbumes \\
+			1 & El usuario ha elegido la gestión de sus videos & El sistema ha mostrado la interfaz de gestión de videos \\
 			\hline
-			2 & El usuario busca un album entre los existentes & El sistema muestra el resultado de la búsqueda \\
+			2 & El usuario elige subir un video & El sistema muestra la interfaz de subida de videos \\
 			\hline
-			3 & El usuario elige borrar uno de los albumes que le arrojó la búsqueda & El sistema elimina el album  \\
+			3 & El usuario ingresa los datos del video, sube el video y guarda los cambios & El sistema guarda los cambios \\
 			\hline
 			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
 			\hline
-			5 & El usuario continua & El sistema muestra la interfaz de gestión de albumes de fotos \\
+			5 & El usuario continua & El sistema muestra la interfaz de gestión de videos \\
 			\hline
 		\end{tabular}
 		} \\

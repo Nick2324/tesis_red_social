@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{CU102-Eliminar album: Descripción}
+	\caption{CU115-Crear conversación: Descripción}
 	\label{tab:cu102_desc}
 	\begin{center}
 		\resizebox{15cm}{!}{
@@ -7,18 +7,18 @@
 			\hline
 			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
 			\hline
-			Nombre & Eliminar album \\
+			Nombre & Crear conversación \\
 			\hline
-			Identificador & CU102 \\
+			Identificador & CU115 \\
 			\hline
-			Descripción & Permite la eliminación de un album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Descripción & Permite la creación de un nuevo chat con un actor/evento \\
 			\hline
 			Actor & 
 			\begin{itemize}
 				\item Todos
 			\end{itemize} \\
 			\hline
-			Disparador & El actor desea eliminar album de fotos del actor o evento deportivo desde el que se ha activado la funcionalidad \\
+			Disparador & El actor desea crear un nuevo chat con un actor/evento \\
 			\hline
 			Inclusiones & \\
 			\hline
@@ -28,7 +28,7 @@
 			\hline
 			Postcondiciones & 
 			\begin{itemize}
-				\item El actor elimina un album de fotos
+				\item El actor crea un chat con un actor/evento
 			\end{itemize} \\
 			\hline
 			Notas & 
@@ -43,7 +43,7 @@
 \end{table}
 
 \begin{table}[!htb]
-	\caption{CU102-Eliminar album: Flujos de hechos }
+	\caption{CU115-Crear conversación: Flujos de hechos }
 	\label{tab:cu102_flujo}
 	\begin{center}
 		\resizebox{15cm}{!}{
@@ -55,15 +55,17 @@
 			\hline
 			Paso & Acción del actor & Respuesta del sistema \\
 			\hline
-			1 & El usuario ha elegido gestionar sus albumes de fotos & El sistema ha mostrado la interfaz de getstión de álbumes \\
+			1 & El usuario ha elegido gestionar su mensajería instantánea & El sistema ha mostrado la interfaz de búsqueda de actores/eventos con los que puede entablar mensaje el usuario \\
 			\hline
-			2 & El usuario busca un album entre los existentes & El sistema muestra el resultado de la búsqueda \\
+			2 & El usuario elige crear una conversación & El sistema muestra la interfaz de búsqueda de usuario sobre la red social para iniciar chat \\
 			\hline
-			3 & El usuario elige borrar uno de los albumes que le arrojó la búsqueda & El sistema elimina el album  \\
+			3 & El usuario busca otro o un evento en la red social & El sistema arroja los resultados  \\
+			\hline
+			4 & El usuario elige uno de los resultados de la búsqueda & El sistema crea el chat \\
 			\hline
 			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
 			\hline
-			5 & El usuario continua & El sistema muestra la interfaz de gestión de albumes de fotos \\
+			5 & El usuario continua & El sistema muestra la interfaz de chat \\
 			\hline
 		\end{tabular}
 		} \\
