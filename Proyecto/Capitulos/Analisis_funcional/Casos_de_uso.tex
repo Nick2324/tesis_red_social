@@ -1,22 +1,14 @@
-Luego de haber consignado los requerimientos funcionales en la sección \ref{subsec:requerimientos_funcionales} y de haber formado, con ellos, la arquitectura tratada en el capítulo \ref{chap:arquitectura}, se retrató cada funcionalidad encontrada y que sería, a final de cuentas, soportada por el SNS en los casos de uso a continuación. En las figuras \ref{fig:cu1} a \ref{fig:cu70} se puede observar gráficamente la configuración de los casos de uso. La descripción de los casos de uso se hace en tres fases: La primera fase, describe aspectos no-dinámicos del caso de uso; la segunda fase comprende un flujo de hechos para el caso de uso; la tercera fase comprende la descripción de las excepciones que podría causar el caso de uso, haciendo referencia también a cual flujo es afectado con la excepción descrita.
+Luego de haber consignado los requerimientos funcionales en la sección \ref{subsec:requerimientos_funcionales} y de haber formado, con ellos, la arquitectura tratada en el capítulo \ref{chap:arquitectura}, se retrató cada funcionalidad encontrada y que sería, a final de cuentas, soportada por el SNS en los casos de uso a continuación. En las figuras \ref{fig:cu1} a \ref{fig:cu70} se puede observar gráficamente la configuración de los casos de uso.
 
 Los diagramas estarán dividos por cada módulo de gestión identificado basado cada uno en la especificación de requerimientos.
+
+En el capítulo \ref{chap:anexos}, el lector podrá encontrar la descripción de cada caso de uso en todos los módulos tenidos en cuenta en el SNS (los que se implementarán y los restantes).
 
 \section{Módulo de gestión de administracion de deportes}
 
 %\input{./imagenes/casos_uso/administracion_deportes.png}
 
-Este módulo ofrece funcionalidades a los actores del sistema (especialmente el administrador) para administrar los deportes que éste juega, permitiendo al jugador dar informcación adicional de él en cada uno de los deportes que éste juega.
-
-\input{./Capitulos/Analisis_funcional/Administracion_deportes.tex}
-
-\section{Módulo de administración de entrenadores}
-
-%\input{./imagenes/casos_uso/gestion_entrenador.png}
-
-Sobre éste módulo de entrenadores se han recopilado las funcionalidades que pretende ofrecer el SNS deportivo a los entrenadores. Dichas funcionalidades resumen la capacidad de los actores deportivos entrenadores de ofrecer su servicio deportivo a la comunidad deportiva y de hacer el seguimiento de entrenamientos con sus entrenados desde el SNS.
-
-\input{./Capitulos/Analisis_funcional/Gestion_entrenador.tex}
+Este módulo ofrece funcionalidades a los actores del sistema (especialmente el administrador) para administrar los deportes que éste juega, permitiendo al jugador dar información adicional de él en cada uno de los deportes que éste juega.
 
 \section{Módulo de administración de eventos deportivos}
 
@@ -24,39 +16,11 @@ Sobre éste módulo de entrenadores se han recopilado las funcionalidades que pr
 
 En cuanto a éste módulo se refiere, los autores plasmaron las funcionalidades que se le ofrecen en el SNS a los organizadores de eventos deportivos, habiendo dos grandes módulos, a saber: Administración de involucrados y la gestión de la información del evento en si.
 
-\input{./Capitulos/Analisis_funcional/Gestion_evento.tex}
-
-\section{Módulo de administración de torneos}
-
-%\input{./imagenes/casos_uso/gestion_torneo.png}
-
-El módulo de administración de torneos es una extensión al módulo de administración de eventos debido a que un torneo es también considerado un evento deportivo. Particularmente se dan funcionalidades de administración de información del torneo, así como la adición y retiro de participantes al torneo y, a su vez, la gestión del formato que se le quiera dar al torneo (que tipo de eliminatorias se van a llevar, por ejemplificar).
-
-\input{./Capitulos/Analisis_funcional/Gestion_torneo.tex}
-
-\section{Módulo de administración de equipos y grupos deportivos}
-
-%\input{./imagenes/casos_uso/gestion_equipo_grupo.png}
-
-A éste módulo le corresponde ofrecer funcionalidades de administración de equipos y grupos deportivos. Se decidió dejar la administración de ámbos conceptos (equipo y grupo deportivo) en el mismo módulo ya que, para efectos de las funcionalidades ofrecidas por el SNS, son bastante similares. Adicionalmente, un grupo deportivo no podrá utilizar todas las funcionalidades ofrecidas en el presente módulo, esto debido a su caracter limitado de grupo informal.
-
-\input{./Capitulos/Analisis_funcional/Gestion_equipo_grupo.tex}
-
 \section{Módulo de estadísticas}
 
 %\input{./imagenes/casos_uso/gestion_estadisticas.png}
 
 Las funcionalidades ofrecidas por éste módulo son proporcionadas por el SNS para dar soporte estadístico a cáda uno de los objetos de negocio especificados en el capítulo \ref{chap:arquitectura}, en lo que se refiere al proceso estadístico. Como adición, visto desde los requerimientos funcionales, se da una funcionalidad de llevar el mejor calificado en cáda uno de los objetos de negocio, con tal de que el usuario del SNS pueda ver aquellos objetos de negocio destacados cuando el lo requiera.
-
-\input{./Capitulos/Analisis_funcional/Gestion_estadisticas.tex}
-
-\section{Módulo de gestión de patrocinios}
-
-%\input{./imagenes/casos_uso/gestion_patrocinios.png}
-
-Este módulo ofrece funcionalidades tanto para patrocinador como patrocinado, indicando aquí que sólo el actor correspondiente (siendo patrocinador o patrocinado) puede acceder a uno de las dos grandes funcionalidades que se pueden apreciar: Por parte del patrocinador, se prestan funcionalidades de seguimiento de usuarios candidatos a patrocinar, así como la petición de patrocinio y consulta de patrocinios; Por parte del jugador, se ofrecen funcionalidades similares pero sin poder hacer seguimiento.
-
-\input{./Capitulos/Analisis_funcional/Gestion_patrocinios.tex}
 
 \clearpage
 
@@ -65,5 +29,3 @@ Este módulo ofrece funcionalidades tanto para patrocinador como patrocinado, in
 %\input{./imagenes/casos_uso/gestion_self_sharing.png}
 
 Este módulo ofrece funcionalidades propias de redes social similares a Facebook. Por medio de éste el usuario podrá manejar la comunicación de él con sus amigos a traves de un timeline, del servicio de mensajería instantánea y de la posibilidad de compartir elementos multimedia como lo son videos y fotos, así como también mostrar y actualizar su información personal.
-
-\input{./Capitulos/Analisis_funcional/Gestion_self_sharing.tex}
