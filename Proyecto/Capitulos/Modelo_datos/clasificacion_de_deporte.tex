@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad implemento}
+	\caption{Entidad clasificacion de deporte}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,41 +8,36 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Implemento}  \\
+			\multicolumn{2}{c|}{ClasificacionDeporte}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Implemento deportivo utilizado en un deporte}  \\
+			\multicolumn{2}{c|}{Clasificación a la cual pertenece determinado deporte}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idImplemento &
+			idClasificacionDeporte &
 			Numerico &
 			&
-			Identificación de implemento \\
+			Identificación única de la clasificación del deporte \\
 			\hline
-			nombreImplemento &
+			nombreClasificacionDeporte &
 			String &
 			50 &
-			Nombre del implemento deportivo \\
+			Nombre que se le ha dado a la clasificación del deporte \\
 			\hline
-			descripcionImplemento &
+			descripcionClasificacionDeporte &
 			String &
 			1000 &
-			Descripcion del implemento deportivo \\
-			\hline
-			parteCuerpo &
-			String &
-			50 &
-			Parte del cuerpo donde se usa el implemento \\
+			Descripción que explica en que consiste la clasificación del deporte \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{xxxx} & 
-			\multicolumn{2}{c|}{CategoriaImplemento} \\
+			\multicolumn{2}{c|}{Deporte} \\
 			\hline
 			\multicolumn{2}{|c|}{xxxx} & 
 			\multicolumn{2}{c|}{Imagen} \\
