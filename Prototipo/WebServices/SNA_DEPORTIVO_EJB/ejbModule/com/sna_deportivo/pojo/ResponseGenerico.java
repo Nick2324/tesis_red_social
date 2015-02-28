@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class ResponseGenerico {
 	
 	private String caracterAceptacion;
-	private String mesnajeRespuesta;
+	private String mensajeRespuesta;
 	
 	public String getCaracterAceptacion() {
 		return caracterAceptacion;
@@ -14,11 +14,11 @@ public class ResponseGenerico {
 	public void setCaracterAceptacion(String caracterAceptacion) {
 		this.caracterAceptacion = caracterAceptacion;
 	}
-	public String getMesnajeRespuesta() {
-		return mesnajeRespuesta;
+	public String getMensajeRespuesta() {
+		return mensajeRespuesta;
 	}
-	public void setMesnajeRespuesta(String mesnajeRespuesta) {
-		this.mesnajeRespuesta = mesnajeRespuesta;
+	public void setMensajeRespuesta(String mesnajeRespuesta) {
+		this.mensajeRespuesta = mesnajeRespuesta;
 	}
 	
 }

@@ -1,5 +1,6 @@
 package com.sna_deportivo.services;
 
+import javax.security.auth.login.CredentialException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -12,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 
 import com.sna_deportivo.pojo.ResponseGenerico;
 import com.sna_deportivo.pojo.Usuario;
+import com.sna_deportivo.utils.BDException;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -35,7 +37,17 @@ public class GestionUsuarioService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("verificarUsuario")
 	public ResponseGenerico verificarUsuario(@QueryParam("user") String usuario, @QueryParam("pass") String pass){
-		return servicio.verificarUsuario(usuario, pass);
+		ResponseGenerico response = new ResponseGenerico();
+		try {
+			response = servicio.verificarUsuario(usuario, pass);
+		} catch (CredentialException e) {
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Credenciales incorrectas");
+		} catch (BDException e) {
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Credenciales incorrectas");
+		}
+		return response;
 	}
 	
 	@GET
