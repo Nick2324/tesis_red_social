@@ -1,0 +1,51 @@
+\begin{table}[!htb]
+	\caption{Entidad recurso externo}
+	\label{tab:xxxx_entidad}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{RecursoExterno}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Guarda descripciones de recursos informativos ajenos a aquellos manejados especificamente por el SNS}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			idRecursoExterno &
+			Numerico &
+			&
+			Identificación del recurso externo \\
+			\hline
+			nombreRecursoExterno &
+			String &
+			50 &
+			Nombre que se le da al recurso externo \\
+			\hline
+			urlRecursoExterno &
+			String &
+			1000 &
+			URL que contiene al recurso externo \\
+			\hline
+			descripcionRecursoExterno &
+			String &
+			1000 &
+			Describe lo que se encontrará en el recurso externo \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{RelacionImagen} & 
+			\multicolumn{2}{c|}{Imagen} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
