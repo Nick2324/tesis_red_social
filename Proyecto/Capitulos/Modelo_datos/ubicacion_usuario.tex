@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad Ubicacion}
+	\caption{Entidad ubicacion usuario}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,32 +8,32 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Ubicacion}  \\
+			\multicolumn{2}{c|}{UbicacionUsuario}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Describe la relación ternaria que existe entre pais, ciudad y lugar de práctica, para indicar una coordenada filtrada por país y ciudad de donde se practica un deporte en cierta ubicación dentro de la ciudad}  \\
+			\multicolumn{2}{c|}{Describe la relación ternaria entre una ubicación, un deporte y un usuario, para mostrar que un usuario está practicando un deporte en una ubicación específica en determinado momento}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idUbicacion &
+			idUbicacionUsuario &
 			Numerico &
 			&
-			Identificación única de la ubicación \\
+			Identificación única de ubicación de usuario \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{CompletaUbicacion} & 
-			\multicolumn{2}{c|}{Ciudad} \\
+			\multicolumn{2}{|c|}{UbicaUsuario} & 
+			\multicolumn{2}{c|}{Deporte} \\
 			\hline
-			\multicolumn{2}{|c|}{CompletaUbicacion} & 
-			\multicolumn{2}{c|}{Pais} \\
+			\multicolumn{2}{|c|}{UbicaUsuario} & 
+			\multicolumn{2}{c|}{Usuario} \\
 			\hline
-			\multicolumn{2}{|c|}{CompletaUbicacion} & 
-			\multicolumn{2}{c|}{LugarPractica} \\
+			\multicolumn{2}{|c|}{UbicaUsuario} & 
+			\multicolumn{2}{c|}{Ubicacion} \\
 			\hline
 		\end{tabular}
 		} \\
