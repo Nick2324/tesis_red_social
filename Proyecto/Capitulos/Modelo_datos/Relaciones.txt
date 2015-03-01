@@ -1,23 +1,6 @@
 --CONCEPTOS RELACIONADOS CON DEPORTES
 
-RelacionImagen
-RelacionVideo
-CategoriaGenero
-TieneEstilo
-UtilizaTecnica
-UtilizaImplemento
-UtilizaTactica
-PacticadoEn
-CategoriaClasificacion
-RelacionRecurso
-PracticaDeporte
-UsuarioConPosicionEnDeporte
+
+***
 
 --CONCEPTOS RELACIONADOS CON UBICACIONES
-SePracticaDeporte
-SeCelebraEvento
-PracticadoPorGenero
-ContieneUbicacion
-UsuarioPracticaDeporteEn
-UbicacionDeporteGenero
-

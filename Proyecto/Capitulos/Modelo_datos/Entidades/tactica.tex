@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad ubicacion}
+	\caption{Entidad tacticas}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,44 +8,44 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{LugarPractica}  \\
+			\multicolumn{2}{c|}{Tactica}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Representa la ubicación exacta (parque o complejo deportivo) donde se practica el deporte}  \\
+			\multicolumn{2}{c|}{Tacticas deportivas usadas en partidos que son ingeniadas por entrenadores. Puede ser tanto una jugada como una formación (para deportes en equipo)}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idLugarPractica &
+			idTactica &
 			Numerico &
 			&
-			Identificación única del lugar de practica \\
+			Identificación única de la táctica en la base de datos \\
 			\hline
-			nombreLugarPractica &
+			nombreTactica &
 			String &
-			100 &
-			Nombre de la ubicación \\
+			50 &
+			Nombre de la táctica \\
 			\hline
-			descripcionLugarPractica &
+			descripcionTactica &
 			String &
 			1000 &
-			Descripcion de la ubicación \\
+			Descripción de la táctica \\
 			\hline
-			coordenadaLugarPractica &
+			descripcionTactica &
 			String &
-			5000 &
-			Coordenadas de la ubicación \\
+			1000 &
+			Descripción de la táctica \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{SeCelebraEvento} & 
-			\multicolumn{2}{c|}{EventoDeportivo} \\
+			\multicolumn{2}{|c|}{RelacionImagen} & 
+			\multicolumn{2}{c|}{Imagen} \\
 			\hline
-			\multicolumn{2}{|c|}{***************} & 
-			\multicolumn{2}{c|}{UbicacionDeporte} \\
+			\multicolumn{2}{|c|}{RelacionVideo} & 
+			\multicolumn{2}{c|}{Video} \\
 			\hline
 		\end{tabular}
 		} \\

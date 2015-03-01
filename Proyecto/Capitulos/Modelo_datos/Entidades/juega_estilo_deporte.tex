@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad Posicion usuario en deporte}
+	\caption{Entidad JuegaEstiloDeporte}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,32 +8,32 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{PosicionUsuarioDeporte}  \\
+			\multicolumn{2}{c|}{JuegaEstiloDeporte}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Es la relación ternaria existente entre la posición, el usuario y el deporte, que representa la posición en la que juega un usuario en un deporte en específico}  \\
+			\multicolumn{2}{c|}{Une un estilo de juego de un jugador con un deporte}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idPosicionUsuarioDeporte &
+			idJuegaEstiloDeporte &
 			Numerico &
 			&
-			Identificación única de la posición de un usuario en un deporte \\
+			Identificación única de JuegaEstiloDeporte \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{UsuarioConPosicionEnDeporte} & 
+			\multicolumn{2}{|c|}{TieneEstiloJuego} & 
 			\multicolumn{2}{c|}{Usuario} \\
 			\hline
-			\multicolumn{2}{|c|}{UsuarioConPosicionEnDeporte} & 
+			\multicolumn{2}{|c|}{TieneEstiloJuego} & 
 			\multicolumn{2}{c|}{Deporte} \\
 			\hline
-			\multicolumn{2}{|c|}{UsuarioConPosicionEnDeporte} & 
-			\multicolumn{2}{c|}{Posicion} \\
+			\multicolumn{2}{|c|}{TieneEstiloJuego} & 
+			\multicolumn{2}{c|}{EstiloJuego} \\
 			\hline
 		\end{tabular}
 		} \\

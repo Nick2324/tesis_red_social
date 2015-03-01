@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad tacticas}
+	\caption{Entidad estilo de juego}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,44 +8,36 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Tacticas}  \\
+			\multicolumn{2}{c|}{EstiloJuego}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Tacticas deportivas usadas en partidos que son ingeniadas por entrenadores. Puede ser tanto una jugada como una formación (para deportes en equipo)}  \\
+			\multicolumn{2}{c|}{Muestra un estilo de juego de un jugador dentro de un deporte o de un deporte en si}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idTactica &
+			idEstiloJuego &
 			Numerico &
 			&
-			Identificación única de la táctica en la base de datos \\
+			Identificación única del estilo de juego \\
 			\hline
-			nombreTactica &
+			nombreEstiloJuego &
 			String &
 			50 &
-			Nombre de la táctica \\
+			Nombre del estilo de juego \\
 			\hline
-			descripcionTactica &
+			descripcionEstiloJuego &
 			String &
 			1000 &
-			Descripción de la táctica \\
-			\hline
-			descripcionTactica &
-			String &
-			1000 &
-			Descripción de la táctica \\
+			Descripción del estilo de juego \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionImagen} & 
-			\multicolumn{2}{c|}{Imagen} \\
-			\hline
-			\multicolumn{2}{|c|}{RelacionVideo} & 
-			\multicolumn{2}{c|}{Video} \\
+			\multicolumn{2}{|c|}{TieneEstiloJuego} & 
+			\multicolumn{2}{c|}{JuegaEstiloDeporte} \\
 			\hline
 		\end{tabular}
 		} \\

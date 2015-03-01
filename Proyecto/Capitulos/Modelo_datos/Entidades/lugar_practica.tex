@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad ciudad}
+	\caption{Entidad ubicacion}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,48 +8,41 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Ciudad}  \\
+			\multicolumn{2}{c|}{LugarPractica}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Ciudad relacionada a algún concepto el cuál sea útil en la base de datos (ej. expresión de en que ciudades se juega un determinado deporte)}  \\
+			\multicolumn{2}{c|}{Representa la ubicación exacta (parque o complejo deportivo) donde se practica el deporte}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idUbicacion &
-			Numeric &
+			idLugarPractica &
+			Numerico &
 			&
-			Identificación única de la ubicación \\
+			Identificación única del lugar de practica \\
 			\hline
-			nombreCiudad &
+			nombreLugarPractica &
 			String &
 			100 &
-			Nombre de la ciudad \\
+			Nombre de la ubicación \\
 			\hline
+			descripcionLugarPractica &
+			String &
+			1000 &
+			Descripcion de la ubicación \\
 			\hline
-			zipCodeCiudad &
-			Numeric &
-			&
-			Zip code de la ciudad descrita \\
-			\hline
-			coordenadaCiudad &
+			coordenadaLugarPractica &
 			String &
 			5000 &
-			Coordenadas de la ciudad \\
+			Coordenadas de la ubicación \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{ContieneUbicacion} & 
+			\multicolumn{2}{|c|}{CompletaUbicacion} & 
 			\multicolumn{2}{c|}{Ubicacion} \\
-			\hline
-			\multicolumn{2}{|c|}{SePracticaDeporte} & 
-			\multicolumn{2}{c|}{Deporte} \\
-			\hline
-			\multicolumn{2}{|c|}{SeEncuentraEn} & 
-			\multicolumn{2}{c|}{Usuario} \\
 			\hline
 		\end{tabular}
 		} \\

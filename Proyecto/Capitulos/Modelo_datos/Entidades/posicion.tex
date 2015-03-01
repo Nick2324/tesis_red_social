@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad evento deportivo}
+	\caption{Entidad posicion}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,36 +8,33 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{EventoDeportivo}  \\
+			\multicolumn{2}{c|}{Posicion}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Muestra un evento deportivo de práctica deportiva}  \\
+			\multicolumn{2}{c|}{Describe una posición en el campo de juego de un deporte}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idEventoDeportivo &
+			idPosicion &
 			Numerico &
 			&
-			Identificación del evento deportivo \\
+			Identificación única de la posición \\
 			\hline
-			nombreEventoDeportivo &
+			nombrePosicion &
 			String &
-			&
-			Nombre del evento deportivo \\
+			50 &
+			Nombre de la posición \\
 			\hline
-			descripcionEventoDeportivo &
+			descripcionPosicion &
 			String &
 			1000 &
-			Descripción del evento deportivo \\
+			Descripción de la posición \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
-			\hline
-			\multicolumn{2}{|c|}{DeporteEvento} & 
-			\multicolumn{2}{c|}{Deporte} \\
 			\hline
 			\multicolumn{2}{|c|}{RelacionImagen} & 
 			\multicolumn{2}{c|}{Imagen} \\
@@ -45,14 +42,8 @@
 			\multicolumn{2}{|c|}{RelacionVideo} & 
 			\multicolumn{2}{c|}{Video} \\
 			\hline
-			\multicolumn{2}{|c|}{UbicacionEvento} & 
-			\multicolumn{2}{c|}{Ubicacion} \\
-			\hline
-			\multicolumn{2}{|c|}{ParticipanteEvento} & 
-			\multicolumn{2}{c|}{Usuario} \\
-			\hline
-			\multicolumn{2}{|c|}{GeneroEvento} & 
-			\multicolumn{2}{c|}{Genero} \\
+			\multicolumn{2}{|c|}{UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{PosicionUsuarioDeporte} \\
 			\hline
 		\end{tabular}
 		} \\
