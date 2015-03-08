@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Relación R_CreaEvento}
+	\caption{Relación R_UbicacionUsuario}
 	\label{tab:xxxx_rel}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,13 +8,13 @@
 			\multicolumn{4}{|c|}{Relación} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{R_CreaEvento}  \\
+			\multicolumn{2}{c|}{R_UbicacionUsuario}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Relación entre un evento y su usuario creador}  \\
+			\multicolumn{2}{c|}{Une una UbicacionDeporte con un usuario}  \\
 			\hline
 			\multicolumn{2}{|c|}{Tipo de relación} &
-			\multicolumn{2}{c|}{Simetrica}  \\
+			\multicolumn{2}{c|}{Asimetrica}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -23,19 +23,19 @@
 			id &
 			Numerico &
 			 &
-			Identificación única de CreaEvento \\
+			Identificacion única de R_UbicacionUsuario \\
 			\hline
-			rol &
-			String &
-			50 &
-			Indica el rol que ocupa el creador del evento con el evento mismo, sea como administrador o como un colaborador \\
+			usuarioEnLugar &
+			Boolean &
+			&
+			Indica si el usuario se encuentra o no en el lugar \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Entidad 1} & \multicolumn{2}{c|}{Entidad 2} \\
 			\hline
 			\multicolumn{2}{|c|}{E_Usuario} & 
-			\multicolumn{2}{c|}{E_EventoDeportivo} \\
+			\multicolumn{2}{c|}{E_UbicacionDeporte} \\
 			\hline
 		\end{tabular}
 		} \\

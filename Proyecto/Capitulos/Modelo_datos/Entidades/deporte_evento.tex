@@ -22,6 +22,41 @@
 			 &
 			Identificación única de DeporteEvento \\
 			\hline
+			descripcion &
+			String &
+			1000 &
+			Breve descripcion del evento \\
+			\hline
+			rangoMaxEdad &
+			Numerico &
+			 &
+			Edad máxima con la que puede participar un usuario en el evento \\
+			\hline
+			rangoMinEdad &
+			Numerico &
+			 &
+			Edad mínima con la que puede participar un usuario en el evento \\
+			\hline
+			fechaRealizacion &
+			String &
+			10 &
+			Fecha de inicio del evento. El formato será el siguiente: 'DD/MM/AAAA' \\
+			\hline
+			fechaTermino &
+			String &
+			10 &
+			Fecha final evento. El formato será el siguiente: 'DD/MM/AAAA' \\
+			\hline
+			horaInicio &
+			String &
+			5 &
+			Hora de inicio del evento. El formato será manejado así: '00-24'+':'+'01-59' \\
+			\hline
+			horaFinal &
+			String &
+			5 &
+			Hora final del evento. El formato será manejado así: '00-24'+':'+'01-59' \\
+			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
@@ -40,6 +75,12 @@
 			\hline
 			\multicolumn{2}{|c|}{R_ParticipanteEvento} & 
 			\multicolumn{2}{c|}{E_Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R_RelacionImagen} & 
+			\multicolumn{2}{c|}{E_Imagen} \\
+			\hline
+			\multicolumn{2}{|c|}{R_RelacionVideo} & 
+			\multicolumn{2}{c|}{E_Video} \\
 			\hline
 		\end{tabular}
 		} \\
