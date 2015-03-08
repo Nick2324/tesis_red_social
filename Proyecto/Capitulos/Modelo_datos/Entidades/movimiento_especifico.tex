@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Relación R_PracticadoEn}
+	\caption{Relación R_MovimientoEspecifico}
 	\label{tab:xxxx_rel}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,13 +8,13 @@
 			\multicolumn{4}{|c|}{Relación} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{R_PracticadoEn}  \\
+			\multicolumn{2}{c|}{R_MovimientoEspecifico}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Resuelve la relación ternaria que existe entre Ubicacion, Deporte y Genero por medio de la entidad UbicacionDeporte}  \\
+			\multicolumn{2}{c|}{Une los conceptos de movimiento técnico y movimiento técnico específico}  \\
 			\hline
 			\multicolumn{2}{|c|}{Tipo de relación} &
-			\multicolumn{2}{c|}{Asimetrica}  \\
+			\multicolumn{2}{c|}{Simetrica}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -23,20 +23,14 @@
 			id &
 			Numerico &
 			 &
-			Identificación única de PracticadoEn \\
+			Identificación única de R_MovimientoEspecifico \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Entidad 1} & \multicolumn{2}{c|}{Entidad 2} \\
 			\hline
-			\multicolumn{2}{|c|}{E_Ubicacion} & 
-			\multicolumn{2}{c|}{E_UbicacionDeporte} \\
-			\hline
-			\multicolumn{2}{|c|}{E_Deporte} & 
-			\multicolumn{2}{c|}{E_UbicacionDeporte} \\
-			\hline
-			\multicolumn{2}{|c|}{E_Genero} & 
-			\multicolumn{2}{c|}{E_UbicacionDeporte} \\
+			\multicolumn{2}{|c|}{E_MovimientoEspecifico} & 
+			\multicolumn{2}{c|}{E_TecnicaEspecifica} \\
 			\hline
 		\end{tabular}
 		} \\

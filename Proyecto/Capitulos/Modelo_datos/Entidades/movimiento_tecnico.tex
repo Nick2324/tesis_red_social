@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad movimiento tecnico}
+	\caption{Entidad E_MovimientoTecnico}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,7 +8,7 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{MovimientoTecnico}  \\
+			\multicolumn{2}{c|}{E_MovimientoTecnico}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
 			\multicolumn{2}{c|}{Describe un movimiento básico en un deporte, dejando de lado tácticas}  \\
@@ -17,17 +17,17 @@
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idMovimientoTecnico &
+			id &
 			Numerico &
 			&
 			Identificación única del movimiento técnico \\
 			\hline
-			nombreMovimientoTecnico &
+			nombre &
 			String &
 			50 &
 			Nombre del movimiento descrito en el nodo \\
 			\hline
-			descripcionMovimientoTecnico &
+			descripcion &
 			String &
 			1000 &
 			Descripción del movimiento técnico \\
@@ -36,11 +36,14 @@
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionImagen} & 
-			\multicolumn{2}{c|}{Imagen} \\
+			\multicolumn{2}{|c|}{R_RelacionImagen} & 
+			\multicolumn{2}{c|}{E_Imagen} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionVideo} & 
-			\multicolumn{2}{c|}{Video} \\
+			\multicolumn{2}{|c|}{R_RelacionVideo} & 
+			\multicolumn{2}{c|}{E_Video} \\
+			\hline
+			\multicolumn{2}{|c|}{R_MovimientoEspecifico} & 
+			\multicolumn{2}{c|}{E_TecnicaEspecifica} \\
 			\hline
 		\end{tabular}
 		} \\

@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad E_UbicacionDeporte}
+	\caption{Entidad E_DeporteEvento}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,10 +8,10 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E_UbicacionDeporte}  \\
+			\multicolumn{2}{c|}{E_DeporteEvento}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Describe la relación ternaria que existe entre deporte, ubicación y genero, para indicar que un género específico del deporte es practicado en dicha ubicación}  \\
+			\multicolumn{2}{c|}{Entidad derivada de relación n-aria entre EventoDeportivo,Ubicacion,Genero,Deporte y Usuario}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -19,21 +19,27 @@
 			\hline
 			id &
 			Numerico &
-			&
-			Identificación única de la ubicacion del deporte \\
+			 &
+			Identificación única de DeporteEvento \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{R_PacticadoEn} & 
+			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
+			\multicolumn{2}{c|}{E_EventoDeportivo} \\
+			\hline
+			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
 			\multicolumn{2}{c|}{E_Ubicacion} \\
 			\hline
-			\multicolumn{2}{|c|}{R_PacticadoEn} & 
+			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
+			\multicolumn{2}{c|}{E_Genero} \\
+			\hline
+			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
 			\multicolumn{2}{c|}{E_Deporte} \\
 			\hline
-			\multicolumn{2}{|c|}{R_PacticadoEn} & 
-			\multicolumn{2}{c|}{E_Genero} \\
+			\multicolumn{2}{|c|}{R_ParticipanteEvento} & 
+			\multicolumn{2}{c|}{E_Usuario} \\
 			\hline
 		\end{tabular}
 		} \\

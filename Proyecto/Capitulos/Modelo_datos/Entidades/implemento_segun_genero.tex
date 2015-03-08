@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad E_Ciudad}
+	\caption{Entidad E_ImplementoSegunGenero}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,10 +8,10 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E_Ciudad}  \\
+			\multicolumn{2}{c|}{E_ImplementoSegunGenero}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Ciudad relacionada a algún concepto el cuál sea útil en la base de datos (ej. expresión de en que ciudades se juega un determinado deporte)}  \\
+			\multicolumn{2}{c|}{Relación n-aria entre Genero, Implemento y Deporte}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -19,31 +19,21 @@
 			\hline
 			id &
 			Numerico &
-			&
-			Identificación única de la ubicación \\
-			\hline
-			nombre &
-			String &
-			100 &
-			Nombre de la ciudad \\
-			\hline
-			\hline
-			zipCode &
-			Numeric &
-			&
-			Zip code de la ciudad descrita \\
-			\hline
-			coordenada &
-			String &
-			5000 &
-			Coordenadas de la ciudad \\
+			 &
+			Identificación única de ImplementoSegunGenero \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{R_CompletaUbicacion} & 
-			\multicolumn{2}{c|}{E_Ubicacion} \\
+			\multicolumn{2}{|c|}{R_ImplementoGeneroDeporte} & 
+			\multicolumn{2}{c|}{E_Implemento} \\
+			\hline
+			\multicolumn{2}{|c|}{R_ImplementoGeneroDeporte} & 
+			\multicolumn{2}{c|}{E_Deporte} \\
+			\hline
+			\multicolumn{2}{|c|}{R_ImplementoGeneroDeporte} & 
+			\multicolumn{2}{c|}{E_genero} \\
 			\hline
 		\end{tabular}
 		} \\

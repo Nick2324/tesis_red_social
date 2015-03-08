@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad deporte}
+	\caption{Entidad E_Deporte}
 	\label{tab:ent001_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,7 +8,7 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Deporte}  \\
+			\multicolumn{2}{c|}{E_Deporte}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
 			\multicolumn{2}{c|}{Deporte practicado por los usuarios de la red social}  \\
@@ -17,17 +17,17 @@
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idDeporte &
+			id &
 			Numerico &
 			&
 			Identificación única del deporte \\
 			\hline
-			nombreDeporte &
+			nombre &
 			String &
 			50 &
 			Nombre del deporte \\
 			\hline
-			descripcionDeporte &
+			descripcion &
 			String &
 			1000 &
 			Descripción \\
@@ -37,7 +37,7 @@
 			8 &
 			Fecha en la que se creó el deporte \\
 			\hline
-			historiaDeporte &
+			historia &
 			String &
 			4000 &
 			Breve historia del deporte \\
@@ -46,56 +46,56 @@
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{TieneEstilo} & 
-			\multicolumn{2}{c|}{EstiloJuego} \\
+			\multicolumn{2}{|c|}{R_TieneEstiloDeporte} & 
+			\multicolumn{2}{c|}{E_EstiloJuego} \\
 			\hline
-			\multicolumn{2}{|c|}{UtilizaTecnica} & 
-			\multicolumn{2}{c|}{Tecnica} \\
+			\multicolumn{2}{|c|}{R_UtilizaTecnica} & 
+			\multicolumn{2}{c|}{E_MovimientoTecnico} \\
 			\hline
-			\multicolumn{2}{|c|}{UtilizaImplemento} & 
-			\multicolumn{2}{c|}{Implemento} \\
+			\multicolumn{2}{|c|}{R_UtilizaImplemento} & 
+			\multicolumn{2}{c|}{E_Implemento} \\
 			\hline
-			\multicolumn{2}{|c|}{UtilizaTactica} & 
-			\multicolumn{2}{c|}{Tactica} \\
+			\multicolumn{2}{|c|}{R_UtilizaTactica} & 
+			\multicolumn{2}{c|}{E_Tactica} \\
 			\hline
-			\multicolumn{2}{|c|}{CategoriaClasificacion} & 
-			\multicolumn{2}{c|}{Clasificacion} \\
+			\multicolumn{2}{|c|}{R_CategoriaClasificacion} & 
+			\multicolumn{2}{c|}{E_ClasificacionDeporte} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionRecurso} & 
-			\multicolumn{2}{c|}{RecursoExterno} \\
+			\multicolumn{2}{|c|}{R_RelacionRecurso} & 
+			\multicolumn{2}{c|}{E_RecursoExterno} \\
 			\hline
-			\multicolumn{2}{|c|}{CategoriaGenero} & 
-			\multicolumn{2}{c|}{Genero} \\
+			\multicolumn{2}{|c|}{R_CategoriaGenero} & 
+			\multicolumn{2}{c|}{E_Genero} \\
 			\hline
-			\multicolumn{2}{|c|}{EventoDeDeporte} & 
-			\multicolumn{2}{c|}{DeporteEvento} \\
+			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
+			\multicolumn{2}{c|}{E_DeporteEvento} \\
 			\hline
-			\multicolumn{2}{|c|}{PracticaDeporte} & 
-			\multicolumn{2}{c|}{Usuario} \\
+			\multicolumn{2}{|c|}{R_PracticaDeporte} & 
+			\multicolumn{2}{c|}{E_Usuario} \\
 			\hline
-			\multicolumn{2}{|c|}{PosicionDeporte} & 
-			\multicolumn{2}{c|}{Posicion} \\
+			\multicolumn{2}{|c|}{R_PosicionDeporte} & 
+			\multicolumn{2}{c|}{E_Posicion} \\
 			\hline
 			\multicolumn{2}{|c|}{********} & 
-			\multicolumn{2}{c|}{Contenido} \\
+			\multicolumn{2}{c|}{E_Contenido} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionImagen} & 
-			\multicolumn{2}{c|}{Imagen} \\
+			\multicolumn{2}{|c|}{R_RelacionImagen} & 
+			\multicolumn{2}{c|}{E_Imagen} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionVideo} & 
-			\multicolumn{2}{c|}{Video} \\
+			\multicolumn{2}{|c|}{R_RelacionVideo} & 
+			\multicolumn{2}{c|}{E_Video} \\
 			\hline
-			\multicolumn{2}{|c|}{TieneEstiloJuego} & 
-			\multicolumn{2}{c|}{JuegaEstiloDeporte} \\
+			\multicolumn{2}{|c|}{R_TieneEstiloJuego} & 
+			\multicolumn{2}{c|}{E_JuegaEstiloDeporte} \\
 			\hline
-			\multicolumn{2}{|c|}{UsuarioPosicionDeporte} & 
-			\multicolumn{2}{c|}{PosicionUsuarioDeporte} \\
+			\multicolumn{2}{|c|}{R_UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{E_PosicionUsuarioDeporte} \\
 			\hline
-			\multicolumn{2}{|c|}{PacticadoEn} & 
-			\multicolumn{2}{c|}{UbicacionDeporte} \\
+			\multicolumn{2}{|c|}{R_PacticadoEn} & 
+			\multicolumn{2}{c|}{E_UbicacionDeporte} \\
 			\hline
-			\multicolumn{2}{|c|}{UbicaUsuario} & 
-			\multicolumn{2}{c|}{UbicacionUsuario} \\
+			\multicolumn{2}{|c|}{R_UbicaUsuario} & 
+			\multicolumn{2}{c|}{E_UbicacionUsuario} \\
 			\hline
 		\end{tabular}
 		} \\

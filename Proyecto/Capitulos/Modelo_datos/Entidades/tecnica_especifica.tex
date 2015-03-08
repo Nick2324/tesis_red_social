@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad E_Ciudad}
+	\caption{Entidad E_TecnicaEspecifica}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,10 +8,10 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E_Ciudad}  \\
+			\multicolumn{2}{c|}{E_TecnicaEspecifica}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Ciudad relacionada a algún concepto el cuál sea útil en la base de datos (ej. expresión de en que ciudades se juega un determinado deporte)}  \\
+			\multicolumn{2}{c|}{Describen técnicas que se derivan de movimientos técnicos}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -19,31 +19,28 @@
 			\hline
 			id &
 			Numerico &
-			&
-			Identificación única de la ubicación \\
+			 &
+			Identificación única de E_TecnicaEspecifica \\
 			\hline
 			nombre &
 			String &
 			100 &
-			Nombre de la ciudad \\
+			Nombre de la técnica específica \\
 			\hline
-			\hline
-			zipCode &
-			Numeric &
-			&
-			Zip code de la ciudad descrita \\
-			\hline
-			coordenada &
+			descripcion &
 			String &
-			5000 &
-			Coordenadas de la ciudad \\
+			1000 &
+			Descripción de la técnica específica \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{R_CompletaUbicacion} & 
-			\multicolumn{2}{c|}{E_Ubicacion} \\
+			\multicolumn{2}{|c|}{R_RelacionImagen} & 
+			\multicolumn{2}{c|}{E_Imagen} \\
+			\hline
+			\multicolumn{2}{|c|}{R_RelacionVideo} & 
+			\multicolumn{2}{c|}{E_Video} \\
 			\hline
 		\end{tabular}
 		} \\

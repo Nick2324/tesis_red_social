@@ -1,5 +1,5 @@
 \begin{table}[!htb]
-	\caption{Entidad tacticas}
+	\caption{Entidad E_Tactica}
 	\label{tab:xxxx_entidad}
 	\begin{center}
 		\resizebox{16cm}{!}{
@@ -8,7 +8,7 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{Tactica}  \\
+			\multicolumn{2}{c|}{E_Tactica}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
 			\multicolumn{2}{c|}{Tacticas deportivas usadas en partidos que son ingeniadas por entrenadores. Puede ser tanto una jugada como una formación (para deportes en equipo)}  \\
@@ -17,22 +17,17 @@
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			idTactica &
+			id &
 			Numerico &
 			&
 			Identificación única de la táctica en la base de datos \\
 			\hline
-			nombreTactica &
+			nombre &
 			String &
 			50 &
 			Nombre de la táctica \\
 			\hline
-			descripcionTactica &
-			String &
-			1000 &
-			Descripción de la táctica \\
-			\hline
-			descripcionTactica &
+			descripcion &
 			String &
 			1000 &
 			Descripción de la táctica \\
@@ -41,11 +36,11 @@
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionImagen} & 
-			\multicolumn{2}{c|}{Imagen} \\
+			\multicolumn{2}{|c|}{R_RelacionImagen} & 
+			\multicolumn{2}{c|}{E_Imagen} \\
 			\hline
-			\multicolumn{2}{|c|}{RelacionVideo} & 
-			\multicolumn{2}{c|}{Video} \\
+			\multicolumn{2}{|c|}{R_RelacionVideo} & 
+			\multicolumn{2}{c|}{E_Video} \\
 			\hline
 		\end{tabular}
 		} \\
