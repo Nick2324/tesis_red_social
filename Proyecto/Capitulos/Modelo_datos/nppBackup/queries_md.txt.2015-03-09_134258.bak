@@ -1,0 +1,8 @@
+Para eventos
+
+
+Para ubicacion
+MATCH (u:E_Ubicacion)-[r]-a,(ud:E_UbicacionDeporte)-[r1]-b RETURN *
+
+Para deporte
+
