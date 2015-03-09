@@ -1,7 +1,0 @@
-Para eventos
-MATCH (de:E_DeporteEvento)-[r]-n,(ed:E_EventoDeportivo)-[r1]-b RETURN *
-
-Para ubicacion
-MATCH (u:E_Ubicacion)-[r]-a,(ud:E_UbicacionDeporte)-[r1]-b RETURN *
-
-Para deporte

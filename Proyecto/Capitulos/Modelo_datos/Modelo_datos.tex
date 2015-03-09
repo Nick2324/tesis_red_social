@@ -17,13 +17,13 @@ Para el prototipo, se ha realizado solamente un evento de practica deportiva (de
   \end{center}
 \end{figure}
 
-Sobre ésta parte del modelo de datos cabe aclarar el papel de E_DeporteEvento: Se utilizó un nodo cabecera E_EventoDeportivo para registrar características generales de un evento; E_DeporteEvento guarda detalles de ''eventos dentro del evento'', con tal de que en un evento de práctica deportiva quepa la posibilidad de incluir más de un deporte.
+Sobre ésta parte del modelo de datos cabe aclarar el papel de E\_DeporteEvento: Se utilizó un nodo cabecera E\_EventoDeportivo para registrar características generales de un evento; E\_DeporteEvento guarda detalles de ''eventos dentro del evento'', con tal de que en un evento de práctica deportiva quepa la posibilidad de incluir más de un deporte.
 
 Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
 
 \section{Modelo de datos de gestión de ubicaciones}
 
-Sobre éste modelo de datos se puede encontrar ubicaciones espaciales atadas a los deportes registrados en la red social. El modelo generado se puede apreciar en la figura \ref{fig:modelo_datos_gestion_ubicaciones}.
+%Sobre éste modelo de datos se puede encontrar ubicaciones espaciales atadas a los deportes registrados en la red social. El modelo generado se puede apreciar en la figura \ref{fig:modelo_datos_gestion_ubicaciones}.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -34,7 +34,7 @@ Sobre éste modelo de datos se puede encontrar ubicaciones espaciales atadas a l
   \end{center}
 \end{figure}
 
-Es debido observar los nodos que hacen referencia a relaciones n-arias: uno de ellos se ha llamado E_UbicacionDeporte, el cual tiene la función de ubicar a un deporte, atado a un respectivo género, en un lugar de práctica; E_Ubicacion hace un nodo referencia a todos los aspectos de ubicación que tiene una ubicación registrada en la red social, para éste caso, serán los países, ciudades y lugares exactos de práctica del deporte.
+Es debido observar los nodos que hacen referencia a relaciones n-arias: uno de ellos se ha llamado E\_UbicacionDeporte, el cual tiene la función de ubicar a un deporte, atado a un respectivo género, en un lugar de práctica; E\_Ubicacion hace un nodo referencia a todos los aspectos de ubicación que tiene una ubicación registrada en la red social, para éste caso, serán los países, ciudades y lugares exactos de práctica del deporte.
 
 Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
 
@@ -51,6 +51,19 @@ Sobre éste modelo de datos se puede apreciar todas las características que los
   \end{center}
 \end{figure}
 
-Sobre ésta parte del modelo se puede observar cómo todos los elementos que han incluido los autores son elementos unidos como nodos al deporte elegido. Hay dos relaciones n-arias que merecen ser explicadas: E_ImplementoSegunGenero es un nodo que actúa como relación n-aria entre E_Genero, E_Deporte y E_Genero, debido a que el equipamiento de un deporte puede variar entre género (por ejemplo, en el lacrosse las mujeres no utilizan guantes protectores); E_PosicionUsuarioDeporte es un nodo que funciona como relación n-aria entre E_Deporte, E_Usuario y E_Posicion, buscando comunicar en que posiciones juega generalmente un usuario para determinado deporte (en éste caso, el usuario \textit{nicolas2324} juega \textit{lacrosse}en las posiciones \textit{mediocampista} y \textit{delantero}).
+Sobre ésta parte del modelo se puede observar cómo todos los elementos que han incluido los autores son elementos unidos como nodos al deporte elegido. Hay dos relaciones n-arias que merecen ser explicadas: E\_ImplementoSegunGenero es un nodo que actúa como relación n-aria entre E\_Genero, E\_Deporte y E\_Genero, debido a que el equipamiento de un deporte puede variar entre género (por ejemplo, en el lacrosse las mujeres no utilizan guantes protectores); E\_PosicionUsuarioDeporte es un nodo que funciona como relación n-aria entre E\_Deporte, E\_Usuario y E\_Posicion, buscando comunicar en que posiciones juega generalmente un usuario para determinado deporte (en éste caso, el usuario \textit{nicolas2324} juega \textit{lacrosse}en las posiciones \textit{mediocampista} y \textit{delantero}).
+
+Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
+
+\section{Modelo de datos de gestión de estadísticas}
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Gestion_estadisticas.png}
+    \caption{Modelo de datos de gestión de estadisticas}
+    \label{fig:modelo_datos_gestion_estadisticas}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
 
 Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
