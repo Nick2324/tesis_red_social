@@ -1,6 +1,6 @@
 \begin{table}[!htb]
-	\caption{Entidad E_Pais}
-	\label{tab:xxxx_entidad}
+	\caption{Entidad E\_Pais}
+	\label{tab:entidad_016}
 	\begin{center}
 		\resizebox{16cm}{!}{
 		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
@@ -8,7 +8,7 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E_Pais}  \\
+			\multicolumn{2}{c|}{E\_Pais}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
 			\multicolumn{2}{c|}{País relacionado a algún concepto el cuál sea útil en la base de datos (ej. expresión de en que paises en donde se juega un determinado deporte)}  \\
@@ -17,17 +17,17 @@
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			id &
+			id [P] &
 			Numerico &
 			&
 			Identificación única del país \\
 			\hline
-			nombre &
+			nombre [U] &
 			String &
 			100 &
 			Nombre del país \\
 			\hline
-			coordenada &
+			coordenada [U] &
 			String &
 			5000 &
 			Coordenadas de la ciudad \\
@@ -36,8 +36,8 @@
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{R_CompletaUbicacion} & 
-			\multicolumn{2}{c|}{E_Ubicacion} \\
+			\multicolumn{2}{|c|}{R\_CompletaUbicacion} & 
+			\multicolumn{2}{c|}{E\_Ubicacion} \\
 			\hline
 		\end{tabular}
 		} \\

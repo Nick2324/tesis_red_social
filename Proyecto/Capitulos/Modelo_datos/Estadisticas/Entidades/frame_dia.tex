@@ -1,6 +1,6 @@
 \begin{table}[!htb]
-	\caption{Entidad E\_EstiloJuego}
-	\label{tab:entidad_003}
+	\caption{Entidad FrameDia}
+	\label{tab:entidad_021}
 	\begin{center}
 		\resizebox{16cm}{!}{
 		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
@@ -8,10 +8,10 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E\_EstiloJuego}  \\
+			\multicolumn{2}{c|}{FrameDia}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
-			\multicolumn{2}{c|}{Muestra un estilo de juego de un jugador dentro de un deporte o de un deporte en si}  \\
+			\multicolumn{2}{c|}{Timestamp de una aparición del usuario sobre una ubicación deportiva}  \\
 			\hline
 			\multicolumn{4}{|c|}{Atributos} \\
 			\hline
@@ -19,25 +19,31 @@
 			\hline
 			id [P] &
 			Numerico &
-			&
-			Identificación única del estilo de juego \\
+			 &
+			Identificación única de FrameDia \\
 			\hline
-			nombre &
+			horaLlegada &
 			String &
-			50 &
-			Nombre del estilo de juego \\
+			5 &
+			Hora de llegada a la ubicación deportiva \\
 			\hline
-			descripcion &
+			horaSalida &
 			String &
-			1000 &
-			Descripción del estilo de juego \\
+			5 &
+			Hora de salida de la ubicación deportiva \\
 			\hline
 			\multicolumn{4}{|c|}{Relaciones a entidades} \\
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{} & 
-			\multicolumn{2}{c|}{} \\
+			\multicolumn{2}{|c|}{R\_NextFrame} & 
+			\multicolumn{2}{c|}{E_\FrameDia} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FrameUsuario} & 
+			\multicolumn{2}{c|}{E_\Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FrameUbicacionUsuario} & 
+			\multicolumn{2}{c|}{E_\UbicacionUsuario} \\
 			\hline
 		\end{tabular}
 		} \\

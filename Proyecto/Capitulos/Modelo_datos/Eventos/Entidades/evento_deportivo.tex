@@ -1,6 +1,6 @@
 \begin{table}[!htb]
-	\caption{Entidad E_EventoDeportivo}
-	\label{tab:xxxx_entidad}
+	\caption{Entidad E\_EventoDeportivo}
+	\label{tab:entidad_013}
 	\begin{center}
 		\resizebox{16cm}{!}{
 		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
@@ -8,7 +8,7 @@
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
 			\multicolumn{2}{|c|}{Nombre} &
-			\multicolumn{2}{c|}{E_EventoDeportivo}  \\
+			\multicolumn{2}{c|}{E\_EventoDeportivo}  \\
 			\hline
 			\multicolumn{2}{|c|}{Descripción} &
 			\multicolumn{2}{c|}{Muestra un evento deportivo de práctica deportiva}  \\
@@ -17,7 +17,7 @@
 			\hline
 			Nombre & Tipo & Longitud & Descripción \\
 			\hline
-			id &
+			id [P] &
 			Numerico &
 			&
 			Identificación del evento deportivo \\
@@ -37,7 +37,7 @@
 			10 &
 			Fecha de creación del evento. El formato será el siguiente: 'DD/MM/AAAA' \\
 			\hline
-			fechaInicio &
+			fechaInicio [I] &
 			String &
 			10 &
 			Fecha de inicio del primer evento asociado al evento principal. El formato será el siguiente: 'DD/MM/AAAA' \\
@@ -51,20 +51,20 @@
 			\hline
 			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
 			\hline
-			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
-			\multicolumn{2}{c|}{E_Deporte} \\
+			\multicolumn{2}{|c|}{R\_EventoDeDeporte} & 
+			\multicolumn{2}{c|}{E\_Deporte} \\
 			\hline
-			\multicolumn{2}{|c|}{R_RelacionImagen} & 
-			\multicolumn{2}{c|}{E_Imagen} \\
+			\multicolumn{2}{|c|}{R\_RelacionImagen} & 
+			\multicolumn{2}{c|}{E\_Imagen} \\
 			\hline
-			\multicolumn{2}{|c|}{R_RelacionVideo} & 
-			\multicolumn{2}{c|}{E_Video} \\
+			\multicolumn{2}{|c|}{R\_RelacionVideo} & 
+			\multicolumn{2}{c|}{E\_Video} \\
 			\hline
-			\multicolumn{2}{|c|}{R_UbicacionEvento} & 
-			\multicolumn{2}{c|}{E_Ubicacion} \\
+			\multicolumn{2}{|c|}{R\_UbicacionEvento} & 
+			\multicolumn{2}{c|}{E\_Ubicacion} \\
 			\hline
-			\multicolumn{2}{|c|}{R_EventoDeDeporte} & 
-			\multicolumn{2}{c|}{E_DeporteEvento} \\
+			\multicolumn{2}{|c|}{R\_EventoDeDeporte} & 
+			\multicolumn{2}{c|}{E\_DeporteEvento} \\
 			\hline
 		\end{tabular}
 		} \\
