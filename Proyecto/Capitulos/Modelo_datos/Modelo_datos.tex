@@ -57,13 +57,15 @@ Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
 
 \section{Modelo de datos de gestión de estadísticas}
 
-%\begin{figure}[!htb]
-%  \begin{center}
-%    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Gestion_estadisticas.png}
-%    \caption{Modelo de datos de gestión de estadisticas}
-%    \label{fig:modelo_datos_gestion_estadisticas}
-%    \textbf{Fuente:}  Autores
-%  \end{center}
-%\end{figure}
+En \cite{dependent_time_graphs}, se da una explicación acerca de un patrón llevado a cabo para la recolección de datos basados en tiempo (timestamp). Para la gestión de estadísticas se hace necesario llevar acabo éste patrón debido a que se debe guardar las interacciones de los usuarios con ubicaciones deportivas (cuando los usuarios van a practicar deporte en determinada ubicación). Debido a eso, se implementó un frame temporal llamado E\_FrameDia que guarda la hora de llegada y de salida de una ubicación deportiva por parte de un usuario. Asimismo, fue creada la entidad E\_RunDia para accesar al día de la semana que se quisiera, el cual estará a todos los timestamp que se vayan generando a través del tiempo. En la figura \ref{fig:modelo_datos_gestion_estadisticas} es posible ver las entidades E\_FrameDia con las horas y la entidad E\_RunDia con un id generado por Neo4j. En éste caso, dicho E\_RunDia actúa como el día lunes. También se pueden observar los nodos Usuario y UbicaciónUsuario conectandose a través de dicho frame de tiempo.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Gestion_estadisticas.png}
+    \caption{Modelo de datos de gestión de estadisticas}
+    \label{fig:modelo_datos_gestion_estadisticas}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
 
 Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.

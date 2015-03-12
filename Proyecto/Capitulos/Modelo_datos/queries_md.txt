@@ -6,3 +6,6 @@ MATCH (u:E_Ubicacion)-[r]-a,(ud:E_UbicacionDeporte)-[r1]-b RETURN *
 
 Para deporte
 MATCH (d:E_Deporte)-[*0..2]-n WHERE NOT n:E_Ubicacion AND NOT n:E_UbicacionDeporte AND NOT n:E_DeporteEvento AND NOT n:E_EventoDeportivo RETURN *
+
+
+match (rd:E_RunDia{id:0}),(fd1:E_FrameDia{id:0}),(fd2:E_FrameDia{id:1}),(u:E_Usuario{usuario:'nicolas2324'}),(us:E_UbicacionUsuario{id:0}) create fd2<-[:R_HasFrame{id:0}]-rd-[:R_HasFrame{id:1}]->fd1,fd2<-[:R_LastFrame{id:0}]-rd-[:R_FirstFrame{id:0}]->fd1,fd1-[:R_NextFrame{id:0}]->fd2,rd-[:R_Usuario{id:0}]->u,rd-[:R_UbicacionUsuario{id:0}]->us,u<-[:R_FrameUsuario{id:0}]-fd1-[:R_FrameUbicacionUsuario{id:0}]->us,u<-[:R_FrameUsuario{id:1}]-fd2-[:R_FrameUbicacionUsuario{id:1}]->us
