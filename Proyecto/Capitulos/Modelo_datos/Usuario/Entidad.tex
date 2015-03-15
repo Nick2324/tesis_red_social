@@ -1,0 +1,40 @@
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{4}{|c|}{\cellcolor[HTML]{9BC2E6}\textbf{Entidad}} \\ \hline
+\textbf{Nombre} & \multicolumn{3}{l|}{E_Usuario} \\ \hline
+\textbf{Descripcion} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Representa a una persona u organización que\\   tiene una cuenta en la aplicación.\end{tabular}} \\ \hline
+\multicolumn{4}{|c|}{\textbf{Atributos}} \\ \hline
+usuario{[}P{]} & String & 20 & \begin{tabular}[c]{@{}l@{}}Representa el nombre de usuario\\   que va a utilizar para iniciar sesión en la aplicación.\end{tabular} \\ \hline
+contraseña & String & 40 & \begin{tabular}[c]{@{}l@{}}Se guarda la contraseña del\\   usuario encriptada con el algoritmo SHA-1\end{tabular} \\ \hline
+E-mail{[}U{]} & String & 40 &  \\ \hline
+Genero & String & 1 & M|F \\ \hline
+numeroContacto & String & 10 &  \\ \hline
+primerNombre & String & 40 &  \\ \hline
+segundoNombre & String & 40 &  \\ \hline
+primerApellido & String & 40 &  \\ \hline
+segundoApellido & String & 40 &  \\ \hline
+fechaNacimiento & String & 10 & Formato DD/MM/YYYY \\ \hline
+fechaRegistro & String & 10 & Formato DD/MM/YYYY \\ \hline
+Genero & String & 1 & M/F \\ \hline
+estado & boolean & N/A & \begin{tabular}[c]{@{}l@{}}Representa el estado del usuario\\   (Activo/inactivo)\end{tabular} \\ \hline
+\multicolumn{4}{|c|}{\textbf{Relaciones a entidades}} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Relacion}} & \multicolumn{2}{l|}{\textbf{Entidad}} \\ \hline
+\multicolumn{2}{|l|}{EnviaMensaje} & \multicolumn{2}{l|}{Mensaje} \\ \hline
+\multicolumn{2}{|l|}{RecibeMensaje} & \multicolumn{2}{l|}{Mensaje} \\ \hline
+\multicolumn{2}{|l|}{PublicaMultimedia} & \multicolumn{2}{l|}{Multimedia} \\ \hline
+\multicolumn{2}{|l|}{AsumePosicionDeporte} & \multicolumn{2}{l|}{Posicion} \\ \hline
+\multicolumn{2}{|l|}{PracticaDeporte} & \multicolumn{2}{l|}{Deporte} \\ \hline
+\multicolumn{2}{|l|}{ParticipaEvento} & \multicolumn{2}{l|}{Evento} \\ \hline
+\multicolumn{2}{|l|}{ConformaGrupo} & \multicolumn{2}{l|}{Grupo} \\ \hline
+\multicolumn{2}{|l|}{AsumeRol} & \multicolumn{2}{l|}{Rol} \\ \hline
+\multicolumn{2}{|l|}{DueñoTimeline} & \multicolumn{2}{l|}{Timeline} \\ \hline
+\multicolumn{2}{|l|}{PublicaPost} & \multicolumn{2}{l|}{Post} \\ \hline
+\multicolumn{2}{|l|}{Comenta} & \multicolumn{2}{l|}{Comentario} \\ \hline
+\multicolumn{2}{|l|}{GeneraContenido} & \multicolumn{2}{l|}{Contenido} \\ \hline
+\multicolumn{2}{|l|}{Amigo} & \multicolumn{2}{l|}{Usuario} \\ \hline
+\end{tabular}
+\end{table}
