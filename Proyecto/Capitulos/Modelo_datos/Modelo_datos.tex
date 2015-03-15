@@ -69,3 +69,54 @@ En \cite{dependent_time_graphs}, se da una explicación acerca de un patrón lle
 \end{figure}
 
 Los nodos que hacen referencia a relaciones n-arias son mostrados en gris.
+
+\section{Modelo de Gestion de conocimiento}
+
+En esta parte del modelo se puede observar como se representa la base de conocimientos de la aplicación. Esta base de conocimientos es almentada por los mismos usuarios que son quienes estan encargados de crear y discutir los diferentes contenidos que existan. Los contenidos pueden ser explicados con elementos multimedia que el usuario creador está encargado de proporcionar.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Contenidos.png}
+    \caption{Modelo de datos de gestión del conocimiento}
+    \label{fig:modelo_datos_gestion_conocimiento}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+\section{Modelo de Gestion de multimedia}
+
+Para esta seccion cabe destacar la funcion de los nodos E\_Multimedia. Estos nodos representan un contenido multimedia que puede ser utilizado en los diferentes módulos de la aplicaicón. Toda interacción con los elementos multimedia E\_Foto y E\_Video se debe hacer a través de los nodo E\_Multimedia (Comentar, referenciar, compartir). Adicionalmente, los elementos E\_Album agrupan una serie de Fotos de un usuario.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Multimedia.png}
+    \caption{Modelo de datos de gestión de multimedia}
+    \label{fig:modelo_datos_gestion_multimedia}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+\section{Modelo de Gestion de roles}
+
+En esta sección del modelo se parametrizan los diferentes roles existentes en la aplicación. Cada rol tiene asociados una serie de permisos que le brindan diferentes funcinalidades al usuario que asuma el rol respectivo.
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Roles.png}
+    \caption{Modelo de datos de gestión de roles}
+    \label{fig:modelo_datos_gestion_roles}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+\section{Modelo de Gestion de usuarios}
+
+En esta sección del modelo se parametrizan las relaciones básicas de un usuario. Notese que no se incluyen a detalle las relaciones que ya es especificaron en los demás módulos (Multimetdia, por ejemplo), sino os que son inherentes a un uso básico de la aplicación. Se muestra como un usuario puede asumir un rol y puede relacionarse con otros usuarios. La relacion R\_Amigo se muestra en un solo sentido por la limitación de la herramienta que no permite tener relaciones bidireccionales. Se decide dejar una relación en un único sentido por rendimiento.
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Modelo_de_datos/Usuarios.png}
+    \caption{Modelo de datos de gestión de usuarios}
+    \label{fig:modelo_datos_gestion_usuarios}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
