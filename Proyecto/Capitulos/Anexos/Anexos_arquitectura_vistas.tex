@@ -1,10 +1,11 @@
-\section{Anexos de las vistas de la arquitectura}
+\chapter{Vistas de la arquitectura no implementadas}
+\label{app:vistas_no_implementadas}
 
 A continuación son mostradas las vistas creadas por los autores pero que no son utilizadas para el desarrollo de las funcionalidades del presente prototipo.
 
-\subsection{Business Functions Viewpoints}
+\section{Business Functions Viewpoints}
 
-\subsubsection{Patrocinios Deportivos}
+\subsection{Patrocinios Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -17,7 +18,7 @@ A continuación son mostradas las vistas creadas por los autores pero que no son
 
 En este punto de vista se puede observar cómo los patrocinadores pueden patrocinar diferentes actores en la red social. Más a fondo, se puede ver como un patrocinador apoya los proyectos desempeñados por un actor que desempeña un rol específico en la red social. Así, por ejemplo, un gestor de encuentros deportivos puede pedir un patrocinio o recibir una petición de un patrocinador para ser patrocinado por el evento que va a realizar. También se puede observar que un patrocinador deportivo patrocina proyectos de otros actores sobre la red social con su financiamiento, con la prestación de uno o varios servicios o con la provisión de uno o varios recursos materiales.
 
-\subsubsection{Formación de Grupos Deportivos}
+\subsection{Formación de Grupos Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -30,7 +31,7 @@ En este punto de vista se puede observar cómo los patrocinadores pueden patroci
 
 En cuanto a la formación de grupos se refiere, entre roles intercambian la información acerca de sus peticiones a unirse a la red social, así como la respuesta a la misma. Se puede ver que los roles que interactuan en la formación de grupos deportivos son solo los de entrenadores y agrupaciones deportivas y que ellos mismos conforman los grupos deportivos.
 
-\subsubsection{Entrenamiento Deportivo}
+\subsection{Entrenamiento Deportivo}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -43,9 +44,9 @@ En cuanto a la formación de grupos se refiere, entre roles intercambian la info
 
 Sobre este punto de vista se puede observar el flujo de información entre los roles participantes en un entrenamiento deportivo. Todos están basados en la valoración del trabajo producido en la práctica según los eventos producidos en la misma y la valoración que a estos de cada rol para, así, producir ejercicios deportivos para el entrenamiento.
 
-\subsection{Business Process Viewpoints}
+\section{Business Process Viewpoints}
 
-\subsubsection{Patrocinios Deportivos}
+\subsection{Patrocinios Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -58,7 +59,7 @@ Sobre este punto de vista se puede observar el flujo de información entre los r
 
 En el proceso de patrocinios, los autores han orientado el proceso de negocio partiendo desde el patrocinado hacia el patrocinador (con la petición de patrocinios) y desde el patrocinador al patrocinado (dejando al patrocinador decidir si patrocinar o no un proyecto según el seguimiento que él le haga a éste). Se puede ver también que los servicios ofrecidos soportan todos los procesos de negocio ilustrados.
 
-\subsubsection{Formación de Grupos Deportivos}
+\subsection{Formación de Grupos Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -73,7 +74,7 @@ Este punto de vista de proceso de negocio está basado en dos procesos principal
 
 Los procesos de negocio representados son cubiertos por un servicio grande específico para prestar funcionalidades a los grupos deportivos y éste, a su vez, hace uso del servicio de social media para poder implementar la interacción grupal.
 
-\subsubsection{Entrenamiento Deportivo}
+\subsection{Entrenamiento Deportivo}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -88,9 +89,9 @@ El proceso de entrenamiento deportivo ha sido dividido en dos procesos grandes, 
 
 En función de soportar los procesos expresados por los autores, se generaron tres servicios de aplicación principales: La ejecución de un plan de entrenamiento, otros servicios de gestión del plan de entrenamiento y un servicio para el soporte de la evaluación deportiva, el cual se nombró "servicio de comunicación colaborativa".
 
-\subsection{Application Usage Viewpoints}
+\section{Application Usage Viewpoints}
 
-\subsubsection{Patrocinios Deportivos}
+\subsection{Patrocinios Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -106,7 +107,7 @@ A parte de lo ya observado en el punto de vista de proceso de negocio de patroci
 Se hace la creación de componentes de negocio para la gestión de cada facilidad ofrecida por un patrocinador, así como también uno para el patrocinio mismo, gestión de patrocinios, soportando los servicios de patrocinio ofrecidos. La utilización de los demás servicios se ve reflejada en componentes relacionados con estadísticas, con grupos deportivos y con eventos deportivos. También se observa un componente de comunicación, el cual realiza el servicio de mensajería para el envío de mensajes (proyecto) entre patrocinador y patrocinado.
 
 
-\subsubsection{Formación de Grupos Deportivos}
+\subsection{Formación de Grupos Deportivos}
 
 \begin{figure}[!htb]
   \begin{center}
@@ -119,7 +120,7 @@ Se hace la creación de componentes de negocio para la gestión de cada facilida
 
 A parte de lo ya dicho en el punto de vista de proceso de negocio de formación de grupos deportivos, se puede observar los componentes en soporte de los servicios de aplicación: Uno para la gestión del grupo deportivo, otro para la gestión de usuarios y el otro para la gestión de la comunicación.
 
-\subsubsection{Entrenamiento Deportivo}
+\subsection{Entrenamiento Deportivo}
 
 \begin{figure}[!htb]
   \begin{center}
