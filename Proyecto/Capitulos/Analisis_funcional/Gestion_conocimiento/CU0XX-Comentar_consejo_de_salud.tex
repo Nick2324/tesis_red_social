@@ -1,0 +1,74 @@
+\begin{table}[!htb]
+	\caption{CU0XX-Comentar consejo de salud: Descripción}
+	\label{tab:cu0XX_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Comentar consejo de salud \\
+			\hline
+			Identificador & CU0XX \\
+			\hline
+			Descripción & Funcionalidad que permite comentar un consejo de salud de la aplicación\\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item \textit{Consejero de salud.}
+				\item Jugador.
+				\item Entrenador.
+				\item organizacion.
+			\end{itemize} \\
+			\hline
+			Disparador &  Un usuario decide comentar un consejo de salud.\\
+			\hline
+			Inclusiones & N/A \\
+			\hline
+			Puntos de extensión & N/A \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item Existe por lo menos un consejo de salud registrado en la aplicación.
+			\end{itemize} \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se crea un comentario del consejo de salud satisfactoriamente.
+			\end{itemize} \\
+			\hline
+			Notas & N/A \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU0XX-Comentar consejo de salud: Flujos de hechos}
+	\label{tab:cu0XX_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ingresa al menu de gestión del conocimiento. & Se despliega el menu de gestión del conocimiento. \\
+			2 & El usuario selecciona la opcion Contenidos de salud. & Se despliegan las opciones de menú a las cuales el rol del usuario tiene acceso. \\
+			3 & El usuario selecciona la opcion Buscar consejo de salud. & Se despliega el formulario de búsqueda de consejos de salud. \\
+			4 & Luego de llenar los campos de búsqueda, el usuario selecciona la opción buscar consejo. & Se despliegan los consejos de salud que cumplan los criterios de búsqueda seleccionados. \\
+			5 & El usuario selecciona un consejo de salud de la lista de resultados. & El sistema despliega la información asociada al consejo de salud seleccionado. \\
+			6 & El usuario selecciona la opcion comentar consejo. & Se despliega el formulario para comentar consejos de salud. \\
+			7 & Luego de llenar los campos obligatorios, el usuario selecciona la opción Comentar. &  El sistema solicita confirmación del nuevo comentario del consejo de salud. \\
+			8 & El usuario confirma la creacion del nuevo comentario del consejo. & Se crea el comentaro del consejo de salud en la base de conocimientos de la aplicación. El sistema regresa al menu de gestión del conocimiento. \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
