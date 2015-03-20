@@ -1,0 +1,618 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+ACIEM%
+}{%
+ACIEM%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+manual_referencia_costos}
+\APACinsertmetastar {%
+manual_referencia_costos}%
+\begin{APACrefauthors}%
+ACIEM.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+\APACrefbtitle {Manual de referencia de tarifas ACIEM (Asociacion Colombiana de
+  Ingenieros.} {Manual de referencia de tarifas aciem (asociacion colombiana de
+  ingenieros.}
+\newblock
+\begin{APACrefURL}
+  \url{http://issuu.com/comisionesaciem/docs/doc_manual_ref_tarifas/8?e=1622024/3914555}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Allamanis%
+, Scellato%
+\BCBL {}\ \BBA {} Moscolo%
+}{%
+Allamanis%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+evolution}
+\APACinsertmetastar {%
+evolution}%
+\begin{APACrefauthors}%
+Allamanis, M.%
+, Scellato, S.%
+\BCBL {}\ \BBA {} Moscolo, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evolution of a Location-based Online Social Network:
+  Analysis and Models} {Evolution of a location-based online social network:
+  Analysis and models}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IMC 12}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Arnaboldi%
+, Conti%
+\BCBL {}\ \BBA {} Passarella%
+}{%
+Arnaboldi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+dynamics}
+\APACinsertmetastar {%
+dynamics}%
+\begin{APACrefauthors}%
+Arnaboldi, V.%
+, Conti, M.%
+\BCBL {}\ \BBA {} Passarella, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dynamics of Personal Social Relationships in Online
+  Social Networks: a Study on Twitter} {Dynamics of personal social
+  relationships in online social networks: a study on twitter}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Balanta%
+}{%
+Balanta%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+leg_int}
+\APACinsertmetastar {%
+leg_int}%
+\begin{APACrefauthors}%
+Balanta, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {Legislación en internet.} {Legislación en internet.}
+\newblock
+\begin{APACrefURL}
+  \url{http://www.unipymes.com/diplomado-gerencia-marketing/presentaciones/modulo5_presentacion4.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cattuto%
+}{%
+Cattuto%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+dependent_time_graphs}
+\APACinsertmetastar {%
+dependent_time_graphs}%
+\begin{APACrefauthors}%
+Cattuto, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+\APACrefbtitle {Representing time dependent graphs in Neo4j.} {Representing
+  time dependent graphs in neo4j.}
+\newblock
+\begin{APACrefURL}
+  \url{https://github.com/SocioPatterns/neo4j-dynagraph/wiki/Representing-time-dependent-graphs-in-Neo4j}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Companies%
+}{%
+Companies%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+judging}
+\APACinsertmetastar {%
+judging}%
+\begin{APACrefauthors}%
+Companies, T\BPBI M\BHBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {How to Judge the Reliability of Internet Information.} {How to
+  judge the reliability of internet information.}
+\newblock
+\begin{APACrefURL} \url{http://www.mhhe.com/mayfieldpub/webtutor/judging.htm}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Elahi%
+\ \BBA {} Karlsen%
+}{%
+Elahi%
+\ \BBA {} Karlsen%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+user_behavior_online}
+\APACinsertmetastar {%
+user_behavior_online}%
+\begin{APACrefauthors}%
+Elahi, N.%
+\BCBT {}\ \BBA {} Karlsen, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {User behavior in Online Social Networks and its
+  Implications: A user study} {User behavior in online social networks and its
+  implications: A user study}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{WIMS'12}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Erl%
+}{%
+Erl%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+soa_principles}
+\APACinsertmetastar {%
+soa_principles}%
+\begin{APACrefauthors}%
+Erl, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2007}.
+\newblock
+\APACrefbtitle {SOA Principles of Services Design} {Soa principles of services
+  design}.
+\newblock
+\APACaddressPublisher{}{Prentice Hall}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Group%
+}{%
+Group%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+archimate2}
+\APACinsertmetastar {%
+archimate2}%
+\begin{APACrefauthors}%
+Group, T\BPBI O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+\APACrefbtitle {Welcome to Archimate(copyright) 2.1, an Open Group Standard.}
+  {Welcome to archimate(copyright) 2.1, an open group standard.}
+\newblock
+\begin{APACrefURL} \url{http://pubs.opengroup.org/architecture/archimate2-doc/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Heitlager%
+, Kuipers%
+\BCBL {}\ \BBA {} Visser%
+}{%
+Heitlager%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+measuring_maintainability}
+\APACinsertmetastar {%
+measuring_maintainability}%
+\begin{APACrefauthors}%
+Heitlager, I.%
+, Kuipers, T.%
+\BCBL {}\ \BBA {} Visser, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Practical Model for Measuring Maintainability – A
+  Preliminary Report –} {A practical model for measuring maintainability –
+  a preliminary report –}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kadushin%
+}{%
+Kadushin%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+cap_sna}
+\APACinsertmetastar {%
+cap_sna}%
+\begin{APACrefauthors}%
+Kadushin, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2004}.
+\newblock
+\APACrefbtitle {Introduction to Social Network Theory} {Introduction to social
+  network theory}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lozada%
+}{%
+Lozada%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+evolucion_web}
+\APACinsertmetastar {%
+evolucion_web}%
+\begin{APACrefauthors}%
+Lozada, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {Evolución de la Web.} {Evolución de la web.}
+\newblock
+\begin{APACrefURL}
+  \url{http://profesores.elo.utfsm.cl/~tarredondo/info/networks/Evolucion_Web.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McCabe%
+}{%
+McCabe%
+}{%
+{\protect \APACyear {1976}}%
+}]{%
+cyclomatic_complexity}
+\APACinsertmetastar {%
+cyclomatic_complexity}%
+\begin{APACrefauthors}%
+McCabe, T\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1976}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Complexity Measure} {A complexity measure}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions On Software Engineering, VOL. SE-2,
+  No. 4}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Microsoft%
+}{%
+Microsoft%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+security_ws}
+\APACinsertmetastar {%
+security_ws}%
+\begin{APACrefauthors}%
+Microsoft.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+\APACrefbtitle {Security fundamentals for web services. Chapter 1-.} {Security
+  fundamentals for web services. chapter 1-.}
+\newblock
+\begin{APACrefURL} \url{http://msdn.microsoft.com/en-us/library/ff648318.aspx}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Osman%
+\ \BBA {} Osman%
+}{%
+Osman%
+\ \BBA {} Osman%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+quality_in_use}
+\APACinsertmetastar {%
+quality_in_use}%
+\begin{APACrefauthors}%
+Osman, N\BPBI B.%
+\BCBT {}\ \BBA {} Osman, I\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attributes for the Quality in Use of Mobile Government
+  Systems} {Attributes for the quality in use of mobile government
+  systems}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sapuppo%
+}{%
+Sapuppo%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+spiderweb}
+\APACinsertmetastar {%
+spiderweb}%
+\begin{APACrefauthors}%
+Sapuppo, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Spiderweb: A Social Mobile Network} {Spiderweb: A social
+  mobile network}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{2010 European Wireless Conference}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Schwaber%
+\ \BBA {} Sutherland%
+}{%
+Schwaber%
+\ \BBA {} Sutherland%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+scrum_guide}
+\APACinsertmetastar {%
+scrum_guide}%
+\begin{APACrefauthors}%
+Schwaber, K.%
+\BCBT {}\ \BBA {} Sutherland, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+\APACrefbtitle {The Scrum Guide.} {The scrum guide.}
+\newblock
+\begin{APACrefURL}
+  \url{https://www.scrum.org/Portals/0/Documents/Scrum%20Guides/2013/Scrum-Guide.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Socievole%
+\ \BBA {} Marano%
+}{%
+Socievole%
+\ \BBA {} Marano%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+user_behavior}
+\APACinsertmetastar {%
+user_behavior}%
+\begin{APACrefauthors}%
+Socievole, A.%
+\BCBT {}\ \BBA {} Marano, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Exploring User Sociocentric and Egocentric Behaviors in
+  Online and Detected Social Networks} {Exploring user sociocentric and
+  egocentric behaviors in online and detected social networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{2012 2nd Baltic Congress on Future Internet
+  Communications}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tan%
+\ \BBA {} Gencel%
+}{%
+Tan%
+\ \BBA {} Gencel%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+usability_ux}
+\APACinsertmetastar {%
+usability_ux}%
+\begin{APACrefauthors}%
+Tan, K\BPBI R\BPBI J.%
+\BCBT {}\ \BBA {} Gencel, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Framework for Software Usability \& User Experience
+  Measurement in Mobile Industry} {A framework for software usability \& user
+  experience measurement in mobile industry}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thi%
+, Quang%
+\BCBL {}\ \BBA {} Quyet%
+}{%
+Thi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+complexity_mesure}
+\APACinsertmetastar {%
+complexity_mesure}%
+\begin{APACrefauthors}%
+Thi, Q\BPBI P.%
+, Quang, D\BPBI T.%
+\BCBL {}\ \BBA {} Quyet, T\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Complexity Measure for Web Services} {A complexity
+  measure for web services}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tsvetovat%
+\ \BBA {} Kouznetsov%
+}{%
+Tsvetovat%
+\ \BBA {} Kouznetsov%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+sna_startups}
+\APACinsertmetastar {%
+sna_startups}%
+\begin{APACrefauthors}%
+Tsvetovat, M.%
+\BCBT {}\ \BBA {} Kouznetsov, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2011}.
+\newblock
+\APACrefbtitle {Social Network Analysis for Startups} {Social network analysis
+  for startups}.
+\newblock
+\APACaddressPublisher{}{O'Reilly}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tucker%
+}{%
+Tucker%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+computer_science}
+\APACinsertmetastar {%
+computer_science}%
+\begin{APACrefauthors}%
+Tucker, A\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2004}.
+\newblock
+\APACrefbtitle {Computer Science Handbook} {Computer science handbook}.
+\newblock
+\APACaddressPublisher{}{Chapman \& Hall/CRC}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Väänänen-Vainio-Mattila%
+, Wäljas%
+, Ojala1%
+\BCBL {}\ \BBA {} Segerståhl%
+}{%
+Väänänen-Vainio-Mattila%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+social_experience}
+\APACinsertmetastar {%
+social_experience}%
+\begin{APACrefauthors}%
+Väänänen-Vainio-Mattila, K.%
+, Wäljas, M.%
+, Ojala1, J.%
+\BCBL {}\ \BBA {} Segerståhl, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Identifying Drivers and Hindrances of Social User
+  Experience in Web Services} {Identifying drivers and hindrances of social
+  user experience in web services}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{CHI 2010: Finding Your Mojo and Doing Some Good}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yang%
+, Guo%
+\BCBL {}\ \BBA {} Ma%
+}{%
+Yang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+analysis}
+\APACinsertmetastar {%
+analysis}%
+\begin{APACrefauthors}%
+Yang, Y.%
+, Guo, Y.%
+\BCBL {}\ \BBA {} Ma, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Analysis on Community Charactristics of Online Social
+  Network} {Analysis on community charactristics of online social
+  network}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{2010 International Conference on Cyber-Enabled
+  Distributed Computing and Knowledge Discovery}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

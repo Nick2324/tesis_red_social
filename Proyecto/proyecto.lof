@@ -3,184 +3,184 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Cambio de la utilizaci\IeC {\'o}n de internet en funci\IeC {\'o}n de los servicios de conectividad social que son creados y soportados en ella\relax }}{51}{figure.caption.7}
-\contentsline {figure}{\numberline {2}{\ignorespaces La red mas simple.\relax }}{51}{figure.caption.8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de una red asim\IeC {\'e}trica.\relax }}{52}{figure.caption.9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Acercamiento a c\IeC {\'o}mo se desarrollan los principios de dise\IeC {\~n}o con los dem\IeC {\'a}s conceptos nombrados.\relax }}{54}{figure.caption.10}
-\contentsline {figure}{\numberline {5}{\ignorespaces Como extiende o soporta un patr\IeC {\'o}n de dise\IeC {\~n}o el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n de software.\relax }}{55}{figure.caption.11}
-\contentsline {figure}{\numberline {6}{\ignorespaces Componentes que hacen que el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n sea acorde al paradigma escogido.\relax }}{56}{figure.caption.12}
-\contentsline {figure}{\numberline {7}{\ignorespaces diferenciaci\IeC {\'o}n entre tipos de servicio da lugar a la estructura en capas\relax }}{57}{figure.caption.13}
-\contentsline {figure}{\numberline {8}{\ignorespaces Interacci\IeC {\'o}n de los conceptos clave en la computaci\IeC {\'o}n orientada a servicios\relax }}{58}{figure.caption.14}
+\contentsline {figure}{\numberline {1}{\ignorespaces Cambio de la utilizaci\IeC {\'o}n de internet en funci\IeC {\'o}n de los servicios de conectividad social que son creados y soportados en ella\relax }}{53}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces La red mas simple.\relax }}{53}{figure.caption.8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Ejemplo de una red asim\IeC {\'e}trica.\relax }}{54}{figure.caption.9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Acercamiento a c\IeC {\'o}mo se desarrollan los principios de dise\IeC {\~n}o con los dem\IeC {\'a}s conceptos nombrados.\relax }}{56}{figure.caption.10}
+\contentsline {figure}{\numberline {5}{\ignorespaces Como extiende o soporta un patr\IeC {\'o}n de dise\IeC {\~n}o el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n de software.\relax }}{57}{figure.caption.11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Componentes que hacen que el dise\IeC {\~n}o l\IeC {\'o}gico de la soluci\IeC {\'o}n sea acorde al paradigma escogido.\relax }}{58}{figure.caption.12}
+\contentsline {figure}{\numberline {7}{\ignorespaces diferenciaci\IeC {\'o}n entre tipos de servicio da lugar a la estructura en capas\relax }}{59}{figure.caption.13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Interacci\IeC {\'o}n de los conceptos clave en la computaci\IeC {\'o}n orientada a servicios\relax }}{60}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9}{\ignorespaces Red de estrella.\relax }}{63}{figure.caption.15}
-\contentsline {figure}{\numberline {10}{\ignorespaces red corbat\IeC {\'\i }n.\relax }}{66}{figure.caption.16}
-\contentsline {figure}{\numberline {11}{\ignorespaces Tipos de diadas asim\IeC {\'e}tricas.\relax }}{67}{figure.caption.17}
-\contentsline {figure}{\numberline {12}{\ignorespaces Tipos de triadas sim\IeC {\'e}tricas.\relax }}{67}{figure.caption.18}
-\contentsline {figure}{\numberline {13}{\ignorespaces Tipos de triadas asim\IeC {\'e}tricas.\relax }}{68}{figure.caption.19}
-\contentsline {figure}{\numberline {14}{\ignorespaces Red social de Krackhardt kite.\relax }}{70}{figure.caption.20}
-\contentsline {figure}{\numberline {15}{\ignorespaces proceso de an\IeC {\'a}lisis y dise\IeC {\~n}o orientado a servicios\relax }}{71}{figure.caption.21}
-\contentsline {figure}{\numberline {16}{\ignorespaces Cruce entre las subcaracter\IeC {\'\i }sticas atribuidas a la mantenibilidad del software en el estandar ISO/IEC 9126 y las propiedades a nivel de c\IeC {\'o}digo. Cada cruce es indicado por una $x$\relax }}{79}{figure.caption.22}
-\contentsline {figure}{\numberline {17}{\ignorespaces correspondiente al nivel de riesgo en el software presentado por la complejidad ciclom\IeC {\'a}tica promedio del sistema\relax }}{80}{figure.caption.23}
-\contentsline {figure}{\numberline {18}{\ignorespaces correspondiente al nivel m\IeC {\'a}ximo relativo de LOC que podr\IeC {\'\i }an ser riesgosas al momento de mantener el software\relax }}{81}{figure.caption.24}
-\contentsline {figure}{\numberline {19}{\ignorespaces clasificaci\IeC {\'o}n de duplicaci\IeC {\'o}n de c\IeC {\'o}digo\relax }}{82}{figure.caption.25}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {20}{\ignorespaces Distribuci\IeC {\'o}n de las diferentes actividades a realizar\relax }}{120}{figure.caption.45}
+\contentsline {figure}{\numberline {9}{\ignorespaces Red de estrella.\relax }}{65}{figure.caption.15}
+\contentsline {figure}{\numberline {10}{\ignorespaces red corbat\IeC {\'\i }n.\relax }}{68}{figure.caption.16}
+\contentsline {figure}{\numberline {11}{\ignorespaces Tipos de diadas asim\IeC {\'e}tricas.\relax }}{69}{figure.caption.17}
+\contentsline {figure}{\numberline {12}{\ignorespaces Tipos de triadas sim\IeC {\'e}tricas.\relax }}{69}{figure.caption.18}
+\contentsline {figure}{\numberline {13}{\ignorespaces Tipos de triadas asim\IeC {\'e}tricas.\relax }}{70}{figure.caption.19}
+\contentsline {figure}{\numberline {14}{\ignorespaces Red social de Krackhardt kite.\relax }}{72}{figure.caption.20}
+\contentsline {figure}{\numberline {15}{\ignorespaces proceso de an\IeC {\'a}lisis y dise\IeC {\~n}o orientado a servicios\relax }}{73}{figure.caption.21}
+\contentsline {figure}{\numberline {16}{\ignorespaces Cruce entre las subcaracter\IeC {\'\i }sticas atribuidas a la mantenibilidad del software en el estandar ISO/IEC 9126 y las propiedades a nivel de c\IeC {\'o}digo. Cada cruce es indicado por una $x$\relax }}{81}{figure.caption.22}
+\contentsline {figure}{\numberline {17}{\ignorespaces correspondiente al nivel de riesgo en el software presentado por la complejidad ciclom\IeC {\'a}tica promedio del sistema\relax }}{82}{figure.caption.23}
+\contentsline {figure}{\numberline {18}{\ignorespaces correspondiente al nivel m\IeC {\'a}ximo relativo de LOC que podr\IeC {\'\i }an ser riesgosas al momento de mantener el software\relax }}{83}{figure.caption.24}
+\contentsline {figure}{\numberline {19}{\ignorespaces clasificaci\IeC {\'o}n de duplicaci\IeC {\'o}n de c\IeC {\'o}digo\relax }}{84}{figure.caption.25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {21}{\ignorespaces Actores\relax }}{136}{figure.caption.51}
-\contentsline {figure}{\numberline {22}{\ignorespaces Roles\relax }}{137}{figure.caption.52}
-\contentsline {figure}{\numberline {23}{\ignorespaces Punto de vista introductorio\relax }}{138}{figure.caption.53}
-\contentsline {figure}{\numberline {24}{\ignorespaces Punto de Vista General por Capas\relax }}{139}{figure.caption.54}
-\contentsline {figure}{\numberline {25}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{139}{figure.caption.55}
-\contentsline {figure}{\numberline {26}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{140}{figure.caption.56}
-\contentsline {figure}{\numberline {27}{\ignorespaces Buscador deportivo\relax }}{141}{figure.caption.57}
-\contentsline {figure}{\numberline {28}{\ignorespaces Consejos\relax }}{141}{figure.caption.58}
-\contentsline {figure}{\numberline {29}{\ignorespaces Periodismo\relax }}{141}{figure.caption.59}
-\contentsline {figure}{\numberline {30}{\ignorespaces Servicios\relax }}{142}{figure.caption.60}
-\contentsline {figure}{\numberline {31}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{142}{figure.caption.61}
-\contentsline {figure}{\numberline {32}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{143}{figure.caption.62}
-\contentsline {figure}{\numberline {33}{\ignorespaces Buscador de consejos deportivos\relax }}{144}{figure.caption.63}
-\contentsline {figure}{\numberline {34}{\ignorespaces Buscador deportivo\relax }}{144}{figure.caption.64}
-\contentsline {figure}{\numberline {35}{\ignorespaces Evaluador consejos de salud\relax }}{145}{figure.caption.65}
-\contentsline {figure}{\numberline {36}{\ignorespaces Generador de consejos deportivos\relax }}{145}{figure.caption.66}
-\contentsline {figure}{\numberline {37}{\ignorespaces Generador de contenidos de salud\relax }}{145}{figure.caption.67}
-\contentsline {figure}{\numberline {38}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{146}{figure.caption.68}
-\contentsline {figure}{\numberline {39}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{147}{figure.caption.69}
-\contentsline {figure}{\numberline {40}{\ignorespaces Buscador de consejos deportivos\relax }}{148}{figure.caption.70}
-\contentsline {figure}{\numberline {41}{\ignorespaces Buscador deportivo\relax }}{148}{figure.caption.71}
-\contentsline {figure}{\numberline {42}{\ignorespaces Evaluador consejos de salud\relax }}{149}{figure.caption.72}
-\contentsline {figure}{\numberline {43}{\ignorespaces Generador de consejos deportivos\relax }}{149}{figure.caption.73}
-\contentsline {figure}{\numberline {44}{\ignorespaces Generador de contenidos de salud\relax }}{150}{figure.caption.74}
-\contentsline {figure}{\numberline {45}{\ignorespaces Producto\relax }}{151}{figure.caption.75}
-\contentsline {figure}{\numberline {46}{\ignorespaces Punto de vista de infraestructura\relax }}{151}{figure.caption.76}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {47}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes\relax }}{154}{figure.caption.77}
-\contentsline {figure}{\numberline {48}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos\relax }}{155}{figure.caption.78}
-\contentsline {figure}{\numberline {49}{\ignorespaces M\IeC {\'o}dulo de estad\IeC {\'\i }sticas\relax }}{156}{figure.caption.79}
-\contentsline {figure}{\numberline {50}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{157}{figure.caption.80}
-\contentsline {figure}{\numberline {51}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{158}{figure.caption.81}
-\contentsline {figure}{\numberline {52}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{159}{figure.caption.82}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {53}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de eventos\relax }}{162}{figure.caption.83}
-\contentsline {figure}{\numberline {54}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de ubicaciones\relax }}{163}{figure.caption.84}
-\contentsline {figure}{\numberline {55}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de deportes\relax }}{164}{figure.caption.85}
-\contentsline {figure}{\numberline {56}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de estadisticas\relax }}{165}{figure.caption.86}
-\contentsline {figure}{\numberline {57}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n del conocimiento\relax }}{166}{figure.caption.87}
-\contentsline {figure}{\numberline {58}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de multimedia\relax }}{166}{figure.caption.88}
-\contentsline {figure}{\numberline {59}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de roles\relax }}{167}{figure.caption.89}
-\contentsline {figure}{\numberline {60}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de usuarios\relax }}{168}{figure.caption.90}
+\contentsline {figure}{\numberline {20}{\ignorespaces Distribuci\IeC {\'o}n de las diferentes actividades a realizar\relax }}{122}{figure.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {21}{\ignorespaces Actores\relax }}{138}{figure.caption.51}
+\contentsline {figure}{\numberline {22}{\ignorespaces Roles\relax }}{139}{figure.caption.52}
+\contentsline {figure}{\numberline {23}{\ignorespaces Punto de vista introductorio\relax }}{140}{figure.caption.53}
+\contentsline {figure}{\numberline {24}{\ignorespaces Punto de Vista General por Capas\relax }}{141}{figure.caption.54}
+\contentsline {figure}{\numberline {25}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{141}{figure.caption.55}
+\contentsline {figure}{\numberline {26}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{142}{figure.caption.56}
+\contentsline {figure}{\numberline {27}{\ignorespaces Buscador deportivo\relax }}{143}{figure.caption.57}
+\contentsline {figure}{\numberline {28}{\ignorespaces Consejos\relax }}{143}{figure.caption.58}
+\contentsline {figure}{\numberline {29}{\ignorespaces Periodismo\relax }}{143}{figure.caption.59}
+\contentsline {figure}{\numberline {30}{\ignorespaces Servicios\relax }}{144}{figure.caption.60}
+\contentsline {figure}{\numberline {31}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{144}{figure.caption.61}
+\contentsline {figure}{\numberline {32}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{145}{figure.caption.62}
+\contentsline {figure}{\numberline {33}{\ignorespaces Buscador de consejos deportivos\relax }}{146}{figure.caption.63}
+\contentsline {figure}{\numberline {34}{\ignorespaces Buscador deportivo\relax }}{146}{figure.caption.64}
+\contentsline {figure}{\numberline {35}{\ignorespaces Evaluador consejos de salud\relax }}{147}{figure.caption.65}
+\contentsline {figure}{\numberline {36}{\ignorespaces Generador de consejos deportivos\relax }}{147}{figure.caption.66}
+\contentsline {figure}{\numberline {37}{\ignorespaces Generador de contenidos de salud\relax }}{147}{figure.caption.67}
+\contentsline {figure}{\numberline {38}{\ignorespaces Organizaci\IeC {\'o}n de Eventos Deportivos\relax }}{148}{figure.caption.68}
+\contentsline {figure}{\numberline {39}{\ignorespaces Estad\IeC {\'\i }sticas Deportivas\relax }}{149}{figure.caption.69}
+\contentsline {figure}{\numberline {40}{\ignorespaces Buscador de consejos deportivos\relax }}{150}{figure.caption.70}
+\contentsline {figure}{\numberline {41}{\ignorespaces Buscador deportivo\relax }}{150}{figure.caption.71}
+\contentsline {figure}{\numberline {42}{\ignorespaces Evaluador consejos de salud\relax }}{151}{figure.caption.72}
+\contentsline {figure}{\numberline {43}{\ignorespaces Generador de consejos deportivos\relax }}{151}{figure.caption.73}
+\contentsline {figure}{\numberline {44}{\ignorespaces Generador de contenidos de salud\relax }}{152}{figure.caption.74}
+\contentsline {figure}{\numberline {45}{\ignorespaces Producto\relax }}{153}{figure.caption.75}
+\contentsline {figure}{\numberline {46}{\ignorespaces Punto de vista de infraestructura\relax }}{153}{figure.caption.76}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {61}{\ignorespaces Patrocinios Deportivos\relax }}{242}{figure.caption.118}
-\contentsline {figure}{\numberline {62}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{243}{figure.caption.119}
-\contentsline {figure}{\numberline {63}{\ignorespaces Entrenamiento Deportivo\relax }}{243}{figure.caption.120}
-\contentsline {figure}{\numberline {64}{\ignorespaces Patrocinios Deportivos\relax }}{244}{figure.caption.121}
-\contentsline {figure}{\numberline {65}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{245}{figure.caption.122}
-\contentsline {figure}{\numberline {66}{\ignorespaces Entrenamiento Deportivo\relax }}{246}{figure.caption.123}
-\contentsline {figure}{\numberline {67}{\ignorespaces Patrocinios Deportivos\relax }}{247}{figure.caption.124}
-\contentsline {figure}{\numberline {68}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{247}{figure.caption.125}
-\contentsline {figure}{\numberline {69}{\ignorespaces Entrenamiento Deportivo\relax }}{248}{figure.caption.126}
+\contentsline {figure}{\numberline {47}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes\relax }}{156}{figure.caption.77}
+\contentsline {figure}{\numberline {48}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos\relax }}{157}{figure.caption.78}
+\contentsline {figure}{\numberline {49}{\ignorespaces M\IeC {\'o}dulo de estad\IeC {\'\i }sticas\relax }}{158}{figure.caption.79}
+\contentsline {figure}{\numberline {50}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{159}{figure.caption.80}
+\contentsline {figure}{\numberline {51}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{160}{figure.caption.81}
+\contentsline {figure}{\numberline {52}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression\relax }}{161}{figure.caption.82}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {70}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores\relax }}{250}{figure.caption.127}
-\contentsline {figure}{\numberline {71}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos\relax }}{251}{figure.caption.128}
-\contentsline {figure}{\numberline {72}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios\relax }}{252}{figure.caption.129}
-\contentsline {figure}{\numberline {73}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos\relax }}{253}{figure.caption.130}
-\contentsline {figure}{\numberline {74}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos\relax }}{254}{figure.caption.131}
+\contentsline {figure}{\numberline {53}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de eventos\relax }}{164}{figure.caption.83}
+\contentsline {figure}{\numberline {54}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de ubicaciones\relax }}{165}{figure.caption.84}
+\contentsline {figure}{\numberline {55}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de deportes\relax }}{166}{figure.caption.85}
+\contentsline {figure}{\numberline {56}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de estadisticas\relax }}{167}{figure.caption.86}
+\contentsline {figure}{\numberline {57}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n del conocimiento\relax }}{168}{figure.caption.87}
+\contentsline {figure}{\numberline {58}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de multimedia\relax }}{168}{figure.caption.88}
+\contentsline {figure}{\numberline {59}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de roles\relax }}{169}{figure.caption.89}
+\contentsline {figure}{\numberline {60}{\ignorespaces Modelo de datos de gesti\IeC {\'o}n de usuarios\relax }}{170}{figure.caption.90}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {75}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 1\relax }}{478}{figure.caption.368}
-\contentsline {figure}{\numberline {76}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 2\relax }}{479}{figure.caption.369}
-\contentsline {figure}{\numberline {77}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 3\relax }}{480}{figure.caption.370}
-\contentsline {figure}{\numberline {78}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 4\relax }}{481}{figure.caption.371}
-\contentsline {figure}{\numberline {79}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 5\relax }}{482}{figure.caption.372}
-\contentsline {figure}{\numberline {80}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 6\relax }}{483}{figure.caption.373}
-\contentsline {figure}{\numberline {81}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 7\relax }}{484}{figure.caption.374}
-\contentsline {figure}{\numberline {82}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 8\relax }}{485}{figure.caption.375}
-\contentsline {figure}{\numberline {83}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 9\relax }}{486}{figure.caption.376}
-\contentsline {figure}{\numberline {84}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 10\relax }}{487}{figure.caption.377}
-\contentsline {figure}{\numberline {85}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 11\relax }}{488}{figure.caption.378}
-\contentsline {figure}{\numberline {86}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 12\relax }}{489}{figure.caption.379}
-\contentsline {figure}{\numberline {87}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 13\relax }}{490}{figure.caption.380}
-\contentsline {figure}{\numberline {88}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 14\relax }}{491}{figure.caption.381}
-\contentsline {figure}{\numberline {89}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 1\relax }}{493}{figure.caption.382}
-\contentsline {figure}{\numberline {90}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 2\relax }}{494}{figure.caption.383}
-\contentsline {figure}{\numberline {91}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 3\relax }}{495}{figure.caption.384}
-\contentsline {figure}{\numberline {92}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 1\relax }}{497}{figure.caption.385}
-\contentsline {figure}{\numberline {93}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 2\relax }}{498}{figure.caption.386}
-\contentsline {figure}{\numberline {94}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 3\relax }}{499}{figure.caption.387}
-\contentsline {figure}{\numberline {95}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 4\relax }}{500}{figure.caption.388}
-\contentsline {figure}{\numberline {96}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 5\relax }}{501}{figure.caption.389}
-\contentsline {figure}{\numberline {97}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 6\relax }}{502}{figure.caption.390}
-\contentsline {figure}{\numberline {98}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 7\relax }}{503}{figure.caption.391}
-\contentsline {figure}{\numberline {99}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 8\relax }}{504}{figure.caption.392}
-\contentsline {figure}{\numberline {100}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 9\relax }}{505}{figure.caption.393}
-\contentsline {figure}{\numberline {101}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 10\relax }}{506}{figure.caption.394}
-\contentsline {figure}{\numberline {102}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 1\relax }}{508}{figure.caption.395}
-\contentsline {figure}{\numberline {103}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 2\relax }}{509}{figure.caption.396}
-\contentsline {figure}{\numberline {104}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 3\relax }}{510}{figure.caption.397}
-\contentsline {figure}{\numberline {105}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 4\relax }}{511}{figure.caption.398}
-\contentsline {figure}{\numberline {106}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 5\relax }}{512}{figure.caption.399}
-\contentsline {figure}{\numberline {107}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 6\relax }}{513}{figure.caption.400}
-\contentsline {figure}{\numberline {108}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 7\relax }}{514}{figure.caption.401}
-\contentsline {figure}{\numberline {109}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 8\relax }}{515}{figure.caption.402}
-\contentsline {figure}{\numberline {110}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 9\relax }}{516}{figure.caption.403}
-\contentsline {figure}{\numberline {111}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 10\relax }}{517}{figure.caption.404}
-\contentsline {figure}{\numberline {112}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 11\relax }}{518}{figure.caption.405}
-\contentsline {figure}{\numberline {113}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 12\relax }}{519}{figure.caption.406}
-\contentsline {figure}{\numberline {114}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 13\relax }}{520}{figure.caption.407}
-\contentsline {figure}{\numberline {115}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 14\relax }}{521}{figure.caption.408}
-\contentsline {figure}{\numberline {116}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 15\relax }}{522}{figure.caption.409}
-\contentsline {figure}{\numberline {117}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 16\relax }}{523}{figure.caption.410}
-\contentsline {figure}{\numberline {118}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 17\relax }}{524}{figure.caption.411}
-\contentsline {figure}{\numberline {119}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 18\relax }}{525}{figure.caption.412}
-\contentsline {figure}{\numberline {120}{\ignorespaces Vista inicio\relax }}{527}{figure.caption.413}
-\contentsline {figure}{\numberline {121}{\ignorespaces Vista formulario actualizacion de informacion\relax }}{528}{figure.caption.414}
-\contentsline {figure}{\numberline {122}{\ignorespaces Vista formulario actualizacion de informacion confirmacion\relax }}{529}{figure.caption.415}
-\contentsline {figure}{\numberline {123}{\ignorespaces Vista formulario actualizacion de informacion de jugador\relax }}{530}{figure.caption.416}
-\contentsline {figure}{\numberline {124}{\ignorespaces Vista formulario actualizacion de informacion de jugador confirmacion\relax }}{531}{figure.caption.417}
-\contentsline {figure}{\numberline {125}{\ignorespaces Vista formulario agregar deporte\relax }}{532}{figure.caption.418}
-\contentsline {figure}{\numberline {126}{\ignorespaces Vista formulario agregar deporte confirmacion\relax }}{533}{figure.caption.419}
-\contentsline {figure}{\numberline {127}{\ignorespaces Vista formulario creacion usuario\relax }}{534}{figure.caption.420}
-\contentsline {figure}{\numberline {128}{\ignorespaces Vista formulario creacion usuario confirmacion\relax }}{535}{figure.caption.421}
-\contentsline {figure}{\numberline {129}{\ignorespaces Vista foto de perfil\relax }}{536}{figure.caption.422}
-\contentsline {figure}{\numberline {130}{\ignorespaces Vista foto de perfil confirmacion\relax }}{537}{figure.caption.423}
-\contentsline {figure}{\numberline {131}{\ignorespaces Vista pagina principal usuario\relax }}{538}{figure.caption.424}
-\contentsline {figure}{\numberline {132}{\ignorespaces Vista men administracion de perfil\relax }}{539}{figure.caption.425}
-\contentsline {figure}{\numberline {133}{\ignorespaces Vista listado de deportes practicados\relax }}{540}{figure.caption.426}
-\contentsline {figure}{\numberline {134}{\ignorespaces Vista eliminar deporte practicado\relax }}{541}{figure.caption.427}
-\contentsline {figure}{\numberline {135}{\ignorespaces Vista listado de patrocinios de usuario\relax }}{542}{figure.caption.428}
-\contentsline {figure}{\numberline {136}{\ignorespaces Vista busqueda de organizaciones\relax }}{543}{figure.caption.429}
-\contentsline {figure}{\numberline {137}{\ignorespaces Vista busqueda de organizaciones confirmacion solicitud\relax }}{544}{figure.caption.430}
-\contentsline {figure}{\numberline {138}{\ignorespaces Vista busqueda de organizaciones resultados\relax }}{545}{figure.caption.431}
-\contentsline {figure}{\numberline {139}{\ignorespaces Vista men lateral izquierdo usuario\relax }}{546}{figure.caption.432}
-\contentsline {figure}{\numberline {140}{\ignorespaces Vista cerrar cuenta\relax }}{547}{figure.caption.433}
-\contentsline {figure}{\numberline {141}{\ignorespaces Vista menu contenidos\relax }}{549}{figure.caption.434}
-\contentsline {figure}{\numberline {142}{\ignorespaces Vista menu gestion conocimiento\relax }}{550}{figure.caption.435}
-\contentsline {figure}{\numberline {143}{\ignorespaces Vista mis consejos\relax }}{551}{figure.caption.436}
-\contentsline {figure}{\numberline {144}{\ignorespaces Vista crear consejo\relax }}{552}{figure.caption.437}
-\contentsline {figure}{\numberline {145}{\ignorespaces Vista crear consejo confirmacion\relax }}{553}{figure.caption.438}
-\contentsline {figure}{\numberline {146}{\ignorespaces Vista buscar consejo\relax }}{554}{figure.caption.439}
-\contentsline {figure}{\numberline {147}{\ignorespaces Vista buscar consejo resultado\relax }}{555}{figure.caption.440}
-\contentsline {figure}{\numberline {148}{\ignorespaces Vista consejo desplegado\relax }}{556}{figure.caption.441}
-\contentsline {figure}{\numberline {149}{\ignorespaces Vista comentar consejo\relax }}{557}{figure.caption.442}
-\contentsline {figure}{\numberline {150}{\ignorespaces Vista comentar consejo confirmar\relax }}{558}{figure.caption.443}
-\contentsline {figure}{\numberline {151}{\ignorespaces Vista eliminar consejo\relax }}{559}{figure.caption.444}
-\contentsline {figure}{\numberline {152}{\ignorespaces Vista crear un nuevo rol\relax }}{561}{figure.caption.445}
-\contentsline {figure}{\numberline {153}{\ignorespaces Vista crear un nuevo rol confirmacion\relax }}{562}{figure.caption.446}
-\contentsline {figure}{\numberline {154}{\ignorespaces Vista dar de baja rol\relax }}{563}{figure.caption.447}
-\contentsline {figure}{\numberline {155}{\ignorespaces Vista lista roles existentes\relax }}{564}{figure.caption.448}
-\contentsline {figure}{\numberline {156}{\ignorespaces Vista men administracion roles\relax }}{565}{figure.caption.449}
-\contentsline {figure}{\numberline {157}{\ignorespaces Vista men lateral izquierdo administracion\relax }}{566}{figure.caption.450}
-\contentsline {figure}{\numberline {158}{\ignorespaces Vista listado noticias\relax }}{568}{figure.caption.451}
-\contentsline {figure}{\numberline {159}{\ignorespaces Vista menu lateral derecho fuentes\relax }}{569}{figure.caption.452}
-\contentsline {figure}{\numberline {160}{\ignorespaces Vista qu hay aqui\relax }}{571}{figure.caption.453}
-\contentsline {figure}{\numberline {161}{\ignorespaces Vista qu hay cerca de mi\relax }}{572}{figure.caption.454}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {61}{\ignorespaces Patrocinios Deportivos\relax }}{248}{figure.caption.119}
+\contentsline {figure}{\numberline {62}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{249}{figure.caption.120}
+\contentsline {figure}{\numberline {63}{\ignorespaces Entrenamiento Deportivo\relax }}{249}{figure.caption.121}
+\contentsline {figure}{\numberline {64}{\ignorespaces Patrocinios Deportivos\relax }}{250}{figure.caption.122}
+\contentsline {figure}{\numberline {65}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{251}{figure.caption.123}
+\contentsline {figure}{\numberline {66}{\ignorespaces Entrenamiento Deportivo\relax }}{252}{figure.caption.124}
+\contentsline {figure}{\numberline {67}{\ignorespaces Patrocinios Deportivos\relax }}{253}{figure.caption.125}
+\contentsline {figure}{\numberline {68}{\ignorespaces Formaci\IeC {\'o}n de Grupos Deportivos\relax }}{253}{figure.caption.126}
+\contentsline {figure}{\numberline {69}{\ignorespaces Entrenamiento Deportivo\relax }}{254}{figure.caption.127}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {70}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores\relax }}{256}{figure.caption.128}
+\contentsline {figure}{\numberline {71}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos\relax }}{257}{figure.caption.129}
+\contentsline {figure}{\numberline {72}{\ignorespaces M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios\relax }}{258}{figure.caption.130}
+\contentsline {figure}{\numberline {73}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos\relax }}{259}{figure.caption.131}
+\contentsline {figure}{\numberline {74}{\ignorespaces M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos\relax }}{260}{figure.caption.132}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {75}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 1\relax }}{484}{figure.caption.369}
+\contentsline {figure}{\numberline {76}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 2\relax }}{485}{figure.caption.370}
+\contentsline {figure}{\numberline {77}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 3\relax }}{486}{figure.caption.371}
+\contentsline {figure}{\numberline {78}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 4\relax }}{487}{figure.caption.372}
+\contentsline {figure}{\numberline {79}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 5\relax }}{488}{figure.caption.373}
+\contentsline {figure}{\numberline {80}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 6\relax }}{489}{figure.caption.374}
+\contentsline {figure}{\numberline {81}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 7\relax }}{490}{figure.caption.375}
+\contentsline {figure}{\numberline {82}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 8\relax }}{491}{figure.caption.376}
+\contentsline {figure}{\numberline {83}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 9\relax }}{492}{figure.caption.377}
+\contentsline {figure}{\numberline {84}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 10\relax }}{493}{figure.caption.378}
+\contentsline {figure}{\numberline {85}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 11\relax }}{494}{figure.caption.379}
+\contentsline {figure}{\numberline {86}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 12\relax }}{495}{figure.caption.380}
+\contentsline {figure}{\numberline {87}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 13\relax }}{496}{figure.caption.381}
+\contentsline {figure}{\numberline {88}{\ignorespaces Gesti\IeC {\'o}n de deportes - pantalla 14\relax }}{497}{figure.caption.382}
+\contentsline {figure}{\numberline {89}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 1\relax }}{499}{figure.caption.383}
+\contentsline {figure}{\numberline {90}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 2\relax }}{500}{figure.caption.384}
+\contentsline {figure}{\numberline {91}{\ignorespaces Gesti\IeC {\'o}n de jugadores - pantalla 3\relax }}{501}{figure.caption.385}
+\contentsline {figure}{\numberline {92}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 1\relax }}{503}{figure.caption.386}
+\contentsline {figure}{\numberline {93}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 2\relax }}{504}{figure.caption.387}
+\contentsline {figure}{\numberline {94}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 3\relax }}{505}{figure.caption.388}
+\contentsline {figure}{\numberline {95}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 4\relax }}{506}{figure.caption.389}
+\contentsline {figure}{\numberline {96}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 5\relax }}{507}{figure.caption.390}
+\contentsline {figure}{\numberline {97}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 6\relax }}{508}{figure.caption.391}
+\contentsline {figure}{\numberline {98}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 7\relax }}{509}{figure.caption.392}
+\contentsline {figure}{\numberline {99}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 8\relax }}{510}{figure.caption.393}
+\contentsline {figure}{\numberline {100}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 9\relax }}{511}{figure.caption.394}
+\contentsline {figure}{\numberline {101}{\ignorespaces Gesti\IeC {\'o}n de eventos - pantalla 10\relax }}{512}{figure.caption.395}
+\contentsline {figure}{\numberline {102}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 1\relax }}{514}{figure.caption.396}
+\contentsline {figure}{\numberline {103}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 2\relax }}{515}{figure.caption.397}
+\contentsline {figure}{\numberline {104}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 3\relax }}{516}{figure.caption.398}
+\contentsline {figure}{\numberline {105}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 4\relax }}{517}{figure.caption.399}
+\contentsline {figure}{\numberline {106}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 5\relax }}{518}{figure.caption.400}
+\contentsline {figure}{\numberline {107}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 6\relax }}{519}{figure.caption.401}
+\contentsline {figure}{\numberline {108}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 7\relax }}{520}{figure.caption.402}
+\contentsline {figure}{\numberline {109}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 8\relax }}{521}{figure.caption.403}
+\contentsline {figure}{\numberline {110}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 9\relax }}{522}{figure.caption.404}
+\contentsline {figure}{\numberline {111}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 10\relax }}{523}{figure.caption.405}
+\contentsline {figure}{\numberline {112}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 11\relax }}{524}{figure.caption.406}
+\contentsline {figure}{\numberline {113}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 12\relax }}{525}{figure.caption.407}
+\contentsline {figure}{\numberline {114}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 13\relax }}{526}{figure.caption.408}
+\contentsline {figure}{\numberline {115}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 14\relax }}{527}{figure.caption.409}
+\contentsline {figure}{\numberline {116}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 15\relax }}{528}{figure.caption.410}
+\contentsline {figure}{\numberline {117}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 16\relax }}{529}{figure.caption.411}
+\contentsline {figure}{\numberline {118}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 17\relax }}{530}{figure.caption.412}
+\contentsline {figure}{\numberline {119}{\ignorespaces Gesti\IeC {\'o}n self-sharing - pantalla 18\relax }}{531}{figure.caption.413}
+\contentsline {figure}{\numberline {120}{\ignorespaces Vista inicio\relax }}{533}{figure.caption.414}
+\contentsline {figure}{\numberline {121}{\ignorespaces Vista formulario actualizacion de informacion\relax }}{534}{figure.caption.415}
+\contentsline {figure}{\numberline {122}{\ignorespaces Vista formulario actualizacion de informacion confirmacion\relax }}{535}{figure.caption.416}
+\contentsline {figure}{\numberline {123}{\ignorespaces Vista formulario actualizacion de informacion de jugador\relax }}{536}{figure.caption.417}
+\contentsline {figure}{\numberline {124}{\ignorespaces Vista formulario actualizacion de informacion de jugador confirmacion\relax }}{537}{figure.caption.418}
+\contentsline {figure}{\numberline {125}{\ignorespaces Vista formulario agregar deporte\relax }}{538}{figure.caption.419}
+\contentsline {figure}{\numberline {126}{\ignorespaces Vista formulario agregar deporte confirmacion\relax }}{539}{figure.caption.420}
+\contentsline {figure}{\numberline {127}{\ignorespaces Vista formulario creacion usuario\relax }}{540}{figure.caption.421}
+\contentsline {figure}{\numberline {128}{\ignorespaces Vista formulario creacion usuario confirmacion\relax }}{541}{figure.caption.422}
+\contentsline {figure}{\numberline {129}{\ignorespaces Vista foto de perfil\relax }}{542}{figure.caption.423}
+\contentsline {figure}{\numberline {130}{\ignorespaces Vista foto de perfil confirmacion\relax }}{543}{figure.caption.424}
+\contentsline {figure}{\numberline {131}{\ignorespaces Vista pagina principal usuario\relax }}{544}{figure.caption.425}
+\contentsline {figure}{\numberline {132}{\ignorespaces Vista men administracion de perfil\relax }}{545}{figure.caption.426}
+\contentsline {figure}{\numberline {133}{\ignorespaces Vista listado de deportes practicados\relax }}{546}{figure.caption.427}
+\contentsline {figure}{\numberline {134}{\ignorespaces Vista eliminar deporte practicado\relax }}{547}{figure.caption.428}
+\contentsline {figure}{\numberline {135}{\ignorespaces Vista listado de patrocinios de usuario\relax }}{548}{figure.caption.429}
+\contentsline {figure}{\numberline {136}{\ignorespaces Vista busqueda de organizaciones\relax }}{549}{figure.caption.430}
+\contentsline {figure}{\numberline {137}{\ignorespaces Vista busqueda de organizaciones confirmacion solicitud\relax }}{550}{figure.caption.431}
+\contentsline {figure}{\numberline {138}{\ignorespaces Vista busqueda de organizaciones resultados\relax }}{551}{figure.caption.432}
+\contentsline {figure}{\numberline {139}{\ignorespaces Vista men lateral izquierdo usuario\relax }}{552}{figure.caption.433}
+\contentsline {figure}{\numberline {140}{\ignorespaces Vista cerrar cuenta\relax }}{553}{figure.caption.434}
+\contentsline {figure}{\numberline {141}{\ignorespaces Vista menu contenidos\relax }}{555}{figure.caption.435}
+\contentsline {figure}{\numberline {142}{\ignorespaces Vista menu gestion conocimiento\relax }}{556}{figure.caption.436}
+\contentsline {figure}{\numberline {143}{\ignorespaces Vista mis consejos\relax }}{557}{figure.caption.437}
+\contentsline {figure}{\numberline {144}{\ignorespaces Vista crear consejo\relax }}{558}{figure.caption.438}
+\contentsline {figure}{\numberline {145}{\ignorespaces Vista crear consejo confirmacion\relax }}{559}{figure.caption.439}
+\contentsline {figure}{\numberline {146}{\ignorespaces Vista buscar consejo\relax }}{560}{figure.caption.440}
+\contentsline {figure}{\numberline {147}{\ignorespaces Vista buscar consejo resultado\relax }}{561}{figure.caption.441}
+\contentsline {figure}{\numberline {148}{\ignorespaces Vista consejo desplegado\relax }}{562}{figure.caption.442}
+\contentsline {figure}{\numberline {149}{\ignorespaces Vista comentar consejo\relax }}{563}{figure.caption.443}
+\contentsline {figure}{\numberline {150}{\ignorespaces Vista comentar consejo confirmar\relax }}{564}{figure.caption.444}
+\contentsline {figure}{\numberline {151}{\ignorespaces Vista eliminar consejo\relax }}{565}{figure.caption.445}
+\contentsline {figure}{\numberline {152}{\ignorespaces Vista crear un nuevo rol\relax }}{567}{figure.caption.446}
+\contentsline {figure}{\numberline {153}{\ignorespaces Vista crear un nuevo rol confirmacion\relax }}{568}{figure.caption.447}
+\contentsline {figure}{\numberline {154}{\ignorespaces Vista dar de baja rol\relax }}{569}{figure.caption.448}
+\contentsline {figure}{\numberline {155}{\ignorespaces Vista lista roles existentes\relax }}{570}{figure.caption.449}
+\contentsline {figure}{\numberline {156}{\ignorespaces Vista men administracion roles\relax }}{571}{figure.caption.450}
+\contentsline {figure}{\numberline {157}{\ignorespaces Vista men lateral izquierdo administracion\relax }}{572}{figure.caption.451}
+\contentsline {figure}{\numberline {158}{\ignorespaces Vista listado noticias\relax }}{574}{figure.caption.452}
+\contentsline {figure}{\numberline {159}{\ignorespaces Vista menu lateral derecho fuentes\relax }}{575}{figure.caption.453}
+\contentsline {figure}{\numberline {160}{\ignorespaces Vista qu hay aqui\relax }}{577}{figure.caption.454}
+\contentsline {figure}{\numberline {161}{\ignorespaces Vista qu hay cerca de mi\relax }}{578}{figure.caption.455}
 \addvspace {10\p@ }

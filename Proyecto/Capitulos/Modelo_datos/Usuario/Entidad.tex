@@ -10,8 +10,10 @@
 \hline
 \multicolumn{4}{|c|}{\textbf{Entidad}} \\ \hline
 \textbf{Nombre} & \multicolumn{3}{l|}{E\_Usuario} \\ \hline
-\textbf{Descripcion} & \multicolumn{3}{l|}Representa a una persona u organización que tiene una cuenta en la aplicación.} \\ \hline
+\textbf{Descripcion} & \multicolumn{3}{l|}{Representa a una persona u organización que tiene una cuenta en la aplicación.} \\ \hline
 \multicolumn{4}{|c|}{\textbf{Atributos}} \\ \hline
+Nombre & Tipo & Longitud & Descripción \\
+			\hline
 usuario{[}P{]} & String & 20 &  Representa el nombre de usuario que va a utilizar para iniciar sesión en la aplicación. \\ \hline
 contraseña & String & 40 &  Se guarda la contraseña del usuario encriptada con el algoritmo SHA-1 \\ \hline
 E-mail{[}U{]} & String & 40 &  \\ \hline
@@ -43,4 +45,5 @@ estado & boolean & N/A &  Representa el estado del usuario (Activo/inactivo) \\ 
 \end{tabular}
 		} \\
 		\textbf{Fuente}: Autores
+		\end{center}
 	\end{table}

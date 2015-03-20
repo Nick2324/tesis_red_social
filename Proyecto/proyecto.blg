@@ -1,0 +1,77 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proyecto.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: bibliografia.bib
+Warning--entry type for "manual_referencia_costos" isn't style-file defined
+--line 5 of file bibliografia.bib
+Warning--entry type for "leg_int" isn't style-file defined
+--line 44 of file bibliografia.bib
+Warning--entry type for "judging" isn't style-file defined
+--line 55 of file bibliografia.bib
+Warning--entry type for "evolucion_web" isn't style-file defined
+--line 94 of file bibliografia.bib
+Warning--entry type for "scrum_guide" isn't style-file defined
+--line 115 of file bibliografia.bib
+Warning--entry type for "security_ws" isn't style-file defined
+--line 204 of file bibliografia.bib
+Warning--entry type for "archimate2" isn't style-file defined
+--line 214 of file bibliografia.bib
+Warning--entry type for "dependent_time_graphs" isn't style-file defined
+--line 245 of file bibliografia.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+Warning--No journal in dynamics
+Warning--No journal in measuring_maintainability
+Warning--No journal in quality_in_use
+Warning--No journal in usability_ux
+Warning--No journal in complexity_mesure
+You've used 24 entries,
+            6735 wiz_defined-function locations,
+            1336 strings with 13609 characters,
+and the built_in function-call counts, 41182 in all, are:
+= -- 5467
+> -- 322
+< -- 1750
++ -- 1719
+- -- 52
+* -- 2313
+:= -- 7047
+add.period$ -- 96
+call.type$ -- 24
+change.case$ -- 382
+chr.to.int$ -- 0
+cite$ -- 53
+duplicate$ -- 944
+empty$ -- 1670
+format.name$ -- 513
+if$ -- 8223
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 0
+newline$ -- 573
+num.names$ -- 192
+pop$ -- 626
+preamble$ -- 1
+purify$ -- 94
+quote$ -- 0
+skip$ -- 3287
+stack$ -- 0
+substring$ -- 1903
+swap$ -- 471
+text.length$ -- 48
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2496
+warning$ -- 5
+while$ -- 174
+width$ -- 0
+write$ -- 688
+(There were 13 warnings)
