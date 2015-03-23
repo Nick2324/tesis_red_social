@@ -1,0 +1,5 @@
+com\sna_deportivo\services\GestionUsuario.class
+com\sna_deportivo\pojo\Credenciales.class
+com\sna_deportivo\pojo\Usuario.class
+com\sna_deportivo\utils\Utils.class
+com\sna_deportivo\pojo\ResponseGenerico.class
