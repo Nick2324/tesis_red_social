@@ -610,3 +610,11 @@
 2015-03-23 13:17:35,269 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2015-03-23 13:17:35,310 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2015-03-23 13:17:35,447 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/src/test/resources
+2015-03-23 14:33:16,470 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-23 14:33:16,614 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-03-23 14:33:16,643 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-23 14:33:16,644 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO_EJB/src/test/resources
+2015-03-23 14:33:19,926 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-23 14:33:19,928 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-03-23 14:33:19,930 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-23 14:33:19,930 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/src/test/resources
