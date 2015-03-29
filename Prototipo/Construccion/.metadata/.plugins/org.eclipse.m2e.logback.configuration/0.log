@@ -618,3 +618,22 @@
 2015-03-23 14:33:19,928 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2015-03-23 14:33:19,930 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2015-03-23 14:33:19,930 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/src/test/resources
+2015-03-29 14:32:17,124 [Worker-4] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.EjbLifecycleMapping lifecycle mapping for MavenProject: com.sna_deportivo.model:SNA_DEPORTIVO_EJB:0.0.1-SNAPSHOT @ /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO_EJB/pom.xml.
+2015-03-29 14:32:19,266 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:19,343 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-03-29 14:32:19,354 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:19,355 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO_EJB/src/test/resources
+2015-03-29 14:32:20,567 [Worker-10] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.sna-deportivo.aserver:SNA_DEPORTIVO:0.0.1-SNAPSHOT @ /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/pom.xml.
+2015-03-29 14:32:22,369 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:22,371 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-03-29 14:32:22,373 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:22,374 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/src/test/resources
+2015-03-29 14:32:22,379 [Worker-10] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SNA_DEPORTIVO_WEB
+2015-03-29 14:32:22,380 [Worker-10] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SNA_DEPORTIVO_WEB
+2015-03-29 14:32:22,385 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2015-03-29 14:32:22,389 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-install-plugin:jar:2.4 is missing, no dependency information available
+2015-03-29 14:32:22,394 [Worker-10] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:24,124 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:24,137 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-03-29 14:32:24,139 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2015-03-29 14:32:24,140 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/Archivos/Documentos/IngenieriaDeSistemas/Tesis/tesis_red_social/Prototipo/Construccion/WebServices/SNA_DEPORTIVO/src/test/resources

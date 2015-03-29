@@ -7,16 +7,16 @@
  <paths>
   <path value="/home/nicolas/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.16/jersey-container-servlet-core-2.16.jar"/>
   <path value="/home/nicolas/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.1_spec/1.0.1.Final/jboss-annotations-api_1.1_spec-1.0.1.Final.jar"/>
-  <path value="/home/nicolas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
   <path value="/home/nicolas/.m2/repository/org/jboss/resteasy/resteasy-client/3.0.10.Final/resteasy-client-3.0.10.Final.jar"/>
+  <path value="/home/nicolas/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
   <path value="/home/nicolas/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b09/aopalliance-repackaged-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b09/hk2-locator-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b09/javax.inject-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar"/>
   <path value="/home/nicolas/.m2/repository/org/apache/httpcomponents/httpcore/4.2.5/httpcore-4.2.5.jar"/>
-  <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b09/hk2-api-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.16/jersey-guava-2.16.jar"/>
+  <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b09/hk2-api-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/org/jboss/resteasy/jaxrs-api/3.0.10.Final/jaxrs-api-3.0.10.Final.jar"/>
   <path value="/home/nicolas/.m2/repository/commons-io/commons-io/2.1/commons-io-2.1.jar"/>
   <path value="/home/nicolas/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
@@ -30,21 +30,62 @@
   <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b09/hk2-utils-2.4.0-b09.jar"/>
   <path value="/home/nicolas/.m2/repository/org/glassfish/jersey/core/jersey-common/2.16/jersey-common-2.16.jar"/>
-  <path value="/home/nicolas/.m2/repository/org/glassfish/jersey/core/jersey-server/2.16/jersey-server-2.16.jar"/>
   <path value="/home/nicolas/.m2/repository/org/apache/httpcomponents/httpclient/4.2.6/httpclient-4.2.6.jar"/>
+  <path value="/home/nicolas/.m2/repository/org/glassfish/jersey/core/jersey-server/2.16/jersey-server-2.16.jar"/>
   <path value="/home/nicolas/.m2/repository/com/owlike/genson/1.2/genson-1.2.jar"/>
   <path value="/home/nicolas/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar"/>
  </paths>
  <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core">
+   <linked-resource name="%1;%2;%3;" path="%0"/>
+   <linked-resource name="%5;%6;%7;%8;" path="%4"/>
+   <linked-resource name="%10;" path="%9"/>
+   <linked-resource name="%12;" path="%11"/>
+  </core>
   <el>
-   <linked-el length="14" name="%0" offset="456" path="%1"/>
-   <linked-el length="14" name="%0" offset="535" path="%1"/>
-   <linked-el length="21" name="%0" offset="859" path="%1"/>
+   <linked-el length="14" name="%13" offset="535" path="%14"/>
+   <linked-el length="14" name="%13" offset="456" path="%15"/>
+   <linked-el length="21" name="%13" offset="859" path="%14"/>
+   <linked-el length="14" name="%13" offset="535" path="%15"/>
+   <linked-el length="20" name="%13" offset="525" path="%16"/>
+   <linked-el length="20" name="%13" offset="440" path="%16"/>
+   <linked-el length="14" name="%13" offset="456" path="%14"/>
+   <linked-el length="21" name="%13" offset="859" path="%15"/>
   </el>
  </validation>
  <aliases>
-  <alias path="/SNA_DEPORTIVO_WEB/pom.xml" value="%1"/>
-  <alias path="basedir" value="%0"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/Utils.java" value="%5"/>
+  <alias
+   path="/SNA_DEPORTIVO_WEB/target/m2e-wtp/web-resources/META-INF/maven/com.sna-deportivo.aserver/SNA_DEPORTIVO/pom.xml" value="%14"/>
+  <alias
+   path="/SNA_DEPORTIVO_WEB/src/com/sna_deportivo/services/package-info.java" value="%9"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/package-info.java" value="%0"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/ResponseGenerico.java" value="%2"/>
+  <alias path="basedir" value="%13"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/Credenciales.java" value="%3"/>
+  <alias path="/SNA_DEPORTIVO_EJB/pom.xml" value="%16"/>
+  <alias
+   path="/SNA_DEPORTIVO_WEB/src/com/sna_deportivo/services/GestionUsuarioService.java" value="%10"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/Constantes.java" value="%6"/>
+  <alias path="/SNA_DEPORTIVO_WEB/pom.xml" value="%15"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/BDException.java" value="%7"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/CredentialsException.java" value="%8"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/Usuario.java" value="%1"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/services/GestionUsuario.java" value="%12"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/package-info.java" value="%4"/>
+  <alias
+   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/services/package-info.java" value="%11"/>
  </aliases>
  <includes/>
  <uris/>
