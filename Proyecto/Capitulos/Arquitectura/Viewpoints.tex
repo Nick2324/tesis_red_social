@@ -93,6 +93,8 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
   \end{center}
 \end{figure}
 
+En esta vista se puede observar como los roles de Grupo deportivo, Patrocinador deportivo, Coaching, Estadista deportivo, Gestor de encuentros deportivos, periodista deportivo y prestador de servicios deportivo están en capacidad de obtener y buscar información acerca de otros grupos deportivos que existan.
+
 \subsubsection{Consejos}
 
 \begin{figure}[!htb]
@@ -103,6 +105,8 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+Esta vista es importante ya que muestra claramente quienes son los productores de consejos (Consejero de salud, Consejero deportivo) y los consumidores (Grupo deportivo, Coaching).
 
 \subsubsection{Periodismo}
 
@@ -115,6 +119,8 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
   \end{center}
 \end{figure}
 
+Lo importante de resaltar de esta visa es que solo se contempla el proceso de publicación de noticias. No se tiene en cuenta el proceso de investigación que se realiza por parte de los periodistas ya que sale del alcance de este trabajo. 
+
 \subsubsection{Servicios}
 
 \begin{figure}[!htb]
@@ -125,6 +131,21 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+En esta vista se ve como interactuan los roles de Prestador de servicios y Consumidor de servicios. Tengase en cuenta que estos roles pueden ser asumidos por diferentes actores dentro de la aplicaicón, y la aplicación se limita a ser un medio de difusión de estos servicios. En ninguna circunstania la aplicación se encargará de proveer ningún servicio, ya que son ofrecidos por terceros.
+
+\subsubsection{Localizacion}
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BF_localizacion}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+En esta vista se ven las funciones a las que un actor deportivo (usuario de la aplicación) tiene acceso. Tambien cabe notar que estas funciones serán utilizadas por diferentes módulos de la aplicación (self-sharing, por ejemplo) para proveer mayor funcionalidad a los usuarios.
 
 \subsection{Business Process Viewpoints}
 
@@ -167,6 +188,8 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
   \end{center}
 \end{figure}
 
+En esta vista se puede ver el proceso que se sigue para la búsqueda de un consejo deportivo en la aplicación. Importante resaltar que el pultimo proceso (Comentar consejo) NO es obligatorio y en caso de que no se comente, no se dispara el evento de Retroalimentar consejo.
+
 \subsubsection{Buscador deportivo}
 
 \begin{figure}[!htb]
@@ -177,6 +200,8 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+En esta vista se muestra el proceso que se utiliza para la busqueda de grupos deportivos. Igual que en la vista anterior el proceso final (Contactar con grupo deportivo) es opcional.
 
 \subsubsection{Evaluador consejos de salud}
 
@@ -189,6 +214,8 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
   \end{center}
 \end{figure}
 
+Esta vista muestra el proceso de búsqueda y retroamlimentacion de consejos de salud. Nótese que este último proceso solo lo puede realizar un actor con rol de Consejero de salud, sin embargo, el proceso de búsqueda puede ser realizado por cualquier actor deportivo.
+
 \subsubsection{Generador de consejos deportivos}
 
 \begin{figure}[!htb]
@@ -200,6 +227,8 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
   \end{center}
 \end{figure}
 
+En esta vista se muestra el proceso que se lleva para generar un consejo deportivo. Se incluye el proceso de Buscar información para consejo pues es posible que se utilizen otros consejos como base para el nuevo, pero el proceso de investigación es externo a la aplicación.
+
 \subsubsection{Generador de contenidos de salud}
 
 \begin{figure}[!htb]
@@ -210,6 +239,21 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+En esta vista se muestra el proceso que se lleva para generar un contenido de salud. Se incluye el proceso de Buscar contenido de salud pues es posible que se utilizen otros consejos como base para el nuevo contenido, pero el proceso de investigación es externo a la aplicación.
+
+\subsubsection{Localizacion}
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BP_localizacion}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+En esta vista se muestran los procesos llevados a cabo para la gestión de localización. Se presentan 2 procesos, Registrar ubicación y Buscar ubicación y se muestra como el insumo para le proceso Buscar ubicación son las ubicaciones registradas por cualquier actor deportivo de la aplicación.
 
 \subsection{Application Usage Viewpoints}
 
@@ -252,6 +296,8 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
   \end{center}
 \end{figure}
 
+En esta vista, adicional a lo mostrado en la vista de proceso de negocio, se puede ver el componente encargado de de el manejo de los contenidos de la aplicación, compuesto por el componento de Manejo de contenidos deportivos y el componente de Manejo de contenidos de salud.
+
 \subsubsection{Buscador deportivo}
 
 \begin{figure}[!htb]
@@ -262,6 +308,8 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+De esta vista es importante resaltar la colaboración Contacto de grupos deportivos, encargada de orquestar el acceso a los componentes de Gestión de comunicación, Gestión de Geolocalización y Gestión de grupos deportivos para brindar la información necesaria en el contacto de grupos y la comunicación entre ellos.
 
 \subsubsection{Evaluador consejos de salud}
 
@@ -274,6 +322,8 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
   \end{center}
 \end{figure}
 
+En esta vista, adicional a lo mostrado en la vista de proceso de negocio, se puede ver el componente encargado de de el manejo de los contenidos de la aplicación, compuesto por el componento de Manejo de contenidos deportivos y el componente de Manejo de contenidos de salud.
+
 \subsubsection{Generador de consejos deportivos}
 
 \begin{figure}[!htb]
@@ -285,6 +335,8 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
   \end{center}
 \end{figure}
 
+En esta vista, adicional a lo mostrado en la vista de proceso de negocio, se puede ver el componente encargado de de el manejo de los contenidos de la aplicación, compuesto por el componento de Manejo de contenidos deportivos y el componente de Manejo de contenidos de salud.
+
 \subsubsection{Generador de contenidos de salud}
 
 \begin{figure}[!htb]
@@ -295,6 +347,21 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
+
+En esta vista, adicional a lo mostrado en la vista de proceso de negocio, se puede ver el componente encargado de de el manejo de los contenidos de la aplicación, compuesto por el componento de Manejo de contenidos deportivos y el componente de Manejo de contenidos de salud.
+
+\subsubsection{Localización}
+
+\begin{figure}[!htb]
+  \begin{center}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BP_localizacion}
+    \textbf{Fuente:}  Autores
+  \end{center}
+\end{figure}
+
+En esta vista se muestran los procesos llevados a cabo para la gestión de localización. Adicional a lo mostrado en la vista de proceso de negocio, se muestra el componente encargado del acceso a la base de localizaciónes de la aplicación. Estas localizaciónes son las que serán utilizadas en los demás módulos como ubicaciones, por ejemplo, para el registro de evento o lugares de práctica.
 
 \subsection{Product Viewpoint}
 
