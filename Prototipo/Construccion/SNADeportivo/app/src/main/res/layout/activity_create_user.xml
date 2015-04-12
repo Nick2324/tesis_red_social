@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="sportsallaround.snadeportivo.CreateUserActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_middle_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Middle name"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last name"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_e_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_password_confirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm password"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/new_user_birth_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birth date"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:gravity="center|left"/>
+
+        <Spinner
+            android:id="@+id/new_user_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User type"
+            android:gravity="center|left"/>
+
+        <Spinner
+            android:id="@+id/new_user_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/new_user_create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create user"/>
+</LinearLayout>
+

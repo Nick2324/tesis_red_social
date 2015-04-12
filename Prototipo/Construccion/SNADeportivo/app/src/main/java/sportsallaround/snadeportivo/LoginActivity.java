@@ -5,8 +5,8 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -26,32 +26,25 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
-import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+
+import sportsallaround.constants.Constants;
 
 
 /**
@@ -65,7 +58,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private UserLoginTask mAuthTask = null;
 
     // UI references.
-    private AutoCompleteTextView mEmailView;
+    private AutoCompleteTextView mUserView;
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
@@ -76,7 +69,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         setContentView(R.layout.activity_login);
 
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
+        mUserView = (AutoCompleteTextView) findViewById(R.id.user);
         populateAutoComplete();
 
         mPasswordView = (EditText) findViewById(R.id.password);
@@ -91,17 +84,21 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
+        Button mUserSignInButton = (Button) findViewById(R.id.user_sign_in_button);
+        mUserSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
             }
         });
 
-
-        mLoginFormView = findViewById(R.id.email_login_form);
+        mLoginFormView = findViewById(R.id.user_login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    public void createUser(View view){
+        Intent intent = new Intent(getApplicationContext(),CreateUserActivity.class);
+        startActivity(intent);
     }
 
     private void populateAutoComplete() {
@@ -120,11 +117,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
 
         // Reset errors.
-        mEmailView.setError(null);
+        mUserView.setError(null);
         mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
+        String email = mUserView.getText().toString();
         String password = StringToSHA1(mPasswordView.getText().toString());
 
         boolean cancel = false;
@@ -140,12 +137,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
+            mUserView.setError(getString(R.string.error_field_required));
+            focusView = mUserView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
+        } else if (!isUserValid(email)) {
+            mUserView.setError(getString(R.string.error_invalid_user));
+            focusView = mUserView;
             cancel = true;
         }
 
@@ -185,9 +182,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         return result;
     }
 
-    private boolean isEmailValid(String email) {
+    private boolean isUserValid(String user) {
         //TODO: Replace this with your own logic
-        return email.length()>4;
+        return user.length()>4;
     }
 
     private boolean isPasswordValid(String password) {
@@ -282,7 +279,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 new ArrayAdapter<>(LoginActivity.this,
                         android.R.layout.simple_dropdown_item_1line, emailAddressCollection);
 
-        mEmailView.setAdapter(adapter);
+        mUserView.setAdapter(adapter);
     }
 
     /**
@@ -291,7 +288,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        public static final String SERVICES_CEAR_USUARIO = "http://sna-deportivo.ddns.net:8080/SNA_DEPORTIVO_WEB/services/GestionUsuarioService/verificarUsuario";
         private ArrayList<BasicNameValuePair> credenciales;
 
         UserLoginTask(String email, String password) {
@@ -311,7 +307,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     parametros+=p.getName()+"="+ p.getValue()+"&";
                 }
                 parametros = parametros.substring(0, parametros.length()-1);
-                HttpGet httpGet = new HttpGet(SERVICES_CEAR_USUARIO + parametros);
+                HttpGet httpGet = new HttpGet(Constants.ROOT_URL + Constants.SERVICES_VERIFICAR_USUARIO + parametros);
                 HttpResponse response = httpClient.execute(httpGet);
                 String responseString = EntityUtils.toString(response.getEntity());
                 JSONObject responseData = new JSONObject(responseString);
