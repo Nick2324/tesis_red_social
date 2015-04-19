@@ -69,19 +69,6 @@ En la capa tecnológica puede observarse la arquitectura cliente/servidor sobre 
 
 En este punto de vista se puede observar el paso de información a través de los diferentes roles que interactúan en la creación y ejecución de un evento deportivo (patrocinadores, agrupaciones deportivas y gestores de encuentros deportivos) quienes intercambian la información de cada uno para ser patrocinado, para pedir participación o para participar en el evento deportivo.
 
-\subsubsection{Estadísticas Deportivas}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/estadisticasdeportivas.png}
-    \caption{Estadísticas Deportivas}
-    \label{fig:bf_estadisticas_deportivas}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-Sobre este punto de vista se puede observar que, en específico, entrenadores, patrocinadores deportivos y agrupaciones deportivas producen y utilizan estadísticas. Estas estadísticas son traducidas en calificaciones a los demás en, por ejemplo, el préstamo de servicios deportivos. En el punto de vista de proceso de negocio de estadísticas deportivas es más preciso ver cuales son los tipos de estadística con los cuales se trabaja.
-
 \subsubsection{Buscador Deportivo}
 
 \begin{figure}[!htb]
@@ -93,38 +80,20 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
   \end{center}
 \end{figure}
 
-\subsubsection{Consejos}
+En esta vista se puede observar como los roles de Grupo deportivo, Patrocinador deportivo, Coaching, Estadista deportivo, Gestor de encuentros deportivos, periodista deportivo y prestador de servicios deportivo están en capacidad de obtener y buscar información acerca de otros grupos deportivos que existan.
+
+\subsubsection{Localización}
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/Consejos.png}
-    \caption{Consejos}
-    \label{fig:BF_Consejos}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BF_localizacion}
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
 
-\subsubsection{Periodismo}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/Periodismo.png}
-    \caption{Periodismo}
-    \label{fig:BF_Periodismo}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-\subsubsection{Servicios}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_functions/Servicios.png}
-    \caption{Servicios}
-    \label{fig:BF_Servicios}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
+En esta vista se ven las funciones a las que un actor deportivo (usuario de la aplicación) tiene acceso. Tambien cabe notar que estas funciones serán utilizadas por diferentes módulos de la aplicación (self-sharing, por ejemplo) para proveer mayor funcionalidad a los usuarios.
 
 \subsection{Business Process Viewpoints}
 
@@ -141,32 +110,6 @@ Sobre este punto de vista se puede observar que, en específico, entrenadores, p
 
 En cuanto al proceso de organización de eventos deportivos, los autores han decidido dividir éste en tres procesos grandes: Planear el proyecto, ejecutar el proyecto y participación en el evento deportivo. Se puede ver también que un gestor de eventos deportivos puede trabajar a la par con un patrocinador deportivo para organizar el evento deportivo, con lo cual se puede discernir la conexión entre un patrocinio al evento deportivo y la organización del mismo. El primer gran proceso es soportado por servicios que proporcionan capacidades para tratar con los datos del evento; del segundo gran proceso se soportan algunos de los subprocesos pertenecientes a este, los que son considerados valiosos para el desarrollo del SNS como la invitación y notificación a participantes, así como también la clausura de un evento y la gestión de formatos deportivos; en el tercer gran proceso solo se tienen servicios para la petición a participar en el evento o la participación en el evento mismo.
 
-\subsubsection{Estadísticas Deportivas}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/estadisticasdeportivas.png}
-    \caption{Estadísticas Deportivas}
-    \label{fig:bp_estadisticas_deportivo}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-Esta vista se ha dedicado a expresar el proceso de generación de estadísticas. El diferenciador de este proceso es el tipo de estadísticas que se generan y, por ende, los objetos de negocio que estarán asociados a dichas estadísticas. Las estadísticas generadas serán las de servicios deportivos ofrecidos sobre la red social, sobre estadísticas deportivas de agrupaciones deportivas, sobre estadísticas geoespaciales teniendo en cuenta aspectos de niveles de juego, deportes practicados y eventos generados sobre dicha ubicación geoespacial, y estadísticas propias de un evento deportivo.
-
-En la vista, sobre la capa de aplicación, pueden verse los servicios que soportarán el proceso de generación de estadísticas.
-
-\subsubsection{Buscador de consejos deportivos}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/buscadorconsejosdeportivos.png}
-    \caption{Buscador de consejos deportivos}
-    \label{fig:BP_BuscadorConsejosDeportivos}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
 \subsubsection{Buscador deportivo}
 
 \begin{figure}[!htb]
@@ -178,38 +121,20 @@ En la vista, sobre la capa de aplicación, pueden verse los servicios que soport
   \end{center}
 \end{figure}
 
-\subsubsection{Evaluador consejos de salud}
+En esta vista se muestra el proceso que se utiliza para la busqueda de grupos deportivos. Igual que en la vista anterior el proceso final (Contactar con grupo deportivo) es opcional.
+
+\subsubsection{Localización}
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/evaluadorconsejossalud.png}
-    \caption{Evaluador consejos de salud}
-    \label{fig:BP_EvaluadorConsejosSalud}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BP_localizacion}
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
 
-\subsubsection{Generador de consejos deportivos}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/generadorconsejosdeportivos.png}
-    \caption{Generador de consejos deportivos}
-    \label{fig:BP_GeneradorConsejosDeportivos}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-\subsubsection{Generador de contenidos de salud}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/business_process/generadorcontenidossalud.png}
-    \caption{Generador de contenidos de salud}
-    \label{fig:BP_GeneradorContenidosSalud}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
+En esta vista se muestran los procesos llevados a cabo para la gestión de localización. Se presentan 2 procesos, Registrar ubicación y Buscar ubicación y se muestra como el insumo para le proceso Buscar ubicación son las ubicaciones registradas por cualquier actor deportivo de la aplicación.
 
 \subsection{Application Usage Viewpoints}
 
@@ -228,30 +153,6 @@ Para la organización de eventos deportivos, a parte de lo visto en el punto de 
 
 En soporte de los servicios mostrados, está el componente de gestión de eventos que, junto con la gestión de patrocinio, de geolocalización, de estadísticas y de usuarios.
 
-\subsubsection{Estadísticas Deportivas}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/estadisticasdeportivas.png}
-    \caption{Estadísticas Deportivas}
-    \label{fig:au_estadisticas_deportivas}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-A parte de lo expresado en el punto de vista de proceso de negocio de estadísticas deportivas, hay múltiples componentes que interactuarán por medio de los servicios que soportan debido al amplio espectro que ocupan las estadísticas sobre el SNS. A parte del componente de gestión de estadísticas, el de usuarios, el de eventos, el de servicios y el de geolocalización ocupan un lugar por ser estos evaluados por medio de estadísticas. Se encuentra también uno de manejo de contenidos que es usado para el compartir las estadísticas y comentar sobre ellas como se haría en la red social deportiva real.
-
-\subsubsection{Buscador de consejos deportivos}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/buscadorconsejosdeportivos.png}
-    \caption{Buscador de consejos deportivos}
-    \label{fig:BP_BuscadorConsejosDeportivos}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
 \subsubsection{Buscador deportivo}
 
 \begin{figure}[!htb]
@@ -263,38 +164,20 @@ A parte de lo expresado en el punto de vista de proceso de negocio de estadísti
   \end{center}
 \end{figure}
 
-\subsubsection{Evaluador consejos de salud}
+De esta vista es importante resaltar la colaboración Contacto de grupos deportivos, encargada de orquestar el acceso a los componentes de Gestión de comunicación, Gestión de Geolocalización y Gestión de grupos deportivos para brindar la información necesaria en el contacto de grupos y la comunicación entre ellos.
+
+\subsubsection{Localización}
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/evaluadorconsejossalud.png}
-    \caption{Evaluador consejos de salud}
-    \label{fig:BP_EvaluadorConsejosSalud}
+    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/localizacion.png}
+    \caption{Localizacion}
+    \label{fig:BP_localizacion}
     \textbf{Fuente:}  Autores
   \end{center}
 \end{figure}
 
-\subsubsection{Generador de consejos deportivos}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/generadorconsejosdeportivos.png}
-    \caption{Generador de consejos deportivos}
-    \label{fig:BP_GeneradorConsejosDeportivos}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
-
-\subsubsection{Generador de contenidos de salud}
-
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=11cm]{./imagenes/Archimate/vistas/application_usage/generadorcontenidossalud.png}
-    \caption{Generador de contenidos de salud}
-    \label{fig:BP_GeneradorContenidosSalud}
-    \textbf{Fuente:}  Autores
-  \end{center}
-\end{figure}
+En esta vista se muestran los procesos llevados a cabo para la gestión de localización. Adicional a lo mostrado en la vista de proceso de negocio, se muestra el componente encargado del acceso a la base de localizaciónes de la aplicación. Estas localizaciónes son las que serán utilizadas en los demás módulos como ubicaciones, por ejemplo, para el registro de evento o lugares de práctica.
 
 \subsection{Product Viewpoint}
 
