@@ -2,15 +2,14 @@ package com.sna_deportivo.services;
 
 import javax.security.auth.login.CredentialException;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.sna_deportivo.pojo.Credenciales;
 import com.sna_deportivo.pojo.ResponseGenerico;
 import com.sna_deportivo.pojo.Usuario;
 import com.sna_deportivo.utils.BDException;
@@ -25,21 +24,23 @@ public class GestionUsuarioService {
 	}
 	
 	@POST
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	@Produces(MediaType.TEXT_PLAIN)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearUsuario")
-	public String crearUsuario(@FormParam("user") String userName,@FormParam("password") String password){
-		//return servicio.crearUsuario();
-		return "Usuario: " + userName + " Contraseña: " + password;
+	public ResponseGenerico crearUsuario(Usuario usuario){
+		ResponseGenerico response = new ResponseGenerico();
+		response = servicio.crearUsuario();
+		return response;
 	}
 	
-	@GET
+	@POST
 	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("verificarUsuario")
-	public ResponseGenerico verificarUsuario(@QueryParam("user") String usuario, @QueryParam("pass") String pass){
+	public ResponseGenerico verificarUsuario(Credenciales credenciales){
 		ResponseGenerico response = new ResponseGenerico();
 		try {
-			response = servicio.verificarUsuario(usuario, pass);
+			response = servicio.verificarUsuario(credenciales.getUser(), credenciales.getPassword());
 		} catch (CredentialException e) {
 			response.setCaracterAceptacion("M");
 			response.setMensajeRespuesta("Credenciales incorrectas");

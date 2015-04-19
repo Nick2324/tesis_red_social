@@ -27,7 +27,7 @@ public class Utils {
 
 		return result.getStatus() == 200;
 	}
-
+	
 	public static ResteasyClient obtenerCliente() {
 		ResteasyProviderFactory factory = ResteasyProviderFactory.getInstance();
 		ResteasyProviderFactory.pushContext(javax.ws.rs.ext.Providers.class,
@@ -111,4 +111,5 @@ public class Utils {
 				jsonString.length()));
 		return propiedades.toArray(new String[propiedades.size()]);
 	}
+	
 }
