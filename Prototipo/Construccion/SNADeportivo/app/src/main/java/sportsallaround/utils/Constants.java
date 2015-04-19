@@ -1,4 +1,4 @@
-package sportsallaround.constants;
+package sportsallaround.utils;
 
 /**
  * Created by LuisFelipe on 12/04/2015.

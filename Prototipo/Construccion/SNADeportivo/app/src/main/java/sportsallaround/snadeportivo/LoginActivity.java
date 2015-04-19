@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
+import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -27,24 +28,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.BasicHttpContext;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-import sportsallaround.constants.Constants;
+import sportsallaround.utils.Constants;
+import sportsallaround.utils.Utils;
 
 
 /**
@@ -175,9 +176,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private String byteArrayToHexString(byte[] b) {
         String result = "";
-        for (int i=0; i < b.length; i++) {
+        for (byte aB : b) {
             result +=
-                    Integer.toString( ( b[i] & 0xff ) + 0x100, 16).substring( 1 );
+                    Integer.toString((aB & 0xff) + 0x100, 16).substring(1);
         }
         return result;
     }
@@ -269,7 +270,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         };
 
         int ADDRESS = 0;
-        int IS_PRIMARY = 1;
+        //int IS_PRIMARY = 1;
     }
 
 
@@ -288,36 +289,69 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        private ArrayList<BasicNameValuePair> credenciales;
+        private ContentValues credenciales;
 
-        UserLoginTask(String email, String password) {
-            credenciales = new ArrayList<>();
-            credenciales.add(new BasicNameValuePair("user", email));
-            credenciales.add(new BasicNameValuePair("pass", password));
+        UserLoginTask(String user, String password) {
+            credenciales = new ContentValues();
+            credenciales.put("user", user);
+            credenciales.put("pass", password);
         }
 
         @Override
         protected Boolean doInBackground(Void... params) {
+
+            InputStream is;
             boolean retorno = true;
-            HttpClient httpClient = new DefaultHttpClient();
-            HttpContext localContext = new BasicHttpContext();
+
+            //String parametros = "?";
+            JSONObject parametros = new JSONObject();
             try {
-                String parametros = "?";
-                for(NameValuePair p : credenciales){
-                    parametros+=p.getName()+"="+ p.getValue()+"&";
-                }
-                parametros = parametros.substring(0, parametros.length()-1);
-                HttpGet httpGet = new HttpGet(Constants.ROOT_URL + Constants.SERVICES_VERIFICAR_USUARIO + parametros);
-                HttpResponse response = httpClient.execute(httpGet);
-                String responseString = EntityUtils.toString(response.getEntity());
-                JSONObject responseData = new JSONObject(responseString);
-                if(responseData.getString("caracterAceptacion").equals("M"))
-                    retorno = false;
-                Log.i("SNA_DEPORTIVO", "Caracter aceptacion: " + responseData.getString("caracterAceptacion") +" - Mensaje de respuesta: " + responseData.getString("mensajeRespuesta") );
-            } catch (Exception e) {
-                Log.e("SNA_DEPORTIVO", "Error: " + e.getMessage());
+                parametros.put("user",credenciales.get("user"));
+                parametros.put("password",credenciales.get("pass"));
+            } catch (JSONException e) {
+                e.printStackTrace();
                 retorno = false;
             }
+
+            try {
+                URL completeUrl = new URL(Constants.ROOT_URL + Constants.SERVICES_VERIFICAR_USUARIO);
+
+                HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+
+                conn.setReadTimeout(10000 /* milliseconds */);
+                conn.setConnectTimeout(15000 /* milliseconds */);
+                conn.setRequestProperty("Content-Type", "application/json");
+                conn.setRequestProperty("Accept", "application/json");
+                conn.setRequestMethod("POST");
+
+                conn.setDoOutput(true);
+                conn.setDoInput(true);
+                // Starts the query
+
+                OutputStreamWriter wr= new OutputStreamWriter(conn.getOutputStream());
+                wr.write(parametros.toString());
+                wr.flush();
+
+                conn.connect();
+
+                is = conn.getInputStream();
+
+                JSONObject response = new JSONObject(Utils.convertStreamToString(is));
+                if(response.getString("caracterAceptacion").equals("M"))
+                    retorno = false;
+                Log.i("SNA_DEPORTIVO", "Caracter aceptacion: " + response.getString("caracterAceptacion") +" - Mensaje de respuesta: " + response.getString("mensajeRespuesta") );
+                conn.disconnect();
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+                retorno = false;
+            } catch (IOException e) {
+                e.printStackTrace();
+                retorno = false;
+            } catch (JSONException e) {
+                e.printStackTrace();
+                retorno = false;
+            }
+
             return retorno;
         }
 

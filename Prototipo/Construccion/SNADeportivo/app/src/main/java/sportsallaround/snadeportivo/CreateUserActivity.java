@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 
@@ -29,13 +30,13 @@ public class CreateUserActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
 
-        firstName = (AutoCompleteTextView) findViewById(R.id.new_user_first_name);
-        middleName = (AutoCompleteTextView) findViewById(R.id.new_user_middle_name);
-        lastName = (AutoCompleteTextView) findViewById(R.id.new_user_last_name);
+        firstName = (EditText) findViewById(R.id.new_user_first_name);
+        middleName = (EditText) findViewById(R.id.new_user_middle_name);
+        lastName = (EditText) findViewById(R.id.new_user_last_name);
         eMail = (AutoCompleteTextView) findViewById(R.id.new_user_e_mail);
-        password = (AutoCompleteTextView) findViewById(R.id.new_user_password);
-        passwordConfirmation = (AutoCompleteTextView) findViewById(R.id.new_user_password_confirmation);
-        birthDate = (AutoCompleteTextView) findViewById(R.id.new_user_birth_date);
+        password = (EditText) findViewById(R.id.new_user_password);
+        passwordConfirmation = (EditText) findViewById(R.id.new_user_password_confirmation);
+        birthDate = (EditText) findViewById(R.id.new_user_birth_date);
         gender = (Spinner) findViewById(R.id.new_user_gender);
         userType = (Spinner) findViewById(R.id.new_user_type);
 
