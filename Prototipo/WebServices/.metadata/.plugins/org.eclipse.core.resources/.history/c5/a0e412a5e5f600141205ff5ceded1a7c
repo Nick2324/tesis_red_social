@@ -1,0 +1,13 @@
+package com.sna_deportivo.pojo.evento;
+
+/**
+ * 
+ * @author nicolas
+ *
+ */
+
+public class Constantes {
+
+	private Constantes(){}
+	
+}

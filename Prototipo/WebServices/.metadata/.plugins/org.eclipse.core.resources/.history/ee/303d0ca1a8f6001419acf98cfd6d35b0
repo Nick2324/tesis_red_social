@@ -1,0 +1,13 @@
+package com.sna_deportivo.services.eventos.entity;
+
+import com.sna_deportivo.pojo.Evento;
+
+public class GestionEvento {
+
+	private Evento evento;
+	
+	public GestionEvento(){
+		
+	}
+	
+}

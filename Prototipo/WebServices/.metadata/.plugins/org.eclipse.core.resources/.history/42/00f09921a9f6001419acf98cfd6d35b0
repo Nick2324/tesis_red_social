@@ -1,0 +1,23 @@
+package com.sna_deportivo.services;
+
+import javax.jws.WebParam;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+
+import com.sna_deportivo.services.eventos.entity.GestionEvento;
+
+@Path("evento/")
+public class GestionEventoService {
+
+	private GestionEvento gestionEvento;
+	
+	public GestionEventoService(){
+		this.gestionEvento = new GestionEvento(); 
+	}
+	
+	@Path("{evento}")
+	public Evento getEvento(@PathParam("evento") Evento evento){
+		return gestionEvento.getEvento(evento);
+	}
+	
+}

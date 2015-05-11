@@ -1,0 +1,20 @@
+package com.sna_deportivo.services.eventos.entity;
+
+import com.sna_deportivo.pojo.Evento;
+import com.sna_deportivo.pojo.EventoDeportivo;
+
+public class GestionEvento {
+
+	private EventoDeportivo evento;
+	
+	public GestionEvento(){
+		this.evento = new EventoDeportivo();
+	}
+	
+	public Evento getEventoNombre(String nombre,String tipo){
+		Evento e = new EventoDeportivo();
+		e.setNombre(nombre);
+		return this.evento.getEvento(e);
+	}
+	
+}

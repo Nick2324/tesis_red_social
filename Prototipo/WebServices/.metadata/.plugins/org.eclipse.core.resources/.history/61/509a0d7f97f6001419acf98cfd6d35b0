@@ -1,0 +1,40 @@
+package com.sna_deportivo.pojo;
+
+import java.util.ArrayList;
+
+public class EventoDeportivo extends Evento{
+
+	private ArrayList<Evento> eventosInternos;
+	
+	public EventoDeportivo(){
+		eventosInternos = new ArrayList<Evento>();
+	}
+	
+	public Evento getEvento(Evento eventoBuscado){
+		
+		for(Evento e:eventosInternos){
+			if(e.comparar(eventoBuscado))
+				return e;
+		}
+		
+		return null;
+		
+	}
+	
+	public void setEvento(Evento e){
+		eventosInternos.add(e);
+	}
+	
+	public static void main(String[] args){
+		Evento e = new Evento();
+		e.setActivo(true);
+		e.setNombre("Prueba");
+		EventoDeportivo ed = new EventoDeportivo();
+		Evento e1 = new Evento();
+		e1.setActivo(true);
+		e1.setNombre("Prueba");
+		ed.setEvento(e);
+		System.out.println(ed.getEvento(e1).getNombre());
+	}
+	
+}

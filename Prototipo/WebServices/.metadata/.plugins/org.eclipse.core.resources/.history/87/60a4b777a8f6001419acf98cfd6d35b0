@@ -1,0 +1,15 @@
+package com.sna_deportivo.services;
+
+import javax.ws.rs.Path;
+
+import com.sna_deportivo.services.eventos.entity.GestionEvento;
+
+@Path("evento/")
+public class GestionEventoService {
+
+	private GestionEvento evento;
+	
+	@Path("{evento}")
+	public Evento getEvento()
+	
+}

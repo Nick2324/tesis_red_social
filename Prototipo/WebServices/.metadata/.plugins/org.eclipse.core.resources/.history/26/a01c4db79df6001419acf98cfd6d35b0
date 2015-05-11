@@ -1,0 +1,7 @@
+package com.sna_deportivo.pojo;
+
+public class PracticaDeportivaLibre extends Evento{
+	
+	public PracticaDeportivaLibre(){}
+	
+}

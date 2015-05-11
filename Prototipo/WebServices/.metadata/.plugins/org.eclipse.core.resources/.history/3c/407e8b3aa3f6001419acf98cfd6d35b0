@@ -1,0 +1,7 @@
+package com.sna_deportivo.services.eventos.entity;
+
+public class GestionEvento {
+
+	private Evento evento;
+	
+}

@@ -37,55 +37,16 @@
  </paths>
  <validation>
   <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core">
-   <linked-resource name="%1;%2;%3;" path="%0"/>
-   <linked-resource name="%5;%6;%7;%8;" path="%4"/>
-   <linked-resource name="%10;" path="%9"/>
-   <linked-resource name="%12;" path="%11"/>
-  </core>
+  <core validator-id="jboss.cdi.core"/>
   <el>
-   <linked-el length="14" name="%13" offset="456" path="%14"/>
-   <linked-el length="14" name="%13" offset="535" path="%15"/>
-   <linked-el length="21" name="%13" offset="859" path="%15"/>
-   <linked-el length="14" name="%13" offset="535" path="%14"/>
-   <linked-el length="20" name="%13" offset="525" path="%16"/>
-   <linked-el length="20" name="%13" offset="440" path="%16"/>
-   <linked-el length="14" name="%13" offset="456" path="%15"/>
-   <linked-el length="21" name="%13" offset="859" path="%14"/>
+   <linked-el length="14" name="%0" offset="456" path="%1"/>
+   <linked-el length="14" name="%0" offset="535" path="%1"/>
+   <linked-el length="21" name="%0" offset="859" path="%1"/>
   </el>
  </validation>
  <aliases>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/Utils.java" value="%5"/>
-  <alias
-   path="/SNA_DEPORTIVO_WEB/target/m2e-wtp/web-resources/META-INF/maven/com.sna-deportivo.aserver/SNA_DEPORTIVO/pom.xml" value="%15"/>
-  <alias
-   path="/SNA_DEPORTIVO_WEB/src/com/sna_deportivo/services/package-info.java" value="%9"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/package-info.java" value="%0"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/ResponseGenerico.java" value="%2"/>
-  <alias path="basedir" value="%13"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/Credenciales.java" value="%3"/>
-  <alias path="/SNA_DEPORTIVO_EJB/pom.xml" value="%16"/>
-  <alias
-   path="/SNA_DEPORTIVO_WEB/src/com/sna_deportivo/services/GestionUsuarioService.java" value="%10"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/Constantes.java" value="%6"/>
-  <alias path="/SNA_DEPORTIVO_WEB/pom.xml" value="%14"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/CredentialsException.java" value="%7"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/BDException.java" value="%8"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/pojo/Usuario.java" value="%1"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/services/GestionUsuario.java" value="%12"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/utils/package-info.java" value="%4"/>
-  <alias
-   path="/SNA_DEPORTIVO_EJB/ejbModule/com/sna_deportivo/services/package-info.java" value="%11"/>
+  <alias path="/SNA_DEPORTIVO_WEB/pom.xml" value="%1"/>
+  <alias path="basedir" value="%0"/>
  </aliases>
  <includes/>
  <uris/>

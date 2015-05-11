@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package com.sna_deportivo.utils;
+
+/**
+ * 
+ * Clase que contiene las constantes relacionadas a las relaciones en la
+ * base de datos
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ * @version 1.0
+ *
+ */
+public class Relaciones {
+	//************************Eventos deportivos**************************
+	
+	
+	private Relaciones(){}
+	
+}

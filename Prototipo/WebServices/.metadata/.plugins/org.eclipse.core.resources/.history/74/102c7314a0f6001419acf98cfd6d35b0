@@ -1,0 +1,201 @@
+package com.sna_deportivo.pojo;
+
+import java.util.Date;
+
+/**
+ * 
+ * Clase representante de eventos en la red social deportiva
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ * @version 1.0
+ *
+ */
+
+public abstract class Evento {
+
+	private String id;
+	private String nombre;
+	private String descripcion;
+	private Date fechaCreacion;
+	private Date fechaInicio;
+	private Date fechaFinal;
+	private Date horaInicio;
+	private Date horaFinal;
+	private boolean activo;
+	
+	/**
+	 * 
+	 * Constructor por defecto
+	 * 
+	 */
+	
+	public Evento(){}
+	
+	/**
+	 * 
+	 * Setter para horaFinal
+	 * 
+	 * @param horaFinal Hora final del evento
+	 */
+	
+	public void setHoraFinal(Date horaFinal){
+		this.horaFinal = horaFinal;
+	}
+	
+	/**
+	 * 
+	 * Setter de la hora inicial del evento
+	 * 
+	 * @param horaInicio Hora inicial del evento
+	 */
+	
+	public void setHoraInicio(Date horaInicio){
+		this.horaInicio = horaInicio;
+	}
+	
+	/**
+	 * 
+	 * Setter del estado activo del evento
+	 * 
+	 * @param activo Valor para el estado activo del evento
+	 */
+	
+	public void setActivo(boolean activo){
+		this.activo = activo;
+	}
+	
+	/**
+	 * 
+	 * Setter para la fecha final del evento
+	 * 
+	 * @param fechaFinal Fecha final del evento
+	 */
+	
+	public void setFechaFinal(Date fechaFinal){
+		this.fechaFinal = fechaFinal;
+	}
+	
+	/**
+	 * 
+	 * Setter para la fecha inicial del evento
+	 * 
+	 * @param fechaFinal Fecha inicial del evento
+	 */
+	
+	public void setFechaInicio(Date fechaInicio){
+		this.fechaInicio = fechaInicio;
+	}
+	
+	/**
+	 * 
+	 * @param fechaCreacion
+	 */
+	
+	public void setFechaCreacion(Date fechaCreacion){
+		this.fechaCreacion = fechaCreacion;
+	}
+	
+	public void setDescripcion(String descripcion){
+		this.descripcion = descripcion;
+	}
+	
+	public void setNombre(String nombre){
+		this.nombre = nombre;
+	}
+	
+	public void setId(String id){
+		this.id = id;
+	}
+	
+	public Date getHoraFinal(){
+		return this.horaFinal;
+	}
+	
+	public Date getHoraInicio(){
+		return this.horaInicio;
+	}
+	
+	public boolean getActivo(){
+		return this.activo;
+	}
+	
+	public Date getFechaFinal(){
+		return this.fechaFinal;
+	}
+	
+	public Date getFechaInicio(){
+		return this.fechaInicio;
+	}
+	
+	public Date getFechaCreacion(){
+		return this.fechaCreacion;
+	}
+	
+	public String getDescripcion(){
+		return this.descripcion;
+	}
+	
+	public String getNombre(){
+		return this.nombre;
+	}
+	
+	public String getId(){
+		return this.id;
+	}
+	
+	@Override
+	public boolean equals(Object obj){
+		boolean retorno = false;
+		if(obj instanceof Evento){
+			Evento e = (Evento)obj;
+			retorno = true;
+			if(e.getId() != null && retorno)
+			   if(e.getId() == this.id)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getDescripcion() != null && retorno)
+			   if(e.getDescripcion() == this.descripcion)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getFechaCreacion() != null && retorno)
+			   if(e.getFechaCreacion() == this.fechaCreacion)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getFechaInicio() != null && retorno)
+			   if(e.getFechaInicio() == this.fechaInicio)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getFechaFinal() != null && retorno)
+			   if(e.getFechaFinal() == this.fechaFinal)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getNombre() != null && retorno)
+			   if(e.getNombre() == this.nombre)
+				   retorno = true;
+			   else
+				   retorno = false;
+			if(e.getHoraInicio() != null && retorno)
+				if(e.getHoraInicio() == this.horaInicio)
+					retorno = true;
+				else
+					retorno = false;
+			if(e.getHoraFinal() != null && retorno)
+				if(e.getHoraFinal() == this.horaFinal)
+					retorno = true;
+				else
+				    retorno = false;
+			if(retorno && e.getActivo() == this.activo)
+				retorno = true;
+			else
+				retorno = false;
+		}
+		
+		return retorno;
+	}
+	
+}

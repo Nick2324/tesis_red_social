@@ -1,0 +1,16 @@
+package com.sna_deportivo.pojo;
+
+/**
+ * 
+ * Clase representante de las practicas libres de los deportistas de la red social
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ * @version 1.0
+ *
+ */
+
+public class PracticaDeportivaLibre extends Evento{
+	
+	public PracticaDeportivaLibre(){}
+	
+}

@@ -1,0 +1,31 @@
+package com.sna_deportivo.pojo.evento;
+
+/**
+ * 
+ * Crea los eventos transparentemente a los usuarios basado en un tipo
+ * de evento
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ * @version 1.0
+ *
+ */
+
+public class FactoryEventos {
+
+	/**
+	 * 
+	 */
+	
+	public FactoryEventos(){}
+	
+	public Evento creaEvento(String tipo){
+		
+		if(tipo == Constantes.EVENTO)
+			return new EventoDeportivo();
+		if(tipo == Constantes.PRACTICALIBRE)
+			return new PracticaDeportivaLibre();
+		return null;
+		
+	}
+	
+}

@@ -1,0 +1,18 @@
+package com.sna_deportivo.services.eventos.entity;
+
+import com.sna_deportivo.pojo.Evento;
+import com.sna_deportivo.pojo.EventoDeportivo;
+
+public class GestionEvento {
+
+	private Evento evento;
+	
+	public GestionEvento(){
+		this.evento = new EventoDeportivo();
+	}
+	
+	public Evento getEvento(Evento e){
+		return (EventoDeportivo)(this.evento).
+	}
+	
+}

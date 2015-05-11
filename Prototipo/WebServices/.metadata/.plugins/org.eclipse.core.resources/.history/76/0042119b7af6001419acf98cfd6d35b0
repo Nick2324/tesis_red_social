@@ -1,0 +1,102 @@
+package com.sna_deportivo.utils;
+
+/**
+ * 
+ * Clase que contiene el nombre de las entidades en la base de datos
+ * 
+ * @author Luis Felipe Gonzales Moreno
+ * @version 1.0
+ *
+ */
+
+public class Entidades {
+	
+	/**
+	 * 
+	 * Contiene el nombre de la entidad Usuario en la base de datos
+	 * 
+	 */
+	public static final String USUARIO = "E_Usuario";
+	/**
+	 * 
+	 * Contiene el nombre de la entidad Deporte en la base de datos
+	 * 
+	 */
+	public static final String DEPORTE = "E_Deporte";
+	/**
+	 * 
+	 * Contiene el nombre de la entidad Pais en la base de datos
+	 * 
+	 */
+	public static final String PAIS = "E_Pais";
+	/**
+	 * 
+	 * Contiene el nombre de la entidad Genero en la base de datos
+	 * 
+	 */
+	public static final String GENERO = "E_Genero";
+	/**
+	 * 
+	 * Contiene el nombre de la entidad Ciudad en la base de datos
+	 * 
+	 */
+	public static final String CIUDAD = "E_Ciudad";
+	/**
+	 * 
+	 * Hace referencia a la relación entre Ciudad, Genero y LugarEntrenamiento
+	 * con las posiciones exactas de otras entidades (eg. Deporte)
+	 * 
+	 */
+	public static final String UBICACION = "E_Ubicacion";
+	/**
+	 * 
+	 * Hace referencia a la relación entre una Ubicacion y un Deporte
+	 * 
+	 */
+	public static final String UBICACIONDEPORTE = "E_UbicacionDeporte";
+	/**
+	 * 
+	 * Hace referencia a la relación entre una Ubicacion y un EventoDeportivo
+	 * 
+	 */
+	public static final String DEPORTEEVENTO = "E_DeporteEvento";
+	/**
+	 * 
+	 * Hace referencia a la entidad EventoDeportivo en la base de datos
+	 * 
+	 */
+	public static final String EVENTODEPORTIVO = "E_EventoDeportivo";
+	/**
+	 * 
+	 * Hace referencia a la entidad ClasificacionDeporte en la base de datos
+	 * 
+	 */
+	public static final String CLASIFICACIONDEPORTE = "E_ClasificacionDeporte";
+	/**
+	 * 
+	 * Hace referencia a la entidad MovimientoTecnico en la base de datos
+	 * 
+	 */
+	public static final String MOVIMIENTOTECNICO = "MovimientoTecnico";
+	/**
+	 * 
+	 * Hace referencia a la entidad TecnicaEspecifica en la base de datos
+	 * 
+	 */
+	public static final String TECNICAESPECIFICA = "TecnicaEspecifica";
+	/**
+	 * 
+	 * Hace referencia a la relación entre una Ubicacion y un Deporte
+	 * 
+	 */
+	public static final String TACTICA = "E_Tactica";
+	public static final String POSICION = "E_Posicion";
+	public static final String ESTILOJUEGO = "E_EstiloJuego";
+	public static final String RECURSOEXTERNO = "E_RecursoExterno";
+	public static final String IMPLEMENTOSEGUNGENERO = "E_ImplementoSegunGenero";
+	public static final String IMPLEMENTO = "E_Implemento";
+	public static final String POSICIONUSUARIODEPORTE = "E_PosicionUsuarioDeporte";
+	
+	private Entidades(){}
+	
+}

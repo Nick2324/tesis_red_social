@@ -1,0 +1,7 @@
+!SESSION 
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 0 2015-05-03 14:48:30.023
+!MESSAGE Module SNA_DEPORTIVO_WEB on WildFlyL not yet fully deployed. Waiting...
+
+!ENTRY org.jboss.ide.eclipse.as.core 2 0 2015-05-03 14:48:50.389
+!MESSAGE Module SNA_DEPORTIVO_WEB on WildFlyL still not ready to be shown in browser. Aborting delay.

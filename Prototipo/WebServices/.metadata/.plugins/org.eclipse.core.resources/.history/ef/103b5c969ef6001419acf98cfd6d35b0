@@ -1,0 +1,45 @@
+package com.sna_deportivo.pojo;
+
+import java.util.ArrayList;
+
+/**
+ * 
+ * Composite para eventos. Puede alojar diferentes tipos de eventos deportivos
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ * @version 1.0
+ * @see Evento
+ * @see PracticaDeportivaLibre
+ *
+ */
+
+public class EventoDeportivo extends Evento{
+
+	private ArrayList<Evento> eventosInternos;
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 */
+	
+	public EventoDeportivo(){
+		eventosInternos = new ArrayList<Evento>();
+	}
+	
+	public Evento getEvento(Evento eventoBuscado){
+		
+		for(Evento e:eventosInternos){
+			if(e.equals(eventoBuscado))
+				return e;
+		}
+		
+		return null;
+		
+	}
+	
+	public void setEvento(Evento e){
+		eventosInternos.add(e);
+	}
+	
+}

@@ -1,0 +1,7 @@
+package com.sna_deportivo.pojo.evento;
+
+public class Constantes {
+
+	private Constantes(){}
+	
+}

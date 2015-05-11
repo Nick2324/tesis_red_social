@@ -1,0 +1,13 @@
+package com.sna_deportivo.pojo;
+
+/**
+ * 
+ * @author Nicolas Mauricio Garcia Garzon
+ *
+ */
+
+public class PracticaDeportivaLibre extends Evento{
+	
+	public PracticaDeportivaLibre(){}
+	
+}
