@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sna-deportivo.aserver</groupId>
-	<artifactId>SNA_DEPORTIVO</artifactId>
+	<artifactId>SNA_DEPORTIVO</artifactId> 
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>SNA_DEPORTIVO</name>
 	<build>
-		<sourceDirectory>${basedir}/src</sourceDirectory>
+		<sourceDirectory>${basedir}/src</sourceDirectory> 
 		<resources>
 			<resource>
 				<directory>${basedir}/src</directory>
@@ -56,6 +56,16 @@
 			<groupId>com.owlike</groupId>
 			<artifactId>genson</artifactId>
 			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<version>3.0.10.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jackson-provider</artifactId>
+			<version>3.0.10.Final</version>
 		</dependency>
 	</dependencies>
 </project>

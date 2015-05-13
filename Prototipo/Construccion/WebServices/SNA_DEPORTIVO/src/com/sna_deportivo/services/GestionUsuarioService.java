@@ -1,19 +1,19 @@
 package com.sna_deportivo.services;
 
-import javax.security.auth.login.CredentialException;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import com.sna_deportivo.pojo.Credenciales;
 import com.sna_deportivo.pojo.ResponseGenerico;
+import com.sna_deportivo.pojo.Rol;
 import com.sna_deportivo.pojo.Usuario;
 import com.sna_deportivo.utils.BDException;
+import com.sna_deportivo.utils.CredentialsException;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -25,22 +25,22 @@ public class GestionUsuarioService {
 	}
 	
 	@POST
-	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	@Produces(MediaType.TEXT_PLAIN)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearUsuario")
-	public String crearUsuario(@FormParam("user") String userName,@FormParam("password") String password){
-		//return servicio.crearUsuario();
-		return "Usuario: " + userName + " Contraseña: " + password;
+	public ResponseGenerico crearUsuario(Usuario user){
+		return servicio.crearUsuario(user);
 	}
 	
-	@GET
+	@POST
 	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("verificarUsuario")
-	public ResponseGenerico verificarUsuario(@QueryParam("user") String usuario, @QueryParam("pass") String pass){
+	public ResponseGenerico verificarUsuario(Credenciales credenciales){
 		ResponseGenerico response = new ResponseGenerico();
 		try {
-			response = servicio.verificarUsuario(usuario, pass);
-		} catch (CredentialException e) {
+			response = servicio.verificarUsuario(credenciales.getUser(), credenciales.getPassword());
+		} catch (CredentialsException e) {
 			response.setCaracterAceptacion("M");
 			response.setMensajeRespuesta("Credenciales incorrectas");
 		} catch (BDException e) {
@@ -49,12 +49,23 @@ public class GestionUsuarioService {
 		}
 		return response;
 	}
-	
 	@GET
 	@Path("{user}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Usuario datosUsuario(@PathParam("user") String user){
 		return servicio.datosUsuario(user);
 	}
-
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("obtenerRoles")
+	public Rol[] obtenerRoles(){
+		Rol[] resultado;
+		try {
+			resultado = servicio.obtenerRoles();
+		} catch (BDException e) {
+			resultado = null;
+		}
+		return resultado;
+	}
 }

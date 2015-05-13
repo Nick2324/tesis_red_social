@@ -1,9 +1,8 @@
 package com.sna_deportivo.utils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -12,7 +11,11 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
 
+import com.sna_deportivo.pojo.JsonObject;
+
 public class Utils {
+	
+	private static String PATH = "transaction/commit";
 
 	public static boolean servidorActivo() {
 
@@ -35,56 +38,81 @@ public class Utils {
 
 		return new ResteasyClientBuilder().build();
 	}
+	
+	public static Object[] EjecutarQuery(String query) throws BDException{
+		String stringRespuesta;
+		if (!Utils.servidorActivo())
+			throw new BDException();
+		else {
+			String payload = "{\"statements\":[{\"statement\":\"" + query
+					+ "\"}]}";
+			ResteasyClient cliente = Utils.obtenerCliente();
+			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
+					PATH);
+			Response result = target
+					.request()
+					.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8")
+					.post(Entity.entity(payload, MediaType.APPLICATION_JSON),
+							Response.class);
+			if (result.getStatus() == 200) {
+				stringRespuesta = result.readEntity(String.class);
+				JsonObject resultado = JsonStringToObject(stringRespuesta);
+				JsonObject results = (JsonObject) resultado.getPropiedades().get("results")[0];
+				JsonObject arregloData = (JsonObject) results.getPropiedades().get("arreglo")[0];
+				JsonObject data = (JsonObject) arregloData.getPropiedades().get("data")[0];
+				Object[] contenidoData = data.getPropiedades().get("arreglo");
+				return contenidoData;
+			} else
+				throw new BDException();
+		}
+	}
 
-	@SuppressWarnings("unchecked")
-	public static Map<String, Object> JSONStringToObject(String jsonString) {
-		Map<String, Object> objetoJson = new HashMap<String, Object>();
-		int posicionDivision;
-		String llave;
-		String valor;
-		String[] propiedades = obtenerPropiedades(jsonString);
-		String[] objetosArreglo;
-		for (String propiedad : propiedades) {
-			posicionDivision = propiedad.indexOf(':');
-			llave = propiedad.substring(0, posicionDivision);
-			valor = propiedad.substring(++posicionDivision, propiedad.length());
-			if (llave.startsWith("\"")) {
-				llave = llave.substring(1, llave.length() - 1);
-			}
-			// Es un objeto
-			if (valor.startsWith("{")) {
-				valor = valor.substring(1, valor.length() - 1);
-				objetoJson.put(llave, JSONStringToObject(valor));
-			}
-			// Es un arreglo
-			if (valor.startsWith("[")) {
-				boolean arregloDeValores = true;
-				valor = valor.substring(1, valor.length() - 1);
-				if (valor.startsWith("{")) {// No es un arreglo de valores
-					valor = valor.substring(1, valor.length() - 1);
-					arregloDeValores = false;
-				}
-				objetosArreglo = obtenerPropiedades(valor);
-				Map<String, Object>[] arregloObjetos = (Map<String, Object>[]) new Map[objetosArreglo.length];
-				int i = 0;
-				for (String objeto : objetosArreglo) {
-					if (arregloDeValores){
-						Map<String, Object> primitivo = new HashMap<String, Object>();
-						if(objeto.startsWith("\""))
-							primitivo.put("valor", objeto.substring(1, objeto.length()-1));
-						else
-							primitivo.put("valor", objeto);
-						arregloObjetos[i] = primitivo;
-						}
-					else
-						arregloObjetos[i] = JSONStringToObject(objeto);
-				}
-				objetoJson.put(llave, arregloObjetos);
-			} else {
-				objetoJson.put(llave, valor);
+	public static JsonObject JsonStringToObject(String json) {
+		JsonObject resultado = new JsonObject();
+		
+		if(json.startsWith("{")){//es un objeto
+			json = json.substring(1,json.length()-1);//eliminar corchete inicial y final del objeto
+			String[] propiedadesObjeto = obtenerPropiedades(json);
+			String llave, valor;
+			for (String propiedad : propiedadesObjeto){
+				llave = propiedad.substring(0, propiedad.indexOf(":"));
+				valor = propiedad.substring(propiedad.indexOf(":")+1);
+				if(llave.startsWith("\""))
+					llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
+				if(valor.startsWith("["))//es un arreglo
+					resultado.setPropiedad(llave, JsonStringToObject(valor));
+				else if (valor.startsWith("{"))//es un objeto
+					resultado.setPropiedad(llave, JsonStringToObject(valor));
+				else{ //es un valor
+					if(valor.startsWith("\""))
+						valor = valor.substring(1,valor.length()-1);//eliminar comilla inicial y final del valor
+					resultado.setPropiedad(llave, new String[]{valor});
+					}
 			}
 		}
-		return objetoJson;
+		else if(json.startsWith("[")){//es un arreglo
+			json = json.substring(1,json.length()-1);//eliminar corchete inicial y final del objeto
+			String[] elementosArreglo = obtenerPropiedades(json);
+			int posicion = 0;
+			Object[] arreglo = new Object[elementosArreglo.length];
+			for (String elemento : elementosArreglo){
+				if(elemento.startsWith("{")){//es un objeto
+					arreglo[posicion++] = JsonStringToObject(elemento);
+				}else if (elemento.startsWith("[")){//es un arreglo
+					arreglo[posicion++] = JsonStringToObject(elemento);
+				}else{//es un valor
+					if(elemento.startsWith("\""))
+						elemento = elemento.substring(1,elemento.length()-1);//eliminar comilla inicial y final del valor
+					arreglo[posicion++] = elemento;
+				}
+			}
+			resultado.setPropiedad("arreglo", arreglo);
+		}
+		else{//es un valor
+			json = json.substring(1,json.length()-1);//eliminar comilla inicial y final del objeto
+			resultado.setPropiedad("0", json);
+		}
+		return resultado;
 	}
 
 	private static String[] obtenerPropiedades(String jsonString) {

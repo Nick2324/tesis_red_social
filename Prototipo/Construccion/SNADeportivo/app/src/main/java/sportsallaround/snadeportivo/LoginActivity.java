@@ -47,6 +47,8 @@ import java.util.List;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.Utils;
 
+import static sportsallaround.utils.Utils.StringToSHA1;
+
 
 /**
  * A login screen that offers login via email/password.
@@ -158,29 +160,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
-    }
-
-    private String StringToSHA1(String cadena){
-        String result = "";
-        try {
-            byte[] cadenaBytes = cadena.getBytes("UTF-8");
-            MessageDigest converter = MessageDigest.getInstance("SHA1");
-            result = byteArrayToHexString(converter.digest(cadenaBytes));
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    private String byteArrayToHexString(byte[] b) {
-        String result = "";
-        for (byte aB : b) {
-            result +=
-                    Integer.toString((aB & 0xff) + 0x100, 16).substring(1);
-        }
-        return result;
     }
 
     private boolean isUserValid(String user) {

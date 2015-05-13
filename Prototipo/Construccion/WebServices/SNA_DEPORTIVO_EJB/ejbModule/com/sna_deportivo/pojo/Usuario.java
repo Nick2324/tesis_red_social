@@ -7,16 +7,16 @@ public class Usuario {
 	
 	private String primerNombre;
 	private String segundoNombre;
-	private String primerApellido;
-	private String segundoApellido;
+	private String apellidos;
 	private String usuario;
 	private String contrasena;
 	private String eMail;
 	private String numeroContacto;
 	private String fechaNacimiento;
 	private String fechaRegistro;
+	private String sexo;
 	private boolean estado;
-	
+	private String tipoUsuario;
 	public String getPrimerNombre() {
 		return primerNombre;
 	}
@@ -29,17 +29,11 @@ public class Usuario {
 	public void setSegundoNombre(String segundoNombre) {
 		this.segundoNombre = segundoNombre;
 	}
-	public String getPrimerApellido() {
-		return primerApellido;
+	public String getApellidos() {
+		return apellidos;
 	}
-	public void setPrimerApellido(String primerApellido) {
-		this.primerApellido = primerApellido;
-	}
-	public String getSegundoApellido() {
-		return segundoApellido;
-	}
-	public void setSegundoApellido(String segundoApellido) {
-		this.segundoApellido = segundoApellido;
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
 	}
 	public String getUsuario() {
 		return usuario;
@@ -77,11 +71,24 @@ public class Usuario {
 	public void setFechaRegistro(String fechaRegistro) {
 		this.fechaRegistro = fechaRegistro;
 	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
 	public boolean isEstado() {
 		return estado;
 	}
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+	
 
 }
