@@ -17,6 +17,7 @@ public class Usuario {
 	private String sexo;
 	private boolean estado;
 	private String tipoUsuario;
+	
 	public String getPrimerNombre() {
 		return primerNombre;
 	}
@@ -90,5 +91,21 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 	
+	@Override
+	public String toString() {
+		StringBuilder retorno = new StringBuilder("");
+		retorno.append("\"primerNombre\": \"" + primerNombre + "\",");
+		retorno.append("\"segundoNombre\": \"" + segundoNombre + "\",");
+		retorno.append("\"apellidos\": \"" + apellidos + "\",");
+		retorno.append("\"usuario\": \"" + usuario + "\",");
+		retorno.append("\"contrasena\": \"" + contrasena + "\",");
+		retorno.append("\"eMail\": \"" + eMail + "\",");
+		retorno.append("\"numeroContacto\": \"" + numeroContacto + "\",");
+		retorno.append("\"fechaNacimiento\": \"" + fechaNacimiento + "\",");
+		retorno.append("\"fechaRegistro\": \"" + fechaRegistro + "\",");
+		retorno.append("\"sexo\": \"" + sexo + "\",");
+		retorno.append("\"estado\": \"" + estado + "\"");
+		return retorno.toString();
+	}
 
 }

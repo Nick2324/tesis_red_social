@@ -1,5 +1,8 @@
 package com.sna_deportivo.services;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -29,7 +32,22 @@ public class GestionUsuarioService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearUsuario")
 	public ResponseGenerico crearUsuario(Usuario user){
-		return servicio.crearUsuario(user);
+		ResponseGenerico response = new ResponseGenerico();
+		try {
+			if(!servicio.existeUsuario(user)){
+				user.setEstado(true);
+				user.setFechaRegistro(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
+				response = servicio.crearUsuario(user);
+				}
+			else{
+				response.setCaracterAceptacion("M");
+				response.setMensajeRespuesta("Usuario ya existe");
+			}
+		} catch (BDException e) {
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Ha ocurrido un error con la base de datos.");
+		}
+		return response;
 	}
 	
 	@POST
