@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -112,7 +113,8 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
                 password.getText().toString(),
                 birthDate.getText().toString(),
                 gender.getSelectedItem().toString(),
-                userType.getSelectedItem().toString());
+                userType.getSelectedItem().toString(),
+                this);
         mAuthTask.execute((Void) null);
 
     }
@@ -210,6 +212,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
     public class CreateUserTask extends AsyncTask<Void, Void, Boolean> {
 
         private ContentValues datosUsuario;
+        private Context context;
 
         CreateUserTask(/*String userName,*/
                        String firstName,
@@ -219,10 +222,11 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
                        String password,
                        String birthDate,
                        String gender,
-                       String type) {
+                       String type,
+                       Context context) {
             datosUsuario = new ContentValues();
             datosUsuario.put("usuario", eMail);
-            datosUsuario.put("contrasena", password);
+            datosUsuario.put("contrasena", Utils.StringToSHA1(password));
             datosUsuario.put("primerNombre", firstName);
             datosUsuario.put("segundoNombre", middleName);
             datosUsuario.put("apellidos", lastName);
@@ -230,6 +234,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
             datosUsuario.put("sexo", gender);
             datosUsuario.put("tipoUsuario", type);
             datosUsuario.put("eMail",eMail);
+            this.context = context;
         }
 
         @Override
@@ -274,7 +279,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
             if (success) {
                 finish();
             } else {
-
+                Toast.makeText(context,"Un usuario con el mismo correo ya existe", Toast.LENGTH_LONG).show();
             }
         }
 

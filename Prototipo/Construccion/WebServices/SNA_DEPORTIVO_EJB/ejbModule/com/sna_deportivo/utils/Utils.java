@@ -3,6 +3,7 @@ package com.sna_deportivo.utils;
 import java.util.ArrayList;
 
 import javax.ws.rs.client.Entity;
+import javax.ws.rs.client.Invocation.Builder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -64,6 +65,30 @@ public class Utils {
 				return contenidoData;
 			} else
 				throw new BDException();
+		}
+	}
+	
+	public static String EjecutarPost(String ruta, String extras, String metodo) throws BDException{
+		if (!Utils.servidorActivo())
+			throw new BDException();
+		else {
+			ResteasyClient cliente = Utils.obtenerCliente();
+			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
+					ruta);
+			Builder resultBuilder = target
+					.request()
+					.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
+			if(extras.equals(""))
+				extras = null;
+			Response result;
+			if(metodo.toLowerCase().equals("post"))
+				result = resultBuilder.post(extras != null ? Entity.entity(extras, MediaType.APPLICATION_JSON):null,Response.class);
+			else
+				result = resultBuilder.put(extras != null ? Entity.entity(extras, MediaType.APPLICATION_JSON):null,Response.class);
+			if (result.getStatus() == 201) {
+				return result.getHeaderString("Location");
+			} else
+				return result.getStatus() + "";
 		}
 	}
 
