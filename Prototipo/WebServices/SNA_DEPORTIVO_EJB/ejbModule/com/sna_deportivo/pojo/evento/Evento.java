@@ -2,6 +2,8 @@ package com.sna_deportivo.pojo.evento;
 
 import java.util.Date;
 
+import com.sna_deportivo.utils.CampoBD;
+
 /**
  * 
  * Clase representante de eventos en la red social deportiva
@@ -13,22 +15,36 @@ import java.util.Date;
 
 public abstract class Evento {
 
+	@CampoBD
 	private String id;
+	@CampoBD
 	private String nombre;
+	@CampoBD
 	private String descripcion;
+	@CampoBD
 	private Date fechaCreacion;
+	@CampoBD
 	private Date fechaInicio;
+	@CampoBD
 	private Date fechaFinal;
+	@CampoBD
 	private Date horaInicio;
+	@CampoBD
 	private Date horaFinal;
-	private boolean activo;
-	
+	@CampoBD
+	private Integer numMaxParticipantes;
+	@CampoBD
+	private Integer rangoMaxEdad;
+	@CampoBD
+	private Integer rangoMinEdad;
+	@CampoBD
+	private Boolean activo;
+
 	/**
 	 * 
 	 * Constructor por defecto
 	 * 
 	 */
-	
 	public Evento(){}
 	
 	/**
@@ -37,7 +53,6 @@ public abstract class Evento {
 	 * 
 	 * @param horaFinal Hora final del evento
 	 */
-	
 	public void setHoraFinal(Date horaFinal){
 		this.horaFinal = horaFinal;
 	}
@@ -48,7 +63,6 @@ public abstract class Evento {
 	 * 
 	 * @param horaInicio Hora inicial del evento
 	 */
-	
 	public void setHoraInicio(Date horaInicio){
 		this.horaInicio = horaInicio;
 	}
@@ -59,7 +73,6 @@ public abstract class Evento {
 	 * 
 	 * @param activo Valor para el estado activo del evento
 	 */
-	
 	public void setActivo(boolean activo){
 		this.activo = activo;
 	}
@@ -70,7 +83,6 @@ public abstract class Evento {
 	 * 
 	 * @param fechaFinal Fecha final del evento
 	 */
-	
 	public void setFechaFinal(Date fechaFinal){
 		this.fechaFinal = fechaFinal;
 	}
@@ -81,7 +93,6 @@ public abstract class Evento {
 	 * 
 	 * @param fechaInicio Fecha inicial del evento
 	 */
-	
 	public void setFechaInicio(Date fechaInicio){
 		this.fechaInicio = fechaInicio;
 	}
@@ -92,7 +103,6 @@ public abstract class Evento {
 	 * 
 	 * @param fechaCreacion Fecha de creacion del evento
 	 */
-	
 	public void setFechaCreacion(Date fechaCreacion){
 		this.fechaCreacion = fechaCreacion;
 	}
@@ -103,7 +113,6 @@ public abstract class Evento {
 	 * 
 	 * @param descripcion Descripcion del evento
 	 */
-	
 	public void setDescripcion(String descripcion){
 		this.descripcion = descripcion;
 	}
@@ -114,7 +123,6 @@ public abstract class Evento {
 	 * 
 	 * @param nombre Nombre del evento
 	 */
-	
 	public void setNombre(String nombre){
 		this.nombre = nombre;
 	}
@@ -125,9 +133,56 @@ public abstract class Evento {
 	 * 
 	 * @param id Identificador del evento
 	 */
-	
 	public void setId(String id){
 		this.id = id;
+	}
+	
+	/**
+	 * Pone el numero maximo de participantes del evento
+	 * @param numMaxParticipantes Numero maximo de participantes
+	 */
+	public void setNumMaxParticipantes(int numMaxParticipantes){
+		this.numMaxParticipantes = numMaxParticipantes;
+	}
+	
+	/**
+	 * Pone el rango minimo de edad del evento
+	 * @param rangoMinEdad rango minimo de edad
+	 */
+	public void setRangoMinEdad(int rangoMinEdad){
+		this.rangoMinEdad = rangoMinEdad;
+	}
+	
+	/**
+	 * Pone el rango maximo de edad del evento
+	 * @param rangoMaxEdad rango maximo de edad
+	 */
+	public void setRangoMaxEdad(int rangoMaxEdad){
+		this.rangoMaxEdad = rangoMaxEdad;
+	}
+	
+	/**
+	 * Retorna el numero maximo de participantes del evento
+	 * @return Numero maximo de participantes
+	 */
+	public Integer getNumMaxParticipantes(){
+		return this.numMaxParticipantes;
+	}
+	
+	/**
+	 * Retorna el rango maximo de edad del evento
+	 * @return Rango maximo de edad
+	 */
+	public Integer getRangoMaxEdad(){
+		return this.rangoMaxEdad;
+	}
+	
+	/**
+	 * Retorna el rango minimo de edad del evento
+	 * @return Rango minimo de edad
+	 */
+	public Integer getRangoMinEdad(){
+		return this.rangoMinEdad;
 	}
 	
 	/**
@@ -136,7 +191,6 @@ public abstract class Evento {
 	 * 
 	 * @return Hora final del evento
 	 */
-	
 	public Date getHoraFinal(){
 		return this.horaFinal;
 	}
@@ -159,7 +213,7 @@ public abstract class Evento {
 	 * @return Estado activo del evento
 	 */
 	
-	public boolean getActivo(){
+	public Boolean getActivo(){
 		return this.activo;
 	}
 	
@@ -285,13 +339,49 @@ public abstract class Evento {
 					retorno = true;
 				else
 				    retorno = false;
-			if(retorno && e.getActivo() == this.activo)
-				retorno = true;
-			else
-				retorno = false;
+			if(retorno && e.getActivo() != null)
+				if (e.getActivo() == this.activo)
+					retorno = true;
+				else
+					retorno = false;
+			if(retorno && e.getRangoMaxEdad() != null)
+				if (e.getRangoMaxEdad() == this.rangoMaxEdad)
+					retorno = true;
+				else
+					retorno = false;
+			if(retorno && e.getRangoMinEdad() != null)
+				if (e.getRangoMinEdad() == this.rangoMinEdad)
+					retorno = true;
+				else
+					retorno = false;
+			if(retorno && e.getRangoMaxEdad() != null)
+				if (e.getRangoMaxEdad() == this.rangoMaxEdad)
+					retorno = true;
+				else
+					retorno = false;
 		}
 		
 		return retorno;
+	}
+	
+	/**
+	 * Retorna JSON del Evento
+	 * @return String JSON del Evento
+	 */
+	@Override
+	public String toString(){
+		return "{id:"+this.id+","+
+				"nombre:"+this.nombre+","+
+				"descripcion:"+this.descripcion+","+
+				"fechaCreacion:"+this.fechaCreacion+","+
+				"fechaInicio:"+this.fechaInicio+","+
+				"fechaFinal:"+this.fechaFinal+","+
+				"horaInicio:"+this.horaInicio+","+
+				"horaFinal:"+this.horaFinal+","+
+				"numMaxParticipantes:"+this.numMaxParticipantes+","+
+				"rangoMaxEdad:"+this.rangoMaxEdad+","+
+				"rangoMinEdad:"+this.rangoMinEdad+","+
+				"activo:"+this.activo+"}";
 	}
 	
 }

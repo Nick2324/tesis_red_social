@@ -11,7 +11,7 @@ package com.sna_deportivo.pojo.evento;
  *
  */
 
-public class PracticaDeportivaLibre extends Evento{
+public class PracticaDeportiva extends Evento{
 	
 	/**
 	 * 
@@ -19,6 +19,8 @@ public class PracticaDeportivaLibre extends Evento{
 	 * 
 	 */
 	
-	public PracticaDeportivaLibre(){}
+	public PracticaDeportiva(){
+		super();
+	}
 	
 }

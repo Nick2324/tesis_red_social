@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Nicolas Mauricio Garcia Garzon
  * @version 1.0
  * @see Evento
- * @see PracticaDeportivaLibre
+ * @see PracticaDeportiva
  *
  */
 
@@ -24,6 +24,7 @@ public class EventoDeportivo extends Evento{
 	 */
 	
 	public EventoDeportivo(){
+		super();
 		eventosInternos = new ArrayList<Evento>();
 	}
 	
