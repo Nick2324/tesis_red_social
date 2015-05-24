@@ -1,0 +1,166 @@
+//**********************************************ENTIDADES**************************************************
+//*********************************************************************************************************
+
+//*************************************CREACION DE USUARIOS************************************************
+CREATE (usuario1:E_Usuario{usuario:"nick2324",contrasena:"123456",email:"nicolas.2324@gmail.com",numeroContacto:"3002847990",primerNombre:"Nicolas",segundoNombre:"Mauricio",primerApellido:"Garcia",segundoApellido:"Garzon",fechaNacimiento:"18/08/1992",fechaRegistro:"23/05/2015",estado:true})
+CREATE (usuario2:E_Usuario{usuario:"razielblood",contrasena:"789012",email:"luisfgonzalesg@gmail.com",numeroContacto:"3005555555",primerNombre:"Luis",segundoNombre:"Felipe",primerApellido:"Gonzales",segundoApellido:"Moreno",fechaNacimiento:"31/10/1991",fechaRegistro:"23/05/2015",estado:true})
+//*************************************CREACION UBICACIONES************************************************
+CREATE (pais:E_Pais{id:1,nombre:"Colombia",coordenadas:""})
+CREATE (ciudad:E_Ciudad{id:1,nombre:"Bogota",zipcode:"1101000",coordenadas:""})
+CREATE (lugarpractica:E_LugarPractica{id:1,nombre:"Unidad deportiva el salitre",descripcion:"Complejo deportivo donde se encuentran las ligas deportivas de Bogotá",coordenada:""})
+CREATE (ubicaciondeporte:E_UbicacionDeporte{id:1,ubicacionActiva:true})
+CREATE (ubicacion:E_Ubicacion{id:1})
+CREATE (ubicacionusuario:E_UbicacionUsuario{id:1,usuarioEnLugar:false,marcadoFavorito:true,frecuente:true})
+//************************************CREACION DE DEPORTES*************************************************
+CREATE (deporte1:E_Deporte{id:1,nombre:"Rugby",descripcion:"Desde los orígenes mismos del rugby y el fútbol actual, a mediados del siglo XIX, se definieron como el álter ego del otro: fuerza contra habilidad; juego limpio contra juego desleal, etc.4 Un antiguo dicho británico dice que \"el fútbol es un juego de caballeros jugado por villanos y el rugby es un juego de villanos jugado por caballeros\".5 En el rugby es característico el respeto por las reglas que deben practicar tanto los jugadores como el público y las decisiones del árbitro rara vez son discutidas por los jugadores. Además, se fomenta la sociabilidad, dándose generalmente entre compañeros de equipos y oponentes una cordial reunión después de los partidos, denominada tercer tiempo, junto con los árbitros, entrenadores y parte del público, para hablar acerca del partido. Este apelativo se ha hecho extensivo a los medios donde se analiza este deporte.",fechaCreacion:"XIX",historia:"El rugby moderno, al igual que el fútbol moderno, es una evolución directa del fútbol medieval británico, también llamado en español fútbol de carnaval (en inglés \"mob football\", equivalente a fútbol multitudinario), un juego de pelota violento y reiteradamente prohibido, de reglas sumamente variables, que se practicaba popularmente en las Islas Británicas durante el medievo europeo, en el que se usaban tanto las manos como los pies, así como la fuerza para detener a los competidores.",esOlimpico:false})
+CREATE (deporte2:E_Deporte{id:2,nombre:"Tenis",descripcion:"El tenis es un deporte de raqueta que se practica sobre una cancha rectangular delimitada por líneas y dividida por una red.2 Se disputa entre dos jugadores (individuales) o entre dos parejas (dobles). El objetivo del juego es lanzar una pelota golpeándola con la raqueta de modo que bote dentro del campo del rival procurando que éste no pueda devolverla",fechaCreacion:"XVIII",historia:"Las primeras referencias del tenis tienen lugar en Francia, nombrado «Jeu de paume» dado que al principio se golpeaba la pelota con la mano. Más tarde se empezaron a utilizar raquetas. El tenis original se jugaba en pistas de hierba natural. Se originó en Europa a finales del siglo XVIII[cita requerida] y se expandió en un principio por los países angloparlantes, especialmente entre sus clases altas. En la actualidad el tenis se ha universalizado, y es jugado en casi todos los países del mundo. Desde 1926, con la creación del primer tour, es un deporte profesional. Es además un deporte olímpico desde los Juegos Olímpicos de Atenas 1896",esOlimpico:true})
+//***********************************CREACION DE GENEROS***************************************************
+CREATE (genero1:E_Genero{id:1,nombre:"Masculino",descripcion:"Aplica para entidades del género masculino"})
+CREATE (genero2:E_Genero{id:2,nombre:"Femenino",descripcion:"Aplica para entidades del género femenino"})
+CREATE (genero3:E_Genero{id:3,nombre:"Mixto",descripcion:"Aplica para entidades que tengan tanto género femenino como masculino incluyente"})
+//***********************************CREACION CLASIFICACIONDEPORTE*****************************************
+CREATE (clasificaciondeporte1:E_ClasificacionDeporte{id:1,nombre:"De pelota",descripcion:"Deportes cuyo elemento principal es una pelota"})
+CREATE (clasificaciondeporte2:E_ClasificacionDeporte{id:2,nombre:"De raqueta",descripcion:"Deportes cuyo elemento principal es una raqueta"})
+//***********************************POSICIONES************************************************************
+CREATE (d1posicion1:E_Posicion{id:1,nombre:"Apertura",descripcion:"El apertura forma parte de la línea de tres cuartos y es el encargado de distribuir y organizar el juego del resto de la línea y del equipo, en colaboración con el medio scrum. Generalmente el apertura porta el dorsal '10'"})
+CREATE (d1posicion2:E_Posicion{id:2,nombre:"Centro",descripcion:"En un equipo de rugby hay dos centros. Se denominan primer centro (o inside) y segundo centro (o outside). Generalmente son los jugadores que utilizan la camiseta con los dorsales 12 y 13, respectivamente. Son jugadores de carácter sobre todo ofensivo y necesitan ser fuertes para poder romper la línea de defensa contraria y luego pasar el balón. También necesitan ser buenos con el placaje (tackle) en jugadas defensivas"})
+CREATE (d1posicion3:E_Posicion{id:3,nombre:"Flanker",descripcion:" Los flankers forman parte de la tercera línea, junto al número 8 en las formaciones de melé y son los jugadores que suelen portar los dorsales 6 (flanker cerrado) y 7 (flanker abierto). Esto es el flanker cerrado (normalmente el 6 menos en Sudáfrica que es el 7) suele ser más corpulento y alto que su compañero el abierto, por esas cualidades suele ser el quien, junto con los segundas líneas, salta en los saques de lateral. Los flanker cerrados tiene como objetivo placar mucho y obstaculizar los rucks del equipo contrario más conocido como \"matar el balón\" así obligando a hacer más lento el balón de ataque del equipo contrario). El flanker abierto (el 7 menos en Sudáfrica que es el 6) suelen ser más pequeños y compactos. La razón de este reducido tamaño es su deber como \"ball stealer\" o robador de balones. En el rugby moderno el flanker abierto debe de ser como un sabueso y tiene que estar sobre el balón para que cuando el portador del balón sea placado el flanker se abalance sobre el balón para de esta forma recuperarlo. También cabe la posibilidad de que el flanker recupere el balón sobre su propio placaje siempre y cuando se mantenga de pie"})
+CREATE (d1posicion4:E_Posicion{id:4,nombre:"Talonador",descripcion:"Su función principal se desarrolla en la melé o scrum y consiste en intentar golpear la pelota hacia atrás con su talón (enganchar), de forma que esta quede bajo su formación y pueda ser jugada por el número 8 o el medio scrum. Para ello, hace un gesto a su medio melé o medio scrum para que introduzca la pelota en el scrum o melé y la talona hacia atrás con los pies, gracias al equilibrio que consigue al estar apoyado sobre los pilares"})
+CREATE (d1posicion5:E_Posicion{id:5,nombre:"Medio Scrum",descripcion:"La función principal del medio scrum se desarrolla en las fases de melé, en las que se encarga de introducir el balón tras la señal de su talonador o de tratar de evitar la salida del mismo si introduce el equipo contrario. Asimismo, es el encargado de sacar el balón de la formación de melé si se logra la posesión. También es el encargado de levantar el balón para jugarlo en las abiertas (scrum)"})
+CREATE (d1posicion6:E_Posicion{id:6,nombre:"Número 8",descripcion:"n cada equipo de rugby hay un jugador que ocupa la posición denominada de 'ocho'. Esta posición no tiene una denominación concreta y se le conoce por el dorsal que porta en el terreno de juego. El ocho forma parte de la tercera línea de la delantera, junto a los flankers. En las formaciones de melé, se sitúa por detrás de los dos segundas líneas. Si la formación avanza con la posesión del balón, es el encargado de evitar que salga fuera de la misma hasta que su medio melé se lo indique. También puede tomar la decisión de coger el balón con las manos, abandonar la formación y tratar de avanzar entre la defensa contraria"})
+CREATE (d1posicion7:E_Posicion{id:7,nombre:"Pilar",descripcion:"En la melé son los encargados de empujar contra los pilares contrarios facilitando el trabajo del talonador. Su fuerza de empuje es decisiva para ganar la posesión del balón en estas fases. La exigencia física de esta posición hace que tan sólo aquellos jugadores designados específicamente para jugar en este puesto antes del partido puedan ocupar esta posición"})
+CREATE (d1posicion8:E_Posicion{id:8,nombre:"Segunda linea",descripcion:"En las formaciones de melé, son los encargados de fijar la posición y realizar el empuje principal. En las formaciones de touch pueden ocupar posiciones de saltador o levantar a estos. Tras los terceras, son los jugadores que deben comenzar la acción defensiva. En jugadas de ataque, pueden participar en fases cortas con la delantera o en fases más largas de juego a la mano, incorporándose a la línea de tres cuartos"})
+CREATE (d1posicion9:E_Posicion{id:9,nombre:"Ala",descripcion:"Son los jugadores más rápidos del equipo, independientemente de su peso o talla. En jugadas de ataque se incorporan en velocidad para recibir los pases de los centros y tratar de alcanzar la línea de ensayo rival"})
+CREATE (d1posicion10:E_Posicion{id:10,nombre:"Zaguero",descripcion:"Dado que es el último hombre en detener el contraataque del rival debe ser un buen placador. Por lo general, desde posiciones defensivas utiliza mucho el juego aéreo ejecutando muchas patadas (en inglés kicks) por lo que también debe ser buen pateador. Asimismo, debe ser un buen receptor ya que suele ser la persona encargada de recoger las pelotas pateadas por el apertura y zaguero contrario."})
+//**********************************************USUARIO POSICION******************************************
+CREATE (posicionusuariodeporte1:E_PosicionUsuarioDeporte{id:1})
+CREATE (posicionusuariodeporte2:E_PosicionUsuarioDeporte{id:2})
+//********************************************************************************************************
+//**********************************************IMPLEMENTOS***********************************************
+CREATE (d1implementos1:E_Implemento{id:1,nombre:"Pelota de rugby",descripcion:"Es de forma ovalada, está construida con cuatro gajos de cuero o material sintético parecido y pesa algo menos de medio kilo",uso:"Manos y pies"})
+CREATE (d1implementos2:E_Implemento{id:2,nombre:"Casquete rugby",descripcion:"Protege las orejas de los roces en las melés",parteCuerpo:"Cabeza"})
+CREATE (d1implementos3:E_Implemento{id:3,nombre:"Protector corporal",descripcion:"Protege de choques en las extremidades superiores",parteCuerpo:"Extremidades superiores"})
+CREATE (d1implementos4:E_Implemento{id:4,nombre:"Botas",descripcion:"Botas, botines o guayos",parteCuerpo:"Pies"})
+///////////////////////////////////////
+CREATE (d1implementosegungenero1:E_ImplementoSegunGenero{id:1})
+CREATE (d1implementosegungenero2:E_ImplementoSegunGenero{id:2})
+CREATE (d1implementosegungenero3:E_ImplementoSegunGenero{id:3})
+CREATE (d1implementosegungenero4:E_ImplementoSegunGenero{id:4})
+//********************************************************************************************************
+CREATE (d2implementos1:E_Implemento{id:5,nombre:"Raqueta de tenis",descripcion:"Es un instrumento deportivo que consiste en un marco con un aro abierto y con una especie de red o caucho que lo cubre",parteCuerpo:"Manos"})
+CREATE (d2implementos2:E_Implemento{id:6,nombre:"Bola de tenis",descripcion:"Dentro del diámetro de éstas, debe oscilar entre 6.35 y 6.67 centímetros, mientras que su peso no debe sobrepasar por ningún motivo los 58.5 gramos",uso:"Raqueta de tenis"})
+CREATE (d2implementos3:E_Implemento{id:7,nombre:"Zapatillas de tenis",descripcion:"Son zapatillas especiales para la práctica del juego. Existe una clase de zapatilla para cada tipo de terreno",parteCuerpo:"pies"})
+CREATE (d2implementosegungenero1:E_ImplementoSegunGenero{id:5})
+CREATE (d2implementosegungenero2:E_ImplementoSegunGenero{id:6})
+CREATE (d2implementosegungenero3:E_ImplementoSegunGenero{id:7})
+//*********************************************TACTICAS***************************************************
+CREATE (d1tactica1:E_Tactica{id:1,nombre:"Mele",descripcion:"Si un jugador es placado y llevado al suelo y jugadores  de ambos equipos están sujetándose en busca de la posesión del balón, esto se denomina Ruck, cualquier jugador que este adelantado o no de un paso atrás dejando un pasillo de 1 metro entre el ruck y los demás jugadores considera fuera de juego y puede ser penalizado si interviene directa o indirectamente en el juego"})
+CREATE (d1tactica2:E_Tactica{id:2,nombre:"Ruck",descripcion:"Tras una falta menor (un pase adelantado o una caída involuntaria de la pelota hacia adelante, por ejemplo), o para reiniciar el juego luego de una formación donde la pelota no salió para ninguno de los dos equipos, se realiza una melé. La melé o el \"scrum\", una de las formaciones más reconocibles del rugby, es una puja frente a frente, de un grupo de cada equipo, que se presentan agachados y agarrados, para comenzar a empujar con el fin de obtener, el balón que ha sido lanzado en medio de ellos y sin tocarlo con la mano. El grupo que haya obtenido el balón, debe sacarlo sin tocarlo con la mano por detrás de la formación, donde lo tomará un jugador (usualmente, pero no siempre, el \"medio melé\" o \"medio scrum\") y continuará el juego"})
+CREATE (d1tactica3:E_Tactica{id:3,nombre:"Maul",descripcion:"Un maul tiene las mismas caracteristicas que un ruck, pero con la diferencia que en el maul el jugador no cae al suelo, sino que como minimo 2 compañeros de este y otros 2 contrarios empujan los unos contra los otros, esta formacion se puede mantener tanto tiempo se quiera, esto se rompe cuando la pelota es sacada o el que la porta es tirado al suelo, por lo cual se transformaria en un ruck"})
+CREATE (d1tactica4:E_Tactica{id:4,nombre:"Line",descripcion:"  El balón sale por un lateral y el equipo contrario saca lanzando el balón al pasillo formado por los dos equipos con la ventaja que el equipo que saca, según una clave, sabe a que jugador va el balón. Los segundas y el 8 suelen ser los jugadores más altos y los que se colocan en las posiciones de salto para recepcionar el balón lanzado en el line. En todos los casos saca el equipo que no ha sacado el balón excepto cuando el equipo que lo halla hecho para ejecutar un penal en cuyo caso saca él mismo. De especial interés, por su espectacular ejecución, es lo que se llama ASCENSOR. Los protectores que están situados a los lados de los saltadores, ayudan en el salto a este aguantándole en la parte más alta de su salto"})
+//********************************************************************************************************
+//*********************************************ESTILOS DE JUEGO*******************************************
+CREATE (estilosjuego1:E_EstiloJuego{id:1,nombre:"Defensivo",descripcion:"Este estilo del tenis se caracteriza por el uso continuo de golpes que desaceleran el ritmo de juego, tales como los cortes y los golpes con top spin alto. El jugador defensivo ocupa lugares por los 2 o 3 metros detrás de la linea base"})
+CREATE (estilosjuego2:E_EstiloJuego{id:2,nombre:"Contraataque",descripcion:"Este estilo del tenis se caracteriza por el uso de golpes que aprovechan la fuerza del contrario para ganar potencia en los propios. Los passing shot y los loops son los golpes más marcados en el contraataque."})
+CREATE (estilosjuego3:E_EstiloJuego{id:3,nombre:"Ofensivo",descripcion:"Este estilo se caracterisa por un ataque intenso al oponente con golpes planos, angulados y por approaches, así como también boleas"})
+//********************************************MOVIMIENTOS TECNICOS****************************************
+CREATE (movimientotecnico1:E_MovimientoTecnico{id:1,nombre:"Volea",descripcion:"Golpe que se realiza estando dentro del cuadro de saque de la cancha, recibiendo la bola usualmente antes de que bote sobre el suelo de nuevo."})
+CREATE (movimientotecnico2:E_MovimientoTecnico{id:2,nombre:"Derecha",descripcion:"Golpe que se realiza con la cara interior de la raqueta abierta desde la mano fuerte."})
+//*********************************************TECNICA ESPECIFICA******************************************
+CREATE (movimientotecnico3:E_MovimientoTecnico{id:3,nombre:"Top spin",descripcion:"Es un efecto dado a la bola una vez ésta golpea y hace que ésta decienda más rápido desde cierto punto de su trayectoria"})
+CREATE (movimientotecnico4:E_MovimientoTecnico{id:4,nombre:"Plano",descripcion:"Es un golpe sin efecto. Usualmente éste gole causa más daño debido a que su velocidad es mayor con respecto a un golpe con efecto"})
+//*********************************************RECURSO EXTERNO*********************************************
+CREATE (recursoexterno:E_RecursoExterno{id:1,nombre:"Volea explicada",descripcion:"Video explicativo de una volea",url:"https://www.youtube.com/watch?v=Otjx6rL79NM"})
+//*********************************************CREACION EVENTO*********************************************
+CREATE (eventodeportivo:E_EventoDeportivo{id:1,nombre:"Tenis callejero",descripcion:"Evento para amantes del tenis que deseen jugar con jugadores de cualquier nivel",fechaCreacion:"23/05/2015",fechaInicio:"24/05/2015",fechaFinal:"24/05/2015",horaInicio:"09:00",horaFinal:"16:00",numeroMaxParticipantes:"15",rangoMaxEdad:"40",rangoMinEdad:"16",activo:true})
+CREATE (deporteevento:E_DeporteEvento{id:1})
+
+//**********************************************RELACIONES*************************************************
+//*********************************************************************************************************
+
+//*********************************************RELACIONANDO DEPORTES***************************************
+//***************************************************RUGBY*************************************************
+//*********************************************************************************************************
+//Genero
+CREATE (genero2)<-[deportegenero2:R_CategoriaGenero{id:2}]-(deporte1)-[deportegenero1:R_CategoriaGenero{id:1}]->(genero1)
+//Implementos
+CREATE (deporte1)-[d1implementogenerodeporte1:R_ImplementoGeneroDeporte{id:1}]->(d1implementosegungenero1)<-[d1implementogenerodeporte2:R_ImplementoGeneroDeporte{id:2}]-(d1implementos1),(genero1)-[d1implementogenerodeporte3:R_ImplementoGeneroDeporte{id:3}]->(d1implementosegungenero1)
+CREATE (deporte1)-[d1implementogenerodeporte4:R_ImplementoGeneroDeporte{id:4}]->(d1implementosegungenero2)<-[d1implementogenerodeporte5:R_ImplementoGeneroDeporte{id:5}]-(d1implementos2),(genero1)-[d1implementogenerodeporte6:R_ImplementoGeneroDeporte{id:6}]->(d1implementosegungenero2)
+CREATE (deporte1)-[d1implementogenerodeporte7:R_ImplementoGeneroDeporte{id:7}]->(d1implementosegungenero3)<-[d1implementogenerodeporte8:R_ImplementoGeneroDeporte{id:8}]-(d1implementos3),(genero1)-[d1implementogenerodeporte9:R_ImplementoGeneroDeporte{id:9}]->(d1implementosegungenero3)
+CREATE (deporte1)-[d1implementogenerodeporte10:R_ImplementoGeneroDeporte{id:10}]->(d1implementosegungenero4)<-[d1implementogenerodeporte11:R_ImplementoGeneroDeporte{id:11}]-(d1implementos4),(genero1)-[d1implementogenerodeporte12:R_ImplementoGeneroDeporte{id:12}]->(d1implementosegungenero4)
+//Tactica
+CREATE (deporte1)-[d1utilizatactica1:R_UtilizaTactica{id:1}]->(d1tactica1)
+CREATE (deporte1)-[d1utilizatactica2:R_UtilizaTactica{id:2}]->(d1tactica2)
+CREATE (deporte1)-[d1utilizatactica3:R_UtilizaTactica{id:3}]->(d1tactica3)
+CREATE (deporte1)-[d1utilizatactica4:R_UtilizaTactica{id:4}]->(d1tactica4)
+//Tecnica
+//Tecnica especializada
+//Estilo juego
+//Posicion juego
+CREATE (deporte1)-[posiciondeporte1:R_PosicionDeporte{id:1}]->(d1posicion1)
+CREATE (deporte1)-[posiciondeporte2:R_PosicionDeporte{id:2}]->(d1posicion2)
+CREATE (deporte1)-[posiciondeporte3:R_PosicionDeporte{id:3}]->(d1posicion3)
+CREATE (deporte1)-[posiciondeporte4:R_PosicionDeporte{id:4}]->(d1posicion4)
+CREATE (deporte1)-[posiciondeporte5:R_PosicionDeporte{id:5}]->(d1posicion5)
+CREATE (deporte1)-[posiciondeporte6:R_PosicionDeporte{id:6}]->(d1posicion6)
+CREATE (deporte1)-[posiciondeporte7:R_PosicionDeporte{id:7}]->(d1posicion7)
+CREATE (deporte1)-[posiciondeporte8:R_PosicionDeporte{id:8}]->(d1posicion8)
+CREATE (deporte1)-[posiciondeporte9:R_PosicionDeporte{id:9}]->(d1posicion9)
+CREATE (deporte1)-[posiciondeporte10:R_PosicionDeporte{id:10}]->(d1posicion10)
+//Usuario
+CREATE (usuario2)-[practicadeporte2:R_PracticaDeporte{id:2}]->(deporte1)
+//Posicion usuario
+CREATE (usuario2)-[usuarioposiciondeporte1:R_UsuarioPosicionDeporte{id:1}]->(posicionusuariodeporte1)<-[usuarioposiciondeporte2:R_UsuarioPosicionDeporte{id:2}]-(d1posicion1),(deporte1)-[usuarioposiciondeporte3:R_UsuarioPosicionDeporte{id:3}]->(posicionusuariodeporte1)
+CREATE (usuario2)-[usuarioposiciondeporte4:R_UsuarioPosicionDeporte{id:4}]->(posicionusuariodeporte2)<-[usuarioposiciondeporte5:R_UsuarioPosicionDeporte{id:5}]-(d1posicion2),(deporte1)-[usuarioposiciondeporte6:R_UsuarioPosicionDeporte{id:6}]->(posicionusuariodeporte2)
+//Relacion recurso
+//Clasificacion
+CREATE (deporte1)-[categoriaclasificacion1:R_CategoriaClasificacion{id:1}]->(clasificaciondeporte1)
+//***************************************************TENIS*************************************************
+//*********************************************************************************************************
+//Genero
+CREATE (genero2)<-[deportegenero3:R_CategoriaGenero{id:3}]-(deporte2)-[deportegenero4:R_CategoriaGenero{id:4}]->(genero1)
+CREATE (deporte2)-[deportegenero5:R_CategoriaGenero{id:5}]->(genero3)
+//Implementos
+CREATE (deporte2)-[d2implementogenerodeporte1:R_ImplementoGeneroDeporte{id:13}]->(d2implementosegungenero1)<-[d2implementogenerodeporte2:R_ImplementoGeneroDeporte{id:14}]-(d2implementos1),(genero2)-[d2implementogenerodeporte3:R_ImplementoGeneroDeporte{id:15}]->(d2implementosegungenero1)
+CREATE (deporte2)-[d2implementogenerodeporte4:R_ImplementoGeneroDeporte{id:16}]->(d2implementosegungenero2)<-[d2implementogenerodeporte5:R_ImplementoGeneroDeporte{id:17}]-(d2implementos2),(genero2)-[d2implementogenerodeporte6:R_ImplementoGeneroDeporte{id:18}]->(d2implementosegungenero2)
+CREATE (deporte2)-[d2implementogenerodeporte7:R_ImplementoGeneroDeporte{id:19}]->(d2implementosegungenero3)<-[d2implementogenerodeporte8:R_ImplementoGeneroDeporte{id:20}]-(d2implementos3),(genero2)-[d2implementogenerodeporte9:R_ImplementoGeneroDeporte{id:21}]->(d2implementosegungenero3)
+//Tactica
+//Tecnica
+CREATE (deporte2)-[utilizatecnica1:R_UtilizaTecnica{id:1}]->(movimientotecnico1)
+CREATE (deporte2)-[utilizatecnica2:R_UtilizaTecnica{id:2}]->(movimientotecnico2)
+//Tecnica especializada
+CREATE (movimientotecnico1)-[tecnicaespecializada1:R_TecnicaEspecializada{id:1}]->(movimientotecnico3)
+CREATE (movimientotecnico1)-[tecnicaespecializada2:R_TecnicaEspecializada{id:2}]->(movimientotecnico4)
+CREATE (movimientotecnico2)-[tecnicaespecializada3:R_TecnicaEspecializada{id:3}]->(movimientotecnico3)
+CREATE (movimientotecnico2)-[tecnicaespecializada4:R_TecnicaEspecializada{id:4}]->(movimientotecnico4)
+//Estilo juego
+CREATE (deporte2)-[tieneestilodeporte1:R_TieneEstiloDeporte{id:1}]->(estilosjuego1)
+CREATE (deporte2)-[tieneestilodeporte2:R_TieneEstiloDeporte{id:2}]->(estilosjuego2)
+CREATE (deporte2)-[tieneestilodeporte3:R_TieneEstiloDeporte{id:3}]->(estilosjuego3)
+//Posicion juego
+//Usuario
+CREATE (usuario1)-[practicadeporte1:R_PracticaDeporte{id:1}]->(deporte2)
+//Posicion usuario
+//Relacion recurso
+CREATE (movimientotecnico1)-[relacionrecurso:R_RelacionRecurso{id:1}]->(recursoexterno)
+//Clasificacion
+CREATE (deporte2)-[categoriaclasificacion2:R_CategoriaClasificacion{id:2}]->(clasificaciondeporte1)
+CREATE (deporte2)-[categoriaclasificacion3:R_CategoriaClasificacion{id:3}]->(clasificaciondeporte2)
+//****************************************UBICACIONES RELACIONES*********************************************
+//Pais con ciudad
+CREATE (pais)-[paisciudad:R_PaisCiudad{id:1}]->(ciudad)
+//Formando ubicacion
+CREATE (pais)-[completaubicacion1:R_CompletaUbicacion{id:1}]->(ubicacion)<-[completaubicacion2:R_CompletaUbicacion{id:2}]-(ciudad),(lugarpractica)-[completaubicacion3:R_CompletaUbicacion{id:3}]->(ubicacion)
+//Ubicacion deporte
+CREATE (ubicacion)-[practicadoen1:R_PracticadoEn{id:1}]->(ubicaciondeporte)<-[practicadoen2:R_PracticadoEn{id:2}]-(deporte1),(genero1)-[practicadoen3:R_PracticadoEn{id:3}]->(ubicaciondeporte)
+CREATE (ubicacion)-[practicadoen4:R_PracticadoEn{id:4}]->(ubicaciondeporte)<-[practicadoen5:R_PracticadoEn{id:5}]-(deporte1),(genero2)-[practicadoen6:R_PracticadoEn{id:6}]->(ubicaciondeporte)
+CREATE (ubicacion)-[practicadoen7:R_PracticadoEn{id:7}]->(ubicaciondeporte)<-[practicadoen8:R_PracticadoEn{id:8}]-(deporte2),(genero3)-[practicadoen9:R_PracticadoEn{id:9}]->(ubicaciondeporte)
+//Ubicaciones de un usuario
+CREATE (ubicaciondeporte)-[ubicacionusuario1:R_UbicacionUsuario{id:1}]->(ubicacionusuario)<-[ubicacionusuario2:R_UbicacionUsuario{id:2}]-(usuario2)
+//***********************************************EVENTOS******************************************************
+CREATE (eventodeportivo)-[descripcionevento1:R_DescripcionEvento{id:1}]->(deporteevento)<-[descripcionevento2:R_DescripcionEvento{id:2}]-(deporte2),(genero3)-[descripcionevento3:R_DescripcionEvento{id:3}]->(deporteevento)<-[participanteevento1:R_ParticipanteEvento{id:1}]-(usuario1)
+CREATE (usuario1)-[creaevento1:R_CreaEvento{id:1,rol:"administrador"}]->(eventodeportivo)
+;
+//match (a)-[r]-(b) return *;
+//match (a)-[r]-(b) delete a,r,b;
+//match n delete n;

@@ -2,8 +2,8 @@
 	\caption{Entidad E\_EventoDeportivo}
 	\label{tab:entidad_013}
 	\begin{center}
-		\resizebox{16cm}{!}{
-		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		\resizebox{20cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{8cm}|}
 			\hline
 			\multicolumn{4}{|c|}{Entidad} \\
 			\hline
@@ -46,6 +46,31 @@
 			String &
 			10 &
 			Fecha final del primer evento asociado al evento principal. El formato será el siguiente: 'DD/MM/AAAA' \\
+			\hline
+			horaInicio [I] &
+			String &
+			5 &
+			Hora de inicio del evento. El formato será manejado así: '00-24'+':'+'01-59' \\
+			\hline
+			horaFinal &
+			String &
+			5 &
+			Hora final del evento. El formato será manejado así: '00-24'+':'+'01-59' \\
+			\hline
+			numMaxParticipantes &
+			Numerico &
+			&
+			Indica el número de participantes máximos para el evento \\
+			\hline
+			rangoMaxEdad &
+			Numerico &
+			 &
+			Edad máxima con la que puede participar un usuario en el evento \\
+			\hline
+			rangoMinEdad &
+			Numerico &
+			 &
+			Edad mínima con la que puede participar un usuario en el evento \\
 			\hline
 			activo &
 			Boolean &

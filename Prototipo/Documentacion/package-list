@@ -1,4 +1,5 @@
 com.sna_deportivo.pojo
+com.sna_deportivo.pojo.evento
 com.sna_deportivo.services
 com.sna_deportivo.services.eventos
 com.sna_deportivo.services.eventos.entity

@@ -3,6 +3,21 @@
 
 En esta sección el lector podrá encontrar la descripción de cada uno de los nodos etiqueta que los autores han creado para dar soporte de datos al prototipo.
 
+\section{Modelo de datos con entidades/relaciones generales}
+Ampliando la breve explicación dada acerca de éste modelo de datos en el capítulo \ref{chap:modelo_datos}, a continuación se encuentra la descripción de cada una de las entidades y las relaciones que son utilizadas por uno o varios módulos.
+
+\subsection{Entidades}
+A continuación, de la tabla \ref{tab:entidadgeneral_001} a la tabla \ref{tab:entidad_009} se muestran las entidades relacionadas con uno o varios módulos.
+
+\clearpage
+\input{./Capitulos/Modelo_datos/General/Entidades/genero.tex}
+\input{./Capitulos/Modelo_datos/General/Entidades/recurso_externo.tex}
+
+\subsection{Relaciones}
+A continuación, de la tabla \ref{tab:rel_008} a la \ref{tab:rel_008} se muestran las relaciones que son utilizadas relacionando entidades generales con entidades de uno o varios módulos.
+
+\input{./Capitulos/Modelo_datos/General/Relaciones/relacion_recurso.tex}
+
 \section{Modelo de datos de gestión de eventos}
 Ampliando la breve explicación dada acerca de éste modelo de datos en el capítulo \ref{chap:modelo_datos}, a continuación se encuentra la descripción de cada una de las entidades y las relaciones del módulo de eventos.
 
@@ -20,6 +35,7 @@ A continuación, de la tabla \ref{tab:rel_014} a la \ref{tab:rel_016} se muestra
 \input{./Capitulos/Modelo_datos/Eventos/Relaciones/crea_evento.tex}
 \input{./Capitulos/Modelo_datos/Eventos/Relaciones/evento_de_deporte.tex}
 \input{./Capitulos/Modelo_datos/Eventos/Relaciones/participante_evento.tex}
+\input{./Capitulos/Modelo_datos/Eventos/Relaciones/contiene_evento.tex}
 
 \section{Modelo de datos de gestión de ubicaciones}
 Ampliando la breve explicación dada acerca de éste modelo de datos en el capítulo \ref{chap:modelo_datos}, a continuación se encuentra la descripción de cada una de las entidades y las relaciones del módulo de ubicaciones.
@@ -59,9 +75,7 @@ A continuación, de la tabla \ref{tab:entidad_001} a la \ref{tab:entidad_011} se
 \input{./Capitulos/Modelo_datos/Deportes/Entidades/movimiento_tecnico.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Entidades/posicion.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Entidades/posicion_usuario_deporte.tex}
-\input{./Capitulos/Modelo_datos/Deportes/Entidades/recurso_externo.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Entidades/tactica.tex}
-\input{./Capitulos/Modelo_datos/Deportes/Entidades/tecnica_especifica.tex}
 
 \subsection{Relaciones}
 A continuación, de la tabla \ref{tab:rel_001} a la \ref{tab:rel_013} y \ref{tab:rel_029} se muestran las relaciones que son especificas para la gestión de deportes.
@@ -72,12 +86,11 @@ A continuación, de la tabla \ref{tab:rel_001} a la \ref{tab:rel_013} y \ref{tab
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/implemento_genero_deporte.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/posicion_deporte.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/practica_deporte.tex}
-\input{./Capitulos/Modelo_datos/Deportes/Relaciones/relacion_recurso.tex}
-\input{./Capitulos/Modelo_datos/Deportes/Relaciones/movimiento_especifico.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/usuario_posicion_deporte.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/utiliza_implemento.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/utiliza_tactica.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/utiliza_tecnica.tex}
+\input{./Capitulos/Modelo_datos/Deportes/Relaciones/tecnica_especializada.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/relacion_imagen.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/relacion_video.tex}
 \input{./Capitulos/Modelo_datos/Deportes/Relaciones/contenido_de_deporte.tex}

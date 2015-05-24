@@ -23,7 +23,7 @@ public class GestionUsuario {
 		Utils.EjecutarPost("/node/" + nodo + "/properties", propiedades.toString(),"put");
 		//Asignar label a nodo
 		Utils.EjecutarPost("/node/" + nodo + "/labels", "\"E_Usuario\"","post");
-		//Crear relación con nodo Rol
+		//Crear relacion con nodo Rol
 		//Obtener id de rol seleccionado
 		String queryIdRol = "MATCH (n:E_Rol {nombre:'" + user.getTipoUsuario() + "'}) RETURN id(n)";
 		Object[] data = Utils.EjecutarQuery(queryIdRol);

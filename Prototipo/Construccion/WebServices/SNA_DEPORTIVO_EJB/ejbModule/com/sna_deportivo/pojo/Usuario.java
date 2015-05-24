@@ -3,7 +3,7 @@ package com.sna_deportivo.pojo;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Usuario {
+public class Usuario extends UnUsuario{
 	
 	private String primerNombre;
 	private String segundoNombre;
