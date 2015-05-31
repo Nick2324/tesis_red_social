@@ -22,8 +22,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateUserActivity"
+            android:name=".Users.CreateUserActivity"
             android:label="@string/title_activity_create_user" >
+        </activity>
+        <activity
+            android:name=".Users.UserMainActivity"
+            android:label="@string/title_activity_user_main" >
         </activity>
     </application>
 

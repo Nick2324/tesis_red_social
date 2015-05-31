@@ -1,9 +1,10 @@
-package sportsallaround.snadeportivo;
+package sportsallaround.snadeportivo.Users;
 
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +22,7 @@ import org.json.JSONObject;
 
 import java.io.InputStream;
 
+import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.DatePickerFragment;
 import sportsallaround.utils.OnDatePickedListener;
@@ -213,6 +215,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
 
         private ContentValues datosUsuario;
         private Context context;
+        private String rutaUsuario;
 
         CreateUserTask(/*String userName,*/
                        String firstName,
@@ -265,6 +268,8 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
                 JSONObject response = new JSONObject(responseString);
                 if (response.get("caracterAceptacion").equals("M"))
                     retorno = false;
+                else
+                    rutaUsuario = response.getString("datosExtra");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -277,10 +282,12 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
             mAuthTask = null;
 
             if (success) {
-                finish();
-            } else {
+                //todo: Invocar pagina inicial del usuario con la ruta retornada por la creacion del mismo.
+                Intent intent = new Intent(getApplicationContext(), UserMainActivity.class);
+                startActivity(intent);
+            }else
                 Toast.makeText(context,"Un usuario con el mismo correo ya existe", Toast.LENGTH_LONG).show();
-            }
+
         }
 
         @Override

@@ -1,7 +1,5 @@
 package com.sna_deportivo.pojo.evento;
 
-import java.util.Map;
-
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
@@ -9,10 +7,10 @@ import javax.ws.rs.core.Response;
 
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 
+import com.sna_deportivo.utils.BDUtils;
 import com.sna_deportivo.utils.Constantes;
 import com.sna_deportivo.utils.Entidades;
 //import com.sna_deportivo.utils.UtilDB;
-import com.sna_deportivo.utils.Utils;
 
 public abstract class DAOEvento {
 	
@@ -48,7 +46,7 @@ public abstract class DAOEvento {
 					query += campo.getName() + " = ";
 			}*/
 			String payload = "{\"statements\":[{\"statement\":\"" + query + "\"}]}";
-			ResteasyClient cliente = Utils.obtenerCliente();
+			ResteasyClient cliente = BDUtils.obtenerCliente();
 			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI)
 					.path("transaction/commit");
 			Response result = target
