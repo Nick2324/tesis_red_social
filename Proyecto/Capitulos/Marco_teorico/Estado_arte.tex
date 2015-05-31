@@ -1,8 +1,22 @@
 \section{Estado del arte} \label{cap:estado_arte}
 
+A continuación, los autores hacen un acercamiento a las soluciones software que, en su trabajo investigativo, hubieron encontrado y analizado. Después, los autores dan una relación entre el estado del arte y las funcionalidades ofrecidas por el prototipo de SNS deportivo.
+
+\subsection{Soluciones software existentes}
+
 Se hizo una búsqueda de redes sociales basadas en deporte que existen actualmente en la red. Una vez encontradas, se eligieron exactamente 16 SNS deportivas que ofrecían, en conjunto, las funcionalidades que se observaban en las demás redes sociales que no fueron escogidas (Cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5}). Luego de la elección de la muestra de SNS, se reunieron aspectos de cada una hasta formar un grueso de sus funcionalidades y se realizó un cuadro de Funcionalidades vs SNS en donde se expresa con detalle cómo se presenta cada funcionalidad con respecto a cada SNS (en caso de no haber una conexión funcionalidad – SNS, entonces la casilla se dejó en blanco). En los cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5} se da evidencia del análisis Funcionalidad vs SNS realizado.
 
 Cada una de las funcionalidades que fueron descubiertas en otros SNS deportivos ya creados son el primer paso, pues, para conocer las necesidades de los usuarios de los SNS deportivos. El análisis de estos SNS será, entonces, el punto de partida para definir los requerimientos funcionales del SNS que plantearemos desde el punto de vista funcional.
+
+\subsection{Prototipo SNS deportivo vs Soluciones software existentes}
+
+Como se puede observar de los cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5} y como también es explicado en el capítulo \ref{chap:justificacion}, solo 2 de las 16 SNS deportivas cumplen la condición de ser hechas sobre tecnologías móviles.
+
+Por parte de Huddlers, ésta aplicación tiene la desventaja para los usuarios de dispositivos Android de que sólo está soportada para iOS. Por parte de Bkool, así como en otras aplicaciones ya existentes, no hay un soporte multideporte ni un soporte de gestión del conocimiento que ayude al nuevo usuario a interactuar con el deporte cuando él está apenas iniciandose en éste. Caso contrario se presenta en prototipo SNS deportivo propuesto, el cuál tiene tanto soporte multideporte como un componente de gestión del conocimiento que será gestionado en el primer prototipo, dando a conocer algunos datos de los deportes que éste soporta y, además, brindando recursos electrónicos a los que dirigirse para obtener más información.
+
+Asímismo, en tareas posteriores, sobre el desarrollo de las funcionalidades que no serán tenidas en cuenta en el prototipo, éstas están en concordancia con todas las funcionalidades que se obtuvieron del análisis de las demás redes deportivas analizadas, por lo que se dará un valor aún más grande a ésta aplicación siendo móvil y supliendo las funcionalidades demandadas actualmente en el mercado.
+
+\newpage
 
 \begin{landscape}
   
@@ -11,8 +25,6 @@ Cada una de las funcionalidades que fueron descubiertas en otros SNS deportivos 
   \label{tab:comparacion_redes_1}
 
   \begin{center}
-  
-  \textbf{Fuente:} Autores.
   
   \resizebox{20cm}{!}{
   \begin{tabular}{|p{5cm}|llll|}
@@ -66,6 +78,7 @@ Cada una de las funcionalidades que fueron descubiertas en otros SNS deportivos 
     \hline
   \end{tabular}
   }
+  \textbf{Fuente:} Autores
     \end{center}
 \end{table}
   
@@ -76,8 +89,6 @@ Cada una de las funcionalidades que fueron descubiertas en otros SNS deportivos 
   \label{tab:comparacion_redes_2}
 
   \begin{center}
-  
-  \textbf{Fuente:} Autores.
   
   \resizebox{20cm}{!}{
     \begin{tabular}{|p{4cm}|p{9cm}p{7cm}p{7cm}|}
@@ -131,6 +142,7 @@ Conexión con otros SNS &  &  &  \\
 \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{} \\ 
 \end{tabular}
   }
+  \textbf{Fuente:} Autores
       \end{center}
 \end{table}
 
@@ -139,18 +151,14 @@ Conexión con otros SNS &  &  &  \\
 \begin{table}
   \caption{Comparacion de redes, parte 3}
   \label{tab:comparacion_redes_3}
-
   \begin{center}
-  
-  \textbf{Fuente:} Autores.
-  
   \resizebox{20cm}{!}{
   \begin{tabular}{|p{4cm}|p{7cm}p{6cm}p{9cm}|}
 \hline
 Fun\textbackslash Red social & Bkool & Deportmeet & Sportsnak \\ 
 \hline
 Gestión de foros &  &  & - Foros con profesionales (managers, coaches, teams) \\ 
- &  &  & - Ofrece posibilidad al usuario de ser moderador de foros \\ 
+ &  &  & - Usuario como moderador de foros \\ 
 \hline
 Gestión de encuentros deportivos & - Creación de eventos deportivos (solo o con amigos) &  - Gestión de eventos deportivos & - Manejo de eventos deportivos \\ 
  & - Gestión de ``retos'' &  &  \\ 
@@ -171,8 +179,8 @@ Sistema estadístico & - Estadísticas de deportista & - Gestión del nivel del 
 Gestión de transversales &  & -Foros de nutrición &  \\ 
 \hline
 Servicios deportivos &  & - Venta de artículos deportivos & - Módulos para negociantes en temas de deporte \\ 
- &  &  & - Manejo de ofertas en ofrecimiento de instalaciones deportivas \\ 
- &  &  & -- Herramientas para hacer ``boost'' a negociantes (bussiness member) \\ 
+ &  &  & - Ofrecimiento de instalaciones deportivas \\ 
+ &  &  & -- Herramientas para hacer ``boost'' a negociantes \\ 
 \hline
 Soporte multi-deporte & Deportes de ruta & Si & Si \\ 
  &  &  &  \\ 
@@ -186,18 +194,17 @@ Gestión de sponsors &  &  & - Manejo de ``sponsorship'' \\
 Gestión del conocimiento &  &  &  \\ 
  &  &  &  \\ 
 \hline
-Gestión de geolocaliza. & - Posibilidad de grabar trazados & - Localización de eventos & - Geolocalización de actividad deportiva cercana a un punto \\ 
+Gestión de geolocaliza. & - Posibilidad de grabar trazados & - Localización de eventos & - Detecta actividad deportiva (geografía) \\ 
  & (deportes de ruta) &  &  \\ 
 \hline
 Soporte móvil & -Android &  &  \\ 
  & -IOS &  &  \\ 
 \hline
-Conexión con otros SNS & -Facebook &  &  \\ 
- & -twitter &  &  \\ 
+Conexión con otros SNS & -Facebook y twitter &  &  \\
 \hline
 \end{tabular}
 }
-  
+  \textbf{Fuente:} Autores
   \end{center}
 \end{table}
 
@@ -208,8 +215,6 @@ Conexión con otros SNS & -Facebook &  &  \\
   \label{tab:comparacion_redes_4}
 
   \begin{center}
-  
-  \textbf{Fuente:} Autores.
   
     \resizebox{20cm}{!}{
     \begin{tabular}{|p{5cm}|lll|}
@@ -261,7 +266,7 @@ Conexión con otros SNS &  &  &  \\
 \hline
 \end{tabular}
 }
-  
+\textbf{Fuente:} Autores
   \end{center}
 \end{table}
 
@@ -270,8 +275,6 @@ Conexión con otros SNS &  &  &  \\
   \label{tab:comparacion_redes_5}
 
   \begin{center}
-  
-  \textbf{Fuente:} Autores.
   
   \resizebox{20cm}{!}{
     \begin{tabular}{|p{4cm}|p{7cm}p{7cm}p{8cm}|}
@@ -317,6 +320,7 @@ Conexión con otros SNS &  &  &  \\
 \hline
 \end{tabular}
   }
+  \textbf{Fuente:} Autores
   \end{center}
 \end{table}
 

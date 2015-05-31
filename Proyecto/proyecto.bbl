@@ -350,6 +350,31 @@ Microsoft.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Nielsen%
+}{%
+Nielsen%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+time_response}
+\APACinsertmetastar {%
+time_response}%
+\begin{APACrefauthors}%
+Nielsen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {Response Times: The 3 Important Limits.} {Response times: The 3
+  important limits.}
+\newblock
+\begin{APACrefURL}
+  \url{http://www.nngroup.com/articles/response-times-3-important-limits/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Osman%
 \ \BBA {} Osman%
 }{%

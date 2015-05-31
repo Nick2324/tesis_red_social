@@ -1,5 +1,7 @@
 \section{Requerimientos no funcionales}
 
+A continuación se presenta una breve explicación de cada requerimiento no funcional que se tuvo en cuenta a la hora de desarrollar el prototipo.
+
 \subsection{Mantenibilidad}
 
 En \cite{measuring_maintainability}, los autores hicieron una valoración de las métricas utilizadas para evaluar la mantenibilidad del software, según el estandar ISO/IEC 9126, encontrando deficiencias en la métrica más usa, el Indice de Mantenibilidad, o MI por sus siglas en ingles. Encontradas las deficiencias en claridad, crearon nuevas métricas basados en las subcaracterísticas usadas para medir la mantenibilidad de un software. Las subcaracterísticas atadas a la Mantenibilidad según el estandar son:
@@ -63,14 +65,14 @@ Luego de tener dichas cuentas y, además, por cada unidad tener los LOC asociado
 
 \begin{figure}[!htb]
   \begin{center}
-    \includegraphics[width=11cm]{./imagenes/mantainability4.png}
+    \includegraphics[width=7cm]{./imagenes/mantainability4.png}
     \caption{clasificación de duplicación de código}
     \label{fig:mantainability4}
     \textbf{Fuente:}  \cite{measuring_maintainability}
   \end{center}
 \end{figure}
 
- \item \textbf{Volumen por unidad}: FALTANTE
+ \item \textbf{Volumen por unidad}: Es la medida hecha a cada unidad sobre los LOC. Los LOC escencialmente, según \cite{measuring_maintainability}, se dividen por el tipo de lenguaje utilizado al momento de desarrollar la unidad. La cantidad de LOC determinará si un sistema es mantenible o no.
 
 \end{itemize}
 
@@ -80,8 +82,8 @@ En \cite{complexity_mesure}, basados en las definiciones de los documentos WSDL,
 
 \begin{itemize}
 
- \item \textbf{Métrica de complejidad basada en mensaje}: Esta métrica busca medir la complejidad de los mensajes pasados de un servicio a otro haciendo una sumatoria de las complejidades de los tipos de datos utilizados en los mensajes, es decir: $$COM_{k} = \sum_{i=1}^{n} ci$$ donde $k$ es el k-ésimo mensaje, i es el tipo evaluado y $n$ el número de tipos que utiliza el k-ésimo mensaje.
- \item \textbf{Métrica de complejidad basada en operación}: En esta métrica se busca medir la complejidad de una operación definida en el documento WSDL. Para ello se ha de tener en cuenta que las operaciones trabajan con mensajes de salida y de entranda. Por tanto, la métrica será la media de la complejidad de todos los mensajes de salida y entrada que estén definidos en la operación, esto es: $$CBO = \frac{\sum_{i=1}^{p} COM_{i} + \sum_{j=1}^{q} COM_{o}}{m}$$ donde $p$ representa la cantidad de mensajes de entrada y $q$ representa la cantidad de mensajes de salida de la operación. Asimismo, $m$ representa la cantidad total de mensajes.
+ \item \textbf{Métrica de complejidad basada en mensaje}: Esta métrica busca medir la complejidad de los mensajes pasados de un servicio a otro haciendo una sumatoria de las complejidades de los tipos de datos utilizados en los mensajes, es decir, según \cite{complexity_mesure}: $$COM_{k} = \sum_{i=1}^{n} ci$$ donde $k$ es el k-ésimo mensaje, i es el tipo evaluado y $n$ el número de tipos que utiliza el k-ésimo mensaje.
+ \item \textbf{Métrica de complejidad basada en operación}: En esta métrica se busca medir la complejidad de una operación definida en el documento WSDL. Para ello se ha de tener en cuenta que las operaciones trabajan con mensajes de salida y de entranda. Por tanto, la métrica será la media de la complejidad de todos los mensajes de salida y entrada que estén definidos en la operación, esto es, según \cite{complexity_mesure}: $$CBO = \frac{\sum_{i=1}^{p} COM_{i} + \sum_{j=1}^{q} COM_{o}}{m}$$ donde $p$ representa la cantidad de mensajes de entrada y $q$ representa la cantidad de mensajes de salida de la operación. Asimismo, $m$ representa la cantidad total de mensajes.
 
 \end{itemize}
 
@@ -210,4 +212,16 @@ En \cite{security_ws}, se exponen principios de seguridad en Web Services, los c
  \item \textbf{Reducir el área en riesgo de ataque}: Este principio se refiere al control de recursos disponibles a usuarios. Si un recurso no se usa, será mejor deshabilitarlo o eliminarlo, reduciendo así el área vulnerable.
  \item \textbf{Asegurar el enlace más débil}: Se necesita estar atento de todas las posibles partes del sistema que puedan tener más vulnerabilidades y, por lo tanto, ser utilizadas para atacar el sistema.
  \item \textbf{Usar menos privilegios}: Al restringir privilegios a usuarios, es menos probable que un atacante pueda explotar las posibles vulnerabilidades de un sistema, no podrá utilizar ciertos recursos para atacarlo.
+\end{itemize}
+
+\subsection{Rendimiento}
+
+Según \cite{computer_science}, el rendimiento es un requerimiento externo del software que permite tener una medida de la eficiencia de sus operaciones percibida por el usuario final. La oscilación en el rendimiento del software puede afectar en buena o mala medida la usabilidad del software: Si éste es muy lento, el usuario no podrá realizar las operaciones que requiere en el tiempo que él necesita. Es ésto lo que hace que el rendimiento de cualquier software desarrollado sea un punto de partida para la escogencia del que mejor rendimiento presente.
+
+Desde \cite{time_response}, se pueden obtener 3 puntos base a la hora de juzgar el rendimiento del software en cuanto al tiempo de respuesta que tarda en dar al usuario:
+
+\begin{itemize}
+	\item \textbf{0.1 segundos} El usuario sentirá que está manipulando los datos directamente
+	\item \textbf{1 segundo} El usuario, aunque notará el delay, aún sentirá cierto control sobre el software siendo desarrollado
+	\textbf{10 segundos} El usuario se mantendrá esperando una respuesta por la tarea.
 \end{itemize}

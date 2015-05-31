@@ -550,7 +550,7 @@ En las tablas \ref{tab:ec1_entendimiento} a \ref{tab:ec2_entendimiento} se espec
 		\resizebox{11cm}{!}{
 			\begin{tabular}{|p{4cm}|p{7cm}|}
 			\hline
-			\multicolumn{2}{c}{\textbf{Escenario de calidad}} \\
+			\multicolumn{2}{|c|}{Escenario de calidad} \\
 			\hline
 			\textbf{Estimulo} & Se trata de extender o mantener el software, agregando mas funcionalidades u optimizando las existentes. \\
 			\hline
@@ -562,7 +562,8 @@ En las tablas \ref{tab:ec1_entendimiento} a \ref{tab:ec2_entendimiento} se espec
 			\hline
 			\textbf{Respuesta} & La modificacion o extension de funcionalidades se hace de manera satisfactoria \\
 			\hline
-			\textbf{Medidas de respuesta} & La modificacion o extension de funcionalidades no se demora mas de 96 horas de trabajo
+			\textbf{Medidas de respuesta} & La modificacion o extension de funcionalidades no se demora mas de 96 horas de trabajo \\
+			\hline
 			\end{tabular}
 			}\\
 		\textbf{Fuente}: Autores
@@ -576,7 +577,7 @@ En las tablas \ref{tab:ec1_entendimiento} a \ref{tab:ec2_entendimiento} se espec
 		\resizebox{11cm}{!}{
 			\begin{tabular}{|p{4cm}|p{7cm}|}
 			\hline
-			\multicolumn{2}{c}{\textbf{Escenario de calidad}} \\
+			\multicolumn{2}{|c|}{Escenario de calidad} \\
 			\hline
 			\textbf{Estimulo} & Un usuario sin experiencia en el manejo de la aplicación intenta usarla por primera vez. \\
 			\hline
@@ -588,7 +589,8 @@ En las tablas \ref{tab:ec1_entendimiento} a \ref{tab:ec2_entendimiento} se espec
 			\hline
 			\textbf{Respuesta} & El usuario crea, actualiza y navega satisfactoriamente en la aplicación \\
 			\hline
-			\textbf{Medidas de respuesta} & El tiempo requerido para aprender a utilizar, y a familiarizarse con la aplicacion no supera los 15 minutos en la mestra seleccionada.
+			\textbf{Medidas de respuesta} & El tiempo requerido para aprender a utilizar, y a familiarizarse con la aplicacion no supera los 15 minutos en la mestra seleccionada. \\
+			\hline
 			\end{tabular}
 			}\\
 		\textbf{Fuente}: Autores
@@ -606,7 +608,7 @@ En las tablas \ref{tab:ec1_rob_fia} a \ref{tab:ec2_rob_fia} se especifican los e
 		\resizebox{11cm}{!}{
 			\begin{tabular}{|p{4cm}|p{7cm}|}
 			\hline
-			\multicolumn{2}{c}{\textbf{Escenario de calidad}} \\
+			\multicolumn{2}{|c|}{Escenario de calidad} \\
 			\hline
 			\textbf{Estimulo} & Los diferentes servidores utilizados funcionan por un periodo de 1 mes continuo. \\
 			\hline
@@ -618,7 +620,8 @@ En las tablas \ref{tab:ec1_rob_fia} a \ref{tab:ec2_rob_fia} se especifican los e
 			\hline
 			\textbf{Respuesta} & La aplicacion funciona con normalidad en el periodo establecido. \\
 			\hline
-			\textbf{Medidas de respuesta} & La aplicacion debe estar disponible por lo menos un 99% del tiempo establecido.
+			\textbf{Medidas de respuesta} & La aplicacion debe estar disponible por lo menos un 99\% del tiempo establecido. \\
+			\hline
 			\end{tabular}
 			}\\
 		\textbf{Fuente}: Autores
@@ -632,7 +635,7 @@ En las tablas \ref{tab:ec1_rob_fia} a \ref{tab:ec2_rob_fia} se especifican los e
 		\resizebox{11cm}{!}{
 			\begin{tabular}{|p{4cm}|p{7cm}|}
 			\hline
-			\multicolumn{2}{c}{\textbf{Escenario de calidad}} \\
+			\multicolumn{2}{|c|}{Escenario de calidad} \\
 			\hline
 			\textbf{Estimulo} & La cantidad de servidores disponibles se ve disminuida de manera inesperada. \\
 			\hline
@@ -644,7 +647,39 @@ En las tablas \ref{tab:ec1_rob_fia} a \ref{tab:ec2_rob_fia} se especifican los e
 			\hline
 			\textbf{Respuesta} & El sistema sigue funcionando en modo degenerado. \\
 			\hline
-			\textbf{Medidas de respuesta} & El sistema es capaz de atender, como mínimo, un 85\% de los usuarios que normalmente atiende.
+			\textbf{Medidas de respuesta} & El sistema es capaz de atender, como mínimo, un 85\% de los usuarios que normalmente atiende. \\
+			\hline
+			\end{tabular}
+			}\\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\section{Rendimiento}
+
+A continuación, en el cuadro \ref{tab:rendimiento_esc}, se presenta el escenario de calidad para el requerimiento de rendimiento.
+
+\begin{table}[!htb]
+	\caption{Rendimiento - Escenario de calidad 1}
+	\label{tab:rendimiento_esc}
+	\begin{center}
+		\resizebox{11cm}{!}{
+			\begin{tabular}{|p{4cm}|p{7cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Escenario de calidad} \\
+			\hline
+			\textbf{Estimulo} & El usuario requiere respuesta a las peticiones que requiera en un tiempo prudencial. \\
+			\hline
+			\textbf{Fuente} & Usuario final. \\
+			\hline
+			\textbf{Ambiente} & Producción. \\
+			\hline
+			\textbf{Elementos} & Todas las capas. \\
+			\hline
+			\textbf{Respuesta} & El sistema da respuesta a peticiones del usuario. \\
+			\hline
+			\textbf{Medidas de respuesta} & El sistema tardará 5 segundos o menos dando una respuesta a una petición de un usuario. \\
+			\hline
 			\end{tabular}
 			}\\
 		\textbf{Fuente}: Autores

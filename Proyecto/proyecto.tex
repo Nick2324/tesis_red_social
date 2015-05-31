@@ -87,7 +87,9 @@
     \vspace*{0.1in}
     \begin{large}
     Dirigida por: \\
-    Doctor Carlos Enrique Montenegro Marin
+    Doctor Carlos Enrique Montenegro Marin \\
+    Coodirector: \\
+    Paolo Alejandro Daza Corredor \\
     \end{large}
     \end{center}
 
@@ -127,6 +129,7 @@
   \input{./Capitulos/Descripcion_problema/Descripcion_problema.tex}
   
   \chapter{Justificación del problema}
+  \label{chap:justificacion}
   \input{./Capitulos/Justificacion/Justificacion.tex}
   
   \chapter{Objetivos}
@@ -134,6 +137,13 @@
    \input{./Capitulos/Objetivos/General.tex}
   \section{Objetivos específicos}
    \input{./Capitulos/Objetivos/Especificos.tex}
+
+  \chapter{Alcances y limitaciones}
+  \label{chap:alcances_limitaciones}
+  \input{./Capitulos/Alcances_limitaciones/Alcances_limitaciones.tex}
+  
+  \chapter{Tareas posteriores}
+  \input{./Capitulos/Alcances_limitaciones/Tareas_posteriores.tex}
 
   \chapter{Marco conceptual}
   \input{./Capitulos/Marco_teorico/Marco_conceptual.tex}
@@ -144,12 +154,6 @@
   \chapter{Marco legal}
   \input{./Capitulos/Marco_teorico/Marco_legal.tex}
   
-  \chapter{Alcances y limitaciones}
-  \input{./Capitulos/Alcances_limitaciones/Alcances_limitaciones.tex}
-  
-  \chapter{Tareas posteriores}
-  \input{./Capitulos/Alcances_limitaciones/Tareas_posteriores.tex}
-  
   \chapter{Metodología}
   \input{./Capitulos/Metodologia/Metodologia.tex}
   
@@ -157,7 +161,7 @@
   \input{./Capitulos/Cronograma/Cronograma.tex}
   
   \chapter{Costos}
-  \label{cap:costos}
+  \label{chap:costos}
   \input{./Capitulos/Recursos/Hardware.tex}
   \input{./Capitulos/Recursos/Software.tex}
   \input{./Capitulos/Recursos/Humanos.tex}
@@ -183,13 +187,14 @@
   \label{chap:modelo_datos}
   \input{./Capitulos/Modelo_datos/Modelo_datos.tex}
   
-  
+  \chapter{Conclusiones}
+  \input{./Capitulos/Conclusiones/Conclusiones.tex}
   
   \bibliographystyle{apacite}
   \bibliography{bibliografia}
   
-   %\renewcommand\appendixname{Anexo}
-  
+  \renewcommand\appendixname{Anexo}
+  \chapter{Anexos}
    \appendix
    \input{./Capitulos/Anexos/Anexos.tex}
   
