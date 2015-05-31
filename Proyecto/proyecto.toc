@@ -191,59 +191,59 @@
 \contentsline {section}{\numberline {F.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression}{274}{section.Alph6.7}
 \contentsline {section}{\numberline {F.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n del conocimiento}{274}{section.Alph6.8}
 \contentsline {chapter}{\numberline {G}Tablas de descripci\IeC {\'o}n de los casos de uso}{277}{appendix.Alph7}
-\contentsline {section}{\numberline {G.1}M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes}{277}{section.Alph7.1}
+\contentsline {section}{\numberline {G.1}M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes}{278}{section.Alph7.1}
 \contentsline {section}{\numberline {G.2}M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores}{292}{section.Alph7.2}
-\contentsline {section}{\numberline {G.3}M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos}{323}{section.Alph7.3}
-\contentsline {section}{\numberline {G.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{354}{section.Alph7.4}
-\contentsline {section}{\numberline {G.5}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{378}{section.Alph7.5}
-\contentsline {section}{\numberline {G.6}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{393}{section.Alph7.6}
-\contentsline {section}{\numberline {G.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{410}{section.Alph7.7}
-\contentsline {section}{\numberline {G.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression}{454}{section.Alph7.8}
-\contentsline {section}{\numberline {G.9}M\IeC {\'o}dulo de difusi\IeC {\'o}n de informaci\IeC {\'o}n}{498}{section.Alph7.9}
-\contentsline {section}{\numberline {G.10}M\IeC {\'o}dulo de gesti\IeC {\'o}n del conocimiento}{501}{section.Alph7.10}
-\contentsline {section}{\numberline {G.11}M\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{522}{section.Alph7.11}
-\contentsline {section}{\numberline {G.12}M\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{532}{section.Alph7.12}
-\contentsline {section}{\numberline {G.13}M\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{546}{section.Alph7.13}
-\contentsline {chapter}{\numberline {H}Pantallas UI del prototipo de SNS}{551}{appendix.Alph8}
-\contentsline {section}{\numberline {H.1}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de deportes}{551}{section.Alph8.1}
-\contentsline {section}{\numberline {H.2}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{566}{section.Alph8.2}
-\contentsline {section}{\numberline {H.3}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de eventos}{569}{section.Alph8.3}
-\contentsline {section}{\numberline {H.4}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de gesti\IeC {\'o}n self-sharing}{579}{section.Alph8.4}
-\contentsline {section}{\numberline {H.5}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{597}{section.Alph8.5}
-\contentsline {section}{\numberline {H.6}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de contenidos}{618}{section.Alph8.6}
-\contentsline {section}{\numberline {H.7}Pantallas UI del m\IeC {\'o}dulo de administraci\IeC {\'o}n}{629}{section.Alph8.7}
-\contentsline {section}{\numberline {H.8}Pantallas UI del m\IeC {\'o}dulo de difusion de informacion}{635}{section.Alph8.8}
-\contentsline {section}{\numberline {H.9}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{637}{section.Alph8.9}
-\contentsline {chapter}{\numberline {I}Modelo de datos a implementar en tareas posteriores}{639}{appendix.Alph9}
-\contentsline {section}{\numberline {I.1}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{639}{section.Alph9.1}
-\contentsline {section}{\numberline {I.2}Modelo de datos de gesti\IeC {\'o}n de conocimiento}{640}{section.Alph9.2}
-\contentsline {section}{\numberline {I.3}Modelo de datos de gesti\IeC {\'o}n de multimedia}{640}{section.Alph9.3}
-\contentsline {section}{\numberline {I.4}Modelo de datos de gesti\IeC {\'o}n de roles}{642}{section.Alph9.4}
-\contentsline {chapter}{\numberline {J}Diccionario de datos}{643}{appendix.Alph10}
-\contentsline {section}{\numberline {J.1}Modelo de datos con entidades/relaciones generales}{643}{section.Alph10.1}
-\contentsline {subsection}{\numberline {J.1.1}Entidades}{643}{subsection.Alph10.1.1}
-\contentsline {subsection}{\numberline {J.1.2}Relaciones}{644}{subsection.Alph10.1.2}
-\contentsline {section}{\numberline {J.2}Modelo de datos de gesti\IeC {\'o}n de eventos}{645}{section.Alph10.2}
-\contentsline {subsection}{\numberline {J.2.1}Entidades}{645}{subsection.Alph10.2.1}
-\contentsline {subsection}{\numberline {J.2.2}Relaciones}{648}{subsection.Alph10.2.2}
-\contentsline {section}{\numberline {J.3}Modelo de datos de gesti\IeC {\'o}n de ubicaciones}{650}{section.Alph10.3}
-\contentsline {subsection}{\numberline {J.3.1}Entidades}{651}{subsection.Alph10.3.1}
-\contentsline {subsection}{\numberline {J.3.2}Relaciones}{652}{subsection.Alph10.3.2}
-\contentsline {section}{\numberline {J.4}Modelo de datos de gesti\IeC {\'o}n de deportes}{655}{section.Alph10.4}
-\contentsline {subsection}{\numberline {J.4.1}Entidades}{656}{subsection.Alph10.4.1}
-\contentsline {subsection}{\numberline {J.4.2}Relaciones}{657}{subsection.Alph10.4.2}
-\contentsline {section}{\numberline {J.5}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{664}{section.Alph10.5}
-\contentsline {subsection}{\numberline {J.5.1}Entidades}{665}{subsection.Alph10.5.1}
-\contentsline {subsection}{\numberline {J.5.2}Relaciones}{670}{subsection.Alph10.5.2}
-\contentsline {section}{\numberline {J.6}Modelo de datos de gesti\IeC {\'o}n de multimedia}{672}{section.Alph10.6}
-\contentsline {subsection}{\numberline {J.6.1}Entidades}{674}{subsection.Alph10.6.1}
-\contentsline {subsection}{\numberline {J.6.2}Relaciones}{674}{subsection.Alph10.6.2}
-\contentsline {section}{\numberline {J.7}Modelo de datos de gesti\IeC {\'o}n de contenidos}{681}{section.Alph10.7}
-\contentsline {subsection}{\numberline {J.7.1}Entidades}{681}{subsection.Alph10.7.1}
-\contentsline {subsection}{\numberline {J.7.2}Relaciones}{681}{subsection.Alph10.7.2}
-\contentsline {section}{\numberline {J.8}Modelo de datos de gesti\IeC {\'o}n de roles}{683}{section.Alph10.8}
-\contentsline {subsection}{\numberline {J.8.1}Entidades}{683}{subsection.Alph10.8.1}
-\contentsline {subsection}{\numberline {J.8.2}Relaciones}{683}{subsection.Alph10.8.2}
-\contentsline {section}{\numberline {J.9}Modelo de datos de gesti\IeC {\'o}n de usuarios}{685}{section.Alph10.9}
-\contentsline {subsection}{\numberline {J.9.1}Entidades}{685}{subsection.Alph10.9.1}
-\contentsline {subsection}{\numberline {J.9.2}Relaciones}{685}{subsection.Alph10.9.2}
+\contentsline {section}{\numberline {G.3}M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos}{322}{section.Alph7.3}
+\contentsline {section}{\numberline {G.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{352}{section.Alph7.4}
+\contentsline {section}{\numberline {G.5}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{375}{section.Alph7.5}
+\contentsline {section}{\numberline {G.6}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{389}{section.Alph7.6}
+\contentsline {section}{\numberline {G.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{405}{section.Alph7.7}
+\contentsline {section}{\numberline {G.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression}{448}{section.Alph7.8}
+\contentsline {section}{\numberline {G.9}M\IeC {\'o}dulo de difusi\IeC {\'o}n de informaci\IeC {\'o}n}{491}{section.Alph7.9}
+\contentsline {section}{\numberline {G.10}M\IeC {\'o}dulo de gesti\IeC {\'o}n del conocimiento}{493}{section.Alph7.10}
+\contentsline {section}{\numberline {G.11}M\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{513}{section.Alph7.11}
+\contentsline {section}{\numberline {G.12}M\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{522}{section.Alph7.12}
+\contentsline {section}{\numberline {G.13}M\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{535}{section.Alph7.13}
+\contentsline {chapter}{\numberline {H}Pantallas UI del prototipo de SNS}{539}{appendix.Alph8}
+\contentsline {section}{\numberline {H.1}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de deportes}{539}{section.Alph8.1}
+\contentsline {section}{\numberline {H.2}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{554}{section.Alph8.2}
+\contentsline {section}{\numberline {H.3}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de eventos}{557}{section.Alph8.3}
+\contentsline {section}{\numberline {H.4}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de gesti\IeC {\'o}n self-sharing}{567}{section.Alph8.4}
+\contentsline {section}{\numberline {H.5}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{585}{section.Alph8.5}
+\contentsline {section}{\numberline {H.6}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de contenidos}{606}{section.Alph8.6}
+\contentsline {section}{\numberline {H.7}Pantallas UI del m\IeC {\'o}dulo de administraci\IeC {\'o}n}{617}{section.Alph8.7}
+\contentsline {section}{\numberline {H.8}Pantallas UI del m\IeC {\'o}dulo de difusion de informacion}{623}{section.Alph8.8}
+\contentsline {section}{\numberline {H.9}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{625}{section.Alph8.9}
+\contentsline {chapter}{\numberline {I}Modelo de datos a implementar en tareas posteriores}{627}{appendix.Alph9}
+\contentsline {section}{\numberline {I.1}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{627}{section.Alph9.1}
+\contentsline {section}{\numberline {I.2}Modelo de datos de gesti\IeC {\'o}n de conocimiento}{628}{section.Alph9.2}
+\contentsline {section}{\numberline {I.3}Modelo de datos de gesti\IeC {\'o}n de multimedia}{628}{section.Alph9.3}
+\contentsline {section}{\numberline {I.4}Modelo de datos de gesti\IeC {\'o}n de roles}{630}{section.Alph9.4}
+\contentsline {chapter}{\numberline {J}Diccionario de datos}{631}{appendix.Alph10}
+\contentsline {section}{\numberline {J.1}Modelo de datos con entidades/relaciones generales}{631}{section.Alph10.1}
+\contentsline {subsection}{\numberline {J.1.1}Entidades}{631}{subsection.Alph10.1.1}
+\contentsline {subsection}{\numberline {J.1.2}Relaciones}{632}{subsection.Alph10.1.2}
+\contentsline {section}{\numberline {J.2}Modelo de datos de gesti\IeC {\'o}n de eventos}{633}{section.Alph10.2}
+\contentsline {subsection}{\numberline {J.2.1}Entidades}{633}{subsection.Alph10.2.1}
+\contentsline {subsection}{\numberline {J.2.2}Relaciones}{636}{subsection.Alph10.2.2}
+\contentsline {section}{\numberline {J.3}Modelo de datos de gesti\IeC {\'o}n de ubicaciones}{638}{section.Alph10.3}
+\contentsline {subsection}{\numberline {J.3.1}Entidades}{639}{subsection.Alph10.3.1}
+\contentsline {subsection}{\numberline {J.3.2}Relaciones}{640}{subsection.Alph10.3.2}
+\contentsline {section}{\numberline {J.4}Modelo de datos de gesti\IeC {\'o}n de deportes}{643}{section.Alph10.4}
+\contentsline {subsection}{\numberline {J.4.1}Entidades}{644}{subsection.Alph10.4.1}
+\contentsline {subsection}{\numberline {J.4.2}Relaciones}{645}{subsection.Alph10.4.2}
+\contentsline {section}{\numberline {J.5}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{652}{section.Alph10.5}
+\contentsline {subsection}{\numberline {J.5.1}Entidades}{653}{subsection.Alph10.5.1}
+\contentsline {subsection}{\numberline {J.5.2}Relaciones}{658}{subsection.Alph10.5.2}
+\contentsline {section}{\numberline {J.6}Modelo de datos de gesti\IeC {\'o}n de multimedia}{660}{section.Alph10.6}
+\contentsline {subsection}{\numberline {J.6.1}Entidades}{662}{subsection.Alph10.6.1}
+\contentsline {subsection}{\numberline {J.6.2}Relaciones}{662}{subsection.Alph10.6.2}
+\contentsline {section}{\numberline {J.7}Modelo de datos de gesti\IeC {\'o}n de contenidos}{669}{section.Alph10.7}
+\contentsline {subsection}{\numberline {J.7.1}Entidades}{669}{subsection.Alph10.7.1}
+\contentsline {subsection}{\numberline {J.7.2}Relaciones}{669}{subsection.Alph10.7.2}
+\contentsline {section}{\numberline {J.8}Modelo de datos de gesti\IeC {\'o}n de roles}{671}{section.Alph10.8}
+\contentsline {subsection}{\numberline {J.8.1}Entidades}{671}{subsection.Alph10.8.1}
+\contentsline {subsection}{\numberline {J.8.2}Relaciones}{671}{subsection.Alph10.8.2}
+\contentsline {section}{\numberline {J.9}Modelo de datos de gesti\IeC {\'o}n de usuarios}{673}{section.Alph10.9}
+\contentsline {subsection}{\numberline {J.9.1}Entidades}{673}{subsection.Alph10.9.1}
+\contentsline {subsection}{\numberline {J.9.2}Relaciones}{673}{subsection.Alph10.9.2}
