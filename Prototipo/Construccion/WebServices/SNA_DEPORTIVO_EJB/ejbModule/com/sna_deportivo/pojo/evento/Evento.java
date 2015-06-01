@@ -286,64 +286,40 @@ public abstract class Evento {
 			Evento e = (Evento)obj;
 			retorno = true;
 			if(e.getId() != null && retorno)
-			   if(e.getId() == this.id)
-				   retorno = true;
-			   else
+			   if(e.getId() != this.id)
 				   retorno = false;
-			if(e.getDescripcion() != null && retorno)
-			   if(e.getDescripcion() == this.descripcion)
-				   retorno = true;
-			   else
+			if(retorno && e.getDescripcion() != null)
+			   if(e.getDescripcion() != this.descripcion)
 				   retorno = false;
-			if(e.getFechaCreacion() != null && retorno)
-			   if(e.getFechaCreacion() == this.fechaCreacion)
-				   retorno = true;
-			   else
+			if(retorno && e.getFechaCreacion() != null)
+			   if(e.getFechaCreacion() != this.fechaCreacion)
 				   retorno = false;
-			if(e.getFechaInicio() != null && retorno)
-			   if(e.getFechaInicio() == this.fechaInicio)
-				   retorno = true;
-			   else
+			if(retorno && e.getFechaInicio() != null)
+			   if(e.getFechaInicio() != this.fechaInicio)
 				   retorno = false;
-			if(e.getFechaFinal() != null && retorno)
-			   if(e.getFechaFinal() == this.fechaFinal)
-				   retorno = true;
-			   else
+			if(retorno && e.getFechaFinal() != null)
+			   if(e.getFechaFinal() != this.fechaFinal)
 				   retorno = false;
-			if(e.getNombre() != null && retorno)
-			   if(e.getNombre() == this.nombre)
-				   retorno = true;
-			   else
+			if(retorno && e.getNombre() != null)
+			   if(e.getNombre() != this.nombre)
 				   retorno = false;
-			if(e.getHoraInicio() != null && retorno)
-				if(e.getHoraInicio() == this.horaInicio)
-					retorno = true;
-				else
+			if(retorno && e.getHoraInicio() != null)
+				if(e.getHoraInicio() != this.horaInicio)
 					retorno = false;
-			if(e.getHoraFinal() != null && retorno)
-				if(e.getHoraFinal() == this.horaFinal)
-					retorno = true;
-				else
+			if(retorno && e.getHoraFinal() != null)
+				if(e.getHoraFinal() != this.horaFinal)
 				    retorno = false;
 			if(retorno && e.getActivo() != null)
-				if (e.getActivo() == this.activo)
-					retorno = true;
-				else
+				if (e.getActivo() != this.activo)
 					retorno = false;
 			if(retorno && e.getRangoMaxEdad() != null)
-				if (e.getRangoMaxEdad() == this.rangoMaxEdad)
-					retorno = true;
-				else
+				if (e.getRangoMaxEdad() != this.rangoMaxEdad)
 					retorno = false;
 			if(retorno && e.getRangoMinEdad() != null)
-				if (e.getRangoMinEdad() == this.rangoMinEdad)
-					retorno = true;
-				else
+				if (e.getRangoMinEdad() != this.rangoMinEdad)
 					retorno = false;
 			if(retorno && e.getRangoMaxEdad() != null)
-				if (e.getRangoMaxEdad() == this.rangoMaxEdad)
-					retorno = true;
-				else
+				if (e.getRangoMaxEdad() != this.rangoMaxEdad)
 					retorno = false;
 		}
 		

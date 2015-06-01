@@ -16,4 +16,13 @@
     <servlet-name>jersey-servlet</servlet-name>
     <url-pattern>/services/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <display-name>HelloWorld</display-name>
+    <servlet-name>HelloWorld</servlet-name>
+    <servlet-class>org.jboss.samples.webservices.HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloWorld</servlet-name>
+    <url-pattern>/HelloWorld</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -19,6 +19,11 @@ public class Relaciones {
 	 */
 	public static final String PRACTICADEPORTE = "R_PracticaDeporte";
 	
+	/**
+	 * Relacion entre {@link Entidades#USUARIO} y {@link Entidades#ROL}
+	 */
+	public static final String ASUMEROL = "R_AsumeRol";
+	
 	//*****************************Deportes*******************************
 	/**
 	 * Relacion entre {@link Entidades#DEPORTE} y {@link Entidades#GENERO}

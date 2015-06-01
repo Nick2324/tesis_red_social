@@ -39,6 +39,8 @@ public class Entidades {
 	 */
 	public static final String USUARIO = "E_Usuario";
 	
+	public static final String ROL = "E_Rol";
+	
 	//*************************Ubicaciones**************************
 	/**
 	 * 

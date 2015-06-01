@@ -7,6 +7,7 @@ public class ResponseGenerico {
 	
 	private String caracterAceptacion;
 	private String mensajeRespuesta;
+	private String datosExtra;
 	
 	public String getCaracterAceptacion() {
 		return caracterAceptacion;
@@ -19,6 +20,12 @@ public class ResponseGenerico {
 	}
 	public void setMensajeRespuesta(String mesnajeRespuesta) {
 		this.mensajeRespuesta = mesnajeRespuesta;
+	}
+	public String getDatosExtra() {
+		return datosExtra;
+	}
+	public void setDatosExtra(String datosExtra) {
+		this.datosExtra = datosExtra;
 	}
 	
 }

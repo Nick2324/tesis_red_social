@@ -94,7 +94,7 @@ public class Usuario extends UnUsuario{
 	@Override
 	public String toString() {
 		StringBuilder retorno = new StringBuilder("");
-		retorno.append("\"primerNombre\": \"" + primerNombre + "\",");
+		retorno.append("{\"primerNombre\": \"" + primerNombre + "\",");
 		retorno.append("\"segundoNombre\": \"" + segundoNombre + "\",");
 		retorno.append("\"apellidos\": \"" + apellidos + "\",");
 		retorno.append("\"usuario\": \"" + usuario + "\",");
@@ -104,7 +104,7 @@ public class Usuario extends UnUsuario{
 		retorno.append("\"fechaNacimiento\": \"" + fechaNacimiento + "\",");
 		retorno.append("\"fechaRegistro\": \"" + fechaRegistro + "\",");
 		retorno.append("\"sexo\": \"" + sexo + "\",");
-		retorno.append("\"estado\": \"" + estado + "\"");
+		retorno.append("\"estado\": \"" + estado + "\"}");
 		return retorno.toString();
 	}
 
