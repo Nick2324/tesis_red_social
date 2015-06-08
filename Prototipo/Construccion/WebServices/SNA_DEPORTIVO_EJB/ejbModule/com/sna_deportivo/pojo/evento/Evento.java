@@ -2,6 +2,14 @@ package com.sna_deportivo.pojo.evento;
 
 import java.util.Date;
 
+import com.sna_deportivo.pojo.general.ObjectSNSDeportivo;
+import com.sna_deportivo.pojo.json.JsonObject;
+import com.sna_deportivo.pojo.json.JsonSerializable;
+import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
+import com.sna_deportivo.utils.FechaSNS;
+import com.sna_deportivo.utils.TiempoSNS;
+import com.sna_deportivo.utils.Utils;
+
 /**
  * 
  * Clase representante de eventos en la red social deportiva
@@ -11,16 +19,16 @@ import java.util.Date;
  *
  */
 
-public abstract class Evento {
+public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 
 	private String id;
 	private String nombre;
 	private String descripcion;
-	private Date fechaCreacion;
-	private Date fechaInicio;
-	private Date fechaFinal;
-	private Date horaInicio;
-	private Date horaFinal;
+	private FechaSNS fechaCreacion;
+	private FechaSNS fechaInicio;
+	private FechaSNS fechaFinal;
+	private TiempoSNS horaInicio;
+	private TiempoSNS horaFinal;
 	private Integer numMaxParticipantes;
 	private Integer rangoMaxEdad;
 	private Integer rangoMinEdad;
@@ -31,7 +39,13 @@ public abstract class Evento {
 	 * Constructor por defecto
 	 * 
 	 */
-	public Evento(){}
+	public Evento(){
+		this.fechaCreacion = new FechaSNS();
+		this.fechaInicio = new FechaSNS();
+		this.fechaFinal = new FechaSNS();
+		this.horaInicio = new TiempoSNS();
+		this.horaFinal = new TiempoSNS();
+	}
 	
 	/**
 	 * 
@@ -39,8 +53,8 @@ public abstract class Evento {
 	 * 
 	 * @param horaFinal Hora final del evento
 	 */
-	public void setHoraFinal(Date horaFinal){
-		this.horaFinal = horaFinal;
+	public void setHoraFinal(String horaFinal){
+		this.horaFinal.setHora(horaFinal);
 	}
 	
 	/**
@@ -49,8 +63,8 @@ public abstract class Evento {
 	 * 
 	 * @param horaInicio Hora inicial del evento
 	 */
-	public void setHoraInicio(Date horaInicio){
-		this.horaInicio = horaInicio;
+	public void setHoraInicio(String horaInicio){
+		this.horaInicio.setHora(horaInicio);
 	}
 	
 	/**
@@ -69,8 +83,8 @@ public abstract class Evento {
 	 * 
 	 * @param fechaFinal Fecha final del evento
 	 */
-	public void setFechaFinal(Date fechaFinal){
-		this.fechaFinal = fechaFinal;
+	public void setFechaFinal(String fechaFinal){
+		this.fechaFinal.setFecha(fechaFinal);
 	}
 	
 	/**
@@ -79,8 +93,8 @@ public abstract class Evento {
 	 * 
 	 * @param fechaInicio Fecha inicial del evento
 	 */
-	public void setFechaInicio(Date fechaInicio){
-		this.fechaInicio = fechaInicio;
+	public void setFechaInicio(String fechaInicio){
+		this.fechaInicio.setFecha(fechaInicio);
 	}
 	
 	/**
@@ -89,8 +103,8 @@ public abstract class Evento {
 	 * 
 	 * @param fechaCreacion Fecha de creacion del evento
 	 */
-	public void setFechaCreacion(Date fechaCreacion){
-		this.fechaCreacion = fechaCreacion;
+	public void setFechaCreacion(String fechaCreacion){
+		this.fechaCreacion.setFecha(fechaCreacion);
 	}
 	
 	/**
@@ -177,8 +191,8 @@ public abstract class Evento {
 	 * 
 	 * @return Hora final del evento
 	 */
-	public Date getHoraFinal(){
-		return this.horaFinal;
+	public String getHoraFinal(){
+		return this.horaFinal.toString();
 	}
 	
 	/**
@@ -188,8 +202,8 @@ public abstract class Evento {
 	 * @return Hora inicial del evento
 	 */
 	
-	public Date getHoraInicio(){
-		return this.horaInicio;
+	public String getHoraInicio(){
+		return this.horaInicio.toString();
 	}
 	
 	/**
@@ -210,8 +224,8 @@ public abstract class Evento {
 	 * @return Fecha final del evento
 	 */
 	
-	public Date getFechaFinal(){
-		return this.fechaFinal;
+	public String getFechaFinal(){
+		return this.fechaFinal.toString();
 	}
 	
 	/**
@@ -221,8 +235,8 @@ public abstract class Evento {
 	 * @return Fecha inicial del evento
 	 */
 	
-	public Date getFechaInicio(){
-		return this.fechaInicio;
+	public String getFechaInicio(){
+		return this.fechaInicio.toString();
 	}
 	
 	/**
@@ -232,8 +246,8 @@ public abstract class Evento {
 	 * @return Fecha de creacion del evento
 	 */
 	
-	public Date getFechaCreacion(){
-		return this.fechaCreacion;
+	public String getFechaCreacion(){
+		return this.fechaCreacion.toString();
 	}
 	
 	/**
@@ -292,22 +306,22 @@ public abstract class Evento {
 			   if(e.getDescripcion() != this.descripcion)
 				   retorno = false;
 			if(retorno && e.getFechaCreacion() != null)
-			   if(e.getFechaCreacion() != this.fechaCreacion)
+			   if(e.getFechaCreacion().equals(this.fechaCreacion.toString()))
 				   retorno = false;
 			if(retorno && e.getFechaInicio() != null)
-			   if(e.getFechaInicio() != this.fechaInicio)
+			   if(e.getFechaInicio().equals(this.fechaInicio.toString()))
 				   retorno = false;
 			if(retorno && e.getFechaFinal() != null)
-			   if(e.getFechaFinal() != this.fechaFinal)
+			   if(e.getFechaFinal().equals(this.fechaFinal.toString()))
 				   retorno = false;
 			if(retorno && e.getNombre() != null)
 			   if(e.getNombre() != this.nombre)
 				   retorno = false;
 			if(retorno && e.getHoraInicio() != null)
-				if(e.getHoraInicio() != this.horaInicio)
+				if(e.getHoraInicio().equals(this.horaInicio.toString()))
 					retorno = false;
 			if(retorno && e.getHoraFinal() != null)
-				if(e.getHoraFinal() != this.horaFinal)
+				if(e.getHoraFinal().equals(this.horaFinal.toString()))
 				    retorno = false;
 			if(retorno && e.getActivo() != null)
 				if (e.getActivo() != this.activo)
@@ -344,6 +358,117 @@ public abstract class Evento {
 				"rangoMaxEdad:"+this.rangoMaxEdad+","+
 				"rangoMinEdad:"+this.rangoMinEdad+","+
 				"activo:"+this.activo+"}";
+	}
+	
+	@Override
+	public String stringJson(){
+		return "{id:"+this.id+","+
+				"nombre:"+this.nombre+","+
+				"descripcion:"+this.descripcion+","+
+				"fechaCreacion:"+this.fechaCreacion+","+
+				"fechaInicio:"+this.fechaInicio+","+
+				"fechaFinal:"+this.fechaFinal+","+
+				"horaInicio:"+this.horaInicio+","+
+				"horaFinal:"+this.horaFinal+","+
+				"numMaxParticipantes:"+this.numMaxParticipantes+","+
+				"rangoMaxEdad:"+this.rangoMaxEdad+","+
+				"rangoMinEdad:"+this.rangoMinEdad+","+
+				"activo:"+this.activo+"}";
+	}
+	
+	/**
+	 * Muestra si la string ingresada es o no un atributo
+	 * 
+	 * @param atributo String que representa el nombre del atributo
+	 * @return boolean True si es atributo o false si no lo es
+	 */
+	protected boolean esAtributo(String atributo){
+		if(atributo.equals("id") ||
+		   atributo.equals("nombre")||
+		   atributo.equals("descripcion") ||
+		   atributo.equals("fechaCreacion")||
+		   atributo.equals("fechaInicio")||
+		   atributo.equals("fechaFinal")||
+		   atributo.equals("horaInicio")||
+		   atributo.equals("horaFinal")||
+		   atributo.equals("numMaxParticipantes")||
+		   atributo.equals("rangoMaxEdad")||
+		   atributo.equals("rangoMinEdad")||
+		   atributo.equals("activo"))
+			return true;
+		
+		return false;
+		
+	}
+	
+	protected boolean setAtributo(String atributo,Object[] valor) throws ExcepcionJsonDeserializacion{
+		boolean asignado = false;
+		if(atributo.equals("id")){
+			this.setId((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("nombre[0]")){
+			this.setNombre((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("descripcion")){
+			this.setDescripcion((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("fechaCreacion")){
+			this.setFechaCreacion((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("fechaInicio")){
+			this.setFechaInicio((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("fechaFinal")){
+			this.setFechaFinal((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("horaInicio")){
+			this.setHoraInicio((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("horaFinal")){
+			this.setNumMaxParticipantes(Integer.parseInt((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("numMaxParticipantes")){
+			this.setNumMaxParticipantes(Integer.parseInt((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("rangoMaxEdad")){
+			this.setRangoMaxEdad(Integer.parseInt((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("rangoMinEdad")){
+			this.setRangoMinEdad(Integer.parseInt((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("activo")){
+			this.setActivo(Boolean.parseBoolean((String)valor[0]));
+			asignado = true;
+		}
+		
+		return asignado;
+		
+	}
+	
+	@Override
+	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
+		for(String propiedad:json.getPropiedades().keySet()){
+			if(!(this.esAtributo(propiedad) && 
+				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
+				throw new ExcepcionJsonDeserializacion();
+		}
+	}
+	
+	@Override
+	public JsonObject serializarJson() {
+		return Utils.JsonStringToObject(
+				"{id:"+this.id+","+
+				"nombre:"+this.nombre+","+
+				"descripcion:"+this.descripcion+","+
+				"fechaCreacion:"+this.fechaCreacion+","+
+				"fechaInicio:"+this.fechaInicio+","+
+				"fechaFinal:"+this.fechaFinal+","+
+				"horaInicio:"+this.horaInicio+","+
+				"horaFinal:"+this.horaFinal+","+
+				"numMaxParticipantes:"+this.numMaxParticipantes+","+
+				"rangoMaxEdad:"+this.rangoMaxEdad+","+
+				"rangoMinEdad:"+this.rangoMinEdad+","+
+				"activo:"+this.activo+"}");
 	}
 	
 }

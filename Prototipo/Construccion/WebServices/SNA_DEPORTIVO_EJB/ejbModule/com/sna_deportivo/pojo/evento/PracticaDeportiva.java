@@ -11,7 +11,7 @@ package com.sna_deportivo.pojo.evento;
  *
  */
 
-public class PracticaDeportiva extends Evento{
+public class PracticaDeportiva extends Evento {
 	
 	/**
 	 * 

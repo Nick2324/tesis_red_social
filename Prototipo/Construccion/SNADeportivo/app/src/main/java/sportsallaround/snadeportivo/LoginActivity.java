@@ -40,8 +40,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import sportsallaround.snadeportivo.Users.CreateUserActivity;
-import sportsallaround.snadeportivo.Users.UserMainActivity;
+import sportsallaround.snadeportivo.usuarios.CreateUserActivity;
+import sportsallaround.snadeportivo.usuarios.UserMainActivity;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.Utils;
 

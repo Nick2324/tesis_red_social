@@ -8,27 +8,6 @@ public class DEPracticaDeportiva extends DAOEvento{
 	
 	public DEPracticaDeportiva(PracticaDeportiva pd){
 		super(pd);
+		this.eventoManejado = ConstantesEventos.PRACTICADEPORTIVALIBRE;
 	}
-	
-	@Override
-	public Evento getEventoDB(){
-		Evento evento = null;
-		return evento;
-	}
-	
-	@Override
-	public boolean updateEventoDB(){
-		return true;
-	}
-	
-	@Override
-	public boolean deleteEventoDB(){
-		return true;
-	}
-	
-	@Override
-	public boolean crearEventoDB(){
-		return true;
-	}
-	
 }

@@ -10,7 +10,9 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
 
-import com.sna_deportivo.pojo.JsonObject;
+import com.sna_deportivo.pojo.general.ObjectSNSDeportivo;
+import com.sna_deportivo.pojo.json.JsonObject;
+import com.sna_deportivo.utils.excepciones.BDException;
 
 public class BDUtils {
 
@@ -37,8 +39,9 @@ public class BDUtils {
 
 		return new ResteasyClientBuilder().build();
 	}
-
-	public static Object[] EjecutarQuery(String query) throws BDException {
+	
+	//PODRIA DEVOLVER TAMBIEN EL/LOS RECURSOS DE LA LLAMADA?
+	public static Object[] ejecutarQuery(String query) throws BDException {
 		String stringRespuesta;
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
@@ -70,7 +73,7 @@ public class BDUtils {
 		}
 	}
 
-	public static String CrearNodo() throws BDException {
+	public static String crearNodo() throws BDException {
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
 
@@ -87,7 +90,7 @@ public class BDUtils {
 			return result.getStatus() + "";
 	}
 
-	public static boolean AdicionarPropiedades(String rutaNodo,
+	public static boolean adicionarPropiedades(String rutaNodo,
 			String propiedades) throws BDException {
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
@@ -104,7 +107,7 @@ public class BDUtils {
 
 	}
 
-	public static boolean AdicionarLabel(String rutaNodo, String label)
+	public static boolean adicionarLabel(String rutaNodo, String label)
 			throws BDException {
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
@@ -119,7 +122,7 @@ public class BDUtils {
 		return result.getStatus() == 204;
 	}
 
-	public static boolean CrearRelacion(String rutaNodo, String propiedades) throws BDException {
+	public static boolean crearRelacion(String rutaNodo, String propiedades) throws BDException {
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
 
@@ -135,4 +138,43 @@ public class BDUtils {
 		return result.getStatus() == 201;
 	}
 
+	//SE PODRIA AGREGAR UN IGNORE
+	public static String condicionWhere(ObjectSNSDeportivo objetoRedSocial,
+										String identificador){
+		StringBuilder retorno = new StringBuilder("");
+		JsonObject objetoJson = Utils.JsonStringToObject(objetoRedSocial.stringJson());
+		for(String propiedad:objetoJson.getPropiedades().keySet()){
+			retorno.append(identificador);
+			retorno.append(".");
+			retorno.append(propiedad);
+			retorno.append(" = ");
+			retorno.append(objetoJson.getPropiedades().get(propiedad));
+			retorno.append(" AND ");
+		}
+		
+		if(retorno.length() > 4)
+			retorno.delete(retorno.length() - 4, retorno.length() - 1);
+		
+		return retorno.toString();
+	}
+	
+	//SE PODRIA TENER UN ARREGLO DE IGNORE
+	public static String producirSET(ObjectSNSDeportivo objetoRedSocial,
+								     String identificador){
+		StringBuilder retorno = new StringBuilder("SET ");
+		retorno.append(identificador);
+		retorno.append("+=");
+		retorno.append("{");
+		JsonObject objetoJson = Utils.JsonStringToObject(objetoRedSocial.stringJson());
+		for(String propiedad:objetoJson.getPropiedades().keySet()){
+			retorno.append(propiedad);
+			retorno.append(":");
+			retorno.append(objetoJson.getPropiedades().get(propiedad));
+			retorno.append(",");
+		}
+		retorno.delete(retorno.length() - 2, retorno.length() - 1);
+		retorno.append("}");
+		return retorno.toString();
+	}
+	
 }

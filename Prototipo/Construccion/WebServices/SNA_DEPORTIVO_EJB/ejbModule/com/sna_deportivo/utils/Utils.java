@@ -2,7 +2,7 @@ package com.sna_deportivo.utils;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.pojo.JsonObject;
+import com.sna_deportivo.pojo.json.JsonObject;
 
 public class Utils {
 

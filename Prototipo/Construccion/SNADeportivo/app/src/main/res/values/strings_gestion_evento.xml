@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tags Gestion de eventos -->
+    <string name="title_activity_gestion_eventos">Eventos deportivos</string>
+    <string name="hint_carga_informacion">Información del evento</string>
+    <string-array name="tipos_eventos">
+        <string name="practica_deportiva">Practica deportiva</string>
+    </string-array>
+
+</resources>

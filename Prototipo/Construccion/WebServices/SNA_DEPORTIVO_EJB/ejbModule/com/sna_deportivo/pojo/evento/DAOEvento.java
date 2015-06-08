@@ -1,26 +1,27 @@
 package com.sna_deportivo.pojo.evento;
 
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
-import org.jboss.resteasy.client.jaxrs.ResteasyClient;
-
+import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
+import com.sna_deportivo.pojo.json.JsonObject;
+import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
 import com.sna_deportivo.utils.BDUtils;
-import com.sna_deportivo.utils.Constantes;
 import com.sna_deportivo.utils.Entidades;
-//import com.sna_deportivo.utils.UtilDB;
+import com.sna_deportivo.utils.excepciones.BDException;
+
+//*!*!*!*!*! MIRAR COMO MANEJAR RELACIONES SOBRE ARREGLOS, HACERLO GENERICO
+//*!*!*!*!*! PERO AL MENOS YA TENEMOS LA IDEA MAS GENERAL, AHORA A AMPLIAR
 
 public abstract class DAOEvento {
 	
 	private Evento evento;
+	protected String eventoManejado;
 	
-	protected DAOEvento(){}
+	protected DAOEvento(){
+		this.eventoManejado = ConstantesEventos.EVENTOGENERICO;
+	}
 	
 	protected DAOEvento(Evento e){
 		this.evento = e;
-	}
+	}	
 	
 	public void setEvento(Evento e){
 		this.evento = e;
@@ -32,60 +33,97 @@ public abstract class DAOEvento {
 	
 	public Evento getEventoDB(){
 		Evento evento = null;
-		if(this.evento != null){
-			String respuesta;
-			String query = "MATCH (n:"+Entidades.EVENTODEPORTIVO +") WHERE " +
-					"n.nombre = " + this.evento.getNombre() +
-					" RETURN n";
-					//" AND n.id = " + this.evento.getId() +
-					//sin descripcion
-					//" AND n.descripcion "
-			//Futura idea
-			/*for(Field campo:Evento.class.getDeclaredFields()){
-				if(UtilDB.esCampoBD(campo))
-					query += campo.getName() + " = ";
-			}*/
-			String payload = "{\"statements\":[{\"statement\":\"" + query + "\"}]}";
-			ResteasyClient cliente = BDUtils.obtenerCliente();
-			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI)
-					.path("transaction/commit");
-			Response result = target
-					.request()
-					.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8")
-					.post(Entity.entity(payload, MediaType.APPLICATION_JSON),
-							Response.class);
-			if (result.getStatus() == 200) {
-				respuesta = result.readEntity(String.class);
-				if (respuesta.startsWith("{"))
-					respuesta = respuesta.substring(1,
-							respuesta.length() - 1);
-			}		
+		try {
+			evento = new ProductorFactory().
+						 getEventosFactory(this.eventoManejado).
+						 crearEvento();
+			String where = BDUtils.condicionWhere(this.evento,"evento");
+			if(where != null && where.length() > 4){
+				StringBuilder query = new StringBuilder("MATCH (evento:");
+				query.append(Entidades.EVENTODEPORTIVO);
+				query.append(") ");
+				query.append(where);
+				try {
+					evento.deserializarJson(
+							(JsonObject)BDUtils.ejecutarQuery(
+									query.toString())[0]);
+				} catch (BDException e) {
+					e.printStackTrace();
+				}catch (ExcepcionJsonDeserializacion e) {
+					e.printStackTrace();
+				}
+				
+			}
+		
+		} catch (ProductorFactoryExcepcion e1) {
+			e1.printStackTrace();
 		}
 		
-		evento = new PracticaDeportiva();
-		evento.setId("1");
-		evento.setNombre("Evento1");
-		
 		return evento;
+	
+	}
+	
+	private String generalUpdate(Evento e){
+		String set = BDUtils.producirSET(e,"evento");
+		StringBuilder query = new StringBuilder("MATCH (evento:");
+		query.append(Entidades.EVENTODEPORTIVO);
+		query.append("{id:");
+		query.append(this.evento.getId());
+		query.append("}) ");
+		query.append(set);
+		return query.toString();
 	}
 	
 	public boolean updateEventoDB(){
-		return true;
+		try {
+			BDUtils.ejecutarQuery(this.generalUpdate(this.evento));
+			return true;
+		} catch (BDException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 	
-	public boolean updateEventoDB(String[] propiedades){
-		for(String propiedad:propiedades){
-			
+	public boolean updateEventoDB(Evento evento){
+		try {
+			BDUtils.ejecutarQuery(this.generalUpdate(evento));
+			return true;
+		} catch (BDException e) {
+			e.printStackTrace();
 		}
-		return true;
+		return false;
 	}
 	
 	public boolean deleteEventoDB(){
-		return true;
+		Evento e = null;
+		try {
+			e = new ProductorFactory().
+					       getEventosFactory(this.eventoManejado).
+					       crearEvento();
+			e.setId(this.evento.getId());
+			e.setActivo(false);
+		} catch (ProductorFactoryExcepcion e1) {
+			e1.printStackTrace();
+		}
+		
+		if(e != null)
+			return this.updateEventoDB(e);
+		else
+			return false;
+		
 	}
 	
-	public boolean crearEventoDB(){
-		return true;
+	public Evento crearEventoDB(){
+		StringBuilder query = new StringBuilder("CREATE (evento:");
+		//Generar UUID
+		this.evento.setId("1");
+		query.append(this.evento.toString());
+		query.append(")");
+		return this.evento;		
+	}
+	
+	public String getEventoManejado(){
+		return this.eventoManejado;
 	}
 	
 }

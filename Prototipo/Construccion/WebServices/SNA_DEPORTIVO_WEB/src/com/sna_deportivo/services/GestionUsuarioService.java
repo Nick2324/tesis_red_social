@@ -14,10 +14,10 @@ import javax.ws.rs.core.MediaType;
 import com.sna_deportivo.pojo.Credenciales;
 import com.sna_deportivo.pojo.ResponseGenerico;
 import com.sna_deportivo.pojo.Rol;
-import com.sna_deportivo.pojo.UnUsuario;
 import com.sna_deportivo.pojo.Usuario;
-import com.sna_deportivo.utils.BDException;
+import com.sna_deportivo.services.usuarios.GestionUsuario;
 import com.sna_deportivo.utils.CredentialsException;
+import com.sna_deportivo.utils.excepciones.BDException;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -91,8 +91,8 @@ public class GestionUsuarioService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("prueba")
-	public UnUsuario getUnUsuario(UnUsuario usuario){
-		return (Usuario)usuario;
+	public Usuario getUnUsuario(Usuario usuario){
+		return usuario;
 	}
 	
 }
