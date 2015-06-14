@@ -1,4 +1,4 @@
-package com.sna_deportivo.utils;
+package com.sna_deportivo.utils.bd;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation.Builder;
@@ -10,9 +10,11 @@ import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
 
-import com.sna_deportivo.pojo.general.ObjectSNSDeportivo;
-import com.sna_deportivo.pojo.json.JsonObject;
-import com.sna_deportivo.utils.excepciones.BDException;
+import com.sna_deportivo.utils.Constantes;
+import com.sna_deportivo.utils.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonUtils;
 
 public class BDUtils {
 
@@ -40,14 +42,14 @@ public class BDUtils {
 		return new ResteasyClientBuilder().build();
 	}
 	
-	//PODRIA DEVOLVER TAMBIEN EL/LOS RECURSOS DE LA LLAMADA?
-	public static Object[] ejecutarQuery(String query) throws BDException {
+	private static Object[] abstractoQuery(String query,
+										 String payload
+										 )throws BDException{
 		String stringRespuesta;
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
 		else {
-			String payload = "{\"statements\":[{\"statement\":\"" + query
-					+ "\"}]}";
+			System.out.println(query);
 			ResteasyClient cliente = BDUtils.obtenerCliente();
 			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
 					PATH);
@@ -58,19 +60,39 @@ public class BDUtils {
 							Response.class);
 			if (result.getStatus() == 200) {
 				stringRespuesta = result.readEntity(String.class);
-				JsonObject resultado = Utils
+				System.out.println(stringRespuesta);
+				JsonObject resultado = JsonUtils
 						.JsonStringToObject(stringRespuesta);
 				JsonObject results = (JsonObject) resultado.getPropiedades()
 						.get("results")[0];
 				JsonObject arregloData = (JsonObject) results.getPropiedades()
 						.get("arreglo")[0];
-				JsonObject data = (JsonObject) arregloData.getPropiedades()
+				JsonObject data;
+					data = (JsonObject) arregloData.getPropiedades()
 						.get("data")[0];
 				Object[] contenidoData = data.getPropiedades().get("arreglo");
+
 				return contenidoData;
-			} else
+			} else{
 				throw new BDException();
+			}
 		}
+	}
+	
+	public static Object[] ejecutarQueryREST(String query) throws BDException{
+		return BDUtils.abstractoQuery(query,
+				"{\"statements\": "+
+					"[{\"statement\" :\"" + query + "\","+
+					  "\"resultDataContents\":[\"REST\"]"+
+					 "}"+
+					"]"+
+				"}");
+	}
+	
+	public static Object[] ejecutarQuery(String query) throws BDException {
+		return BDUtils.abstractoQuery(query,
+					"{\"statements\":[{\"statement\":\"" + query
+					+ "\"}]}");
 	}
 
 	public static String crearNodo() throws BDException {
@@ -141,21 +163,25 @@ public class BDUtils {
 	//SE PODRIA AGREGAR UN IGNORE
 	public static String condicionWhere(ObjectSNSDeportivo objetoRedSocial,
 										String identificador){
-		StringBuilder retorno = new StringBuilder("");
-		JsonObject objetoJson = Utils.JsonStringToObject(objetoRedSocial.stringJson());
+		StringBuilder retorno = new StringBuilder(" WHERE ");
+		JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 		for(String propiedad:objetoJson.getPropiedades().keySet()){
-			retorno.append(identificador);
-			retorno.append(".");
-			retorno.append(propiedad);
-			retorno.append(" = ");
-			retorno.append(objetoJson.getPropiedades().get(propiedad));
-			retorno.append(" AND ");
+			if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null"))){
+				retorno.append(identificador);
+				retorno.append(".");
+				retorno.append(propiedad);
+				retorno.append(" = ");
+				retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
+				retorno.append(" AND ");
+			}
 		}
 		
 		if(retorno.length() > 4)
 			retorno.delete(retorno.length() - 4, retorno.length() - 1);
-		
-		return retorno.toString();
+		if(!retorno.toString().equals(" WHERE "))
+			return retorno.toString();
+		else
+			return "";
 	}
 	
 	//SE PODRIA TENER UN ARREGLO DE IGNORE
@@ -165,7 +191,7 @@ public class BDUtils {
 		retorno.append(identificador);
 		retorno.append("+=");
 		retorno.append("{");
-		JsonObject objetoJson = Utils.JsonStringToObject(objetoRedSocial.stringJson());
+		JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 		for(String propiedad:objetoJson.getPropiedades().keySet()){
 			retorno.append(propiedad);
 			retorno.append(":");
@@ -175,6 +201,13 @@ public class BDUtils {
 		retorno.delete(retorno.length() - 2, retorno.length() - 1);
 		retorno.append("}");
 		return retorno.toString();
+	}
+	
+	public static JsonObject obtenerRestRegistro(Object registroResultadoRest){
+		JsonObject registro = (JsonObject)registroResultadoRest;
+		JsonObject rest = (JsonObject)registro.getPropiedades().get("rest")[0];
+		JsonObject restArreglo = (JsonObject)rest.getPropiedades().get("arreglo")[0];
+		return restArreglo;
 	}
 	
 }

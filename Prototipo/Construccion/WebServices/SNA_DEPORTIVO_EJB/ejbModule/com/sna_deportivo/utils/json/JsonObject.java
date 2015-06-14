@@ -1,4 +1,4 @@
-package com.sna_deportivo.pojo.json;
+package com.sna_deportivo.utils.json;
 
 import java.util.HashMap;
 import java.util.Map;

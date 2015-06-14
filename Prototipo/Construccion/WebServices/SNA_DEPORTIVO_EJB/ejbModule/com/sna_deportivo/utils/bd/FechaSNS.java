@@ -1,4 +1,4 @@
-package com.sna_deportivo.utils;
+package com.sna_deportivo.utils.bd;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -42,7 +42,8 @@ public class FechaSNS {
 				FechaSNS.ANIOS);
 			return formato.format(this.fecha);
 		}
-		
+
+		System.out.println("paso devuelvo ");
 		return "";
 		
 	}

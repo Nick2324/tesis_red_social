@@ -1,17 +1,12 @@
 package com.sna_deportivo.pojo.evento.excepciones;
 
-public class ProductorFactoryExcepcion extends Exception{
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Response;
 
+public class ProductorFactoryExcepcion extends WebApplicationException{
+	
 	public ProductorFactoryExcepcion() {
-		super();
-	}
-	
-	public ProductorFactoryExcepcion(String message){
-		super(message);
-	}
-	
-	public ProductorFactoryExcepcion(String message, Throwable throwable){
-		super(message, throwable);
+		super(Response.Status.NOT_FOUND);
 	}
 	
 }

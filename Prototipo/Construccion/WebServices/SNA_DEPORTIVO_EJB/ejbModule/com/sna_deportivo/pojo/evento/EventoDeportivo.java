@@ -2,9 +2,9 @@ package com.sna_deportivo.pojo.evento;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.pojo.json.JsonObject;
-import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
-import com.sna_deportivo.utils.Utils;
+import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 /**
  * 
@@ -116,7 +116,7 @@ public class EventoDeportivo extends Evento{
 			stringSerializacion.append(",");
 		}
 		
-		return Utils.JsonStringToObject(stringSerializacion.substring(
+		return JsonUtils.JsonStringToObject(stringSerializacion.substring(
 				0,stringSerializacion.length() - 1) + "]");
 	}
 	

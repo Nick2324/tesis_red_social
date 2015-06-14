@@ -1,4 +1,4 @@
-package com.sna_deportivo.pojo;
+package com.sna_deportivo.pojo.usuarios;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

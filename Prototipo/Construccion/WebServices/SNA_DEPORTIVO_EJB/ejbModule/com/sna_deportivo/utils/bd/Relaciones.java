@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sna_deportivo.utils;
+package com.sna_deportivo.utils.bd;
 
 /**
  * 

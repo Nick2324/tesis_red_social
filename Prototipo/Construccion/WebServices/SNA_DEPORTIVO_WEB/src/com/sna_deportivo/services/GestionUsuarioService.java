@@ -11,13 +11,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import com.sna_deportivo.pojo.Credenciales;
-import com.sna_deportivo.pojo.ResponseGenerico;
-import com.sna_deportivo.pojo.Rol;
-import com.sna_deportivo.pojo.Usuario;
+import com.sna_deportivo.pojo.usuarios.Credenciales;
+import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
+import com.sna_deportivo.pojo.usuarios.Rol;
+import com.sna_deportivo.pojo.usuarios.Usuario;
+import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
 import com.sna_deportivo.services.usuarios.GestionUsuario;
-import com.sna_deportivo.utils.CredentialsException;
-import com.sna_deportivo.utils.excepciones.BDException;
+import com.sna_deportivo.utils.bd.excepciones.BDException;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -86,13 +86,6 @@ public class GestionUsuarioService {
 			resultado = null;
 		}
 		return resultado;
-	}
-	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("prueba")
-	public Usuario getUnUsuario(Usuario usuario){
-		return usuario;
 	}
 	
 }

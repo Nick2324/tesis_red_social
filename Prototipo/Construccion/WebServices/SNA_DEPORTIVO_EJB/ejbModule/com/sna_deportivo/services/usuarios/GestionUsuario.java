@@ -1,15 +1,15 @@
 package com.sna_deportivo.services.usuarios;
 
-import com.sna_deportivo.pojo.ResponseGenerico;
-import com.sna_deportivo.pojo.Rol;
-import com.sna_deportivo.pojo.Usuario;
-import com.sna_deportivo.pojo.json.JsonObject;
-import com.sna_deportivo.utils.BDUtils;
+import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
+import com.sna_deportivo.pojo.usuarios.Rol;
+import com.sna_deportivo.pojo.usuarios.Usuario;
+import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
 import com.sna_deportivo.utils.Constantes;
-import com.sna_deportivo.utils.CredentialsException;
-import com.sna_deportivo.utils.Entidades;
-import com.sna_deportivo.utils.Relaciones;
-import com.sna_deportivo.utils.excepciones.BDException;
+import com.sna_deportivo.utils.bd.BDUtils;
+import com.sna_deportivo.utils.bd.Entidades;
+import com.sna_deportivo.utils.bd.Relaciones;
+import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.json.JsonObject;
 
 public class GestionUsuario {
 

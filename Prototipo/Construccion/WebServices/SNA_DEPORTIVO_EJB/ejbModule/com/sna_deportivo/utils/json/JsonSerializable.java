@@ -1,7 +1,7 @@
 
-package com.sna_deportivo.pojo.json;
+package com.sna_deportivo.utils.json;
 
-import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 /**
  * @author nicolas

@@ -5,4 +5,4 @@
  * @author LuisFelipe
  *
  */
-package com.sna_deportivo.pojo.json;
+package com.sna_deportivo.utils.bd;

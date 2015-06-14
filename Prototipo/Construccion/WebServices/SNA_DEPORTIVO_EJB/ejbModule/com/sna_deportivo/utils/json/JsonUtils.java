@@ -1,10 +1,10 @@
-package com.sna_deportivo.utils;
+package com.sna_deportivo.utils.json;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.pojo.json.JsonObject;
+import com.sna_deportivo.utils.ObjectSNSDeportivo;
 
-public class Utils {
+public class JsonUtils {
 
 	public static JsonObject JsonStringToObject(String json) {
 		JsonObject resultado = new JsonObject();
@@ -78,4 +78,24 @@ public class Utils {
 				jsonString.length()));
 		return propiedades.toArray(new String[propiedades.size()]);
 	}
+	
+	public static String propiedadNula(Object obj){
+		if(obj == null)
+			return "null";
+		else
+			return "'"+obj.toString()+"'";
+	}
+	
+	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){
+		StringBuilder arrayEventosJson = new StringBuilder("[");
+		for(ObjectSNSDeportivo obj:arreglo){
+			arrayEventosJson.append(obj.stringJson());
+			arrayEventosJson.append(',');
+		}
+		if(arrayEventosJson.length() > 1)
+			arrayEventosJson = arrayEventosJson.delete(arrayEventosJson.length()-1, arrayEventosJson.length());
+		arrayEventosJson.append(']');
+		return arrayEventosJson.toString();
+	}
+	
 }

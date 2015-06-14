@@ -4,6 +4,7 @@ public class DEPracticaDeportiva extends DAOEvento{
 
 	public DEPracticaDeportiva(){
 		super();
+		this.eventoManejado = ConstantesEventos.PRACTICADEPORTIVALIBRE;
 	}
 	
 	public DEPracticaDeportiva(PracticaDeportiva pd){

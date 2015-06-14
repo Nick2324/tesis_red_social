@@ -1,4 +1,4 @@
-package com.sna_deportivo.pojo.json.excepciones;
+package com.sna_deportivo.utils.json.excepciones;
 
 public class ExcepcionJsonDeserializacion extends Exception{
 

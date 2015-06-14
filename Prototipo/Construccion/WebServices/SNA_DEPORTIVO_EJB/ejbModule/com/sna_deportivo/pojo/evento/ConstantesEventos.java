@@ -12,9 +12,9 @@ package com.sna_deportivo.pojo.evento;
 public class ConstantesEventos {
 
 	//************************Tipos de evento*****************************
-	public static final String EVENTOGENERICO = "evento";
-	public static final String EVENTODEPORTIVO = "evento_deportivo";
-	public static final String PRACTICADEPORTIVALIBRE = "practica_libre";
+	public static final String EVENTOGENERICO = "eventos";
+	public static final String EVENTODEPORTIVO = "eventos_deportivos";
+	public static final String PRACTICADEPORTIVALIBRE = "practicas_libres";
 	
 	private ConstantesEventos(){}
 	

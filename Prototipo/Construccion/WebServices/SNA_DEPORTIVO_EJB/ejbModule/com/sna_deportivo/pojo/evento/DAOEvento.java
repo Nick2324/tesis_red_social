@@ -1,14 +1,13 @@
 package com.sna_deportivo.pojo.evento;
 
 import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
-import com.sna_deportivo.pojo.json.JsonObject;
-import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
-import com.sna_deportivo.utils.BDUtils;
-import com.sna_deportivo.utils.Entidades;
-import com.sna_deportivo.utils.excepciones.BDException;
+import com.sna_deportivo.utils.bd.BDUtils;
+import com.sna_deportivo.utils.bd.Entidades;
+import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-//*!*!*!*!*! MIRAR COMO MANEJAR RELACIONES SOBRE ARREGLOS, HACERLO GENERICO
-//*!*!*!*!*! PERO AL MENOS YA TENEMOS LA IDEA MAS GENERAL, AHORA A AMPLIAR
+//!*!*!*!*! Ampliar para devolver el recurso
 
 public abstract class DAOEvento {
 	
@@ -31,35 +30,40 @@ public abstract class DAOEvento {
 		return this.evento;
 	}
 	
-	public Evento getEventoDB(){
-		Evento evento = null;
-		try {
-			evento = new ProductorFactory().
-						 getEventosFactory(this.eventoManejado).
-						 crearEvento();
-			String where = BDUtils.condicionWhere(this.evento,"evento");
-			if(where != null && where.length() > 4){
-				StringBuilder query = new StringBuilder("MATCH (evento:");
-				query.append(Entidades.EVENTODEPORTIVO);
-				query.append(") ");
-				query.append(where);
-				try {
-					evento.deserializarJson(
-							(JsonObject)BDUtils.ejecutarQuery(
-									query.toString())[0]);
-				} catch (BDException e) {
-					e.printStackTrace();
-				}catch (ExcepcionJsonDeserializacion e) {
-					e.printStackTrace();
+	public Evento[] getEventosDB() throws ProductorFactoryExcepcion,BDException{
+		Evento[] eventos = null;
+			
+		String where = BDUtils.condicionWhere(this.evento,"evento");
+		if(where != null && where.length() > 4){
+			StringBuilder query = new StringBuilder("MATCH (evento:");
+			query.append(Entidades.EVENTODEPORTIVO);
+			query.append(")");
+			query.append(where);
+			query.append("RETURN evento");
+			try {
+				Object[] resultadoQuery = BDUtils.ejecutarQueryREST(
+											query.toString());
+				eventos = new Evento[resultadoQuery.length];
+				for(int i = 0; i < resultadoQuery.length; i++){
+					JsonObject datos = 
+							(JsonObject)BDUtils.obtenerRestRegistro(resultadoQuery[i]).
+							getPropiedades().get("data")[0];
+					eventos[i] = new ProductorFactory().
+							 getEventosFactory(this.eventoManejado).
+							 crearEvento();
+					eventos[i].deserializarJson(datos);
 				}
-				
+			} catch (BDException e) {
+				throw e;
+			}catch (ExcepcionJsonDeserializacion e) {
+				e.printStackTrace();
+			}catch (ProductorFactoryExcepcion e1) {
+				throw e1;
 			}
-		
-		} catch (ProductorFactoryExcepcion e1) {
-			e1.printStackTrace();
+			
 		}
 		
-		return evento;
+		return eventos;
 	
 	}
 	
@@ -74,56 +78,77 @@ public abstract class DAOEvento {
 		return query.toString();
 	}
 	
-	public boolean updateEventoDB(){
+	public void updateEventoDB() throws BDException{
 		try {
-			BDUtils.ejecutarQuery(this.generalUpdate(this.evento));
-			return true;
+			BDUtils.ejecutarQueryREST(
+					this.generalUpdate(this.evento));
 		} catch (BDException e) {
-			e.printStackTrace();
+			throw e;
 		}
-		return false;
 	}
 	
-	public boolean updateEventoDB(Evento evento){
+	public void updateEventoDB(Evento evento) throws BDException{
 		try {
-			BDUtils.ejecutarQuery(this.generalUpdate(evento));
-			return true;
+			BDUtils.ejecutarQueryREST(this.generalUpdate(evento));
 		} catch (BDException e) {
-			e.printStackTrace();
+			throw e;
 		}
-		return false;
 	}
 	
-	public boolean deleteEventoDB(){
-		Evento e = null;
+	public void deleteEventoDB()throws BDException,ProductorFactoryExcepcion{
+		Evento evento = null;
 		try {
-			e = new ProductorFactory().
+			evento = new ProductorFactory().
 					       getEventosFactory(this.eventoManejado).
 					       crearEvento();
-			e.setId(this.evento.getId());
-			e.setActivo(false);
-		} catch (ProductorFactoryExcepcion e1) {
-			e1.printStackTrace();
+			evento.setId(this.evento.getId());
+			evento.setActivo(false);
+		} catch (ProductorFactoryExcepcion e) {
+			throw e;
 		}
 		
-		if(e != null)
-			return this.updateEventoDB(e);
-		else
-			return false;
+		try{
+			this.updateEventoDB(evento);
+		}catch(BDException e){
+			throw e;
+		}
 		
 	}
 	
-	public Evento crearEventoDB(){
-		StringBuilder query = new StringBuilder("CREATE (evento:");
+	public Evento crearEventoDB() throws BDException{
+		StringBuilder query = new StringBuilder("CREATE (evento:"+Entidades.EVENTODEPORTIVO);
 		//Generar UUID
 		this.evento.setId("1");
 		query.append(this.evento.toString());
-		query.append(")");
+		query.append(") RETURN evento");
+		try {
+			BDUtils.ejecutarQueryREST(query.toString());
+		} catch (BDException e) {
+			throw e;
+		}
 		return this.evento;		
 	}
 	
 	public String getEventoManejado(){
 		return this.eventoManejado;
+	}
+	
+	public static void main(String[] args){
+		System.out.println("empiezo");
+		/*try {
+			BDUtils.ejecutarQueryREST("MATCH (eventos:E_EventoDeportivo), (usuarios:E_Usuario) RETURN usuarios,eventos");
+		} catch (BDException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		Evento e = new PracticaDeportiva();
+		e.setActivo(true);
+		System.out.println(e.stringJson());
+		DAOEvento de = new DEPracticaDeportiva();
+		de.setEvento(e);
+		for(Evento evento:de.getEventosDB())
+			System.out.println(evento.stringJson());
+		System.out.println("termino");
 	}
 	
 }

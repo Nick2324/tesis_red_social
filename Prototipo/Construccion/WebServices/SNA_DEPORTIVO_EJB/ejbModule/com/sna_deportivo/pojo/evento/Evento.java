@@ -1,14 +1,13 @@
 package com.sna_deportivo.pojo.evento;
 
-import java.util.Date;
-
-import com.sna_deportivo.pojo.general.ObjectSNSDeportivo;
-import com.sna_deportivo.pojo.json.JsonObject;
-import com.sna_deportivo.pojo.json.JsonSerializable;
-import com.sna_deportivo.pojo.json.excepciones.ExcepcionJsonDeserializacion;
-import com.sna_deportivo.utils.FechaSNS;
-import com.sna_deportivo.utils.TiempoSNS;
-import com.sna_deportivo.utils.Utils;
+import com.sna_deportivo.utils.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.StringUtils;
+import com.sna_deportivo.utils.bd.FechaSNS;
+import com.sna_deportivo.utils.bd.TiempoSNS;
+import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonSerializable;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 /**
  * 
@@ -39,13 +38,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * Constructor por defecto
 	 * 
 	 */
-	public Evento(){
-		this.fechaCreacion = new FechaSNS();
-		this.fechaInicio = new FechaSNS();
-		this.fechaFinal = new FechaSNS();
-		this.horaInicio = new TiempoSNS();
-		this.horaFinal = new TiempoSNS();
-	}
+	public Evento(){}
 	
 	/**
 	 * 
@@ -54,7 +47,13 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param horaFinal Hora final del evento
 	 */
 	public void setHoraFinal(String horaFinal){
-		this.horaFinal.setHora(horaFinal);
+		if(horaFinal != null){
+			if(this.horaFinal == null)
+				this.horaFinal = new TiempoSNS();
+			this.horaFinal.setHora(horaFinal);
+		}else{
+			this.horaFinal = null;
+		}
 	}
 	
 	/**
@@ -64,7 +63,13 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param horaInicio Hora inicial del evento
 	 */
 	public void setHoraInicio(String horaInicio){
-		this.horaInicio.setHora(horaInicio);
+		if(horaInicio != null){
+			if(this.horaInicio == null)
+				this.horaInicio = new TiempoSNS();
+			this.horaInicio.setHora(horaInicio);
+		}else{
+			this.horaInicio = null;
+		}
 	}
 	
 	/**
@@ -73,7 +78,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * 
 	 * @param activo Valor para el estado activo del evento
 	 */
-	public void setActivo(boolean activo){
+	public void setActivo(Boolean activo){
 		this.activo = activo;
 	}
 	
@@ -84,7 +89,13 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param fechaFinal Fecha final del evento
 	 */
 	public void setFechaFinal(String fechaFinal){
-		this.fechaFinal.setFecha(fechaFinal);
+		if(fechaFinal != null){
+			if(this.fechaFinal == null)
+				this.fechaFinal = new FechaSNS();
+			this.fechaFinal.setFecha(fechaFinal);
+		}else{
+			this.fechaFinal = null;
+		}
 	}
 	
 	/**
@@ -94,7 +105,13 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param fechaInicio Fecha inicial del evento
 	 */
 	public void setFechaInicio(String fechaInicio){
-		this.fechaInicio.setFecha(fechaInicio);
+		if(fechaInicio != null){
+			if(this.fechaInicio == null)
+				this.fechaInicio = new FechaSNS();
+			this.fechaInicio.setFecha(fechaInicio);
+		}else{
+			this.fechaInicio = null;
+		}
 	}
 	
 	/**
@@ -104,7 +121,13 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param fechaCreacion Fecha de creacion del evento
 	 */
 	public void setFechaCreacion(String fechaCreacion){
-		this.fechaCreacion.setFecha(fechaCreacion);
+		if(fechaCreacion != null){
+			if(this.fechaCreacion == null)
+				this.fechaCreacion = new FechaSNS();
+			this.fechaCreacion.setFecha(fechaCreacion);
+		}else{
+			this.fechaCreacion = null;
+		}
 	}
 	
 	/**
@@ -114,7 +137,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @param descripcion Descripcion del evento
 	 */
 	public void setDescripcion(String descripcion){
-		this.descripcion = descripcion;
+		this.descripcion = StringUtils.codificar(descripcion);
 	}
 	
 	/**
@@ -141,7 +164,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * Pone el numero maximo de participantes del evento
 	 * @param numMaxParticipantes Numero maximo de participantes
 	 */
-	public void setNumMaxParticipantes(int numMaxParticipantes){
+	public void setNumMaxParticipantes(Integer numMaxParticipantes){
 		this.numMaxParticipantes = numMaxParticipantes;
 	}
 	
@@ -149,7 +172,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * Pone el rango minimo de edad del evento
 	 * @param rangoMinEdad rango minimo de edad
 	 */
-	public void setRangoMinEdad(int rangoMinEdad){
+	public void setRangoMinEdad(Integer rangoMinEdad){
 		this.rangoMinEdad = rangoMinEdad;
 	}
 	
@@ -157,7 +180,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * Pone el rango maximo de edad del evento
 	 * @param rangoMaxEdad rango maximo de edad
 	 */
-	public void setRangoMaxEdad(int rangoMaxEdad){
+	public void setRangoMaxEdad(Integer rangoMaxEdad){
 		this.rangoMaxEdad = rangoMaxEdad;
 	}
 	
@@ -192,7 +215,10 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @return Hora final del evento
 	 */
 	public String getHoraFinal(){
-		return this.horaFinal.toString();
+		if(this.horaFinal != null)
+			return this.horaFinal.toString();
+		else
+			return null;
 	}
 	
 	/**
@@ -203,7 +229,10 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	
 	public String getHoraInicio(){
-		return this.horaInicio.toString();
+		if(this.horaInicio != null)
+			return this.horaInicio.toString();
+		else 
+			return null;
 	}
 	
 	/**
@@ -225,7 +254,10 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	
 	public String getFechaFinal(){
-		return this.fechaFinal.toString();
+		if(this.fechaFinal != null)
+			return this.fechaFinal.toString();
+		else
+			return null;
 	}
 	
 	/**
@@ -236,7 +268,10 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	
 	public String getFechaInicio(){
-		return this.fechaInicio.toString();
+		if(this.fechaInicio != null)
+			return this.fechaInicio.toString();
+		else
+			return null;
 	}
 	
 	/**
@@ -247,7 +282,10 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	
 	public String getFechaCreacion(){
-		return this.fechaCreacion.toString();
+		if(this.fechaCreacion != null)
+			return this.fechaCreacion.toString();
+		else 
+			return null;
 	}
 	
 	/**
@@ -346,18 +384,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	@Override
 	public String toString(){
-		return "{id:"+this.id+","+
-				"nombre:"+this.nombre+","+
-				"descripcion:"+this.descripcion+","+
-				"fechaCreacion:"+this.fechaCreacion+","+
-				"fechaInicio:"+this.fechaInicio+","+
-				"fechaFinal:"+this.fechaFinal+","+
-				"horaInicio:"+this.horaInicio+","+
-				"horaFinal:"+this.horaFinal+","+
-				"numMaxParticipantes:"+this.numMaxParticipantes+","+
-				"rangoMaxEdad:"+this.rangoMaxEdad+","+
-				"rangoMinEdad:"+this.rangoMinEdad+","+
-				"activo:"+this.activo+"}";
+		return this.stringJson();
 	}
 	
 	@Override
@@ -365,14 +392,14 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 		return "{id:"+this.id+","+
 				"nombre:"+this.nombre+","+
 				"descripcion:"+this.descripcion+","+
-				"fechaCreacion:"+this.fechaCreacion+","+
-				"fechaInicio:"+this.fechaInicio+","+
-				"fechaFinal:"+this.fechaFinal+","+
-				"horaInicio:"+this.horaInicio+","+
-				"horaFinal:"+this.horaFinal+","+
+				"fechaCreacion:"+JsonUtils.propiedadNula(this.fechaCreacion)+","+
+				"fechaInicio:"+JsonUtils.propiedadNula(this.fechaInicio)+","+
+				"fechaFinal:"+JsonUtils.propiedadNula(this.fechaFinal)+","+
+				"horaInicio:"+JsonUtils.propiedadNula(this.horaInicio)+","+
+				"horaFinal:"+JsonUtils.propiedadNula(this.horaFinal)+","+
 				"numMaxParticipantes:"+this.numMaxParticipantes+","+
 				"rangoMaxEdad:"+this.rangoMaxEdad+","+
-				"rangoMinEdad:"+this.rangoMinEdad+","+
+				"rangoMinEdad:"+this.rangoMinEdad +","+
 				"activo:"+this.activo+"}";
 	}
 	
@@ -406,11 +433,11 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 		if(atributo.equals("id")){
 			this.setId((String)valor[0]);
 			asignado = true;
-		}else if(atributo.equals("nombre[0]")){
+		}else if(atributo.equals("nombre")){
 			this.setNombre((String)valor[0]);
 			asignado = true;
 		}else if(atributo.equals("descripcion")){
-			this.setDescripcion((String)valor[0]);
+			this.setDescripcion(StringUtils.decodificar((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("fechaCreacion")){
 			this.setFechaCreacion((String)valor[0]);
@@ -425,7 +452,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 			this.setHoraInicio((String)valor[0]);
 			asignado = true;
 		}else if(atributo.equals("horaFinal")){
-			this.setNumMaxParticipantes(Integer.parseInt((String)valor[0]));
+			this.setHoraFinal((String)valor[0]);
 			asignado = true;
 		}else if(atributo.equals("numMaxParticipantes")){
 			this.setNumMaxParticipantes(Integer.parseInt((String)valor[0]));
@@ -447,6 +474,7 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	
 	@Override
 	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
+		this.setNullObject();
 		for(String propiedad:json.getPropiedades().keySet()){
 			if(!(this.esAtributo(propiedad) && 
 				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
@@ -456,19 +484,23 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	
 	@Override
 	public JsonObject serializarJson() {
-		return Utils.JsonStringToObject(
-				"{id:"+this.id+","+
-				"nombre:"+this.nombre+","+
-				"descripcion:"+this.descripcion+","+
-				"fechaCreacion:"+this.fechaCreacion+","+
-				"fechaInicio:"+this.fechaInicio+","+
-				"fechaFinal:"+this.fechaFinal+","+
-				"horaInicio:"+this.horaInicio+","+
-				"horaFinal:"+this.horaFinal+","+
-				"numMaxParticipantes:"+this.numMaxParticipantes+","+
-				"rangoMaxEdad:"+this.rangoMaxEdad+","+
-				"rangoMinEdad:"+this.rangoMinEdad+","+
-				"activo:"+this.activo+"}");
+		return JsonUtils.JsonStringToObject(this.stringJson());
+	}
+	
+	@Override
+	public void setNullObject() {
+		this.setId(null);
+		this.setNombre(null);
+		this.setDescripcion(null);
+		this.setFechaCreacion(null);
+		this.setFechaInicio(null);
+		this.setFechaFinal(null);
+		this.setHoraInicio(null);
+		this.setHoraFinal(null);
+		this.setNumMaxParticipantes(null);
+		this.setRangoMinEdad(null);
+		this.setRangoMaxEdad(null);
+		this.setActivo(null);
 	}
 	
 }
