@@ -14,6 +14,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
+<<<<<<< HEAD
+
+=======
     <string name="title_activity_user_main_drawer">UserMainDrawer</string>
     <string name="default_user_name">Nombre del usuario</string>
     <string name="default_user_role">Rol del usuario</string>
@@ -21,4 +24,5 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_user_update_sports">UserUpdateSports</string>
+>>>>>>> a4527bb... Fragmentos pagina principal usuario
 </resources>

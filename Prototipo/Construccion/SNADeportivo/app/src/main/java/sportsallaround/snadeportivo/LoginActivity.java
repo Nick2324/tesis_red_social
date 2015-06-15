@@ -40,8 +40,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import sportsallaround.snadeportivo.usuarios.CreateUserActivity;
-import sportsallaround.snadeportivo.usuarios.UserMainActivity;
+import sportsallaround.snadeportivo.Users.CreateUserActivity;
+//import sportsallaround.snadeportivo.Users.UserMainActivity;
+import sportsallaround.snadeportivo.Users.UserMainDrawer;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.Utils;
 
@@ -338,7 +339,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent(getApplicationContext(),UserMainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),UserMainDrawer.class);
                 startActivity(intent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

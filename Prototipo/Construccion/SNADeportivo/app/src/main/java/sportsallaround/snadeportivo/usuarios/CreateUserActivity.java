@@ -283,7 +283,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
 
             if (success) {
                 //todo: Invocar pagina inicial del usuario con la ruta retornada por la creacion del mismo.
-                Intent intent = new Intent(getApplicationContext(), UserMainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), UserMainDrawer.class);
                 startActivity(intent);
             }else
                 Toast.makeText(context,"Un usuario con el mismo correo ya existe", Toast.LENGTH_LONG).show();
