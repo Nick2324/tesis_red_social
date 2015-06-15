@@ -1,9 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.GestionEventos">
 
     <TextView
@@ -12,38 +13,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/barra_horizontal_titulos"
         android:layout_width="fill_parent"
         android:layout_height="2dip"
         android:background="#FF33B5E5"
-        android:layout_below="@id/title_eventos"/>
+        android:layout_below="@id/title_eventos"
+        android:layout_gravity="center"/>
 
     <TextSwitcher
         android:id="@+id/switcher_lista_eventos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/barra_horizontal_titulos">
-
+        android:layout_below="@id/barra_horizontal_titulos"
+        android:layout_gravity="center">
     </TextSwitcher>
+
+    <TextView
+        android:id="@+id/titulo_spinner_tipo_evento"
+        android:text="@string/tipo_evento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switcher_lista_eventos"
+        android:layout_gravity="center"/>
 
     <Spinner
         android:id="@+id/spinner_tipo_evento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/barra_horizontal_titulos"
+        android:layout_below="@id/titulo_spinner_tipo_evento"
         android:dropDownWidth="wrap_content"
-        android:entries="@array/tipos_eventos">
-
+        android:entries="@array/tipos_eventos"
+        android:gravity="center"
+        android:layout_gravity="center">
     </Spinner>
 
+    <EditText
+        android:id="@+id/busqueda_administracion_eventos"
+        android:hint="@string/hint_busqueda_administracion_eventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_tipo_evento"
+        android:layout_gravity="center"/>
+    
     <ListView
-        android:id="@+id/lista_eventos"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/switcher_lista_eventos">
+        android:id="@+id/listview_lista_eventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/busqueda_administracion_eventos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_gravity="center">
     </ListView>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/boton_crear_evento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_evento"
+        android:layout_below="@id/listview_lista_eventos"
+        android:gravity="center"/>
+
+</LinearLayout>

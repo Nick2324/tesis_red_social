@@ -4,7 +4,10 @@
     <string name="title_activity_gestion_eventos">Eventos deportivos</string>
     <string name="hint_carga_informacion">Información del evento</string>
     <string-array name="tipos_eventos">
-        <string name="practica_deportiva">Practica deportiva</string>
+        <item>Practica deportiva</item>
     </string-array>
+    <string name="hint_busqueda_administracion_eventos">escribe el nombre del evento a filtrar</string>
+    <string name="crear_evento">Crear evento</string>
+    <string name="tipo_evento">Tipo de evento</string>
 
 </resources>

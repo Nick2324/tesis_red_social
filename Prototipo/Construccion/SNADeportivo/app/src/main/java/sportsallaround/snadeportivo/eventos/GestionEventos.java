@@ -4,15 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+import com.sna_deportivo.pojo.evento.Evento;
+import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
 
 public class GestionEventos extends ActionBarActivity {
 
+    private Evento[] eventos;
+
+    private void setListaEventos(){
+        ListView listaEventos = (ListView)findViewById(R.id.layout_lista_eventos);
+        ArrayList<String> arrayListaEventos = new ArrayList<String>();
+        ArrayAdapter<String> datosListaEventos =
+                new ArrayAdapter<String> (this,R.layout.activity_gestion_eventos,arrayListaEventos);
+        listaEventos.setAdapter(datosListaEventos);
+    }
+
+    private void setDatosEventos(){
+        
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_eventos);
+        setDatosEventos();
+        setListaEventos();
     }
 
     @Override
