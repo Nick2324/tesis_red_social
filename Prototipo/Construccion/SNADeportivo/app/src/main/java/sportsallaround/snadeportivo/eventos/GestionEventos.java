@@ -17,11 +17,11 @@ public class GestionEventos extends ActionBarActivity {
     private Evento[] eventos;
 
     private void setListaEventos(){
-        ListView listaEventos = (ListView)findViewById(R.id.layout_lista_eventos);
+        /*ListView listaEventos = (ListView)findViewById(R.id.layout_lista_eventos);
         ArrayList<String> arrayListaEventos = new ArrayList<String>();
         ArrayAdapter<String> datosListaEventos =
                 new ArrayAdapter<String> (this,R.layout.activity_gestion_eventos,arrayListaEventos);
-        listaEventos.setAdapter(datosListaEventos);
+        listaEventos.setAdapter(datosListaEventos);*/
     }
 
     private void setDatosEventos(){

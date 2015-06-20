@@ -1,4 +1,4 @@
-package sportsallaround.snadeportivo.Users.Fragments;
+package sportsallaround.snadeportivo.usuarios.fragmentos;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import sportsallaround.snadeportivo.R;
 /**
  * Created by LuisFelipe on 15/06/2015.
  */
-public class UserAdministrationFragment extends Fragment{
+public class UserMainFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class UserAdministrationFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_user_administration, container, false);
+        return inflater.inflate(R.layout.fragment_user_page, container, false);
     }
 
     @Override

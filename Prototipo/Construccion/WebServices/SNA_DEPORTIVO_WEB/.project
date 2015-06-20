@@ -3,6 +3,7 @@
 	<name>SNA_DEPORTIVO_WEB</name>
 	<comment></comment>
 	<projects>
+		<project>SNA_DEPORTIVO_EJB</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

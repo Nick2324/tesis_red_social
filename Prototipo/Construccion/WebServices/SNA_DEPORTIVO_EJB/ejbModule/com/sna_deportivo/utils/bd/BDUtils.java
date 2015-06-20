@@ -8,7 +8,9 @@ import javax.ws.rs.core.Response;
 
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
+import org.jboss.resteasy.plugins.providers.RegisterBuiltin;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
+import org.jboss.resteasy.util.Base64;
 
 import com.sna_deportivo.utils.Constantes;
 import com.sna_deportivo.utils.ObjectSNSDeportivo;
@@ -28,13 +30,16 @@ public class BDUtils {
 
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		WebTarget target = client.target(Constantes.SERVER_ROOT_URI).path("/");
-		Response result = target.request().accept(MediaType.TEXT_PLAIN)
+		Response result = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.TEXT_PLAIN)
 				.get(Response.class);
 
 		return result.getStatus() == 200;
 	}
 
 	public static ResteasyClient obtenerCliente() {
+		RegisterBuiltin.register(ResteasyProviderFactory.getInstance());
 		ResteasyProviderFactory factory = ResteasyProviderFactory.getInstance();
 		ResteasyProviderFactory.pushContext(javax.ws.rs.ext.Providers.class,
 				factory);
@@ -49,18 +54,20 @@ public class BDUtils {
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
 		else {
-			System.out.println(query);
+			System.out.println("Query ejecutado: " + query);
 			ResteasyClient cliente = BDUtils.obtenerCliente();
 			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
 					PATH);
 			Response result = target
 					.request()
+					.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
 					.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8")
 					.post(Entity.entity(payload, MediaType.APPLICATION_JSON),
 							Response.class);
+			System.out.println("Codigo de retorno: " + result.getStatus());
 			if (result.getStatus() == 200) {
 				stringRespuesta = result.readEntity(String.class);
-				System.out.println(stringRespuesta);
+				System.out.println("Resultado: " + stringRespuesta);
 				JsonObject resultado = JsonUtils
 						.JsonStringToObject(stringRespuesta);
 				JsonObject results = (JsonObject) resultado.getPropiedades()
@@ -102,8 +109,9 @@ public class BDUtils {
 		ResteasyClient cliente = BDUtils.obtenerCliente();
 		WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
 				"/node");
-		Builder resultBuilder = target.request().accept(
-				MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
 		Response result;
 		result = resultBuilder.post(null, Response.class);
 		if (result.getStatus() == 201) {
@@ -119,8 +127,9 @@ public class BDUtils {
 
 		ResteasyClient cliente = BDUtils.obtenerCliente();
 		WebTarget target = cliente.target(rutaNodo).path("/properties");
-		Builder resultBuilder = target.request().accept(
-				MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
 		Response result;
 		result = resultBuilder.put(
 				Entity.entity(propiedades, MediaType.APPLICATION_JSON),
@@ -135,8 +144,9 @@ public class BDUtils {
 			throw new BDException();
 		ResteasyClient cliente = BDUtils.obtenerCliente();
 		WebTarget target = cliente.target(rutaNodo).path("/labels");
-		Builder resultBuilder = target.request().accept(
-				MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
 		Response result;
 		result = resultBuilder.post(
 				Entity.entity(label, MediaType.APPLICATION_JSON),
@@ -151,8 +161,9 @@ public class BDUtils {
 		ResteasyClient cliente = BDUtils.obtenerCliente();
 		WebTarget target = cliente.target(rutaNodo)
 				.path("/relationships");
-		Builder resultBuilder = target.request().accept(
-				MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
 		Response result;
 		result = resultBuilder.post(
 				Entity.entity(propiedades, MediaType.APPLICATION_JSON),

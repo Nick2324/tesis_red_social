@@ -1,4 +1,4 @@
-package sportsallaround.snadeportivo.Users;
+package sportsallaround.snadeportivo.usuarios;
 
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
@@ -14,8 +14,8 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.Users.Fragments.UserAdministrationFragment;
-import sportsallaround.snadeportivo.Users.Fragments.UserMainFragment;
+import sportsallaround.snadeportivo.usuarios.fragmentos.UserAdministrationFragment;
+import sportsallaround.snadeportivo.usuarios.fragmentos.UserMainFragment;
 
 public class UserMainDrawer extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
