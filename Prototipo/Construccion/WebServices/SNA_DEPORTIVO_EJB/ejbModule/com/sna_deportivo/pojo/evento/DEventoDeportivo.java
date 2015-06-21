@@ -6,7 +6,7 @@ public class DEventoDeportivo extends DAOEvento {
 	
 	public DEventoDeportivo(EventoDeportivo e){
 		super(e);
-		this.eventoManejado = ConstantesEventos.EVENTODEPORTIVO;
+		this.eventoManejado = ConstantesEventos.EVENTODEPORTIVO.getServicio();
 	}
 	
 }

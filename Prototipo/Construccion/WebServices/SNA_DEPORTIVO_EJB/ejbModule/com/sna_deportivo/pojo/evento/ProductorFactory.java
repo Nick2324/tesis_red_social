@@ -7,11 +7,12 @@ public class ProductorFactory {
 	public ProductorFactory(){}
 	
 	public EventosFactory getEventosFactory(String tipo) throws ProductorFactoryExcepcion{
-		if(tipo == ConstantesEventos.PRACTICADEPORTIVALIBRE)
+		if(tipo.equals(ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio()))
 			return new PracticaDeportivaFactory();
-		if(tipo == ConstantesEventos.EVENTODEPORTIVO)
+		if(tipo.equals(ConstantesEventos.EVENTODEPORTIVO.getServicio()))
 			return new EventoDeportivoFactory();
-		throw new ProductorFactoryExcepcion();
+		return new PracticaDeportivaFactory();
+		//throw new ProductorFactoryExcepcion();
 	}
 		
 	

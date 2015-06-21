@@ -19,6 +19,7 @@ public class GestionEvento {
 			accesoEvento = new ProductorFactory().
 							   getEventosFactory(tipo).
 							   crearDAOEvento();
+			accesoEvento.setEvento(evento);
 			return JsonUtils.arrayObjectSNSToStringJson(
 					(ObjectSNSDeportivo[])accesoEvento.getEventosDB());
 		} catch (BDException e) {
@@ -81,6 +82,12 @@ public class GestionEvento {
 			throw e;
 		}
 		
+	}
+	
+	public static void main(String[] args){
+		GestionEvento ge = new GestionEvento();
+		System.out.println(ge.consultarEventos(com.sna_deportivo.pojo.evento.ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio(),
+				new com.sna_deportivo.pojo.evento.PracticaDeportiva()))	;
 	}
 	
 }

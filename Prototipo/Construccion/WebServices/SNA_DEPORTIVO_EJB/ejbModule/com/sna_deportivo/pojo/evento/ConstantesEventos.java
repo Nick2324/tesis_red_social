@@ -9,13 +9,33 @@ package com.sna_deportivo.pojo.evento;
  *
  */
 
-public class ConstantesEventos {
+public enum ConstantesEventos {
 
 	//************************Tipos de evento*****************************
-	public static final String EVENTOGENERICO = "eventos";
-	public static final String EVENTODEPORTIVO = "eventos_deportivos";
-	public static final String PRACTICADEPORTIVALIBRE = "practicas_libres";
+	PRACTICADEPORTIVALIBRE("practicas_libres","Practica libre"),
+	EVENTODEPORTIVO("eventos_deportivos","Evento compuesto"),
+	EVENTOGENERICO("eventos","Evento generico");
+	//********************************************************************	
 	
-	private ConstantesEventos(){}
+	private final String servicio;
+	private final String valor;
+	
+	ConstantesEventos(String servicio,String valor){
+		this.servicio = servicio;
+		this.valor = valor;
+	}
+
+	public String getServicio(){
+		return this.servicio;
+	}
+	
+	public String getValor(){
+		return this.valor;
+	}
+	
+	@Override
+	public String toString(){
+		return this.valor;
+	}
 	
 }

@@ -8,7 +8,7 @@
     tools:context="sportsallaround.snadeportivo.eventos.GestionEventos">
 
     <TextView
-        android:id="@+id/title_eventos"
+        android:id="@+id/textview_title_eventos"
         android:text="@string/title_activity_gestion_eventos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,36 +17,37 @@
         android:layout_gravity="center"/>
 
     <TextView
-        android:id="@+id/barra_horizontal_titulos"
+        android:id="@+id/textview_barra_horizontal_titulos"
         android:layout_width="fill_parent"
         android:layout_height="2dip"
         android:background="#FF33B5E5"
-        android:layout_below="@id/title_eventos"
+        android:layout_below="@id/textview_title_eventos"
         android:layout_gravity="center"/>
 
     <TextSwitcher
         android:id="@+id/switcher_lista_eventos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/barra_horizontal_titulos"
+        android:layout_below="@id/textview_barra_horizontal_titulos"
         android:layout_gravity="center">
     </TextSwitcher>
 
     <TextView
-        android:id="@+id/titulo_spinner_tipo_evento"
+        android:id="@+id/textview_titulo_spinner_tipo_evento"
         android:text="@string/tipo_evento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/switcher_lista_eventos"
         android:layout_gravity="center"/>
 
+    <!--android:entries="@array/tipos_eventos"-->
+
     <Spinner
         android:id="@+id/spinner_tipo_evento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titulo_spinner_tipo_evento"
+        android:layout_below="@id/textview_titulo_spinner_tipo_evento"
         android:dropDownWidth="wrap_content"
-        android:entries="@array/tipos_eventos"
         android:gravity="center"
         android:layout_gravity="center">
     </Spinner>

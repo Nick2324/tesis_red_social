@@ -88,12 +88,14 @@ public class JsonUtils {
 	
 	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){
 		StringBuilder arrayEventosJson = new StringBuilder("[");
-		for(ObjectSNSDeportivo obj:arreglo){
-			arrayEventosJson.append(obj.stringJson());
-			arrayEventosJson.append(',');
+		if(arreglo != null){
+			for(ObjectSNSDeportivo obj:arreglo){
+				arrayEventosJson.append(obj.stringJson());
+				arrayEventosJson.append(',');
+			}
+			if(arrayEventosJson.length() > 1)
+				arrayEventosJson = arrayEventosJson.delete(arrayEventosJson.length()-1, arrayEventosJson.length());
 		}
-		if(arrayEventosJson.length() > 1)
-			arrayEventosJson = arrayEventosJson.delete(arrayEventosJson.length()-1, arrayEventosJson.length());
 		arrayEventosJson.append(']');
 		return arrayEventosJson.toString();
 	}

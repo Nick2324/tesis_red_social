@@ -11,6 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
+import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.services.eventos.GestionEvento;
 
@@ -23,14 +24,14 @@ public class GestionEventoService {
 		this.gestionEvento = new GestionEvento(); 
 	}
 	
-	@GET
+	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/")
-	public String consultarEventos(@PathParam("tipoEvento") String tipoEvento,
+	@Path("practicas_libres/")//{tipoEvento}
+	public String consultarEventos(/*@PathParam("tipoEvento") String tipoEvento,*/
 							Evento evento){
 		try{
-			return gestionEvento.consultarEventos(tipoEvento,
+			return gestionEvento.consultarEventos(ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio(),//tipoEvento,
 										   		  evento);
 		}catch(WebApplicationException e){
 			throw e;

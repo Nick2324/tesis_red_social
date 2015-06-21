@@ -15,7 +15,7 @@ public abstract class DAOEvento {
 	protected String eventoManejado;
 	
 	protected DAOEvento(){
-		this.eventoManejado = ConstantesEventos.EVENTOGENERICO;
+		this.eventoManejado = ConstantesEventos.EVENTOGENERICO.getServicio();
 	}
 	
 	protected DAOEvento(Evento e){
@@ -32,14 +32,16 @@ public abstract class DAOEvento {
 	
 	public Evento[] getEventosDB() throws ProductorFactoryExcepcion,BDException{
 		Evento[] eventos = null;
-			
+		
 		String where = BDUtils.condicionWhere(this.evento,"evento");
-		if(where != null && where.length() > 4){
+		if(where != null ||
+		   this.evento == null){
 			StringBuilder query = new StringBuilder("MATCH (evento:");
 			query.append(Entidades.EVENTODEPORTIVO);
 			query.append(")");
-			query.append(where);
-			query.append("RETURN evento");
+			if(where != null)
+				query.append(where);
+			query.append(" RETURN evento");
 			try {
 				Object[] resultadoQuery = BDUtils.ejecutarQueryREST(
 											query.toString());

@@ -175,24 +175,25 @@ public class BDUtils {
 	public static String condicionWhere(ObjectSNSDeportivo objetoRedSocial,
 										String identificador){
 		StringBuilder retorno = new StringBuilder(" WHERE ");
-		JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
-		for(String propiedad:objetoJson.getPropiedades().keySet()){
-			if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null"))){
-				retorno.append(identificador);
-				retorno.append(".");
-				retorno.append(propiedad);
-				retorno.append(" = ");
-				retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
-				retorno.append(" AND ");
+		if(objetoRedSocial != null && identificador != null){
+			JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
+			for(String propiedad:objetoJson.getPropiedades().keySet()){
+				if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null"))){
+					retorno.append(identificador);
+					retorno.append(".");
+					retorno.append(propiedad);
+					retorno.append(" = ");
+					retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
+					retorno.append(" AND ");
+				}
 			}
 		}
-		
-		if(retorno.length() > 4)
-			retorno.delete(retorno.length() - 4, retorno.length() - 1);
+		if(retorno.length() > 7)
+			retorno.delete(retorno.length() - 4, retorno.length());
 		if(!retorno.toString().equals(" WHERE "))
 			return retorno.toString();
 		else
-			return "";
+			return null;
 	}
 	
 	//SE PODRIA TENER UN ARREGLO DE IGNORE
