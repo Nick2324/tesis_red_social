@@ -9,6 +9,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.sna_deportivo.pojo.usuarios.Credenciales;
@@ -82,6 +83,32 @@ public class GestionUsuarioService {
 		Rol[] resultado;
 		try {
 			resultado = servicio.obtenerRoles();
+		} catch (BDException e) {
+			resultado = null;
+		}
+		return resultado;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("obtenerPermisos")
+	public Rol[] obtenerPermisos(){
+		Rol[] resultado;
+		try {
+			resultado = servicio.obtenerRoles();
+		} catch (BDException e) {
+			resultado = null;
+		}
+		return resultado;
+	}
+	
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("obtenerRolUsuario")
+	public Rol obtenerRolUsuario(@QueryParam("userName") String userName){
+		Rol resultado;
+		try {
+			resultado = servicio.obtenerRolUsuario(userName);
 		} catch (BDException e) {
 			resultado = null;
 		}

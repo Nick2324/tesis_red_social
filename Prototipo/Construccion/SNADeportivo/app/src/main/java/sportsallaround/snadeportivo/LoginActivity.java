@@ -43,6 +43,7 @@ import java.util.List;
 import sportsallaround.snadeportivo.usuarios.CreateUserActivity;
 //import sportsallaround.snadeportivo.Users.UserMainActivity;
 import sportsallaround.snadeportivo.usuarios.UserMainDrawer;
+import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.Utils;
 
@@ -268,6 +269,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private ContentValues credenciales;
+        private Usuario user;
 
         UserLoginTask(String user, String password) {
             credenciales = new ContentValues();
@@ -317,6 +319,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 JSONObject response = new JSONObject(Utils.convertStreamToString(is));
                 if(response.getString("caracterAceptacion").equals("M"))
                     retorno = false;
+                else{
+                    user = new Usuario(new JSONObject(response.getString("datosExtra")));
+                }
                 Log.i("SNA_DEPORTIVO", "Caracter aceptacion: " + response.getString("caracterAceptacion") +" - Mensaje de respuesta: " + response.getString("mensajeRespuesta") );
                 conn.disconnect();
             } catch (MalformedURLException e) {
@@ -340,6 +345,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             if (success) {
                 Intent intent = new Intent(getApplicationContext(),UserMainDrawer.class);
+                intent.putExtra("user",user);
                 startActivity(intent);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

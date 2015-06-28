@@ -17,12 +17,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
-                android:text="@string/default_user_name"/>
+                android:text="@string/default_user_name"
+                android:id="@+id/title_user_name"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="@string/default_user_role"/>
+                android:text="@string/default_user_role"
+                android:id="@+id/title_user_role"/>
         </LinearLayout>
     </LinearLayout>
 

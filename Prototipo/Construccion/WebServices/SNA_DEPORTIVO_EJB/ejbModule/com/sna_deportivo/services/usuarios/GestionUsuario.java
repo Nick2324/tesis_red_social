@@ -33,7 +33,7 @@ public class GestionUsuario {
 		propiedades.append("\"to\":\"" + Constantes.SERVER_ROOT_URI + "/node/" + idRol + "\",");
 		propiedades.append("\"type\":\"" + Relaciones.ASUMEROL + "\"");
 		propiedades.append("}");
-		//Invocar Creaciï¿½n de la relaciï¿½n
+		//Invocar Creación de la relación
 		if(!BDUtils.crearRelacion(nodo, propiedades.toString()))
 			throw new BDException();
 		response.setCaracterAceptacion("B");
@@ -47,19 +47,23 @@ public class GestionUsuario {
 			throws BDException, CredentialsException {
 		ResponseGenerico response = null;
 		String query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario
-				+ "'}) return u.contrasena";
+				+ "',contrasena:'"+ pass +"'}) return u";
 		Object[] data = BDUtils.ejecutarQuery(query);
-		String password = null;;
+		JsonObject user;
+		System.out.println(data[0].getClass());
 		if(data[0].getClass() == JsonObject.class){
 			JsonObject row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
-			password = (String) row.getPropiedades().get("arreglo")[0];
+			user =  (JsonObject) row.getPropiedades().get("arreglo")[0];
 			}
 		else
-			password = (String) data[0];
-		if (pass.equals(password)){
+			user = (JsonObject) data[0];
+		if (user != null){
+			
 			response = new ResponseGenerico();
 			response.setCaracterAceptacion("B");
 			response.setMensajeRespuesta("Credenciales correctas");
+			response.setDatosExtra(new Usuario(user).toString());
+			System.out.println(response.getDatosExtra());
 		}
 		else
 			throw new CredentialsException();
@@ -99,6 +103,18 @@ public class GestionUsuario {
 		if(usuario.equals(""))
 			return false;
 		return true;
+	}
+
+
+	public Rol obtenerRolUsuario(String userName) {
+		String query = "MATCH (:" + Entidades.USUARIO + " {usuario:'" + userName
+				+ "'}) -[:R_AsumeRol]->(n:E_Rol) return n";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		Rol rol;
+		JsonObject row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+		JsonObject arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+		rol = new Rol(arregloRow.getPropiedades());
+		return rol;
 	}
 
 }

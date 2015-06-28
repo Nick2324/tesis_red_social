@@ -13,6 +13,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/fragment_administration_update_personal_info"
             android:text="Actualizar información personal"/>
         <Button
             android:layout_width="match_parent"
@@ -21,6 +22,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/fragment_administration_update_practiced_sports"
             android:text="Actualizar deportes practicados"/>
         <Button
             android:layout_width="match_parent"
@@ -37,6 +39,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/fragment_administration_close_account"
             android:text="Cerrar mi cuenta"/>
     </LinearLayout>
 

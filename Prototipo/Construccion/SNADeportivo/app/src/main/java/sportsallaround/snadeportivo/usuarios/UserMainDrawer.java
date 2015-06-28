@@ -1,21 +1,43 @@
 package sportsallaround.snadeportivo.usuarios;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
+import android.widget.Button;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.fragmentos.UserAdministrationFragment;
 import sportsallaround.snadeportivo.usuarios.fragmentos.UserMainFragment;
+import sportsallaround.snadeportivo.usuarios.pojos.Rol;
+import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
+import sportsallaround.utils.Constants;
+import sportsallaround.utils.Utils;
 
 public class UserMainDrawer extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -29,10 +51,24 @@ public class UserMainDrawer extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private Usuario user;
+    private Rol userRole;
+    private MainDrawerTask drawerTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        user = getIntent().getParcelableExtra("user");
+
+        drawerTask = new MainDrawerTask(this);
+        try {
+            drawerTask.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
         setContentView(R.layout.activity_user_main_drawer);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -50,7 +86,7 @@ public class UserMainDrawer extends ActionBarActivity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, PlaceholderFragment.newInstance(user, userRole, position + 1))
                 .commit();
     }
 
@@ -104,23 +140,21 @@ public class UserMainDrawer extends ActionBarActivity
         return super.onOptionsItemSelected(item);
     }
 
+    public void setUserRole(Rol userRole) {
+        this.userRole = userRole;
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
         /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        /**
          * Returns a new instance of this fragment for the given section
          * number.
          */
-        public static Fragment newInstance(int sectionNumber) {
+        public static Fragment newInstance(Usuario user,Rol userRole,int sectionNumber) {
             Fragment fragment = null;
-            switch(sectionNumber){
+            switch (sectionNumber) {
                 case 1:
                     fragment = new UserMainFragment();
                     break;
@@ -130,6 +164,10 @@ public class UserMainDrawer extends ActionBarActivity
                 default:
                     fragment = new PlaceholderFragment();
             }
+            Bundle extras = new Bundle();
+            extras.putParcelable("user",user);
+            extras.putParcelable("userRole",userRole);
+            fragment.setArguments(extras);
             return fragment;
         }
 
@@ -146,9 +184,53 @@ public class UserMainDrawer extends ActionBarActivity
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((UserMainDrawer) activity).onSectionAttached(
-                    getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
 
+    public class MainDrawerTask extends AsyncTask<Void, Void, Boolean>{
+
+        private UserMainDrawer activity;
+
+        public MainDrawerTask(UserMainDrawer activity) {
+            this.activity = activity;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            InputStream is;
+            boolean retorno = true;
+
+            try {
+
+                URL completeUrl = new URL(Constants.ROOT_URL + Constants.SERVICES_OBTENER_ROL_USUARIO + "?userName=" + user.getUsuario());
+
+                HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+
+                conn.setReadTimeout(10000 /* milliseconds */);
+                conn.setConnectTimeout(15000 /* milliseconds */);
+                conn.setRequestProperty("Content-Type", "text/plain");
+                conn.setRequestProperty("Accept", "application/json");
+                conn.setRequestMethod("GET");
+
+                conn.connect();
+
+                is = conn.getInputStream();
+
+                JSONObject response = new JSONObject(Utils.convertStreamToString(is));
+                Rol userRole = new Rol(response);
+                activity.setUserRole(userRole);
+                conn.disconnect();
+            }
+            catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (ProtocolException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return retorno;
+        }
+    }
 }

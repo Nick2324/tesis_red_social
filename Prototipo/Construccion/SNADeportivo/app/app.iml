@@ -89,8 +89,8 @@
     <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="SNA_DEPORTIVO_EJB" level="project" />
     <orderEntry type="library" exported="" name="jackson-mapper-asl-1.6.3" level="project" />
-    <orderEntry type="library" exported="" name="resteasy-mobile-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="jackson-jaxrs-1.6.3" level="project" />
+    <orderEntry type="library" exported="" name="resteasy-mobile-1.0.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-base-7.5.0" level="project" />
     <orderEntry type="library" exported="" name="jackson-core-asl-1.6.3" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />

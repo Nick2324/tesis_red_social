@@ -2,6 +2,8 @@ package com.sna_deportivo.pojo.usuarios;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.sna_deportivo.utils.json.JsonObject;
+
 @XmlRootElement
 public class Usuario {
 	
@@ -18,6 +20,24 @@ public class Usuario {
 	private boolean estado;
 	private String tipoUsuario;
 	
+	public Usuario(JsonObject user) {
+		primerNombre = (String) user.getPropiedades().get("primerNombre")[0];
+		segundoNombre = (String) user.getPropiedades().get("segundoNombre")[0];
+		apellidos = (String) user.getPropiedades().get("apellidos")[0];
+		usuario = (String) user.getPropiedades().get("usuario")[0];
+		contrasena = (String) user.getPropiedades().get("contrasena")[0];
+		eMail = (String) user.getPropiedades().get("eMail")[0];
+		numeroContacto = (String) user.getPropiedades().get("numeroContacto")[0];
+		fechaNacimiento = (String) user.getPropiedades().get("fechaNacimiento")[0];
+		fechaRegistro = (String) user.getPropiedades().get("fechaRegistro")[0];
+		sexo = (String) user.getPropiedades().get("sexo")[0];
+		estado = ((String)user.getPropiedades().get("estado")[0]).toLowerCase() == "true"?true:false;
+	}
+	
+	public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getPrimerNombre() {
 		return primerNombre;
 	}
