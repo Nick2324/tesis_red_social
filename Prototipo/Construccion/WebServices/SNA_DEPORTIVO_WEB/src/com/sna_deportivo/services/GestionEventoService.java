@@ -27,15 +27,22 @@ public class GestionEventoService {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("practicas_libres/")//{tipoEvento}
-	public String consultarEventos(/*@PathParam("tipoEvento") String tipoEvento,*/
-							Evento evento){
+	@Path("{tipoEvento}")//practicas_libres/
+	public String consultarEventos(@PathParam("tipoEvento") String tipoEvento,
+							 	   Evento evento){
 		try{
-			return gestionEvento.consultarEventos(ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio(),//tipoEvento,
+			//com.sna_deportivo.pojo.evento.PracticaDeportiva evento = new com.sna_deportivo.pojo.evento.PracticaDeportiva();
+			//evento.setActivo(true);
+			//String tipoEvento = ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio();
+			return gestionEvento.consultarEventos(tipoEvento,
 										   		  evento);
 		}catch(WebApplicationException e){
+			e.printStackTrace();
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
 		}
+		return null;
 	}
 	
 	@POST

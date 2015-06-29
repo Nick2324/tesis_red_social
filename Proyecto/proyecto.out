@@ -13,7 +13,7 @@
 \BOOKMARK [2][-]{subsection.4.1.2}{Aspectos de negocio}{section.4.1}% 13
 \BOOKMARK [2][-]{subsection.4.1.3}{Alineaci\363n de aspectos tecnol\363gicos y de negocio con la soluci\363n del problema}{section.4.1}% 14
 \BOOKMARK [1][-]{section.4.2}{Limitaciones}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Tareas posteriores}{}% 16
+\BOOKMARK [0][-]{chapter.5}{Trabajos futuros}{}% 16
 \BOOKMARK [0][-]{chapter.6}{Marco conceptual}{}% 17
 \BOOKMARK [1][-]{section.6.1}{Comunicaci\363n}{chapter.6}% 18
 \BOOKMARK [2][-]{subsection.6.1.1}{Evoluci\363n de la web}{section.6.1}% 19
@@ -89,160 +89,161 @@
 \BOOKMARK [0][-]{chapter.12}{M\351todos utilizados}{}% 89
 \BOOKMARK [1][-]{section.12.1}{Encuesta inicial}{chapter.12}% 90
 \BOOKMARK [2][-]{subsection.12.1.1}{An\341lisis de resultados}{section.12.1}% 91
-\BOOKMARK [0][-]{chapter.13}{An\341lisis de requerimientos}{}% 92
-\BOOKMARK [1][-]{section.13.1}{Requerimientos}{chapter.13}% 93
-\BOOKMARK [2][-]{subsection.13.1.1}{Requerimientos funcionales}{section.13.1}% 94
-\BOOKMARK [2][-]{subsection.13.1.2}{Requerimientos no funcionales}{section.13.1}% 95
-\BOOKMARK [3][-]{subsubsection.13.1.2.1}{QiU}{subsection.13.1.2}% 96
-\BOOKMARK [3][-]{subsubsection.13.1.2.2}{Reusabilidad}{subsection.13.1.2}% 97
-\BOOKMARK [3][-]{subsubsection.13.1.2.3}{Mantenibilidad}{subsection.13.1.2}% 98
-\BOOKMARK [3][-]{subsubsection.13.1.2.4}{Interoperabilidad}{subsection.13.1.2}% 99
-\BOOKMARK [3][-]{subsubsection.13.1.2.5}{Seguridad}{subsection.13.1.2}% 100
-\BOOKMARK [3][-]{subsubsection.13.1.2.6}{Rendimiento}{subsection.13.1.2}% 101
-\BOOKMARK [0][-]{chapter.14}{Arquitectura}{}% 102
-\BOOKMARK [1][-]{section.14.1}{Vistas Archimate}{chapter.14}% 103
-\BOOKMARK [2][-]{subsection.14.1.1}{Vistas generales}{section.14.1}% 104
-\BOOKMARK [3][-]{subsubsection.14.1.1.1}{Actores y Roles}{subsection.14.1.1}% 105
-\BOOKMARK [3][-]{subsubsection.14.1.1.2}{Introductory viewpoint}{subsection.14.1.1}% 106
-\BOOKMARK [3][-]{subsubsection.14.1.1.3}{Layered viewpoint}{subsection.14.1.1}% 107
-\BOOKMARK [2][-]{subsection.14.1.2}{Business Functions Viewpoints}{section.14.1}% 108
-\BOOKMARK [3][-]{subsubsection.14.1.2.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.2}% 109
-\BOOKMARK [3][-]{subsubsection.14.1.2.2}{Buscador Deportivo}{subsection.14.1.2}% 110
-\BOOKMARK [3][-]{subsubsection.14.1.2.3}{Localizaci\363n}{subsection.14.1.2}% 111
-\BOOKMARK [2][-]{subsection.14.1.3}{Business Process Viewpoints}{section.14.1}% 112
-\BOOKMARK [3][-]{subsubsection.14.1.3.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.3}% 113
-\BOOKMARK [3][-]{subsubsection.14.1.3.2}{Buscador deportivo}{subsection.14.1.3}% 114
-\BOOKMARK [3][-]{subsubsection.14.1.3.3}{Localizaci\363n}{subsection.14.1.3}% 115
-\BOOKMARK [2][-]{subsection.14.1.4}{Application Usage Viewpoints}{section.14.1}% 116
-\BOOKMARK [3][-]{subsubsection.14.1.4.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.4}% 117
-\BOOKMARK [3][-]{subsubsection.14.1.4.2}{Buscador deportivo}{subsection.14.1.4}% 118
-\BOOKMARK [3][-]{subsubsection.14.1.4.3}{Localizaci\363n}{subsection.14.1.4}% 119
-\BOOKMARK [2][-]{subsection.14.1.5}{Product Viewpoint}{section.14.1}% 120
-\BOOKMARK [3][-]{subsubsection.14.1.5.1}{Product}{subsection.14.1.5}% 121
-\BOOKMARK [2][-]{subsection.14.1.6}{Punto de vista de infraestructura}{section.14.1}% 122
-\BOOKMARK [0][-]{chapter.15}{An\341lisis funcional}{}% 123
-\BOOKMARK [1][-]{section.15.1}{M\363dulo de administraci\363n de eventos deportivos}{chapter.15}% 124
-\BOOKMARK [1][-]{section.15.2}{M\363dulo de gesti\363n de administracion de deportes}{chapter.15}% 125
-\BOOKMARK [1][-]{section.15.3}{M\363dulo de gesti\363n de usuarios}{chapter.15}% 126
-\BOOKMARK [1][-]{section.15.4}{M\363dulo de gesti\363n de ubicaciones}{chapter.15}% 127
-\BOOKMARK [0][-]{chapter.16}{Modelo de datos}{}% 128
-\BOOKMARK [1][-]{section.16.1}{Modelo de datos de gesti\363n de eventos}{chapter.16}% 129
-\BOOKMARK [1][-]{section.16.2}{Modelo de datos de gesti\363n de ubicaciones}{chapter.16}% 130
-\BOOKMARK [1][-]{section.16.3}{Modelo de datos de gesti\363n de deportes}{chapter.16}% 131
-\BOOKMARK [1][-]{section.16.4}{Modelo de datos de gesti\363n de usuarios}{chapter.16}% 132
-\BOOKMARK [0][-]{chapter.17}{Conclusiones}{}% 133
-\BOOKMARK [0][-]{chapter.18}{Anexos}{}% 134
-\BOOKMARK [0][-]{appendix.Alph1}{Datos encuesta inicial}{}% 135
-\BOOKMARK [1][-]{section.Alph1.1}{Informaci\363n necesaria}{appendix.Alph1}% 136
-\BOOKMARK [1][-]{section.Alph1.2}{Naturaleza de la encuesta}{appendix.Alph1}% 137
-\BOOKMARK [1][-]{section.Alph1.3}{T\351cnicas de escalamiento utilizadas}{appendix.Alph1}% 138
-\BOOKMARK [1][-]{section.Alph1.4}{Trabajo de campo}{appendix.Alph1}% 139
-\BOOKMARK [1][-]{section.Alph1.5}{Formato de encuesta}{appendix.Alph1}% 140
-\BOOKMARK [1][-]{section.Alph1.6}{Resultados de las encuestas}{appendix.Alph1}% 141
-\BOOKMARK [0][-]{appendix.Alph2}{Tabla de requerimientos funcionales}{}% 142
-\BOOKMARK [0][-]{appendix.Alph3}{Escenarios de calidad de requerimientos no funcionales en detalle}{}% 143
-\BOOKMARK [1][-]{section.Alph3.1}{QiU}{appendix.Alph3}% 144
-\BOOKMARK [1][-]{section.Alph3.2}{Reusabilidad}{appendix.Alph3}% 145
-\BOOKMARK [1][-]{section.Alph3.3}{Mantenibilidad}{appendix.Alph3}% 146
-\BOOKMARK [1][-]{section.Alph3.4}{Interoperabilidad}{appendix.Alph3}% 147
-\BOOKMARK [1][-]{section.Alph3.5}{Seguridad}{appendix.Alph3}% 148
-\BOOKMARK [1][-]{section.Alph3.6}{Entendimiento}{appendix.Alph3}% 149
-\BOOKMARK [1][-]{section.Alph3.7}{Robustez y fiabilidad}{appendix.Alph3}% 150
-\BOOKMARK [1][-]{section.Alph3.8}{Rendimiento}{appendix.Alph3}% 151
-\BOOKMARK [0][-]{appendix.Alph4}{Artefactos de la arquitectura}{}% 152
-\BOOKMARK [1][-]{section.Alph4.1}{Artefactos de la capa de negocio}{appendix.Alph4}% 153
-\BOOKMARK [1][-]{section.Alph4.2}{Artefactos de la capa de aplicaci\363n}{appendix.Alph4}% 154
-\BOOKMARK [1][-]{section.Alph4.3}{Artefactos de la capa de infraestructura}{appendix.Alph4}% 155
-\BOOKMARK [0][-]{appendix.Alph5}{Vistas de la arquitectura no implementadas}{}% 156
-\BOOKMARK [1][-]{section.Alph5.1}{Business Functions Viewpoints}{appendix.Alph5}% 157
-\BOOKMARK [2][-]{subsection.Alph5.1.1}{Estad\355sticas Deportivas}{section.Alph5.1}% 158
-\BOOKMARK [2][-]{subsection.Alph5.1.2}{Consejos}{section.Alph5.1}% 159
-\BOOKMARK [2][-]{subsection.Alph5.1.3}{Periodismo}{section.Alph5.1}% 160
-\BOOKMARK [2][-]{subsection.Alph5.1.4}{Servicios}{section.Alph5.1}% 161
-\BOOKMARK [2][-]{subsection.Alph5.1.5}{Patrocinios Deportivos}{section.Alph5.1}% 162
-\BOOKMARK [2][-]{subsection.Alph5.1.6}{Formaci\363n de Grupos Deportivos}{section.Alph5.1}% 163
-\BOOKMARK [2][-]{subsection.Alph5.1.7}{Entrenamiento Deportivo}{section.Alph5.1}% 164
-\BOOKMARK [1][-]{section.Alph5.2}{Business Process Viewpoints}{appendix.Alph5}% 165
-\BOOKMARK [2][-]{subsection.Alph5.2.1}{Estad\355sticas Deportivas}{section.Alph5.2}% 166
-\BOOKMARK [2][-]{subsection.Alph5.2.2}{Buscador de consejos deportivos}{section.Alph5.2}% 167
-\BOOKMARK [2][-]{subsection.Alph5.2.3}{Evaluador consejos de salud}{section.Alph5.2}% 168
-\BOOKMARK [2][-]{subsection.Alph5.2.4}{Generador de consejos deportivos}{section.Alph5.2}% 169
-\BOOKMARK [2][-]{subsection.Alph5.2.5}{Generador de contenidos de salud}{section.Alph5.2}% 170
-\BOOKMARK [2][-]{subsection.Alph5.2.6}{Patrocinios Deportivos}{section.Alph5.2}% 171
-\BOOKMARK [2][-]{subsection.Alph5.2.7}{Formaci\363n de Grupos Deportivos}{section.Alph5.2}% 172
-\BOOKMARK [2][-]{subsection.Alph5.2.8}{Entrenamiento Deportivo}{section.Alph5.2}% 173
-\BOOKMARK [1][-]{section.Alph5.3}{Application Usage Viewpoints}{appendix.Alph5}% 174
-\BOOKMARK [2][-]{subsection.Alph5.3.1}{Estad\355sticas Deportivas}{section.Alph5.3}% 175
-\BOOKMARK [2][-]{subsection.Alph5.3.2}{Buscador de consejos deportivos}{section.Alph5.3}% 176
-\BOOKMARK [2][-]{subsection.Alph5.3.3}{Evaluador consejos de salud}{section.Alph5.3}% 177
-\BOOKMARK [2][-]{subsection.Alph5.3.4}{Generador de consejos deportivos}{section.Alph5.3}% 178
-\BOOKMARK [2][-]{subsection.Alph5.3.5}{Generador de contenidos de salud}{section.Alph5.3}% 179
-\BOOKMARK [2][-]{subsection.Alph5.3.6}{Patrocinios Deportivos}{section.Alph5.3}% 180
-\BOOKMARK [2][-]{subsection.Alph5.3.7}{Formaci\363n de Grupos Deportivos}{section.Alph5.3}% 181
-\BOOKMARK [2][-]{subsection.Alph5.3.8}{Entrenamiento Deportivo}{section.Alph5.3}% 182
-\BOOKMARK [0][-]{appendix.Alph6}{M\363dulos no implementados}{}% 183
-\BOOKMARK [1][-]{section.Alph6.1}{M\363dulo de administraci\363n de entrenadores}{appendix.Alph6}% 184
-\BOOKMARK [1][-]{section.Alph6.2}{M\363dulo de administraci\363n de torneos}{appendix.Alph6}% 185
-\BOOKMARK [1][-]{section.Alph6.3}{M\363dulo de gesti\363n de patrocinios}{appendix.Alph6}% 186
-\BOOKMARK [1][-]{section.Alph6.4}{M\363dulo de administraci\363n de equipos y grupos deportivos}{appendix.Alph6}% 187
-\BOOKMARK [1][-]{section.Alph6.5}{M\363dulo de difusi\363n de informaci\363n}{appendix.Alph6}% 188
-\BOOKMARK [1][-]{section.Alph6.6}{M\363dulo de estad\355sticas}{appendix.Alph6}% 189
-\BOOKMARK [1][-]{section.Alph6.7}{M\363dulo de gesti\363n de self-expression}{appendix.Alph6}% 190
-\BOOKMARK [1][-]{section.Alph6.8}{M\363dulo de gesti\363n del conocimiento}{appendix.Alph6}% 191
-\BOOKMARK [0][-]{appendix.Alph7}{Tablas de descripci\363n de los casos de uso}{}% 192
-\BOOKMARK [1][-]{section.Alph7.1}{M\363dulo de gesti\363n de administracion de deportes}{appendix.Alph7}% 193
-\BOOKMARK [1][-]{section.Alph7.2}{M\363dulo de administraci\363n de entrenadores}{appendix.Alph7}% 194
-\BOOKMARK [1][-]{section.Alph7.3}{M\363dulo de administraci\363n de eventos deportivos}{appendix.Alph7}% 195
-\BOOKMARK [1][-]{section.Alph7.4}{M\363dulo de administraci\363n de torneos}{appendix.Alph7}% 196
-\BOOKMARK [1][-]{section.Alph7.5}{M\363dulo de administraci\363n de equipos y grupos deportivos}{appendix.Alph7}% 197
-\BOOKMARK [1][-]{section.Alph7.6}{M\363dulo de estad\355sticas}{appendix.Alph7}% 198
-\BOOKMARK [1][-]{section.Alph7.7}{M\363dulo de gesti\363n de patrocinios}{appendix.Alph7}% 199
-\BOOKMARK [1][-]{section.Alph7.8}{M\363dulo de gesti\363n de self-expression}{appendix.Alph7}% 200
-\BOOKMARK [1][-]{section.Alph7.9}{M\363dulo de difusi\363n de informaci\363n}{appendix.Alph7}% 201
-\BOOKMARK [1][-]{section.Alph7.10}{M\363dulo de gesti\363n del conocimiento}{appendix.Alph7}% 202
-\BOOKMARK [1][-]{section.Alph7.11}{M\363dulo de gesti\363n de jugadores}{appendix.Alph7}% 203
-\BOOKMARK [1][-]{section.Alph7.12}{M\363dulo de gesti\363n de usuarios}{appendix.Alph7}% 204
-\BOOKMARK [1][-]{section.Alph7.13}{M\363dulo de gesti\363n de ubicaciones}{appendix.Alph7}% 205
-\BOOKMARK [0][-]{appendix.Alph8}{Pantallas UI del prototipo de SNS}{}% 206
-\BOOKMARK [1][-]{section.Alph8.1}{Pantallas UI del m\363dulo de gesti\363n de deportes}{appendix.Alph8}% 207
-\BOOKMARK [1][-]{section.Alph8.2}{Pantallas UI del m\363dulo de gesti\363n de jugadores}{appendix.Alph8}% 208
-\BOOKMARK [1][-]{section.Alph8.3}{Pantallas UI del m\363dulo de gesti\363n de eventos}{appendix.Alph8}% 209
-\BOOKMARK [1][-]{section.Alph8.4}{Pantallas UI del m\363dulo de gesti\363n de gesti\363n self-sharing}{appendix.Alph8}% 210
-\BOOKMARK [1][-]{section.Alph8.5}{Pantallas UI del m\363dulo de gesti\363n de usuarios}{appendix.Alph8}% 211
-\BOOKMARK [1][-]{section.Alph8.6}{Pantallas UI del m\363dulo de gesti\363n de contenidos}{appendix.Alph8}% 212
-\BOOKMARK [1][-]{section.Alph8.7}{Pantallas UI del m\363dulo de administraci\363n}{appendix.Alph8}% 213
-\BOOKMARK [1][-]{section.Alph8.8}{Pantallas UI del m\363dulo de difusion de informacion}{appendix.Alph8}% 214
-\BOOKMARK [1][-]{section.Alph8.9}{Pantallas UI del m\363dulo de gesti\363n de ubicaciones}{appendix.Alph8}% 215
-\BOOKMARK [0][-]{appendix.Alph9}{Modelo de datos a implementar en tareas posteriores}{}% 216
-\BOOKMARK [1][-]{section.Alph9.1}{Modelo de datos de gesti\363n de estad\355sticas}{appendix.Alph9}% 217
-\BOOKMARK [1][-]{section.Alph9.2}{Modelo de datos de gesti\363n de conocimiento}{appendix.Alph9}% 218
-\BOOKMARK [1][-]{section.Alph9.3}{Modelo de datos de gesti\363n de multimedia}{appendix.Alph9}% 219
-\BOOKMARK [1][-]{section.Alph9.4}{Modelo de datos de gesti\363n de roles}{appendix.Alph9}% 220
-\BOOKMARK [0][-]{appendix.Alph10}{Diccionario de datos}{}% 221
-\BOOKMARK [1][-]{section.Alph10.1}{Modelo de datos con entidades/relaciones generales}{appendix.Alph10}% 222
-\BOOKMARK [2][-]{subsection.Alph10.1.1}{Entidades}{section.Alph10.1}% 223
-\BOOKMARK [2][-]{subsection.Alph10.1.2}{Relaciones}{section.Alph10.1}% 224
-\BOOKMARK [1][-]{section.Alph10.2}{Modelo de datos de gesti\363n de eventos}{appendix.Alph10}% 225
-\BOOKMARK [2][-]{subsection.Alph10.2.1}{Entidades}{section.Alph10.2}% 226
-\BOOKMARK [2][-]{subsection.Alph10.2.2}{Relaciones}{section.Alph10.2}% 227
-\BOOKMARK [1][-]{section.Alph10.3}{Modelo de datos de gesti\363n de ubicaciones}{appendix.Alph10}% 228
-\BOOKMARK [2][-]{subsection.Alph10.3.1}{Entidades}{section.Alph10.3}% 229
-\BOOKMARK [2][-]{subsection.Alph10.3.2}{Relaciones}{section.Alph10.3}% 230
-\BOOKMARK [1][-]{section.Alph10.4}{Modelo de datos de gesti\363n de deportes}{appendix.Alph10}% 231
-\BOOKMARK [2][-]{subsection.Alph10.4.1}{Entidades}{section.Alph10.4}% 232
-\BOOKMARK [2][-]{subsection.Alph10.4.2}{Relaciones}{section.Alph10.4}% 233
-\BOOKMARK [1][-]{section.Alph10.5}{Modelo de datos de gesti\363n de estad\355sticas}{appendix.Alph10}% 234
-\BOOKMARK [2][-]{subsection.Alph10.5.1}{Entidades}{section.Alph10.5}% 235
-\BOOKMARK [2][-]{subsection.Alph10.5.2}{Relaciones}{section.Alph10.5}% 236
-\BOOKMARK [1][-]{section.Alph10.6}{Modelo de datos de gesti\363n de multimedia}{appendix.Alph10}% 237
-\BOOKMARK [2][-]{subsection.Alph10.6.1}{Entidades}{section.Alph10.6}% 238
-\BOOKMARK [2][-]{subsection.Alph10.6.2}{Relaciones}{section.Alph10.6}% 239
-\BOOKMARK [1][-]{section.Alph10.7}{Modelo de datos de gesti\363n de contenidos}{appendix.Alph10}% 240
-\BOOKMARK [2][-]{subsection.Alph10.7.1}{Entidades}{section.Alph10.7}% 241
-\BOOKMARK [2][-]{subsection.Alph10.7.2}{Relaciones}{section.Alph10.7}% 242
-\BOOKMARK [1][-]{section.Alph10.8}{Modelo de datos de gesti\363n de roles}{appendix.Alph10}% 243
-\BOOKMARK [2][-]{subsection.Alph10.8.1}{Entidades}{section.Alph10.8}% 244
-\BOOKMARK [2][-]{subsection.Alph10.8.2}{Relaciones}{section.Alph10.8}% 245
-\BOOKMARK [1][-]{section.Alph10.9}{Modelo de datos de gesti\363n de usuarios}{appendix.Alph10}% 246
-\BOOKMARK [2][-]{subsection.Alph10.9.1}{Entidades}{section.Alph10.9}% 247
-\BOOKMARK [2][-]{subsection.Alph10.9.2}{Relaciones}{section.Alph10.9}% 248
+\BOOKMARK [2][-]{subsection.12.1.2}{Articulaci\363n con el desarrollo del prototipo}{section.12.1}% 92
+\BOOKMARK [0][-]{chapter.13}{An\341lisis de requerimientos}{}% 93
+\BOOKMARK [1][-]{section.13.1}{Requerimientos}{chapter.13}% 94
+\BOOKMARK [2][-]{subsection.13.1.1}{Requerimientos funcionales}{section.13.1}% 95
+\BOOKMARK [2][-]{subsection.13.1.2}{Requerimientos no funcionales}{section.13.1}% 96
+\BOOKMARK [3][-]{subsubsection.13.1.2.1}{QiU}{subsection.13.1.2}% 97
+\BOOKMARK [3][-]{subsubsection.13.1.2.2}{Reusabilidad}{subsection.13.1.2}% 98
+\BOOKMARK [3][-]{subsubsection.13.1.2.3}{Mantenibilidad}{subsection.13.1.2}% 99
+\BOOKMARK [3][-]{subsubsection.13.1.2.4}{Interoperabilidad}{subsection.13.1.2}% 100
+\BOOKMARK [3][-]{subsubsection.13.1.2.5}{Seguridad}{subsection.13.1.2}% 101
+\BOOKMARK [3][-]{subsubsection.13.1.2.6}{Rendimiento}{subsection.13.1.2}% 102
+\BOOKMARK [0][-]{chapter.14}{Arquitectura}{}% 103
+\BOOKMARK [1][-]{section.14.1}{Vistas Archimate}{chapter.14}% 104
+\BOOKMARK [2][-]{subsection.14.1.1}{Vistas generales}{section.14.1}% 105
+\BOOKMARK [3][-]{subsubsection.14.1.1.1}{Actores y Roles}{subsection.14.1.1}% 106
+\BOOKMARK [3][-]{subsubsection.14.1.1.2}{Introductory viewpoint}{subsection.14.1.1}% 107
+\BOOKMARK [3][-]{subsubsection.14.1.1.3}{Layered viewpoint}{subsection.14.1.1}% 108
+\BOOKMARK [2][-]{subsection.14.1.2}{Business Functions Viewpoints}{section.14.1}% 109
+\BOOKMARK [3][-]{subsubsection.14.1.2.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.2}% 110
+\BOOKMARK [3][-]{subsubsection.14.1.2.2}{Buscador Deportivo}{subsection.14.1.2}% 111
+\BOOKMARK [3][-]{subsubsection.14.1.2.3}{Localizaci\363n}{subsection.14.1.2}% 112
+\BOOKMARK [2][-]{subsection.14.1.3}{Business Process Viewpoints}{section.14.1}% 113
+\BOOKMARK [3][-]{subsubsection.14.1.3.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.3}% 114
+\BOOKMARK [3][-]{subsubsection.14.1.3.2}{Buscador deportivo}{subsection.14.1.3}% 115
+\BOOKMARK [3][-]{subsubsection.14.1.3.3}{Localizaci\363n}{subsection.14.1.3}% 116
+\BOOKMARK [2][-]{subsection.14.1.4}{Application Usage Viewpoints}{section.14.1}% 117
+\BOOKMARK [3][-]{subsubsection.14.1.4.1}{Organizaci\363n de Eventos Deportivos}{subsection.14.1.4}% 118
+\BOOKMARK [3][-]{subsubsection.14.1.4.2}{Buscador deportivo}{subsection.14.1.4}% 119
+\BOOKMARK [3][-]{subsubsection.14.1.4.3}{Localizaci\363n}{subsection.14.1.4}% 120
+\BOOKMARK [2][-]{subsection.14.1.5}{Product Viewpoint}{section.14.1}% 121
+\BOOKMARK [3][-]{subsubsection.14.1.5.1}{Product}{subsection.14.1.5}% 122
+\BOOKMARK [2][-]{subsection.14.1.6}{Punto de vista de infraestructura}{section.14.1}% 123
+\BOOKMARK [0][-]{chapter.15}{An\341lisis funcional}{}% 124
+\BOOKMARK [1][-]{section.15.1}{M\363dulo de administraci\363n de eventos deportivos}{chapter.15}% 125
+\BOOKMARK [1][-]{section.15.2}{M\363dulo de gesti\363n de administracion de deportes}{chapter.15}% 126
+\BOOKMARK [1][-]{section.15.3}{M\363dulo de gesti\363n de usuarios}{chapter.15}% 127
+\BOOKMARK [1][-]{section.15.4}{M\363dulo de gesti\363n de ubicaciones}{chapter.15}% 128
+\BOOKMARK [0][-]{chapter.16}{Modelo de datos}{}% 129
+\BOOKMARK [1][-]{section.16.1}{Modelo de datos de gesti\363n de eventos}{chapter.16}% 130
+\BOOKMARK [1][-]{section.16.2}{Modelo de datos de gesti\363n de ubicaciones}{chapter.16}% 131
+\BOOKMARK [1][-]{section.16.3}{Modelo de datos de gesti\363n de deportes}{chapter.16}% 132
+\BOOKMARK [1][-]{section.16.4}{Modelo de datos de gesti\363n de usuarios}{chapter.16}% 133
+\BOOKMARK [0][-]{chapter.17}{Conclusiones}{}% 134
+\BOOKMARK [0][-]{chapter.18}{Anexos}{}% 135
+\BOOKMARK [0][-]{appendix.Alph1}{Datos encuesta inicial}{}% 136
+\BOOKMARK [1][-]{section.Alph1.1}{Informaci\363n necesaria}{appendix.Alph1}% 137
+\BOOKMARK [1][-]{section.Alph1.2}{Naturaleza de la encuesta}{appendix.Alph1}% 138
+\BOOKMARK [1][-]{section.Alph1.3}{T\351cnicas de escalamiento utilizadas}{appendix.Alph1}% 139
+\BOOKMARK [1][-]{section.Alph1.4}{Trabajo de campo}{appendix.Alph1}% 140
+\BOOKMARK [1][-]{section.Alph1.5}{Formato de encuesta}{appendix.Alph1}% 141
+\BOOKMARK [1][-]{section.Alph1.6}{Resultados de las encuestas}{appendix.Alph1}% 142
+\BOOKMARK [0][-]{appendix.Alph2}{Tabla de requerimientos funcionales}{}% 143
+\BOOKMARK [0][-]{appendix.Alph3}{Escenarios de calidad de requerimientos no funcionales en detalle}{}% 144
+\BOOKMARK [1][-]{section.Alph3.1}{QiU}{appendix.Alph3}% 145
+\BOOKMARK [1][-]{section.Alph3.2}{Reusabilidad}{appendix.Alph3}% 146
+\BOOKMARK [1][-]{section.Alph3.3}{Mantenibilidad}{appendix.Alph3}% 147
+\BOOKMARK [1][-]{section.Alph3.4}{Interoperabilidad}{appendix.Alph3}% 148
+\BOOKMARK [1][-]{section.Alph3.5}{Seguridad}{appendix.Alph3}% 149
+\BOOKMARK [1][-]{section.Alph3.6}{Entendimiento}{appendix.Alph3}% 150
+\BOOKMARK [1][-]{section.Alph3.7}{Robustez y fiabilidad}{appendix.Alph3}% 151
+\BOOKMARK [1][-]{section.Alph3.8}{Rendimiento}{appendix.Alph3}% 152
+\BOOKMARK [0][-]{appendix.Alph4}{Artefactos de la arquitectura}{}% 153
+\BOOKMARK [1][-]{section.Alph4.1}{Artefactos de la capa de negocio}{appendix.Alph4}% 154
+\BOOKMARK [1][-]{section.Alph4.2}{Artefactos de la capa de aplicaci\363n}{appendix.Alph4}% 155
+\BOOKMARK [1][-]{section.Alph4.3}{Artefactos de la capa de infraestructura}{appendix.Alph4}% 156
+\BOOKMARK [0][-]{appendix.Alph5}{Vistas de la arquitectura no implementadas}{}% 157
+\BOOKMARK [1][-]{section.Alph5.1}{Business Functions Viewpoints}{appendix.Alph5}% 158
+\BOOKMARK [2][-]{subsection.Alph5.1.1}{Estad\355sticas Deportivas}{section.Alph5.1}% 159
+\BOOKMARK [2][-]{subsection.Alph5.1.2}{Consejos}{section.Alph5.1}% 160
+\BOOKMARK [2][-]{subsection.Alph5.1.3}{Periodismo}{section.Alph5.1}% 161
+\BOOKMARK [2][-]{subsection.Alph5.1.4}{Servicios}{section.Alph5.1}% 162
+\BOOKMARK [2][-]{subsection.Alph5.1.5}{Patrocinios Deportivos}{section.Alph5.1}% 163
+\BOOKMARK [2][-]{subsection.Alph5.1.6}{Formaci\363n de Grupos Deportivos}{section.Alph5.1}% 164
+\BOOKMARK [2][-]{subsection.Alph5.1.7}{Entrenamiento Deportivo}{section.Alph5.1}% 165
+\BOOKMARK [1][-]{section.Alph5.2}{Business Process Viewpoints}{appendix.Alph5}% 166
+\BOOKMARK [2][-]{subsection.Alph5.2.1}{Estad\355sticas Deportivas}{section.Alph5.2}% 167
+\BOOKMARK [2][-]{subsection.Alph5.2.2}{Buscador de consejos deportivos}{section.Alph5.2}% 168
+\BOOKMARK [2][-]{subsection.Alph5.2.3}{Evaluador consejos de salud}{section.Alph5.2}% 169
+\BOOKMARK [2][-]{subsection.Alph5.2.4}{Generador de consejos deportivos}{section.Alph5.2}% 170
+\BOOKMARK [2][-]{subsection.Alph5.2.5}{Generador de contenidos de salud}{section.Alph5.2}% 171
+\BOOKMARK [2][-]{subsection.Alph5.2.6}{Patrocinios Deportivos}{section.Alph5.2}% 172
+\BOOKMARK [2][-]{subsection.Alph5.2.7}{Formaci\363n de Grupos Deportivos}{section.Alph5.2}% 173
+\BOOKMARK [2][-]{subsection.Alph5.2.8}{Entrenamiento Deportivo}{section.Alph5.2}% 174
+\BOOKMARK [1][-]{section.Alph5.3}{Application Usage Viewpoints}{appendix.Alph5}% 175
+\BOOKMARK [2][-]{subsection.Alph5.3.1}{Estad\355sticas Deportivas}{section.Alph5.3}% 176
+\BOOKMARK [2][-]{subsection.Alph5.3.2}{Buscador de consejos deportivos}{section.Alph5.3}% 177
+\BOOKMARK [2][-]{subsection.Alph5.3.3}{Evaluador consejos de salud}{section.Alph5.3}% 178
+\BOOKMARK [2][-]{subsection.Alph5.3.4}{Generador de consejos deportivos}{section.Alph5.3}% 179
+\BOOKMARK [2][-]{subsection.Alph5.3.5}{Generador de contenidos de salud}{section.Alph5.3}% 180
+\BOOKMARK [2][-]{subsection.Alph5.3.6}{Patrocinios Deportivos}{section.Alph5.3}% 181
+\BOOKMARK [2][-]{subsection.Alph5.3.7}{Formaci\363n de Grupos Deportivos}{section.Alph5.3}% 182
+\BOOKMARK [2][-]{subsection.Alph5.3.8}{Entrenamiento Deportivo}{section.Alph5.3}% 183
+\BOOKMARK [0][-]{appendix.Alph6}{M\363dulos no implementados}{}% 184
+\BOOKMARK [1][-]{section.Alph6.1}{M\363dulo de administraci\363n de entrenadores}{appendix.Alph6}% 185
+\BOOKMARK [1][-]{section.Alph6.2}{M\363dulo de administraci\363n de torneos}{appendix.Alph6}% 186
+\BOOKMARK [1][-]{section.Alph6.3}{M\363dulo de gesti\363n de patrocinios}{appendix.Alph6}% 187
+\BOOKMARK [1][-]{section.Alph6.4}{M\363dulo de administraci\363n de equipos y grupos deportivos}{appendix.Alph6}% 188
+\BOOKMARK [1][-]{section.Alph6.5}{M\363dulo de difusi\363n de informaci\363n}{appendix.Alph6}% 189
+\BOOKMARK [1][-]{section.Alph6.6}{M\363dulo de estad\355sticas}{appendix.Alph6}% 190
+\BOOKMARK [1][-]{section.Alph6.7}{M\363dulo de gesti\363n de self-expression}{appendix.Alph6}% 191
+\BOOKMARK [1][-]{section.Alph6.8}{M\363dulo de gesti\363n del conocimiento}{appendix.Alph6}% 192
+\BOOKMARK [0][-]{appendix.Alph7}{Tablas de descripci\363n de los casos de uso}{}% 193
+\BOOKMARK [1][-]{section.Alph7.1}{M\363dulo de gesti\363n de administracion de deportes}{appendix.Alph7}% 194
+\BOOKMARK [1][-]{section.Alph7.2}{M\363dulo de administraci\363n de entrenadores}{appendix.Alph7}% 195
+\BOOKMARK [1][-]{section.Alph7.3}{M\363dulo de administraci\363n de eventos deportivos}{appendix.Alph7}% 196
+\BOOKMARK [1][-]{section.Alph7.4}{M\363dulo de administraci\363n de torneos}{appendix.Alph7}% 197
+\BOOKMARK [1][-]{section.Alph7.5}{M\363dulo de administraci\363n de equipos y grupos deportivos}{appendix.Alph7}% 198
+\BOOKMARK [1][-]{section.Alph7.6}{M\363dulo de estad\355sticas}{appendix.Alph7}% 199
+\BOOKMARK [1][-]{section.Alph7.7}{M\363dulo de gesti\363n de patrocinios}{appendix.Alph7}% 200
+\BOOKMARK [1][-]{section.Alph7.8}{M\363dulo de gesti\363n de self-expression}{appendix.Alph7}% 201
+\BOOKMARK [1][-]{section.Alph7.9}{M\363dulo de difusi\363n de informaci\363n}{appendix.Alph7}% 202
+\BOOKMARK [1][-]{section.Alph7.10}{M\363dulo de gesti\363n del conocimiento}{appendix.Alph7}% 203
+\BOOKMARK [1][-]{section.Alph7.11}{M\363dulo de gesti\363n de jugadores}{appendix.Alph7}% 204
+\BOOKMARK [1][-]{section.Alph7.12}{M\363dulo de gesti\363n de usuarios}{appendix.Alph7}% 205
+\BOOKMARK [1][-]{section.Alph7.13}{M\363dulo de gesti\363n de ubicaciones}{appendix.Alph7}% 206
+\BOOKMARK [0][-]{appendix.Alph8}{Pantallas UI del prototipo de SNS}{}% 207
+\BOOKMARK [1][-]{section.Alph8.1}{Pantallas UI del m\363dulo de gesti\363n de deportes}{appendix.Alph8}% 208
+\BOOKMARK [1][-]{section.Alph8.2}{Pantallas UI del m\363dulo de gesti\363n de jugadores}{appendix.Alph8}% 209
+\BOOKMARK [1][-]{section.Alph8.3}{Pantallas UI del m\363dulo de gesti\363n de eventos}{appendix.Alph8}% 210
+\BOOKMARK [1][-]{section.Alph8.4}{Pantallas UI del m\363dulo de gesti\363n de gesti\363n self-sharing}{appendix.Alph8}% 211
+\BOOKMARK [1][-]{section.Alph8.5}{Pantallas UI del m\363dulo de gesti\363n de usuarios}{appendix.Alph8}% 212
+\BOOKMARK [1][-]{section.Alph8.6}{Pantallas UI del m\363dulo de gesti\363n de contenidos}{appendix.Alph8}% 213
+\BOOKMARK [1][-]{section.Alph8.7}{Pantallas UI del m\363dulo de administraci\363n}{appendix.Alph8}% 214
+\BOOKMARK [1][-]{section.Alph8.8}{Pantallas UI del m\363dulo de difusion de informacion}{appendix.Alph8}% 215
+\BOOKMARK [1][-]{section.Alph8.9}{Pantallas UI del m\363dulo de gesti\363n de ubicaciones}{appendix.Alph8}% 216
+\BOOKMARK [0][-]{appendix.Alph9}{Modelo de datos a implementar en tareas posteriores}{}% 217
+\BOOKMARK [1][-]{section.Alph9.1}{Modelo de datos de gesti\363n de estad\355sticas}{appendix.Alph9}% 218
+\BOOKMARK [1][-]{section.Alph9.2}{Modelo de datos de gesti\363n de conocimiento}{appendix.Alph9}% 219
+\BOOKMARK [1][-]{section.Alph9.3}{Modelo de datos de gesti\363n de multimedia}{appendix.Alph9}% 220
+\BOOKMARK [1][-]{section.Alph9.4}{Modelo de datos de gesti\363n de roles}{appendix.Alph9}% 221
+\BOOKMARK [0][-]{appendix.Alph10}{Diccionario de datos}{}% 222
+\BOOKMARK [1][-]{section.Alph10.1}{Modelo de datos con entidades/relaciones generales}{appendix.Alph10}% 223
+\BOOKMARK [2][-]{subsection.Alph10.1.1}{Entidades}{section.Alph10.1}% 224
+\BOOKMARK [2][-]{subsection.Alph10.1.2}{Relaciones}{section.Alph10.1}% 225
+\BOOKMARK [1][-]{section.Alph10.2}{Modelo de datos de gesti\363n de eventos}{appendix.Alph10}% 226
+\BOOKMARK [2][-]{subsection.Alph10.2.1}{Entidades}{section.Alph10.2}% 227
+\BOOKMARK [2][-]{subsection.Alph10.2.2}{Relaciones}{section.Alph10.2}% 228
+\BOOKMARK [1][-]{section.Alph10.3}{Modelo de datos de gesti\363n de ubicaciones}{appendix.Alph10}% 229
+\BOOKMARK [2][-]{subsection.Alph10.3.1}{Entidades}{section.Alph10.3}% 230
+\BOOKMARK [2][-]{subsection.Alph10.3.2}{Relaciones}{section.Alph10.3}% 231
+\BOOKMARK [1][-]{section.Alph10.4}{Modelo de datos de gesti\363n de deportes}{appendix.Alph10}% 232
+\BOOKMARK [2][-]{subsection.Alph10.4.1}{Entidades}{section.Alph10.4}% 233
+\BOOKMARK [2][-]{subsection.Alph10.4.2}{Relaciones}{section.Alph10.4}% 234
+\BOOKMARK [1][-]{section.Alph10.5}{Modelo de datos de gesti\363n de estad\355sticas}{appendix.Alph10}% 235
+\BOOKMARK [2][-]{subsection.Alph10.5.1}{Entidades}{section.Alph10.5}% 236
+\BOOKMARK [2][-]{subsection.Alph10.5.2}{Relaciones}{section.Alph10.5}% 237
+\BOOKMARK [1][-]{section.Alph10.6}{Modelo de datos de gesti\363n de multimedia}{appendix.Alph10}% 238
+\BOOKMARK [2][-]{subsection.Alph10.6.1}{Entidades}{section.Alph10.6}% 239
+\BOOKMARK [2][-]{subsection.Alph10.6.2}{Relaciones}{section.Alph10.6}% 240
+\BOOKMARK [1][-]{section.Alph10.7}{Modelo de datos de gesti\363n de contenidos}{appendix.Alph10}% 241
+\BOOKMARK [2][-]{subsection.Alph10.7.1}{Entidades}{section.Alph10.7}% 242
+\BOOKMARK [2][-]{subsection.Alph10.7.2}{Relaciones}{section.Alph10.7}% 243
+\BOOKMARK [1][-]{section.Alph10.8}{Modelo de datos de gesti\363n de roles}{appendix.Alph10}% 244
+\BOOKMARK [2][-]{subsection.Alph10.8.1}{Entidades}{section.Alph10.8}% 245
+\BOOKMARK [2][-]{subsection.Alph10.8.2}{Relaciones}{section.Alph10.8}% 246
+\BOOKMARK [1][-]{section.Alph10.9}{Modelo de datos de gesti\363n de usuarios}{appendix.Alph10}% 247
+\BOOKMARK [2][-]{subsection.Alph10.9.1}{Entidades}{section.Alph10.9}% 248
+\BOOKMARK [2][-]{subsection.Alph10.9.2}{Relaciones}{section.Alph10.9}% 249

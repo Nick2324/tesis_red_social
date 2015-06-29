@@ -20,6 +20,7 @@ public class FechaSNS {
 	
 	public void setFecha(String fecha){
 		if(fecha != null && !fecha.equals("")){
+			fecha = fecha.replaceAll("\\\\", "");
 			SimpleDateFormat formato = new SimpleDateFormat(
 					FechaSNS.DIAS + FechaSNS.SEPARADORFECHA +
 					FechaSNS.MESES + FechaSNS.SEPARADORFECHA +
@@ -43,7 +44,6 @@ public class FechaSNS {
 			return formato.format(this.fecha);
 		}
 
-		System.out.println("paso devuelvo ");
 		return "";
 		
 	}

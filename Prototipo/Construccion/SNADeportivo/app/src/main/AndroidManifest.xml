@@ -41,8 +41,13 @@
             android:label="@string/title_activity_gestion_eventos" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".eventos.CrearEvento"
+            android:label="@string/title_activity_crear_evento" >
         </activity>
     </application>
 

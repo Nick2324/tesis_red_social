@@ -11,9 +11,11 @@ public class ProductorFactory {
 			return new PracticaDeportivaFactory();
 		if(tipo.equals(ConstantesEventos.EVENTODEPORTIVO.getServicio()))
 			return new EventoDeportivoFactory();
-		return new PracticaDeportivaFactory();
-		//throw new ProductorFactoryExcepcion();
+		throw new ProductorFactoryExcepcion();
 	}
-		
+	
+	public static void main(String[] args){
+		Integer i = null;
+	}
 	
 }

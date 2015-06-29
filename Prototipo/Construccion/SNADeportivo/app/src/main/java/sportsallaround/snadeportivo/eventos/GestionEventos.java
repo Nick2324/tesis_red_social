@@ -1,15 +1,29 @@
 package sportsallaround.snadeportivo.eventos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextSwitcher;
+import android.widget.TextView;
+import android.widget.ViewSwitcher.ViewFactory;
 
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
@@ -25,17 +39,20 @@ import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.Constants;
+import sportsallaround.utils.KeyValueItem;
 import sportsallaround.utils.ServiceUtils;
 
-public class GestionEventos extends ActionBarActivity {
+public class GestionEventos extends ActionBarActivity{
 
-    private Evento[] eventos;
+    private ArrayList<Evento> eventos;
     private String resultadoPeticion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_eventos);
+        this.prepararCaractWidgets();
+        this.prepararListeners();
     }
 
     @Override
@@ -65,10 +82,145 @@ public class GestionEventos extends ActionBarActivity {
         super.onStart();
         this.setTiposEventos();
         this.setDatosEventos();
-        //this.setListaEventos();
     }
 
-    private void setTiposEventos(){
+    private class PeticionEventos extends AsyncTask{
+
+        @Override
+        protected Object doInBackground(Object[] params) {
+            try {
+                ConstantesEventos itemSeleccionado = (ConstantesEventos)params[0];
+                Evento evento = new ProductorFactory().getEventosFactory(itemSeleccionado.getServicio()).crearEvento();
+                evento.setNullObject();
+                evento.setActivo(true);
+                JSONObject parametros = new JSONObject(evento.stringJson());
+                Log.d("Nick:Background",parametros.toString());
+                //parametros.put("activo", true);
+                //parametros.remove("activo");
+                return ServiceUtils.invokeService(parametros,
+                        Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
+                        "POST");
+            }catch (JSONException e){
+                Log.w("Error consulta eventos", e.getMessage());
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Object response){
+            Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
+            if (response != null && !((String)response).equals("")) {
+                try {
+                    JSONArray responseJson = new JSONArray((String) response);
+                    eventos = new ArrayList<Evento>();
+                    for (int i = 0; i < responseJson.length(); i++) {
+                        eventos.add(new ProductorFactory().
+                                getEventosFactory(((ConstantesEventos)tipoEvento.getSelectedItem()).
+                                        getServicio()).
+                                crearEvento());
+                        eventos.get(i).deserializarJson(
+                                JsonUtils.JsonStringToObject(responseJson.getString(i)));
+                    }
+                    setListaEventos();
+                } catch (JSONException e) {
+                    Log.w("SNA:JSONException", e.getMessage());
+                } catch (ExcepcionJsonDeserializacion e) {
+                    Log.w("SNA:ExcepcionJsonDes", e.getMessage());
+                }
+            }
+
+        }
+
+        public void realizarPeticion(ConstantesEventos ce){
+            try {
+                this.execute(new Object[]{ce});
+            }catch(Exception e){
+                Log.w("SNA:Exception",e.getMessage());
+            }
+        }
+
+    }
+
+    private void prepararCaractWidgets(){
+        final Context actividad = this;
+        TextSwitcher informacionEvento = (TextSwitcher)findViewById(R.id.switcher_lista_eventos);
+        informacionEvento.setFactory(
+                new ViewFactory() {
+
+                    public View makeView() {
+                        TextView descripcionGeneralEv = new TextView(actividad);
+                        descripcionGeneralEv.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL);
+                        descripcionGeneralEv.setTextSize(16);
+                        return descripcionGeneralEv;
+                    }
+
+                });
+
+        informacionEvento.setInAnimation(AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left));
+        informacionEvento.setOutAnimation(AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right));
+
+    }
+
+    private void prepararListeners(){
+        final Context actividad = this;
+        ListView listaEventos = (ListView)findViewById(R.id.listview_lista_eventos);
+        listaEventos.setOnItemClickListener(
+                new OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                        ListView listaEventos = (ListView) parent;
+                        int i = Integer.parseInt(((KeyValueItem) listaEventos.getAdapter().getItem(position)).getKey().toString());
+                        Log.d("Nick:Clicked", eventos.get(i).toString());
+                        TextSwitcher informacionEvento = (TextSwitcher) findViewById(R.id.switcher_lista_eventos);
+                        informacionEvento.setText(eventos.get(i).getNombre() + "\n" +
+                                eventos.get(i).getDescripcion() + "\n" +
+                                "Fecha de creacion: " + eventos.get(i).getFechaCreacion() + "\n" +
+                                "Fecha de inicio: " + eventos.get(i).getFechaInicio());
+                    }
+                }
+        );
+        Spinner tiposEventos = (Spinner)findViewById(R.id.spinner_tipo_evento);
+        tiposEventos.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                Spinner tiposEventos = (Spinner) parentView;
+                new PeticionEventos().realizarPeticion((ConstantesEventos) tiposEventos.getAdapter().getItem(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+            }
+
+        });
+        EditText busquedaEvento = (EditText)findViewById(R.id.edittext_busqueda_administracion_eventos);
+        busquedaEvento.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ListView listaEventos = (ListView)findViewById(R.id.listview_lista_eventos);
+                //COMPLETAR
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+
+        });
+        Button crearEvento = (Button)findViewById(R.id.button_crear_evento);
+        crearEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent crearEventoIntent = new Intent(actividad,CrearEvento.class);
+                startActivity(crearEventoIntent);
+            }
+        });
+    }
+
+
+    private void setTiposEventos() {
         Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
         ArrayList<ConstantesEventos> tiposEventos = new ArrayList<ConstantesEventos>();
         for(ConstantesEventos ce:ConstantesEventos.values())
@@ -78,85 +230,23 @@ public class GestionEventos extends ActionBarActivity {
         tipoEvento.setAdapter(adapterTipoEvento);
     }
 
-    private void setListaEventos(){
-        ListView listaEventos = (ListView)findViewById(R.id.listview_lista_eventos);
-        ArrayList<String> arrayListaEventos = new ArrayList<String>();
-        for(int i = 0;i < eventos.length;i++)
-            arrayListaEventos.add(eventos[i].getNombre());
-        ArrayAdapter<String> datosListaEventos =
-                new ArrayAdapter<String> (this,android.R.layout.simple_selectable_list_item,arrayListaEventos);
+    private void setListaEventos() {
+        ListView listaEventos = (ListView) findViewById(R.id.listview_lista_eventos);
+        ArrayList<KeyValueItem> arrayListaEventos =
+                new ArrayList<KeyValueItem>();
+        for (Evento e : eventos)
+            arrayListaEventos.add(new KeyValueItem(eventos.indexOf(e), e.getNombre()));
+        ArrayAdapter<KeyValueItem> datosListaEventos =
+                new ArrayAdapter<KeyValueItem>(this,
+                        android.R.layout.simple_selectable_list_item,
+                        arrayListaEventos);
         listaEventos.setAdapter(datosListaEventos);
-    }
-
-    private class PeticionEventos extends AsyncTask{
-
-        public Context contexto;
-
-        @Override
-        protected Object doInBackground(Object[] params) {
-            Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
-            try {
-                JSONObject parametros = new JSONObject();
-                parametros.put("activo", true);
-                Log.d("Nick:peticion","Inicio la peticion");
-                ConstantesEventos itemSeleccionado = (ConstantesEventos)tipoEvento.getSelectedItem();
-                resultadoPeticion = ServiceUtils.invokeService(parametros,
-                        Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
-                        "POST");
-                Log.d("NICK:END**","Termino la peticion");
-            }catch (JSONException e){
-                Log.w("Error consulta eventos", e.getMessage());
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Object response){
-            Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
-            if (response != null) {
-                try {
-                    JSONArray responseJson = new JSONArray((String) response);
-                    eventos = null;
-                    eventos = new Evento[responseJson.length()];
-                    for (int i = 0; i < responseJson.length(); i++) {
-                        eventos[i] = new ProductorFactory().
-                                getEventosFactory(tipoEvento.getSelectedItem().toString()).
-                                crearEvento();
-                        eventos[i].deserializarJson(JsonUtils.JsonStringToObject(responseJson.getString(i)));
-                    }
-                    Log.d("NICK:END**", "Termino de armar eventos");
-                } catch (JSONException e) {
-                    Log.w("Error consulta eventos", e.getMessage());
-                    Log.d("Error consulta eventos", e.getMessage());
-                } catch (ExcepcionJsonDeserializacion e) {
-                    Log.w("Error consulta eventos", e.getMessage());
-                    Log.d("Error consulta eventos", e.getMessage());
-                }
-
-                ListView listaEventos = (ListView) findViewById(R.id.listview_lista_eventos);
-                ArrayList<String> arrayListaEventos = new ArrayList<String>();
-                for (int i = 0; i < eventos.length; i++)
-                    arrayListaEventos.add(eventos[i].getNombre());
-                ArrayAdapter<String> datosListaEventos =
-                        new ArrayAdapter<String>(contexto, R.layout.activity_gestion_eventos, arrayListaEventos);
-                listaEventos.setAdapter(datosListaEventos);
-            }
-
-            Log.d("NICK:END**", "Termino postexecute");
-
-        }
-
     }
 
     private void setDatosEventos(){
 
-        try {
-            PeticionEventos pe = new PeticionEventos();
-            pe.contexto = this;
-            pe.execute(null);
-        }catch(Exception e){
-            Log.d("NICK:FAIL**",e.getMessage());
-        }
+        Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
+        new PeticionEventos().realizarPeticion((ConstantesEventos)tipoEvento.getSelectedItem());
 
     }
 

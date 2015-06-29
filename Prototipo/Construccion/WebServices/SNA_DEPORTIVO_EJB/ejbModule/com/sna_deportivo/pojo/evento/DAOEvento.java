@@ -135,22 +135,4 @@ public abstract class DAOEvento {
 		return this.eventoManejado;
 	}
 	
-	public static void main(String[] args){
-		System.out.println("empiezo");
-		/*try {
-			BDUtils.ejecutarQueryREST("MATCH (eventos:E_EventoDeportivo), (usuarios:E_Usuario) RETURN usuarios,eventos");
-		} catch (BDException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		Evento e = new PracticaDeportiva();
-		e.setActivo(true);
-		System.out.println(e.stringJson());
-		DAOEvento de = new DEPracticaDeportiva();
-		de.setEvento(e);
-		for(Evento evento:de.getEventosDB())
-			System.out.println(evento.stringJson());
-		System.out.println("termino");
-	}
-	
 }

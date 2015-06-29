@@ -338,41 +338,53 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 			Evento e = (Evento)obj;
 			retorno = true;
 			if(e.getId() != null && retorno)
-			   if(e.getId() != this.id)
+			   if(e.getId() != this.id){
 				   retorno = false;
-			if(retorno && e.getDescripcion() != null)
-			   if(e.getDescripcion() != this.descripcion)
-				   retorno = false;
-			if(retorno && e.getFechaCreacion() != null)
-			   if(e.getFechaCreacion().equals(this.fechaCreacion.toString()))
-				   retorno = false;
-			if(retorno && e.getFechaInicio() != null)
-			   if(e.getFechaInicio().equals(this.fechaInicio.toString()))
-				   retorno = false;
-			if(retorno && e.getFechaFinal() != null)
-			   if(e.getFechaFinal().equals(this.fechaFinal.toString()))
-				   retorno = false;
+			   }
 			if(retorno && e.getNombre() != null)
-			   if(e.getNombre() != this.nombre)
+				   if(e.getNombre() != this.nombre){
+					   retorno = false;
+				   }
+			if(retorno && e.getDescripcion() != null)
+			   if(e.getDescripcion() != this.descripcion){
 				   retorno = false;
+			   }
+			if(retorno && e.getFechaCreacion() != null)
+			   if(!e.getFechaCreacion().toString().equals(this.fechaCreacion.toString())){
+				   retorno = false;
+			   }
+			if(retorno && e.getFechaInicio() != null)
+			   if(!e.getFechaInicio().toString().equals(this.fechaInicio.toString())){
+				   retorno = false;
+			   }
+			if(retorno && e.getFechaFinal() != null)
+			   if(!e.getFechaFinal().toString().equals(this.fechaFinal.toString())){
+				   retorno = false;
+			   }
 			if(retorno && e.getHoraInicio() != null)
-				if(e.getHoraInicio().equals(this.horaInicio.toString()))
+				if(!e.getHoraInicio().toString().equals(this.horaInicio.toString())){
 					retorno = false;
+				}
 			if(retorno && e.getHoraFinal() != null)
-				if(e.getHoraFinal().equals(this.horaFinal.toString()))
+				if(!e.getHoraFinal().toString().equals(this.horaFinal.toString())){
 				    retorno = false;
-			if(retorno && e.getActivo() != null)
-				if (e.getActivo() != this.activo)
+				}
+			if(retorno && e.getNumMaxParticipantes() != null)
+				if (e.getNumMaxParticipantes() != this.numMaxParticipantes){
 					retorno = false;
+				}
 			if(retorno && e.getRangoMaxEdad() != null)
-				if (e.getRangoMaxEdad() != this.rangoMaxEdad)
+				if (e.getRangoMaxEdad() != this.rangoMaxEdad){
 					retorno = false;
+				}
 			if(retorno && e.getRangoMinEdad() != null)
-				if (e.getRangoMinEdad() != this.rangoMinEdad)
+				if (e.getRangoMinEdad() != this.rangoMinEdad){
 					retorno = false;
-			if(retorno && e.getRangoMaxEdad() != null)
-				if (e.getRangoMaxEdad() != this.rangoMaxEdad)
+				}
+			if(retorno && e.getActivo() != null)
+				if (e.getActivo() != this.activo){
 					retorno = false;
+				}
 		}
 		
 		return retorno;
@@ -390,8 +402,8 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	@Override
 	public String stringJson(){
 		return "{id:"+this.id+","+
-				"nombre:"+this.nombre+","+
-				"descripcion:"+this.descripcion+","+
+				"nombre:"+JsonUtils.propiedadNula(this.nombre)+","+
+				"descripcion:"+JsonUtils.propiedadNula(this.descripcion)+","+
 				"fechaCreacion:"+JsonUtils.propiedadNula(this.fechaCreacion)+","+
 				"fechaInicio:"+JsonUtils.propiedadNula(this.fechaInicio)+","+
 				"fechaFinal:"+JsonUtils.propiedadNula(this.fechaFinal)+","+
@@ -455,16 +467,20 @@ public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
 			this.setHoraFinal((String)valor[0]);
 			asignado = true;
 		}else if(atributo.equals("numMaxParticipantes")){
-			this.setNumMaxParticipantes(Integer.parseInt((String)valor[0]));
+			this.setNumMaxParticipantes((((String)valor[0]).equals("null"))?null:
+										Integer.parseInt((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("rangoMaxEdad")){
-			this.setRangoMaxEdad(Integer.parseInt((String)valor[0]));
+			this.setRangoMaxEdad((((String)valor[0]).equals("null"))?null:
+								 Integer.parseInt((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("rangoMinEdad")){
-			this.setRangoMinEdad(Integer.parseInt((String)valor[0]));
+			this.setRangoMinEdad((((String)valor[0]).equals("null"))?null:
+								 Integer.parseInt((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("activo")){
-			this.setActivo(Boolean.parseBoolean((String)valor[0]));
+			this.setActivo((((String)valor[0]).equals("null"))?null:
+							Boolean.parseBoolean((String)valor[0]));
 			asignado = true;
 		}
 		
