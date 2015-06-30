@@ -21,4 +21,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_user_update_sports">UserUpdateSports</string>
+
+    <string name="title_activity_error">Uups...</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.sna_deportivo.services;
 
+import java.security.acl.Permission;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -13,6 +14,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import com.sna_deportivo.pojo.usuarios.Credenciales;
+import com.sna_deportivo.pojo.usuarios.Permiso;
 import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
 import com.sna_deportivo.pojo.usuarios.Rol;
 import com.sna_deportivo.pojo.usuarios.Usuario;
@@ -115,4 +117,32 @@ public class GestionUsuarioService {
 		return resultado;
 	}
 	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("obtenerPermisosRol")
+	public Permiso[] obtenerPermisosRol(Rol rol){
+		Permiso[] resultado;
+		try {
+			resultado = servicio.obtenerPermisosRol(rol);
+		} catch (BDException e) {
+			resultado = null;
+		}
+		return resultado;
+	}
+	
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("obtenerPermisosAsociados")
+	public Permiso[] obtenerPermisosAsociados(Permiso permiso){
+		Permiso[] resultado;
+		try {
+			resultado = servicio.obtenerPermisosAsociados(permiso);
+		} catch (BDException e) {
+			resultado = null;
+		}
+		return resultado;
+	}
 }

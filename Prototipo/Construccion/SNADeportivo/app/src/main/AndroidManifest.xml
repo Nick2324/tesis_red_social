@@ -44,6 +44,10 @@
             android:name=".eventos.GestionEventos"
             android:label="@string/title_activity_gestion_eventos" >
         </activity>
+        <activity
+            android:name=".ErrorActivity"
+            android:label="@string/title_activity_error" >
+        </activity>
     </application>
 
 </manifest>

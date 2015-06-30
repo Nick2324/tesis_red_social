@@ -58,6 +58,17 @@ public class Rol implements Parcelable {
         consecutivoRol = in.readInt();
     }
 
+    @Override
+    public String toString() {
+        StringBuilder object = new StringBuilder();
+        object.append("{");
+        object.append("nombre:\"" + nombre+"\",");
+        object.append("descripcion:\"" + descripcion+"\",");
+        object.append("consecutivoRol:" + consecutivoRol);
+        object.append("}");
+        return object.toString();
+    }
+
     public static final Parcelable.Creator<Rol> CREATOR = new Parcelable.Creator<Rol>(){
         public Rol createFromParcel(Parcel in) {
             return new Rol(in);

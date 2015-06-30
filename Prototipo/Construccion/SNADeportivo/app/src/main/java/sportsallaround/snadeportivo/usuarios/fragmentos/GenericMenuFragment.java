@@ -18,22 +18,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
+import sportsallaround.snadeportivo.ErrorActivity;
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.pojos.Permiso;
 import sportsallaround.snadeportivo.usuarios.pojos.Rol;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
-import sportsallaround.utils.Utils;
+import sportsallaround.utils.ServiceUtils;
 
 /**
  * Created by LuisFelipe on 21/06/2015.
@@ -45,6 +39,7 @@ public class GenericMenuFragment extends Fragment{
     private ArrayList<Permiso> permisos;
     private Usuario user;
     private Rol userRole;
+    private Permiso permission;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,11 +48,13 @@ public class GenericMenuFragment extends Fragment{
         Bundle extras = getArguments();
         user = extras.getParcelable("user");
         userRole = extras.getParcelable("userRole");
+        permission = extras.getParcelable("permission");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout layout = new LinearLayout(context);
+        layout.setOrientation(LinearLayout.VERTICAL);
         View userTitle = inflater.inflate(R.layout.user_image_title, container, false);
         ((TextView)(userTitle.findViewById(R.id.title_user_name))).setText(user.getPrimerNombre().trim() + " " + user.getSegundoNombre().trim() + " " + user.getApellidos().trim());
         ((TextView)(userTitle.findViewById(R.id.title_user_role))).setText(userRole.getNombre());
@@ -70,6 +67,7 @@ public class GenericMenuFragment extends Fragment{
         }
         Button boton;
         LinearLayout buttonLayout = new LinearLayout(context);
+        buttonLayout.setOrientation(LinearLayout.VERTICAL);
         for(final Permiso permiso : permisos){
             boton = new Button(context);
             boton.setText(permiso.getNombre());
@@ -80,7 +78,7 @@ public class GenericMenuFragment extends Fragment{
                     try {
                         intent = new Intent(context,Class.forName(permiso.getRuta()));
                     } catch (ClassNotFoundException e) {
-                        intent = new Intent(context,Error.class);
+                        intent = new Intent(context,ErrorActivity.class);
                     }
                     startActivity(intent);
                 }
@@ -113,37 +111,13 @@ public class GenericMenuFragment extends Fragment{
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            InputStream is;
             boolean retorno = true;
-
-            //String parametros = "?";
-            JSONObject parametros = new JSONObject();
-
+            ArrayList<Permiso> permisos = new ArrayList<Permiso>();
             try {
-                URL completeUrl = new URL(Constants.ROOT_URL + Constants.SERVICES_OBTENER_PERMISOS_NODO);
 
-                HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+                String resultadoString = ServiceUtils.invokeService(new JSONObject(permission.toString()),Constants.SERVICES_OBTENER_PERMISOS,"POST");
 
-                conn.setReadTimeout(10000 /* milliseconds */);
-                conn.setConnectTimeout(15000 /* milliseconds */);
-                conn.setRequestProperty("Content-Type", "application/json");
-                conn.setRequestProperty("Accept", "application/json");
-                conn.setRequestMethod("GET");
-
-                //conn.setDoOutput(true);
-                //conn.setDoInput(true);
-                // Starts the query
-
-                //OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-                //wr.write(parametros.toString());
-                //wr.flush();
-
-                conn.connect();
-
-                is = conn.getInputStream();
-
-                JSONArray jsonPermisos = new JSONArray(Utils.convertStreamToString(is));
-
+                JSONArray jsonPermisos = new JSONArray(resultadoString);
                 JSONObject rol;
                 Permiso temp;
                 JSONObject tmpJson;
@@ -158,18 +132,7 @@ public class GenericMenuFragment extends Fragment{
                 }
 
                 activity.setPermisos(permisos);
-
-                conn.disconnect();
-            } catch (MalformedURLException e) {
-                retorno = false;
-                e.printStackTrace();
-            } catch (ProtocolException e) {
-                retorno = false;
-                e.printStackTrace();
             } catch (JSONException e) {
-                retorno = false;
-                e.printStackTrace();
-            } catch (IOException e) {
                 retorno = false;
                 e.printStackTrace();
             }
