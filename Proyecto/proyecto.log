@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  27 JUN 2015 17:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.12.27)  1 JUL 2015 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2697,49 +2697,46 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
  [152 <./imagenes/Archimate/vistas/generales/introductory.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+ [153 <./imagenes/Archimate/vistas/generales/generallayered.png (PNG copy)>]
 <./imagenes/Archimate/vistas/business_functions/organizacioneventosdeportivos.p
-ng, id=3700, 1081.03876pt x 467.7475pt>
+ng, id=3705, 1081.03876pt x 467.7475pt>
 File: ./imagenes/Archimate/vistas/business_functions/organizacioneventosdeporti
 vos.png Graphic file (type png)
 
 <use ./imagenes/Archimate/vistas/business_functions/organizacioneventosdeportiv
 os.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_functions/organiz
-acioneventosdeportivos.png used on input line 71.
+acioneventosdeportivos.png used on input line 81.
 (pdftex.def)             Requested size: 312.9803pt x 135.4149pt.
+LaTeX Info: Redefining \. on input line 90.
+LaTeX Info: Redefining \% on input line 90.
+ [154
 
-<./imagenes/Archimate/vistas/business_functions/buscadordeportivo.png, id=3701,
+
+ <./imagenes/Archimate/vistas/business_functions/organizacioneventosdeportivos.
+png (PNG copy)>]
+<./imagenes/Archimate/vistas/business_functions/buscadordeportivo.png, id=3710,
  443.40656pt x 76.03406pt>
 File: ./imagenes/Archimate/vistas/business_functions/buscadordeportivo.png Grap
 hic file (type png)
 
 <use ./imagenes/Archimate/vistas/business_functions/buscadordeportivo.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_functions/buscado
-rdeportivo.png used on input line 86.
+rdeportivo.png used on input line 98.
 (pdftex.def)             Requested size: 312.9803pt x 53.67245pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 96.
-LaTeX Info: Redefining \% on input line 96.
- [153 <./imagenes/Archimate/vistas/generales/generallayered.png (PNG copy)>]
-<./imagenes/Archimate/vistas/business_functions/localizacion.png, id=3707, 502.
+<./imagenes/Archimate/vistas/business_functions/localizacion.png, id=3711, 502.
 87875pt x 346.29375pt>
 File: ./imagenes/Archimate/vistas/business_functions/localizacion.png Graphic f
 ile (type png)
 
 <use ./imagenes/Archimate/vistas/business_functions/localizacion.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_functions/localiz
-acion.png used on input line 101.
+acion.png used on input line 113.
 (pdftex.def)             Requested size: 312.9803pt x 215.5242pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
- [154 <./imagenes/Archimate/vistas/business_functions/organizacioneventosdeport
-ivos.png (PNG copy)> <./imagenes/Archimate/vistas/business_functions/buscadorde
-portivo.png>]
 <./imagenes/Archimate/vistas/business_process/organizacioneventosdeportivos.png
 , id=3712, 2210.2575pt x 855.195pt>
 File: ./imagenes/Archimate/vistas/business_process/organizacioneventosdeportivo
@@ -2748,35 +2745,45 @@ s.png Graphic file (type png)
 <use ./imagenes/Archimate/vistas/business_process/organizacioneventosdeportivos
 .png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_process/organizac
-ioneventosdeportivos.png used on input line 118.
+ioneventosdeportivos.png used on input line 130.
 (pdftex.def)             Requested size: 312.9803pt x 121.09665pt.
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
- [155 <./imagenes/Archimate/vistas/business_functions/localizacion.png (PNG cop
-y)>]
-<./imagenes/Archimate/vistas/business_process/buscadordeportivo.png, id=3717, 2
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [155
+
+ <./imagenes/Archimate/vistas/business_functions/buscadordeportivo.png>]
+
+LaTeX Warning: Text page 156 contains only floats.
+
+
+Overfull \vbox (2.08737pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+
+[156 <./imagenes/Archimate/vistas/business_functions/localizacion.png (PNG copy
+)> <./imagenes/Archimate/vistas/business_process/organizacioneventosdeportivos.
+png (PNG copy)>]
+<./imagenes/Archimate/vistas/business_process/buscadordeportivo.png, id=3721, 2
 39.39438pt x 97.11281pt>
 File: ./imagenes/Archimate/vistas/business_process/buscadordeportivo.png Graphi
 c file (type png)
 
 <use ./imagenes/Archimate/vistas/business_process/buscadordeportivo.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_process/buscadord
-eportivo.png used on input line 133.
+eportivo.png used on input line 145.
 (pdftex.def)             Requested size: 312.9803pt x 126.97272pt.
 
-<./imagenes/Archimate/vistas/business_process/localizacion.png, id=3718, 1562.8
+<./imagenes/Archimate/vistas/business_process/localizacion.png, id=3722, 1562.8
 3875pt x 611.28375pt>
 File: ./imagenes/Archimate/vistas/business_process/localizacion.png Graphic fil
 e (type png)
 
 <use ./imagenes/Archimate/vistas/business_process/localizacion.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/business_process/localizac
-ion.png used on input line 148.
+ion.png used on input line 160.
 (pdftex.def)             Requested size: 312.9803pt x 122.41315pt.
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
- [156 <./imagenes/Archimate/vistas/business_process/organizacioneventosdeportiv
-os.png (PNG copy)>]
+
 <./imagenes/Archimate/vistas/application_usage/organizacioneventosdeportivos.pn
 g, id=3723, 1611.01875pt x 1123.19624pt>
 File: ./imagenes/Archimate/vistas/application_usage/organizacioneventosdeportiv
@@ -2785,15 +2792,11 @@ os.png Graphic file (type png)
 <use ./imagenes/Archimate/vistas/application_usage/organizacioneventosdeportivo
 s.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/application_usage/organiza
-cioneventosdeportivos.png used on input line 165.
+cioneventosdeportivos.png used on input line 177.
 (pdftex.def)             Requested size: 312.9803pt x 218.2083pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 172.
-LaTeX Info: Redefining \% on input line 172.
- [157 <./imagenes/Archimate/vistas/business_process/buscadordeportivo.png> <./i
-magenes/Archimate/vistas/business_process/localizacion.png (PNG copy)>]
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
+ [157 <./imagenes/Archimate/vistas/business_process/buscadordeportivo.png>]
 <./imagenes/Archimate/vistas/application_usage/buscadordeportivo.png, id=3729, 
 384.6872pt x 302.63063pt>
 File: ./imagenes/Archimate/vistas/application_usage/buscadordeportivo.png Graph
@@ -2801,13 +2804,13 @@ ic file (type png)
 
 <use ./imagenes/Archimate/vistas/application_usage/buscadordeportivo.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/application_usage/buscador
-deportivo.png used on input line 182.
+deportivo.png used on input line 194.
 (pdftex.def)             Requested size: 312.9803pt x 246.23772pt.
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
+LaTeX Info: Redefining \. on input line 205.
+LaTeX Info: Redefining \% on input line 205.
 
-[158 <./imagenes/Archimate/vistas/application_usage/organizacioneventosdeportiv
-os.png (PNG copy)>]
+[158 <./imagenes/Archimate/vistas/business_process/localizacion.png (PNG copy)>
+]
 <./imagenes/Archimate/vistas/application_usage/localizacion.png, id=3734, 1562.
 83875pt x 640.3925pt>
 File: ./imagenes/Archimate/vistas/application_usage/localizacion.png Graphic fi
@@ -2815,20 +2818,24 @@ le (type png)
 
 <use ./imagenes/Archimate/vistas/application_usage/localizacion.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/application_usage/localiza
-cion.png used on input line 197.
+cion.png used on input line 209.
 (pdftex.def)             Requested size: 312.9803pt x 128.24234pt.
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
- [159 <./imagenes/Archimate/vistas/application_usage/buscadordeportivo.png>]
-<./imagenes/Archimate/vistas/generales/Product.png, id=3739, 443.40656pt x 288.
+
+<./imagenes/Archimate/vistas/generales/Product.png, id=3735, 443.40656pt x 288.
 3272pt>
 File: ./imagenes/Archimate/vistas/generales/Product.png Graphic file (type png)
 
  <use ./imagenes/Archimate/vistas/generales/Product.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/generales/Product.png used
- on input line 214.
+ on input line 226.
 (pdftex.def)             Requested size: 312.9803pt x 203.53026pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
+ [159 <./imagenes/Archimate/vistas/application_usage/organizacioneventosdeporti
+vos.png (PNG copy)>]
 <./imagenes/Archimate/vistas/generales/infrastructure.png, id=3740, 1081.03876p
 t x 310.15875pt>
 File: ./imagenes/Archimate/vistas/generales/infrastructure.png Graphic file (ty
@@ -2836,22 +2843,22 @@ pe png)
 
 <use ./imagenes/Archimate/vistas/generales/infrastructure.png>
 Package pdftex.def Info: ./imagenes/Archimate/vistas/generales/infrastructure.p
-ng used on input line 228.
+ng used on input line 240.
 (pdftex.def)             Requested size: 312.9803pt x 89.79228pt.
 ))
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [160 <./imagenes/Archimate/vistas/application_usage/localizacion.png (PNG copy
-)>]
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [161 <./imagenes/Archimate/vistas/generales/Product.png> <./imagenes/Archimate
-/vistas/generales/infrastructure.png (PNG copy)>]
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [162
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+ [160 <./imagenes/Archimate/vistas/application_usage/buscadordeportivo.png>]
 
-]
+LaTeX Warning: Text page 161 contains only floats.
+
+LaTeX Info: Redefining \. on input line 182.
+LaTeX Info: Redefining \% on input line 182.
+[161 <./imagenes/Archimate/vistas/application_usage/localizacion.png (PNG copy)
+> <./imagenes/Archimate/vistas/generales/Product.png>]
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+ [162 <./imagenes/Archimate/vistas/generales/infrastructure.png (PNG copy)>]
 Cap\'{\i }tulo 15.
 (./Capitulos/Analisis_funcional/Casos_de_uso.tex
 <./imagenes/casos_uso/gestion_evento.png, id=3756, 730.73pt x 754.82pt>
@@ -2872,7 +2879,9 @@ on input line 27.
 
 Underfull \vbox (badness 2961) has occurred while \output is active []
 
- [163]
+ [163
+
+]
 <./imagenes/casos_uso/gestion_usuarios.png, id=3763, 491.8375pt x 730.73pt>
 File: ./imagenes/casos_uso/gestion_usuarios.png Graphic file (type png)
 
@@ -12954,7 +12963,7 @@ ype1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/shar
 e/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on proyecto.pdf (695 pages, 15706665 bytes).
+Output written on proyecto.pdf (695 pages, 15706957 bytes).
 PDF statistics:
  6762 PDF objects out of 7423 (max. 8388607)
  5641 compressed objects within 57 object streams
