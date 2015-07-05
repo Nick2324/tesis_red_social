@@ -1,6 +1,10 @@
 package sportsallaround.snadeportivo.eventos;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -33,7 +37,6 @@ import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -88,23 +91,10 @@ public class GestionEventos extends ActionBarActivity{
 
         @Override
         protected Object doInBackground(Object[] params) {
-            try {
-                ConstantesEventos itemSeleccionado = (ConstantesEventos)params[0];
-                Evento evento = new ProductorFactory().getEventosFactory(itemSeleccionado.getServicio()).crearEvento();
-                evento.setNullObject();
-                evento.setActivo(true);
-                JSONObject parametros = new JSONObject(evento.stringJson());
-                Log.d("Nick:Background",parametros.toString());
-                //parametros.put("activo", true);
-                //parametros.remove("activo");
-                return ServiceUtils.invokeService(parametros,
-                        Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
-                        "POST");
-            }catch (JSONException e){
-                Log.w("Error consulta eventos", e.getMessage());
-            }
-
-            return null;
+            ConstantesEventos itemSeleccionado = (ConstantesEventos)params[0];
+            return ServiceUtils.invokeService(null,
+                   Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
+                   "GET");
         }
 
         @Override
@@ -159,7 +149,21 @@ public class GestionEventos extends ActionBarActivity{
 
         informacionEvento.setInAnimation(AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left));
         informacionEvento.setOutAnimation(AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right));
+    }
 
+    public static class Dialogs extends DialogFragment{
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            // Use the Builder class for convenient dialog construction
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage("He sido presionado").setPositiveButton("lo que sea", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //Dialogs d = new Dialogs();
+                    //d.show(((GestionEventos)actividad).getFragmentManager(),"tag");
+                }
+            });
+            return builder.create();
+        }
     }
 
     private void prepararListeners(){
@@ -202,7 +206,7 @@ public class GestionEventos extends ActionBarActivity{
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ListView listaEventos = (ListView)findViewById(R.id.listview_lista_eventos);
-                //COMPLETAR
+                ((ArrayAdapter)listaEventos.getAdapter()).getFilter().filter(s);
             }
 
             @Override
@@ -232,6 +236,7 @@ public class GestionEventos extends ActionBarActivity{
 
     private void setListaEventos() {
         ListView listaEventos = (ListView) findViewById(R.id.listview_lista_eventos);
+        listaEventos.setAdapter(null);
         ArrayList<KeyValueItem> arrayListaEventos =
                 new ArrayList<KeyValueItem>();
         for (Evento e : eventos)
@@ -244,10 +249,8 @@ public class GestionEventos extends ActionBarActivity{
     }
 
     private void setDatosEventos(){
-
         Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
         new PeticionEventos().realizarPeticion((ConstantesEventos)tipoEvento.getSelectedItem());
-
     }
 
 }

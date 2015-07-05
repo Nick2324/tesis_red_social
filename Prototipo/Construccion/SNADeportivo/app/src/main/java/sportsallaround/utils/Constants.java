@@ -5,7 +5,7 @@ package sportsallaround.utils;
  */
 public class Constants {
 
-    public static final String ROOT_URL = "http://192.168.0.2:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://192.168.0.6:8080/SNA_DEPORTIVO_WEB/services/";
     public static final String SERVICES_VERIFICAR_USUARIO = "GestionUsuarioService/verificarUsuario";
     public static final String SERVICES_CREAR_USUARIO = "GestionUsuarioService/crearUsuario";
     public static final String SERVICES_OBTENER_ROLES = "GestionUsuarioService/obtenerRoles";

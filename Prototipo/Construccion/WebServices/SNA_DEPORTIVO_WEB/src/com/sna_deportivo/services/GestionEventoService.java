@@ -24,7 +24,7 @@ public class GestionEventoService {
 		this.gestionEvento = new GestionEvento(); 
 	}
 	
-	@POST
+	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}")//practicas_libres/

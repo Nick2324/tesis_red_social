@@ -49,6 +49,10 @@
             android:name=".eventos.CrearEvento"
             android:label="@string/title_activity_crear_evento" >
         </activity>
+        <activity
+            android:name=".eventos.InformacionGeneralEvento"
+            android:label="@string/title_activity_informacion_general_evento" >
+        </activity>
     </application>
 
 </manifest>

@@ -4,18 +4,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.CrearEvento">
 
-    <!--<TextView
-        android:id="@id/textview_titulo_spinner_tipo_evento"
+    <TextView
+        android:id="@+id/textview_titulo_spinner_tipo_evento_crear"
+        android:text="@string/tipo_evento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Spinner
-        android:id="@id/spinner_tipo_evento"
+        android:id="@+id/spinner_tipo_evento_crear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    </Spinner>-->
+    </Spinner>
+
+    <TextView
+        android:id="@+id/textview_descripcion_tipo_evento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/button_crear_evento_especifico"
