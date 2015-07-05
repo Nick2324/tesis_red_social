@@ -1,6 +1,5 @@
 package com.sna_deportivo.services;
 
-import java.security.acl.Permission;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -144,5 +143,22 @@ public class GestionUsuarioService {
 			resultado = null;
 		}
 		return resultado;
+	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("actualizarDatosUsuario")
+	public ResponseGenerico actualizarDatosUsuario(Usuario user){
+		ResponseGenerico response;
+		try{
+			response = servicio.acualizarDatosUsuario(user);
+		}
+		catch (BDException e){
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("B");
+			response.setMensajeRespuesta("Usuario actualizado con éxito");
+		}
+		return response;
 	}
 }

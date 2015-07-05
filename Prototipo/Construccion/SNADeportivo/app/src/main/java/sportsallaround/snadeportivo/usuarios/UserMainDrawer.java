@@ -66,6 +66,13 @@ public class UserMainDrawer extends ActionBarActivity
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
 
+        String[] drawerElements = new String[permissions.length];
+
+        for(int i=0;i<permissions.length;i++)
+            drawerElements[i] = permissions[i].getNombre();
+
+        mNavigationDrawerFragment.updateDrawerListAdapter(drawerElements);
+
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,

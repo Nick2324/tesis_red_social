@@ -120,6 +120,7 @@ public class BDUtils {
 			return result.getStatus() + "";
 	}
 
+	
 	public static boolean adicionarPropiedades(String rutaNodo,
 			String propiedades) throws BDException {
 		if (!BDUtils.servidorActivo())
@@ -171,6 +172,20 @@ public class BDUtils {
 		return result.getStatus() == 201;
 	}
 
+	public static boolean eliminarRelacion(String relationshipId){
+		if (!BDUtils.servidorActivo())
+			throw new BDException();
+		ResteasyClient cliente = BDUtils.obtenerCliente();
+		WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path("/relationship/" + relationshipId);
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Response result;
+		result = resultBuilder.delete(
+				Response.class);
+		return result.getStatus() == 204;
+	}
+	
 	//SE PODRIA AGREGAR UN IGNORE
 	public static String condicionWhere(ObjectSNSDeportivo objetoRedSocial,
 										String identificador){

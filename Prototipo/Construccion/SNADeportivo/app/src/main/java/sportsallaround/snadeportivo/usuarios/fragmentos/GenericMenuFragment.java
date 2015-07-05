@@ -80,6 +80,8 @@ public class GenericMenuFragment extends Fragment{
                     } catch (ClassNotFoundException e) {
                         intent = new Intent(context,ErrorActivity.class);
                     }
+                    intent.putExtra("user", user);
+                    intent.putExtra("userRole", userRole);
                     startActivity(intent);
                 }
             });
@@ -112,7 +114,7 @@ public class GenericMenuFragment extends Fragment{
         @Override
         protected Boolean doInBackground(Void... params) {
             boolean retorno = true;
-            ArrayList<Permiso> permisos = new ArrayList<Permiso>();
+            ArrayList<Permiso> permisos = new ArrayList<>();
             try {
 
                 String resultadoString = ServiceUtils.invokeService(new JSONObject(permission.toString()),Constants.SERVICES_OBTENER_PERMISOS,"POST");

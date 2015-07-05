@@ -34,12 +34,96 @@ public class GestionUsuario {
 		propiedades.append("\"to\":\"" + Constantes.SERVER_ROOT_URI + "/node/" + idRol + "\",");
 		propiedades.append("\"type\":\"" + Relaciones.ASUMEROL + "\"");
 		propiedades.append("}");
-		// Invocar Creaci�n de la relaci�n
+		// Invocar Creación de la relación
 		if (!BDUtils.crearRelacion(nodo, propiedades.toString()))
 			throw new BDException();
 		response.setCaracterAceptacion("B");
 		response.setMensajeRespuesta("Usuario creado exitosamente");
 		response.setDatosExtra(nodo);
+		return response;
+	}
+
+	public ResponseGenerico acualizarDatosUsuario(Usuario user) throws BDException {
+		ResponseGenerico response = new ResponseGenerico();
+		StringBuilder query = new StringBuilder();
+		StringBuilder propiedades;
+		Object[] data;
+		String rolActual;
+		String relationshipId;
+		String newRoleId;
+		String userId;
+		
+		//obtener id usuario
+		query = new StringBuilder();
+		query.append("MATCH (u:");
+		query.append(Entidades.USUARIO);
+		query.append(" {usuario:'");
+		query.append(user.getUsuario());
+		query.append("'}) RETURN id(u)");
+		
+		data = BDUtils.ejecutarQuery(query.toString());
+		userId = (String)data[0];
+		
+		// Verificar si el usuario cambió de rol
+		query.append("MATCH (u:");
+		query.append(Entidades.USUARIO);
+		query.append(" {usuario:'");
+		query.append(user.getUsuario());
+		query.append("'}) -[:");
+		query.append(Relaciones.ASUMEROL);
+		query.append("]->(r:");
+		query.append(Entidades.ROL);
+		query.append(") return r.nombre");
+		
+		data = BDUtils.ejecutarQuery(query.toString());
+		rolActual = (String)data[0];
+		if(!user.getTipoUsuario().equals(rolActual)){
+			query = new StringBuilder();
+			query.append("MATCH (u:");
+			query.append(Entidades.USUARIO);
+			query.append(" {usuario:'");
+			query.append(user.getUsuario());
+			query.append("'}) -[:");
+			query.append(Relaciones.ASUMEROL);
+			query.append("]->(r:");
+			query.append(Entidades.ROL);
+			query.append(") return id(r)");
+			
+			data = BDUtils.ejecutarQuery(query.toString());
+			relationshipId = (String)data[0];
+			
+			// Eliminar la relación con el rol anterior
+
+			BDUtils.eliminarRelacion(relationshipId);
+			
+			
+			//obtener id nuevo rol
+			query = new StringBuilder();
+			query.append("MATCH (r:");
+			query.append(Entidades.ROL);
+			query.append(" {nombre:'");
+			query.append(user.getTipoUsuario());
+			query.append("'}) return id(r)");
+			
+			data = BDUtils.ejecutarQuery(query.toString());
+			newRoleId = (String)data[0];
+			
+			// Crear la relacion con el nuevo rol
+			
+			propiedades = new StringBuilder("{");
+			propiedades.append("\"to\":\"" + Constantes.SERVER_ROOT_URI + "/node/" + newRoleId + "\",");
+			propiedades.append("\"type\":\"" + Relaciones.ASUMEROL + "\"");
+			propiedades.append("}");
+			
+			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/" + userId, propiedades.toString());
+			
+		}
+		// Actualizar los datos del usuario
+		
+		BDUtils.adicionarPropiedades(Constantes.SERVER_ROOT_URI + "/" + userId, user.toString());
+
+		response.setCaracterAceptacion("B");
+		response.setMensajeRespuesta("Usuario actualizado exitosamente");
 		return response;
 	}
 
@@ -126,7 +210,8 @@ public class GestionUsuario {
 
 	public Permiso[] obtenerPermisosAsociados(Permiso permiso) {
 		String query = "MATCH (n:" + Entidades.PERMISO + ") -[:R_Permiso]->(:" + Entidades.PERMISO
-				+ " {consecutivoPermiso:" + permiso.getConsecutivoPermiso() + "}) return n order by n.consecutivoPermiso asc";
+				+ " {consecutivoPermiso:" + permiso.getConsecutivoPermiso()
+				+ "}) return n order by n.consecutivoPermiso asc";
 		Object[] data = BDUtils.ejecutarQuery(query);
 		Permiso[] permisos;
 		permisos = new Permiso[data.length];
