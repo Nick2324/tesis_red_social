@@ -1,5 +1,0 @@
-digraph diada{
-	rankdir=LR
-	label="Diada 3"
-	B -> A
-}

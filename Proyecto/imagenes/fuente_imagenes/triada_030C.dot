@@ -1,9 +1,0 @@
-digraph diada{
-	concentrate=true
-	rankdir=LR
-	label="030C"
-	fontsize=36
-	A -> C
-	C -> B
-	B -> A
-}

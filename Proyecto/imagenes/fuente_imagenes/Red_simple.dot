@@ -1,4 +1,0 @@
-graph simple{
-	rankdir=LR
-	N1 -- N2
-}
