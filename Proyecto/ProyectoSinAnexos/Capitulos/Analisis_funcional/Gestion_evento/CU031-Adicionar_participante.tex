@@ -1,0 +1,74 @@
+\begin{table}[!htb]
+	\caption{CU031-Añadir participante: Descripción}
+	\label{tab:cu031_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Añadir participante \\
+			\hline
+			Identificador & CU031 \\
+			\hline
+			Descripción & Permite añadir un participante deportivo (equipo o jugador) al evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de añadir un participante deportivo al evento \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario añade un participante deportivo al evento
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU031-Añadir participante: Flujos de hechos}
+	\label{tab:cu031_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario a elegido un evento para administrar sus involucrados & El sistema ha mostrado el menú de administración de involucrados \\
+			\hline
+			2 & El usuario elige añadir un participante & El sistema muestra la interfaz de adición de participantes \\
+			\hline
+			3 & El usuario elige enviar una invitación o aceptar una petición de participación; en cualquier caso, el usuario busca al usuario potencial a participar & El sistema retorna el resultado de la búsqueda \\
+			\hline
+			4 & El usuario confirma el envío de la solicitud o de la adición del participante al evento & El sistema envía la solicitud o adiciona directamente al participante, según la función elegida \\
+			5 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			6 & El usuario continua & El sistema muestra la interfaz de adición de participantes al evento \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

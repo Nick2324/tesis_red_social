@@ -1,0 +1,359 @@
+\clearpage
+
+\section{Estado del arte} \label{cap:estado_arte}
+
+A continuación, los autores hacen un acercamiento a las soluciones software que, en su trabajo investigativo, encontraron y analizaron. Después, los autores dan una relación entre el estado del arte y las funcionalidades ofrecidas por el prototipo de SNS deportivo.
+
+\subsection{Soluciones software existentes}
+
+Se hizo una búsqueda de redes sociales basadas en deporte que existen actualmente en la red. Una vez encontradas, se eligieron exactamente 16 SNS deportivas que ofrecían, en conjunto, las funcionalidades que se observaban en las demás redes sociales que no fueron escogidas (Cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5}). Luego de la elección de la muestra de SNS, se reunieron aspectos de cada una hasta formar un grueso de sus funcionalidades y se realizó un cuadro de Funcionalidades vs SNS en donde se expresa con detalle cómo se presenta cada funcionalidad con respecto a cada SNS (en caso de no haber una conexión funcionalidad – SNS, entonces la casilla se dejó en blanco). En los cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5} se da evidencia del análisis Funcionalidad vs SNS realizado.
+
+Cada una de las funcionalidades que fueron descubiertas en otros SNS deportivos ya creados son el primer paso, pues, para conocer las necesidades de los usuarios de los SNS deportivos. El análisis de estos SNS será, entonces, el punto de partida para definir los requerimientos funcionales del SNS que plantearemos desde el punto de vista funcional.
+
+A continuación se muestra cuales fueron las características encontradas por el análisis de las redes sociales, explicadas en general una a una:
+
+\begin{itemize}
+	\item \textbf{Gestión de foros:} En algunas de las redes sociales se encontraron funcionalidades de foros donde las personas podían compartir acerca de temas deportivos, preguntar a otros en la red social y obtener mayor conocimiento acerca de su deporte, de consejos nutricionales y otros de salud. En una de las SNS, Sportsnak, se encontró un manejo de foristas con cierto nivel de profesionalismo (coaches, managers, equipos), lo cual lo hacía más interesante para el jugador más experimentado.
+	\item \textbf{Gestión de encuentros deportivos:} Se refiere a la creación y el manejo de encuentros de carácter deportivo que no se limítan solo al carácter competitivo de un torneo, sino que se orientan a un encuentro informal entre amigos o compañeros de deporte para un encuentro deportivo. En algunos casos se pudieron observar características de retos sobre dichos encuentros deportivos y, también, el manejo de geolocalización como una herramienta clave a la hora de encontrar un encuentro deportivo.
+	\item \textbf{Creación de grupos:} Fueron muy pocas las redes sociales que ofrecían la creación de grupos deportivos a manera de equipos deportivos o simplemente cierta comunidad deportiva que acostumbra a entrenar junta a ciertas horas y en ciertos lugares definidos.
+	\item \textbf{Manejo de torneos:} En el manejo de torneos se incluye una parte de difusión del mismo y otra en la que se gestionan las fases del torneo. Muy pocas redes sociales ofrecían éste servicio.
+	\item \textbf{Difusión de información deportiva:} Se refiere a la difusión de caracter deportivo que se hace en una red social alrededor de temas del deporte actual, así como también eventos o artículos interesantes generados no solo por la misma red social a través de blogs propios, sino que también la utilización de RSS para enviar información a los miembros de la red social, de actualizaciones en vivo de partidos, de artículos científicos acerca del deporte, entre otras información deportiva de carácter público.
+	\item \textbf{Servicios de self-expression:} En la mayoría se presentaron estos servicios, siendo estos aquellos por los cuales un usuario puede interactuar con los demás (servicios de mensajería instantánea, servicios de muro - a especie de feed que se va alimentando por acciones del usuario a quien le pertenece o de sus seguidores o amigos y servicios de multimedia)
+	\item \textbf{Sistema estadístico:} Algunos de los SNS analizados en la investigación tenían funcionalidades de soporte estadístico de jugador, es decir, median las estadísticas del jugador respecto de algún criterio; algunos SNS manejaban estadísticas de competencia con otros jugadores.
+	\item \textbf{Gestión de transversales:} Esta sección se refiere a la gestión del conocimiento que hay sobre temas que tocan a todos los deportes como, por ejemplo, la nutrición, las lesiones y el fortalecimiento del cuerpo. Especificamente solo en Sportfactor se encontró un cubrimiento completo de los temas transversales, teniendo guías nutricionales, catálogos de lesiones y de fisioterapia y ofreciendo servicios de coaching. 
+	\item \textbf{Servicios deportivos:} Esta sección se refiere al soporte de las SNS analizadas en cuanto a actividades comerciales que se dieran en la SNS online u offline. Varios SNS presentaron dicho servicio y, entre las características destacadas, se encuentra el marcado de lugares como sitios de ofrecimiento de servicios deportivos; se encontraron también SNS que daban soporte a la compra venta de artículos deportivos y al prestamo de escenarios deportivos; adicionalmente, Sportsnak presenta una funcionalidad de boost para los negociantes de dicha red social.
+	\item \textbf{Soporte multideporte:} Esta sección se refiere al hecho de que las SNS a veces soportaban solo cierto tipo de deportes, todos los deportes o uno en partícular. En general, se encontró que los deportes que pertenecen a la familia del ciclismo y trekking son los que lideraban en soporte hacia un sólo deporte o un grupo particular de ellos. En los demás, había soporte para varios deportes sin ningún rasgo en particular más que el de ser deportes.
+	\item \textbf{Gestión de tipos de usuario:} En este concepto se analizan los diferentes tipos de usuario que maneja cada una de las redes sociales analizadas. Se pudo notar del estudio sobre las SNS que tenían tres enfoques principales: Manejo de usuarios deportivos, con lo que se incluían deportistas como individuales o en una colectividad, es decir, equipo; manejo de usuarios coaches, personas que ofrecian servicios de enseñanza en deporte; manejo de usuarios que ofrecen servicios deportivos (por ejemplo, centros deportivos), compra y venta.
+	\item \textbf{Gestión de sponsors:} De ésta clasificación se analizan las diferentes funcionalidades que ofrecen los SNS estudiados para las relaciones de patrocinio y para los patrocinadores. Se encontráron pocas SNS que ofrecieran éste tipo de relación. Las SNS que ofrecían gestión de sponsors se centraban en la promoción de jugadores o equipos y en la gestión de la relación de patrocinio entre posibles patrocinadores y posibles patrocinados.
+	\item \textbf{Gestión del conocimiento:} Este apartado se refiere al aporte de las SNS en cuanto a funcionalidades que den información y cursos para la aprehensión de conocimiento deportivo. Ésta se complementa con la gestión de transversales explicada más arriba. En las redes sociales que ofrecian éste tipo de servicio, no se encontraron aquellas que ofrecieran conocimientos básicos del deporte para aquellos deportistas principiantes que lo necesitan; puntualmente se ofrecian consejos deportivos, clases virtuales y comunidades centradas en el aprendizaje social.
+	\item \textbf{Gestión de geolocalización:} En éste concepto se nota la utilización de ubicaciones geográficas como puntos de referencia e información dada en la red social. Entre las redes sociales enfocadas a deportes de ruta se encontraba la posibilidad de guardar trazados y buscar los mismos; otras redes sociales ofrecian funcionalidades que ubicaban tanto usuarios como eventos deportivos, así como también actividad deportiva desarrollada en el momento.
+	\item \textbf{Soporte móvil:} Este apartado se refiere al hecho de que un SNS tenga o no aplicación para móviles. Solo se encontraron dos SNS que soportaban.
+	\item \textbf{Conexión con otros SNS:} La conexión con otras redes sociales no era, usualmente, una funcionalidad que ofrecieran estos SNS. Sin embargo, quienes lo ofrecen, tienen soporte para facebook y twitter.
+\end{itemize}
+
+\subsection{Prototipo SNS deportivo vs Soluciones software existentes}
+
+Debido a que éste es un prototipo y no se cuenta con el tiempo necesario para la creación de un producto final con todas las funcionalidades contempladas de \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5}, lo que los autores decidieron hacer fue dotar al software con una filosofía, haciendo énfasis en la creación de una arquitectura que tocara cada funcionalidad, dando un marco de trabajo para el prototipo inicial que será el producto final del presente trabajo. Los autores no solo ahondaron en la arquitectura con ayuda del estandar Archimate 2.0, sino que también plasmaron análisis y definición de requerimientos funcionales de la red social en casos de uso y, por otro lado, plasmaron el análisis de requerimientos no funcionales en la caracterización de atributos de calidad (ver capítulo \ref{chap:analisis_funcional}). Adicional, los autores añadieron desde la primera fase de diseño (es decir, la llevada acabo en el presente prototipo) el diseño de la interfaz gráfica de usuario, nuevamente dotando la interfaz de una filosofía propia que esparcieron alrededor de cada funcionalidad. Sin embargo, debido a que la presentación del prototipo (el aplicativo como tal) solo se dará a partir de ciertas funcionalidades (ver capítulo \ref{chap:analisis_funcional}), se ha decidido poner en el apartado de anexos toda la documentación no perteneciente a éstas.
+
+De los aspectos analizados en la anterior sección y alrededor de los cuadros \ref{tab:comparacion_redes_1} a \ref{tab:comparacion_redes_5}, el único que no se tuvo en cuenta fue la conexión con otras redes sociales, debido a que el desarrollo arquitectónico se centró más en el caracter de negocio, es decir, en lo que es en si una red social deportiva (offline) para plasmarla en la red social deportiva a crear (online).
+
+Con lo anterior dicho, a continuación se presentan los puntos de enfoque del SNS que los autores desarrollan en su arquitectura, definición de funcionalidades e interfaz de usuario, presentando las funcionalidades que diferencian éste software a los analizados:
+
+\begin{itemize}
+	\item \textbf{Gestión de foros, gestión del conocimiento y gestión de transversales:} Uno de los puntos en los que se enfoca el desarrollo arquitectónico, que se observó poco en los SNS analizados, fue el manejo del entrenamiento deportivo, de la relación entrenador - entrenado y del seguimiento de rutinas de entrenamiento para ambos. Además de ello, en la arquitectura y analisis funcional del prototipo se contempla el ofrecimiento de información general de los deportes que debería tener en cuenta todo deportista principiante que se adentre a un deporte, ofreciendo conexiones a información externa que pueda ser de utilidad.
+	\item \textbf{Creación de eventos deportivos:} En el prototipo se ofrece la creación de variedad de tipos de eventos, lo cual no sesga al usuario a tener que crear sólo encuentros deportivos para la práctica de un deporte, sino que también puede crear eventos con otro objetivo como, por ejemplo, conferencias y clínicas deportivas.
+	\item \textbf{Gestión de tipos de usuario:} El manejo de usuarios hace que cada usuario en la red social tenga un pool de funcionalidades a su disposición que podrá sesgar dependiendo del tipo de usuario que haya decidido usar. Por ejemplo, dado un vendedor, puede cambiar a ser un deportista y las funcionalidades que el verá cargadas serán las del deportista y las de vendedor serán escondidas, centrando el prototipo, pues, en la usabilidad del SNS.
+	\item \textbf{Gestión de sponsors:} La relación entre patrocinador y patrocinado se hace tan marcada y manejada, que un patrocinador puede seguir en secreto a un jugador que permite que sea seguido y, una vez se decida dicho patrocinador, el puede ofrecer al patrocinado su oferta y abrir el canál de comunicación entre ambos. Por otro lado, el patrocinado puede buscar patrocinadores, ofreciendose con propuestas que los patrocinadores podrán analizar y abrir, si así lo deciden, el canal de comunicación con el patrocinado.
+	\item \textbf{Gestión de geolocalización y sistema estadístico:} Es interesante ver cuan concurrido es un lugar para la práctica de un deporte, por lo que se incluyó en el soporte estadístico, en conexión con el soporte de geolocalización, estadísticas de concurrencia en lugares marcados como deportivos. También se incluye la búsqueda de ''mejores en la categoría de'', lo que significa que un usuario puede buscar, dependiendo de ciertos filtros (por ejemplo, vendedores) los mejores dependiendo de los mismos.
+
+\end{itemize}
+
+\newpage
+
+\begin{landscape}
+  
+\begin{table}
+  \caption{Comparacion de redes, parte 1}
+  \label{tab:comparacion_redes_1}
+
+  \begin{center}
+  
+  \resizebox{20cm}{!}{
+  \begin{tabular}{|p{5cm}|llll|}
+    \hline
+    Fun\textbackslash Red social & \multicolumn{1}{c}{Sportfactor} & \multicolumn{1}{c}{Deportesreunidos} & \multicolumn{1}{c}{Mybestplay} & \multicolumn{1}{c|}{Subetudeporte} \\ 
+    \hline
+    Gestión de foros & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{Si} \\ 
+    \hline
+    Gestión de encuentros deportivos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Organización de eventos} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Encuentros deportivos informales} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Creación de grupos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Manejo de torneos & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Organización y difusión} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Difusión info. Deportiva & \multicolumn{1}{c}{-RSS de noticias} & \multicolumn{1}{c}{- Blog propio} & \multicolumn{1}{c}{-Difusión de eventos} & \multicolumn{1}{c|}{- Gestión de blogs} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Blog propio} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Serv. self-expression & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Difusión de multimedia} & \multicolumn{1}{c}{-Difusión de multimedia } & \multicolumn{1}{c|}{-Difusión de multimedia} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Sistema estadístico & \multicolumn{1}{c}{-Medición de avance en} & \multicolumn{1}{c}{- Sistemas de estadísticas para cada servicio} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{ estadísticas del deporte practicado} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de transversales & \multicolumn{1}{c}{-Trainner personales} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{-Guías de nutrición} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{- Catalogo de lesiones y fisioterapia} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Servicios deportivos & \multicolumn{1}{c}{-Guía deportiva (shops, restaurantes, etc.)} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Soporte multi-deporte & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c}{Solo deportes en equipo} & \multicolumn{1}{c|}{Si} \\ 
+    \hline
+    Gestión de tipos de usu. & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Equipos } & \multicolumn{1}{c}{Si} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{- Clubes} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{-Centros deportivos} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de sponsors & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Si} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión del conocimiento & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Gestión de geolocaliza. & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Soporte móvil & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+    Conexión con otros SNS & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+     & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} \\ 
+    \hline
+  \end{tabular}
+  }
+  \textbf{Fuente:} Autores
+    \end{center}
+\end{table}
+  
+  \newpage
+  
+  \begin{table}
+  \caption{Comparacion de redes, parte 2}
+  \label{tab:comparacion_redes_2}
+
+  \begin{center}
+  
+  \resizebox{20cm}{!}{
+    \begin{tabular}{|p{4cm}|p{9cm}p{7cm}p{7cm}|}
+\hline
+Fun\textbackslash Red social & Sporttia & Amatteur & Fitivity  \\ 
+\hline
+Gestión de foros &  &  &  \\ 
+\hline
+Gestión de encuentros deportivos & - Organización de eventos en centros deportivos & - Publicación o búsqueda de eventos deportivos & -Basado en geolocalización \\ 
+ & - Gestión de jugadores &  &  \\ 
+ & -Gestión de características del partido &  &  \\ 
+\hline
+Creación de grupos &  &  &  \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Serv. self-expression &  & -Difusión de multimedia &  \\ 
+ &  &  &  \\ 
+\hline
+Sistema estadístico &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+ &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Servicios deportivos & -Alquiler de centros deportivos & - Servicios de compra y venta de artículos deportivos &  \\ 
+ &  &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Si & Si \\ 
+\hline
+Gestión de tipos de usu. & -Deportista -Centro deportivo & -Deportista  &  \\ 
+ &  & -Equipo &  \\ 
+ &  &  -Organización &  \\ 
+\hline
+Gestión de sponsors &  & -Promoción como deportista, equipo u organización &  \\ 
+\hline
+Gestión del conocimiento & - Clases virtuales &  &  \\ 
+\hline
+Gestión de geolocaliza. &  & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Soporte móvil &  &  & -Android \\ 
+ &  &  & -IOS \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\multicolumn{1}{l}{} &  &  & \multicolumn{1}{l}{} \\ 
+\end{tabular}
+  }
+  \textbf{Fuente:} Autores
+      \end{center}
+\end{table}
+
+\newpage
+
+\begin{table}
+  \caption{Comparacion de redes, parte 3}
+  \label{tab:comparacion_redes_3}
+  \begin{center}
+  \resizebox{20cm}{!}{
+  \begin{tabular}{|p{4cm}|p{7cm}p{6cm}p{9cm}|}
+\hline
+Fun\textbackslash Red social & Bkool & Deportmeet & Sportsnak \\ 
+\hline
+Gestión de foros &  &  & - Foros con profesionales (managers, coaches, teams) \\ 
+ &  &  & - Usuario como moderador de foros \\ 
+\hline
+Gestión de encuentros deportivos & - Creación de eventos deportivos (solo o con amigos) &  - Gestión de eventos deportivos & - Manejo de eventos deportivos \\ 
+ & - Gestión de ``retos'' &  &  \\ 
+\hline
+Gestión de grupos & Si &  &  \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva & - Gestión de información de ligas & - Artículos de profesionales & -Asociación con blogs deportivos \\ 
+ &  &  & - Manejo de ``live scores'' \\ 
+\hline
+Serv. self-expression & -Subida de texto plano & -Difusión de multimedia & - Manejo contenido plano y multimedia \\ 
+ & -Difusión de multimedia &  & - Uso de mensajería instantánea \\ 
+\hline
+Sistema estadístico & - Estadísticas de deportista & - Gestión del nivel del deportista &  \\ 
+ &  & -Manejo de perfiles de usuario &  \\ 
+\hline
+Gestión de transversales &  & -Foros de nutrición &  \\ 
+\hline
+Servicios deportivos &  & - Venta de artículos deportivos & - Módulos para negociantes en temas de deporte \\ 
+ &  &  & - Ofrecimiento de instalaciones deportivas \\ 
+ &  &  & -- Herramientas para hacer ``boost'' a negociantes \\ 
+\hline
+Soporte multi-deporte & Deportes de ruta & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Gestión de tipos de usu. &  &  & -Public member \\ 
+ &  &  & -Club member \\ 
+ &  &  & -Bussiness member \\ 
+\hline
+Gestión de sponsors &  &  & - Manejo de ``sponsorship'' \\ 
+\hline
+Gestión del conocimiento &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de geolocaliza. & - Posibilidad de grabar trazados & - Localización de eventos & - Detecta actividad deportiva (geografía) \\ 
+ & (deportes de ruta) &  &  \\ 
+\hline
+Soporte móvil & -Android &  &  \\ 
+ & -IOS &  &  \\ 
+\hline
+Conexión con otros SNS & -Facebook y twitter &  &  \\
+\hline
+\end{tabular}
+}
+  \textbf{Fuente:} Autores
+  \end{center}
+\end{table}
+
+\newpage
+
+\begin{table}
+  \caption{Comparacion de redes, parte 4}
+  \label{tab:comparacion_redes_4}
+
+  \begin{center}
+  
+    \resizebox{20cm}{!}{
+    \begin{tabular}{|p{5cm}|lll|}
+\hline
+Fun\textbackslash Red social & Huddlers & Yoyde & Timpik \\ 
+\hline
+Gestión de foros &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de encuentros deportivos & - Organización de eventos deportivos & - Manejo de eventos deportivos & - Manejo de eventos deportivos \\ 
+ &  &  &  \\ 
+\hline
+Gestión de grupos &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Manejo de torneos &  & Si &  \\ 
+\hline
+Difusión info. Deportiva &  & - Manejo de blogs &  \\ 
+ &  &  &  \\ 
+\hline
+Serv. self-expression &  & -Manejo de ``muro'' & - Manejo de ``muro''  \\ 
+ &  &  & -Gestión de mensajería \\ 
+\hline
+Sistema estadístico &  &  &  \\ 
+ &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+\hline
+Servicios deportivos &  &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Si & Si \\ 
+ &  &  &  \\ 
+\hline
+Gestión de tipos de usu. &  & -Club deportivo & - Manejo de perfil deportivo \\ 
+ &  & -Deportista &  \\ 
+\hline
+Gestión de sponsors &  &  &  \\ 
+\hline
+Gestión del conocimiento &  &  &  \\ 
+ &  &  &  \\ 
+\hline
+Gestión de geolocaliza. & - Funcionalidad ``jugando en'' & - Manejo de escenarios deportivos &  \\ 
+ &  & - Manejo de ``rutas'' &  \\ 
+\hline
+Soporte móvil & -IOS &  & -Android \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\end{tabular}
+}
+\textbf{Fuente:} Autores
+  \end{center}
+\end{table}
+
+\begin{table}
+  \caption{Comparacion de redes, parte 5}
+  \label{tab:comparacion_redes_5}
+
+  \begin{center}
+  
+  \resizebox{20cm}{!}{
+    \begin{tabular}{|p{4cm}|p{7cm}p{7cm}p{8cm}|}
+\hline
+Fun\textbackslash Red social & Socialsports & Strava & Ineftos \\ 
+\hline
+Gestión de foros &  &  & Si \\ 
+\hline
+Gestión de encuentros deportivos & - Organizador de eventos deportivos & - Manejo de desafíos (challenges) & - Organización de eventos \\ 
+\hline
+Gestión de grupos &  &  & Si \\ 
+\hline
+Manejo de torneos &  &  &  \\ 
+\hline
+Difusión info. Deportiva &  &  & - Manejo de blogs para estudiantes \\ 
+\hline
+Serv. self-expression & - Manejo de multimedia &  & - Manejo de mensajería \\ 
+ &  &  & - Manejo de ``muro'' \\ 
+ &  &  & - Manejo de multimedia \\ 
+\hline
+Sistema estadístico &  & - Gestión de estadísticas del atleta & - Utiliza mecanismo de encuestas para autorregularse \\ 
+ &  & - Gestión de ``follows'' a otros deportistas para comparación de estadísticas (competencia) & - Gestión de foros: Estadísticas de foro \\ 
+\hline
+Gestión de transversales &  &  &  \\ 
+\hline
+Servicios deportivos & - Evaluación de la comunidad sobre los prestadores de servicio &  &  \\ 
+\hline
+Soporte multi-deporte & Si & Monodeporte (ciclomontañismo) & Si \\ 
+\hline
+Gestión de tipos de usu. & - Manejo de perfil de deportista (deportes practicados, lugares frecuentados, horarios frecuentados) &  & - Manejo de usuarios (profesores, alumnos, entidades sin ánimo de lucro) \\ 
+ & - Manejo de usuarios (prestadores de servicio y deportistas) &  &  \\ 
+\hline
+Gestión de sponsors &  &  &  \\ 
+\hline
+Gestión del conocimiento &  & - Encuentro de consejos deportivos & - ``Social learning'' \\ 
+\hline
+Gestión de geolocaliza. &  & - Gestión de trazados logrados &  \\ 
+ &  & - Gestión de trazados &  \\ 
+\hline
+Soporte móvil &  & -Android &  \\ 
+\hline
+Conexión con otros SNS &  &  &  \\ 
+\hline
+\end{tabular}
+  }
+  \textbf{Fuente:} Autores
+  \end{center}
+\end{table}
+
+\end{landscape}

@@ -1,0 +1,74 @@
+\begin{table}[!htb]
+	\caption{CU115-Crear conversación: Descripción}
+	\label{tab:cu102_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear conversación \\
+			\hline
+			Identificador & CU115 \\
+			\hline
+			Descripción & Permite la creación de un nuevo chat con un actor/evento \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Todos
+			\end{itemize} \\
+			\hline
+			Disparador & El actor desea crear un nuevo chat con un actor/evento \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones &  \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El actor crea un chat con un actor/evento
+			\end{itemize} \\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Soporta el uso tanto en los actores deportivos como en los eventos. Esta característica es desencadenada por todos los casos de uso que se desprenden de éste
+			\end{itemize} \\
+			\hline 
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU115-Crear conversación: Flujos de hechos }
+	\label{tab:cu102_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido gestionar su mensajería instantánea & El sistema ha mostrado la interfaz de búsqueda de actores/eventos con los que puede entablar mensaje el usuario \\
+			\hline
+			2 & El usuario elige crear una conversación & El sistema muestra la interfaz de búsqueda de usuario sobre la red social para iniciar chat \\
+			\hline
+			3 & El usuario busca otro o un evento en la red social & El sistema arroja los resultados  \\
+			\hline
+			4 & El usuario elige uno de los resultados de la búsqueda & El sistema crea el chat \\
+			\hline
+			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de chat \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

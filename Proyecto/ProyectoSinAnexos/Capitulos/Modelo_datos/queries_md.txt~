@@ -1,0 +1,11 @@
+Para eventos
+MATCH (de:E_DeporteEvento)-[r]-n,(ed:E_EventoDeportivo)-[r1]-b RETURN *
+
+Para ubicacion
+MATCH (u:E_Ubicacion)-[r]-a,(ud:E_UbicacionDeporte)-[r1]-b RETURN *
+
+Para deporte
+MATCH (d:E_Deporte)-[*0..2]-n WHERE NOT n:E_Ubicacion AND NOT n:E_UbicacionDeporte AND NOT n:E_DeporteEvento AND NOT n:E_EventoDeportivo RETURN *
+
+Para estadisticas
+match (e:E_FrameDia)-[r]-a return *;

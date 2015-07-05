@@ -1,0 +1,7 @@
+graph diada{
+	concentrate=true
+	rankdir=LR
+	label="Diada 1"
+	A
+	B
+}

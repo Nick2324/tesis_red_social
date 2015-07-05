@@ -1,0 +1,52 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_Ciudad}
+	\label{tab:entidad_014}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_Ciudad}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Ciudad relacionada a algún concepto el cuál sea útil en la base de datos (ej. expresión de en que ciudades se juega un determinado deporte)}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			&
+			Identificación única de la ubicación \\
+			\hline
+			nombre &
+			String &
+			100 &
+			Nombre de la ciudad \\
+			\hline
+			\hline
+			zipCode [U] &
+			Numeric &
+			&
+			Zip code de la ciudad descrita \\
+			\hline
+			coordenada [U] &
+			String &
+			5000 &
+			Coordenadas de la ciudad \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_CompletaUbicacion} & 
+			\multicolumn{2}{c|}{E\_Ubicacion} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

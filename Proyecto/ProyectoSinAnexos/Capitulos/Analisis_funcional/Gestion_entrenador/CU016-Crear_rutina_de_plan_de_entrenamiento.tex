@@ -1,0 +1,79 @@
+\begin{table}[!htb]
+	\caption{CU016-Crear rutina de plan de entrenamiento: Descripción}
+	\label{tab:cu016_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Crear rutina de plan de entrenamiento \\
+			\hline
+			Identificador & CU016 \\
+			\hline
+			Descripción & Permite al entrenador crear una rutina del plan de entrenamiento mientras lo está creando/actualizando \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 
+			\\
+			\hline
+			Disparador & Actor deportivo con rol de entrenador elige crear una rutina de plan de entrenamiento \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario modifica una rutina del plan de entrenamiento
+			\end{itemize}
+			\\
+			\hline
+			Notas & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU016-Crear rutina de plan de entrenamiento: Flujos de hechos}
+	\label{tab:cu016_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido un plan de entrenamiento en específico & El sistema ha mostrado los detalles del plan de entrenamiento deportivo \\
+			\hline
+			2 & El usuario pulsa el botón de creación de rutina & El sistema muestra la interfaz de creación/modificación de rutinas \\
+			\hline
+			3 & El usuario ingresa la información deseada a la rutina a crear & \\
+			\hline
+			4 & El usuario confirma la creación de la rutina & El sistema crea la rutina y la asigna inmediatamente al plan deportivo \\
+			\hline
+			5 & El sistema muestra un elemento emergente que informa del éxito o fracaso de la operación & \\
+			\hline
+			6 & El usuario continua & El sistema sitúa al usuario en los detalles del plan de entrenamiento \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

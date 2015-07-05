@@ -1,0 +1,42 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_PosicionUsuarioDeporte}
+	\label{tab:entidad_008}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_PosicionUsuarioDeporte}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Es la relación ternaria existente entre la posición, el usuario y el deporte, que representa la posición en la que juega un usuario en un deporte en específico}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			&
+			Identificación única de la posición de un usuario en un deporte \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{E\_Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{E\_Deporte} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{E\_Posicion} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

@@ -1,0 +1,78 @@
+\begin{table}[!htb]
+	\caption{CU071-Administrar patrocinios: Descripción}
+	\label{tab:cu071_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Administrar patrocinios \\
+			\hline
+			Identificador & CU071 \\
+			\hline
+			Descripción & Permite gestionar o administrar funcionalidades ofrecidas en lo que refiere a patrocinios en la red social deportiva \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Patrocinador
+				\item Equipo
+				\item Jugador
+			\end{itemize}
+			\\
+			\hline
+			Disparador & El usuario autorizado desea manejar las funcionalidades ofrecidas en el módulo de patrocinios \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & 
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item Se ha iniciado el SNS con un rol de patrocinador, jugador o equipo deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario se encuentra en la pantalla para gestión de patrocinios
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Gestionar patrocinios de patrocinador
+					\item Gestionar patrocinios de equipo/jugador
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU071-Administrar patrocinios: Flujos de hechos}
+	\label{tab:cu071_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario elige administrar patrocinios deportivos & El sistema muestra la interfaz de patrocinio según el rol cargado: Si es un rol de patrocinador, se cargarán las funcionalidades de patrocinadores; si es un rol no-patrocinador, entonces se cargarán las funcionalidades restantes \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

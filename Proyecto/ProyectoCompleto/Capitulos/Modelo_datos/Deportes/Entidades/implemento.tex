@@ -1,0 +1,59 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_Implemento}
+	\label{tab:entidad_004}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_Implemento}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Implemento deportivo utilizado en un deporte}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			&
+			Identificación de implemento \\
+			\hline
+			nombre &
+			String &
+			50 &
+			Nombre del implemento deportivo \\
+			\hline
+			descripcion &
+			String &
+			1000 &
+			Descripcion del implemento deportivo \\
+			\hline
+			parteCuerpo &
+			String &
+			50 &
+			Parte del cuerpo donde se usa el implemento \\
+			\hline
+			uso &
+			String &
+			50 &
+			Parte del cuerpo o elemento que interactúa con el elemento descrito (ej. bola de tenis tiene uso raqueta) \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_CategoriaGenero} & 
+			\multicolumn{2}{c|}{E\_Genero} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RelacionImagen} & 
+			\multicolumn{2}{c|}{E\_Imagen} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

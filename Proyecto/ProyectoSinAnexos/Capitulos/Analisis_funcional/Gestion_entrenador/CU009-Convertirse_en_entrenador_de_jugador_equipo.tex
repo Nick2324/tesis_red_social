@@ -1,0 +1,79 @@
+\begin{table}[!htb]
+	\caption{CU009-Convertirse en entrenador de jugador/equipo: Descripción}
+	\label{tab:cu009_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Convertirse en entrenador de jugador/equipo \\
+			\hline
+			Identificador & CU009 \\
+			\hline
+			Descripción & Ayuda a pedir/aceptar la petición de ser entrenador de un jugador o equipo en el SNS \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Entrenador
+				\item Jugador
+				\item Organización
+			\end{itemize}			 \\
+			\hline
+			Disparador & Actor con rol de entrenador deportivo elige la opción de entrenar a equipo o jugador \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de entrenador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha elegido ser entrenador de un jugador o equipo deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU009-Convertirse en entrenador de jugador/equipo: Flujos de hechos}
+	\label{tab:cu009_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario eligió la gestión de opciones de entrenador & El sistema mostró la interfaz de gestión de opciones de usuario \\
+			\hline
+			2 & El usuario elige entrenar a un equipo o jugador en la red social & El sistema muestra la interfaz por la que el usuario puede buscar a otro en la red social para entrenarlo \\
+			\hline
+			3 & El usuario busca al posible entrenado en la red social & El sistema realiza la búsqueda del usuario a entrenar con el nombre proporcionado por el usuario \\
+			\hline
+			4 & El usuario elige el jugador o equipo a ser entrenado & El sistema envía una notificación de petición de entrenamiento al equipo o jugador elegido o, si la petición ya ha sido enviado por el jugador o equipo, agrega al usuario como entrenador de este \\
+			\hline
+			5 & & El sistema muestra un aviso de éxito o no de la operación \\
+			\hline
+			6 & El usuario continua pulsando el botón designado en el aviso para poder continuar & El sistema muestra la interfaz de convertirse en entrenador de jugador/equipo \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

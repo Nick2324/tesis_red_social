@@ -1,0 +1,514 @@
+\chapter{Tabla de requerimientos funcionales}
+\label{app:req_funcionales}
+
+A continuación, en la tabla \ref{tab:requerimientos_funcionales}, se puede ver la compilación de requerimientos funcionales identificados por los autores.
+
+	\begin{center}
+		\begin{longtable}{|p{1.5cm}|p{3cm}|p{5cm}|p{2cm}|p{3cm}|}
+			\caption{Requerimientos funcionales \label{tab:requerimientos_funcionales}} \\		
+			\hline
+			\textbf{Código} & \textbf{Funcionalidad} & \textbf{Descripción} & \textbf{Criticidad} & \textbf{Nota} \\
+			\hline
+			\endfirsthead
+			\hline
+			\textbf{Código} & \textbf{Funcionalidad} & \textbf{Descripción} & \textbf{Criticidad} & \textbf{Nota} \\
+			\hline
+			\endhead
+			\hline
+			\endfoot
+			\hline
+			\endlastfoot
+			F01 & 
+			\multicolumn{4}{c|}{Gestión de usuarios} \\
+			\hline
+			F01-01 & 
+			Creación de un usuario & 
+			Crea un usuario en el sistema. Ver (seccion actores). El usuario debe ser creado con la información requerida por su(s) rol(es) & 
+			Alta & 
+			\\
+			\hline
+			F01-02 & 
+			Actualizacion de un usuario & 
+			Actualización de los datos registrados de un usuario. Ver (seccion actores) & 
+			Alta & 
+			\\
+			\hline
+			F01-03 & 
+			Dar de baja un usuario & 
+			Inactivar el usuario sin borrar su información & 
+			Baja & 
+			\\
+			\hline
+			F01-04 & 
+			Creación de un rol & 
+			Crear un rol. Los roles predeterminados serán: Jugador, equipo, organización, entrenador y administrador. Cada función definida para ellos se encuentra en los módulos de gestión definidos en esta especificación. El rol se debe poder asignar a un usuario registrado & 
+			Alta & 
+			Acción realizada sólo por el administrador del sistema. La creación de usuarios con rol de equipo u organización están detallados en otros módulos \\
+			\hline
+			F01-05 & 
+			Actualizacion de un rol & 
+			Actualiza las funciones que pueden ser realizadas por un usuario en el sistema. Adémas, actualiza las características con las que debe ser inscrito un nuevo usuario con el rol & 
+			Media & 
+			Acción realizada sólo por el administrador del sistema\\
+			\hline
+			F01-06 & 
+			Dar de baja un rol & 
+			Inactivar un rol sin borrar su información & 
+			Baja & 
+			Acción realizada sólo por el administrador del sistema\\
+			\hline
+			F01-07 & 
+			Asignación de roles a un usuario & 
+			Un usuario debe abonarse al menos a un rol y puede tener muchos roles dentro del sistema. Ver (sección actores) para saber que roles son excluyentes & 
+			Baja & 
+			Acción realizada sólo por el administrador del sistema\\
+			\hline
+			F02 & 
+			\multicolumn{4}{c|}{Gestión de deportes}\\
+			\hline
+			F02-01 & 
+			Ingresar nuevo deporte & 
+			Crea un nuevo deporte en el sistema. Ver sección (Especificación de entidades por módulo de Gestión) & 
+			Alta & 
+			Solo puede ser realizado por un usuario administrador. El módulo de gestión del conocimiento definirá algunas de las características de los deportes. Por ejemplo, las reglas aceptadas a la fecha \\
+			\hline
+			F02-02 & 
+			Actualizar caracteristicas de un deporte & 
+			Actualiza la información de un deporte. Ver sección (Especificación de entidades por módulo de Gestión) & 
+			Alta & 
+			Dependiendo de la característica, un rol podrá o no actualizarla \\
+			\hline
+			F02-03 & 
+			Dar de baja un deporte & 
+			Inactivar un deporte sin borrar su información & 
+			Baja & 
+			\\
+			\hline
+			F03 & 
+			\multicolumn{4}{c|}{Gestión de equipos} \\
+			\hline
+			F03-01 & 
+			Crear un equipo & 
+			Crear un equipo deportivo en la red social & 
+			Alta & 
+			Acción que puede ser realizada sólo por un usuario ya registrado. Un equipo no puede crear a otro equipo \\
+			\hline
+			F03-02 & 
+			Actualizar información de equipo & 
+			Actualizar la información de un equipo & 
+			Alta & 
+			\\
+			\hline
+			F03-03 & 
+			Agregar integrante de equipo & 
+			Agregar un jugador a un equipo & 
+			Alta & 
+			\\
+			\hline
+			F03-04 & 
+			Actualizar informacion integrante de equipo & 
+			Actualizar la información de un jugador relacionada con el equipo. Ejemplo: Posición de juego & 
+			Media & 
+			\\
+			\hline
+			F03-05 & 
+			Dar de baja a integrante de equipo & 
+			Inactivar un integrante del equipo & 
+			Baja & 
+			\\
+			\hline
+			F04 & 
+			\multicolumn{4}{c|}{Gestión de torneos}
+			\\
+			\hline
+			F04-01 & 
+			Crear torneo & 
+			Crea un torneo en la red social & 
+			Alta & 
+			Esta acción puede ser realizada por cualquier rol de la red social \\
+			\hline
+			F04-02 & 
+			Actualizar torneo & 
+			Actualiza la información de un torneo & 
+			Alta & 
+			Se incluye la actualización de todos los conceptos relacionados con él. Ver \ref{app:diccionario_datos} \\
+			\hline
+			F04-03 & 
+			Agregar equipo/jugador a torneo & 
+			Agrega un equipo/jugador al torneo. Esta función obliga a que se actualicen los formatos
+del torneo & 
+			Alta & 
+			\\
+			\hline
+			F04-04 & 
+			Retirar equipo/jugador de torneo & 
+			Elimina un equipo/jugador del torneo. Si el torneo está en curso, el equipo sólo es deshabilitado y no puede seguir jugando en el torneo pero se mantiene su información de torneo & 
+			Alta & 
+			\\
+			\hline
+			F04-05 & 
+			Gestionar calendario de encuentros & 
+			Gestiona el calendario de encuentros & 
+			Baja & 
+			Se puede generar un calendario de forma manual o automática \\
+			\hline
+			F04-06 & 
+			Reportar resultado de encuentro & 
+			Por cada encuentro se debe mostrar el resultado y las estadísticas (si las hay) & 
+			Media & 
+			\\
+			\hline
+			F04-07 & 
+			Gestionar formatos de torneo & 
+			Gestionar los formatos de torneo. La creación de grupos o llaves debe poder ser hecha a voluntad por el usuario que administra el torneo & 
+			Alta & 
+			\\
+			F04-08 & 
+			Gestionar alarmas de torneo & 
+			Programa notificaciones a los stakeholders del evento cuando un evento esté próximo a empezar & 
+			Baja & 
+			\\
+			\hline
+			F05 & 
+			\multicolumn{4}{c|}{Gestión de eventos deportivos} \\
+			\hline
+			F05-01 & 
+			Creación de eventos deportivos & 
+			Crea un evento deportivo & 
+			Alta & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F05-02 & 
+			Cancelación de eventos deportivos & 
+			Se cancela un evento deportivo sin borrar los datos de éste. Los usuarios que se habían
+unido al evento deben ser notificados & 
+			Alta & 
+			\\
+			\hline
+			F05-03 & 
+			Clasificación de eventos deportivos & 
+			Se debe poder dar una clasificación a un evento. Por ejemplo, un evento puede ser un torneo, una práctica deportiva o una clínica deportíva & 
+			Alta & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F05-04 & 
+			Adición de un usuario a un evento deportivo & 
+			Un usuario debe poder unirse a un evento deportivo por concepto de participación deportiva, de prestación de servicios o de espectador & 
+			Media & 
+			Un usuario puede pedir ser participante o puede ser invitado por los organizadores \\
+			\hline
+			F05-05 &
+			Gestionar alarma de evento deportivo &
+			Programa notificaciones a los stakeholders del evento cuando un evento esté próximo a empezar &
+			Media &
+			\\
+			\hline
+			F05-06 &
+			Retiro de un usuario de un evento deportivo &
+			Se retira un usuario del evento deportivo &
+			Baja &
+			\\
+			\hline
+			F06 & 
+			\multicolumn{4}{c|}{Gestión de patrocinadores}\\
+			\hline
+			F06-01 & 
+			Patrocinar un usuario o un evento deportivo & 
+			Un patrocinador debe poder marcarse como patrocinador de un usuario o evento deportivo & 
+			Alta & 
+			\\
+			\hline
+			F06-02 & 
+			Peticiones de patrocinio hacia otros usuarios o eventos deportivos & 
+			Un usuario con rol de patrocinador debe poder hacer petición de intención de patrocinio hacia otros usuarios o eventos deportivos & 
+			Alta & 
+			\\
+			\hline
+			F06-03 & 
+			Dejar de patrocinar un usuario o eventos deportivos & 
+			Un patrocinador debe poder terminar la intención de patrocinio de usuarios o eventos deportivos. Esta acción debe ser informada a los organizadores del evento o usuarios & 
+			Alta & 
+			Los creadores de la red social no se harán responsables de violación de contratos
+u otra acción legal que se desencadene de esta función \\
+			\hline
+			F06-04 & 
+			Manejo de un historial de patrocinios & 
+			Un patrocinador debe poder manejar un historial de los eventos o usuarios que ha patrocinado & 
+			Baja & 
+			Los creadores de la red social no se harán responsables de violación de contratos
+u otra acción legal que se desencadene de esta función \\
+			\hline
+			F06-05 & 
+			Seguir actividad de un usuario o evento deportivo (anonima o directa) & 
+			Un patrocinador debe poder hacer una labor de ''espionaje'' a un usuario o a un evento
+deportivo, siendo o no informado dicho usuario o evento. Este ''espionaje'' debe ser aceptado por el usuario o el administrador del evento deportivo & 
+			Baja & 
+			\\
+			\hline
+			F06-06 & 
+			Manejo de patrocinios físicos (materiales), monetarios o de servicio & 
+			El patrocinador debe poder marcar cual es el material que prestará al evento deportivo o al usuario. Los efectos legales son responsabilidad de los usuarios y los creadores de la red social no se responsabilizarán por incumplimientos u otras acciones juzgables legalmente &
+			Baja & 
+			\\
+			\hline
+			F07 & 
+			\multicolumn{4}{c|}{Gestión de organizaciones}
+			\\
+			\hline
+			F07-01 & 
+			Creación de organizaciones& 
+			Crear un usuario con rol de organización en la red social &
+			Media & 
+			La creación de una organización solo puede ser hecha por un usuario ya registrado de la red social. Ver \ref{app:diccionario_datos} \\
+			\hline
+			F07-02 & 
+			Actualización de organizaciones & 
+			Actualización de la información de las organizaciones, así como también todos los conceptos que deriven de ellas. Por ejemplo, el ofrecimiento de productos o servicios &
+			Media & 
+			\\
+			\hline
+			F07-03 & 
+			Dar de baja una organización & 
+			Inactivar una organización sin borrar su información &
+			Media & 
+			\\
+			\hline
+			F07-04 & 
+			Gestion de venta y compra de productos y servicios deportivos & 
+			Prestar servicios de venta de productos o de ofrecimiento de servicios y todo el manejo
+derivado de ellos: Manejo de información de los productos o servicios; Venta y pago; portafolio de servicios o catálogo de productos. Cumplir con la acción de compra referente a los servicios o productos deportivos &
+			Media & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline			
+			F08 & 
+			\multicolumn{4}{c|}{Gestión self-expresion} 
+			\\
+			\hline
+			F08-01 & 
+			Gestión de timelines & 
+			Gestión de publicaciones en timelines. Todos los usuarios podrán tener un timeline. Ésta información será manejada bajo un ''container'' de información referente al usuario. Como usuario se entiende cualquier actor de la red social deportiva, así como cualquier evento deportivo realizado &
+			Media & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F08-02 & 
+			Gestión de multimedia (videos y fotos) & 
+			Gestión de multimedia subida a la red social por los usuarios. Ésta información será manejada bajo un ''container'' de información referente al usuario &
+			Media & 
+			\\
+			\hline
+			F08-03 & 
+			Gestión de multimedia (videos y fotos) & 
+			Gestión de multimedia subida a la red social por los usuarios. Ésta información será manejada bajo un ''container'' de información referente al usuario &
+			Media & 
+			\\
+			\hline
+			F08-04 & 
+			Gestión de mensajería instantánea & 
+			Gestión de mensajería instantánea entre usuarios de la red social &
+			Baja & 
+			\\
+			\hline
+			F08-05 & 
+			Gestión de interacción con otras SNS & 
+			Comunicación de actividad con otras redes sociales, así como también log-in realizado por medio de cuentas en otras SNS &
+			Media & 
+			\\
+			\hline
+			F09 & 
+			\multicolumn{4}{c|}{Gestión del conocimiento} \\
+			\hline
+			F09-01 & 
+			Subida de información deportiva & 
+			Los usuarios podrán subir información deportiva transversal (por ejemplo, salud deportiva) o crear debates acerca de temas relacionados al específico de los deportes (por ejemplo, las reglas del juego o los implementos deportivos). Los usuarios también podrán subir información estática de los deportes (por ejemplo, las reglas en si mismas o la historia). Cada usuario podrá hacer comentarios de la información deportiva subida &
+			Media & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F09-02 & 
+			Gestión de temas & 
+			Se hará una división de la información deportiva y se gestionará un arbol temático derivado de dicha división. Dependiendo del rol que tenga el usuario de la red social, el podrá actualizar o no temas, darle un orden diferente al arbol, entre otras funciones) &
+			Alta & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F09-03 & 
+			Gestión de calificación de información deportiva & 
+			Se le podrá añadir a un rol la función de moderación de foros. Además, cada rol tendrá un peso en la calificación de la calidad de la información subida por otros usuarios a la red, así como también aquella con la que se alimente por defecto (en el caso de información estática de los deportes) &
+			Media & 
+			Ver \ref{app:diccionario_datos} \\
+			\hline
+			F10 & 
+			\multicolumn{4}{c|}{Gestión de geolocalización} \\
+			\hline
+			F10-01 & 
+			Geolocalizar usuarios & 
+			Se debe poder saber la ubicación de un usuario en cualquier momento (el usuario deberá poder habilitar o deshabilitar esta opción) &
+			Media & 
+			\\
+			\hline
+			F10-02 & 
+			Geolocalizar lugares de eventos deportivos & 
+			Se debe poder añadir geolocalización a los eventos deportivos &
+			Alta & 
+			\\
+			\hline
+			F10-03 & 
+			Gestión de proximidad entre los usuarios y otros usuarios, lugares de torneos y prácticas deportivas & 
+			El usuario debe poder saber cuando está cerca a eventos deportivos u otros usuarios
+en la red social. Ésta función depende de los privilegios que se hayan dado de compartir geolocalización (por parte de usuarios individuales) &
+			Alta & 
+			\\
+			\hline
+			F11 & 
+			\multicolumn{4}{c|}{Gestión de estadísticas} \\
+			\hline
+			F11-01 & 
+			Concurrencia de personas a eventos deportivos & 
+			Se debe poder llevar una estadística de concurrencia de personas a los lugares que  son utilizados para eventos deportivos. Por ejemplo, si el evento es una práctica deportiva, se debe poder registrar la concurrencia de personas a realizar dicha práctica en dicho lugar &
+			Alta & 
+			\\
+			\hline
+			F11-02 & 
+			Estadísticas de jugador & 
+			Se debe poder llevar una estadística respecto a las habilidades del jugador en un
+deporte determinado &
+			Baja & 
+			\\
+			F11-03 & 
+			Estadísticas de equipos & 
+			Se debe poder llevar una estadística respecto a las competencias deportivas que
+han tenido los equipos &
+			Baja & 
+			\\
+			\hline
+			F11-04 & 
+			Sistema de ''rating'' de ligas deportivas & 
+			Se debe poder calificar una liga deportiva respecto a la calidad de los equipos que están en ella &
+			Baja & 
+			\\
+			\hline
+			F11-05 & 
+			Sistema de ''niveles de juego'' adquiridos por jugadores y por equipos & 
+			A las estadísticas generadas a ligas, equipos y jugadores, se debe adicionar un nivel de juego &
+			Baja & 
+			\\
+			\hline
+			F11-06 & 
+			Sistema de ''rating'' para los servicios ofrecidos por organizaciones & 
+			Se debe poder calificar una organización dependiendo de la calidad de los servicios o productos ofrecidos por esta &
+			Baja & 
+			\\
+			\hline
+			F11-07 & 
+			Sistema de ''rating'' para los servicios ofrecidos por entrenadores & 
+			Se debe poder calificar un entrenador dependiendo de la calidad de los servicios de entrenamiento ofrecidos por este, es decir, cuando han logrado éxitosamente llevar a un jugador o un equipo a escalar niveles de juego &
+			Baja & 
+			\\
+			\hline
+			F11-08 & 
+			Clasificación estadística de ''mejores entrenadores'' & 
+			Se debe poder saber cuales son los mejores entrenadores dependiendo del rating de sus servicios &
+			Baja & 
+			\\
+			\hline
+			F11-09 & 
+			Visualización estadística de mejoras de jugador antes/después del trabajo con un entrenador & 
+			Debe ser posible ver comparativas estadísticas de jugadores en su mejora a cargo de un entrenador &
+			Baja & 
+			\\
+			\hline
+			F12 & 
+			\multicolumn{4}{c|}{Gestión de entrenadores} \\
+			\hline
+			F12-01 & 
+			Convertirse en entrenador de un jugador o de un equipo &
+			Un entrenador debe poder unirse a un equipo o entrenar un jugador &
+			Alta & 
+			\\
+			\hline
+			F12-02 & 
+			Dejar de ser entrenador de un jugador o de un equipo &
+			Un entrenador debe poder desvincularse de un equipo o un jugador sin perder la información producida &
+			Alta & 
+			\\
+			\hline
+			F12-03 & 
+			Gestionar relacion entrenador - jugador o equipo &
+			El entrenador debe poder colocar ''metas'' a lograr a los jugadores o al equipo, así como también debe poder ver el avance sobre dichas metas &
+			Media & 
+			\\
+			\hline
+			F12-04 & 
+			Venta de servicios de entrenamiento &
+			Venta de servicios de entrenamiento por parte de un entrenador &
+			Media & 
+			\\
+			\hline
+			F13 & 
+			\multicolumn{4}{c|}{Gestión de canales de difusión} \\
+			\hline
+			F13-01 & 
+			Manejo de ''live scores'' en encuentros deportivos &
+			Ver puntuaciones en vivo referentes a eventos deportivos que las soporten &
+			Baja & 
+			\\
+			\hline
+			F13-02 & 
+			Manejo de RSS de noticias deportivas &
+			Manejar un canal de noticias deportivas &
+			Baja & 
+			\\
+			\hline
+			F13-03 & 
+			Manejo de RSS de información generada en foros &
+			Manejar un canal de información de información generada en el módulo de gestión del conocimiento &
+			Baja & 
+			\\
+			\hline
+			F13-04 & 
+			Difusión de servicios deportivos ofrecidos por usuarios &
+			Un usuario debe poder difundir sus servicios sobre un canal de difusión de servicios deportivos &
+			Baja & 
+			\\
+			\hline
+			F13-05 & 
+			Difusión de eventos deportivos &
+			Un evento deportivo debe poder tener un canal de información de las actualizaciones dadas en su realización &
+			Media & 
+			\\
+			\hline
+			F14 &
+			\multicolumn{4}{c|}{Gestión de grupo deportivos} \\
+			\hline
+			F14-01 &	
+			Crear un grupo deportivo &
+			Creación de un grupo deportivo que no puede comportarse como equipo &
+			Alta &
+			Referente a una agrupación de deportistas aficionados/profesional que practican deporte de manera informal
+			\\
+			\hline
+			F14-02 &
+			Dar de baja un grupo deportivo &
+			Da de baja un grupo deportivo &
+			Baja &
+			\\
+			\hline
+			F14-03 &
+			Actualizar información de grupo deportivo &
+			Actualiza los datos básicos del grupo deportivo &
+			Media &
+			\\
+			\hline
+			F14-04 &
+			Añadir jugadores al grupo deportivo &
+			Añade un jugador al grupo deportivo &
+			Alta &
+			\\
+			\hline
+			F14-05 &
+			Desvincular jugadores del grupo deportivo &
+			Permite desvincular jugadores añadidos al grupo deportivo &
+			Baja &
+			\\
+			\hline
+		\end{longtable}
+		\textbf{Fuente}: Autores
+	\end{center}

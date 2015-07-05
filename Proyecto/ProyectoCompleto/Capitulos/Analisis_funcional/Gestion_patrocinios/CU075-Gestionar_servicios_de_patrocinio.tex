@@ -1,0 +1,75 @@
+\begin{table}[!htb]
+	\caption{CU075-Gestionar servicios de patrocinio: Descripción}
+	\label{tab:cu075_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Gestionar servicios de patrocinio \\
+			\hline
+			Identificador & CU075 \\
+			\hline
+			Descripción & Permite a un patrocinador llevar una lista de los servicios con los que cuenta y con los que patrocinará a los posibles patrocinados \\
+			\hline
+			Actor &
+			\begin{itemize}
+				\item Patrocinador
+			\end{itemize}
+			\\
+			\hline
+			Disparador & El patrocinador elige la opción de gestión de servicios de patrocinio \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & 
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item Se ha iniciado el SNS con un rol de patrocinador deportivo
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha hecho cambios en los servicios de patrocinio que maneja
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU075-Gestionar servicios de patrocinio: Flujos de hechos}
+	\label{tab:cu075_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido gestionar patrocinios de patrocinado & El sistema ha mostrado la interfaz de modificación de los parámetros del patrocinio \\
+			\hline
+			2 & El usuario elige gestionar servicios deportivos adicionando o borrando servicios deportivos con los que patrocina y guarda acciones & El sistema realiza las acciones pedidas \\
+			\hline
+			3 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			4 & El usuario continua & El sistema muestra la interfaz de gestión de detalles del patrocinio \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

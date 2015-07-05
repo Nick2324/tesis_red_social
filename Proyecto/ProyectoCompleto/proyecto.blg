@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: proyecto.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: bibliografia.bib
+Warning--entry type for "manual_referencia_costos" isn't style-file defined
+--line 5 of file bibliografia.bib
+Warning--entry type for "leg_int" isn't style-file defined
+--line 44 of file bibliografia.bib
+Warning--entry type for "judging" isn't style-file defined
+--line 55 of file bibliografia.bib
+Warning--entry type for "evolucion_web" isn't style-file defined
+--line 94 of file bibliografia.bib
+Warning--entry type for "scrum_guide" isn't style-file defined
+--line 115 of file bibliografia.bib
+Warning--entry type for "security_ws" isn't style-file defined
+--line 204 of file bibliografia.bib
+Warning--entry type for "archimate2" isn't style-file defined
+--line 214 of file bibliografia.bib
+Warning--entry type for "dependent_time_graphs" isn't style-file defined
+--line 245 of file bibliografia.bib
+Warning--entry type for "time_response" isn't style-file defined
+--line 256 of file bibliografia.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+Warning--No journal in dynamics
+Warning--No journal in measuring_maintainability
+Warning--No journal in quality_in_use
+Warning--No journal in usability_ux
+Warning--No journal in complexity_mesure
+You've used 25 entries,
+            6735 wiz_defined-function locations,
+            1340 strings with 13739 characters,
+and the built_in function-call counts, 42829 in all, are:
+= -- 5715
+> -- 332
+< -- 1805
++ -- 1767
+- -- 54
+* -- 2387
+:= -- 7281
+add.period$ -- 100
+call.type$ -- 25
+change.case$ -- 399
+chr.to.int$ -- 0
+cite$ -- 55
+duplicate$ -- 976
+empty$ -- 1738
+format.name$ -- 527
+if$ -- 8580
+int.to.chr$ -- 0
+int.to.str$ -- 50
+missing$ -- 0
+newline$ -- 595
+num.names$ -- 200
+pop$ -- 645
+preamble$ -- 1
+purify$ -- 98
+quote$ -- 0
+skip$ -- 3462
+stack$ -- 0
+substring$ -- 1957
+swap$ -- 485
+text.length$ -- 50
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2648
+warning$ -- 5
+while$ -- 179
+width$ -- 0
+write$ -- 712
+(There were 14 warnings)

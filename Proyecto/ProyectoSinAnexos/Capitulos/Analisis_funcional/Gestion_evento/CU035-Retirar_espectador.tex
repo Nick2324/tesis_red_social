@@ -1,0 +1,73 @@
+\begin{table}[!htb]
+	\caption{CU035-Retirar espectador: Descripción}
+	\label{tab:cu035_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar espectador \\
+			\hline
+			Identificador & CU035 \\
+			\hline
+			Descripción & Permite retirar un espectador del evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de retirar un espectador deportivo del evento \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario retira un espectador del deportivo del evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU035-Retirar espectador: Flujos de hechos}
+	\label{tab:cu035_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido la opción de consulta de espectadores & El sistema ha mostrado una interfaz con la lista de los espectadores existentes \\
+			\hline
+			2 & El usuario busca un espectador en específico & El sistema muestra el resultado de la búsqueda \\
+			\hline
+			3 & El usuario pulsa el botón para retirar el espectador & El sistema retira al espectador \\
+			\hline
+			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de administración de eventos deportivos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

@@ -1,0 +1,52 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_Posicion}
+	\label{tab:entidad_007}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_Posicion}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Describe una posición en el campo de juego de un deporte}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			&
+			Identificación única de la posición \\
+			\hline
+			nombre &
+			String &
+			50 &
+			Nombre de la posición \\
+			\hline
+			descripcion &
+			String &
+			1000 &
+			Descripción de la posición \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RelacionImagen} & 
+			\multicolumn{2}{c|}{E\_Imagen} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RelacionVideo} & 
+			\multicolumn{2}{c|}{E\_Video} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UsuarioPosicionDeporte} & 
+			\multicolumn{2}{c|}{E\_PosicionUsuarioDeporte} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

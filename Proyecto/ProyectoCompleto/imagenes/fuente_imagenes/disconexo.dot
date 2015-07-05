@@ -1,0 +1,7 @@
+graph par{
+	rankdir=LR
+	label="disconexo"
+	A
+	B
+	C
+}

@@ -1,0 +1,59 @@
+Los requerimientos no funcionales explorados en detalle para el desarrollo del SNS deportivo y que son tenidos en cuenta se presentan a continuación con escenarios de calidad (reducidos; los escenarios completos se encuentran en \ref{app:req_no_funcionales}), los cuales son descritos como los escenarios en los que se probará la calidad del software desarrollado.
+
+\subsubsection{QiU}
+
+En esta sección se da una versión simplificada del análisis de escenarios de calidad correspondientes a las áreas de usabilidad y UX.
+
+\begin{itemize}
+	\item \textbf{Escenario de calidad 1}: Busca que el usuario pueda realizar todas las tareas que desea realizar con el SNS
+	\item \textbf{Escenario de calidad 2}: Busca que las funcionalidades ofrecidas por el SNS se ejecuten en un tiempo corto
+	\item \textbf{Escenario de calidad 3}: Busca que el nivel de conformidad con la interfaz de usuario (UX) sea marcado
+	\item \textbf{Escenario de calidad 4}: Busca que el usuario aprenda a utilizar las principales funcionalidades del SNS en poco tiempo
+	\item \textbf{Escenario de calidad 5}: Busca hacer legible cada mensaje de error que aparezca cada vez que se produzca uno en el SNS
+	\item \textbf{Escenario de calidad 6}: Busca hacer conciente al usuario de los diferentes roles manejados a través de la red social
+	\item \textbf{Escenario de calidad 7}: Busca que el usuario conozca todas las funcionalidades ofrecidas por el SNS
+	\item \textbf{Escenario de calidad 8}: Busca que el usuario sea efectivo a la hora de utilizar cada funcionalidad
+\end{itemize}
+
+\subsubsection{Reusabilidad}
+
+Para el desarrollo de escenarios de calidad en cuanto a reusabilidad se refiere, se utilizaron apartes de \cite{soa_principles} para definirlos. A continuación se exponen los escenarios de calidad resumidos.
+
+\begin{itemize}
+	\item \textbf{Escenario de calidad 1}: Busca que el software cumpla con la reusabilidad táctica
+	\item \textbf{Escenario de calidad 2}: Busca dar a los servicios hechos en la red social, en su mayoría, un carácter agnóstico
+	\item \textbf{Escenario de calidad 3}: Busca la estandarización del nombramiento de las diferentes partes de los contratos de servicio a crear
+\end{itemize}
+
+\subsubsection{Mantenibilidad}
+
+A continuación se exponen escenarios de calidad resumidos relacionados a la mantenibilidad, tomando como base tanto el paradigma orientado a servicios como elementos del estandar ISO/IEC 9126.
+
+\begin{itemize}
+	\item \textbf{Escenario de calidad 1}: Busca mayor adaptación del software a capacidades nuevas
+	\item \textbf{Escenario de calidad 2}: Busca disminuir la cantidad de lógica envuelta por un servicio
+	\item \textbf{Escenario de calidad 3}: Busca que los servicios tengan una complejidad tan manejable como sea posible
+\end{itemize}
+
+\subsubsection{Interoperabilidad}
+
+En \cite{soa_principles}, se hace referencia a la interoperabilidad como un componente transversal a todo principio, patrón y demás concepto manejado en el paradigma orientado a servicios. A continuación se describe el escenario de calidad resumido estipulado por los autores.
+
+\begin{itemize}
+	\item \textbf{Escenario de calidad 1}: Busca la adopción de una política estricta de estandarización al momento del desarrollo de los contratos de servicio
+\end{itemize}
+
+\subsubsection{Seguridad}
+
+Se tuvieron en cuenta los principios de seguridad expresados en \cite{security_ws}. A continuación se enuncian los escenarios de calidad resumidos estipulados por el lado de la seguridad.
+
+\begin{itemize}
+	\item \textbf{Escenario de calidad 1}: Busca aplicar el concepto de ''Fail Securely''
+	\item \textbf{Escenario de calidad 2}: Busca deshabilitar toda funcionalidad no terminada y accesos a ellas
+	\item \textbf{Escenario de calidad 3}: Busca establecer un sistema de autenticación-autorización
+	\item \textbf{Escenario de calidad 4}: Busca la encripción de mensajes pasados entre servicios
+\end{itemize}
+
+\subsubsection{Rendimiento}
+
+Para el rendimiento, \cite{time_response}, se tuvo en cuenta una sola medida: Las funcionalidades que no dependan de la carga o descarga de una cantidad de información grande (ej. videos e imágenes) no deberán tardar más de 5 segundos.

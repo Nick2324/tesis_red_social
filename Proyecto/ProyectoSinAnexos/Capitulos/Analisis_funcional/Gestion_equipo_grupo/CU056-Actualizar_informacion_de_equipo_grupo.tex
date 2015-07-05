@@ -1,0 +1,83 @@
+\begin{table}[!htb]
+	\caption{CU056-Actualizar información de equipo/grupo: Descripción}
+	\label{tab:cu056_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de equipo/grupo \\
+			\hline
+			Identificador & CU056 \\
+			\hline
+			Descripción & Permite actualizar la información general de un equipo/grupo deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige actualizar la información de un equipo/grupo \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & 
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de formador de grupos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario actualiza la información del equipo/grupo deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Generalización de:
+				\begin{itemize}
+					\item Dar de baja a integrante de equipo/grupo
+					\item Agregar un integrante a un equipo/grupo
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU056-Actualizar información de equipo/grupo: Flujos de hechos}
+	\label{tab:cu056_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido la opción de administrar grupos deportivos & El sistema ha mostrado la interfaz con la consulta de los equipos y grupos creados por el usuario \\
+			\hline
+			2 & El usuario busca un equipo/grupo en específico & El sistema devuelve las coincidencias de la búsqueda \\
+			\hline
+			3 & El usuario elige un equipo/grupo deportivo de las coincidencias & El sistema muestra los detalles del equipo/grupo elegido \\
+			\hline
+			4 & El usuario actualiza la información del equipo/grupo deportivo y salva la información & El sistema guarda los cambios \\
+			\hline
+			5 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			6 & El usuario continua & El sistema muestra la interfaz de gestión de equipos/grupos deportivos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

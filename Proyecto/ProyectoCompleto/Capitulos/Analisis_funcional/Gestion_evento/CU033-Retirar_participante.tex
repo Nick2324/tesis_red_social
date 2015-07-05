@@ -1,0 +1,73 @@
+\begin{table}[!htb]
+	\caption{CU033-Retirar participante: Descripción}
+	\label{tab:cu033_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Retirar participante \\
+			\hline
+			Identificador & CU033 \\
+			\hline
+			Descripción & Permite retirar un participante deportivo (equipo o jugador) del evento deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de retirar un participante deportivo al evento \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario retira un participante deportivo del evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU033-Retirar participante: Flujos de hechos}
+	\label{tab:cu033_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha consultado los participantes registrados en el evento & El sistema ha mostrado los participantes registrados en el evento \\
+			\hline
+			2 & El usuario ha buscado un participante & El sistema ha retornado el resultado de la búsqueda \\
+			\hline
+			3 & El usuario confirma el retiro del participante del evento & El sistema retira al participante del evento \\
+			\hline
+			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de consulta de participantes \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

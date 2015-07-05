@@ -1,0 +1,52 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_FrameDia}
+	\label{tab:entidad_021}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_FrameDia}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Timestamp de una aparición del usuario sobre una ubicación deportiva}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			 &
+			Identificación única de E\_FrameDia \\
+			\hline
+			horaLlegada &
+			String &
+			5 &
+			Hora de llegada a la ubicación deportiva \\
+			\hline
+			horaSalida &
+			String &
+			5 &
+			Hora de salida de la ubicación deportiva \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_NextFrame} & 
+			\multicolumn{2}{c|}{E\_FrameDia} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FrameUsuario} & 
+			\multicolumn{2}{c|}{E\_Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FrameUbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_UbicacionUsuario} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

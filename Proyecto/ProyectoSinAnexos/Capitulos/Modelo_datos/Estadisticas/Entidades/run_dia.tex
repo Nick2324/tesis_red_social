@@ -1,0 +1,50 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_RunDia}
+	\label{tab:entidad_020}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_RunDia}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Describe un día de la semana}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id[P] &
+			Numerico &
+			&
+			Identificación única de E\_RunDia \\
+			\hline
+			nombre [U] &
+			String &
+			8 &
+			Nombre del día al que se hace referencia \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FirstFrame} & 
+			\multicolumn{2}{c|}{E\_FrameDia} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_LastFrame} & 
+			\multicolumn{2}{c|}{E\_FrameDia} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RunUsuario} & 
+			\multicolumn{2}{c|}{E\_Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RunUbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_UbicacionUsuario} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

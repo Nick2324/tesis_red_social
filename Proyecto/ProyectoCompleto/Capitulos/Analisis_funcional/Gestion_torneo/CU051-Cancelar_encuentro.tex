@@ -1,0 +1,73 @@
+\begin{table}[!htb]
+	\caption{CU051-Cancelar encuentro: Descripción}
+	\label{tab:cu051_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Cancelar encuentro\\
+			\hline
+			Identificador & CU051 \\
+			\hline
+			Descripción & Permite cancelar un encuentro deportivo \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige cancelar un encuentro deportivo \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & 
+			\\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario ha cancelado un encuentro
+			\end{itemize}
+			\\
+			\hline
+			Notas & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU051-Cancelar encuentro: Flujos de hechos}
+	\label{tab:cu051_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ha elegido gestionar formato del torneo & El sistema ha mostrado la interfaz de gestión del formato del torneo \\
+			\hline
+			2 & El usuario elige uno de los encuentros mostrados & El sistema muestra la interfaz de gestión de detalles de encuentro \\
+			\hline
+			3 & El usuario elige cancelar el encuentro & El sistema cancela el encuentro y envía notificaciones a los involucrados \\
+			\hline
+			4 &  & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de gestión de formato de torneo \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

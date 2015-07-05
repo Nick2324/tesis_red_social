@@ -1,0 +1,60 @@
+\begin{table}[!htb]
+	\caption{CU151-Registrar nueva ubicación: Descripción}
+	\label{tab:cu151_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Registrar nueva ubicación\\
+			\hline
+			Identificador & CU151\\
+			\hline
+			Descripcion & Funcionalidad que le permite al usuario registrar una nueva ubicación en la aplicación.\\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Actor deportivo
+			\end{itemize} \\
+			\hline
+			Disparador & El usuario quiere registrar una nueva ubicación.\\
+			\hline
+			Inclusiones & CU151-Determinar ubicación\\
+			\hline
+			Extensiones & \\
+			\hline
+			Precondiciones & \\
+			\hline
+			Postcondiciones & \\
+			\hline
+			Notas & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+\begin{table}[!htb]
+	\caption{CU151-Registrar nueva ubicación:Flujos de hechos}
+	\label{tab:cu151_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema\\
+			\hline
+				1 & El usuario selecciona la opción registrar ubicación & Se despliega el formulario de registro de nueva ubicación.\\
+				2 & El usuario selecciona la opción Obtener mi ubicación. & Se obtiene la ubicación del usuario y se completan los campos asociados a la misma en el formularo de registro.\\
+				3 & Luego de llenar los campos faltantes, el usuario selecciona la opcion Registrar ubicación. & Se solicita confirmación de la acción\\
+				4 & El usuario confirma la acción & Se muestra mensaje informando el exito de la operación. El sistema regresa al punto desde el que se invocó el registro.\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

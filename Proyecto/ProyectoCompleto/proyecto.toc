@@ -1,0 +1,250 @@
+\select@language {spanish}
+\contentsline {chapter}{Lista de figuras}{13}{chapter*.2}
+\contentsline {chapter}{Lista de tablas}{21}{chapter*.3}
+\contentsline {section}{Introducci\IeC {\'o}n}{39}{chapter*.5}
+\contentsline {section}{Glosario}{41}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Definici\IeC {\'o}n del problema}{43}{chapter.1}
+\contentsline {chapter}{\numberline {2}Justificaci\IeC {\'o}n del problema}{47}{chapter.2}
+\contentsline {chapter}{\numberline {3}Objetivos}{51}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objetivo General}{51}{section.3.1}
+\contentsline {section}{\numberline {3.2}Objetivos espec\IeC {\'\i }ficos}{51}{section.3.2}
+\contentsline {chapter}{\numberline {4}Alcances y limitaciones}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Alcances}{53}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Aspectos tecnol\IeC {\'o}gicos}{53}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Aspectos de negocio}{54}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Alineaci\IeC {\'o}n de aspectos tecnol\IeC {\'o}gicos y de negocio con la soluci\IeC {\'o}n del problema}{54}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Limitaciones}{55}{section.4.2}
+\contentsline {chapter}{\numberline {5}Trabajos futuros}{57}{chapter.5}
+\contentsline {chapter}{\numberline {6}Marco conceptual}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Comunicaci\IeC {\'o}n}{59}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Evoluci\IeC {\'o}n de la web}{60}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}R\IeC {\'e}d social}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}Service-Oriented Architecture (SOA)}{62}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Primeros conceptos}{62}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Computaci\IeC {\'o}n orientada a servicios}{63}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Pertinencia con el proyecto}{67}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Scrum}{67}{section.6.4}
+\contentsline {chapter}{\numberline {7}Marco te\IeC {\'o}rico}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}Redes Sociales}{71}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}SNA: Social Network Analisis}{71}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Analisis egoc\IeC {\'e}ntrico}{71}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Grado de centralidad}{72}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Grado de cercan\IeC {\'\i }a}{74}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}Factor distancia en la formaci\IeC {\'o}n de las redes sociales}{74}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}Grado de intermediaci\IeC {\'o}n}{75}{subsection.7.1.6}
+\contentsline {subsection}{\numberline {7.1.7}D\IeC {\'\i }adas}{76}{subsection.7.1.7}
+\contentsline {subsection}{\numberline {7.1.8}Tr\IeC {\'\i }adas}{77}{subsection.7.1.8}
+\contentsline {subsection}{\numberline {7.1.9}An\IeC {\'a}lisis Tri\IeC {\'a}dico}{79}{subsection.7.1.9}
+\contentsline {section}{\numberline {7.2}Service-Oriented Architecture (SOA)}{79}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Proceso de An\IeC {\'a}lisis y dise\IeC {\~n}o orientados a servicios}{79}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Metas y beneficios de la computaci\IeC {\'o}n orientada a servicios}{80}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Principios de dise\IeC {\~n}o SOA}{82}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Scrum}{83}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Equipo Scrum (Scrum Team)}{83}{subsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.1.1}Product Owner (due\IeC {\~n}o del producto)}{83}{subsubsection.7.3.1.1}
+\contentsline {subsubsection}{\numberline {7.3.1.2}Development Team (Equipo de desarrollo)}{84}{subsubsection.7.3.1.2}
+\contentsline {subsubsection}{\numberline {7.3.1.3}Scrum Master}{84}{subsubsection.7.3.1.3}
+\contentsline {subsection}{\numberline {7.3.2}Eventos}{86}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}Sprint}{86}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}Sprint Planning Meeting (Reuni\IeC {\'o}n de Planificaci\IeC {\'o}n de Sprint)}{86}{subsubsection.7.3.2.2}
+\contentsline {subsubsection}{\numberline {7.3.2.3}Daily Scrum (Scrum Diario)}{86}{subsubsection.7.3.2.3}
+\contentsline {subsubsection}{\numberline {7.3.2.4}Sprint Review (Revisi\IeC {\'o}n de Sprint)}{86}{subsubsection.7.3.2.4}
+\contentsline {subsubsection}{\numberline {7.3.2.5}Sprint Retrospective (Retrospectiva de Sprint)}{87}{subsubsection.7.3.2.5}
+\contentsline {subsection}{\numberline {7.3.3}Artefactos}{87}{subsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.3.1}Sprint Goal (Objetivo del Sprint)}{87}{subsubsection.7.3.3.1}
+\contentsline {subsubsection}{\numberline {7.3.3.2}Product Backlog (Lista de Producto)}{87}{subsubsection.7.3.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3.3}Sprint Backlog (Lista de Pendientes del Sprint)}{87}{subsubsection.7.3.3.3}
+\contentsline {section}{\numberline {7.4}Requerimientos no funcionales}{88}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Mantenibilidad}{88}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Reusabilidad}{93}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}Medidas de reusabilidad}{93}{subsubsection.7.4.2.1}
+\contentsline {subsubsection}{\numberline {7.4.2.2}Blueprints y reusabilidad}{94}{subsubsection.7.4.2.2}
+\contentsline {subsubsection}{\numberline {7.4.2.3}Logic Centralization: Patr\IeC {\'o}n de dise\IeC {\~n}o pro-reusabilidad}{94}{subsubsection.7.4.2.3}
+\contentsline {subsubsection}{\numberline {7.4.2.4}Granularidad y reusabilidad}{95}{subsubsection.7.4.2.4}
+\contentsline {subsection}{\numberline {7.4.3}QiU: Quality in Use}{95}{subsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.3.1}Usabilidad}{95}{subsubsection.7.4.3.1}
+\contentsline {subsubsection}{\numberline {7.4.3.2}User aceptance (Aceptaci\IeC {\'o}n de usuario)}{96}{subsubsection.7.4.3.2}
+\contentsline {subsubsection}{\numberline {7.4.3.3}Experiencia de usuario (User eXperience - UX)}{96}{subsubsection.7.4.3.3}
+\contentsline {subsubsection}{\numberline {7.4.3.4}Conceptos para medir QiU}{97}{subsubsection.7.4.3.4}
+\contentsline {subsection}{\numberline {7.4.4}Seguridad}{98}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Rendimiento}{100}{subsection.7.4.5}
+\contentsline {section}{\numberline {7.5}Archimate 2.0}{101}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Capas de archimate}{101}{subsection.7.5.1}
+\contentsline {subsubsection}{\numberline {7.5.1.1}Capa de negocio}{101}{subsubsection.7.5.1.1}
+\contentsline {subsubsection}{\numberline {7.5.1.2}Capa de aplicaci\IeC {\'o}n}{102}{subsubsection.7.5.1.2}
+\contentsline {subsubsection}{\numberline {7.5.1.3}Capa de tecnolog\IeC {\'\i }a}{104}{subsubsection.7.5.1.3}
+\contentsline {subsection}{\numberline {7.5.2}Relaciones}{104}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Vistas archimate}{105}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Estado del arte}{113}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Soluciones software existentes}{113}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Prototipo SNS deportivo vs Soluciones software existentes}{116}{subsection.7.6.2}
+\contentsline {chapter}{\numberline {8}Marco legal}{125}{chapter.8}
+\contentsline {chapter}{\numberline {9}Metodolog\IeC {\'\i }a}{129}{chapter.9}
+\contentsline {chapter}{\numberline {10}Cronograma}{133}{chapter.10}
+\contentsline {chapter}{\numberline {11}Costos}{135}{chapter.11}
+\contentsline {section}{\numberline {11.1}Recursos de Hardware}{135}{section.11.1}
+\contentsline {section}{\numberline {11.2}Recursos de Software}{136}{section.11.2}
+\contentsline {section}{\numberline {11.3}Recursos humanos}{136}{section.11.3}
+\contentsline {section}{\numberline {11.4}Recursos miscel\IeC {\'a}neos}{137}{section.11.4}
+\contentsline {section}{\numberline {11.5}Costos totales}{138}{section.11.5}
+\contentsline {chapter}{\numberline {12}M\IeC {\'e}todos utilizados}{139}{chapter.12}
+\contentsline {section}{\numberline {12.1}Encuesta inicial}{139}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}An\IeC {\'a}lisis de resultados}{139}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Articulaci\IeC {\'o}n con el desarrollo del prototipo}{141}{subsection.12.1.2}
+\contentsline {chapter}{\numberline {13}An\IeC {\'a}lisis de requerimientos}{143}{chapter.13}
+\contentsline {section}{\numberline {13.1}Requerimientos}{143}{section.13.1}
+\contentsline {subsection}{\numberline {13.1.1}Requerimientos funcionales}{143}{subsection.13.1.1}
+\contentsline {subsection}{\numberline {13.1.2}Requerimientos no funcionales}{145}{subsection.13.1.2}
+\contentsline {subsubsection}{\numberline {13.1.2.1}QiU}{145}{subsubsection.13.1.2.1}
+\contentsline {subsubsection}{\numberline {13.1.2.2}Reusabilidad}{146}{subsubsection.13.1.2.2}
+\contentsline {subsubsection}{\numberline {13.1.2.3}Mantenibilidad}{146}{subsubsection.13.1.2.3}
+\contentsline {subsubsection}{\numberline {13.1.2.4}Interoperabilidad}{147}{subsubsection.13.1.2.4}
+\contentsline {subsubsection}{\numberline {13.1.2.5}Seguridad}{147}{subsubsection.13.1.2.5}
+\contentsline {subsubsection}{\numberline {13.1.2.6}Rendimiento}{147}{subsubsection.13.1.2.6}
+\contentsline {chapter}{\numberline {14}Arquitectura}{149}{chapter.14}
+\contentsline {section}{\numberline {14.1}Vistas Archimate}{149}{section.14.1}
+\contentsline {subsection}{\numberline {14.1.1}Vistas generales}{149}{subsection.14.1.1}
+\contentsline {subsubsection}{\numberline {14.1.1.1}Actores y Roles}{150}{subsubsection.14.1.1.1}
+\contentsline {subsubsection}{\numberline {14.1.1.2}Introductory viewpoint}{150}{subsubsection.14.1.1.2}
+\contentsline {subsubsection}{\numberline {14.1.1.3}Layered viewpoint}{151}{subsubsection.14.1.1.3}
+\contentsline {subsection}{\numberline {14.1.2}Business Functions Viewpoints}{154}{subsection.14.1.2}
+\contentsline {subsubsection}{\numberline {14.1.2.1}Organizaci\IeC {\'o}n de Eventos Deportivos}{154}{subsubsection.14.1.2.1}
+\contentsline {subsubsection}{\numberline {14.1.2.2}Buscador Deportivo}{154}{subsubsection.14.1.2.2}
+\contentsline {subsubsection}{\numberline {14.1.2.3}Localizaci\IeC {\'o}n}{155}{subsubsection.14.1.2.3}
+\contentsline {subsection}{\numberline {14.1.3}Business Process Viewpoints}{156}{subsection.14.1.3}
+\contentsline {subsubsection}{\numberline {14.1.3.1}Organizaci\IeC {\'o}n de Eventos Deportivos}{156}{subsubsection.14.1.3.1}
+\contentsline {subsubsection}{\numberline {14.1.3.2}Buscador deportivo}{157}{subsubsection.14.1.3.2}
+\contentsline {subsubsection}{\numberline {14.1.3.3}Localizaci\IeC {\'o}n}{159}{subsubsection.14.1.3.3}
+\contentsline {subsection}{\numberline {14.1.4}Application Usage Viewpoints}{159}{subsection.14.1.4}
+\contentsline {subsubsection}{\numberline {14.1.4.1}Organizaci\IeC {\'o}n de Eventos Deportivos}{159}{subsubsection.14.1.4.1}
+\contentsline {subsubsection}{\numberline {14.1.4.2}Buscador deportivo}{159}{subsubsection.14.1.4.2}
+\contentsline {subsubsection}{\numberline {14.1.4.3}Localizaci\IeC {\'o}n}{159}{subsubsection.14.1.4.3}
+\contentsline {subsection}{\numberline {14.1.5}Product Viewpoint}{161}{subsection.14.1.5}
+\contentsline {subsubsection}{\numberline {14.1.5.1}Product}{161}{subsubsection.14.1.5.1}
+\contentsline {subsection}{\numberline {14.1.6}Punto de vista de infraestructura}{161}{subsection.14.1.6}
+\contentsline {chapter}{\numberline {15}An\IeC {\'a}lisis funcional}{165}{chapter.15}
+\contentsline {section}{\numberline {15.1}M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos}{165}{section.15.1}
+\contentsline {section}{\numberline {15.2}M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes}{166}{section.15.2}
+\contentsline {section}{\numberline {15.3}M\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{167}{section.15.3}
+\contentsline {section}{\numberline {15.4}M\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{167}{section.15.4}
+\contentsline {chapter}{\numberline {16}Modelo de datos}{171}{chapter.16}
+\contentsline {section}{\numberline {16.1}Modelo de datos de gesti\IeC {\'o}n de eventos}{171}{section.16.1}
+\contentsline {section}{\numberline {16.2}Modelo de datos de gesti\IeC {\'o}n de ubicaciones}{173}{section.16.2}
+\contentsline {section}{\numberline {16.3}Modelo de datos de gesti\IeC {\'o}n de deportes}{173}{section.16.3}
+\contentsline {section}{\numberline {16.4}Modelo de datos de gesti\IeC {\'o}n de usuarios}{175}{section.16.4}
+\contentsline {chapter}{\numberline {17}Conclusiones}{179}{chapter.17}
+\contentsline {chapter}{\numberline {18}Anexos}{185}{chapter.18}
+\contentsline {chapter}{\numberline {A}Datos encuesta inicial}{187}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Informaci\IeC {\'o}n necesaria}{187}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Naturaleza de la encuesta}{187}{section.Alph1.2}
+\contentsline {section}{\numberline {A.3}T\IeC {\'e}cnicas de escalamiento utilizadas}{188}{section.Alph1.3}
+\contentsline {section}{\numberline {A.4}Trabajo de campo}{188}{section.Alph1.4}
+\contentsline {section}{\numberline {A.5}Formato de encuesta}{188}{section.Alph1.5}
+\contentsline {section}{\numberline {A.6}Resultados de las encuestas}{191}{section.Alph1.6}
+\contentsline {chapter}{\numberline {B}Tabla de requerimientos funcionales}{197}{appendix.Alph2}
+\contentsline {chapter}{\numberline {C}Escenarios de calidad de requerimientos no funcionales en detalle}{211}{appendix.Alph3}
+\contentsline {section}{\numberline {C.1}QiU}{211}{section.Alph3.1}
+\contentsline {section}{\numberline {C.2}Reusabilidad}{211}{section.Alph3.2}
+\contentsline {section}{\numberline {C.3}Mantenibilidad}{213}{section.Alph3.3}
+\contentsline {section}{\numberline {C.4}Interoperabilidad}{216}{section.Alph3.4}
+\contentsline {section}{\numberline {C.5}Seguridad}{216}{section.Alph3.5}
+\contentsline {section}{\numberline {C.6}Entendimiento}{222}{section.Alph3.6}
+\contentsline {section}{\numberline {C.7}Robustez y fiabilidad}{222}{section.Alph3.7}
+\contentsline {section}{\numberline {C.8}Rendimiento}{222}{section.Alph3.8}
+\contentsline {chapter}{\numberline {D}Artefactos de la arquitectura}{227}{appendix.Alph4}
+\contentsline {section}{\numberline {D.1}Artefactos de la capa de negocio}{227}{section.Alph4.1}
+\contentsline {section}{\numberline {D.2}Artefactos de la capa de aplicaci\IeC {\'o}n}{254}{section.Alph4.2}
+\contentsline {section}{\numberline {D.3}Artefactos de la capa de infraestructura}{257}{section.Alph4.3}
+\contentsline {chapter}{\numberline {E}Vistas de la arquitectura no implementadas}{259}{appendix.Alph5}
+\contentsline {section}{\numberline {E.1}Business Functions Viewpoints}{259}{section.Alph5.1}
+\contentsline {subsection}{\numberline {E.1.1}Estad\IeC {\'\i }sticas Deportivas}{259}{subsection.Alph5.1.1}
+\contentsline {subsection}{\numberline {E.1.2}Consejos}{260}{subsection.Alph5.1.2}
+\contentsline {subsection}{\numberline {E.1.3}Periodismo}{260}{subsection.Alph5.1.3}
+\contentsline {subsection}{\numberline {E.1.4}Servicios}{261}{subsection.Alph5.1.4}
+\contentsline {subsection}{\numberline {E.1.5}Patrocinios Deportivos}{261}{subsection.Alph5.1.5}
+\contentsline {subsection}{\numberline {E.1.6}Formaci\IeC {\'o}n de Grupos Deportivos}{262}{subsection.Alph5.1.6}
+\contentsline {subsection}{\numberline {E.1.7}Entrenamiento Deportivo}{262}{subsection.Alph5.1.7}
+\contentsline {section}{\numberline {E.2}Business Process Viewpoints}{264}{section.Alph5.2}
+\contentsline {subsection}{\numberline {E.2.1}Estad\IeC {\'\i }sticas Deportivas}{264}{subsection.Alph5.2.1}
+\contentsline {subsection}{\numberline {E.2.2}Buscador de consejos deportivos}{264}{subsection.Alph5.2.2}
+\contentsline {subsection}{\numberline {E.2.3}Evaluador consejos de salud}{264}{subsection.Alph5.2.3}
+\contentsline {subsection}{\numberline {E.2.4}Generador de consejos deportivos}{266}{subsection.Alph5.2.4}
+\contentsline {subsection}{\numberline {E.2.5}Generador de contenidos de salud}{267}{subsection.Alph5.2.5}
+\contentsline {subsection}{\numberline {E.2.6}Patrocinios Deportivos}{267}{subsection.Alph5.2.6}
+\contentsline {subsection}{\numberline {E.2.7}Formaci\IeC {\'o}n de Grupos Deportivos}{267}{subsection.Alph5.2.7}
+\contentsline {subsection}{\numberline {E.2.8}Entrenamiento Deportivo}{270}{subsection.Alph5.2.8}
+\contentsline {section}{\numberline {E.3}Application Usage Viewpoints}{270}{section.Alph5.3}
+\contentsline {subsection}{\numberline {E.3.1}Estad\IeC {\'\i }sticas Deportivas}{270}{subsection.Alph5.3.1}
+\contentsline {subsection}{\numberline {E.3.2}Buscador de consejos deportivos}{272}{subsection.Alph5.3.2}
+\contentsline {subsection}{\numberline {E.3.3}Evaluador consejos de salud}{273}{subsection.Alph5.3.3}
+\contentsline {subsection}{\numberline {E.3.4}Generador de consejos deportivos}{274}{subsection.Alph5.3.4}
+\contentsline {subsection}{\numberline {E.3.5}Generador de contenidos de salud}{274}{subsection.Alph5.3.5}
+\contentsline {subsection}{\numberline {E.3.6}Patrocinios Deportivos}{275}{subsection.Alph5.3.6}
+\contentsline {subsection}{\numberline {E.3.7}Formaci\IeC {\'o}n de Grupos Deportivos}{277}{subsection.Alph5.3.7}
+\contentsline {subsection}{\numberline {E.3.8}Entrenamiento Deportivo}{277}{subsection.Alph5.3.8}
+\contentsline {chapter}{\numberline {F}M\IeC {\'o}dulos no implementados}{281}{appendix.Alph6}
+\contentsline {section}{\numberline {F.1}M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores}{281}{section.Alph6.1}
+\contentsline {section}{\numberline {F.2}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{281}{section.Alph6.2}
+\contentsline {section}{\numberline {F.3}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{282}{section.Alph6.3}
+\contentsline {section}{\numberline {F.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{283}{section.Alph6.4}
+\contentsline {section}{\numberline {F.5}M\IeC {\'o}dulo de difusi\IeC {\'o}n de informaci\IeC {\'o}n}{284}{section.Alph6.5}
+\contentsline {section}{\numberline {F.6}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{285}{section.Alph6.6}
+\contentsline {section}{\numberline {F.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression}{288}{section.Alph6.7}
+\contentsline {section}{\numberline {F.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n del conocimiento}{288}{section.Alph6.8}
+\contentsline {chapter}{\numberline {G}Tablas de descripci\IeC {\'o}n de los casos de uso}{291}{appendix.Alph7}
+\contentsline {section}{\numberline {G.1}M\IeC {\'o}dulo de gesti\IeC {\'o}n de administracion de deportes}{292}{section.Alph7.1}
+\contentsline {section}{\numberline {G.2}M\IeC {\'o}dulo de administraci\IeC {\'o}n de entrenadores}{306}{section.Alph7.2}
+\contentsline {section}{\numberline {G.3}M\IeC {\'o}dulo de administraci\IeC {\'o}n de eventos deportivos}{336}{section.Alph7.3}
+\contentsline {section}{\numberline {G.4}M\IeC {\'o}dulo de administraci\IeC {\'o}n de torneos}{366}{section.Alph7.4}
+\contentsline {section}{\numberline {G.5}M\IeC {\'o}dulo de administraci\IeC {\'o}n de equipos y grupos deportivos}{389}{section.Alph7.5}
+\contentsline {section}{\numberline {G.6}M\IeC {\'o}dulo de estad\IeC {\'\i }sticas}{403}{section.Alph7.6}
+\contentsline {section}{\numberline {G.7}M\IeC {\'o}dulo de gesti\IeC {\'o}n de patrocinios}{419}{section.Alph7.7}
+\contentsline {section}{\numberline {G.8}M\IeC {\'o}dulo de gesti\IeC {\'o}n de self-expression}{462}{section.Alph7.8}
+\contentsline {section}{\numberline {G.9}M\IeC {\'o}dulo de difusi\IeC {\'o}n de informaci\IeC {\'o}n}{505}{section.Alph7.9}
+\contentsline {section}{\numberline {G.10}M\IeC {\'o}dulo de gesti\IeC {\'o}n del conocimiento}{507}{section.Alph7.10}
+\contentsline {section}{\numberline {G.11}M\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{527}{section.Alph7.11}
+\contentsline {section}{\numberline {G.12}M\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{536}{section.Alph7.12}
+\contentsline {section}{\numberline {G.13}M\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{549}{section.Alph7.13}
+\contentsline {chapter}{\numberline {H}Pantallas UI del prototipo de SNS}{553}{appendix.Alph8}
+\contentsline {section}{\numberline {H.1}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de deportes}{553}{section.Alph8.1}
+\contentsline {section}{\numberline {H.2}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de jugadores}{568}{section.Alph8.2}
+\contentsline {section}{\numberline {H.3}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de eventos}{571}{section.Alph8.3}
+\contentsline {section}{\numberline {H.4}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de gesti\IeC {\'o}n self-sharing}{581}{section.Alph8.4}
+\contentsline {section}{\numberline {H.5}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de usuarios}{599}{section.Alph8.5}
+\contentsline {section}{\numberline {H.6}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de contenidos}{620}{section.Alph8.6}
+\contentsline {section}{\numberline {H.7}Pantallas UI del m\IeC {\'o}dulo de administraci\IeC {\'o}n}{631}{section.Alph8.7}
+\contentsline {section}{\numberline {H.8}Pantallas UI del m\IeC {\'o}dulo de difusion de informacion}{637}{section.Alph8.8}
+\contentsline {section}{\numberline {H.9}Pantallas UI del m\IeC {\'o}dulo de gesti\IeC {\'o}n de ubicaciones}{639}{section.Alph8.9}
+\contentsline {chapter}{\numberline {I}Modelo de datos a implementar en tareas posteriores}{641}{appendix.Alph9}
+\contentsline {section}{\numberline {I.1}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{641}{section.Alph9.1}
+\contentsline {section}{\numberline {I.2}Modelo de datos de gesti\IeC {\'o}n de conocimiento}{642}{section.Alph9.2}
+\contentsline {section}{\numberline {I.3}Modelo de datos de gesti\IeC {\'o}n de multimedia}{642}{section.Alph9.3}
+\contentsline {section}{\numberline {I.4}Modelo de datos de gesti\IeC {\'o}n de roles}{643}{section.Alph9.4}
+\contentsline {chapter}{\numberline {J}Diccionario de datos}{645}{appendix.Alph10}
+\contentsline {section}{\numberline {J.1}Modelo de datos con entidades/relaciones generales}{645}{section.Alph10.1}
+\contentsline {subsection}{\numberline {J.1.1}Entidades}{645}{subsection.Alph10.1.1}
+\contentsline {subsection}{\numberline {J.1.2}Relaciones}{646}{subsection.Alph10.1.2}
+\contentsline {section}{\numberline {J.2}Modelo de datos de gesti\IeC {\'o}n de eventos}{647}{section.Alph10.2}
+\contentsline {subsection}{\numberline {J.2.1}Entidades}{647}{subsection.Alph10.2.1}
+\contentsline {subsection}{\numberline {J.2.2}Relaciones}{650}{subsection.Alph10.2.2}
+\contentsline {section}{\numberline {J.3}Modelo de datos de gesti\IeC {\'o}n de ubicaciones}{652}{section.Alph10.3}
+\contentsline {subsection}{\numberline {J.3.1}Entidades}{653}{subsection.Alph10.3.1}
+\contentsline {subsection}{\numberline {J.3.2}Relaciones}{654}{subsection.Alph10.3.2}
+\contentsline {section}{\numberline {J.4}Modelo de datos de gesti\IeC {\'o}n de deportes}{657}{section.Alph10.4}
+\contentsline {subsection}{\numberline {J.4.1}Entidades}{658}{subsection.Alph10.4.1}
+\contentsline {subsection}{\numberline {J.4.2}Relaciones}{659}{subsection.Alph10.4.2}
+\contentsline {section}{\numberline {J.5}Modelo de datos de gesti\IeC {\'o}n de estad\IeC {\'\i }sticas}{666}{section.Alph10.5}
+\contentsline {subsection}{\numberline {J.5.1}Entidades}{667}{subsection.Alph10.5.1}
+\contentsline {subsection}{\numberline {J.5.2}Relaciones}{672}{subsection.Alph10.5.2}
+\contentsline {section}{\numberline {J.6}Modelo de datos de gesti\IeC {\'o}n de multimedia}{674}{section.Alph10.6}
+\contentsline {subsection}{\numberline {J.6.1}Entidades}{676}{subsection.Alph10.6.1}
+\contentsline {subsection}{\numberline {J.6.2}Relaciones}{676}{subsection.Alph10.6.2}
+\contentsline {section}{\numberline {J.7}Modelo de datos de gesti\IeC {\'o}n de contenidos}{683}{section.Alph10.7}
+\contentsline {subsection}{\numberline {J.7.1}Entidades}{683}{subsection.Alph10.7.1}
+\contentsline {subsection}{\numberline {J.7.2}Relaciones}{683}{subsection.Alph10.7.2}
+\contentsline {section}{\numberline {J.8}Modelo de datos de gesti\IeC {\'o}n de roles}{685}{section.Alph10.8}
+\contentsline {subsection}{\numberline {J.8.1}Entidades}{685}{subsection.Alph10.8.1}
+\contentsline {subsection}{\numberline {J.8.2}Relaciones}{685}{subsection.Alph10.8.2}
+\contentsline {section}{\numberline {J.9}Modelo de datos de gesti\IeC {\'o}n de usuarios}{687}{section.Alph10.9}
+\contentsline {subsection}{\numberline {J.9.1}Entidades}{687}{subsection.Alph10.9.1}
+\contentsline {subsection}{\numberline {J.9.2}Relaciones}{687}{subsection.Alph10.9.2}

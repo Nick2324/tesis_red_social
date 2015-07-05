@@ -1,0 +1,51 @@
+A continuación el lector podrá encontrar los alcances y las limitaciones del presente proyecto.
+
+\section{Alcances}
+
+A continuación se presenta un breve recuento de las funcionalidades y aspectos tecnológicos que se tienen en cuenta en el desarrollo del prototipo, así cómo también se especifican los deportes que son soportados por el prototipo. Además, se da una alineación de lo expresado anteriormente con la solución que da el prototipo a los problemas encontrados en la sección \ref{cap:estado_arte} y justificados en el capítulo \ref{chap:justificacion}
+
+\subsection{Aspectos tecnológicos}
+
+Este proyecto pretende diseñar e implementar un prototipo de SNS orientado al deporte bajo dispositivos móviles ANDROID, utilizando una arquitectura orientada a servicios que facilite el desarrollo y la interoperabilidad con diferentes sistemas que existan actualmente en el mercado. Para esto, se utilizará el entorno de desarrollo que brinda Android a los desarrolladores en conjunto con los diferentes dispositivos disponibles para el desarrollo del proyecto.
+
+Las funcionalidades que se ha decidido implementar para el prototipo son:
+
+\begin{enumerate}
+
+	\item Soporte de información de usuario, donde el usuario pueda tener su propio perfil con información personal 
+	
+	\item Soporte de información deportiva de los deportes que son implementados por la red social deportiva
+
+	\item Debido a la escogencia de tecnologías móviles para el desarrollo del trabajo, se ha decidido incluir funcionalidades de geolocalización y demás de las que dependa ésta. Las funcionalidades que utilizan el componente de geolocalización son:
+
+\begin{itemize}
+  \item Ubicación de lugares deportivos por parte de usuarios del SNS
+  \item Cercanía a eventos deportivos por parte de un usuario del SNS
+  \item Cercanía entre usuarios del SNS que compartan una relación (sea simétrica o asimétrica). Para el caso del prototipo, se manejan dos características públicas: el o los deportes jugados por el usuario y si se encuentra jugando un determinado deporte. De manera que la relación que compartirán los usuarios será de deporte practicado.
+\end{itemize}
+
+\end{enumerate}
+
+\subsection{Aspectos de negocio}
+
+En cuanto a los deportes, se ha decidido realizar (en la etapa de análisis), encuestas a la población universitaria (como se puede ver en el capítulo \ref{chap:modelo_datos}) para averiguar, además de si era o no valiosa la creación del SNS, que deportes pueden ser los candidatos a implementar sobre el SNS a desarrollar, teniendo como pauta la siguiente aseveración: Los deportes, resultado de la encuesta, elegidos, serán aquellos que en su participación sean los de menor población practicante. Al final, se ha decidido que el SNS se enfocará en los deportes Rugby y Tenis para la etapa de construcción del prototipo.
+
+\subsection{Alineación de aspectos tecnológicos y de negocio con la solución del problema}
+
+El prototipo de SNS deportivo desarrollado con los alcances dados en los aspectos de negocio y tecnológicos se acopla a la finalidad que se le ha dado: Por un lado, la capacidad de éste de ser herramienta de un deportista para la gestión de su red social deportiva, brindando al deportista la capacidad de conocer la ubicación de juego de los deportes seleccionados, así como también de estar al tanto de los eventos sobre un deporte específico. Debido a la capacidad primera del prototipo de brindar ubicaciones de usuarios que compartan una relación deportiva, el usuario será capáz de saber si en un lugar podrá encontrar una cantidad, para él, aceptable de personas para poder practicar su deporte y ampliar su red social offline; por otro lado, el SNS deportivo se ajusta a la característica nómada de los deportistas dado que será desarrollado sobre plataformas móviles.
+
+\section{Limitaciones}
+
+Entre las diferentes limitaciones que se pueden encontrar en el desarrollo del actual proyecto, se encuentran las siguientes:
+
+\begin{itemize}
+  \item \textbf{Disponibilidad de dispositivos de prueba:} Ya que en el mercado existe una gran cantidad de dispositivos móviles, todos con diferentes especificaciones, es imposible garantizar que la aplicación a diseñar sea soportada por todos los dispositivos del mercado. Sin embargo, se tienen diferentes dispositivos, entre tablets y celulares, en donde se pueden realizar las pruebas (referenciados en los recursos de hardware, capítulo \ref{chap:costos}), limitando los dispositivos soportados oficialmente por el prototipo.
+
+  \item \textbf{Disponibilidad de equipos a usar como servidores:} Ya que el proyecto se basa en la creación de un prototipo, se utilizarán los computadores personales disponibles para proveer los servidores que se necesiten, limitando el rendimiento que de los mismos.
+  
+  \item \textbf{Recolección de información}: La búsqueda de información se hará sobre la ciudad de Bogotá, haciendo énfasis en la comunidad universitaria, lo cuál sesgará la información a aquella válida sobre una comunidad con edades que oscilan entre los 15 y los 25 años y, a su vez, sobre las preferencias en universidades respecto a tendecias deportivas y no sobre la población bogotana entera.
+  
+  \item \textbf{Utilización de software libre y con fines académicos:} Será utilizado, en su mayoría, software libre para la realización del proyecto, así como también software que preste licencia con fines académicos, debido a que no se cuenta con el presupuesto necesario para probar herramientas privativas (a parte de versiones de prueba) que pudieran llegar a ser mejores que sus homólogos libres.
+  
+  \item \textbf{Etapas del ciclo de vida del software no contempladas:} No se llevará acabo una etapa de implantación del software debido a que éste prototipo, aunque funcional, no estará direccionado de inmediato al mercado próximo ya que, debido a las limitaciones de tiempo de los autores, no será posible implementar todos los requerimientos no funcionales que se llegaran a dar al SNS. Por supuesto, al no haber una etapa de implantación, para este trabajo tampoco será presentada la etapa de mantenimiento.
+\end{itemize}

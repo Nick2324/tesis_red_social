@@ -1,0 +1,27 @@
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[!htb]
+	\caption{Entidad E\_Rol}
+	\label{tab:entidad_rol}
+	\begin{center}
+		\resizebox{16cm}{!}{
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\multicolumn{5}{|c|}{\textbf{Entidad}} \\ \hline
+\textbf{Nombre} & \multicolumn{4}{l|}{E\_Rol} \\ \hline
+\textbf{Descripcion} & \multicolumn{4}{l|}{Hace referencua a un tipo de usuario final de la aplicación} \\ \hline
+\multicolumn{5}{|c|}{\textbf{Atributos}} \\ \hline
+Nombre & Tipo & Longitud & Descripción \\
+			\hline
+\multicolumn{2}{|l|}{nombre} & String & 50 & Nombre del rol \\ \hline
+\multicolumn{2}{|l|}{descripcion} & String & 200 & Descripcion del rol \\ \hline
+\multicolumn{2}{|l|}{consecutivoRol{[}P{]}} & long &  &  \\ \hline
+\multicolumn{5}{|c|}{\textbf{Relaciones a entidades}} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Relacion}} & \multicolumn{3}{l|}{\textbf{Entidad}} \\ \hline
+\multicolumn{2}{|l|}{} & \multicolumn{3}{l|}{} \\ \hline
+\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+		\end{center}
+	\end{table}

@@ -1,0 +1,77 @@
+\begin{table}[!htb]
+	\caption{CU063-Llevar estadística de jugador: Descripción}
+	\label{tab:cu063_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Llevar estadística de jugador \\
+			\hline
+			Identificador & CU063 \\
+			\hline
+			Descripción & Permite el cálculo de estadísticas de un jugador venidas desde los datos registrados de los equipos en los que se encuentra y de datos verificables en prácticas libres para cada uno de los deportes que éste practica \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Jugador
+				\item Equipo
+				\item Entrenador
+			\end{itemize}				 
+			\\
+			\hline
+			Disparador & El usuario ingresa datos estadísticos de un jugador a la red social \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada como entrenador, equipo deportivo o jugador
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item Se calculan datos estadísticos del jugador
+			\end{itemize}			
+			\\
+			\hline
+			Notas & 
+			\begin{itemize}
+				\item Los datos pueden ser accesados por cualquier usuario de la red social
+				\item Generalización de:
+				\begin{itemize}
+					\item Gestión de niveles de juego
+				\end{itemize}
+			\end{itemize}
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU063-Llevar estadística de jugador: Flujos de hechos}
+	\label{tab:cu063_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario ingresa datos que son utilizados por el sistema para calcular estadísticos de un jugador & El sistema calcula los datos estadísticos del jugador \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

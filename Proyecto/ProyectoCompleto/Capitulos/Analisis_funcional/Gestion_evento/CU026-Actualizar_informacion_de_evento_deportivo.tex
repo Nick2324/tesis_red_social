@@ -1,0 +1,71 @@
+\begin{table}[!htb]
+	\caption{CU026-Actualizar información de evento deportivo: Descripción}
+	\label{tab:cu026_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Actualizar información de evento deportivo \\
+			\hline
+			Identificador & CU026 \\
+			\hline
+			Descripción & Permite la actualizar la información de un evento deportivo en la red social deportiva \\
+			\hline
+			Actor & Todo actor de la red social	 
+			\\
+			\hline
+			Disparador & Se elige la opción de actualizar la información de un evento deportivo \\
+			\hline
+			Inclusiones &  \\
+			\hline
+			Puntos de extensión &  \\
+			\hline
+			Precondiciones &  
+			\begin{itemize}
+				\item La aplicación ha sido cargada por un actor con rol de organizador de eventos deportivos
+			\end{itemize}
+			\\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El usuario cambia la información de un evento deportivo
+			\end{itemize}
+			\\
+			\hline
+			Notas & 
+			\\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU026-Actualizar información de evento deportivo: Flujos de hechos}
+	\label{tab:cu026_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			 1 & El usuario ha escogido administrar eventos deportivos & El sistema ha mostrado la interfaz de administración de eventos deportivos, cargando todos los eventos existentes sobre los que tiene permiso el usuario \\
+			\hline
+			2 & El usuario busca un evento en especifico & El sistema retorna el resultado de la búsqueda \\
+			3 & El usuario modifica detalles del evento elegido y salva la información & El sistema guarda la información \\
+			4 & & El sistema muestra un elemento emergente informando del éxito o fracaso de la operación \\
+			\hline
+			5 & El usuario continua & El sistema muestra la interfaz de administración de eventos deportivos \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

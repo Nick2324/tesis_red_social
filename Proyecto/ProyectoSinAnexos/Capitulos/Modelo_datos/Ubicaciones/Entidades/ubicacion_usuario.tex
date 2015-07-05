@@ -1,0 +1,60 @@
+\begin{table}[!htb]
+	\caption{Entidad E\_UbicacionUsuario}
+	\label{tab:entidad_019}
+	\begin{center}
+		\resizebox{16cm}{!}{
+		\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			\hline
+			\multicolumn{4}{|c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{Nombre} &
+			\multicolumn{2}{c|}{E\_UbicacionUsuario}  \\
+			\hline
+			\multicolumn{2}{|c|}{Descripción} &
+			\multicolumn{2}{c|}{Describe la relación ternaria que existe entre el usuario, la ubicación de deporte y los nodos de recolección de datos estadísticos de intervalos de tiempo en los que ha estado el usuario en dicha ubicación}  \\
+			\hline
+			\multicolumn{4}{|c|}{Atributos} \\
+			\hline
+			Nombre & Tipo & Longitud & Descripción \\
+			\hline
+			id [P] &
+			Numerico &
+			&
+			Identificación única de la ubicacion del usuario \\
+			\hline
+			usuarioEnLugar &
+			Boolean &
+			&
+			Indica si el usuario se encuentra o no en el lugar \\
+			\hline
+			frecuente &
+			Boolean &
+			&
+			Indica si el usuario practica usualmente en éste sitio o no \\
+			\hline
+			marcadoFavorito &
+			Boolean &
+			&
+			Indica si el usuario ha marcado el sitio como uno de sus favoritos \\
+			\hline
+			\multicolumn{4}{|c|}{Relaciones a entidades} \\
+			\hline
+			\multicolumn{2}{|c|}{Relación} & \multicolumn{2}{c|}{Entidad} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_UbicacionDeporte} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_UbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_Usuario} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_FrameUbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_FrameDia} \\
+			\hline
+			\multicolumn{2}{|c|}{R\_RunUbicacionUsuario} & 
+			\multicolumn{2}{c|}{E\_RunDia} \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}

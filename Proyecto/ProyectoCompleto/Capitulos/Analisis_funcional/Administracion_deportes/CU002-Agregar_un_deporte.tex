@@ -1,0 +1,75 @@
+\begin{table}[!htb]
+	\caption{CU002-Agregar un deporte: Descripción}
+	\label{tab:cu002_desc}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{4cm}|p{11cm}|}
+			\hline
+			\multicolumn{2}{|c|}{Descripción de caso de uso} \\
+			\hline
+			Nombre & Agregar un deporte \\
+			\hline
+			Identificador & CU002\\
+			\hline
+			Descripción & Permite agregar a la red social un nuevo deporte \\
+			\hline
+			Actor & 
+			\begin{itemize}
+				\item Administrador
+			\end{itemize} \\
+			\hline
+			Disparador & El administrador desea crear un nuevo deporte en la red social y activa dicha opción \\
+			\hline
+			Inclusiones & \\
+			\hline
+			Puntos de extensión & \\
+			\hline
+			Precondiciones & 
+			\begin{itemize}
+				\item El SNS se inicia con rol de administrador
+			\end{itemize} \\
+			\hline
+			Postcondiciones & 
+			\begin{itemize}
+				\item El administrador crea un nuevo deporte sobre la red social
+			\end{itemize}						
+			\\
+			\hline
+			Notas & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
+
+\begin{table}[!htb]
+	\caption{CU002-Agregar un deporte: Flujos de hechos }
+	\label{tab:cu002_flujo}
+	\begin{center}
+		\resizebox{15cm}{!}{
+		\begin{tabular}{|p{1.5cm}|p{6cm}|p{6.5cm}|}
+			\hline
+			\multicolumn{3}{|c|}{Detalle de flujo de hechos de caso de uso} \\
+			\hline
+			Nombre & \multicolumn{2}{|c|}{Nombre del flujo} \\
+			\hline
+			Paso & Acción del actor & Respuesta del sistema \\
+			\hline
+			1 & El usuario pulsa el botón para administrar deportes & El sistema se dirige a la muestra de los deportes existentes en la red social \\
+			\hline
+			2 & El usuario pulsa el botón para crear un nuevo deporte & El sistema muestra los campos a llenar para el registro del nuevo deporte en la red social \\
+			\hline
+			3 & El usuario llena los datos que la red social requiere para crear el nuevo deporte sobre ella & \\
+			\hline
+			4 & El usuario pulsa el botón para crear el deporte & El sistema guarda el deporte si éste no existe ya \\
+			\hline
+			5 & & El sistema muestra el estado del sistema (creación exitosa o fallida) \\
+			\hline
+			6 & El usuario recibe el mensaje y decide realizar alguna otra opción & \\
+			\hline
+		\end{tabular}
+		} \\
+		\textbf{Fuente}: Autores
+	\end{center}
+\end{table}
