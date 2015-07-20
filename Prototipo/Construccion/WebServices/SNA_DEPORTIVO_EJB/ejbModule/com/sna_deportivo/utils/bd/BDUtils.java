@@ -169,6 +169,8 @@ public class BDUtils {
 		result = resultBuilder.post(
 				Entity.entity(propiedades, MediaType.APPLICATION_JSON),
 				Response.class);
+
+		System.out.println(rutaNodo + "/relationships");
 		return result.getStatus() == 201;
 	}
 

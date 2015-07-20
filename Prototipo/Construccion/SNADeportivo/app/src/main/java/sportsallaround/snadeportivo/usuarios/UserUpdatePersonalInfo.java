@@ -19,18 +19,22 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+import java.security.interfaces.DSAParams;
+import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.pojos.Rol;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
+import sportsallaround.snadeportivo.usuarios.tasks.RetreiveUserData;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.DatePickerFragment;
+import sportsallaround.utils.ObtainUserInfo;
 import sportsallaround.utils.OnDatePickedListener;
 import sportsallaround.utils.ServiceUtils;
 import sportsallaround.utils.Utils;
 
-public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDatePickedListener {
+public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDatePickedListener, ObtainUserInfo {
 
     private Usuario actualUserData;
     private Rol actualUserRole;
@@ -61,6 +65,14 @@ public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDateP
 
         actualUserData = getIntent().getParcelableExtra("user");
         actualUserRole = getIntent().getParcelableExtra("userRole");
+
+        try {
+            new RetreiveUserData(actualUserData, this).execute((Void) null).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
         firstName.setText(actualUserData.getPrimerNombre());
         middleName.setText(actualUserData.getSegundoNombre());
@@ -107,20 +119,72 @@ public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDateP
     }
 
     public void updateUser(View view){
-        Toast.makeText(getApplicationContext(),"Pendiente",Toast.LENGTH_LONG).show();
 
-        UpdateUserTask uTask = new UpdateUserTask(
-                firstName.getText().toString(),
-                middleName.getText().toString(),
-                lastName.getText().toString(),
-                actualUserData.geteMail(),
-                newPassword.getText().toString(),
-                birthDate.getText().toString(),
-                actualUserData.getSexo(),
-                userType.getSelectedItem().toString(),
-                this
-        );
+        if(validateNewInfo()){
+            UpdateUserTask uTask = new UpdateUserTask(
+                    firstName.getText().toString(),
+                    middleName.getText().toString(),
+                    lastName.getText().toString(),
+                    actualUserData.geteMail(),
+                    newPassword.getText().toString().equals("") ? actualUserData.getContrasena() : Utils.StringToSHA1(newPassword.getText().toString()),
+                    birthDate.getText().toString(),
+                    actualUserData.getSexo(),
+                    userType.getSelectedItem().toString(),
+                    this
+            );
 
+        uTask.execute((Void) null);
+        }
+
+    }
+
+
+
+    private boolean validateNewInfo(){
+        boolean resultado = true;
+        if (!(firstName.getText().toString().length() > 0)) {
+            resultado = false;
+            firstName.setError("Este campo es obligatorio");
+            firstName.requestFocus();
+        }
+        if (resultado && !(lastName.getText().toString().length() > 0)) {
+            resultado = false;
+            lastName.setError("Este campo es obligatorio");
+            lastName.requestFocus();
+        }
+        if(!newPassword.getText().toString().equals("") && !newPasswordConfirmation.getText().toString().equals("")){
+            if (resultado && !(newPassword.getText().toString().length() > 0)) {
+                resultado = false;
+                newPassword.setError("Este campo es obligatorio");
+                newPassword.requestFocus();
+            }
+            if (resultado && !(newPasswordConfirmation.getText().toString().length() > 0)) {
+                resultado = false;
+                newPasswordConfirmation.setError("Este campo es obligatorio");
+                newPasswordConfirmation.requestFocus();
+            }
+            if (resultado && !(newPassword.getText().toString().equals(newPasswordConfirmation.getText().toString()))) {
+                resultado = false;
+                newPassword.setError("Las contrasenas no concuerdan");
+                newPassword.requestFocus();
+            }
+        }
+        if (resultado && !(Utils.isValidDate(birthDate.getText().toString()))) {
+            resultado = false;
+            birthDate.setError("Fecha de nacimiento no valida");
+            birthDate.requestFocus();
+        }
+        return resultado;
+    }
+
+    @Override
+    public void setUserInfo(Usuario userInfo) {
+        this.actualUserData = userInfo;
+    }
+
+    @Override
+    public Usuario getActualUserData() {
+        return this.actualUserData;
     }
 
     public class UpdateUserTask extends AsyncTask<Void, Void, Boolean> {
@@ -140,7 +204,7 @@ public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDateP
                        Context context) {
             datosUsuario = new ContentValues();
             datosUsuario.put("usuario", eMail);
-            datosUsuario.put("contrasena", Utils.StringToSHA1(password));
+            datosUsuario.put("contrasena", password);
             datosUsuario.put("primerNombre", firstName);
             datosUsuario.put("segundoNombre", middleName);
             datosUsuario.put("apellidos", lastName);

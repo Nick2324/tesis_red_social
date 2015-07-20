@@ -1,5 +1,7 @@
 package com.sna_deportivo.services.usuarios;
 
+import com.sna_deportivo.pojo.deportes.Deporte;
+import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.usuarios.Permiso;
 import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
 import com.sna_deportivo.pojo.usuarios.Rol;
@@ -62,9 +64,10 @@ public class GestionUsuario {
 		query.append("'}) RETURN id(u)");
 		
 		data = BDUtils.ejecutarQuery(query.toString());
-		userId = (String)data[0];
+		userId = (String) ((JsonObject)(((JsonObject)data[0]).getPropiedades().get("row")[0])).getPropiedades().get("arreglo")[0];
 		
 		// Verificar si el usuario cambió de rol
+		query = new StringBuilder();
 		query.append("MATCH (u:");
 		query.append(Entidades.USUARIO);
 		query.append(" {usuario:'");
@@ -76,21 +79,21 @@ public class GestionUsuario {
 		query.append(") return r.nombre");
 		
 		data = BDUtils.ejecutarQuery(query.toString());
-		rolActual = (String)data[0];
+		rolActual = (String) ((JsonObject)(((JsonObject)data[0]).getPropiedades().get("row")[0])).getPropiedades().get("arreglo")[0];
 		if(!user.getTipoUsuario().equals(rolActual)){
 			query = new StringBuilder();
 			query.append("MATCH (u:");
 			query.append(Entidades.USUARIO);
 			query.append(" {usuario:'");
 			query.append(user.getUsuario());
-			query.append("'}) -[:");
+			query.append("'}) -[r:");
 			query.append(Relaciones.ASUMEROL);
-			query.append("]->(r:");
+			query.append("]->(:");
 			query.append(Entidades.ROL);
 			query.append(") return id(r)");
 			
 			data = BDUtils.ejecutarQuery(query.toString());
-			relationshipId = (String)data[0];
+			relationshipId = (String) ((JsonObject)(((JsonObject)data[0]).getPropiedades().get("row")[0])).getPropiedades().get("arreglo")[0];
 			
 			// Eliminar la relación con el rol anterior
 
@@ -106,7 +109,7 @@ public class GestionUsuario {
 			query.append("'}) return id(r)");
 			
 			data = BDUtils.ejecutarQuery(query.toString());
-			newRoleId = (String)data[0];
+			newRoleId = (String) ((JsonObject)(((JsonObject)data[0]).getPropiedades().get("row")[0])).getPropiedades().get("arreglo")[0];
 			
 			// Crear la relacion con el nuevo rol
 			
@@ -115,12 +118,13 @@ public class GestionUsuario {
 			propiedades.append("\"type\":\"" + Relaciones.ASUMEROL + "\"");
 			propiedades.append("}");
 			
-			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/" + userId, propiedades.toString());
+			
+			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + userId, propiedades.toString());
 			
 		}
 		// Actualizar los datos del usuario
 		
-		BDUtils.adicionarPropiedades(Constantes.SERVER_ROOT_URI + "/" + userId, user.toString());
+		BDUtils.adicionarPropiedades(Constantes.SERVER_ROOT_URI + "/node/" + userId, user.toString());
 
 		response.setCaracterAceptacion("B");
 		response.setMensajeRespuesta("Usuario actualizado exitosamente");
@@ -165,7 +169,13 @@ public class GestionUsuario {
 	}
 
 	public Usuario datosUsuario(String user) {
-		return new Usuario();
+		String query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + user + "'}) return u";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		Usuario usuario;
+		JsonObject row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+		JsonObject arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+		usuario = new Usuario(arregloRow);
+		return usuario;
 	}
 
 	public boolean existeUsuario(Usuario user) throws BDException {
@@ -223,6 +233,87 @@ public class GestionUsuario {
 			permisos[i] = new Permiso(arregloRow);
 		}
 		return permisos;
+	}
+
+	public Deporte[] obtenerDeportesPracticados(String userName) {
+		String query = "MATCH (n:" + Entidades.DEPORTE + ")<-[:" + Relaciones.PRACTICADEPORTE + "]-(:" + Entidades.USUARIO
+				+ " {usuario:'" + userName
+				+ "'}) return n order by n.id asc";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		Deporte[] deportes;
+		if(data[0].getClass() != String.class){
+			deportes = new Deporte[data.length];
+			JsonObject row;
+			JsonObject arregloRow;
+			for (int i = 0; i < data.length; i++) {
+				row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
+				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				deportes[i] = new Deporte(arregloRow);
+			}
+		}
+		else
+			deportes = null;
+		return deportes;
+	}
+	
+	public Deporte[] obtenerDeportes() {
+		String query = "MATCH (n:" + Entidades.DEPORTE + ") return n order by n.id asc";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		Deporte[] deportes;
+		if(data[0].getClass() != String.class){
+			deportes = new Deporte[data.length];
+			JsonObject row;
+			JsonObject arregloRow;
+			for (int i = 0; i < data.length; i++) {
+				row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
+				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				deportes[i] = new Deporte(arregloRow);
+			}
+		}
+		else
+			deportes = null;
+		return deportes;
+	}
+	
+	public PosicionDeporte[] obtenerPosicionesDeporte(int idDeporte) {
+		String query = "MATCH (n:" + Entidades.DEPORTE + "{id:" + idDeporte + "})-[:" + Relaciones.POSICIONDEPORTE + "]->(m:" + Entidades.POSICION + ") return m order by m.id asc";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		PosicionDeporte[] posiciones;
+		if(data[0].getClass() != String.class){
+			posiciones = new PosicionDeporte[data.length];
+			JsonObject row;
+			JsonObject arregloRow;
+			for (int i = 0; i < data.length; i++) {
+				row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
+				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				posiciones[i] = new PosicionDeporte(arregloRow);
+			}
+		}
+		else
+			posiciones = null;
+		return posiciones;
+	}
+	
+	public PosicionDeporte[] obtenerPosicionesDeportePracticado(int idDeporte, String userName) {
+		String query = "MATCH (n:" + Entidades.DEPORTE + " {id:" + idDeporte + "})-[:" + Relaciones.POSICIONDEPORTE + "]->(m:" + Entidades.POSICION + "),"
+						+ "(u:" + Entidades.USUARIO + " {usuario:'" + userName + "'})-[:" + Relaciones.PRACTICADEPORTE + "]->(n),"
+						+ "(u)-[:" + Relaciones.USUARIOPOSICIONDEPORTE + "]->(pdp:" + Entidades.POSICIONUSUARIODEPORTE + "),"
+						+ "(m)-[:" + Relaciones.USUARIOPOSICIONDEPORTE + "]->(pdp) return m order by m.id asc";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		PosicionDeporte[] posiciones;
+		if(data[0].getClass() != String.class){
+			posiciones = new PosicionDeporte[data.length];
+			JsonObject row;
+			JsonObject arregloRow;
+			for (int i = 0; i < data.length; i++) {
+				row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
+				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				posiciones[i] = new PosicionDeporte(arregloRow);
+			}
+		}
+		else
+			posiciones = null;
+		return posiciones;
 	}
 
 }
