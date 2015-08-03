@@ -3,10 +3,9 @@ package sportsallaround.snadeportivo.usuarios;
 import android.app.DialogFragment;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +17,6 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.security.interfaces.DSAParams;
 import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
@@ -34,7 +31,7 @@ import sportsallaround.utils.OnDatePickedListener;
 import sportsallaround.utils.ServiceUtils;
 import sportsallaround.utils.Utils;
 
-public class UserUpdatePersonalInfo extends ActionBarActivity implements OnDatePickedListener, ObtainUserInfo {
+public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements OnDatePickedListener, ObtainUserInfo {
 
     private Usuario actualUserData;
     private Rol actualUserRole;

@@ -24,17 +24,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.deportes.pojos.Deporte;
 import sportsallaround.snadeportivo.deportes.pojos.DeportePracticado;
-import sportsallaround.snadeportivo.usuarios.pojos.Permiso;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.ServiceUtils;
 
-public class UserUpdateSports extends ActionBarActivity {
+public class UserUpdateSportsActivity extends ActionBarActivity {
 
     private View progressView;
     private LinearLayout practicedSportsLayout;
@@ -175,10 +172,10 @@ public class UserUpdateSports extends ActionBarActivity {
     }
 
     public class GetPracticedSportsTask extends AsyncTask<Void, Void, Boolean> {
-        private UserUpdateSports activity;
+        private UserUpdateSportsActivity activity;
         private ArrayList<DeportePracticado> deportesPracticados;
 
-        public GetPracticedSportsTask(UserUpdateSports activity) {
+        public GetPracticedSportsTask(UserUpdateSportsActivity activity) {
             this.activity = activity;
         }
 
