@@ -10,6 +10,8 @@ public class Deporte {
 	private String fechaCreacion;
 	private String historia;
 	private boolean esOlimpico;
+	
+	public Deporte(){}
 
 	public Deporte(JsonObject object) {
 		id = Integer.valueOf((String) object.getPropiedades().get("id")[0]);

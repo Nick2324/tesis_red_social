@@ -1,6 +1,7 @@
 package com.sna_deportivo.services.usuarios;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
+import com.sna_deportivo.pojo.deportes.DeportePracticado;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.usuarios.Permiso;
 import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
@@ -204,16 +205,18 @@ public class GestionUsuario {
 	}
 
 	public Permiso[] obtenerPermisosRol(Rol rol) {
-		String query = "MATCH (n:" + Entidades.PERMISO + ") -[:R_Permiso]->(:" + Entidades.ROL + ") return n";
+		String query = "MATCH (n:" + Entidades.PERMISO + ") -[:R_Permiso]->(:" + Entidades.ROL + " {consecutivoRol:" + rol.getConsecutivoRol() + "}) return n";
 		Object[] data = BDUtils.ejecutarQuery(query);
 		Permiso[] permisos;
 		permisos = new Permiso[data.length];
 		JsonObject row;
 		JsonObject arregloRow;
 		for (int i = 0; i < data.length; i++) {
-			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
-			arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
-			permisos[i] = new Permiso(arregloRow);
+			if(!data[0].getClass().equals(String.class)){
+				row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				permisos[i] = new Permiso(arregloRow);
+			}
 		}
 		return permisos;
 	}
@@ -314,6 +317,117 @@ public class GestionUsuario {
 		else
 			posiciones = null;
 		return posiciones;
+	}
+
+	public ResponseGenerico adicionarDeportePracticado(DeportePracticado deportePracticado, String usuario) {
+		ResponseGenerico response;
+		//Verificar si el deporte no es practicado por el usuario
+		String query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario + "'}) -[:" + Relaciones.PRACTICADEPORTE + "]->(d:" + Entidades.DEPORTE + " {id:" + deportePracticado.getDeporte().getId() + "}) return d.id";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		if(data[0].getClass() == String.class){
+			String idUsuario;
+			String idDeporte;
+			String nodoPosicionusuarioDeporte;
+			String propiedades;
+			
+			JsonObject row;
+			
+			//Obtener nodo usuario
+			query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario + "'}) RETURN id(u)";
+			data = BDUtils.ejecutarQuery(query);
+			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			idUsuario = (String) row.getPropiedades().get("arreglo")[0];
+			//Obtener nodo deporte
+			query = "MATCH (u:" + Entidades.DEPORTE + " {id:" + deportePracticado.getDeporte().getId() + "}) RETURN id(u)";
+			data = BDUtils.ejecutarQuery(query);
+			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			idDeporte = (String) row.getPropiedades().get("arreglo")[0];
+			//Crear nodo PosicionUsuarioDeporte
+			nodoPosicionusuarioDeporte = BDUtils.crearNodo();
+			BDUtils.adicionarLabel(nodoPosicionusuarioDeporte, "\"" + Entidades.POSICIONUSUARIODEPORTE + "\"");
+			//Crear relacion entre usuario y deporte
+			propiedades = "{\"to\":\"" + Constantes.SERVER_ROOT_URI + "/node/" + idDeporte + "\"," + 
+					      "\"type\":\"" + Relaciones.PRACTICADEPORTE + "\"}";
+			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idUsuario,propiedades);
+			//Crear relacion entre usuario y nodo PosicionUsuarioDeporte
+			propiedades = "{\"to\":\"" + nodoPosicionusuarioDeporte + "\"," + 
+						  "\"type\":\"" + Relaciones.USUARIOPOSICIONDEPORTE + "\"}";
+			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idUsuario,propiedades);
+			//Crear relacion entre deporte y nodo PosicionUsuarioDeporte
+			propiedades = "{\"to\":\"" + nodoPosicionusuarioDeporte + "\"," + 
+						  "\"type\":\"" + Relaciones.USUARIOPOSICIONDEPORTE + "\"}";
+			BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idDeporte,propiedades);
+			//Crear relacion entre las posiciones y el nodo PosicionUsuarioDeporte
+			PosicionDeporte[] posiciones = deportePracticado.getPosiciones();
+			String idPosicion;			
+			for(int i=0;i<posiciones.length;i++){
+				//Obtener ID de posicion
+				query = "MATCH (u:" + Entidades.POSICION + " {id:" + posiciones[i].getId() + "}) RETURN id(u)";
+				data = BDUtils.ejecutarQuery(query);
+				row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+				idPosicion = (String) row.getPropiedades().get("arreglo")[0];
+				//Crear relacion entre posicion y nodo PosicionUsuarioDeporte
+				propiedades = "{\"to\":\"" + nodoPosicionusuarioDeporte + "\"," + 
+							  "\"type\":\"" + Relaciones.USUARIOPOSICIONDEPORTE + "\"}";
+				BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idPosicion,propiedades);
+			}
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("B");
+			response.setMensajeRespuesta("Deporte practicado agregado con exito.");
+		}else{
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Este deporte se encuentra en los deportes practicados actualmente.");
+		}
+		return response;
+	}
+	
+	public ResponseGenerico eliminarDeportePracticado(DeportePracticado deportePracticado, String usuario) {
+		ResponseGenerico response;
+		//Verificar si el deporte es practicado por el usuario
+		String query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario + "'}) -[:" + Relaciones.PRACTICADEPORTE + "]->(d:" + Entidades.DEPORTE + " {id:" + deportePracticado.getDeporte().getId() + "}) return d.id";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		if(data[0].getClass() != String.class){
+			String nodeId;
+			String relationId;
+			
+			
+			JsonObject row;
+			//Obtener nodo PosicionUsuarioDeporte
+			query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario + "'}) -[:" + Relaciones.PRACTICADEPORTE + "]->(d:" + Entidades.DEPORTE + " {id:" + deportePracticado.getDeporte().getId() + "}),"
+					+ "(u)-[:" + Relaciones.USUARIOPOSICIONDEPORTE +"]->(pud:" + Entidades.POSICIONUSUARIODEPORTE + "), (d)-[:" + Relaciones.USUARIOPOSICIONDEPORTE +"]->(pud) return id(pud)";
+			data = BDUtils.ejecutarQuery(query);
+			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			nodeId = (String) row.getPropiedades().get("arreglo")[0];
+			//Obtener relaciones con nodo PosicionUsuarioDeporte
+			String[] relations = BDUtils.obtenerRelacionesNodo(nodeId);
+			
+			//Eliminar relaciones entre nodos a nodo PosicionUsuarioDeporte
+			for(int i=0;i<relations.length;i++)
+				BDUtils.eliminarRelacion(relations[i]);
+			
+			//Eliminar nodo PosicionUsuarioDeporte
+			BDUtils.eliminarNodo(nodeId);
+			
+			//Eliminar relación entre deporte y usuario
+			//obtener ID Relacion
+			query = "MATCH (u:" + Entidades.USUARIO + " {usuario:'" + usuario + "'}) -[r:" + Relaciones.PRACTICADEPORTE + "]->(d:" + Entidades.DEPORTE + " {id:" + deportePracticado.getDeporte().getId() + "})"
+					+ " return id(r)";
+			data = BDUtils.ejecutarQuery(query);
+			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			relationId = (String) row.getPropiedades().get("arreglo")[0];
+			
+			BDUtils.eliminarRelacion(relationId);
+			
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("B");
+			response.setMensajeRespuesta("Deporte practicado eliminado con exito.");
+		}else{
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Este deporte no se encuentra en los deportes practicados actualmente.");
+		}
+		return response;
 	}
 
 }

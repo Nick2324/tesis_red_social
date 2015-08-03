@@ -1,5 +1,6 @@
 package com.sna_deportivo.utils.bd;
 
+import javax.swing.JScrollBar;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation.Builder;
 import javax.ws.rs.client.WebTarget;
@@ -186,6 +187,47 @@ public class BDUtils {
 		result = resultBuilder.delete(
 				Response.class);
 		return result.getStatus() == 204;
+	}
+	public static boolean eliminarNodo(String nodeId){
+		if (!BDUtils.servidorActivo())
+			throw new BDException();
+		ResteasyClient cliente = BDUtils.obtenerCliente();
+		WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path("/node/" + nodeId);
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Response result;
+		result = resultBuilder.delete(
+				Response.class);
+		return result.getStatus() == 204;
+	}
+	
+	public static String[] obtenerRelacionesNodo(String nodeId){
+		if (!BDUtils.servidorActivo())
+			throw new BDException();
+		ResteasyClient cliente = BDUtils.obtenerCliente();
+		WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path("/node/" + nodeId + "/relationships/all");
+		Builder resultBuilder = target.request()
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				.accept(MediaType.APPLICATION_JSON + "; charset=UTF-8");
+		Response result;
+		result = resultBuilder.get(
+				Response.class);
+		String stringRespuesta;
+		stringRespuesta = result.readEntity(String.class);
+		System.out.println("Resultado: " + stringRespuesta);
+		JsonObject resultado = JsonUtils
+				.JsonStringToObject(stringRespuesta);
+		Object[] results = (Object[]) resultado.getPropiedades()
+				.get("arreglo");
+		JsonObject relacion;
+		String relations[] = new String[results.length];
+		for(int i=0;i<results.length;i++){
+			relacion = (JsonObject)results[i];
+			relations[i] =  (String) ((JsonObject)relacion.getPropiedades().get("metadata")[0]).getPropiedades().get("id")[0];
+			
+		}
+		return relations;
 	}
 	
 	//SE PODRIA AGREGAR UN IGNORE

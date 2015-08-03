@@ -8,33 +8,43 @@ public class JsonUtils {
 
 	public static JsonObject JsonStringToObject(String json) {
 		JsonObject resultado = new JsonObject();
+		json = json.replace("\n", "").trim();
 		
 		if(json.startsWith("{")){//es un objeto
 			json = json.substring(1,json.length()-1);//eliminar corchete inicial y final del objeto
 			String[] propiedadesObjeto = obtenerPropiedades(json);
-			String llave, valor;
-			for (String propiedad : propiedadesObjeto){
-				llave = propiedad.substring(0, propiedad.indexOf(":"));
-				valor = propiedad.substring(propiedad.indexOf(":")+1);
-				if(llave.startsWith("\""))
-					llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
-				if(valor.startsWith("["))//es un arreglo
-					resultado.setPropiedad(llave, JsonStringToObject(valor));
-				else if (valor.startsWith("{"))//es un objeto
-					resultado.setPropiedad(llave, JsonStringToObject(valor));
-				else{ //es un valor
-					if(valor.startsWith("\""))
-						valor = valor.substring(1,valor.length()-1);//eliminar comilla inicial y final del valor
-					resultado.setPropiedad(llave, new String[]{valor});
-					}
+			if(propiedadesObjeto != null){
+				String llave, valor;
+				for (String propiedad : propiedadesObjeto){
+					llave = propiedad.substring(0, propiedad.indexOf(":")).trim();
+					valor = propiedad.substring(propiedad.indexOf(":")+1).trim();
+					if(llave.startsWith("\""))
+						llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
+					if(valor.startsWith("["))//es un arreglo
+						resultado.setPropiedad(llave, JsonStringToObject(valor));
+					else if (valor.startsWith("{"))//es un objeto
+						resultado.setPropiedad(llave, JsonStringToObject(valor));
+					else{ //es un valor
+						if(valor.startsWith("\""))
+							valor = valor.substring(1,valor.length()-1);//eliminar comilla inicial y final del valor
+						resultado.setPropiedad(llave, new String[]{valor});
+						}
+				}
+			}else{
+				resultado.setPropiedad("", "");
 			}
 		}
 		else if(json.startsWith("[")){//es un arreglo
-			json = json.substring(1,json.length()-1);//eliminar corchete inicial y final del objeto
+			json = json.substring(1,json.length()-1).trim();//eliminar corchete inicial y final del objeto
 			String[] elementosArreglo = obtenerPropiedades(json);
+			if(elementosArreglo == null){
+				elementosArreglo = new String[1];
+				elementosArreglo[0] = "";
+				}
 			int posicion = 0;
 			Object[] arreglo = new Object[elementosArreglo.length];
 			for (String elemento : elementosArreglo){
+				elemento = elemento.trim();
 				if(elemento.startsWith("{")){//es un objeto
 					arreglo[posicion++] = JsonStringToObject(elemento);
 				}else if (elemento.startsWith("[")){//es un arreglo
@@ -48,13 +58,16 @@ public class JsonUtils {
 			resultado.setPropiedad("arreglo", arreglo);
 		}
 		else{//es un valor
-			json = json.substring(1,json.length()-1);//eliminar comilla inicial y final del objeto
+			json = json.substring(1,json.length()-1).trim();//eliminar comilla inicial y final del objeto
 			resultado.setPropiedad("0", json);
 		}
 		return resultado;
 	}
 
 	private static String[] obtenerPropiedades(String jsonString) {
+		jsonString = jsonString.trim();
+		if(jsonString.equals(""))
+			return null;
 		ArrayList<String> propiedades = new ArrayList<String>();
 		short llavesCuadradasAbiertas = 0;
 		short corchetesAbiertos = 0;

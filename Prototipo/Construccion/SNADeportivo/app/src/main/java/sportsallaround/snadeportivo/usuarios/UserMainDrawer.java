@@ -161,6 +161,8 @@ public class UserMainDrawer extends ActionBarActivity
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
                 fragment = new ErrorFragment();
+            } catch (NullPointerException e){
+
             }
             Bundle extras = new Bundle();
             extras.putParcelable("user", user);
@@ -208,23 +210,31 @@ public class UserMainDrawer extends ActionBarActivity
 
         private Boolean getRolePermissions() {
             boolean retorno = true;
+            Permiso[] permisos = null;
             try {
                 JSONObject parametros = new JSONObject(activity.getUserRole().toString());
                 String responseString = ServiceUtils.invokeService(parametros, Constants.SERVICES_OBTENER_PERMISOS_ROL, "POST");
                 JSONArray response = new JSONArray(responseString);
-                Permiso[] permisos = new Permiso[response.length()+1];
+
+                if(response.getJSONObject(0) != null)
+                    permisos = new Permiso[response.length()+1];
+                else
+                    permisos = new Permiso[response.length()];
+                    for (int i = 1; i <= response.length(); i++){
+                        permisos[i] = new Permiso(response.getJSONObject(i - 1));
+                    }
+                activity.setPermissions(permisos);
+            } catch (JSONException e) {
+                e.printStackTrace();
+                retorno = false;
+                permisos = new Permiso[1];
+            } finally {
                 permisos[0] = new Permiso();
                 permisos[0].setConsecutivoPermiso(-1);
                 permisos[0].setNombre("Yo");
                 permisos[0].setDescripcion("Página principal del usuario");
                 permisos[0].setRuta("sportsallaround.snadeportivo.usuarios.fragmentos.UserMainFragment");
-                for (int i = 1; i <= response.length(); i++){
-                    permisos[i] = new Permiso(response.getJSONObject(i - 1));
-                }
                 activity.setPermissions(permisos);
-            } catch (JSONException e) {
-                e.printStackTrace();
-                retorno = false;
             }
             return retorno;
         }

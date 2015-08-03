@@ -3,10 +3,12 @@ package sportsallaround.snadeportivo.deportes.pojos;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sportsallaround.utils.MediaTypeTranslator;
+
 /**
  * Created by luis on 7/17/15.
  */
-public class PosicionDeporte {
+public class PosicionDeporte implements MediaTypeTranslator {
 
     private String nombre;
     private String descripcion;
@@ -40,5 +42,10 @@ public class PosicionDeporte {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toJSONObject() {
+        return "{" + "\"nombre\":" + "\"" + nombre + "\",\"descripcion\":" + "\"" + descripcion + "\",\"id\":" + id + "}";
     }
 }

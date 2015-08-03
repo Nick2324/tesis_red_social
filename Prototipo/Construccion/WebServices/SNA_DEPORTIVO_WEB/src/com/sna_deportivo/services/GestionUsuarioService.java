@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -11,9 +12,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.DeportePracticado;
+import com.sna_deportivo.pojo.deportes.DeportePracticadoUsuario;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.usuarios.Credenciales;
 import com.sna_deportivo.pojo.usuarios.Permiso;
@@ -229,16 +232,18 @@ public class GestionUsuarioService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("obtenerDeportesPracticadosFull")
 	public DeportePracticado[] obtenerDeportesPracticadosFull(@QueryParam("user") String userName) {
-		DeportePracticado[] deportesPracticados;
+		DeportePracticado[] deportesPracticados = null;
 		Deporte[] deportes;
 		try {
 			deportes = servicio.obtenerDeportesPracticados(userName);
-			deportesPracticados = new DeportePracticado[deportes.length];
-			for(int i=0;i<deportes.length;i++){
-				deportesPracticados[i] = new DeportePracticado();
-				deportesPracticados[i].setDeporte(deportes[i]);
-				deportesPracticados[i].setPosiciones(servicio.obtenerPosicionesDeportePracticado(deportes[i].getId(), userName));
-				deportesPracticados[i].setNivel("Principiante");
+			if(deportes != null){
+				deportesPracticados = new DeportePracticado[deportes.length];
+				for(int i=0;i<deportes.length;i++){
+					deportesPracticados[i] = new DeportePracticado();
+					deportesPracticados[i].setDeporte(deportes[i]);
+					deportesPracticados[i].setPosiciones(servicio.obtenerPosicionesDeportePracticado(deportes[i].getId(), userName));
+					deportesPracticados[i].setNivel("Principiante");
+				}
 			}
 		} catch (BDException e) {
 			deportesPracticados = null;
@@ -246,4 +251,44 @@ public class GestionUsuarioService {
 		return deportesPracticados;
 	}
 	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("adicionarDeportePracticado")
+	public ResponseGenerico adicionarDeportePracticado(DeportePracticadoUsuario deportePracticadoUsuario){
+		DeportePracticado deportePracticado;
+		deportePracticado = deportePracticadoUsuario.getDeportePracticado();
+		String usuario = deportePracticadoUsuario.getUser();
+		
+		ResponseGenerico response;
+		try {
+			response = servicio.adicionarDeportePracticado(deportePracticado, usuario);
+		} catch (BDException e) {
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("M");
+			response.setCaracterAceptacion("Ha ocurrido un error con la base de datos. Intente nuevamente mas tarde.");
+		}
+		return response;
+	}
+	
+	
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("eliminarDeportePracticado")
+	public ResponseGenerico eliminarDeportePracticado(DeportePracticadoUsuario deportePracticadoUsuario){
+		DeportePracticado deportePracticado;
+		deportePracticado = deportePracticadoUsuario.getDeportePracticado();
+		String usuario = deportePracticadoUsuario.getUser();
+		
+		ResponseGenerico response;
+		try {
+			response = servicio.eliminarDeportePracticado(deportePracticado, usuario);
+		} catch (BDException e) {
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("M");
+			response.setCaracterAceptacion("Ha ocurrido un error con la base de datos. Intente nuevamente mas tarde.");
+		}
+		return response;
+	}
 }

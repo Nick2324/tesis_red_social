@@ -4,8 +4,16 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="sportsallaround.snadeportivo.usuarios.UserUpdateSports"
+    tools:context="sportsallaround.snadeportivo.usuarios.UserUpdateSportsActivity"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mis deportes practicados:"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <ProgressBar
         android:id="@+id/practiced_sports_progress"
@@ -27,13 +35,6 @@
             android:id="@+id/user_practiced_sports"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mis deportes practicados:"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:textAlignment="center"/>
 
         </LinearLayout>
 
@@ -43,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
-        android:text="Añadir deporte practicado"/>
+        android:text="Añadir deporte practicado"
+        android:onClick="anadirDeporte"/>
 
 
 </LinearLayout>

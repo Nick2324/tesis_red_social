@@ -35,16 +35,16 @@ import sportsallaround.utils.ServiceUtils;
 public class GenericMenuFragment extends Fragment{
 
     private Context context;
-    private GenericMenuTask task;
     private ArrayList<Permiso> permisos;
     private Usuario user;
     private Rol userRole;
     private Permiso permission;
+    private LinearLayout layout;
+    private View userTitle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        task = new GenericMenuTask(this);
         Bundle extras = getArguments();
         user = extras.getParcelable("user");
         userRole = extras.getParcelable("userRole");
@@ -53,13 +53,29 @@ public class GenericMenuFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        LinearLayout layout = new LinearLayout(context);
+        return initializeMenu(inflater,container,savedInstanceState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        generateMenu();
+    }
+
+    public View initializeMenu(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        layout = new LinearLayout(context);
         layout.setOrientation(LinearLayout.VERTICAL);
-        View userTitle = inflater.inflate(R.layout.user_image_title, container, false);
+        userTitle = inflater.inflate(R.layout.user_image_title, container, false);
+        generateMenu();
+        return layout;
+    }
+
+    public void generateMenu(){
+        layout.removeAllViews();
         ((TextView)(userTitle.findViewById(R.id.title_user_name))).setText(user.getPrimerNombre().trim() + " " + user.getSegundoNombre().trim() + " " + user.getApellidos().trim());
         ((TextView)(userTitle.findViewById(R.id.title_user_role))).setText(userRole.getNombre());
         try {
-            task.execute().get();
+            new GenericMenuTask(this).execute().get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -90,7 +106,6 @@ public class GenericMenuFragment extends Fragment{
 
         layout.addView(userTitle,new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
         layout.addView(buttonLayout,new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-        return layout;
     }
 
     @Override

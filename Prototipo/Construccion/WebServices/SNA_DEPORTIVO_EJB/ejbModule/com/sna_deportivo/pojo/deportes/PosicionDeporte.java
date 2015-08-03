@@ -7,6 +7,8 @@ public class PosicionDeporte {
 	private int id;
 	private String nombre;
 	private String descripcion;
+	
+	public PosicionDeporte(){}
 
 	public PosicionDeporte(JsonObject object) {
 		this.id = Integer.valueOf((String)object.getPropiedades().get("id")[0]);

@@ -4,14 +4,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sportsallaround.utils.MediaTypeTranslator;
+
 /**
  * Created by luis on 7/17/15.
  */
-public class DeportePracticado {
+public class DeportePracticado implements MediaTypeTranslator {
 
     private Deporte deporte;
     private PosicionDeporte[] posiciones;
     private String nivel;
+
+    public DeportePracticado(){}
 
     public DeportePracticado(JSONObject jsonObject) throws JSONException {
         this.deporte = new Deporte(jsonObject.getJSONObject("deporte"));
@@ -44,5 +48,26 @@ public class DeportePracticado {
 
     public void setNivel(String nivel) {
         this.nivel = nivel;
+    }
+
+    @Override
+    public String toJSONObject() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("{");
+        retorno.append("\"deporte\":");
+        retorno.append(deporte.toJSONObject());
+        retorno.append(",\"posiciones\":");
+        retorno.append("[");
+        for(int i=0;i<posiciones.length;i++){
+            retorno.append(posiciones[i].toJSONObject());
+            if(i != posiciones.length-1)
+                retorno.append(",");
+        }
+        retorno.append("],\"nivel\":");
+        retorno.append("\"");
+        retorno.append(nivel);
+        retorno.append("\"");
+        retorno.append("}");
+        return retorno.toString();
     }
 }

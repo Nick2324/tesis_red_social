@@ -65,6 +65,7 @@ public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements
 
         try {
             new RetreiveUserData(actualUserData, this).execute((Void) null).get();
+            new RetrieveRoles(userType,this).execute((Void) null);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -76,7 +77,7 @@ public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements
         lastName.setText(actualUserData.getApellidos());
         birthDate.setText(actualUserData.getFechaNacimiento());
 
-        new RetrieveRoles(userType,this).execute((Void) null);
+
 
         userType.setSelection(actualUserRole.getConsecutivoRol());
 
