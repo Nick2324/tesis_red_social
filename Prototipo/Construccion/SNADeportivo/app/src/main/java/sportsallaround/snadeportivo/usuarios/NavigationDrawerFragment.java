@@ -112,6 +112,16 @@ public class NavigationDrawerFragment extends Fragment {
         return mDrawerListView;
     }
 
+    public void updateDrawerListAdapter(String[] items){
+        mCurrentSelectedPosition = 0;
+        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+                getActionBar().getThemedContext(),
+                android.R.layout.simple_list_item_activated_1,
+                android.R.id.text1,
+                items));
+        mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
+    }
+
     public boolean isDrawerOpen() {
         return mDrawerLayout != null && mDrawerLayout.isDrawerOpen(mFragmentContainerView);
     }

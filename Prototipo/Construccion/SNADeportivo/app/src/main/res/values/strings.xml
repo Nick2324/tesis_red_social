@@ -21,6 +21,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_user_update_sports">UserUpdateSports</string>
+
     <string name="title_activity_crear_evento">Crear evento</string>
     <string name="title_activity_informacion_general_evento">Informacion General de Evento</string>
+
+    <string name="title_activity_error">Uups...</string>
+    <string name="title_activity_user_add_practiced_sport">UserAddPracticedSport</string>
 </resources>

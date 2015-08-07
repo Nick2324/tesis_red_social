@@ -2,6 +2,9 @@ package com.sna_deportivo.pojo.usuarios;
 
 import java.util.Map;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Rol {
 	
 	private String nombre;
@@ -12,6 +15,10 @@ public class Rol {
 		nombre = (String) objeto.get("nombre")[0];
 		descripcion = (String) objeto.get("descripcion")[0];
 		consecutivoRol = Integer.valueOf(((String) objeto.get("consecutivoRol")[0]));
+	}
+	
+	public Rol() {
+		// TODO Auto-generated constructor stub
 	}
 	
 	public String getNombre() {

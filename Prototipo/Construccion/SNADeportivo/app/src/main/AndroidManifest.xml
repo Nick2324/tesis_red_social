@@ -29,11 +29,11 @@
             android:label="@string/title_activity_user_main_drawer" >
         </activity>
         <activity
-            android:name=".usuarios.UserUpdatePersonalInfo"
+            android:name=".usuarios.UserUpdatePersonalInfoActivity"
             android:label="@string/title_activity_user_update_personal_info" >
         </activity>
         <activity
-            android:name=".usuarios.UserUpdateSports"
+            android:name=".usuarios.UserUpdateSportsActivity"
             android:label="@string/title_activity_user_update_sports" >
         </activity>
         <activity
@@ -52,6 +52,14 @@
         <activity
             android:name=".eventos.InformacionGeneralEvento"
             android:label="@string/title_activity_informacion_general_evento" >
+        </activity>
+        <activity
+            android:name=".ErrorActivity"
+            android:label="@string/title_activity_error" >
+        </activity>
+        <activity
+            android:name=".usuarios.UserAddPracticedSport"
+            android:label="@string/title_activity_user_add_practiced_sport" >
         </activity>
     </application>
 
