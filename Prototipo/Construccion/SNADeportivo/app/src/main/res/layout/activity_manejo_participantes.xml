@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="sportsallaround.snadeportivo.eventos.GestionEventos">
+    tools:context="sportsallaround.snadeportivo.eventos.ManejoParticipantes">
 
     <TextView
         android:id="@+id/textview_title_eventos"
@@ -23,44 +23,24 @@
         android:background="#FF33B5E5"
         android:layout_gravity="center"/>
 
-    <TextSwitcher
-        android:id="@+id/switcher_lista_eventos"
+    <TextView
+        android:id="@+id/textview_title_solicitud_participante"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-    </TextSwitcher>
-
-    <fragment android:name="sportsallaround.snadeportivo.eventos.SpinnerEventos"
-        android:id="@+id/fragment_tipo_evento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:dropDownWidth="wrap_content"
-        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
         android:layout_gravity="center"/>
 
-
-    <EditText
-        android:id="@+id/edittext_busqueda_administracion_eventos"
-        android:hint="@string/hint_busqueda_administracion_eventos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/textview_barra_horizontal_solicitud_participante"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#D3D3D3"
         android:layout_gravity="center"/>
-    
+
     <ListView
-        android:id="@+id/listview_lista_eventos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
-        android:layout_gravity="center">
-    </ListView>
-
-    <Button
-        android:id="@+id/button_crear_evento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/crear_evento"
-        android:gravity="center"/>
-
+        android:id="@+id/listview_lista_solicitudes_parti"></ListView>
 </LinearLayout>

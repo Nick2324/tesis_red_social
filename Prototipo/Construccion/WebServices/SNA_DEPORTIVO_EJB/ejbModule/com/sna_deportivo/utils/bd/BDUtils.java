@@ -1,6 +1,5 @@
 package com.sna_deportivo.utils.bd;
 
-import javax.swing.JScrollBar;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation.Builder;
 import javax.ws.rs.client.WebTarget;
@@ -24,18 +23,18 @@ public class BDUtils {
 	private static String PATH = "transaction/commit";
 
 	public static boolean servidorActivo() {
-
 		ResteasyProviderFactory factory = ResteasyProviderFactory.getInstance();
 		ResteasyProviderFactory.pushContext(javax.ws.rs.ext.Providers.class,
 				factory);
-
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		WebTarget target = client.target(Constantes.SERVER_ROOT_URI).path("/");
 		Response result = target.request()
-				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
+				//nicolas2324:mifamilia
+				//neo4j:21316789
+				.header("Authorization", "Basic " + Base64.encodeBytes("nicolas2324:mifamilia".getBytes()))
 				.accept(MediaType.TEXT_PLAIN)
 				.get(Response.class);
-
+		System.out.println("Status BD: "+result.getStatus());
 		return result.getStatus() == 200;
 	}
 
@@ -262,15 +261,17 @@ public class BDUtils {
 		retorno.append(identificador);
 		retorno.append("+=");
 		retorno.append("{");
+		
 		JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 		for(String propiedad:objetoJson.getPropiedades().keySet()){
 			retorno.append(propiedad);
 			retorno.append(":");
-			retorno.append(objetoJson.getPropiedades().get(propiedad));
+			retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
 			retorno.append(",");
 		}
-		retorno.delete(retorno.length() - 2, retorno.length() - 1);
+		retorno.delete(retorno.length() - 1, retorno.length());
 		retorno.append("}");
+		
 		return retorno.toString();
 	}
 	

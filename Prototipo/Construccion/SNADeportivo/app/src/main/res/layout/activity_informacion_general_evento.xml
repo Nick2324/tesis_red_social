@@ -1,12 +1,112 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="sportsallaround.snadeportivo.eventos.InformacionGeneralEvento">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrolling_lay_info_general_evento">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        tools:context="sportsallaround.snadeportivo.eventos.InformacionGeneralEvento">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview_title_eventos"
+            android:text="@string/title_activity_gestion_eventos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textview_barra_horizontal_titulos"
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF33B5E5"
+            android:layout_gravity="center"/>
+
+        <TextView android:text="@string/nombre_evento" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nombre_evento"
+            android:id="@+id/nombre_evento_info_general"/>
+
+        <TextView android:text="@string/descripcion_evento" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:id="@+id/scrolling_descripcion_evento_info_general">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descripcion_evento_info_general"
+                android:hint="@string/hint_descripcion_evento"/>
+        </ScrollView>
+
+        <TextView
+            android:text="@string/deporte_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/deporte_elegido_info_evento"></Spinner>
+
+        <TextView
+            android:text="@string/fecha_inicio_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fecha_inicio_evento_info_general"
+            android:hint="@string/hint_fecha_inicio_evento"/>
+
+        <TextView android:text="@string/fecha_final_evento" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fecha_final_evento_info_general"
+            android:hint="@string/hint_fecha_final_evento"/>
+
+        <TextView android:text="@string/hora_inicio_evento" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hora_inicio_evento_info_general"
+            android:hint="@string/hint_hora_inicio_evento"/>
+
+        <TextView android:text="@string/hora_final_evento" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hora_final_evento_info_general"
+            android:hint="@string/hint_hora_final_evento"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/crear_evento_boton"
+            android:text="@string/crear_evento"/>
+
+    </LinearLayout>
+
+</ScrollView>

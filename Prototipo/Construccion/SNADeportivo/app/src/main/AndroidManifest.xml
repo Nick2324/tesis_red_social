@@ -61,6 +61,14 @@
             android:name=".usuarios.UserAddPracticedSport"
             android:label="@string/title_activity_user_add_practiced_sport" >
         </activity>
+        <activity
+            android:name=".eventos.InformacionParticipantes"
+            android:label="@string/title_activity_informacion_participantes" >
+        </activity>
+        <activity
+            android:name=".eventos.ManejoParticipantes"
+            android:label="@string/title_activity_manejo_participantes" >
+        </activity>
     </application>
 
 </manifest>

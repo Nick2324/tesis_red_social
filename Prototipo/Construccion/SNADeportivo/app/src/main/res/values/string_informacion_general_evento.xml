@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="nombre_evento">Nombre del evento</string>
+    <string name="descripcion_evento">Descripción del evento</string>
+    <string name="deporte_evento">Deporte del evento</string>
+    <string name="fecha_inicio_evento">Fecha de inicio del evento</string>
+    <string name="hora_inicio_evento">Hora de inicio del evento</string>
+    <string name="fecha_final_evento">Fecha final del evento</string>
+    <string name="hora_final_evento">Hora final del evento</string>
+    <string name="hint_nombre_evento">escribe el nombre del evento</string>
+    <string name="hint_descripcion_evento">escribe la descripción del evento</string>
+    <string name="hint_fecha_inicio_evento">selecciona la fecha de inicio del evento</string>
+    <string name="hint_hora_inicio_evento">selecciona la hora de inicio del evento</string>
+    <string name="hint_fecha_final_evento">selecciona la fecha de final del evento</string>
+    <string name="hint_hora_final_evento">selecciona la hora de final del evento</string>
+    <string name="numero_participantes">Número máximo de participantes</string>
+    <string name="rango_maximo_edad">Rango máximo de edad</string>
+    <string name="rango_minimo_edad">Rango mínimo de edad</string>
+    <string name="hint_numero_participantes">pon el número máximo de participantes</string>
+    <string name="hint_rango_maximo_edad">pon el rango máximo de edad</string>
+    <string name="hint_rango_minimo_edad">pon el rango mínimo de edad</string>
+
+</resources>

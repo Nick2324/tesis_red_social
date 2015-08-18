@@ -14,8 +14,4 @@ public class ProductorFactory {
 		throw new ProductorFactoryExcepcion();
 	}
 	
-	public static void main(String[] args){
-		Integer i = null;
-	}
-	
 }

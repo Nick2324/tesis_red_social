@@ -18,7 +18,7 @@ import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
  *
  */
 
-public abstract class Evento implements ObjectSNSDeportivo,JsonSerializable {
+public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 
 	private String id;
 	private String nombre;

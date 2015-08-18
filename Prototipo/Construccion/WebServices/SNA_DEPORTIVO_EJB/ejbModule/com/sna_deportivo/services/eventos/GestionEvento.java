@@ -85,9 +85,11 @@ public class GestionEvento {
 	}
 	
 	public static void main(String[] args){
+		com.sna_deportivo.pojo.evento.PracticaDeportiva pd = new com.sna_deportivo.pojo.evento.PracticaDeportiva();
+		pd.setActivo(true);
 		GestionEvento ge = new GestionEvento();
 		System.out.println(ge.consultarEventos(com.sna_deportivo.pojo.evento.ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio(),
-				new com.sna_deportivo.pojo.evento.PracticaDeportiva()))	;
+				pd))	;
 	}
 	
 }

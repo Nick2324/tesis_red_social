@@ -1,15 +1,20 @@
 package com.sna_deportivo.pojo.deportes;
 
 import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonSerializable;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
+import com.sna_deportivo.utils.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.StringUtils;
 
-public class Deporte {
+public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	
-	private int id;
+	private Integer id;
 	private String nombre;
 	private String descripcion;
 	private String fechaCreacion;
 	private String historia;
-	private boolean esOlimpico;
+	private Boolean esOlimpico;
 	
 	public Deporte(){}
 
@@ -22,11 +27,11 @@ public class Deporte {
 		esOlimpico = ((String) object.getPropiedades().get("nombre")[0]).equals("true");
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -62,12 +67,88 @@ public class Deporte {
 		this.historia = historia;
 	}
 
-	public boolean getEsOlimpico() {
+	public Boolean getEsOlimpico() {
 		return esOlimpico;
 	}
 
-	public void setEsOlimpico(boolean esOlimpico) {
+	public void setEsOlimpico(Boolean esOlimpico) {
 		this.esOlimpico = esOlimpico;
+	}
+
+	@Override
+	public String stringJson() {
+		return "{id:"+ this.id.toString() +","
+				+ "nombre:"+ JsonUtils.propiedadNula(this.nombre) +","
+				+ "descripcion:"+ JsonUtils.propiedadNula(this.descripcion) +","
+				+ "fechaCreacion:"+JsonUtils.propiedadNula(this.fechaCreacion) +","
+				+ "historia:"+JsonUtils.propiedadNula(this.historia)+","
+				+ "esOlimpico:"+this.esOlimpico+"}";
+	}
+
+	@Override
+	public void setNullObject() {
+		this.setId(null);
+		this.setNombre(null);
+		this.setDescripcion(null);
+		this.setFechaCreacion(null);
+		this.setHistoria(null);
+		this.setEsOlimpico(null);
+	}
+
+	@Override
+	public JsonObject serializarJson() {
+		return JsonUtils.JsonStringToObject(this.stringJson());
+	}
+
+	@Override
+	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
+		this.setNullObject();
+		for(String propiedad:json.getPropiedades().keySet()){
+			if(!(this.esAtributo(propiedad) && 
+				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
+				throw new ExcepcionJsonDeserializacion();
+		}
+	}
+	
+	protected boolean setAtributo(String atributo, Object[] valor){
+		boolean asignado = false;
+		if(atributo.equals("id")){
+			this.setId((((String)valor[0]).equals("null"))?null:
+				Integer.parseInt((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("nombre")){
+			this.setNombre((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("descripcion")){
+			this.setDescripcion(StringUtils.decodificar((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("fechaCreacion")){
+			this.setFechaCreacion((String)valor[0]);
+			asignado = true;
+		}else if(atributo.equals("historia")){
+			this.setHistoria(StringUtils.decodificar((String)valor[0]));
+			asignado = true;
+		}else if(atributo.equals("esOlimpico")){
+			this.setEsOlimpico((((String)valor[0]).equals("null"))?null:
+							Boolean.parseBoolean((String)valor[0]));
+			asignado = true;
+		}
+		
+		return asignado;
+		
+	}
+	
+	protected boolean esAtributo(String atributo){
+		if(atributo.equals("id") ||
+		   atributo.equals("nombre") ||
+		   atributo.equals("descripcion") ||
+		   atributo.equals("fechaCreacion") ||
+		   atributo.equals("historia") ||
+		   atributo.equals("esOlimpico"))
+		   return true;
+		
+		return false;
+	
 	}
 
 }
