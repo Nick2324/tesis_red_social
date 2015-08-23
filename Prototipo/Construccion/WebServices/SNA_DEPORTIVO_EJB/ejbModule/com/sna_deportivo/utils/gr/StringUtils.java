@@ -1,4 +1,4 @@
-package com.sna_deportivo.utils;
+package com.sna_deportivo.utils.gr;
 
 public class StringUtils {
 

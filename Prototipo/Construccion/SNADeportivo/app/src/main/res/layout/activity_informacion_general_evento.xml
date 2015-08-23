@@ -14,21 +14,11 @@
         android:orientation="vertical"
         tools:context="sportsallaround.snadeportivo.eventos.InformacionGeneralEvento">
 
-        <TextView
-            android:id="@+id/textview_title_eventos"
-            android:text="@string/title_activity_gestion_eventos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/textview_barra_horizontal_titulos"
-            android:layout_width="fill_parent"
-            android:layout_height="2dip"
-            android:background="#FF33B5E5"
-            android:layout_gravity="center"/>
+        <fragment
+            android:name="sportsallaround.utils.gui.TituloActividad"
+            android:id="@+id/fragment_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <TextView android:text="@string/nombre_evento" android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -54,14 +44,27 @@
         </ScrollView>
 
         <TextView
-            android:text="@string/deporte_evento"
+            android:id="@+id/textview_imagen_evento"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/imagen_evento"
+            android:layout_gravity="center"/>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/deporte_elegido_info_evento"></Spinner>
+        <fragment
+            android:name="sportsallaround.utils.gui.PickImagen"
+            android:id="@+id/fragment_boton_imagen_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <fragment
+            android:name="sportsallaround.utils.gui.SpinnerDesdeBD"
+            android:id="@+id/fragment_tipo_deporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"/>
 
         <TextView
             android:text="@string/fecha_inicio_evento"

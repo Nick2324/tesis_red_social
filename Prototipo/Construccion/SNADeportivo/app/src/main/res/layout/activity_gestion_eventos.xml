@@ -7,21 +7,11 @@
     android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.GestionEventos">
 
-    <TextView
-        android:id="@+id/textview_title_eventos"
-        android:text="@string/title_activity_gestion_eventos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:id="@+id/textview_barra_horizontal_titulos"
-        android:layout_width="fill_parent"
-        android:layout_height="2dip"
-        android:background="#FF33B5E5"
-        android:layout_gravity="center"/>
+    <fragment
+        android:name="sportsallaround.utils.gui.TituloActividad"
+        android:id="@+id/fragment_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <TextSwitcher
         android:id="@+id/switcher_lista_eventos"
@@ -61,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/crear_evento"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

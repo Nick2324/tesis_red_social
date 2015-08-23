@@ -2,8 +2,8 @@ package com.sna_deportivo.services.deporte;
 
 import com.sna_deportivo.pojo.deportes.DAODeporte;
 import com.sna_deportivo.pojo.deportes.Deporte;
-import com.sna_deportivo.utils.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonUtils;
 
 public class GestionDeporte {

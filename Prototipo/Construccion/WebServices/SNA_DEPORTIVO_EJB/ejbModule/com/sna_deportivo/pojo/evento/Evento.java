@@ -1,9 +1,9 @@
 package com.sna_deportivo.pojo.evento;
 
-import com.sna_deportivo.utils.ObjectSNSDeportivo;
-import com.sna_deportivo.utils.StringUtils;
 import com.sna_deportivo.utils.bd.FechaSNS;
 import com.sna_deportivo.utils.bd.TiempoSNS;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.StringUtils;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonSerializable;
 import com.sna_deportivo.utils.json.JsonUtils;
@@ -32,7 +32,8 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	private Integer rangoMaxEdad;
 	private Integer rangoMinEdad;
 	private Boolean activo;
-
+	private String aRetornar;
+	
 	/**
 	 * 
 	 * Constructor por defecto
@@ -396,6 +397,9 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 */
 	@Override
 	public String toString(){
+		if(aRetornar != null && 
+		   aRetornar.equals("nombre"))
+			return this.getNombre();
 		return this.stringJson();
 	}
 	
@@ -517,6 +521,11 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 		this.setRangoMinEdad(null);
 		this.setRangoMaxEdad(null);
 		this.setActivo(null);
+	}
+
+	@Override
+	public void retornoToString(String aRetornar) {
+		this.aRetornar = aRetornar;
 	}
 	
 }

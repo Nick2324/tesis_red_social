@@ -12,35 +12,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.sna_deportivo.pojo.deportes.Deporte;
+import com.sna_deportivo.pojo.deportes.FactoryDeporte;
+import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.Constants;
-import sportsallaround.utils.DatePickerFragment;
-import sportsallaround.utils.OnDatePickedListener;
+import sportsallaround.utils.gui.DatePickerFragment;
+import sportsallaround.utils.gui.KeyValueItem;
+import sportsallaround.utils.gui.OnDatePickedListener;
 import sportsallaround.utils.ServiceUtils;
-import sportsallaround.utils.TimePickerFragment;
+import sportsallaround.utils.gui.SpinnerDesdeBD;
+import sportsallaround.utils.gui.TimePickerFragment;
+import sportsallaround.utils.gui.TituloActividad;
 
 public class InformacionGeneralEvento extends Activity
-        implements OnDatePickedListener,TimePickerFragment.OnTimePickedListener {
-
-    private class RecuperarDeportes extends AsyncTask{
-
-        @Override
-        protected Object doInBackground(Object[] params) {
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Object result){
-
-        }
-
-    }
+        implements OnDatePickedListener,TimePickerFragment.OnTimePickedListener,SpinnerDesdeBD.InitializerSpinnerBD,
+        TituloActividad.InitializerTituloActividad {
 
     private class CrearEvento extends AsyncTask <JSONObject,Object,String>{
 
@@ -189,7 +182,7 @@ public class InformacionGeneralEvento extends Activity
     public void onTimePicked(String time) {
         EditText timeET = null;
 
-        Log.d("Nick:id",getWindow().getCurrentFocus().getId()+" Time");
+        Log.d("Nick:id", getWindow().getCurrentFocus().getId() + " Time");
 
         if(getWindow().getCurrentFocus().getId() == R.id.hora_inicio_evento_info_general) {
             timeET = (EditText) findViewById(R.id.hora_inicio_evento_info_general);
@@ -213,6 +206,50 @@ public class InformacionGeneralEvento extends Activity
         }
         if(date != null)
             date.setText(selectedDate);
+    }
+
+    @Override
+    public FactoryObjectSNSDeportivo getFactoryObjetosSNS() {
+        return new FactoryDeporte();
+    }
+
+    @Override
+    public String getServicio() {
+        return Constants.SERVICES_PATH_DEPORTES;
+    }
+
+    @Override
+    public String getMetodo() {
+        return "GET";
+    }
+
+    @Override
+    public JSONObject getParam() {
+        return null;
+    }
+
+    @Override
+    public String getTituloSpinner() {
+        return "Deporte";
+    }
+
+    @Override
+    public void onItemSelectedSpinnerBD(KeyValueItem seleccionado) {
+
+        Log.d("Nick:Deporte", "Se selecciona deporte " + ((Deporte) seleccionado.getValue()).toString());
+    }
+
+    @Override
+    public void onNothingSelectedSpinnerBD() {}
+
+    @Override
+    public String getAtributoMostradoSpinner(){
+        return "nombre";
+    }
+
+    @Override
+    public int getIdTituloActividad() {
+        return R.string.title_activity_informacion_general_evento;
     }
 
 }

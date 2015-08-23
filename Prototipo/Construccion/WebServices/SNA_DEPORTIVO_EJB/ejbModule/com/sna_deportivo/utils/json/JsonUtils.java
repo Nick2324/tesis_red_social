@@ -2,7 +2,7 @@ package com.sna_deportivo.utils.json;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.utils.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 
 public class JsonUtils {
 

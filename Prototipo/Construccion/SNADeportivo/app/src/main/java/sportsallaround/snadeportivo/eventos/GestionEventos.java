@@ -1,13 +1,8 @@
 package sportsallaround.snadeportivo.eventos;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
@@ -41,14 +36,15 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.utils.AttachObjetoListener;
+import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.Constants;
-import sportsallaround.utils.KeyValueItem;
-import sportsallaround.utils.ObjetoListener;
-import sportsallaround.utils.ObjetoListenerSpinner;
+import sportsallaround.utils.gui.KeyValueItem;
+import sportsallaround.utils.gui.ObjetoListener;
+import sportsallaround.utils.gui.ObjetoListenerSpinner;
 import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.gui.TituloActividad;
 
-public class GestionEventos extends Activity implements AttachObjetoListener,SpinnerEventos.OnFragmentInteractionListener {
+public class GestionEventos extends Activity implements AttachObjetoListener, TituloActividad.InitializerTituloActividad{
 
     private ArrayList<Evento> eventos;
 
@@ -158,12 +154,7 @@ public class GestionEventos extends Activity implements AttachObjetoListener,Spi
     @Override
     public void onStart(){
         super.onStart();
-        //this.setTiposEventos();
-        //this.setDatosEventos();
     }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {}
 
     private void prepararCaractWidgets(){
         final Context actividad = this;
@@ -259,6 +250,11 @@ public class GestionEventos extends Activity implements AttachObjetoListener,Spi
             return new PeticionSpinner(this);
         }
         return null;
+    }
+
+    @Override
+    public int getIdTituloActividad() {
+        return R.string.title_activity_gestion_eventos;
     }
 
 }

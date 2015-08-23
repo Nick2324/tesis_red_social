@@ -1,4 +1,4 @@
-package sportsallaround.utils;
+package sportsallaround.utils.gui;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;

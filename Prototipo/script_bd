@@ -161,6 +161,9 @@ CREATE (ubicaciondeporte)-[ubicacionusuario1:R_UbicacionUsuario{id:1}]->(ubicaci
 CREATE (eventodeportivo)-[descripcionevento1:R_DescripcionEvento{id:1}]->(deporteevento)<-[descripcionevento2:R_DescripcionEvento{id:2}]-(deporte2),(genero3)-[descripcionevento3:R_DescripcionEvento{id:3}]->(deporteevento)<-[participanteevento1:R_ParticipanteEvento{id:1}]-(usuario1)
 CREATE (usuario1)-[creaevento1:R_CreaEvento{id:1,rol:"administrador"}]->(eventodeportivo)
 ;
+//Elimina comas
+match n where has(n.descripcion) and n.descripcion =~ '.*,.*' set n.descripcion = replace(n.descripcion,',',' <comma> ');
+match n where has(n.historia) and n.historia =~ '.*,.*' set n.historia = replace(n.historia,',',' <comma> ');
 //match (a)-[r]-(b) return *;
 //match (a)-[r]-(b) delete a,r,b;
 //match n delete n;

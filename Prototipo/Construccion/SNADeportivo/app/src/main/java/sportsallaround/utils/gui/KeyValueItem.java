@@ -1,4 +1,8 @@
-package sportsallaround.utils;
+package sportsallaround.utils.gui;
+
+import android.util.Log;
+
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 
 /**
  * Created by nicolas on 28/06/15.

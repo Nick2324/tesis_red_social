@@ -3,7 +3,6 @@ package sportsallaround.snadeportivo.eventos;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,12 +13,12 @@ import android.widget.TextView;
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.utils.AttachObjetoListener;
-import sportsallaround.utils.ObjetoListener;
-import sportsallaround.utils.ObjetoListenerSpinner;
+import sportsallaround.utils.gui.AttachObjetoListener;
+import sportsallaround.utils.gui.ObjetoListener;
+import sportsallaround.utils.gui.ObjetoListenerSpinner;
+import sportsallaround.utils.gui.TituloActividad;
 
-public class CrearEvento extends Activity implements ObjetoListenerSpinner,AttachObjetoListener,
-                                                     SpinnerEventos.OnFragmentInteractionListener{
+public class CrearEvento extends Activity implements ObjetoListenerSpinner,AttachObjetoListener,TituloActividad.InitializerTituloActividad {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +87,7 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {}
-
+    public int getIdTituloActividad() {
+        return R.string.title_activity_crear_evento;
+    }
 }

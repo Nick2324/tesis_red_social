@@ -1,4 +1,4 @@
-package sportsallaround.utils;
+package sportsallaround.utils.gui;
 
 /**
  * Created by Felipe on 5/1/2015.

@@ -25,9 +25,9 @@ import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveUserData;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
 import sportsallaround.utils.Constants;
-import sportsallaround.utils.DatePickerFragment;
+import sportsallaround.utils.gui.DatePickerFragment;
 import sportsallaround.utils.ObtainUserInfo;
-import sportsallaround.utils.OnDatePickedListener;
+import sportsallaround.utils.gui.OnDatePickedListener;
 import sportsallaround.utils.ServiceUtils;
 import sportsallaround.utils.Utils;
 

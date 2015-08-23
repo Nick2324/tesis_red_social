@@ -12,9 +12,9 @@ import org.jboss.resteasy.plugins.providers.RegisterBuiltin;
 import org.jboss.resteasy.spi.ResteasyProviderFactory;
 import org.jboss.resteasy.util.Base64;
 
-import com.sna_deportivo.utils.Constantes;
-import com.sna_deportivo.utils.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.Constantes;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 

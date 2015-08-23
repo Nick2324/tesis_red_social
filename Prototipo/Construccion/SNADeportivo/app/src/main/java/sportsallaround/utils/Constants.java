@@ -12,9 +12,11 @@ public class Constants {
     //**************************************Servicios Eventos**************************************
     public static final String SERVICES_PATH_EVENTOS = "eventos/";
     //*********************************************************************************************
-
+    //*************************************Servicios Deportes**************************************
+    public static final String SERVICES_PATH_DEPORTES = "deportes/";
+    //*********************************************************************************************
     //******************************Strings de formato y patrones**********************************
-    public static final String ROOT_URL = "http://192.168.0.8:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://192.168.0.12:8080/SNA_DEPORTIVO_WEB/services/";
     //public static final String ROOT_URL = "http://10.42.0.1:8080/SNA_DEPORTIVO_WEB/services/";
     /*
     *

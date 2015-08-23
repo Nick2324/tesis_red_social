@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="title_activity_informacion_general_evento">Informacion General de Evento</string>
     <string name="nombre_evento">Nombre del evento</string>
     <string name="descripcion_evento">Descripción del evento</string>
     <string name="deporte_evento">Deporte del evento</string>
@@ -20,5 +21,6 @@
     <string name="hint_numero_participantes">pon el número máximo de participantes</string>
     <string name="hint_rango_maximo_edad">pon el rango máximo de edad</string>
     <string name="hint_rango_minimo_edad">pon el rango mínimo de edad</string>
+    <string name="imagen_evento">Imagen del evento</string>
 
 </resources>

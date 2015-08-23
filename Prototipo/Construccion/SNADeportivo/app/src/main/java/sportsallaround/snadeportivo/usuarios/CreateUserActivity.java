@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,8 +24,8 @@ import java.io.InputStream;
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
 import sportsallaround.utils.Constants;
-import sportsallaround.utils.DatePickerFragment;
-import sportsallaround.utils.OnDatePickedListener;
+import sportsallaround.utils.gui.DatePickerFragment;
+import sportsallaround.utils.gui.OnDatePickedListener;
 import sportsallaround.utils.ServiceUtils;
 import sportsallaround.utils.Utils;
 

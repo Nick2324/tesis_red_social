@@ -1,11 +1,11 @@
 package com.sna_deportivo.pojo.deportes;
 
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.StringUtils;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonSerializable;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
-import com.sna_deportivo.utils.ObjectSNSDeportivo;
-import com.sna_deportivo.utils.StringUtils;
 
 public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	
@@ -15,6 +15,7 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	private String fechaCreacion;
 	private String historia;
 	private Boolean esOlimpico;
+	private String aRetornar;
 	
 	public Deporte(){}
 
@@ -75,6 +76,14 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 		this.esOlimpico = esOlimpico;
 	}
 
+	@Override
+	public String toString(){
+		if(this.aRetornar != null && 
+				aRetornar.equals("nombre"))
+			return this.getNombre();
+		return this.stringJson();
+	}
+	
 	@Override
 	public String stringJson() {
 		return "{id:"+ this.id.toString() +","
@@ -149,6 +158,11 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 		
 		return false;
 	
+	}
+
+	@Override
+	public void retornoToString(String aRetornar) {
+		this.aRetornar = aRetornar;
 	}
 
 }
