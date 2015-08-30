@@ -1,0 +1,64 @@
+create (:E_Rol {nombre:"Jugador", descripcion:"Rol asociado a los usuarios que practican un deporte", consecutivoRol:1})
+
+create (:E_Rol {nombre:"Entrenador", descripcion:"Rol asociado a los usuarios que se dedican a entrenar a jugadores", consecutivoRol:2})
+
+create (:E_Permiso {nombre:"Administración de usuario", descripcion:"Funcionalidad que permite a los usuarios acceder al menú de administración de la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.fragmentos.GenericMenuFragment", consecutivoPermiso:1})
+
+create (:E_Permiso {nombre:"Actualizar datos personales", descripcion:"Funcionalidad que permite a los usuarios actualizar su información de contacto en la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePersonalInfoActivity", consecutivoPermiso:2})
+
+create (:E_Permiso {nombre:"Actualizar datos de jugador", descripcion:"Funcionalidad que permite a los usuarios actualizar su información general de jugador", ruta:"", consecutivoPermiso:3})
+
+create (:E_Permiso {nombre:"Actualizar mis deportes practicados", descripcion:"Funcionalidad que permite a los usuarios actualizar sus deportes practicados", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePracticedSport", consecutivoPermiso:4})
+
+create (:E_Permiso {nombre:"Mis patrocinios", descripcion:"Funcionalidad que permite a los acceder al menu de actualizacion de patrocinios", ruta:"", consecutivoPermiso:5})
+
+
+match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:1}) create (p)-[:R_Permiso]->(r)
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:2}) create (p)-[:R_Permiso]->(r)
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:3}) create (p)-[:R_Permiso]->(r)
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:4}) create (p)-[:R_Permiso]->(r)
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:5}) create (p)-[:R_Permiso]->(r)
+
+create (:E_Deporte {id:1,nombre:"Tenis",descripcion:"Deporte Tenis",fechaCreacion:"Siglo xxxxx",historia:"Historia del tenis", esOlimpico:true})
+
+create (:E_Deporte {id:2,nombre:"Rugby",descripcion:"Deporte Rugby",fechaCreacion:"Siglo xxxxx",historia:"Historia del rugby", esOlimpico:false})
+
+create (:E_Posicion {id:1,nombre:"No aplica",descripcion:"No aplica"})
+
+create (:E_Posicion {id:2,nombre:"Apertura",descripcion:" El apertura forma parte de la línea de tres cuartos y es el encargado de distribuir y organizar el juego del resto de la línea y del equipo, en colaboración con el medio scrum. Generalmente el apertura porta el dorsal '10'"})
+create (:E_Posicion {id:3,nombre:"Centro",descripcion:"Se denominan primer centro (o inside) y segundo centro (o outside). Generalmente son los jugadores que utilizan la camiseta con los dorsales 12 y 13, respectivamente. Son jugadores de carácter sobre todo ofensivo y necesitan ser fuertes para poder romper la línea de defensa contraria y luego pasar el balón. También necesitan ser buenos con el placaje (tackle) en jugadas defensivas."})
+create (:E_Posicion {id:4,nombre:"Flanker",descripcion:"Los flankers forman parte de la tercera línea, junto al número 8 en las formaciones de melé y son los jugadores que suelen portar los dorsales 6 (flanker cerrado) y 7 (flanker abierto)"})
+create (:E_Posicion {id:5,nombre:"Talonador",descripcion:"Es el jugador que se sitúa entre los dos pilares en la primera línea de la delantera en las formaciones del scrum o melé. Habitualmente es el jugador con el dorsal número 2"})
+create (:E_Posicion {id:6,nombre:"Medio scrum",descripcion:"El medio scrum es el jugador que se sitúa junto a la formación en los scrums, pero no se incorpora a ellas. El dorsal más típico de esta posición es el número '9'"})
+create (:E_Posicion {id:7,nombre:"Numero 8",descripcion:" Esta posición no tiene una denominación concreta y se le conoce por el dorsal que porta en el terreno de juego. El ocho forma parte de la tercera línea de la delantera, junto a los flankers"})
+create (:E_Posicion {id:8,nombre:"Pilar",descripcion:". Hay dos pilares en cada equipo y son los dos jugadores que se sitúan a ambos lados del talonador (en inglés hooker) en la primera línea de la melé (scrum). Habitualemente visten los dorsales 1 y 3, a la izquierda y derecha del talonador (número 2), respectivamente."})
+create (:E_Posicion {id:9,nombre:"Segunda linea",descripcion:"Suelen ser los jugadores más altos del equipo. En las formaciones de melé, son los encargados de fijar la posición y realizar el empuje principal. En las formaciones de touch pueden ocupar posiciones de saltador o levantar a estos"})
+create (:E_Posicion {id:10,nombre:"Wing",descripcion:" Los Wings desarrollan su juego por las bandas laterales del campo y son los jugadores que suelen portar los dorsales 11 (wing izquierdo) y 14 (wing derecho)"})
+create (:E_Posicion {id:11,nombre:"Zaguero",descripcion:"Para ocupar esta posición se deben reunir ciertas cualidades específicas. Dado que es el último hombre en detener el contraataque del rival debe ser un buen placador. Por lo general, desde posiciones defensivas utiliza mucho el juego aéreo ejecutando muchas patadas (en inglés kicks) por lo que también debe ser buen pateador"})
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:2}) create (d)-[:R_PosicionDeporte {id:1}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:3}) create (d)-[:R_PosicionDeporte {id:2}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:4}) create (d)-[:R_PosicionDeporte {id:3}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:5}) create (d)-[:R_PosicionDeporte {id:4}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:6}) create (d)-[:R_PosicionDeporte {id:5}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:7}) create (d)-[:R_PosicionDeporte {id:6}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:8}) create (d)-[:R_PosicionDeporte {id:7}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:9}) create (d)-[:R_PosicionDeporte {id:8}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:10}) create (d)-[:R_PosicionDeporte {id:9}]->(p)
+
+match (d:E_Deporte {id:2}),(p:E_Posicion{id:11}) create (d)-[:R_PosicionDeporte {id:10}]->(p)
+
+match (d:E_Deporte {id:1}),(p:E_Posicion{id:1}) create (d)-[:R_PosicionDeporte {id:11}]->(p)
+
