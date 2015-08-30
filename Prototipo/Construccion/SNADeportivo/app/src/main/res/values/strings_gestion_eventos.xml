@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="titulo_gestion_eventos">Gestion de eventos</string>
+    <string name="boton_mis_eventos">Mis eventos</string>
+    <string name="boton_explorar_eventos">Explorar eventos</string>
+</resources>

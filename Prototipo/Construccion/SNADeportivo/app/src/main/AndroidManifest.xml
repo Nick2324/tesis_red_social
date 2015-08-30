@@ -37,11 +37,10 @@
             android:label="@string/title_activity_user_update_sports" >
         </activity>
         <activity
-            android:name=".eventos.GestionEventos"
-            android:label="@string/title_activity_gestion_eventos" >
+            android:name=".eventos.GestionEventosLista"
+            android:label="@string/titulo_gestion_eventos_lista" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

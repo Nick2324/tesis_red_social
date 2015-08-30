@@ -65,7 +65,8 @@ public class ServiceUtils {
             }
             conn.connect();
 
-            Log.d("Nick:Status", new Integer(conn.getResponseCode()).toString());
+            Log.d("Nick:Response", "Status: " + new Integer(conn.getResponseCode()).toString()+
+                  "Servicio: " + serviceURL);
             is = conn.getInputStream();
 
             retorno = Utils.convertStreamToString(is);

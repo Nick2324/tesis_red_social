@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sportsallaround.snadeportivo.eventos.GestionEventos"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_titulo_actividad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:text="@string/titulo_gestion_eventos"/>
+
+    <TextView
+        android:id="@+id/textview_barra_horizontal_titulos"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="#FF33B5E5"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/button_mis_eventos"
+        android:layout_gravity="center"
+        android:text="@string/boton_mis_eventos"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/button_eventos_sna"
+        android:layout_gravity="center"
+        android:text="@string/boton_explorar_eventos"/>
+
+</LinearLayout>

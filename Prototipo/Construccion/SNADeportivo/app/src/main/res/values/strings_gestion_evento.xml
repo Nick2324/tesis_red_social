@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="title_activity_gestion_eventos">Eventos deportivos</string>
+    <string name="titulo_gestion_eventos_lista">Eventos deportivos</string>
     <string name="hint_carga_informacion">Información del evento</string>
-    <string-array name="tipos_eventos">
-        <item>Practica deportiva</item>
-    </string-array>
-    <string name="hint_busqueda_administracion_eventos">escribe el nombre del evento a filtrar</string>
     <string name="crear_evento">Crear evento</string>
     <string name="tipo_evento">Tipo de evento</string>
-
+    <string name="lista_evento_string">ListaEventos</string>
 </resources>

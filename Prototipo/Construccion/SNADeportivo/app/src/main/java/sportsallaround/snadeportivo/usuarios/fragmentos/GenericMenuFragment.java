@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,7 +85,9 @@ public class GenericMenuFragment extends Fragment{
         Button boton;
         LinearLayout buttonLayout = new LinearLayout(context);
         buttonLayout.setOrientation(LinearLayout.VERTICAL);
+        Log.d("Nick:Cantidad","Size: " + permisos.size());
         for(final Permiso permiso : permisos){
+            Log.d("Nick:Permisos", permiso.getNombre() + " " + permiso.getRuta());
             boton = new Button(context);
             boton.setText(permiso.getNombre());
             boton.setOnClickListener(new View.OnClickListener() {

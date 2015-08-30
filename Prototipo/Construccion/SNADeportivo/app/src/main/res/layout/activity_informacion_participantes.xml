@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textview_title_eventos"
-        android:text="@string/title_activity_gestion_eventos"
+        android:text="@string/titulo_gestion_eventos_lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
