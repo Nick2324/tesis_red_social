@@ -42,24 +42,6 @@
         android:gravity="center"
         android:layout_gravity="center" />
 
-    <!--
-    <EditText
-        android:id="@+id/edittext_busqueda_administracion_eventos"
-        android:hint="@string/hint_filtro_lista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-    
-    <ListView
-        android:id="@+id/listview_lista_eventos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
-        android:layout_gravity="center">
-    </ListView>
-    -->
     <Button
         android:id="@+id/button_crear_evento"
         android:layout_width="wrap_content"

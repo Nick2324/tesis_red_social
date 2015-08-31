@@ -187,6 +187,9 @@ public class GestionEventosLista extends Activity
     }
 
     @Override
+    public void realizarAccionLongClick(KeyValueItem item, String identificadorFragmento) {}
+
+    @Override
     public String getNombreBoton() {
         return "Ir al evento";
     }

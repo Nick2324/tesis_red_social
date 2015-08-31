@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import sportsallaround.snadeportivo.R;
 
@@ -30,6 +31,8 @@ public class ListaConFiltro extends Fragment {
         public ArrayList<KeyValueItem> generarAdapter(String identificadorFragmento);
 
         public ArrayList<KeyValueItem> regenerarAdapter(String identificadorFragmento);
+
+        public void realizarAccionLongClick(KeyValueItem item, String identificadorFragmento);
 
     }
 
@@ -81,6 +84,14 @@ public class ListaConFiltro extends Fragment {
                 actividad.realizarAccionAlClick((KeyValueItem) lista.getAdapter().getItem(position), getTag());
             }
         });
+        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                ListView lista = (ListView) parent;
+                actividad.realizarAccionLongClick((KeyValueItem) lista.getAdapter().getItem(position), getTag());
+                return false;
+            }
+        });
         EditText texto = (EditText) getView().findViewById(R.id.edittext_busqueda_filtro_lista);
         texto.addTextChangedListener(new TextWatcher() {
             @Override
@@ -90,7 +101,8 @@ public class ListaConFiltro extends Fragment {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 ListView lista = (ListView) getView().findViewById(R.id.listview_lista_con_filtro);
-                ((ArrayAdapter) lista.getAdapter()).getFilter().filter(s);
+                if(lista.getAdapter()!=null)
+                    ((ArrayAdapter) lista.getAdapter()).getFilter().filter(s);
             }
 
             @Override
@@ -119,6 +131,12 @@ public class ListaConFiltro extends Fragment {
         if(lista.getAdapter() != null){
             ((ArrayAdapter)lista.getAdapter()).clear();
         }
+    }
+
+    public void eliminarElemento(KeyValueItem aBorrar){
+        ListView lista = (ListView)getView().findViewById(R.id.listview_lista_con_filtro);
+        ((ArrayAdapter)lista.getAdapter()).remove(aBorrar);
+        ((ArrayAdapter)lista.getAdapter()).notifyDataSetChanged();
     }
 
 }

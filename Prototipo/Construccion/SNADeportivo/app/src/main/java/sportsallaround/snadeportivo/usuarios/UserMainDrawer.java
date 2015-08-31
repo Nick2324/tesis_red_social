@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -215,7 +216,6 @@ public class UserMainDrawer extends ActionBarActivity
                 JSONObject parametros = new JSONObject(activity.getUserRole().toString());
                 String responseString = ServiceUtils.invokeService(parametros, Constants.SERVICES_OBTENER_PERMISOS_ROL, "POST");
                 JSONArray response = new JSONArray(responseString);
-
                 if(response.getJSONObject(0) != null)
                     permisos = new Permiso[response.length()+1];
                 else

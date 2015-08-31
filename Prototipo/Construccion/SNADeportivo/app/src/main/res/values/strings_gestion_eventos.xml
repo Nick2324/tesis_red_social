@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="titulo_gestion_eventos_lista">Eventos deportivos</string>
+    <string name="hint_carga_informacion">Información del evento</string>
+    <string name="crear_evento">Crear evento</string>
+    <string name="tipo_evento">Tipo de evento</string>
+    <string name="lista_evento_string">ListaEventos</string>
     <string name="titulo_gestion_eventos">Gestion de eventos</string>
     <string name="boton_mis_eventos">Mis eventos</string>
     <string name="boton_explorar_eventos">Explorar eventos</string>
+    <string name="solicitud_de_participantes">Solicitud de participantes</string>
+    <string name="solicitud_para_participantes">Solicitud para participantes</string>
+    <string name="fragment_solicitud_de_participante">fragment_solicitud_de_participante</string>
+    <string name="fragment_solicitud_para_participante">fragment_solicitud_para_participante</string>
 </resources>

@@ -10,15 +10,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <ListView
-        android:id="@+id/listview_lista_con_filtro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
-        android:layout_gravity="center">
-    </ListView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/listview_lista_con_filtro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:longClickable="true">
+        </ListView>
+    </ScrollView>
+
 
 
 </LinearLayout>

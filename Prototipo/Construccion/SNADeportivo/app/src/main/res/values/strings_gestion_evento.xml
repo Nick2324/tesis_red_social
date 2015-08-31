@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="titulo_gestion_eventos_lista">Eventos deportivos</string>
-    <string name="hint_carga_informacion">Información del evento</string>
-    <string name="crear_evento">Crear evento</string>
-    <string name="tipo_evento">Tipo de evento</string>
-    <string name="lista_evento_string">ListaEventos</string>
-</resources>

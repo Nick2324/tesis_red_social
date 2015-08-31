@@ -23,6 +23,8 @@ public class ServiceUtils {
 
     public static String invokeService(JSONObject parametros, String serviceURL, String method){
 
+        Log.d("Nick:Servicio","Ejecutando servicio "+serviceURL);
+
         InputStream is;
         String retorno = "";
 
