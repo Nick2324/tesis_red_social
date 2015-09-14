@@ -7,21 +7,17 @@
     android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.InformacionParticipantes">
 
-    <TextView
-        android:id="@+id/textview_title_eventos"
-        android:text="@string/titulo_gestion_eventos_lista"
-        android:layout_width="wrap_content"
+    <fragment
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:name="sportsallaround.utils.gui.TituloActividad"
+        android:tag="@string/titulo_gestion_eventos_lista"></fragment>
 
-    <TextView
-        android:id="@+id/textview_barra_horizontal_titulos"
-        android:layout_width="fill_parent"
-        android:layout_height="2dip"
-        android:background="#FF33B5E5"
-        android:layout_gravity="center"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="sportsallaround.utils.gui.TituloActividad"
+        android:tag="@string/general_participantes"></fragment>
 
     <TextView android:text="@string/numero_participantes" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -30,7 +26,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/numero_participantes_evento_info_general"
-        android:hint="@string/hint_numero_participantes"/>
+        android:hint="@string/hint_numero_participantes"
+        android:inputType="number"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="sportsallaround.utils.gui.TituloActividad"
+        android:tag="@string/caracteristicas_participantes"></fragment>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="sportsallaround.utils.gui.SpinnerDesdeBD"
+        android:id="@+id/spinner_genero"></fragment>
 
     <TextView android:text="@string/rango_minimo_edad" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -39,7 +48,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rango_minimo_edad_evento_info_general"
-        android:hint="@string/hint_rango_minimo_edad"/>
+        android:hint="@string/hint_rango_minimo_edad"
+        android:inputType="number"/>
 
     <TextView android:text="@string/rango_maximo_edad" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -48,6 +58,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rango_maximo_edad_evento_info_general"
-        android:hint="@string/hint_rango_maximo_edad"/>
+        android:hint="@string/hint_rango_maximo_edad"
+        android:inputType="number"/>
 
 </LinearLayout>

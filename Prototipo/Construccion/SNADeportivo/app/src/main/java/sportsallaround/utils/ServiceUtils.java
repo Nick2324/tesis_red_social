@@ -19,7 +19,22 @@ import java.util.Iterator;
  */
 public class ServiceUtils {
 
+    public static Integer STATUS;
+
     private ServiceUtils(){}
+
+    /*public static String invokeService(String parametros, String serviceURL, String method){
+        String resultado = null;
+        try {
+            JSONObject parametrosJson = new JSONObject(parametros);
+            resultado = invokeService(parametrosJson,serviceURL,method);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return resultado;
+
+    }*/
 
     public static String invokeService(JSONObject parametros, String serviceURL, String method){
 
@@ -66,7 +81,7 @@ public class ServiceUtils {
                 wr.flush();
             }
             conn.connect();
-
+            STATUS = conn.getResponseCode();
             Log.d("Nick:Response", "Status: " + new Integer(conn.getResponseCode()).toString()+
                   "Servicio: " + serviceURL);
             is = conn.getInputStream();

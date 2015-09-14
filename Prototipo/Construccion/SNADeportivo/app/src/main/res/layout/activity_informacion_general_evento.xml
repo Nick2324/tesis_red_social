@@ -104,11 +104,16 @@
             android:id="@+id/hora_final_evento_info_general"
             android:hint="@string/hint_hora_final_evento"/>
 
-        <Button
+        <TextView
+            android:text="@string/fecha_creacion_evento"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/crear_evento_boton"
-            android:text="@string/crear_evento"/>
+            android:id="@+id/fecha_creacion_evento"
+            android:editable="false"/>
 
     </LinearLayout>
 

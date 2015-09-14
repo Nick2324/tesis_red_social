@@ -153,8 +153,8 @@ public class GestionEventosLista extends Activity
     }
 
     @Override
-    public int getIdTituloActividad() {
-        return R.string.titulo_gestion_eventos_lista;
+    public String getIdTituloActividad(String tagFragmento) {
+        return getResources().getString(R.string.titulo_gestion_eventos_lista);
     }
 
     @Override

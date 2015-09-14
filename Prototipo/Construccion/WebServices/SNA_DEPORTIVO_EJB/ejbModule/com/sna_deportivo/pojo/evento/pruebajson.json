@@ -1,113 +1,18 @@
-{
-	"results":[
-		{
-			"columns":[
-				"deporte"
-			],
-			"data":[
-				{
-					"rest":[
-						{
-							"outgoing_relationships":"http://localhost:7474/db/data/node/8/relationships/out",
-							"labels":"http://localhost:7474/db/data/node/8/labels",
-							"all_typed_relationships":"http://localhost:7474/db/data/node/8/relationships/all/{-list|&|types}",
-							"traverse":"http://localhost:7474/db/data/node/8/traverse/{returnType}",
-							"self":"http://localhost:7474/db/data/node/8",
-							"property":"http://localhost:7474/db/data/node/8/properties/{key}",
-							"properties":"http://localhost:7474/db/data/node/8/properties",
-							"outgoing_typed_relationships":"http://localhost:7474/db/data/node/8/relationships/out/{-list|&|types}",
-							"incoming_relationships":"http://localhost:7474/db/data/node/8/relationships/in",
-							"create_relationship":"http://localhost:7474/db/data/node/8/relationships",
-							"paged_traverse":"http://localhost:7474/db/data/node/8/paged/traverse/{returnType}{?pageSize,leaseTime}",
-							"all_relationships":"http://localhost:7474/db/data/node/8/relationships/all",
-							"incoming_typed_relationships":"http://localhost:7474/db/data/node/8/relationships/in/{-list|&|types}",
-							"metadata":{
-								"id":8,
-								"labels":[
-									"E_Deporte"
-								]
-							},
-							"data":{
-								"fechaCreacion":"XIX",
-								"esOlimpico":false,
-								"historia":"El rugby moderno, al igual que el fútbol moderno, es una evolución directa del fútbol medieval británico, también llamado en español fútbol de carnaval (en inglés &#34;mob football&#34;, equivalente a fútbol multitudinario), un juego de pelota violento y reiteradamente prohibido, de reglas sumamente variables, que se practicaba popularmente en las Islas Británicas durante el medievo europeo, en el que se usaban tanto las manos como los pies, así como la fuerza para detener a los competidores.",
-								"descripcion":"Desde los orígenes mismos del rugby y el fútbol actual, a mediados del siglo XIX, se definieron como el álter ego del otro: fuerza contra habilidad; juego limpio contra juego desleal, etc.4 Un antiguo dicho británico dice que &#34;el fútbol es un juego de caballeros jugado por villanos y el rugby es un juego de villanos jugado por caballeros&#34;.5 En el rugby es característico el respeto por las reglas que deben practicar tanto los jugadores como el público y las decisiones del árbitro rara vez son discutidas por los jugadores. Además, se fomenta la sociabilidad, dándose generalmente entre compañeros de equipos y oponentes una cordial reunión después de los partidos, denominada tercer tiempo, junto con los árbitros, entrenadores y parte del público, para hablar acerca del partido. Este apelativo se ha hecho extensivo a los medios donde se analiza este deporte.",
-								"nombre":"Rugby",
-								"id":1
-							}
-						}
-					]
-				},
-				{
-					"rest":[
-						{
-							"outgoing_relationships":"http://localhost:7474/db/data/node/9/relationships/out",
-							"labels":"http://localhost:7474/db/data/node/9/labels",
-							"all_typed_relationships":"http://localhost:7474/db/data/node/9/relationships/all/{-list|&|types}",
-							"traverse":"http://localhost:7474/db/data/node/9/traverse/{returnType}",
-							"self":"http://localhost:7474/db/data/node/9",
-							"property":"http://localhost:7474/db/data/node/9/properties/{key}",
-							"properties":"http://localhost:7474/db/data/node/9/properties",
-							"outgoing_typed_relationships":"http://localhost:7474/db/data/node/9/relationships/out/{-list|&|types}",
-							"incoming_relationships":"http://localhost:7474/db/data/node/9/relationships/in",
-							"create_relationship":"http://localhost:7474/db/data/node/9/relationships",
-							"paged_traverse":"http://localhost:7474/db/data/node/9/paged/traverse/{returnType}{?pageSize,leaseTime}",
-							"all_relationships":"http://localhost:7474/db/data/node/9/relationships/all",
-							"incoming_typed_relationships":"http://localhost:7474/db/data/node/9/relationships/in/{-list|&|types}",
-							"metadata":{
-								"id":9,
-								"labels":[
-									"E_Deporte"
-								]
-							},
-							"data":{
-								"fechaCreacion":"XVIII",
-								"esOlimpico":true,
-								"historia":"Las primeras referencias del tenis tienen lugar en Francia, nombrado «Jeu de paume» dado que al principio se golpeaba la pelota con la mano. Más tarde se empezaron a utilizar raquetas. El tenis original se jugaba en pistas de hierba natural. Se originó en Europa a finales del siglo XVIII[cita requerida] y se expandió en un principio por los países angloparlantes, especialmente entre sus clases altas. En la actualidad el tenis se ha universalizado, y es jugado en casi todos los países del mundo. Desde 1926, con la creación del primer tour, es un deporte profesional. Es además un deporte olímpico desde los Juegos Olímpicos de Atenas 1896",
-								"descripcion":"El tenis es un deporte de raqueta que se practica sobre una cancha rectangular delimitada por líneas y dividida por una red.2 Se disputa entre dos jugadores (individuales) o entre dos parejas (dobles). El objetivo del juego es lanzar una pelota golpeándola con la raqueta de modo que bote dentro del campo del rival procurando que éste no pueda devolverla",
-								"nombre":"Tenis",
-								"id":2
-							}
-						}
-					]
-				},
-				{
-					"rest":[
-						{
-							"outgoing_relationships":"http://localhost:7474/db/data/node/63/relationships/out",
-							"labels":"http://localhost:7474/db/data/node/63/labels",
-							"all_typed_relationships":"http://localhost:7474/db/data/node/63/relationships/all/{-list|&|types}",
-							"traverse":"http://localhost:7474/db/data/node/63/traverse/{returnType}",
-							"self":"http://localhost:7474/db/data/node/63",
-							"property":"http://localhost:7474/db/data/node/63/properties/{key}",
-							"properties":"http://localhost:7474/db/data/node/63/properties",
-							"outgoing_typed_relationships":"http://localhost:7474/db/data/node/63/relationships/out/{-list|&|types}",
-							"incoming_relationships":"http://localhost:7474/db/data/node/63/relationships/in",
-							"create_relationship":"http://localhost:7474/db/data/node/63/relationships",
-							"paged_traverse":"http://localhost:7474/db/data/node/63/paged/traverse/{returnType}{?pageSize,leaseTime}",
-							"all_relationships":"http://localhost:7474/db/data/node/63/relationships/all",
-							"incoming_typed_relationships":"http://localhost:7474/db/data/node/63/relationships/in/{-list|&|types}",
-							"metadata":{
-								"id":63,
-								"labels":[
-									"E_Deporte"
-								]
-							},
-							"data":{
-								"fechaCreacion":"XVII",
-								"esOlimpico":true,
-								"historia":"El deporte mas viejo del mundo!!",
-								"descripcion":"El mejor deporte del mundo simple y sencillo",
-								"nombre":"Lacrosse",
-								"id":1
-							}
-						}
-					]
-				}
-			]
-		}
-	],
-	"errors":[
-		
-	]
-}
+[
+	{
+		id:1,
+		nombre:"Rugby",
+		descripcion:"Desde los orígenes mismos del rugby y el fútbol actual <comma>  a mediados del siglo XIX <comma>  se definieron como el álter ego del otro: fuerza contra habilidad; juego limpio contra juego desleal <comma>  etc.4 Un antiguo dicho británico dice que "elfútbolesunjuegodecaballerosjugadoporvillanosyelrugbyesunjuegodevillanosjugadoporcaballeros".5 En el rugby es característico el respeto por las reglas que deben practicar tanto los jugadores como el público y las decisiones del árbitro rara vez son discutidas por los jugadores. Además <comma>  se fomenta la sociabilidad <comma>  dándose generalmente entre compañeros de equipos y oponentes una cordial reunión después de los partidos <comma>  denominada tercer tiempo <comma>  junto con los árbitros <comma>  entrenadores y parte del público <comma>  para hablar acerca del partido. Este apelativo se ha hecho extensivo a los medios donde se analiza este deporte.",
+		fechaCreacion:"XIX",
+		historia:"El rugby moderno <comma>  al igual que el fútbol moderno <comma>  es una evolución directa del fútbol medieval británico <comma>  también llamado en español fútbol de carnaval (en inglés "mobfootball" <comma>  equivalente a fútbol multitudinario) <comma>  un juego de pelota violento y reiteradamente prohibido <comma>  de reglas sumamente variables <comma>  que se practicaba popularmente en las Islas Británicas durante el medievo europeo <comma>  en el que se usaban tanto las manos como los pies <comma>  así como la fuerza para detener a los competidores.",
+		esOlimpico:false
+	},
+	{
+		id:2,
+		nombre:"Tenis",
+		descripcion:"El tenis es un deporte de raqueta que se practica sobre una cancha rectangular delimitada por líneas y dividida por una red.2 Se disputa entre dos jugadores (individuales) o entre dos parejas (dobles). El objetivo del juego es lanzar una pelota golpeándola con la raqueta de modo que bote dentro del campo del rival procurando que éste no pueda devolverla",
+		fechaCreacion:"XVIII",
+		historia:"Las primeras referencias del tenis tienen lugar en Francia <comma>  nombrado «Jeu de paume» dado que al principio se golpeaba la pelota con la mano. Más tarde se empezaron a utilizar raquetas. El tenis original se jugaba en pistas de hierba natural. Se originó en Europa a finales del siglo XVIII[cita requerida] y se expandió en un principio por los países angloparlantes <comma>  especialmente entre sus clases altas. En la actualidad el tenis se ha universalizado <comma>  y es jugado en casi todos los países del mundo. Desde 1926 <comma>  con la creación del primer tour <comma>  es un deporte profesional. Es además un deporte olímpico desde los Juegos Olímpicos de Atenas 1896",
+		esOlimpico:true
+	}
+]

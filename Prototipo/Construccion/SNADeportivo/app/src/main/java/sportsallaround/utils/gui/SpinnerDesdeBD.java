@@ -22,6 +22,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.Key;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
@@ -39,8 +40,9 @@ public class SpinnerDesdeBD extends Fragment {
         public JSONObject getParam();
         public String getAtributoMostradoSpinner();
         public String getTituloSpinner();
-        public void onItemSelectedSpinnerBD(KeyValueItem seleccionado);
-        public void onNothingSelectedSpinnerBD();
+        public void onPostExcecute();
+        public void onItemSelectedSpinnerBD(KeyValueItem seleccionado,String tagFragmento);
+        public void onNothingSelectedSpinnerBD(String tagFragmento);
 
     }
 
@@ -88,7 +90,7 @@ public class SpinnerDesdeBD extends Fragment {
                             getView().getContext(),
                             android.R.layout.simple_spinner_dropdown_item,
                             listaObjetosSNS));
-
+                    this.actividad.onPostExcecute();
                 } catch (JSONException e){
                     Log.w("SNA:JSONException", e.getMessage());
                 } catch (ExcepcionJsonDeserializacion e) {
@@ -146,12 +148,12 @@ public class SpinnerDesdeBD extends Fragment {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                mListener.onItemSelectedSpinnerBD((KeyValueItem) parent.getAdapter().getItem(position));
+                mListener.onItemSelectedSpinnerBD((KeyValueItem) parent.getAdapter().getItem(position), getTag());
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                mListener.onNothingSelectedSpinnerBD();
+                mListener.onNothingSelectedSpinnerBD(getTag());
             }
 
         });
@@ -160,6 +162,17 @@ public class SpinnerDesdeBD extends Fragment {
 
     public void setUpKeyValue(){
         new PeticionSpinner(mListener).ejecutarPeticion();
+    }
+
+    public void setSeleccionado(Object value){
+        Spinner spinnerBD = (Spinner)getView().findViewById(R.id.spinner_bd);
+        ArrayAdapter<KeyValueItem> spinnerAdapter =
+                (ArrayAdapter<KeyValueItem>)spinnerBD.getAdapter();
+        for(int i=0;i < spinnerAdapter.getCount(); i++){
+            if(spinnerAdapter.getItem(i).getValue().equals(value)){
+                spinnerBD.setSelection(i);
+            }
+        }
     }
 
 }

@@ -3,6 +3,7 @@ package sportsallaround.utils.gui;
 import android.app.Activity;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +13,11 @@ import sportsallaround.snadeportivo.R;
 
 public class TituloActividad extends Fragment {
 
-    private int idTitulo;
+    private String idTitulo;
 
     public interface InitializerTituloActividad{
 
-        public int getIdTituloActividad();
+        public String getIdTituloActividad(String tagFragmento);
 
     }
 
@@ -33,7 +34,7 @@ public class TituloActividad extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            this.idTitulo = ((InitializerTituloActividad) activity).getIdTituloActividad();
+            this.idTitulo = ((InitializerTituloActividad) activity).getIdTituloActividad(getTag());
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement InitializerTituloActividad");
@@ -44,7 +45,7 @@ public class TituloActividad extends Fragment {
     public void onStart(){
         super.onStart();
         TextView titulo = ((TextView)getView().findViewById(R.id.textview_titulo_actividad));
-        titulo.setText(getResources().getString(this.idTitulo));
+        titulo.setText(this.idTitulo);
     }
 
 }

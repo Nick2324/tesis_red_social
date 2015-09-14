@@ -12,4 +12,13 @@
     <string name="solicitud_para_participantes">Solicitud para participantes</string>
     <string name="fragment_solicitud_de_participante">fragment_solicitud_de_participante</string>
     <string name="fragment_solicitud_para_participante">fragment_solicitud_para_participante</string>
+    <string name="caracteristicas_participantes">Características de participantes</string>
+    <string name="general_participantes">Información general de participantes</string>
+    <string name="lista_participantes">Participantes</string>
+    <string name="titulo_administrar_involucrados">Administración de involucrados</string>
+    <string name="titulo_botones_admin_participantes">Administración de participantes</string>
+    <string name="boton_caracteristicas_participantes">Caracteristicas de participantes</string>
+    <string name="boton_aniadir_participantes">Añadir participantes</string>
+    <string name="boton_consultar_participantes">Consultar participantes</string>
+    <string name="fecha_creacion_evento">Fecha de creación</string>
 </resources>

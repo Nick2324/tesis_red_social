@@ -19,7 +19,6 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name" >
-
         </activity>
         <activity
             android:name=".usuarios.CreateUserActivity"
@@ -44,10 +43,16 @@
         <activity
             android:name=".eventos.CrearEvento"
             android:label="@string/title_activity_crear_evento" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".eventos.InformacionGeneralEvento"
-            android:label="@string/title_activity_informacion_general_evento" >
+            android:label="@string/title_activity_informacion_general_evento"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".ErrorActivity"
@@ -64,10 +69,14 @@
         <activity
             android:name=".eventos.ManejoParticipantes"
             android:label="@string/title_activity_manejo_participantes" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".eventos.ListadoParticipantes"
+            android:label="@string/title_activity_listado_participantes" >
+        </activity>
+        <activity
+            android:name=".eventos.MenuAdministrarInvolucrados"
+            android:label="@string/title_activity_menu_administrar_involucrados" >
         </activity>
     </application>
 

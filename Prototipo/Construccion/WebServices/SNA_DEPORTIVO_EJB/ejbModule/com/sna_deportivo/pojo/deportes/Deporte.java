@@ -86,11 +86,15 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	
 	@Override
 	public String stringJson() {
-		return "{id:"+ this.id.toString() +","
-				+ "nombre:"+ JsonUtils.propiedadNula(this.nombre) +","
-				+ "descripcion:"+ JsonUtils.propiedadNula(this.descripcion) +","
-				+ "fechaCreacion:"+JsonUtils.propiedadNula(this.fechaCreacion) +","
-				+ "historia:"+JsonUtils.propiedadNula(this.historia)+","
+		return "{id:"+ ((this.id!=null)?this.id.toString():"null") +","
+				+ "nombre:"+ JsonUtils.propiedadNula(
+						StringUtils.codificar(this.nombre)) +","
+				+ "descripcion:"+ JsonUtils.propiedadNula(
+						StringUtils.codificar(this.descripcion)) +","
+				+ "fechaCreacion:"+JsonUtils.propiedadNula(
+						StringUtils.codificar(this.fechaCreacion)) +","
+				+ "historia:"+JsonUtils.propiedadNula(
+						StringUtils.codificar(this.historia))+","
 				+ "esOlimpico:"+this.esOlimpico+"}";
 	}
 
@@ -165,4 +169,41 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 		this.aRetornar = aRetornar;
 	}
 
+	@Override
+	public boolean equals(Object obj){
+		boolean igual = true;
+		if(obj instanceof Deporte){
+			Deporte deporte = (Deporte)obj;
+			if(this.id != deporte.getId()){
+				igual = false;
+			}
+			if(!((this.nombre != null &&
+			   this.nombre.equals(deporte.getNombre())) ||
+			   (this.nombre == null && deporte.getNombre() == null))){
+				igual = false;
+			}
+			if(!((this.descripcion != null &&
+			     this.descripcion.equals(deporte.getDescripcion())) ||
+			    (this.descripcion == null && deporte.getDescripcion() == null))){
+				igual = false;
+			}
+			if(!((this.fechaCreacion != null &&
+				  this.fechaCreacion.equals(deporte.getFechaCreacion())) ||
+				 (this.fechaCreacion == null && deporte.getFechaCreacion() == null))){
+				igual = false;
+			}
+			if(!((this.historia != null &&
+			      this.historia.equals(deporte.getHistoria())) ||
+				 (this.historia == null && deporte.getHistoria() == null))){
+				igual = false;
+			}
+			if(this.esOlimpico != deporte.getEsOlimpico()){
+				igual = false;
+			}
+		}else{
+			igual = false;
+		}
+		return igual;
+	}
+	
 }

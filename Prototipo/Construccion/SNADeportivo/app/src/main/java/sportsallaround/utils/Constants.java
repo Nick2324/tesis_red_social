@@ -40,4 +40,8 @@ public class Constants {
     public static final String DATE_FORMAT = "dd/MM/yyyy";
     public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     //*********************************************************************************************
+
+    //*********CONSTANTES PARA EL PASO DE MENSAJES ENTRE ACTIVIDADES SEGUN FUNCIONALIDADES*********
+    public static final String DATOS_FUNCIONALIDAD = "datos_funcionalidad";
+    public static final String FUNCIONALIDAD = "funcionalidad";
 }

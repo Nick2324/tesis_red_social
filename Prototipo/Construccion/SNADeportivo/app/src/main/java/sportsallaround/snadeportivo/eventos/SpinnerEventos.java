@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.gui.AttachObjetoListener;
+import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
 
 public class SpinnerEventos extends Fragment {
@@ -81,6 +82,11 @@ public class SpinnerEventos extends Fragment {
             }
 
         });
+    }
+
+    public ConstantesEventos getValueSpinnerEventos(){
+        Spinner spinnerEventos = (Spinner)getView().findViewById(R.id.spinner_tipo_evento);
+        return (ConstantesEventos)spinnerEventos.getSelectedItem();
     }
 
 }

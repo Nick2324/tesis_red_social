@@ -96,7 +96,7 @@ public class JsonUtils {
 		if(obj == null)
 			return "null";
 		else
-			return "'"+obj.toString()+"'";
+			return "\""+obj.toString()+"\"";
 	}
 	
 	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){

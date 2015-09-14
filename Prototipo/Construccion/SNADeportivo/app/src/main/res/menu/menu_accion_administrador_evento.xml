@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_perfil_evento_admin"
+        android:title="@string/perfil_evento_admin" />
+    <item
+        android:id="@+id/item_info_general_evento_admin"
+        android:title="@string/info_general_evento_admin"/>
+    <item
+        android:id="@+id/item_info_participantes"
+        android:title="@string/informacion_participantes"
+        />
+    <item
+        android:id="@+id/item_gestionar_involucrados_eve_admin"
+        android:title="@string/gestionar_involucrados_eve_admin"/>
+    <item
+        android:id="@+id/item_gestion_ubicaciones_eve_admin"
+        android:title="@string/gestion_ubicaciones_eve_admin"/>
+    <item
+        android:id="@+id/item_crear_evento"
+        android:title="@string/crear_evento"/>
+    <item
+        android:id="@+id/item_cancelar_evento_admin"
+        android:title="@string/cancelar_evento_admin"/>
+
+</menu>
