@@ -64,14 +64,19 @@ public class EventoDeportivo extends Evento{
 	}
 	
 	@Override
-	protected boolean setAtributo(String atributo,Object[] valor) throws ExcepcionJsonDeserializacion{
+	protected boolean setAtributo(String atributo,Object[] valor){
 		if(!super.setAtributo(atributo, valor))
 			if(atributo.equals("eventosInternos")){
 				eventosInternos.clear();
 				for(Object eventoInterno:valor){
 					//Cambiar por Factory, no se me ocurre otro modo
 					Evento e = new PracticaDeportiva();
-					e.deserializarJson((JsonObject)eventoInterno);
+					try {
+						e.deserializarJson((JsonObject)eventoInterno);
+					} catch (ExcepcionJsonDeserializacion e1) {
+						e1.printStackTrace();
+						//Que hacer con esta?
+					}
 					eventosInternos.add(e);
 				}
 				return true;
@@ -81,11 +86,7 @@ public class EventoDeportivo extends Evento{
 	
 	@Override
 	public String toString(){
-		String retorno = super.toString();
-		retorno = retorno.substring(0, retorno.length() - 1) + ",eventosInternos:[";
-		for(Evento e:eventosInternos)
-			retorno += e.toString() + ",";
-		return retorno.substring(0, retorno.length() - 1) + "]}";
+		return this.stringJson();
 	}
 	
 	@Override 
@@ -95,15 +96,6 @@ public class EventoDeportivo extends Evento{
 		for(Evento e:eventosInternos)
 			retorno += e.toString() + ",";
 		return retorno.substring(0, retorno.length() - 1) + "]}";
-	}
-	
-	@Override
-	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
-		for(String propiedad:json.getPropiedades().keySet()){
-			if(!(this.esAtributo(propiedad) && 
-				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
-				throw new ExcepcionJsonDeserializacion();
-		}
 	}
 	
 	@Override

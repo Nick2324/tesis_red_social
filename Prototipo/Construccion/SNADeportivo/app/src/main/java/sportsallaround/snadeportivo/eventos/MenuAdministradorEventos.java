@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.sna_deportivo.utils.gr.StringUtils;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -37,7 +39,7 @@ public class MenuAdministradorEventos implements MenuEventos{
                 return ServiceUtils.invokeService(params[0],
                         Constants.SERVICES_PATH_EVENTOS +
                                 //CAMBIAR POR EL QUE VENGA DE LA TAREA ANTERIOR. HAY QUE MIGRAR A FRAGMENTO
-                                "practicas_libres/",
+                                params[1].getString(ConstantesEvento.TIPO_EVENTO)+"/",
                         "POST");
             }catch(Exception e){
                 Log.e("Nick:Error", e.getMessage());
@@ -51,6 +53,14 @@ public class MenuAdministradorEventos implements MenuEventos{
         protected void onPostExecute(String result){
             if(result != null && result.length() != 0){
                 Toast.makeText(contexto, "Evento creado con éxito", Toast.LENGTH_LONG).show();
+                //MANDAR A MODIFICACION Y MODIFICAR ID DEL EVENTO
+            }else{
+                AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
+                builder.setTitle("Error al guardar el evento").
+                        setMessage("No se ha podido crear el evento debido a datos erroneos o " +
+                                "inexistentes. Por favor verificar").
+                        setNegativeButton("OK", null);
+                builder.create().show();
             }
         }
 
@@ -112,18 +122,25 @@ public class MenuAdministradorEventos implements MenuEventos{
                         setPositiveButton("Si", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                Log.d("Nick1",datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO));
+                                Log.d("Nick2",datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO));
+                                Log.d("Nick3",
+                                        datosIntent.getString(ConstantesEvento.TIPO_EVENTO));
                                 if (datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO) != null &&
                                     datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO) != null &&
                                     datosIntent.getString(ConstantesEvento.TIPO_EVENTO) != null) {
-                                    JSONObject eventoACrear = new JSONObject();
+                                    JSONObject eventoACrear;
+                                    JSONObject tipoEventoJson = new JSONObject();
                                     try {
-                                        eventoACrear.put(ConstantesEvento.DEPORTE_MANEJADO,
-                                                datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO));
-                                        eventoACrear.put(ConstantesEvento.TIPO_EVENTO,
-                                                datosIntent.getString(ConstantesEvento.TIPO_EVENTO));
+                                        Log.d("What!=",datosIntent.getString(
+                                                ConstantesEvento.EVENTO_MANEJADO).replace("\n",StringUtils.NEWLINE));
+                                        eventoACrear = new JSONObject(datosIntent.getString(
+                                                ConstantesEvento.EVENTO_MANEJADO).replace("\n",StringUtils.NEWLINE));
                                         /*eventoACrear.put(ConstantesEvento.DEPORTE_MANEJADO,
                                                 datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO));*/
-                                        new CrearEvento(contexto).execute(eventoACrear);
+                                        tipoEventoJson.put(ConstantesEvento.TIPO_EVENTO,
+                                                datosIntent.getString(ConstantesEvento.TIPO_EVENTO));
+                                        new CrearEvento(contexto).execute(eventoACrear,tipoEventoJson);
                                     } catch (JSONException e) {
                                         AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
                                         builder.setTitle("Error al guardar el evento").

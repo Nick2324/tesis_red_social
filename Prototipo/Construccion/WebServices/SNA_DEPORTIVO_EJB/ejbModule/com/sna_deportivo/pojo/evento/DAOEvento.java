@@ -4,12 +4,13 @@ import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 //!*!*!*!*! Ampliar para devolver el recurso
 
-public abstract class DAOEvento {
+public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	
 	private Evento evento;
 	protected String eventoManejado;

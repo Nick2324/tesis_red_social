@@ -4,4 +4,6 @@ public interface FactoryObjectSNSDeportivo {
 
 	public ObjectSNSDeportivo getObjetoSNS();
 	
+	public ObjectSNSDeportivoDAO getObjetoSNSDAO();
+	
 }

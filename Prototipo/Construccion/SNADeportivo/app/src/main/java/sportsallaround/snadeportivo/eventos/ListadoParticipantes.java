@@ -123,7 +123,7 @@ public class ListadoParticipantes extends Activity
     @Override
     public ArrayList<KeyValueItem> regenerarAdapter(String identificadorFragmento) {
         ArrayList<KeyValueItem> retorno =
-                ConstructorArrObjSNS.producirArrayAdapterObjSNS(this.participantes,"nombre");
+                ConstructorArrObjSNS.producirArrayAdapterObjSNS(this.participantes,new String[]{"nombre"});
         this.participantes.clear();
         return retorno;
     }

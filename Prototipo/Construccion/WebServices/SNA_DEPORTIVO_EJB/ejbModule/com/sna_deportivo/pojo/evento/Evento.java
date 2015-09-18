@@ -4,10 +4,8 @@ import com.sna_deportivo.utils.bd.FechaSNS;
 import com.sna_deportivo.utils.bd.TiempoSNS;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.StringUtils;
-import com.sna_deportivo.utils.json.JsonObject;
-import com.sna_deportivo.utils.json.JsonSerializable;
+import com.sna_deportivo.utils.gr.excepciones.AtributoInexistenteException;
 import com.sna_deportivo.utils.json.JsonUtils;
-import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 /**
  * 
@@ -18,7 +16,7 @@ import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
  *
  */
 
-public class Evento implements ObjectSNSDeportivo,JsonSerializable {
+public class Evento extends ObjectSNSDeportivo {
 
 	private String id;
 	private String nombre;
@@ -32,7 +30,6 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	private Integer rangoMaxEdad;
 	private Integer rangoMinEdad;
 	private Boolean activo;
-	private String aRetornar;
 	
 	/**
 	 * 
@@ -396,10 +393,7 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	 * @return String JSON del Evento
 	 */
 	@Override
-	public String toString(){
-		if(aRetornar != null && 
-		   aRetornar.equals("nombre"))
-			return this.getNombre();
+	protected String retornarToString(){
 		return this.stringJson();
 	}
 	
@@ -444,13 +438,13 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 		
 	}
 	
-	protected boolean setAtributo(String atributo,Object[] valor) throws ExcepcionJsonDeserializacion{
+	protected boolean setAtributo(String atributo,Object[] valor){
 		boolean asignado = false;
 		if(atributo.equals("id")){
 			this.setId((String)valor[0]);
 			asignado = true;
 		}else if(atributo.equals("nombre")){
-			this.setNombre((String)valor[0]);
+			this.setNombre(StringUtils.decodificar((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("descripcion")){
 			this.setDescripcion(StringUtils.decodificar((String)valor[0]));
@@ -493,21 +487,6 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	}
 	
 	@Override
-	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
-		this.setNullObject();
-		for(String propiedad:json.getPropiedades().keySet()){
-			if(!(this.esAtributo(propiedad) && 
-				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
-				throw new ExcepcionJsonDeserializacion();
-		}
-	}
-	
-	@Override
-	public JsonObject serializarJson() {
-		return JsonUtils.JsonStringToObject(this.stringJson());
-	}
-	
-	@Override
 	public void setNullObject() {
 		this.setId(null);
 		this.setNombre(null);
@@ -524,8 +503,37 @@ public class Evento implements ObjectSNSDeportivo,JsonSerializable {
 	}
 
 	@Override
-	public void retornoToString(String aRetornar) {
-		this.aRetornar = aRetornar;
+	protected String get(String atributo) throws AtributoInexistenteException {
+		if(this.esAtributo(atributo)){
+			if(atributo.equals("id")){
+				return this.getId();
+			}else if(atributo.equals("nombre")){
+				return this.getNombre();
+			}else if(atributo.equals("descripcion")){
+				return this.getDescripcion();
+			}else if(atributo.equals("fechaCreacion")){
+				return this.getFechaCreacion();
+			}else if(atributo.equals("fechaInicio")){
+				return this.getFechaInicio();
+			}else if(atributo.equals("fechaFinal")){
+				return this.getFechaFinal();
+			}else if(atributo.equals("horaInicio")){
+				return this.getHoraInicio();
+			}else if(atributo.equals("horaFinal")){
+				return this.getHoraFinal();
+			}else if(atributo.equals("numMaxParticipantes")){
+				return this.getNumMaxParticipantes().toString();
+			}else if(atributo.equals("rangoMaxEdad")){
+				return this.getRangoMaxEdad().toString();
+			}else if(atributo.equals("rangoMinEdad")){
+				return this.getRangoMinEdad().toString();
+			}else if(atributo.equals("activo")){
+				return this.getActivo().toString();
+			}
+		}
+		
+		throw new AtributoInexistenteException();
+	
 	}
 	
 }

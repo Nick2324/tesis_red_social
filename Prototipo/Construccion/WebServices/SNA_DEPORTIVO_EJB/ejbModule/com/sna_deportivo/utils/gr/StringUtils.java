@@ -8,6 +8,7 @@ public class StringUtils {
 	public static final String CLOSINGSQUARE = "&#93;";
 	public static final String OPENINGCURLY = "&#123;";
 	public static final String CLOSINGCURLY = "&#125;";
+	public static final String NEWLINE = "&#13; &#10;";
 	
 	public static String codificar(String aCodificar){
 		if(aCodificar != null)
@@ -16,7 +17,8 @@ public class StringUtils {
 				   .replace("[", StringUtils.OPENINGSQUARE)
 				   .replace("]", StringUtils.CLOSINGSQUARE)
 				   .replace("{", StringUtils.OPENINGCURLY)
-				   .replace("}", StringUtils.CLOSINGCURLY);
+				   .replace("}", StringUtils.CLOSINGCURLY)
+				   .replace("\n", StringUtils.NEWLINE);
 		else
 			return aCodificar;
 	}
@@ -28,7 +30,8 @@ public class StringUtils {
 				   .replace(StringUtils.OPENINGSQUARE, "[")
 				   .replace(StringUtils.CLOSINGSQUARE, "]")
 				   .replace(StringUtils.OPENINGCURLY, "{")
-				   .replace(StringUtils.CLOSINGCURLY, "}");
+				   .replace(StringUtils.CLOSINGCURLY, "}")
+				   .replace(StringUtils.NEWLINE,"\n");
 		else
 			return aDecodificar;
 	}

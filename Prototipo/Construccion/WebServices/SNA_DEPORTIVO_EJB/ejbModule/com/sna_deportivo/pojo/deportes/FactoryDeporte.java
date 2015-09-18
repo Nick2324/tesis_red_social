@@ -2,6 +2,7 @@ package com.sna_deportivo.pojo.deportes;
 
 import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 
 public class FactoryDeporte 
 		implements FactoryObjectSNSDeportivo{
@@ -16,6 +17,11 @@ public class FactoryDeporte
 	
 	public ObjectSNSDeportivo getObjetoSNS(){
 		return this.crearDeporte();
+	}
+
+	@Override
+	public ObjectSNSDeportivoDAO getObjetoSNSDAO() {
+		return this.crearDAODeporte();
 	}
 	
 }

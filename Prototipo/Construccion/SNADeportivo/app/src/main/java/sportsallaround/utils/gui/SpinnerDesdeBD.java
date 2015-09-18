@@ -80,7 +80,7 @@ public class SpinnerDesdeBD extends Fragment {
                     ArrayList<KeyValueItem> listaObjetosSNS = new ArrayList<KeyValueItem>();
                     for (int i = 0; i < responseJson.length(); i++) {
                         ObjectSNSDeportivo objSNS = this.actividad.getFactoryObjetosSNS().getObjetoSNS();
-                        objSNS.retornoToString(this.actividad.getAtributoMostradoSpinner());
+                        objSNS.retornoToString(new String[]{this.actividad.getAtributoMostradoSpinner()});
                         ((JsonSerializable)objSNS).deserializarJson(
                                 JsonUtils.JsonStringToObject(responseJson.getString(i)));
                         listaObjetosSNS.add(new KeyValueItem(new Integer(i),objSNS));

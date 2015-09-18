@@ -27,7 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_solicitud_de_participante"
-        android:tag="@string/fragment_solicitud_de_participante"></fragment>
+        android:tag="@string/fragment_solicitud_de_participante"
+        android:layout_weight="2"></fragment>
 
     <TextView
         android:id="@+id/textview_barra_horizontal_solicitud_participante"
@@ -50,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_solicitud_para_participante"
-        android:tag="@string/fragment_solicitud_para_participante"></fragment>
+        android:tag="@string/fragment_solicitud_para_participante"
+        android:layout_weight="2"></fragment>
 
 </LinearLayout>

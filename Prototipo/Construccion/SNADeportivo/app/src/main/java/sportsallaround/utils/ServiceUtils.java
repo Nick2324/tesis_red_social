@@ -76,7 +76,7 @@ public class ServiceUtils {
             if(parametros != null && !method.equals("GET")) {
                 conn.setDoOutput(true);
                 OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-              //  Log.d("Nick:JSON",parametros.toString());
+                Log.d("Nick:JSONServ",parametros.toString());
                 wr.write(parametros.toString());
                 wr.flush();
             }

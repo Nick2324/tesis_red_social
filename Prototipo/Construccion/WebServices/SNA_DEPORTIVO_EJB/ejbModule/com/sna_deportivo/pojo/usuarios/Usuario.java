@@ -2,10 +2,13 @@ package com.sna_deportivo.pojo.usuarios;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.AtributoInexistenteException;
 import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonUtils;
 
 @XmlRootElement
-public class Usuario {
+public class Usuario extends ObjectSNSDeportivo {
 	
 	private String primerNombre;
 	private String segundoNombre;
@@ -17,7 +20,7 @@ public class Usuario {
 	private String fechaNacimiento;
 	private String fechaRegistro;
 	private String sexo;
-	private boolean estado;
+	private Boolean estado;
 	private String tipoUsuario;
 	
 	public Usuario(JsonObject user) {
@@ -98,10 +101,10 @@ public class Usuario {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public boolean isEstado() {
+	public Boolean isEstado() {
 		return estado;
 	}
-	public void setEstado(boolean estado) {
+	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
 	public String getTipoUsuario() {
@@ -112,7 +115,7 @@ public class Usuario {
 	}
 	
 	@Override
-	public String toString() {
+	protected String retornarToString() {
 		StringBuilder retorno = new StringBuilder("");
 		retorno.append("{\"primerNombre\": \"" + primerNombre + "\",");
 		retorno.append("\"segundoNombre\": \"" + segundoNombre + "\",");
@@ -126,6 +129,155 @@ public class Usuario {
 		retorno.append("\"sexo\": \"" + sexo + "\",");
 		retorno.append("\"estado\": \"" + estado + "\"}");
 		return retorno.toString();
+	}
+	
+	protected boolean esAtributo(String atributo){
+		if(atributo != null){
+			if(atributo.equals("primerNombre")){
+				return true;
+			}
+			if(atributo.equals("segundoNombre")){
+				return true;
+			}
+			if(atributo.equals("apellidos")){
+				return true;
+			}
+			if(atributo.equals("usuario")){
+				return true;
+			}
+			if(atributo.equals("contrasena")){
+				return true;
+			}
+			if(atributo.equals("eMail")){
+				return true;
+			}
+			if(atributo.equals("numeroContacto")){
+				return true;
+			}
+			if(atributo.equals("fechaNacimiento")){
+				return true;
+			}
+			if(atributo.equals("fechaRegistro")){
+				return true;
+			}
+			if(atributo.equals("sexo")){
+				return true;
+			}
+			if(atributo.equals("estado")){
+				return true;
+			}
+			if(atributo.equals("tipoUsuario")){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	protected boolean setAtributo(String atributo,Object[] valor){
+		boolean asignado = false;
+		if(atributo != null){
+			if(atributo.equals("primerNombre")){
+				this.setPrimerNombre((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("segundoNombre")){
+				this.setSegundoNombre((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("apellidos")){
+				this.setApellidos((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("usuario")){
+				this.setUsuario((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("contrasena")){
+				this.setContrasena((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("eMail")){
+				this.seteMail((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("numeroContacto")){
+				this.setNumeroContacto((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("fechaNacimiento")){
+				this.setFechaNacimiento((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("fechaRegistro")){
+				this.setFechaRegistro((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("sexo")){
+				this.setSexo((String)valor[0]);
+				asignado = true;
+			}else if(atributo.equals("estado")){
+				this.setEstado(Boolean.parseBoolean((String)valor[0]));
+				asignado = true;
+			}else if(atributo.equals("tipoUsuario")){
+				this.setTipoUsuario((String)valor[0]);
+				asignado = true;
+			}
+		}
+		return asignado;
+	}
+
+	@Override
+	public String stringJson() {
+		return "{primerNombre:"+JsonUtils.propiedadNula(this.primerNombre)+","+
+			   "segundoNombre:"+JsonUtils.propiedadNula(this.segundoNombre)+","+
+			   "apellidos:"+JsonUtils.propiedadNula(this.apellidos)+","+
+			   "usuario:"+JsonUtils.propiedadNula(this.usuario)+","+
+			   "contrasena:"+JsonUtils.propiedadNula(this.contrasena)+","+
+			   "eMail:"+JsonUtils.propiedadNula(this.eMail)+","+
+			   "numeroContacto:"+JsonUtils.propiedadNula(this.numeroContacto)+","+
+			   "fechaNacimiento:"+JsonUtils.propiedadNula(this.fechaNacimiento)+","+
+			   "fechaRegistro:"+JsonUtils.propiedadNula(this.fechaRegistro)+","+
+			   "sexo:"+JsonUtils.propiedadNula(this.sexo)+","+
+			   "estado:"+this.estado+","+
+			   "tipoUsuario:"+JsonUtils.propiedadNula(this.tipoUsuario)+"}";
+		
+	}
+
+	@Override
+	public void setNullObject() {
+		this.setPrimerNombre(null);
+		this.setSegundoNombre(null);
+		this.setApellidos(null);
+		this.setUsuario(null);
+		this.setContrasena(null);
+		this.seteMail(null);
+		this.setNumeroContacto(null);
+		this.setFechaNacimiento(null);
+		this.setFechaRegistro(null);
+		this.setSexo(null);
+		this.setEstado(null);
+		this.setTipoUsuario(null);
+	}
+
+	@Override
+	protected String get(String atributo) throws AtributoInexistenteException {
+		if(atributo.equals("primerNombre")){
+			return this.getPrimerNombre();
+		}else if(atributo.equals("segundoNombre")){
+			return this.getSegundoNombre();
+		}else if(atributo.equals("apellidos")){
+			return this.getApellidos();
+		}else if(atributo.equals("usuario")){
+			return this.getUsuario();
+		}else if(atributo.equals("contrasena")){
+			return this.getContrasena();
+		}else if(atributo.equals("eMail")){
+			return this.geteMail();
+		}else if(atributo.equals("numeroContacto")){
+			return this.getNumeroContacto();
+		}else if(atributo.equals("fechaNacimiento")){
+			return this.getFechaNacimiento();
+		}else if(atributo.equals("fechaRegistro")){
+			return this.getFechaRegistro();
+		}else if(atributo.equals("sexo")){
+			return this.getSexo();
+		}else if(atributo.equals("estado")){
+			return this.isEstado().toString();
+		}else if(atributo.equals("tipoUsuario")){
+			return this.getTipoUsuario();
+		}
+		throw new AtributoInexistenteException();
 	}
 
 }

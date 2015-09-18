@@ -40,11 +40,23 @@ public final class ConstructorArrObjSNS {
     }
 
     public static ArrayList<KeyValueItem> producirArrayAdapterObjSNS(ArrayList<ObjectSNSDeportivo> objetos,
-                                                                     String atributoAMostrarAdapter){
+                                                                     String[] atributoAMostrarAdapter){
         ArrayList<KeyValueItem> adapter = new ArrayList<KeyValueItem>();
         Integer i = 0;
         for(ObjectSNSDeportivo obj:objetos){
             obj.retornoToString(atributoAMostrarAdapter);
+            adapter.add(new KeyValueItem(i++,obj));
+        }
+        return adapter;
+    }
+
+    public static ArrayList<KeyValueItem> producirArrayAdapterObjSNS(ArrayList<ObjectSNSDeportivo> objetos,
+                                                                     String[] atributoAMostrarAdapter,
+                                                                     String[] separadoresAtributos) throws Exception{
+        ArrayList<KeyValueItem> adapter = new ArrayList<KeyValueItem>();
+        Integer i = 0;
+        for(ObjectSNSDeportivo obj:objetos){
+            obj.retornoToStringSeparadores(atributoAMostrarAdapter,separadoresAtributos);
             adapter.add(new KeyValueItem(i++,obj));
         }
         return adapter;

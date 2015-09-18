@@ -5,8 +5,9 @@ import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 
-public class DAODeporte {
+public class DAODeporte extends ObjectSNSDeportivoDAO{
 
 	private Deporte deporte;
 

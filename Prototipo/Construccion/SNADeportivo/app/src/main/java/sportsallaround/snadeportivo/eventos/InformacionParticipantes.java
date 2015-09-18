@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -139,14 +140,19 @@ public class InformacionParticipantes extends Activity
     public void onNothingSelectedSpinnerBD(String tagFragmento) {}
 
     public boolean volcarDatosObjeto(){
+        EditText texto = null;
         try {
-            evento.setNumMaxParticipantes(Integer.parseInt(
-                    ((EditText) (findViewById(R.id.numero_participantes_evento_info_general))).
-                            getText().toString()));
-            evento.setRangoMaxEdad(Integer.parseInt(((EditText) (findViewById(
-                    R.id.rango_maximo_edad_evento_info_general))).getText().toString()));
-            evento.setRangoMinEdad(Integer.parseInt(((EditText) (findViewById(
-                    R.id.rango_minimo_edad_evento_info_general))).getText().toString()));
+            texto = (EditText) findViewById(R.id.numero_participantes_evento_info_general);
+            if(texto.getText() != null)
+                evento.setNumMaxParticipantes(Integer.parseInt(texto.toString()));
+            texto = (EditText) findViewById(
+                    R.id.rango_maximo_edad_evento_info_general);
+            if(texto.getText() != null)
+                evento.setRangoMaxEdad(Integer.parseInt(texto.toString()));
+            texto = (EditText) findViewById(
+                    R.id.rango_minimo_edad_evento_info_general);
+            if(texto.getText() != null)
+                evento.setRangoMinEdad(Integer.parseInt(texto.toString()));
         }catch (NumberFormatException e){
             new AlertDialog.Builder(this).setTitle("Ejecución de opcion").
                     setMessage("Error al ejecutar la opción. Llene los campos con el formato propio").

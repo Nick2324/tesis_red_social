@@ -2,12 +2,11 @@ package com.sna_deportivo.pojo.deportes;
 
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.StringUtils;
+import com.sna_deportivo.utils.gr.excepciones.AtributoInexistenteException;
 import com.sna_deportivo.utils.json.JsonObject;
-import com.sna_deportivo.utils.json.JsonSerializable;
 import com.sna_deportivo.utils.json.JsonUtils;
-import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
+public class Deporte extends ObjectSNSDeportivo {
 	
 	private Integer id;
 	private String nombre;
@@ -15,7 +14,6 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	private String fechaCreacion;
 	private String historia;
 	private Boolean esOlimpico;
-	private String aRetornar;
 	
 	public Deporte(){}
 
@@ -77,10 +75,7 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	}
 
 	@Override
-	public String toString(){
-		if(this.aRetornar != null && 
-				aRetornar.equals("nombre"))
-			return this.getNombre();
+	protected String retornarToString(){
 		return this.stringJson();
 	}
 	
@@ -106,21 +101,6 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 		this.setFechaCreacion(null);
 		this.setHistoria(null);
 		this.setEsOlimpico(null);
-	}
-
-	@Override
-	public JsonObject serializarJson() {
-		return JsonUtils.JsonStringToObject(this.stringJson());
-	}
-
-	@Override
-	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
-		this.setNullObject();
-		for(String propiedad:json.getPropiedades().keySet()){
-			if(!(this.esAtributo(propiedad) && 
-				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad))))
-				throw new ExcepcionJsonDeserializacion();
-		}
 	}
 	
 	protected boolean setAtributo(String atributo, Object[] valor){
@@ -165,11 +145,6 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 	}
 
 	@Override
-	public void retornoToString(String aRetornar) {
-		this.aRetornar = aRetornar;
-	}
-
-	@Override
 	public boolean equals(Object obj){
 		boolean igual = true;
 		if(obj instanceof Deporte){
@@ -204,6 +179,26 @@ public class Deporte implements ObjectSNSDeportivo, JsonSerializable{
 			igual = false;
 		}
 		return igual;
+	}
+
+	@Override
+	protected String get(String atributo) throws AtributoInexistenteException{
+		if(this.esAtributo(atributo)){
+			if(atributo.equals("id")){
+				return this.getId().toString();
+			}else if(atributo.equals("nombre")){
+				return this.getNombre();
+			}else if(atributo.equals("descripcion")){
+				return this.getDescripcion();
+			}else if(atributo.equals("fechaCreacion")){
+				return this.getFechaCreacion();
+			}else if(atributo.equals("historia")){
+				return this.getHistoria();
+			}else if(atributo.equals("esOlimpico")){
+				return this.getEsOlimpico().toString();
+			}
+		}
+		throw new AtributoInexistenteException();
 	}
 	
 }

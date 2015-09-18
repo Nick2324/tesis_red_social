@@ -11,8 +11,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.DeportePracticado;
@@ -25,11 +25,7 @@ import com.sna_deportivo.pojo.usuarios.Rol;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
 import com.sna_deportivo.services.usuarios.GestionUsuario;
-import com.sna_deportivo.utils.bd.BDUtils;
-import com.sna_deportivo.utils.bd.Entidades;
-import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
-import com.sna_deportivo.utils.json.JsonObject;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -38,6 +34,18 @@ public class GestionUsuarioService {
 
 	public GestionUsuarioService() {
 		servicio = new GestionUsuario();
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String consultarUsuarios(Usuario usuario){
+		try{
+			return this.servicio.consultarUsuarios(usuario);
+		}catch(WebApplicationException e){
+			e.printStackTrace();
+			throw e;
+		}
 	}
 
 	@POST

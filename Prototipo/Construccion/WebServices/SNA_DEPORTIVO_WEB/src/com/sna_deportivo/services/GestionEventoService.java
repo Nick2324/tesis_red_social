@@ -48,6 +48,8 @@ public class GestionEventoService {
 	public Evento crearEvento(@PathParam("tipoEvento") String tipoEvento,
 							   Evento evento){
 		try{
+			System.out.println("********************************************************");
+			System.out.println("Evento: "+evento.stringJson());
 			return this.gestionEvento.crearEvento(tipoEvento, evento);
 		}catch(WebApplicationException e){
 			throw e;

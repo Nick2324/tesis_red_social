@@ -23,6 +23,7 @@ public class Constants {
     * SERVICIOS GESTION DE USUARIO
     *
     * */
+    public static final String SERVICES_PATH_USUARIOS = "GestionUsuarioService";
     public static final String SERVICES_VERIFICAR_USUARIO = "GestionUsuarioService/verificarUsuario";
     public static final String SERVICES_CREAR_USUARIO = "GestionUsuarioService/crearUsuario";
     public static final String SERVICES_ACTUALIZAR_USUARIO = "GestionUsuarioService/actualizarDatosUsuario";

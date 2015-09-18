@@ -133,7 +133,7 @@ public class ListaConFiltro extends Fragment {
         }
     }
 
-    public void eliminarElemento(KeyValueItem aBorrar){
+    public void  eliminarElemento(KeyValueItem aBorrar){
         ListView lista = (ListView)getView().findViewById(R.id.listview_lista_con_filtro);
         ((ArrayAdapter)lista.getAdapter()).remove(aBorrar);
         ((ArrayAdapter)lista.getAdapter()).notifyDataSetChanged();

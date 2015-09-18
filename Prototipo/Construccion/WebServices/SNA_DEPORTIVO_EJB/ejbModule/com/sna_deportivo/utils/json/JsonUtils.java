@@ -18,7 +18,7 @@ public class JsonUtils {
 				for (String propiedad : propiedadesObjeto){
 					llave = propiedad.substring(0, propiedad.indexOf(":")).trim();
 					valor = propiedad.substring(propiedad.indexOf(":")+1).trim();
-					if(llave.startsWith("\""))
+					if(llave.startsWith("\"") || llave.startsWith("'"))
 						llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
 					if(valor.startsWith("["))//es un arreglo
 						resultado.setPropiedad(llave, JsonStringToObject(valor));
@@ -96,7 +96,7 @@ public class JsonUtils {
 		if(obj == null)
 			return "null";
 		else
-			return "\""+obj.toString()+"\"";
+			return "'"+obj.toString()+"'";
 	}
 	
 	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){

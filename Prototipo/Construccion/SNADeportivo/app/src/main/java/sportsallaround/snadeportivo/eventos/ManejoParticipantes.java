@@ -10,16 +10,16 @@ import android.view.MenuItem;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.FactoryDeporte;
+import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
+import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.security.Key;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.ConstructorArrObjSNS;
 import sportsallaround.utils.Peticion;
@@ -45,7 +45,7 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
         @Override
         public void calcularServicio() {
-            this.servicio = Constants.SERVICES_PATH_DEPORTES;
+            this.servicio = Constants.SERVICES_PATH_USUARIOS;
         }
 
         @Override
@@ -57,17 +57,15 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
         @Override
         public void onPostExcecute(String resultadoPeticion){
             try{
-                Log.d("Nick:Peticion", resultadoPeticion);
-
                 if(this.fragmento.equals(getResources().getString(R.string.fragment_solicitud_de_participante))) {
                     solicitudDeParticipantes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryDeporte(),
+                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
                                     new JSONArray(resultadoPeticion));
                     ((ListaConFiltro) getFragmentManager().findFragmentById(
                             R.id.fragment_solicitud_de_participante)).llenarLista();
                 }else if(this.fragmento.equals(getResources().getString(R.string.fragment_solicitud_para_participante))){
                     solicitudParaParticipantes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryDeporte(),
+                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
                                     new JSONArray(resultadoPeticion));
                     ((ListaConFiltro) getFragmentManager().findFragmentById(
                             R.id.fragment_solicitud_para_participante)).llenarLista();
@@ -134,7 +132,7 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
                 R.string.fragment_solicitud_de_participante))){
             new AlertDialog.Builder(this).
                 setTitle("Decide que hacer con " +
-                        ((Deporte) item.getValue()).getNombre()).
+                        ((Usuario) item.getValue()).getPrimerNombre()).
                 setItems(new CharSequence[]{"Aceptar participante",
                                             "Eliminar petición participante"},
                         new DialogInterface.OnClickListener() {
@@ -154,13 +152,13 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
                     R.string.fragment_solicitud_para_participante))){
             new AlertDialog.Builder(this).
                     setTitle("¿Invitar a " +
-                            ((Deporte) item.getValue()).getNombre()+"?").
+                            ((Usuario) item.getValue()).getPrimerNombre()+"?").
                     setItems(new CharSequence[]{"Invitar"},
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    if(which == 0){
-                                        Log.d("Nick","Invitado");
+                                    if (which == 0) {
+                                        Log.d("Nick", "Invitado");
                                         dialog.cancel();
                                     }
                                 }
@@ -179,13 +177,15 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
         if(identificadorFragmento.equals(getResources().getString(
                 R.string.fragment_solicitud_de_participante))){
             adapter = ConstructorArrObjSNS.producirArrayAdapterObjSNS(this.solicitudDeParticipantes,
-                                                                      "nombre");
+                                                                      new String[]{"primerNombre",
+                                                                              "usuario"});
             if(this.solicitudDeParticipantes != null)
                 this.solicitudDeParticipantes.clear();
         }else if(identificadorFragmento.equals(getResources().getString(
                 R.string.fragment_solicitud_para_participante))){
             adapter = ConstructorArrObjSNS.producirArrayAdapterObjSNS(this.solicitudParaParticipantes,
-                                                                      "nombre");
+                                                                      new String[]{"primerNombre",
+                                                                              "usuario"});
             if(this.solicitudParaParticipantes != null)
                 this.solicitudParaParticipantes.clear();
         }

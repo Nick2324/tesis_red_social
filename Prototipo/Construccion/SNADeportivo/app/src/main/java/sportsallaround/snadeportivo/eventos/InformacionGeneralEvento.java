@@ -71,6 +71,8 @@ public class InformacionGeneralEvento extends Activity
         this.volcarDatosObjetos();
         Bundle extras = getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD);
+        Log.d("Nick:volcar", this.evento.stringJson());
+        Log.d("Nick:volcar", this.deporte.stringJson());
         extras.putString(ConstantesEvento.EVENTO_MANEJADO, this.evento.stringJson());
         extras.putString(ConstantesEvento.DEPORTE_MANEJADO,this.deporte.stringJson());
         this.menuEventos.comportamiento(this, item.getItemId(), extras);
@@ -202,6 +204,8 @@ public class InformacionGeneralEvento extends Activity
 
     public void volcarDatosObjetos(){
         //EVENTO
+        Log.d("Nick:volcar","Paso");
+
         final Calendar c = Calendar.getInstance();
         evento.setNombre(((EditText) (findViewById(R.id.nombre_evento_info_general))).getText().
                 toString());
@@ -230,6 +234,7 @@ public class InformacionGeneralEvento extends Activity
                 (Deporte)(((SpinnerDesdeBD)getFragmentManager().
                         findFragmentById(R.id.fragment_tipo_deporte)).
                     getSeleccionado());
+        Log.d("Nick:volcar","Termino");
     }
 
     public void setUpDatosActividad(){
