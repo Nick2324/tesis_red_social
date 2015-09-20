@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.sna_deportivo.pojo.deportes.Deporte;
-import com.sna_deportivo.pojo.deportes.FactoryDeporte;
 import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
@@ -27,8 +26,7 @@ import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
 import sportsallaround.utils.gui.TituloActividad;
 
-public class ManejoParticipantes extends Activity implements ListaConFiltro.CallBackListaConFiltro,
-        TituloActividad.InitializerTituloActividad{
+public class ManejoParticipantes extends Activity implements ListaConFiltro.CallBackListaConFiltro{
 
     private ArrayList<ObjectSNSDeportivo> solicitudDeParticipantes;
     private ArrayList<ObjectSNSDeportivo> solicitudParaParticipantes;
@@ -85,6 +83,7 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manejo_participantes);
+        setTitle(getResources().getString(R.string.titulo_gestion_eventos));
     }
 
     @Override
@@ -103,7 +102,7 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        this.menuEventos.comportamiento(this, item.getItemId(),getIntent().
+        this.menuEventos.comportamiento(this, item.getItemId(), getIntent().
                 getExtras().getBundle(Constants.DATOS_FUNCIONALIDAD));
         return super.onOptionsItemSelected(item);
     }
@@ -126,7 +125,6 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
     @Override
     public void realizarAccionAlClick(KeyValueItem item, String identificadorFragmento) {
-        Log.d("Nick","Entro a realizar accion "+identificadorFragmento);
         final KeyValueItem itemSeleccionado = item;
         if(identificadorFragmento.equals(getResources().getString(
                 R.string.fragment_solicitud_de_participante))){
@@ -194,11 +192,5 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
     @Override
     public void realizarAccionLongClick(KeyValueItem item, String identificadorFragmento) {}
-
-    @Override
-    public String getIdTituloActividad(String tagFragmento) {
-        //!*!*!*!*!*!*! Nombre del evento!!!
-        return getResources().getString(R.string.titulo_gestion_eventos);
-    }
 
 }

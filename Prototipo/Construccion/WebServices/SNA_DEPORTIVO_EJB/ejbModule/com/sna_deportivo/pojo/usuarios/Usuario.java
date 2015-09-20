@@ -177,40 +177,40 @@ public class Usuario extends ObjectSNSDeportivo {
 		boolean asignado = false;
 		if(atributo != null){
 			if(atributo.equals("primerNombre")){
-				this.setPrimerNombre((String)valor[0]);
+				this.setPrimerNombre(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("segundoNombre")){
-				this.setSegundoNombre((String)valor[0]);
+				this.setSegundoNombre(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("apellidos")){
-				this.setApellidos((String)valor[0]);
+				this.setApellidos(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("usuario")){
-				this.setUsuario((String)valor[0]);
+				this.setUsuario(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("contrasena")){
-				this.setContrasena((String)valor[0]);
+				this.setContrasena(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("eMail")){
-				this.seteMail((String)valor[0]);
+				this.seteMail(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("numeroContacto")){
-				this.setNumeroContacto((String)valor[0]);
+				this.setNumeroContacto(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("fechaNacimiento")){
-				this.setFechaNacimiento((String)valor[0]);
+				this.setFechaNacimiento(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("fechaRegistro")){
-				this.setFechaRegistro((String)valor[0]);
+				this.setFechaRegistro(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("sexo")){
-				this.setSexo((String)valor[0]);
+				this.setSexo(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("estado")){
 				this.setEstado(Boolean.parseBoolean((String)valor[0]));
 				asignado = true;
 			}else if(atributo.equals("tipoUsuario")){
-				this.setTipoUsuario((String)valor[0]);
+				this.setTipoUsuario(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 				asignado = true;
 			}
 		}
@@ -235,7 +235,7 @@ public class Usuario extends ObjectSNSDeportivo {
 	}
 
 	@Override
-	public void setNullObject() {
+	public ObjectSNSDeportivo setNullObject() {
 		this.setPrimerNombre(null);
 		this.setSegundoNombre(null);
 		this.setApellidos(null);
@@ -248,6 +248,7 @@ public class Usuario extends ObjectSNSDeportivo {
 		this.setSexo(null);
 		this.setEstado(null);
 		this.setTipoUsuario(null);
+		return this;
 	}
 
 	@Override

@@ -94,13 +94,14 @@ public class Deporte extends ObjectSNSDeportivo {
 	}
 
 	@Override
-	public void setNullObject() {
+	public ObjectSNSDeportivo setNullObject() {
 		this.setId(null);
 		this.setNombre(null);
 		this.setDescripcion(null);
 		this.setFechaCreacion(null);
 		this.setHistoria(null);
 		this.setEsOlimpico(null);
+		return this;
 	}
 	
 	protected boolean setAtributo(String atributo, Object[] valor){
@@ -110,16 +111,16 @@ public class Deporte extends ObjectSNSDeportivo {
 				Integer.parseInt((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("nombre")){
-			this.setNombre((String)valor[0]);
+			this.setNombre(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("descripcion")){
-			this.setDescripcion(StringUtils.decodificar((String)valor[0]));
+			this.setDescripcion(JsonUtils.propiedadNulaBackwards(StringUtils.decodificar((String)valor[0])));
 			asignado = true;
 		}else if(atributo.equals("fechaCreacion")){
-			this.setFechaCreacion((String)valor[0]);
+			this.setFechaCreacion(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("historia")){
-			this.setHistoria(StringUtils.decodificar((String)valor[0]));
+			this.setHistoria(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("esOlimpico")){
 			this.setEsOlimpico((((String)valor[0]).equals("null"))?null:

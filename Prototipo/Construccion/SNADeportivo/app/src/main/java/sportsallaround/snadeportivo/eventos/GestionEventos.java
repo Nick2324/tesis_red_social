@@ -1,6 +1,7 @@
 package sportsallaround.snadeportivo.eventos;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.utils.Constants;
 
 public class GestionEventos extends Fragment {
 
@@ -23,9 +25,8 @@ public class GestionEventos extends Fragment {
     }
 
     @Override
-    public void onStart(){
-        super.onStart();
-        //!*!*!*!*! onActivityCreated?
+    public void onActivityCreated(Bundle savedStateInstance) {
+        super.onActivityCreated(savedStateInstance);
         this.setUpListeners();
     }
 
@@ -34,14 +35,27 @@ public class GestionEventos extends Fragment {
         eventosSNA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getActivity(),
+                                           GestionEventosLista.class);
+                intent.putExtra(Constants.USUARIO,
+                                getActivity().getIntent().
+                                              getExtras().
+                                              getParcelable(Constants.USUARIO));
+                startActivity(intent);
             }
         });
         Button misEventos = (Button)getView().findViewById(R.id.button_mis_eventos);
         misEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Enviar listado con concepto diferente
+                Intent intent = new Intent(getActivity(),
+                        GestionEventosLista.class);
+                intent.putExtra(Constants.USUARIO,
+                        getActivity().getIntent().
+                                getExtras().
+                                getParcelable(Constants.USUARIO));
+                startActivity(intent);
             }
         });
     }

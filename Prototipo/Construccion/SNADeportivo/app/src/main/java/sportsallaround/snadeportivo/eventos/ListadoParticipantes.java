@@ -67,6 +67,7 @@ public class ListadoParticipantes extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_participantes);
+        setTitle(getResources().getString(R.string.titulo_gestion_eventos));
     }
 
     @Override
@@ -133,9 +134,7 @@ public class ListadoParticipantes extends Activity
 
     @Override
     public String getIdTituloActividad(String tagFragmento) {
-        if(tagFragmento.equals(getResources().getString(R.string.titulo_gestion_eventos)))
-            return getResources().getString(R.string.titulo_gestion_eventos);
-        else if(tagFragmento.equals(getResources().getString(R.string.lista_participantes)))
+        if(tagFragmento.equals(getResources().getString(R.string.lista_participantes)))
             return getResources().getString(R.string.lista_participantes);
         return null;
     }

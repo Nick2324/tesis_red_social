@@ -11,12 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="sportsallaround.utils.gui.TituloActividad"
-        android:tag="@string/titulo_gestion_eventos_lista"></fragment>
-
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="sportsallaround.utils.gui.TituloActividad"
         android:tag="@string/general_participantes"></fragment>
 
     <TextView android:text="@string/numero_participantes" android:layout_width="wrap_content"

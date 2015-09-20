@@ -235,7 +235,7 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             boolean retorno = true;
-            deportesPracticados = new ArrayList<>();
+            deportesPracticados = new ArrayList<DeportePracticado>();
             try {
 
                 JSONObject parametros = new JSONObject();

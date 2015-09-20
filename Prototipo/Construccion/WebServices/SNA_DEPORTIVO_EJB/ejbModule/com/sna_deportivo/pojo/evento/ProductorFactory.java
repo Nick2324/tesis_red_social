@@ -1,6 +1,6 @@
 package com.sna_deportivo.pojo.evento;
 
-import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 
 public class ProductorFactory {
 	

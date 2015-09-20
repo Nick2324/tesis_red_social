@@ -7,12 +7,6 @@
     android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.CrearEvento">
 
-    <fragment
-        android:name="sportsallaround.utils.gui.TituloActividad"
-        android:id="@+id/fragment_titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <fragment android:name="sportsallaround.snadeportivo.eventos.SpinnerEventos"
         android:id="@+id/fragment_tipo_evento_crear"
         android:layout_width="wrap_content"

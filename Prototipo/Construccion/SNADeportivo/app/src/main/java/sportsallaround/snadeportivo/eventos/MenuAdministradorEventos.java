@@ -122,10 +122,6 @@ public class MenuAdministradorEventos implements MenuEventos{
                         setPositiveButton("Si", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Log.d("Nick1",datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO));
-                                Log.d("Nick2",datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO));
-                                Log.d("Nick3",
-                                        datosIntent.getString(ConstantesEvento.TIPO_EVENTO));
                                 if (datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO) != null &&
                                     datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO) != null &&
                                     datosIntent.getString(ConstantesEvento.TIPO_EVENTO) != null) {

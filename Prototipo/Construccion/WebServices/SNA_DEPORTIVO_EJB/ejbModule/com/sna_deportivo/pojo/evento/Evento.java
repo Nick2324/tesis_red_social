@@ -331,58 +331,54 @@ public class Evento extends ObjectSNSDeportivo {
 	
 	@Override
 	public boolean equals(Object obj){
-		boolean retorno = false;
+		boolean retorno = true;
 		if(obj instanceof Evento){
 			Evento e = (Evento)obj;
-			retorno = true;
-			if(e.getId() != null && retorno)
-			   if(e.getId() != this.id){
+			if(retorno && !StringUtils.compararStrings(this.id,e.getId())){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getNombre(),
+										this.nombre)){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getDescripcion(),
+										this.descripcion)){
 				   retorno = false;
-			   }
-			if(retorno && e.getNombre() != null)
-				   if(e.getNombre() != this.nombre){
-					   retorno = false;
-				   }
-			if(retorno && e.getDescripcion() != null)
-			   if(e.getDescripcion() != this.descripcion){
-				   retorno = false;
-			   }
-			if(retorno && e.getFechaCreacion() != null)
-			   if(!e.getFechaCreacion().toString().equals(this.fechaCreacion.toString())){
-				   retorno = false;
-			   }
-			if(retorno && e.getFechaInicio() != null)
-			   if(!e.getFechaInicio().toString().equals(this.fechaInicio.toString())){
-				   retorno = false;
-			   }
-			if(retorno && e.getFechaFinal() != null)
-			   if(!e.getFechaFinal().toString().equals(this.fechaFinal.toString())){
-				   retorno = false;
-			   }
-			if(retorno && e.getHoraInicio() != null)
-				if(!e.getHoraInicio().toString().equals(this.horaInicio.toString())){
-					retorno = false;
-				}
-			if(retorno && e.getHoraFinal() != null)
-				if(!e.getHoraFinal().toString().equals(this.horaFinal.toString())){
-				    retorno = false;
-				}
-			if(retorno && e.getNumMaxParticipantes() != null)
-				if (e.getNumMaxParticipantes() != this.numMaxParticipantes){
-					retorno = false;
-				}
-			if(retorno && e.getRangoMaxEdad() != null)
-				if (e.getRangoMaxEdad() != this.rangoMaxEdad){
-					retorno = false;
-				}
-			if(retorno && e.getRangoMinEdad() != null)
-				if (e.getRangoMinEdad() != this.rangoMinEdad){
-					retorno = false;
-				}
-			if(retorno && e.getActivo() != null)
-				if (e.getActivo() != this.activo){
-					retorno = false;
-				}
+			}
+			if(retorno && !StringUtils.compararStrings(e.getFechaCreacion(),
+										this.getFechaCreacion())){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getFechaInicio(),
+										this.getFechaInicio())){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getFechaFinal(),
+										this.getFechaFinal())){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getHoraInicio(),
+										this.getHoraInicio())){
+				retorno = false;
+			}
+			if(retorno && !StringUtils.compararStrings(e.getHoraFinal(),
+										this.getHoraFinal())){
+				retorno = false;
+			}
+			if(retorno && e.getNumMaxParticipantes() != this.numMaxParticipantes){
+				retorno = false;
+			}
+			if(retorno && e.getRangoMaxEdad() != this.rangoMaxEdad){
+				retorno = false;
+			}
+			if(retorno && e.getRangoMinEdad() != this.rangoMinEdad){
+				retorno = false;
+			}
+			if(retorno && e.getActivo() != this.activo){
+				retorno = false;
+			}
+		}else{
+			retorno = false;
 		}
 		
 		return retorno;
@@ -441,28 +437,28 @@ public class Evento extends ObjectSNSDeportivo {
 	protected boolean setAtributo(String atributo,Object[] valor){
 		boolean asignado = false;
 		if(atributo.equals("id")){
-			this.setId((String)valor[0]);
+			this.setId(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("nombre")){
-			this.setNombre(StringUtils.decodificar((String)valor[0]));
+			this.setNombre(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("descripcion")){
-			this.setDescripcion(StringUtils.decodificar((String)valor[0]));
+			this.setDescripcion(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("fechaCreacion")){
-			this.setFechaCreacion((String)valor[0]);
+			this.setFechaCreacion(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("fechaInicio")){
-			this.setFechaInicio((String)valor[0]);
+			this.setFechaInicio(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("fechaFinal")){
-			this.setFechaFinal((String)valor[0]);
+			this.setFechaFinal(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("horaInicio")){
-			this.setHoraInicio((String)valor[0]);
+			this.setHoraInicio(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("horaFinal")){
-			this.setHoraFinal((String)valor[0]);
+			this.setHoraFinal(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("numMaxParticipantes")){
 			this.setNumMaxParticipantes((((String)valor[0]).equals("null"))?null:
@@ -487,7 +483,7 @@ public class Evento extends ObjectSNSDeportivo {
 	}
 	
 	@Override
-	public void setNullObject() {
+	public ObjectSNSDeportivo setNullObject() {
 		this.setId(null);
 		this.setNombre(null);
 		this.setDescripcion(null);
@@ -500,6 +496,7 @@ public class Evento extends ObjectSNSDeportivo {
 		this.setRangoMinEdad(null);
 		this.setRangoMaxEdad(null);
 		this.setActivo(null);
+		return this;
 	}
 
 	@Override

@@ -65,12 +65,14 @@ public class UserMainDrawer extends ActionBarActivity
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
-        mTitle = getTitle();
 
         String[] drawerElements = new String[permissions.length];
 
         for(int i=0;i<permissions.length;i++)
             drawerElements[i] = permissions[i].getNombre();
+
+        //Primera vez que se carga el MainDrawer
+        this.onSectionAttached(0);
 
         mNavigationDrawerFragment.updateDrawerListAdapter(drawerElements);
 
@@ -87,6 +89,7 @@ public class UserMainDrawer extends ActionBarActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(user, userRole, permissions, position))
                 .commit();
+        this.onSectionAttached(position);
     }
 
     public void onSectionAttached(int number) {

@@ -7,12 +7,6 @@
     android:orientation="vertical"
     tools:context="sportsallaround.snadeportivo.eventos.ManejoParticipantes">
 
-    <fragment
-        android:name="sportsallaround.utils.gui.TituloActividad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_titulo_manejo_part"></fragment>
-
     <TextView
         android:id="@+id/textview_title_solicitud_de_participante"
         android:text="@string/solicitud_de_participantes"

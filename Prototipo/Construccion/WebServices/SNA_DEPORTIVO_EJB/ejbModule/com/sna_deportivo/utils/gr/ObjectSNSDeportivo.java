@@ -13,7 +13,7 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 	
 	public abstract String stringJson();
 	
-	public abstract void setNullObject();
+	public abstract ObjectSNSDeportivo setNullObject();
 	
 	public void retornoToString(String[] aRetornar){
 		this.aRetornar = aRetornar;
@@ -64,10 +64,6 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
 		this.setNullObject();
 		for(String propiedad:json.getPropiedades().keySet()){
-			System.out.println("Propiedad: "+propiedad);
-			System.out.println(this.esAtributo(propiedad));
-			System.out.println(this.setAtributo(propiedad,json.getPropiedades().get(propiedad)));
-			System.out.println("********************************************");
 			if(!(this.esAtributo(propiedad) &&
 				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad)))){
 				throw new ExcepcionJsonDeserializacion();

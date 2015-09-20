@@ -18,6 +18,7 @@ public class ConstantesEvento {
     //TAGS COMUNICACION JSON POR INTENT EVENTOS
     public static final String EVENTO_MANEJADO = "evento";
     public static final String DEPORTE_MANEJADO = "deporte";
+    public static final String GENERO_MANEJADO = "genero";
     public static final String TIPO_EVENTO = "tipoEvento";
     public static final String TIPO_MENU = "menu";
 }

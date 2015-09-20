@@ -8,12 +8,6 @@
     tools:context="sportsallaround.snadeportivo.eventos.GestionEventosLista">
 
     <fragment
-        android:name="sportsallaround.utils.gui.TituloActividad"
-        android:id="@+id/fragment_titulo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <fragment
         android:name="sportsallaround.utils.gui.DescripcionGo"
         android:id="@+id/fragment_switcher_info"
         android:layout_width="wrap_content"
@@ -40,7 +34,8 @@
         android:layout_height="wrap_content"
         android:dropDownWidth="wrap_content"
         android:gravity="center"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_weight="5"/>
 
     <Button
         android:id="@+id/button_crear_evento"

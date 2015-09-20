@@ -3,6 +3,7 @@ package com.sna_deportivo.utils.json;
 import java.util.ArrayList;
 
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.StringUtils;
 
 public class JsonUtils {
 
@@ -25,7 +26,7 @@ public class JsonUtils {
 					else if (valor.startsWith("{"))//es un objeto
 						resultado.setPropiedad(llave, JsonStringToObject(valor));
 					else{ //es un valor
-						if(valor.startsWith("\""))
+						if(valor.startsWith("\"") || valor.startsWith("'"))
 							valor = valor.substring(1,valor.length()-1);//eliminar comilla inicial y final del valor
 						resultado.setPropiedad(llave, new String[]{valor});
 						}
@@ -50,7 +51,7 @@ public class JsonUtils {
 				}else if (elemento.startsWith("[")){//es un arreglo
 					arreglo[posicion++] = JsonStringToObject(elemento);
 				}else{//es un valor
-					if(elemento.startsWith("\""))
+					if(elemento.startsWith("\"") || elemento.startsWith("'"))
 						elemento = elemento.substring(1,elemento.length()-1);//eliminar comilla inicial y final del valor
 					arreglo[posicion++] = elemento;
 				}
@@ -93,10 +94,19 @@ public class JsonUtils {
 	}
 	
 	public static String propiedadNula(Object obj){
-		if(obj == null)
+		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
 			return "null";
-		else
-			return "'"+obj.toString()+"'";
+		else{
+			return "'"+StringUtils.decodificar(obj.toString())+"'";
+		}
+	}
+	
+	public static String propiedadNulaBackwards(Object obj){
+		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
+			return null;
+		else{
+			return StringUtils.decodificar(obj.toString());
+		}
 	}
 	
 	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){

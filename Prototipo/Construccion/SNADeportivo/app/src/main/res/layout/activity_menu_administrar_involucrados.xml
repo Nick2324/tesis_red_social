@@ -7,13 +7,6 @@
     tools:context="sportsallaround.snadeportivo.eventos.MenuAdministrarInvolucrados"
     android:orientation="vertical">
 
-    <fragment
-        android:name="sportsallaround.utils.gui.TituloActividad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_titulo_manejo_part"
-        android:tag="@string/titulo_botones_admin_participantes"></fragment>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

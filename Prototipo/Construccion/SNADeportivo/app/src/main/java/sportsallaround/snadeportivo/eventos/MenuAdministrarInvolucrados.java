@@ -11,8 +11,7 @@ import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.TituloActividad;
 
-public class MenuAdministrarInvolucrados extends Activity
-        implements TituloActividad.InitializerTituloActividad{
+public class MenuAdministrarInvolucrados extends Activity{
 
     private MenuEventos menuEventos;
 
@@ -20,6 +19,7 @@ public class MenuAdministrarInvolucrados extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_administrar_involucrados);
+        setTitle(getResources().getString(R.string.titulo_botones_admin_participantes));
     }
 
     @Override
@@ -42,11 +42,6 @@ public class MenuAdministrarInvolucrados extends Activity
                 getIntent().getExtras().
                         getBundle(Constants.DATOS_FUNCIONALIDAD));
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public String getIdTituloActividad(String tagFragmento) {
-        return tagFragmento;
     }
 
     public void startAniadirPart(View v){

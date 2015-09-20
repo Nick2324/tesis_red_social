@@ -47,15 +47,13 @@ public class BDUtils {
 		return new ResteasyClientBuilder().build();
 	}
 	
-	private static Object[] abstractoQuery(//String query,
-										 String payload
+	private static Object[] abstractoQuery(String payload
 										 )throws BDException{
 		String stringRespuesta;
 		if (!BDUtils.servidorActivo())
 			throw new BDException();
 		else {
 			System.out.println("Payload: "+payload);
-			//System.out.println("Query ejecutado: " + query);
 			ResteasyClient cliente = BDUtils.obtenerCliente();
 			WebTarget target = cliente.target(Constantes.SERVER_ROOT_URI).path(
 					PATH);
@@ -88,7 +86,7 @@ public class BDUtils {
 	}
 	
 	public static Object[] ejecutarQueryREST(String query) throws BDException{
-		return BDUtils.abstractoQuery(//query,
+		return BDUtils.abstractoQuery(
 				"{\"statements\": "+
 					"[{\"statement\" :\"" + query + "\","+
 					  "\"resultDataContents\":[\"REST\"]"+
@@ -98,8 +96,8 @@ public class BDUtils {
 	}
 	
 	public static Object[] ejecutarQuery(String query) throws BDException {
-		return BDUtils.abstractoQuery(//query,
-					"{\"statements\":[{\"statement\":\"" + query
+		return BDUtils.abstractoQuery("{\"statements\":"
+					+ "[{\"statement\":\"" + query
 					+ "\"}]}");
 	}
 
@@ -281,6 +279,14 @@ public class BDUtils {
 		JsonObject rest = (JsonObject)registro.getPropiedades().get("rest")[0];
 		JsonObject restArreglo = (JsonObject)rest.getPropiedades().get("arreglo")[0];
 		return restArreglo;
+	}
+	
+	public static Integer generarNumeradorEntidad(String entidad){
+		Object[] resultado = BDUtils.ejecutarQuery(
+				"MATCH (entidad:"+entidad+") RETURN COUNT(*)");
+		return Integer.parseInt((String)((JsonObject)((JsonObject)
+				resultado[0]).getPropiedades().get("row")[0]).
+				getPropiedades().get("arreglo")[0]);
 	}
 	
 }

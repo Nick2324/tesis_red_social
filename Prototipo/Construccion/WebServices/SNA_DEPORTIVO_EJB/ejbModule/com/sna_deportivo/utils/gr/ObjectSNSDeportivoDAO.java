@@ -1,6 +1,5 @@
 package com.sna_deportivo.utils.gr;
 
-import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.json.JsonObject;
@@ -10,22 +9,29 @@ public class ObjectSNSDeportivoDAO {
 
 	protected ObjectSNSDeportivo objectSNSDeportivo;
 	protected FactoryObjectSNSDeportivo factoryOSNS;
+	protected String tipoObjetoSNS;
+	protected String identificadorQueries;
 	
-	public ObjectSNSDeportivo[] getObjetoSNSDeportivoDB(String tipoObjetoSNS,
-														String identificador) throws BDException{
+	public ObjectSNSDeportivo[] getObjetoSNSDeportivoDB() throws BDException{
 		ObjectSNSDeportivo[] objetos = null;
-		String where = BDUtils.condicionWhere(this.objectSNSDeportivo, identificador);
+		String where = BDUtils.condicionWhere(this.objectSNSDeportivo, identificadorQueries);
+		System.out.println("Si llego "+where+" objectSNSDEPORTIVO??");
+		if(this.objectSNSDeportivo == null)
+			System.out.println("El objeto es nulo");
+		else
+			System.out.println("El objeto no es nulo!!!!!!!!!!!******************");
 		if(where != null || this.objectSNSDeportivo == null){
-			StringBuilder query = new StringBuilder("MATCH ("+identificador+":");
+			StringBuilder query = new StringBuilder("MATCH ("+identificadorQueries+":");
 			query.append(tipoObjetoSNS);
 			query.append(")");
 			if(where != null)
 				query.append(where);
-			query.append("RETURN "+identificador);
+			query.append("RETURN "+identificadorQueries);
 			try{
+				System.out.println(query.toString());
 				Object[] resultadoQuery = BDUtils.
 						ejecutarQueryREST(query.toString());
-				objetos = new Usuario[resultadoQuery.length];
+				objetos = new ObjectSNSDeportivo[resultadoQuery.length];
 				for(int i = 0; i < resultadoQuery.length; i++){
 					JsonObject datos =
 							(JsonObject)BDUtils.obtenerRestRegistro(resultadoQuery[i]).

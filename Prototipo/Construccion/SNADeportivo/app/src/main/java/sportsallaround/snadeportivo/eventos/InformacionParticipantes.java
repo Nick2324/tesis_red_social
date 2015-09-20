@@ -2,16 +2,15 @@ package sportsallaround.snadeportivo.eventos;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import com.sna_deportivo.pojo.deportes.Deporte;
-import com.sna_deportivo.pojo.deportes.FactoryDeporte;
+import com.sna_deportivo.pojo.entidadesEstaticas.ConstantesEntidadesGenerales;
+import com.sna_deportivo.pojo.entidadesEstaticas.FactoryGenero;
+import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactory;
 import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
@@ -31,28 +30,15 @@ public class InformacionParticipantes extends Activity
         SpinnerDesdeBD.InitializerSpinnerBD{
 
     private Evento evento;
+    private Genero genero;
     private MenuEventos menuEventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_participantes);
-        //CREANDO EVENTO CON TODOS LOS DATOS NECESARIOS
-        this.evento = new ProductorFactory().getEventosFactory(getIntent().getExtras().
-                getBundle(Constants.DATOS_FUNCIONALIDAD).
-                getString(ConstantesEvento.TIPO_EVENTO)).
-                crearEvento();
-        if(getIntent().getExtras().
-                getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                ConstantesEvento.EVENTO_MANEJADO) != null){
-            try {
-                this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
-                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                        ConstantesEvento.EVENTO_MANEJADO)));
-            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
-                excepcionJsonDeserializacion.printStackTrace();
-            }
-        }
+        setTitle(getResources().getString(R.string.titulo_gestion_eventos_lista));
+        this.setUpObjetos();
     }
 
     @Override
@@ -81,6 +67,7 @@ public class InformacionParticipantes extends Activity
             Bundle extras = getIntent().getExtras().
                     getBundle(Constants.DATOS_FUNCIONALIDAD);
             extras.putString(ConstantesEvento.EVENTO_MANEJADO, this.evento.stringJson());
+            extras.putString(ConstantesEvento.GENERO_MANEJADO, this.genero.stringJson());
             this.menuEventos.comportamiento(this, item.getItemId(),
                     extras);
         }
@@ -93,19 +80,18 @@ public class InformacionParticipantes extends Activity
             return getResources().getString(R.string.caracteristicas_participantes);
         else if(tagFragmento.equals(getResources().getString(R.string.general_participantes)))
             return getResources().getString(R.string.general_participantes);
-        else if(tagFragmento.equals(getResources().getString(R.string.titulo_gestion_eventos_lista)))
-             return getResources().getString(R.string.titulo_gestion_eventos_lista);
         return null;
     }
 
     @Override
     public FactoryObjectSNSDeportivo getFactoryObjetosSNS() {
-        return new FactoryDeporte();
+        return new FactoryGenero();
     }
 
     @Override
     public String getServicio() {
-        return Constants.SERVICES_PATH_DEPORTES;
+        return Constants.SERVICES_PATH_GENERALES +
+               ConstantesEntidadesGenerales.GENERO.getServicio();
     }
 
     @Override
@@ -120,7 +106,7 @@ public class InformacionParticipantes extends Activity
 
     @Override
     public String getAtributoMostradoSpinner() {
-        return "nombre";
+        return "descripcion";
     }
 
     @Override
@@ -129,11 +115,17 @@ public class InformacionParticipantes extends Activity
     }
 
     @Override
-    public void onPostExcecute() {}
+    public void onPostExcecute() {
+        //GENERO
+        if(this.genero.getNombre() != null){
+            ((SpinnerDesdeBD)getFragmentManager().findFragmentById(
+                    R.id.spinner_genero)).setSeleccionado(this.genero);
+        }
+    }
 
     @Override
     public void onItemSelectedSpinnerBD(KeyValueItem seleccionado, String tagFragmento) {
-        Log.d("Nick:Deporte", "Se selecciona deporte " + ((Deporte) seleccionado.getValue()).toString());
+        this.genero = (Genero)seleccionado.getValue();
     }
 
     @Override
@@ -143,22 +135,35 @@ public class InformacionParticipantes extends Activity
         EditText texto = null;
         try {
             texto = (EditText) findViewById(R.id.numero_participantes_evento_info_general);
-            if(texto.getText() != null)
-                evento.setNumMaxParticipantes(Integer.parseInt(texto.toString()));
+            if(texto.getText() != null && texto.getText().length() != 0) {
+                evento.setNumMaxParticipantes(Integer.parseInt(texto.getText().toString()));
+            }else{
+                evento.setNumMaxParticipantes(null);
+            }
             texto = (EditText) findViewById(
                     R.id.rango_maximo_edad_evento_info_general);
-            if(texto.getText() != null)
-                evento.setRangoMaxEdad(Integer.parseInt(texto.toString()));
+            if(texto.getText() != null && texto.getText().length() != 0) {
+                evento.setRangoMaxEdad(Integer.parseInt(texto.getText().toString()));
+            }else{
+                evento.setRangoMaxEdad(null);
+            }
             texto = (EditText) findViewById(
                     R.id.rango_minimo_edad_evento_info_general);
-            if(texto.getText() != null)
-                evento.setRangoMinEdad(Integer.parseInt(texto.toString()));
+            if(texto.getText() != null  && texto.getText().length() != 0) {
+                evento.setRangoMinEdad(Integer.parseInt(texto.getText().toString()));
+            }else{
+                evento.setRangoMinEdad(null);
+            }
         }catch (NumberFormatException e){
             new AlertDialog.Builder(this).setTitle("Ejecución de opcion").
                     setMessage("Error al ejecutar la opción. Llene los campos con el formato propio").
                     setNegativeButton("Ok",null).create().show();
             return false;
         }
+
+        this.genero = (Genero)((SpinnerDesdeBD)getFragmentManager().
+                                findFragmentById(R.id.spinner_genero)).getSeleccionado();
+
         return true;
     }
 
@@ -176,4 +181,35 @@ public class InformacionParticipantes extends Activity
                     this.evento.getRangoMinEdad()+""
             );
     }
+
+    public void setUpObjetos(){
+        this.evento = new ProductorFactory().getEventosFactory(getIntent().getExtras().
+                getBundle(Constants.DATOS_FUNCIONALIDAD).
+                getString(ConstantesEvento.TIPO_EVENTO)).
+                crearEvento();
+        this.genero = new Genero();
+        if(getIntent().getExtras().
+                getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                ConstantesEvento.EVENTO_MANEJADO) != null){
+            try {
+                this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                        ConstantesEvento.EVENTO_MANEJADO)));
+            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                excepcionJsonDeserializacion.printStackTrace();
+            }
+        }
+        if(getIntent().getExtras().
+                getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                ConstantesEvento.GENERO_MANEJADO) != null){
+            try {
+                this.genero.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                        ConstantesEvento.GENERO_MANEJADO)));
+            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                excepcionJsonDeserializacion.printStackTrace();
+            }
+        }
+    }
+
 }

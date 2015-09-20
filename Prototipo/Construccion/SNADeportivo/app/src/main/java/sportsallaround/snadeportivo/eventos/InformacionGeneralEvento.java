@@ -3,6 +3,7 @@ package sportsallaround.snadeportivo.eventos;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,11 +29,10 @@ import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.OnDatePickedListener;
 import sportsallaround.utils.gui.SpinnerDesdeBD;
 import sportsallaround.utils.gui.TimePickerFragment;
-import sportsallaround.utils.gui.TituloActividad;
 
 public class InformacionGeneralEvento extends Activity
-        implements OnDatePickedListener,TimePickerFragment.OnTimePickedListener,SpinnerDesdeBD.InitializerSpinnerBD,
-        TituloActividad.InitializerTituloActividad {
+        implements OnDatePickedListener,TimePickerFragment.OnTimePickedListener,
+                   SpinnerDesdeBD.InitializerSpinnerBD{
 
     private Evento evento;
     private Deporte deporte;
@@ -42,6 +42,7 @@ public class InformacionGeneralEvento extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_general_evento);
+        setTitle(getResources().getString(R.string.title_activity_informacion_general_evento));
         this.setUpObjetos();
         this.setUpListeners();
     }
@@ -71,10 +72,8 @@ public class InformacionGeneralEvento extends Activity
         this.volcarDatosObjetos();
         Bundle extras = getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD);
-        Log.d("Nick:volcar", this.evento.stringJson());
-        Log.d("Nick:volcar", this.deporte.stringJson());
         extras.putString(ConstantesEvento.EVENTO_MANEJADO, this.evento.stringJson());
-        extras.putString(ConstantesEvento.DEPORTE_MANEJADO,this.deporte.stringJson());
+        extras.putString(ConstantesEvento.DEPORTE_MANEJADO, this.deporte.stringJson());
         this.menuEventos.comportamiento(this, item.getItemId(), extras);
         return super.onOptionsItemSelected(item);
     }
@@ -197,34 +196,62 @@ public class InformacionGeneralEvento extends Activity
         return "nombre";
     }
 
-    @Override
-    public String getIdTituloActividad(String tagFragmento) {
-        return getResources().getString(R.string.title_activity_informacion_general_evento);
-    }
-
     public void volcarDatosObjetos(){
         //EVENTO
-        Log.d("Nick:volcar","Paso");
-
+        Editable editable = ((EditText) (findViewById(R.id.nombre_evento_info_general))).getText();
         final Calendar c = Calendar.getInstance();
-        evento.setNombre(((EditText) (findViewById(R.id.nombre_evento_info_general))).getText().
-                toString());
-        evento.setDescripcion(((EditText) (findViewById(R.id.descripcion_evento_info_general))).
-                getText().toString());
-        evento.setFechaInicio(((EditText) (findViewById(R.id.fecha_inicio_evento_info_general))).
-                getText().toString());
-        evento.setFechaFinal(((EditText) (findViewById(R.id.fecha_final_evento_info_general))).
-                getText().toString());
-        evento.setHoraInicio(((EditText) (findViewById(R.id.hora_inicio_evento_info_general))).
-                getText().toString());
-        evento.setHoraFinal(((EditText) (findViewById(R.id.hora_final_evento_info_general))).
-                getText().toString());
+        if(editable.length() > 0) {
+            evento.setNombre(editable.toString());
+        }else{
+            evento.setNombre(null);
+        }
+        editable = ((EditText) (findViewById(R.id.descripcion_evento_info_general))).getText();
+        if(editable.length() > 0) {
+            evento.setDescripcion(editable.toString());
+        }else{
+            evento.setDescripcion(null);
+        }
+        editable = ((EditText) (findViewById(R.id.fecha_inicio_evento_info_general))).getText();
+        if(editable.length() > 0) {
+            evento.setFechaInicio(editable.toString());
+        }else{
+            evento.setFechaInicio(null);
+        }
+        editable = ((EditText) (findViewById(R.id.fecha_final_evento_info_general))).getText();
+        if(editable.length() > 0) {
+            evento.setFechaFinal(editable.toString());
+        }else{
+            evento.setFechaFinal(null);
+        }
+        editable = ((EditText) (findViewById(R.id.hora_inicio_evento_info_general))).getText();
+        if(editable.length() > 0) {
+            evento.setHoraInicio(editable.toString());
+        }else{
+            evento.setHoraInicio(null);
+        }
+        editable = ((EditText) (findViewById(R.id.hora_final_evento_info_general))).getText();
+        if(editable.length() > 0) {
+            evento.setHoraFinal(editable.toString());
+        }else{
+            evento.setHoraFinal(null);
+        }
         if(getIntent().getExtras().getBundle(Constants.DATOS_FUNCIONALIDAD).
                 getString(Constants.FUNCIONALIDAD).equals(ConstantesEvento.CREAR_EVENTO)) {
-            evento.setFechaCreacion(String.format("%02d", c.get(Calendar.DAY_OF_MONTH)) + "/" +
-                    String.format("%02d", c.get(Calendar.MONTH)) + "/" +
-                    String.format("%04d", c.get(Calendar.YEAR)));
-            evento.setActivo(true);
+            evento.setFechaCreacion(null);
+            evento.setActivo(null);
+            if(!evento.equals(new ProductorFactory().
+                             getEventosFactory(getIntent().getExtras().getBundle(
+                                     Constants.DATOS_FUNCIONALIDAD).
+                                     getString(ConstantesEvento.TIPO_EVENTO)).crearEvento().
+                            setNullObject())) {
+                evento.setFechaCreacion(String.format("%02d", c.get(Calendar.DAY_OF_MONTH)) + "/" +
+                        String.format("%02d", c.get(Calendar.MONTH)) + "/" +
+                        String.format("%04d", c.get(Calendar.YEAR)));
+                evento.setActivo(true);
+            }else{
+                evento.setFechaCreacion(null);
+                evento.setActivo(null);
+            }
         }else{
             evento.setFechaCreacion(((EditText) findViewById(R.id.fecha_creacion_evento)).
                     getText().toString());
@@ -234,7 +261,6 @@ public class InformacionGeneralEvento extends Activity
                 (Deporte)(((SpinnerDesdeBD)getFragmentManager().
                         findFragmentById(R.id.fragment_tipo_deporte)).
                     getSeleccionado());
-        Log.d("Nick:volcar","Termino");
     }
 
     public void setUpDatosActividad(){
@@ -293,7 +319,7 @@ public class InformacionGeneralEvento extends Activity
         this.deporte = new Deporte();
         if(getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                ConstantesEvento.EVENTO_MANEJADO) != null){
+                ConstantesEvento.DEPORTE_MANEJADO) != null){
             try {
                 this.deporte.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
                         getBundle(Constants.DATOS_FUNCIONALIDAD).getString(

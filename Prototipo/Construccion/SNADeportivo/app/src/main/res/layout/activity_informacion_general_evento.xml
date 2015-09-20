@@ -14,12 +14,6 @@
         android:orientation="vertical"
         tools:context="sportsallaround.snadeportivo.eventos.InformacionGeneralEvento">
 
-        <fragment
-            android:name="sportsallaround.utils.gui.TituloActividad"
-            android:id="@+id/fragment_titulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <TextView android:text="@string/nombre_evento" android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

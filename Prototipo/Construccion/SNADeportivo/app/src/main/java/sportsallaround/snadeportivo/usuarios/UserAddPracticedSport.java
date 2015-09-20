@@ -138,7 +138,7 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
     public void anadirDeporte(View view) {
         Deporte deporte = ((Deporte[]) availableSports.getTag())[availableSports.getSelectedItemPosition()];
         String nivel = ((String[])availableLevels.getTag())[availableLevels.getSelectedItemPosition()];
-        ArrayList<PosicionDeporte> posiciones = new ArrayList<>();
+        ArrayList<PosicionDeporte> posiciones = new ArrayList<PosicionDeporte>();
         CheckBox check;
         for(int i=0;i<layoutPosiciones.getChildCount();i++){
             check = (CheckBox)layoutPosiciones.getChildAt(i);

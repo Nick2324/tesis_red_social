@@ -5,21 +5,26 @@ import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 
 public class DAOUsuario extends ObjectSNSDeportivoDAO{
-
-	private Usuario usuario;
 	
-	public DAOUsuario(){}
+	public DAOUsuario(){
+		this.setUpDAOUsuarioGeneral();
+	}
 	
 	public DAOUsuario(Usuario usuario){
-		this.usuario = usuario;
 		super.objectSNSDeportivo = usuario;
-		super.factoryOSNS = new FactoryUsuario();
+		this.setUpDAOUsuarioGeneral();
 	}
 	
 	public Usuario[] getUsuariosDB() throws BDException{
 
-		return (Usuario[])super.getObjetoSNSDeportivoDB(Entidades.USUARIO, "usuario");
+		return (Usuario[])super.getObjetoSNSDeportivoDB();
 	
+	}
+	
+	private void setUpDAOUsuarioGeneral(){
+		super.factoryOSNS = new FactoryUsuario();
+		super.tipoObjetoSNS = Entidades.USUARIO;
+		super.identificadorQueries = "usuario";
 	}
 	
 }

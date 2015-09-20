@@ -36,4 +36,9 @@ public class StringUtils {
 			return aDecodificar;
 	}
 	
+	public static boolean compararStrings(String string1, String string2){
+		return (string1 == null && string2 == null) || 
+			   (string1 != null && string1.equals(string2));
+	}
+	
 }

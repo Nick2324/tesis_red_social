@@ -132,7 +132,7 @@ public class GenericMenuFragment extends Fragment{
         @Override
         protected Boolean doInBackground(Void... params) {
             boolean retorno = true;
-            ArrayList<Permiso> permisos = new ArrayList<>();
+            ArrayList<Permiso> permisos = new ArrayList<Permiso>();
             try {
 
                 String resultadoString = ServiceUtils.invokeService(new JSONObject(permission.toString()),Constants.SERVICES_OBTENER_PERMISOS,"POST");

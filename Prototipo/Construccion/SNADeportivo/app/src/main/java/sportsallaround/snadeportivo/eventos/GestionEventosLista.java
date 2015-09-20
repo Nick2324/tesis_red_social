@@ -22,6 +22,7 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.DescripcionGo;
@@ -34,7 +35,6 @@ import sportsallaround.utils.gui.TituloActividad;
 
 public class GestionEventosLista extends Activity
         implements AttachObjetoListener,
-                   TituloActividad.InitializerTituloActividad,
                    ListaConFiltro.CallBackListaConFiltro,
                    DescripcionGo.DescripcionGoCallBack{
 
@@ -67,7 +67,6 @@ public class GestionEventosLista extends Activity
 
         @Override
         protected Object doInBackground(Object[] params) {
-            Log.d("Nick","Inicio peticion");
             ConstantesEventos itemSeleccionado = (ConstantesEventos)params[0];
             return ServiceUtils.invokeService(null,
                     Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
@@ -121,6 +120,7 @@ public class GestionEventosLista extends Activity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_eventos_lista);
+        setTitle(getResources().getString(R.string.titulo_gestion_eventos_lista));
         this.prepararListeners();
     }
 
@@ -139,8 +139,9 @@ public class GestionEventosLista extends Activity
     private ArrayList<KeyValueItem> convertirEventosKeyValueItem(){
         ArrayList<KeyValueItem> arrayListaEventos =
                 new ArrayList<KeyValueItem>();
-        for (Evento e : eventos)
+        for (Evento e : eventos) {
             arrayListaEventos.add(new KeyValueItem(eventos.indexOf(e), e.getNombre()));
+        }
         return arrayListaEventos;
     }
 
@@ -153,15 +154,9 @@ public class GestionEventosLista extends Activity
     }
 
     @Override
-    public String getIdTituloActividad(String tagFragmento) {
-        return getResources().getString(R.string.titulo_gestion_eventos_lista);
-    }
-
-    @Override
     public void realizarAccionAlClick(KeyValueItem item, String identificadorFragmento) {
         if(identificadorFragmento.equals(getResources().getString(R.string.lista_evento_string))){
             int i = Integer.parseInt(item.getKey().toString());
-            Log.d("Nick:Clicked", eventos.get(i).toString());
             ((DescripcionGo)getFragmentManager().findFragmentById(R.id.fragment_switcher_info)).
                     setDescripcion(eventos.get(i).getNombre() + "\n" +
                             eventos.get(i).getDescripcion() + "\n" +

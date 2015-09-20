@@ -3,9 +3,9 @@ package com.sna_deportivo.services.eventos;
 import com.sna_deportivo.pojo.evento.DAOEvento;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactory;
-import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 
 public class GestionEvento {

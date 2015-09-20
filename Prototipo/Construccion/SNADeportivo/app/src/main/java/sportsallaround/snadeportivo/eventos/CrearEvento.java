@@ -25,12 +25,13 @@ import sportsallaround.utils.gui.ObjetoListener;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
 import sportsallaround.utils.gui.TituloActividad;
 
-public class CrearEvento extends Activity implements ObjetoListenerSpinner,AttachObjetoListener,TituloActividad.InitializerTituloActividad {
+public class CrearEvento extends Activity implements ObjetoListenerSpinner,AttachObjetoListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_evento);
+        setTitle(getResources().getString(R.string.title_activity_crear_evento));
     }
 
     @Override
@@ -80,8 +81,4 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
 
     }
 
-    @Override
-    public String getIdTituloActividad(String tagFragmento) {
-        return getResources().getString(R.string.title_activity_crear_evento);
-    }
 }

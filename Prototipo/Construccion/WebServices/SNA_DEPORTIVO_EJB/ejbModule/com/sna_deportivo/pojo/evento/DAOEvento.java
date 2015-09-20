@@ -1,10 +1,10 @@
 package com.sna_deportivo.pojo.evento;
 
-import com.sna_deportivo.pojo.evento.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -120,8 +120,7 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	
 	public Evento crearEventoDB() throws BDException{
 		StringBuilder query = new StringBuilder("CREATE (evento:"+Entidades.EVENTODEPORTIVO);
-		//Generar UUID
-		this.evento.setId("1");
+		this.evento.setId(""+BDUtils.generarNumeradorEntidad(Entidades.EVENTODEPORTIVO));
 		query.append(this.evento.toString());
 		query.append(") RETURN evento");
 		try {

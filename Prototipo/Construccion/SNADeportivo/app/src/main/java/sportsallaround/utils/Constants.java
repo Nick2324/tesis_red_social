@@ -15,8 +15,10 @@ public class Constants {
     //*************************************Servicios Deportes**************************************
     public static final String SERVICES_PATH_DEPORTES = "deportes/";
     //*********************************************************************************************
+    //***********************************Servicios Entidades Generales*****************************
+    public static final String SERVICES_PATH_GENERALES = "generales/";
     //******************************Strings de formato y patrones**********************************
-    public static final String ROOT_URL = "http://192.168.0.12:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://192.168.0.14:8080/SNA_DEPORTIVO_WEB/services/";
     //public static final String ROOT_URL = "http://10.42.0.1:8080/SNA_DEPORTIVO_WEB/services/";
     /*
     *
@@ -45,4 +47,6 @@ public class Constants {
     //*********CONSTANTES PARA EL PASO DE MENSAJES ENTRE ACTIVIDADES SEGUN FUNCIONALIDADES*********
     public static final String DATOS_FUNCIONALIDAD = "datos_funcionalidad";
     public static final String FUNCIONALIDAD = "funcionalidad";
+    public static final String USUARIO = "user";
+
 }
