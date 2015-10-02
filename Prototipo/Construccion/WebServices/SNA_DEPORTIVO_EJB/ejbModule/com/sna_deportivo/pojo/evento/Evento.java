@@ -1,5 +1,6 @@
 package com.sna_deportivo.pojo.evento;
 
+import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.bd.FechaSNS;
 import com.sna_deportivo.utils.bd.TiempoSNS;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
@@ -30,6 +31,7 @@ public class Evento extends ObjectSNSDeportivo {
 	private Integer rangoMaxEdad;
 	private Integer rangoMinEdad;
 	private Boolean activo;
+	private Usuario creador;
 	
 	/**
 	 * 
@@ -37,6 +39,10 @@ public class Evento extends ObjectSNSDeportivo {
 	 * 
 	 */
 	public Evento(){}
+	
+	public void setCreador(Usuario creador) {
+		this.creador = creador;
+	}
 	
 	/**
 	 * 
@@ -180,6 +186,10 @@ public class Evento extends ObjectSNSDeportivo {
 	 */
 	public void setRangoMaxEdad(Integer rangoMaxEdad){
 		this.rangoMaxEdad = rangoMaxEdad;
+	}
+	
+	public Usuario getCreador() {
+		return creador;
 	}
 	
 	/**

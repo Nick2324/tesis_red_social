@@ -10,13 +10,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
+import com.sna_deportivo.pojo.evento.TiposEventos;
 
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.gui.AttachObjetoListener;
-import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
 
 public class SpinnerEventos extends Fragment {
@@ -57,11 +56,11 @@ public class SpinnerEventos extends Fragment {
 
     private void setTiposEventos() {
         Spinner tipoEvento = (Spinner)getView().findViewById(R.id.spinner_tipo_evento);
-        ArrayList<ConstantesEventos> tiposEventos = new ArrayList<ConstantesEventos>();
-        for(ConstantesEventos ce:ConstantesEventos.values())
+        ArrayList<TiposEventos> tiposEventos = new ArrayList<TiposEventos>();
+        for(TiposEventos ce:TiposEventos.values())
             tiposEventos.add(ce);
-        ArrayAdapter<ConstantesEventos> adapterTipoEvento =
-                new ArrayAdapter<ConstantesEventos>(getView().getContext(),
+        ArrayAdapter<TiposEventos> adapterTipoEvento =
+                new ArrayAdapter<TiposEventos>(getView().getContext(),
                                                     android.R.layout.simple_spinner_dropdown_item,
                                                     tiposEventos);
         tipoEvento.setAdapter(adapterTipoEvento);
@@ -73,7 +72,7 @@ public class SpinnerEventos extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 Spinner tiposEventos = (Spinner) parentView;
-                listener.onItemSelected((ConstantesEventos) tiposEventos.getAdapter().getItem(position));
+                listener.onItemSelected((TiposEventos) tiposEventos.getAdapter().getItem(position));
             }
 
             @Override
@@ -84,9 +83,9 @@ public class SpinnerEventos extends Fragment {
         });
     }
 
-    public ConstantesEventos getValueSpinnerEventos(){
+    public TiposEventos getValueSpinnerEventos(){
         Spinner spinnerEventos = (Spinner)getView().findViewById(R.id.spinner_tipo_evento);
-        return (ConstantesEventos)spinnerEventos.getSelectedItem();
+        return (TiposEventos)spinnerEventos.getSelectedItem();
     }
 
 }

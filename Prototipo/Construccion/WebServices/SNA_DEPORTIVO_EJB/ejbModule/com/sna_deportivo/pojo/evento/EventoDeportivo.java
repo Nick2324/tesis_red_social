@@ -98,7 +98,7 @@ public class EventoDeportivo extends Evento{
 		return retorno.substring(0, retorno.length() - 1) + "]}";
 	}
 	
-	@Override
+	/*@Override
 	public JsonObject serializarJson() {
 		StringBuilder stringSerializacion = new StringBuilder(
 				super.toString().substring(0,super.toString().length() - 1));
@@ -110,6 +110,6 @@ public class EventoDeportivo extends Evento{
 		
 		return JsonUtils.JsonStringToObject(stringSerializacion.substring(
 				0,stringSerializacion.length() - 1) + "]");
-	}
+	}*/
 	
 }

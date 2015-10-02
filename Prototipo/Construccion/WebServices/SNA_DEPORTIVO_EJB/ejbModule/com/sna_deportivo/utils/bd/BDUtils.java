@@ -29,8 +29,6 @@ public class BDUtils {
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		WebTarget target = client.target(Constantes.SERVER_ROOT_URI).path("/");
 		Response result = target.request()
-				//nicolas2324:mifamilia
-				//neo4j:21316789
 				.header("Authorization", "Basic " + Base64.encodeBytes("nicolas2324:mifamilia".getBytes()))
 				.accept(MediaType.TEXT_PLAIN)
 				.get(Response.class);
@@ -77,7 +75,6 @@ public class BDUtils {
 					data = (JsonObject) arregloData.getPropiedades()
 						.get("data")[0];
 				Object[] contenidoData = data.getPropiedades().get("arreglo");
-
 				return contenidoData;
 			} else{
 				throw new BDException();

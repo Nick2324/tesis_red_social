@@ -5,15 +5,19 @@ import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 
 public class DAODeporte extends ObjectSNSDeportivoDAO{
 
 	private Deporte deporte;
 
-	public DAODeporte(){}
+	public DAODeporte(){
+		super();
+	}
 	
 	public DAODeporte(Deporte deporte){
+		super();
 		this.deporte = deporte;
 	}
 	
@@ -109,6 +113,18 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 	
 	public Deporte getDeporte(){
 		return this.deporte;
+	}
+
+	@Override
+	protected void setUpDAOGeneral() {
+		super.factoryOSNS = new FactoryDeporte();
+		super.identificadorQueries = "deporte";
+		super.tipoObjetoSNS = Entidades.DEPORTE;
+	}
+	
+	@Override
+	public ObjectSNSDeportivo crearObjetoSNS() {
+		return null;
 	}
 	
 }

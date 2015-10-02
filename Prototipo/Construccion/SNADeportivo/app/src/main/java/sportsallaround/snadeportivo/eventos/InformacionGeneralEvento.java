@@ -13,7 +13,7 @@ import android.widget.EditText;
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.FactoryDeporte;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactory;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
@@ -239,10 +239,10 @@ public class InformacionGeneralEvento extends Activity
                 getString(Constants.FUNCIONALIDAD).equals(ConstantesEvento.CREAR_EVENTO)) {
             evento.setFechaCreacion(null);
             evento.setActivo(null);
-            if(!evento.equals(new ProductorFactory().
-                             getEventosFactory(getIntent().getExtras().getBundle(
+            if(!evento.equals(new ProductorFactoryEvento().
+                             producirFacObjetoSNS(getIntent().getExtras().getBundle(
                                      Constants.DATOS_FUNCIONALIDAD).
-                                     getString(ConstantesEvento.TIPO_EVENTO)).crearEvento().
+                                     getString(ConstantesEvento.TIPO_EVENTO)).getObjetoSNS().
                             setNullObject())) {
                 evento.setFechaCreacion(String.format("%02d", c.get(Calendar.DAY_OF_MONTH)) + "/" +
                         String.format("%02d", c.get(Calendar.MONTH)) + "/" +
@@ -299,10 +299,9 @@ public class InformacionGeneralEvento extends Activity
 
     public void setUpObjetos(){
         //EVENTO
-        this.evento = new ProductorFactory().getEventosFactory(getIntent().getExtras().
+        this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                ConstantesEvento.TIPO_EVENTO)).
-                crearEvento();
+                ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
         if(getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                 ConstantesEvento.EVENTO_MANEJADO) != null){

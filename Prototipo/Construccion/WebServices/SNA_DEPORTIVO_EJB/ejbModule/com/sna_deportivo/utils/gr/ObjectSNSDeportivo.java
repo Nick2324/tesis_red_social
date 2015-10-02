@@ -1,5 +1,7 @@
 package com.sna_deportivo.utils.gr;
 
+import java.util.ArrayList;
+
 import com.sna_deportivo.utils.gr.excepciones.AtributoInexistenteException;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonSerializable;
@@ -56,18 +58,34 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 	}
 	
 	@Override
-	public JsonObject serializarJson() {
+	public final JsonObject serializarJson() {
 		return JsonUtils.JsonStringToObject(this.stringJson());
 	}
 	
 	@Override
-	public void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
+	public final void deserializarJson(JsonObject json) throws ExcepcionJsonDeserializacion {
 		this.setNullObject();
 		for(String propiedad:json.getPropiedades().keySet()){
 			if(!(this.esAtributo(propiedad) &&
 				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad)))){
 				throw new ExcepcionJsonDeserializacion();
 			}
+		}
+	}
+	
+	protected final String stringJsonArray(String identificador,
+									 ArrayList<ObjectSNSDeportivo> array){
+		//HAY QUE BUSCAR UN MECANISMO PARA GUARDAR EL TIPO DE DATO
+		StringBuilder stringSerializacion = new StringBuilder(identificador);
+		stringSerializacion.append(":[");
+		if(array != null && array.size() > 0){
+			for(ObjectSNSDeportivo obj:array){
+				stringSerializacion.append(obj.stringJson());
+				stringSerializacion.append(",");
+			}
+			return stringSerializacion.substring(0,stringSerializacion.length() - 1) + "]";
+		}else{
+			return stringSerializacion.toString() + "]";
 		}
 	}
 	

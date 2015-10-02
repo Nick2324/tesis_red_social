@@ -3,27 +3,20 @@ package sportsallaround.snadeportivo.eventos;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
-import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactory;
-import com.sna_deportivo.utils.gr.Constantes;
+import com.sna_deportivo.pojo.evento.TiposEventos;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.gui.ObjetoListener;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
-import sportsallaround.utils.gui.TituloActividad;
 
 public class CrearEvento extends Activity implements ObjetoListenerSpinner,AttachObjetoListener {
 
@@ -52,11 +45,18 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
                 Bundle extras = new Bundle();
                 extras.putString(ConstantesEvento.TIPO_EVENTO,
                         ((SpinnerEventos)getFragmentManager().findFragmentById(
-                        R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().
-                        getServicio());
+                        R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().getNombreClase());
+                extras.putString(ConstantesEvento.SERVICIO_EVENTO,
+                        ((SpinnerEventos)getFragmentManager().findFragmentById(
+                                R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().getServicio());
                 extras.putString(Constants.FUNCIONALIDAD,ConstantesEvento.CREAR_EVENTO);
                 extras.putString(ConstantesEvento.TIPO_MENU,
-                                 ConstantesEvento.MENU_ADMIN_EVENTOS);
+                        ConstantesEvento.MENU_ADMIN_EVENTOS);
+                extras.putString(Constants.USUARIO,
+                        ((Usuario) getIntent().
+                                getExtras().
+                                getParcelable(Constants.USUARIO)).
+                                toString());
                 Intent intent = new Intent(actividad, InformacionGeneralEvento.class);
                 intent.putExtra(Constants.DATOS_FUNCIONALIDAD,extras);
                 startActivity(intent);
@@ -73,7 +73,7 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
     public void onItemSelected(Object objetoSeleccionado) {
         TextView descripcionEventos =
                 (TextView) findViewById(R.id.textview_descripcion_tipo_evento);
-        descripcionEventos.setText(((ConstantesEventos)objetoSeleccionado).getDescripcion());
+        descripcionEventos.setText(((TiposEventos)objetoSeleccionado).getDescripcion());
     }
 
     @Override

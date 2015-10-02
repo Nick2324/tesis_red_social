@@ -1,8 +1,12 @@
 package com.sna_deportivo.pojo.evento;
 
+import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.Entidades;
+import com.sna_deportivo.utils.bd.RelacionSNS;
+import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
@@ -16,12 +20,19 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	protected String eventoManejado;
 	
 	protected DAOEvento(){
-		this.eventoManejado = ConstantesEventos.EVENTOGENERICO.getServicio();
+		super();
+		this.eventoManejado = TiposEventos.EVENTOGENERICO.getServicio();
 	}
 	
 	protected DAOEvento(Evento e){
+		super();
 		this.evento = e;
 	}	
+	
+	@Override
+	protected void setUpDAOGeneral() {
+		super.tipoObjetoSNS = Entidades.EVENTODEPORTIVO;
+	}
 	
 	public void setEvento(Evento e){
 		this.evento = e;
@@ -51,7 +62,7 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 					JsonObject datos = 
 							(JsonObject)BDUtils.obtenerRestRegistro(resultadoQuery[i]).
 							getPropiedades().get("data")[0];
-					eventos[i] = new ProductorFactory().
+					eventos[i] = new ProductorFactoryEvento().
 							 getEventosFactory(this.eventoManejado).
 							 crearEvento();
 					eventos[i].deserializarJson(datos);
@@ -101,7 +112,7 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	public void deleteEventoDB()throws BDException,ProductorFactoryExcepcion{
 		Evento evento = null;
 		try {
-			evento = new ProductorFactory().
+			evento = new ProductorFactoryEvento().
 					       getEventosFactory(this.eventoManejado).
 					       crearEvento();
 			evento.setId(this.evento.getId());
@@ -123,16 +134,29 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		this.evento.setId(""+BDUtils.generarNumeradorEntidad(Entidades.EVENTODEPORTIVO));
 		query.append(this.evento.toString());
 		query.append(") RETURN evento");
-		try {
-			BDUtils.ejecutarQueryREST(query.toString());
-		} catch (BDException e) {
-			throw e;
+		BDUtils.ejecutarQueryREST(query.toString());
+		if(this.evento.getCreador() != null){
+			RelacionSNS relacionCreaEvento = 
+					new RelacionSNS(Relaciones.CREAEVENTO,
+									"creaEvento",
+									evento.getCreador());
+			super.objectSNSDeportivo = this.evento;
+			super.crearRelacion(relacionCreaEvento, 
+								new ProductorFactoryUsuario(),
+								RelacionSNS.DIRECCION_ENTRADA);
 		}
-		return this.evento;		
+		
+		return this.evento;
+		
 	}
 	
 	public String getEventoManejado(){
 		return this.eventoManejado;
+	}
+	
+	@Override
+	public ObjectSNSDeportivo crearObjetoSNS() {
+		return this.crearObjetoSNS();
 	}
 	
 }

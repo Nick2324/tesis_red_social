@@ -8,11 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-import com.sna_deportivo.pojo.entidadesEstaticas.ConstantesEntidadesGenerales;
+import com.sna_deportivo.pojo.entidadesEstaticas.EntidadesGenerales;
 import com.sna_deportivo.pojo.entidadesEstaticas.FactoryGenero;
 import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactory;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
@@ -91,7 +91,7 @@ public class InformacionParticipantes extends Activity
     @Override
     public String getServicio() {
         return Constants.SERVICES_PATH_GENERALES +
-               ConstantesEntidadesGenerales.GENERO.getServicio();
+               EntidadesGenerales.GENERO.getServicio();
     }
 
     @Override
@@ -183,10 +183,9 @@ public class InformacionParticipantes extends Activity
     }
 
     public void setUpObjetos(){
-        this.evento = new ProductorFactory().getEventosFactory(getIntent().getExtras().
+        this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).
-                getString(ConstantesEvento.TIPO_EVENTO)).
-                crearEvento();
+                getString(ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
         this.genero = new Genero();
         if(getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(

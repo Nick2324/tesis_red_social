@@ -2,8 +2,11 @@ package com.sna_deportivo.utils.json;
 
 import java.util.ArrayList;
 
+import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.ProductorSNSDeportivo;
 import com.sna_deportivo.utils.gr.StringUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class JsonUtils {
 
@@ -19,6 +22,12 @@ public class JsonUtils {
 				for (String propiedad : propiedadesObjeto){
 					llave = propiedad.substring(0, propiedad.indexOf(":")).trim();
 					valor = propiedad.substring(propiedad.indexOf(":")+1).trim();
+					
+					System.out.println("************************************************");
+					System.out.println("Llave ====== "+llave);
+					System.out.println("Valor ====== "+valor);
+					System.out.println("************************************************");
+					
 					if(llave.startsWith("\"") || llave.startsWith("'"))
 						llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
 					if(valor.startsWith("["))//es un arreglo
@@ -101,6 +110,22 @@ public class JsonUtils {
 		}
 	}
 	
+	public static String propiedadNulaSinDecodificar(Object obj){
+		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
+			return "null";
+		else{
+			return "'"+obj.toString()+"'";
+		}
+	}
+	
+	public static String propiedadNulaTDPrimitivo(Object obj){
+		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
+			return "null";
+		else{
+			return obj.toString();
+		}
+	}
+	
 	public static String propiedadNulaBackwards(Object obj){
 		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
 			return null;
@@ -121,6 +146,47 @@ public class JsonUtils {
 		}
 		arrayEventosJson.append(']');
 		return arrayEventosJson.toString();
+	}
+	
+	public static ArrayList<ObjectSNSDeportivo> convertirMensajeJsonAObjectSNS(String jsonString,
+																			   String objetoDeseadoMensaje,
+																			   ProductorSNSDeportivo pcsnsd)
+				throws ExcepcionJsonDeserializacion{
+		ArrayList<ObjectSNSDeportivo> convertidos = new ArrayList<ObjectSNSDeportivo>();
+		JsonObject objetoJson = JsonUtils.JsonStringToObject(jsonString);
+		JsonObject objetoMensaje = null;
+		if(objetoJson.getPropiedades().get(objetoDeseadoMensaje) != null &&
+			objetoJson.getPropiedades().get(objetoDeseadoMensaje).length > 0){
+			objetoMensaje = (JsonObject)objetoJson.getPropiedades().get(objetoDeseadoMensaje)[0];
+		}
+		if(objetoMensaje != null){
+			JsonObject objetosDelTipo = null;
+			FactoryObjectSNSDeportivo factory = null;
+			ObjectSNSDeportivo objeto;
+			for(String tipoObjeto:objetoMensaje.getPropiedades().keySet()){
+				factory = pcsnsd.producirFacObjetoSNS(tipoObjeto);
+				objeto = factory.getObjetoSNS();
+				objetosDelTipo = 
+						(JsonObject)objetoMensaje.
+						getPropiedades().
+						get(tipoObjeto)[0];
+				for(Object aDeserializar:
+					objetosDelTipo.getPropiedades().get("arreglo")){
+					try {
+						objeto.deserializarJson((JsonObject)aDeserializar);
+						convertidos.add(objeto);
+					} catch (ExcepcionJsonDeserializacion e) {
+						e.printStackTrace();
+						System.out.println("Mensaje malformado "+
+								((JsonObject)aDeserializar).toString());
+						throw e;
+					}
+				}
+			}
+		}
+		
+		return convertidos;
+		
 	}
 	
 }

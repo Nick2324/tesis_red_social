@@ -26,16 +26,12 @@
         <TextView android:text="@string/descripcion_evento" android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <ScrollView
+        <EditText
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:id="@+id/scrolling_descripcion_evento_info_general">
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/descripcion_evento_info_general"
-                android:hint="@string/hint_descripcion_evento"/>
-        </ScrollView>
+            android:layout_height="wrap_content"
+            android:id="@+id/descripcion_evento_info_general"
+            android:hint="@string/hint_descripcion_evento"
+            android:inputType="textMultiLine"/>
 
         <TextView
             android:id="@+id/textview_imagen_evento"

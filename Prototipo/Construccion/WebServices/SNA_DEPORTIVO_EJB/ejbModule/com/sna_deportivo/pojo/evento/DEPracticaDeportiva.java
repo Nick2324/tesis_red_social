@@ -4,11 +4,19 @@ public class DEPracticaDeportiva extends DAOEvento{
 
 	public DEPracticaDeportiva(){
 		super();
-		this.eventoManejado = ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio();
+		this.eventoManejado = TiposEventos.PRACTICADEPORTIVALIBRE.getServicio();
 	}
 	
 	public DEPracticaDeportiva(PracticaDeportiva pd){
 		super(pd);
-		this.eventoManejado = ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio();
+		this.eventoManejado = TiposEventos.PRACTICADEPORTIVALIBRE.getServicio();
 	}
+
+	@Override
+	protected void setUpDAOGeneral() {
+		super.setUpDAOGeneral();
+		super.factoryOSNS = new PracticaDeportivaFactory();
+		super.identificadorQueries = "practicaDeportiva";
+	}
+
 }

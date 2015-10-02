@@ -2,7 +2,7 @@ package com.sna_deportivo.services.eventos;
 
 import com.sna_deportivo.pojo.evento.DAOEvento;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactory;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
@@ -16,7 +16,7 @@ public class GestionEvento {
 									 throws BDException, ProductorFactoryExcepcion{
 		DAOEvento accesoEvento;
 		try {
-			accesoEvento = new ProductorFactory().
+			accesoEvento = new ProductorFactoryEvento().
 							   getEventosFactory(tipo).
 							   crearDAOEvento();
 			accesoEvento.setEvento(evento);
@@ -35,7 +35,7 @@ public class GestionEvento {
 							  throws BDException, ProductorFactoryExcepcion{
 		DAOEvento accesoEvento = null;
 		try {
-			accesoEvento = new ProductorFactory().
+			accesoEvento = new ProductorFactoryEvento().
 										 getEventosFactory(tipo).
 										 crearDAOEvento();
 			accesoEvento.setEvento(evento);
@@ -53,7 +53,7 @@ public class GestionEvento {
 								 throws BDException, ProductorFactoryExcepcion{
 		DAOEvento accesoEvento = null;
 		try {
-			accesoEvento = new ProductorFactory().
+			accesoEvento = new ProductorFactoryEvento().
 										 getEventosFactory(tipo).
 										 crearDAOEvento();
 			accesoEvento.setEvento(evento);
@@ -71,7 +71,7 @@ public class GestionEvento {
 						         throws BDException, ProductorFactoryExcepcion{
 		DAOEvento accesoEvento = null;
 		try {
-			accesoEvento = new ProductorFactory().
+			accesoEvento = new ProductorFactoryEvento().
 										 getEventosFactory(tipo).
 					 					 crearDAOEvento();
 			accesoEvento.setEvento(evento);
@@ -88,7 +88,7 @@ public class GestionEvento {
 		com.sna_deportivo.pojo.evento.PracticaDeportiva pd = new com.sna_deportivo.pojo.evento.PracticaDeportiva();
 		pd.setActivo(true);
 		GestionEvento ge = new GestionEvento();
-		System.out.println(ge.consultarEventos(com.sna_deportivo.pojo.evento.ConstantesEventos.PRACTICADEPORTIVALIBRE.getServicio(),
+		System.out.println(ge.consultarEventos(com.sna_deportivo.pojo.evento.TiposEventos.PRACTICADEPORTIVALIBRE.getServicio(),
 				pd))	;
 	}
 	

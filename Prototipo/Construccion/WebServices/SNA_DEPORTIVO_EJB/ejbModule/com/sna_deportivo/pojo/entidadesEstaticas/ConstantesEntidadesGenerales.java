@@ -1,31 +1,9 @@
 package com.sna_deportivo.pojo.entidadesEstaticas;
 
-public enum ConstantesEntidadesGenerales {
+public class ConstantesEntidadesGenerales {
 
-	GENERO("genero","GENERO");
+	private ConstantesEntidadesGenerales(){}
 	
-	//*********************************************
-	
-	private final String servicio;
-	private final String valor;
-	
-	ConstantesEntidadesGenerales(String servicio, 
-							     String valor){
-		this.servicio = servicio;
-		this.valor = valor;
-	}
-	
-	public String getServicio(){
-		return this.servicio;
-	}
-	
-	public String getValor(){
-		return this.valor;
-	}
-	
-	@Override
-	public String toString(){
-		return this.valor;
-	}
+	public static final String ELEMENTO_MENSAJE_SERVICIO_GEN = "Genero";
 	
 }

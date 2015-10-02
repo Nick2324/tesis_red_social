@@ -21,4 +21,5 @@ public class ConstantesEvento {
     public static final String GENERO_MANEJADO = "genero";
     public static final String TIPO_EVENTO = "tipoEvento";
     public static final String TIPO_MENU = "menu";
+    public static final String SERVICIO_EVENTO = "servicioEvento";
 }

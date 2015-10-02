@@ -82,13 +82,13 @@ public class Deporte extends ObjectSNSDeportivo {
 	@Override
 	public String stringJson() {
 		return "{id:"+ ((this.id!=null)?this.id.toString():"null") +","
-				+ "nombre:"+ JsonUtils.propiedadNula(
+				+ "nombre:"+ JsonUtils.propiedadNulaSinDecodificar(
 						StringUtils.codificar(this.nombre)) +","
-				+ "descripcion:"+ JsonUtils.propiedadNula(
+				+ "descripcion:"+ JsonUtils.propiedadNulaSinDecodificar(
 						StringUtils.codificar(this.descripcion)) +","
-				+ "fechaCreacion:"+JsonUtils.propiedadNula(
+				+ "fechaCreacion:"+JsonUtils.propiedadNulaSinDecodificar(
 						StringUtils.codificar(this.fechaCreacion)) +","
-				+ "historia:"+JsonUtils.propiedadNula(
+				+ "historia:"+JsonUtils.propiedadNulaSinDecodificar(
 						StringUtils.codificar(this.historia))+","
 				+ "esOlimpico:"+this.esOlimpico+"}";
 	}
@@ -114,12 +114,30 @@ public class Deporte extends ObjectSNSDeportivo {
 			this.setNombre(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("descripcion")){
-			this.setDescripcion(JsonUtils.propiedadNulaBackwards(StringUtils.decodificar((String)valor[0])));
+			
+			System.out.println("*****************DESCRIPCION***************");
+			System.out.println((String)valor[0]);
+			System.out.println(((String)valor[0]).length());
+			System.out.println("*******************************************");
+			System.out.println(StringUtils.codificar(StringUtils.decodificar((String)valor[0])));
+			System.out.println(StringUtils.codificar(StringUtils.decodificar((String)valor[0])).length());
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			
+			this.setDescripcion(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("fechaCreacion")){
 			this.setFechaCreacion(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("historia")){
+			
+			System.out.println("**************HISTORIA*****************");
+			System.out.println((String)valor[0]);
+			System.out.println(((String)valor[0]).length());
+			System.out.println("*******************************************");
+			System.out.println(StringUtils.codificar(StringUtils.decodificar((String)valor[0])));
+			System.out.println(StringUtils.codificar(StringUtils.decodificar((String)valor[0])).length());
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			
 			this.setHistoria(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("esOlimpico")){

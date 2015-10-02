@@ -24,7 +24,7 @@ public class Genero extends ObjectSNSDeportivo{
 	
 	@Override
 	public String stringJson() {
-		return "{id:"+JsonUtils.propiedadNula(this.id)+","+ 
+		return "{id:"+JsonUtils.propiedadNulaTDPrimitivo(this.id)+","+ 
 				"nombre:"+JsonUtils.propiedadNula(this.nombre)+","+
 				"descripcion:"+JsonUtils.propiedadNula(this.descripcion)+"}";
 	}

@@ -45,16 +45,18 @@
         </activity>
         <activity
             android:name=".eventos.GestionEventosLista"
-            android:label="@string/titulo_gestion_eventos_lista" >
+            android:label="@string/titulo_gestion_eventos_lista"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".eventos.CrearEvento"
-            android:label="@string/title_activity_crear_evento" >
+            android:label="@string/title_activity_crear_evento">
         </activity>
         <activity
             android:name=".eventos.InformacionGeneralEvento"
             android:label="@string/title_activity_informacion_general_evento"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleInstance">
         </activity>
         <activity
             android:name=".ErrorActivity"
@@ -66,7 +68,8 @@
         </activity>
         <activity
             android:name=".eventos.InformacionParticipantes"
-            android:label="@string/title_activity_informacion_participantes" >
+            android:label="@string/title_activity_informacion_participantes"
+            android:launchMode="singleInstance">
         </activity>
         <activity
             android:name=".eventos.ManejoParticipantes"

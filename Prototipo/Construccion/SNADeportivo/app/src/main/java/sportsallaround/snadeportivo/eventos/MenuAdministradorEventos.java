@@ -11,8 +11,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.sna_deportivo.pojo.deportes.ConstantesDeportes;
+import com.sna_deportivo.pojo.deportes.Deporte;
+import com.sna_deportivo.pojo.entidadesEstaticas.ConstantesEntidadesGenerales;
+import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
+import com.sna_deportivo.pojo.evento.ConstantesEventos;
+import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
+import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.StringUtils;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,7 +47,7 @@ public class MenuAdministradorEventos implements MenuEventos{
                 return ServiceUtils.invokeService(params[0],
                         Constants.SERVICES_PATH_EVENTOS +
                                 //CAMBIAR POR EL QUE VENGA DE LA TAREA ANTERIOR. HAY QUE MIGRAR A FRAGMENTO
-                                params[1].getString(ConstantesEvento.TIPO_EVENTO)+"/",
+                                params[1].getString(ConstantesEvento.SERVICIO_EVENTO)+"/",
                         "POST");
             }catch(Exception e){
                 Log.e("Nick:Error", e.getMessage());
@@ -83,8 +91,6 @@ public class MenuAdministradorEventos implements MenuEventos{
             MenuItem item2 = menu.findItem(R.id.item_cancelar_evento_admin);
             item2.setVisible(false);
         } else if (ConstantesEvento.ACTUALIZAR_EVENTO.equals(concepto)) {
-            MenuItem item = menu.findItem(R.id.item_info_participantes);
-            item.setVisible(false);
             MenuItem item1 = menu.findItem(R.id.item_crear_evento);
             item1.setVisible(false);
         }
@@ -97,7 +103,7 @@ public class MenuAdministradorEventos implements MenuEventos{
         switch (idSeleccionado){
             case R.id.item_info_participantes:
                 intent = new Intent(contexto,InformacionParticipantes.class);
-                intent.putExtra("datos_funcionalidad",datosIntent);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,datosIntent);
                 contexto.startActivity(intent);
                 break;
             case R.id.item_perfil_evento_admin:
@@ -105,12 +111,12 @@ public class MenuAdministradorEventos implements MenuEventos{
                 break;
             case R.id.item_info_general_evento_admin:
                 intent = new Intent(contexto,InformacionGeneralEvento.class);
-                intent.putExtra("datos_funcionalidad",datosIntent);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,datosIntent);
                 contexto.startActivity(intent);
                 break;
             case R.id.item_gestionar_involucrados_eve_admin:
                 intent = new Intent(contexto,MenuAdministrarInvolucrados.class);
-                intent.putExtra("datos_funcionalidad",datosIntent);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,datosIntent);
                 contexto.startActivity(intent);
                 break;
             case R.id.item_gestion_ubicaciones_eve_admin:
@@ -124,19 +130,60 @@ public class MenuAdministradorEventos implements MenuEventos{
                             public void onClick(DialogInterface dialog, int which) {
                                 if (datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO) != null &&
                                     datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO) != null &&
-                                    datosIntent.getString(ConstantesEvento.TIPO_EVENTO) != null) {
-                                    JSONObject eventoACrear;
+                                    datosIntent.getString(ConstantesEvento.TIPO_EVENTO) != null &&
+                                    datosIntent.getString(ConstantesEvento.GENERO_MANEJADO) != null) {
+                                    JSONObject objetoTemporal;
+                                    JSONArray arrayTemporal;
                                     JSONObject tipoEventoJson = new JSONObject();
+                                    JSONObject mensaje = new JSONObject();
                                     try {
-                                        Log.d("What!=",datosIntent.getString(
-                                                ConstantesEvento.EVENTO_MANEJADO).replace("\n",StringUtils.NEWLINE));
-                                        eventoACrear = new JSONObject(datosIntent.getString(
-                                                ConstantesEvento.EVENTO_MANEJADO).replace("\n",StringUtils.NEWLINE));
-                                        /*eventoACrear.put(ConstantesEvento.DEPORTE_MANEJADO,
-                                                datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO));*/
-                                        tipoEventoJson.put(ConstantesEvento.TIPO_EVENTO,
-                                                datosIntent.getString(ConstantesEvento.TIPO_EVENTO));
-                                        new CrearEvento(contexto).execute(eventoACrear,tipoEventoJson);
+                                        //ARMANDO DATOS DE EVENTO
+                                        objetoTemporal = new JSONObject();
+                                        arrayTemporal = new JSONArray();
+                                        arrayTemporal.put(new JSONObject(datosIntent.getString(
+                                                ConstantesEvento.EVENTO_MANEJADO).replace("\n", StringUtils.NEWLINE)));
+                                        objetoTemporal.put(datosIntent.getString(ConstantesEvento.TIPO_EVENTO),
+                                                arrayTemporal);
+                                        mensaje.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,objetoTemporal);
+
+                                        //ARMANDO DATOS DE GENERO
+                                        objetoTemporal = new JSONObject();
+                                        arrayTemporal = new JSONArray();
+                                        arrayTemporal.put(new JSONObject(datosIntent.getString(
+                                                ConstantesEvento.GENERO_MANEJADO)));
+                                        objetoTemporal.put(Genero.class.getSimpleName(),
+                                                arrayTemporal);
+                                        mensaje.put(ConstantesEntidadesGenerales.ELEMENTO_MENSAJE_SERVICIO_GEN,
+                                                objetoTemporal);
+
+                                        //ARMANDO DATOS DE DEPORTE
+                                        objetoTemporal = new JSONObject();
+                                        arrayTemporal = new JSONArray();
+                                        arrayTemporal.put(new JSONObject(datosIntent.getString(
+                                                ConstantesEvento.DEPORTE_MANEJADO)));
+                                        objetoTemporal.put(Deporte.class.getSimpleName(),
+                                                arrayTemporal);
+                                        mensaje.put(ConstantesDeportes.ELEMENTO_MENSAJE_SERVICIO_DEP,
+                                                objetoTemporal);
+
+                                        //ARMANDO DATOS DE USUARIO
+                                        objetoTemporal = new JSONObject();
+                                        arrayTemporal = new JSONArray();
+                                        arrayTemporal.put(new JSONObject(datosIntent.getString(
+                                                Constants.USUARIO)));
+                                        objetoTemporal.put(Usuario.class.getSimpleName(),
+                                                arrayTemporal);
+                                        mensaje.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
+                                                objetoTemporal);
+
+                                        //ARMANDO TIPO DE EVENTO A ENVIAR
+                                        tipoEventoJson.put(ConstantesEvento.SERVICIO_EVENTO,
+                                                datosIntent.getString(ConstantesEvento.SERVICIO_EVENTO));
+
+                                        Log.d("Nick:JSON",mensaje.toString());
+                                        Log.d("Nick:Tipo",tipoEventoJson.toString());
+
+                                        new CrearEvento(contexto).execute(mensaje,tipoEventoJson);
                                     } catch (JSONException e) {
                                         AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
                                         builder.setTitle("Error al guardar el evento").

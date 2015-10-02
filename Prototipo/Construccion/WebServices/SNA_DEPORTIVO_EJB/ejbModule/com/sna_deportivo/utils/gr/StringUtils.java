@@ -18,7 +18,8 @@ public class StringUtils {
 				   .replace("]", StringUtils.CLOSINGSQUARE)
 				   .replace("{", StringUtils.OPENINGCURLY)
 				   .replace("}", StringUtils.CLOSINGCURLY)
-				   .replace("\n", StringUtils.NEWLINE);
+				   .replace("\n", StringUtils.NEWLINE)
+				   .replace("\\","");
 		else
 			return aCodificar;
 	}

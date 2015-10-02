@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactory;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
+import com.sna_deportivo.pojo.evento.TiposEventos;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -22,7 +22,6 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.DescripcionGo;
@@ -31,7 +30,6 @@ import sportsallaround.utils.gui.ListaConFiltro;
 import sportsallaround.utils.gui.ObjetoListener;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
 import sportsallaround.utils.ServiceUtils;
-import sportsallaround.utils.gui.TituloActividad;
 
 public class GestionEventosLista extends Activity
         implements AttachObjetoListener,
@@ -39,6 +37,7 @@ public class GestionEventosLista extends Activity
                    DescripcionGo.DescripcionGoCallBack{
 
     private ArrayList<Evento> eventos;
+    private KeyValueItem tipoNumeroEvento;
 
     private class PeticionSpinner implements ObjetoListenerSpinner{
 
@@ -50,7 +49,8 @@ public class GestionEventosLista extends Activity
 
         @Override
         public void onItemSelected(Object objetoSeleccionado) {
-            new PeticionEventos(this.contexto).realizarPeticion((ConstantesEventos) objetoSeleccionado);
+            new PeticionEventos(this.contexto).
+                    realizarPeticion((TiposEventos) objetoSeleccionado);
         }
 
         @Override
@@ -67,7 +67,7 @@ public class GestionEventosLista extends Activity
 
         @Override
         protected Object doInBackground(Object[] params) {
-            ConstantesEventos itemSeleccionado = (ConstantesEventos)params[0];
+            TiposEventos itemSeleccionado = (TiposEventos)params[0];
             return ServiceUtils.invokeService(null,
                     Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
                     "GET");
@@ -81,8 +81,8 @@ public class GestionEventosLista extends Activity
                     JSONArray responseJson = new JSONArray((String) response);
                     eventos = new ArrayList<Evento>();
                     for (int i = 0; i < responseJson.length(); i++) {
-                        eventos.add(new ProductorFactory().
-                                getEventosFactory(((ConstantesEventos)tipoEvento.getSelectedItem()).
+                        eventos.add(new ProductorFactoryEvento().
+                                getEventosFactory(((TiposEventos)tipoEvento.getSelectedItem()).
                                         getServicio()).
                                 crearEvento());
                         eventos.get(i).deserializarJson(
@@ -106,7 +106,7 @@ public class GestionEventosLista extends Activity
 
         }
 
-        public void realizarPeticion(ConstantesEventos ce){
+        public void realizarPeticion(TiposEventos ce){
             try {
                 this.execute(new Object[]{ce});
             }catch(Exception e){
@@ -131,6 +131,8 @@ public class GestionEventosLista extends Activity
             @Override
             public void onClick(View v) {
                 Intent crearEventoIntent = new Intent(actividad, CrearEvento.class);
+                crearEventoIntent.putExtra(Constants.USUARIO,
+                        getIntent().getExtras().getParcelable(Constants.USUARIO));
                 startActivity(crearEventoIntent);
             }
         });
@@ -162,6 +164,11 @@ public class GestionEventosLista extends Activity
                             eventos.get(i).getDescripcion() + "\n" +
                             "Fecha de creacion: " + eventos.get(i).getFechaCreacion() + "\n" +
                             "Fecha de inicio: " + eventos.get(i).getFechaInicio());
+
+            tipoNumeroEvento = new KeyValueItem(new Integer(i),
+                    ((SpinnerEventos)getFragmentManager().
+                    findFragmentById(R.id.fragment_tipo_evento)).getValueSpinnerEventos().
+                    getServicio());
         }
     }
 
@@ -196,7 +203,22 @@ public class GestionEventosLista extends Activity
 
     @Override
     public void go() {
-        //!*!*!*!*!*!*!*!
+        if(this.tipoNumeroEvento != null) {
+            Intent intent = new Intent(this, InformacionGeneralEvento.class);
+            Bundle extra = new Bundle();
+            extra.putString(Constants.FUNCIONALIDAD,
+                    ConstantesEvento.ACTUALIZAR_EVENTO);
+            extra.putString(ConstantesEvento.TIPO_MENU,
+                            ConstantesEvento.MENU_ADMIN_EVENTOS);
+            extra.putString(ConstantesEvento.TIPO_EVENTO,
+                    (String) tipoNumeroEvento.getValue());
+            extra.putString(ConstantesEvento.EVENTO_MANEJADO,
+                    this.eventos.get((Integer) tipoNumeroEvento.getKey()).stringJson());
+            intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extra);
+            intent.putExtra(Constants.USUARIO,
+                    getIntent().getExtras().getParcelable(Constants.USUARIO));
+            startActivity(intent);
+        }
     }
 
 }

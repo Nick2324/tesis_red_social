@@ -12,6 +12,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
 import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.services.eventos.CrearEvento;
 import com.sna_deportivo.services.eventos.GestionEvento;
 
 @Path("eventos/")	
@@ -20,7 +21,7 @@ public class GestionEventoService {
 	private GestionEvento gestionEvento;
 	
 	public GestionEventoService(){
-		this.gestionEvento = new GestionEvento(); 
+		this.gestionEvento = new GestionEvento();
 	}
 	
 	@GET
@@ -45,12 +46,10 @@ public class GestionEventoService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}")
-	public Evento crearEvento(@PathParam("tipoEvento") String tipoEvento,
-							   Evento evento){
+	public String crearEvento(@PathParam("tipoEvento") String tipoEvento,
+							   String datosEvento){
 		try{
-			System.out.println("********************************************************");
-			System.out.println("Evento: "+evento.stringJson());
-			return this.gestionEvento.crearEvento(tipoEvento, evento);
+			return new CrearEvento().crearEvento(tipoEvento, datosEvento);
 		}catch(WebApplicationException e){
 			throw e;
 		}
