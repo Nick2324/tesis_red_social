@@ -8,22 +8,25 @@
     android:orientation="vertical">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
         android:id="@+id/button_aniadir_participantes"
         android:text="@string/boton_aniadir_participantes"
         android:onClick="startAniadirPart"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
         android:id="@+id/button_consultar_participante"
         android:text="@string/boton_consultar_participantes"
         android:onClick="startConsultarPart"/>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
         android:id="@+id/button_caracteristicas_participantes"
         android:text="@string/boton_caracteristicas_participantes"
         android:onClick="startCaracteristicasPart"/>

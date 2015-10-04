@@ -46,11 +46,16 @@ public class DescripcionGo extends Fragment {
     }
 
     @Override
-    public void onStart(){
-        super.onStart();
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
         this.setUpWidgets();
         this.setUpListeners();
     }
+
+    /*@Override
+    public void onStart(){
+        super.onStart();
+    }*/
 
     private void setUpListeners(){
         Button go = (Button)getView().findViewById(R.id.button_go);

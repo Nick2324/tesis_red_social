@@ -3,7 +3,6 @@ package sportsallaround.snadeportivo.eventos;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
@@ -38,12 +37,18 @@ public class InformacionParticipantes extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_participantes);
         setTitle(getResources().getString(R.string.titulo_gestion_eventos_lista));
-        this.setUpObjetos();
     }
 
     @Override
     public void onStart(){
         super.onStart();
+        this.setUpViewsPropActividad();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        this.setUpObjetos();
         this.setUpDatosActividad();
     }
 
@@ -72,6 +77,20 @@ public class InformacionParticipantes extends Activity
                     extras);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setUpViewsPropActividad(){
+        if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD) != null){
+            String funcionalidad = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                    getString(Constants.FUNCIONALIDAD);
+            if(funcionalidad.equals(ConstantesEvento.PARTICIPANTE_EVENTO)){
+                ((EditText)findViewById(R.id.numero_participantes_evento_info_general)).setClickable(false);
+                ((EditText)findViewById(R.id.rango_minimo_edad_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.rango_maximo_edad_evento_info_general)).setEnabled(false);
+                ((SpinnerDesdeBD)getFragmentManager().findFragmentById(R.id.spinner_genero)).
+                        inactivarSpinner();
+            }
+        }
     }
 
     @Override
@@ -111,7 +130,7 @@ public class InformacionParticipantes extends Activity
 
     @Override
     public String getTituloSpinner() {
-        return "Genero";
+        return getResources().getString(R.string.spinner_genero_evento);
     }
 
     @Override
@@ -155,9 +174,11 @@ public class InformacionParticipantes extends Activity
                 evento.setRangoMinEdad(null);
             }
         }catch (NumberFormatException e){
-            new AlertDialog.Builder(this).setTitle("Ejecución de opcion").
-                    setMessage("Error al ejecutar la opción. Llene los campos con el formato propio").
-                    setNegativeButton("Ok",null).create().show();
+            new AlertDialog.Builder(this).setTitle(getResources().
+                    getString(R.string.alert_menu_evento_error_titulo)).
+                    setMessage(getResources().getString(R.string.alert_menu_evento_error_mensaje)).
+                    setNeutralButton(getResources().getString(R.string.BOTON_NEUTRAL),
+                            null).create().show();
             return false;
         }
 
@@ -168,18 +189,23 @@ public class InformacionParticipantes extends Activity
     }
 
     public void setUpDatosActividad() {
-        if(this.evento.getNumMaxParticipantes() != null)
-            ((EditText)findViewById(R.id.numero_participantes_evento_info_general)).setText(
-                    this.evento.getNumMaxParticipantes()+""
+        //DATOS DE EVENTO
+        if(this.evento.getNumMaxParticipantes() != null) {
+            ((EditText) findViewById(R.id.numero_participantes_evento_info_general)).setText(
+                    this.evento.getNumMaxParticipantes() + ""
             );
-        if(this.evento.getRangoMaxEdad() != null)
-            ((EditText)findViewById(R.id.rango_maximo_edad_evento_info_general)).setText(
-                    this.evento.getRangoMaxEdad()+""
+        }
+        if(this.evento.getRangoMaxEdad() != null) {
+            ((EditText) findViewById(R.id.rango_maximo_edad_evento_info_general)).setText(
+                    this.evento.getRangoMaxEdad() + ""
             );
-        if(this.evento.getRangoMinEdad() != null)
-            ((EditText)findViewById(R.id.rango_minimo_edad_evento_info_general)).setText(
-                    this.evento.getRangoMinEdad()+""
+        }
+        if(this.evento.getRangoMinEdad() != null) {
+            ((EditText) findViewById(R.id.rango_minimo_edad_evento_info_general)).setText(
+                    this.evento.getRangoMinEdad() + ""
             );
+        }
+
     }
 
     public void setUpObjetos(){

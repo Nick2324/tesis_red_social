@@ -2,21 +2,22 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/item_ver_ubicaciones_evento"
-        android:title="@string/ver_ubicaciones_evento"/>
-    <item
-        android:id="@+id/item_info_general_evento"
-        android:title="@string/info_general_evento"/>
+
     <item
         android:id="@+id/item_perfil_evento"
         android:title="@string/perfil_evento"/>
     <item
+        android:id="@+id/item_unirse_evento_participante"
+        android:title="@string/unirse_evento_participante"/>
+    <item
+        android:id="@+id/item_info_general_evento"
+        android:title="@string/info_general_evento"/>
+    <item
         android:id="@+id/item_informacion_participantes"
         android:title="@string/informacion_participantes"/>
     <item
-        android:id="@+id/item_unirse_evento_participante"
-        android:title="@string/unirse_evento_participante"/>
+        android:id="@+id/item_ver_ubicaciones_evento"
+        android:title="@string/ver_ubicaciones_evento"/>
     <item
         android:id="@+id/item_dejar_evento_participante"
         android:title="@string/dejar_evento_participante"/>

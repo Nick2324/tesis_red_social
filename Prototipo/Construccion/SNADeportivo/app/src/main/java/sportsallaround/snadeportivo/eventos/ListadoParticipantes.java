@@ -2,17 +2,24 @@ package sportsallaround.snadeportivo.eventos;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.sna_deportivo.pojo.deportes.FactoryDeporte;
+import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
+import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -31,6 +38,25 @@ public class ListadoParticipantes extends Activity
     private MenuEventos menuEventos;
 
     private class ObtenerParticipantes extends Peticion{
+
+        private Evento evento;
+        private Context context;
+
+        public ObtenerParticipantes(Context context){
+            try{
+                this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(
+                        getIntent().getExtras().
+                    getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                    ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
+                this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                        ConstantesEvento.EVENTO_MANEJADO)));
+            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                excepcionJsonDeserializacion.printStackTrace();
+            }
+            this.context = context;
+        }
+
         @Override
         public void calcularMetodo() {
             this.metodo = "GET";
@@ -38,12 +64,25 @@ public class ListadoParticipantes extends Activity
 
         @Override
         public void calcularServicio() {
-            this.servicio = Constants.SERVICES_PATH_DEPORTES;
+            if(this.evento != null && this.evento.getId() != null) {
+                super.servicio = Constants.SERVICES_PATH_EVENTOS +
+                        getIntent().getExtras().getBundle(Constants.DATOS_FUNCIONALIDAD).
+                                getString(ConstantesEvento.SERVICIO_EVENTO) + "/" +
+                        evento.getId() + "/" +
+                        Constants.SERVICES_PATH_EVE_PARTICIPANTES;
+            }
+
+            Log.d("Nick:Servicio","Servicio: "+super.servicio);
+
         }
 
         @Override
         public void calcularParams() {
-            this.params = null;
+            try {
+                this.params = new JSONObject(this.evento.stringJson());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
@@ -51,14 +90,19 @@ public class ListadoParticipantes extends Activity
 
         @Override
         public void onPostExcecute(String resultadoPeticion) {
-            try {
-                participantes =
-                        ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryDeporte(),
-                                                                    new JSONArray(resultadoPeticion));
-                ((ListaConFiltro)getFragmentManager().
-                        findFragmentById(R.id.fragment_lista_participantes)).llenarLista();
-            } catch (JSONException e) {
-                e.printStackTrace();
+            if(resultadoPeticion != null){
+                try {
+                    participantes =
+                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
+                                                                        new JSONArray(resultadoPeticion));
+                    ((ListaConFiltro)getFragmentManager().
+                            findFragmentById(R.id.fragment_lista_participantes)).llenarLista();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }else{
+                Toast.makeText(this.context,this.context.getResources().
+                        getString(R.string.toast_listado_participantes_vacio),Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -140,6 +184,6 @@ public class ListadoParticipantes extends Activity
     }
 
     private void setUpLista(){
-        new ObtenerParticipantes().ejecutarPeticion();
+        new ObtenerParticipantes(this).ejecutarPeticion();
     }
 }

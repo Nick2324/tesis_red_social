@@ -1,5 +1,7 @@
 package com.sna_deportivo.utils.gr;
 
+import java.util.ArrayList;
+
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
@@ -56,8 +58,6 @@ public abstract class ObjectSNSDeportivoDAO {
 		nodo.append(this.identificadorQueries);
 		nodo.append(":");
 		nodo.append(this.tipoObjetoSNS);
-		System.out.println("*********************Y AHORA???**************************");
-		System.out.println(this.objectSNSDeportivo.stringJson());
 		nodo.append(this.objectSNSDeportivo.stringJson());
 		nodo.append(")");
 		return nodo.toString();
@@ -112,6 +112,49 @@ public abstract class ObjectSNSDeportivoDAO {
 		return false;
 		
 	}
+	/**
+	 * Retorna los nodos unidos al objeto de éste DAO en la BD
+	 * @param relacionACrear Lista de relaciones que se desean
+	 * @param productor Lista de productores de nodos
+	 * @param direccion Lista de direcciones de las relaciones del primer parametro
+	 * @return Retorna los objetos nodo unidos al nodo objeto manejado por éste DAO.
+	 * El objeto manejado por éste DAO es asignado al valor que se ha obtenido después
+	 * de la búsqueda
+	 */
+	protected ArrayList<ArrayList<ObjectSNSDeportivo>> 
+				obtenerRelacionesObjSNS(ArrayList<RelacionSNS> relacionAObtener,
+		     							ArrayList<ProductorSNSDeportivo> productor,
+		     							ArrayList<String> direccion){
+		StringBuilder query = new StringBuilder();
+		StringBuilder clausulaReturn = new StringBuilder("RETURN ");
+		String nodoManejado = this.producirNodoMatch();
+		query.append("MATCH ");
+		RelacionSNS relacionTratada;
+		ObjectSNSDeportivoDAO dao;
+		String nodoManejado2;
+		for(int i = 0; i < relacionAObtener.size(); i++){
+			int j = 0;
+			for(ObjectSNSDeportivo obj:relacionAObtener.get(i).getObjetosRelacion()){
+				dao = productor.get(i).producirFacObjetoSNS(
+						obj.getClass().getSimpleName()).
+						getObjetoSNSDAO();
+				dao.setObjetcSNSDeportivo(obj);
+				nodoManejado2 = dao.producirNodoMatch();
+				if(RelacionSNS.DIRECCION_ENTRADA.equals(direccion.get(i))){
+					query.append(RelacionSNS.DIRECCION_ENTRADA);
+				}
+				//query.append(c)
+				query.append("-");
+				//query.append(relacionACrear.stringJson());
+				query.append("-");
+				if(RelacionSNS.DIRECCION_SALIDA.equals(direccion.get(i))){
+					query.append(RelacionSNS.DIRECCION_SALIDA);
+				}
+				query.append(",");
+			}
+		}
+		return null;
+	}
 	
 	protected abstract void setUpDAOGeneral();
 	
@@ -135,6 +178,10 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	public String getIdentificadorQueries() {
 		return identificadorQueries;
+	}
+	
+	public static void main(String[] args){
+		BDUtils.ejecutarQueryREST("MATCH (evento:E_DeporteEvento),(evento)-[r]-(ev:E_EventoDeportivo{id:1}), (evento)-[r2]-(dep:E_Deporte), (evento)-[r3]-(us:E_Usuario) RETURN collect(DISTINCT evento) as eventos ,collect(DISTINCT ev) as evs, collect(DISTINCT dep) as dep,collect(DISTINCT us) as us");
 	}
 	
 }

@@ -1,5 +1,6 @@
 package sportsallaround.snadeportivo.eventos;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -36,9 +37,12 @@ public class MenuAdministradorEventos implements MenuEventos{
     private class CrearEvento extends AsyncTask<JSONObject,Object,String> {
 
         private Context contexto;
+        private Bundle datosIntent;
 
-        public CrearEvento(Context contexto){
+        public CrearEvento(Context contexto,
+                           Bundle datosIntent){
             this.contexto = contexto;
+            this.datosIntent = datosIntent;
         }
 
         @Override
@@ -60,14 +64,21 @@ public class MenuAdministradorEventos implements MenuEventos{
         @Override
         protected void onPostExecute(String result){
             if(result != null && result.length() != 0){
-                Toast.makeText(contexto, "Evento creado con éxito", Toast.LENGTH_LONG).show();
-                //MANDAR A MODIFICACION Y MODIFICAR ID DEL EVENTO
+                Toast.makeText(contexto, this.contexto.getResources().
+                        getString(R.string.toast_creacion_exitosa_evento), Toast.LENGTH_LONG).show();
+                this.datosIntent.putString(ConstantesEvento.EVENTO_MANEJADO, result);
+                this.datosIntent.putString(Constants.FUNCIONALIDAD, ConstantesEvento.ACTUALIZAR_EVENTO);
+                Intent intent = new Intent(this.contexto,InformacionGeneralEvento.class);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD, this.datosIntent);
+                ((Activity)this.contexto).startActivity(intent);
             }else{
                 AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
-                builder.setTitle("Error al guardar el evento").
-                        setMessage("No se ha podido crear el evento debido a datos erroneos o " +
-                                "inexistentes. Por favor verificar").
-                        setNegativeButton("OK", null);
+                builder.setTitle(this.contexto.getResources().
+                        getString(R.string.alert_crear_eve_err_titulo)).
+                        setMessage(this.contexto.getResources().
+                                getString(R.string.alert_crear_eve_err_mensaje)).
+                        setNeutralButton(this.contexto.getResources().
+                                getString(R.string.BOTON_NEUTRAL), null);
                 builder.create().show();
             }
         }
@@ -93,11 +104,14 @@ public class MenuAdministradorEventos implements MenuEventos{
         } else if (ConstantesEvento.ACTUALIZAR_EVENTO.equals(concepto)) {
             MenuItem item1 = menu.findItem(R.id.item_crear_evento);
             item1.setVisible(false);
+            MenuItem item2 = menu.findItem(R.id.item_info_participantes);
+            item2.setVisible(false);
         }
     }
 
     public void comportamiento(final Context contexto,int idSeleccionado, final Bundle datosIntent){
         //SI ES POSIBLE, CAMBIAR POR LECTURA EN LA BD
+        //CHAIN OF RESPONSIBILITY
         Intent intent = null;
         AlertDialog confirmacion = null;
         switch (idSeleccionado){
@@ -107,7 +121,9 @@ public class MenuAdministradorEventos implements MenuEventos{
                 contexto.startActivity(intent);
                 break;
             case R.id.item_perfil_evento_admin:
-                //contexto.startActivity(new Intent());
+                intent = new Intent(contexto,PerfilEvento.class);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,datosIntent);
+                contexto.startActivity(intent);
                 break;
             case R.id.item_info_general_evento_admin:
                 intent = new Intent(contexto,InformacionGeneralEvento.class);
@@ -123,9 +139,14 @@ public class MenuAdministradorEventos implements MenuEventos{
                 //contexto.startActivity(new Intent(contexto,InformacionGeneralEvento.class));
                 break;
             case R.id.item_crear_evento:
-                confirmacion = new AlertDialog.Builder(contexto).
-                        setTitle("Creación del evento").setMessage("¿Desea crear el evento?").
-                        setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(contexto).
+                        setTitle(contexto.getResources().
+                                getString(R.string.alert_crear_eve_titulo)).
+                        setMessage(contexto.getResources().
+                                getString(R.string.alert_crear_eve_mensaje)).
+                        setPositiveButton(contexto.getResources().
+                                getString(R.string.BOTON_AFIRMATIVO),
+                                new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (datosIntent.getString(ConstantesEvento.DEPORTE_MANEJADO) != null &&
@@ -180,41 +201,48 @@ public class MenuAdministradorEventos implements MenuEventos{
                                         tipoEventoJson.put(ConstantesEvento.SERVICIO_EVENTO,
                                                 datosIntent.getString(ConstantesEvento.SERVICIO_EVENTO));
 
-                                        Log.d("Nick:JSON",mensaje.toString());
-                                        Log.d("Nick:Tipo",tipoEventoJson.toString());
-
-                                        new CrearEvento(contexto).execute(mensaje,tipoEventoJson);
+                                        new CrearEvento(contexto,datosIntent).execute(mensaje,tipoEventoJson);
                                     } catch (JSONException e) {
                                         AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
-                                        builder.setTitle("Error al guardar el evento").
-                                                setMessage("El evento no pudo ser guardado").
-                                                setNegativeButton("OK", null);
+                                        builder.setTitle(contexto.getResources().
+                                                getString(R.string.alert_crear_eve_err_titulo)).
+                                                setMessage(contexto.getResources().
+                                                        getString(R.string.alert_crear_eve_err_mensaje)).
+                                                setNeutralButton(contexto.getResources().
+                                                        getString(R.string.BOTON_NEUTRAL), null);
                                         builder.create().show();
                                         e.printStackTrace();
                                     }
                                 }else{
                                     AlertDialog.Builder builder = new AlertDialog.Builder(contexto);
-                                    builder.setTitle("Error al guardar el evento").
-                                            setMessage("Necesita llenar los campos del evento " +
-                                                    "para poder continuar").
-                                            setNegativeButton("OK", null);
+                                    builder.setTitle(contexto.getResources().
+                                            getString(R.string.alert_crear_eve_err_titulo)).
+                                            setMessage(contexto.getResources().
+                                                    getString(R.string.alert_datos_faltantes_crea_eve_tit)).
+                                            setNeutralButton(contexto.getResources().
+                                                    getString(R.string.BOTON_NEUTRAL), null);
                                     builder.create().show();
                                 }
                             }
-                        }).setNegativeButton("No",null).create();
-                confirmacion.show();
+                        }).setNegativeButton(contexto.getResources().
+                        getString(R.string.BOTON_NEGATIVO),null).create().show();
                 break;
             case R.id.item_cancelar_evento_admin:
-                confirmacion = new AlertDialog.Builder(contexto).
-                        setTitle("Cancelación de evento").setMessage("¿Desea cancelar el evento?").
-                        setPositiveButton("Si", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        }).
-                        setNegativeButton("No",null).create();
-                confirmacion.show();
+                new AlertDialog.Builder(contexto).
+                        setTitle(contexto.getResources().
+                                getString(R.string.alert_cancelando_evento_tit)).
+                        setMessage(contexto.getResources().
+                                getString(R.string.alert_cancelando_evento_msn)).
+                        setPositiveButton(contexto.getResources().
+                                        getString(R.string.BOTON_AFIRMATIVO),
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Toast.makeText(contexto,"Cancelando evento",Toast.LENGTH_LONG).show();
+                                    }
+                                }).
+                        setNegativeButton(contexto.getResources().
+                                getString(R.string.BOTON_NEGATIVO), null).create().show();
                 break;
         }
     }

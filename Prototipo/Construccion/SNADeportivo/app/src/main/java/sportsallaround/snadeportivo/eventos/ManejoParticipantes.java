@@ -2,12 +2,12 @@ package sportsallaround.snadeportivo.eventos;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
@@ -15,6 +15,7 @@ import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -24,7 +25,6 @@ import sportsallaround.utils.ConstructorArrObjSNS;
 import sportsallaround.utils.Peticion;
 import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
-import sportsallaround.utils.gui.TituloActividad;
 
 public class ManejoParticipantes extends Activity implements ListaConFiltro.CallBackListaConFiltro{
 
@@ -35,6 +35,61 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
     private class PeticionSolicitudParticipantes extends Peticion{
 
         private String fragmento;
+
+        public PeticionSolicitudParticipantes(String fragmento){
+            this.fragmento = fragmento;
+        }
+
+        @Override
+        public void calcularMetodo() {
+            this.metodo = "GET";
+        }
+
+        @Override
+        public void calcularServicio() {
+            this.servicio = Constants.SERVICES_PATH_EVENTOS +
+                            Constants.SERVICES_PATH_EVE_PARTICIPANTES;
+        }
+
+        @Override
+        public void calcularParams(){
+            try {
+                super.params = new JSONObject(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                        getString(ConstantesEvento.EVENTO_MANEJADO));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void doInBackground() {}
+
+        @Override
+        public void onPostExcecute(String resultadoPeticion){
+            try{
+                solicitudDeParticipantes =
+                        ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
+                                    new JSONArray(resultadoPeticion));
+                ((ListaConFiltro) getFragmentManager().findFragmentById(
+                            R.id.fragment_solicitud_de_participante)).llenarLista();
+            }catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void setFragmento(String fragmento){
+            this.fragmento = fragmento;
+        }
+
+    }
+
+    private class PeticionListaUsuarios extends Peticion{
+
+        private String fragmento;
+
+        public PeticionListaUsuarios(String fragmento){
+            this.fragmento = fragmento;
+        }
 
         @Override
         public void calcularMetodo() {
@@ -55,26 +110,14 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
         @Override
         public void onPostExcecute(String resultadoPeticion){
             try{
-                if(this.fragmento.equals(getResources().getString(R.string.fragment_solicitud_de_participante))) {
-                    solicitudDeParticipantes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
+                solicitudParaParticipantes =
+                        ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
                                     new JSONArray(resultadoPeticion));
-                    ((ListaConFiltro) getFragmentManager().findFragmentById(
-                            R.id.fragment_solicitud_de_participante)).llenarLista();
-                }else if(this.fragmento.equals(getResources().getString(R.string.fragment_solicitud_para_participante))){
-                    solicitudParaParticipantes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
-                                    new JSONArray(resultadoPeticion));
-                    ((ListaConFiltro) getFragmentManager().findFragmentById(
+                ((ListaConFiltro) getFragmentManager().findFragmentById(
                             R.id.fragment_solicitud_para_participante)).llenarLista();
-                }
             }catch (JSONException e) {
                 e.printStackTrace();
             }
-        }
-
-        public void setFragmento(String fragmento){
-            this.fragmento = fragmento;
         }
 
     }
@@ -110,53 +153,52 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
     @Override
     public void onStart(){
         super.onStart();
-        PeticionSolicitudParticipantes llenadoListas1 =
-                new PeticionSolicitudParticipantes();
-        llenadoListas1.setFragmento(getResources().getString(
-                R.string.fragment_solicitud_de_participante));
-        llenadoListas1.ejecutarPeticion();
-        PeticionSolicitudParticipantes llenadoListas2 =
-                new PeticionSolicitudParticipantes();
-        llenadoListas2.setFragmento(getResources().getString(
-                R.string.fragment_solicitud_para_participante));
-        llenadoListas2
-                .ejecutarPeticion();
+        new PeticionSolicitudParticipantes(getResources().getString(
+                R.string.fragment_solicitud_de_participante)).ejecutarPeticion();
+        new PeticionSolicitudParticipantes(getResources().getString(
+                R.string.fragment_solicitud_para_participante)).ejecutarPeticion();
     }
 
     @Override
     public void realizarAccionAlClick(KeyValueItem item, String identificadorFragmento) {
         final KeyValueItem itemSeleccionado = item;
+        final Context contexto = this;
         if(identificadorFragmento.equals(getResources().getString(
                 R.string.fragment_solicitud_de_participante))){
             new AlertDialog.Builder(this).
-                setTitle("Decide que hacer con " +
+                setTitle(contexto.getResources().getString(R.string.alert_resolver_pet_eve_msn)+" " +
                         ((Usuario) item.getValue()).getPrimerNombre()).
-                setItems(new CharSequence[]{"Aceptar participante",
-                                            "Eliminar petición participante"},
+                setItems(new CharSequence[]{contexto.getResources().
+                                getString(R.string.alert_aceptar_pet_eve_button),
+                                contexto.getResources().
+                                        getString(R.string.alert_eliminar_petic_eve_button)},
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if(which == 0){
-                                    Log.d("Nick", "Aceptar");
+                                    Toast.makeText(contexto, "por implementar Aceptar participante", Toast.LENGTH_LONG);
                                 }else if(which == 1){
                                     ((ListaConFiltro)getFragmentManager().findFragmentById(
                                             R.id.fragment_solicitud_de_participante)).
                                             eliminarElemento(itemSeleccionado);
-                                    //!*!*!*!*!*!*! Enviar señal de eliminar
+                                    Toast.makeText(contexto,"por implementar Eliminar petición participante", Toast.LENGTH_LONG);
                                 }
                             }
             }).create().show();
         }else if(identificadorFragmento.equals(getResources().getString(
                     R.string.fragment_solicitud_para_participante))){
             new AlertDialog.Builder(this).
-                    setTitle("¿Invitar a " +
+                    setTitle(contexto.getResources().getString(R.string.alert_invita_eve_msn) +
+                            " " +
                             ((Usuario) item.getValue()).getPrimerNombre()+"?").
-                    setItems(new CharSequence[]{"Invitar"},
+                    setItems(new CharSequence[]{contexto.getResources().
+                                    getString(R.string.alert_invita_eve_button),
+                                    contexto.getResources().getString(R.string.BOTON_NEGATIVO)},
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     if (which == 0) {
-                                        Log.d("Nick", "Invitado");
+                                        Toast.makeText(contexto, "Invitar por implementar", Toast.LENGTH_LONG);
                                         dialog.cancel();
                                     }
                                 }

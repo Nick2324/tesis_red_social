@@ -44,16 +44,23 @@ public class MenuAdministrarInvolucrados extends Activity{
         return super.onOptionsItemSelected(item);
     }
 
+    private Intent construirIntent(Class clase){
+        Intent intent = new Intent(this,clase);
+        intent.putExtra(Constants.DATOS_FUNCIONALIDAD,
+                getIntent().getExtras().getBundle(Constants.DATOS_FUNCIONALIDAD));
+        return intent;
+    }
+
     public void startAniadirPart(View v){
-        startActivity(new Intent(this,ManejoParticipantes.class));
+        startActivity(this.construirIntent(ManejoParticipantes.class));
     }
 
     public void startConsultarPart(View v){
-        startActivity(new Intent(this,ListadoParticipantes.class));
+        startActivity(this.construirIntent(ListadoParticipantes.class));
     }
 
     public void startCaracteristicasPart(View v){
-        startActivity(new Intent(this,InformacionParticipantes.class));
+        startActivity(this.construirIntent(InformacionParticipantes.class));
     }
 
 }

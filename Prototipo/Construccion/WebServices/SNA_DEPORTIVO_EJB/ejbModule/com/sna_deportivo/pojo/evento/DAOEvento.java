@@ -68,10 +68,13 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 					eventos[i].deserializarJson(datos);
 				}
 			} catch (BDException e) {
+				eventos = null;
 				throw e;
 			}catch (ExcepcionJsonDeserializacion e) {
+				eventos = null;
 				e.printStackTrace();
 			}catch (ProductorFactoryExcepcion e1) {
+				eventos = null;
 				throw e1;
 			}
 			

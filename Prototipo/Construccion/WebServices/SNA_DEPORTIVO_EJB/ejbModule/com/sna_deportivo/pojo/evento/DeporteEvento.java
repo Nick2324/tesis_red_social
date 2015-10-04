@@ -70,7 +70,9 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 	
 	@Override
 	public String stringJson() {
-		return "{id:"+JsonUtils.propiedadNula(this.id)+"}";
+		
+		return "{"+JsonUtils.propiedadNulaTDPrimitivo(
+				"id", this.id, null,-1)+"}";
 	}
 
 	@Override

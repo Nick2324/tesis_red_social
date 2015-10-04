@@ -30,6 +30,7 @@ import sportsallaround.utils.Peticion;
 
 public class SpinnerDesdeBD extends Fragment {
 
+    //HAY QUE AMPLIAR A N SPINNERS
     private InitializerSpinnerBD mListener;
 
     public interface InitializerSpinnerBD {
@@ -173,6 +174,16 @@ public class SpinnerDesdeBD extends Fragment {
                 spinnerBD.setSelection(i);
             }
         }
+    }
+
+    public void activarSpinner(){
+        Spinner spinnerBD = (Spinner)getView().findViewById(R.id.spinner_bd);
+        spinnerBD.setEnabled(true);
+    }
+
+    public void inactivarSpinner(){
+        Spinner spinnerBD = (Spinner)getView().findViewById(R.id.spinner_bd);
+        spinnerBD.setEnabled(false);
     }
 
 }

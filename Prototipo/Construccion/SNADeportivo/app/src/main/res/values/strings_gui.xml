@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BOTON_AFIRMATIVO">Si</string>
+    <string name="BOTON_NEGATIVO">No</string>
+    <string name="BOTON_NEUTRAL">Aceptar</string>
+</resources>

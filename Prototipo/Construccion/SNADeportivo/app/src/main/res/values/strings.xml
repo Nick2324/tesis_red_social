@@ -35,4 +35,5 @@
     <string name="hint_filtro_lista">Escribe el nombre del elemento a buscar</string>
     <string name="title_activity_listado_participantes">ListadoParticipantes</string>
     <string name="title_activity_menu_administrar_involucrados">MenuAdministrarInvolucrados</string>
+    <string name="title_activity_perfil_evento">Perfil del evento</string>
 </resources>

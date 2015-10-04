@@ -22,12 +22,10 @@ public class JsonUtils {
 				for (String propiedad : propiedadesObjeto){
 					llave = propiedad.substring(0, propiedad.indexOf(":")).trim();
 					valor = propiedad.substring(propiedad.indexOf(":")+1).trim();
-					
-					System.out.println("************************************************");
+					/*System.out.println("************************************************");
 					System.out.println("Llave ====== "+llave);
 					System.out.println("Valor ====== "+valor);
-					System.out.println("************************************************");
-					
+					System.out.println("************************************************");*/
 					if(llave.startsWith("\"") || llave.startsWith("'"))
 						llave = llave.substring(1,llave.length()-1);//eliminar comilla inicial y final del nombre de la llave
 					if(valor.startsWith("["))//es un arreglo
@@ -102,28 +100,70 @@ public class JsonUtils {
 		return propiedades.toArray(new String[propiedades.size()]);
 	}
 	
-	public static String propiedadNula(Object obj){
-		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
-			return "null";
-		else{
-			return "'"+StringUtils.decodificar(obj.toString())+"'";
+	private static boolean ponerComa(Object[] anterior,int indice){
+		if(anterior != null && indice >= 0){
+			for(int i = indice - 1; i >= 0; i--){
+				if(anterior[i] != null && 
+				   !anterior[i].toString().equals("null")){
+					return true;
+				}
+			}
 		}
+		return false;
 	}
 	
-	public static String propiedadNulaSinDecodificar(Object obj){
-		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
-			return "null";
-		else{
-			return "'"+obj.toString()+"'";
+	public static String propiedadNula(String propiedad,Object obj,Object[] anterior,int indice){
+		String retorno = "";
+		if(obj != null && 
+		   obj.toString() != null && 
+		   !obj.toString().equals("null") &&
+		   propiedad != null &&
+		   !propiedad.equals("null")){
+			String coma = "";
+			if(JsonUtils.ponerComa(anterior, indice)){
+				coma = ",";
+			}
+			retorno =  coma +
+					"\""+propiedad+"\"" + ":" + 
+				   "\""+StringUtils.decodificar(obj.toString())+"\"";
 		}
+		return retorno;
 	}
 	
-	public static String propiedadNulaTDPrimitivo(Object obj){
-		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
-			return "null";
-		else{
-			return obj.toString();
+	public static String propiedadNulaSinDecodificar(String propiedad,Object obj,Object[] anterior,int indice){
+		String retorno = "";
+		if(obj != null && 
+		   obj.toString() != null && 
+		   !obj.toString().equals("null") &&
+		   propiedad != null &&
+		   !propiedad.equals("null")){
+			String coma = "";
+			if(JsonUtils.ponerComa(anterior, indice)){
+				coma = ",";
+			}
+			retorno =  coma +
+					"\""+propiedad+"\"" + ":" + 
+				   "\""+obj.toString()+"\"";
 		}
+		return retorno;
+	}
+	
+	public static String propiedadNulaTDPrimitivo(String propiedad,Object obj,Object[] anterior,int indice){
+		String retorno = "";
+		if(obj != null && 
+		   obj.toString() != null && 
+		   !obj.toString().equals("null") &&
+		   propiedad != null &&
+		   !propiedad.equals("null")){
+			String coma = "";
+			if(JsonUtils.ponerComa(anterior, indice)){
+				coma = ",";
+			}
+			retorno =  coma +
+					"\""+propiedad+"\"" + ":" + 
+				   obj.toString();
+		}
+		return retorno;
 	}
 	
 	public static String propiedadNulaBackwards(Object obj){
@@ -134,18 +174,33 @@ public class JsonUtils {
 		}
 	}
 	
+	public static Object propiedadNulaBackwardsTDPrimi(Object obj,Class claseTDP){
+		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
+			return null;
+		else{
+			if(claseTDP.getSimpleName().equals("Integer")){
+				return Integer.parseInt(obj.toString());
+			}else if(claseTDP.getSimpleName().equals("Boolean")){
+				return Boolean.parseBoolean(obj.toString());
+			}else{
+				//implementar para los demas
+				return obj.toString() ;
+			}
+		}
+	}
+	
 	public static String arrayObjectSNSToStringJson(ObjectSNSDeportivo[] arreglo){
-		StringBuilder arrayEventosJson = new StringBuilder("[");
+		StringBuilder arrayJson = new StringBuilder("[");
 		if(arreglo != null){
 			for(ObjectSNSDeportivo obj:arreglo){
-				arrayEventosJson.append(obj.stringJson());
-				arrayEventosJson.append(',');
+				arrayJson.append(obj.stringJson());
+				arrayJson.append(',');
 			}
-			if(arrayEventosJson.length() > 1)
-				arrayEventosJson = arrayEventosJson.delete(arrayEventosJson.length()-1, arrayEventosJson.length());
+			if(arrayJson.length() > 1)
+				arrayJson = arrayJson.delete(arrayJson.length()-1, arrayJson.length());
 		}
-		arrayEventosJson.append(']');
-		return arrayEventosJson.toString();
+		arrayJson.append(']');
+		return arrayJson.toString();
 	}
 	
 	public static ArrayList<ObjectSNSDeportivo> convertirMensajeJsonAObjectSNS(String jsonString,

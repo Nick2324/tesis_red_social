@@ -219,19 +219,33 @@ public class Usuario extends ObjectSNSDeportivo {
 
 	@Override
 	public String stringJson() {
-		return "{primerNombre:"+JsonUtils.propiedadNula(this.primerNombre)+","+
-			   "segundoNombre:"+JsonUtils.propiedadNula(this.segundoNombre)+","+
-			   "apellidos:"+JsonUtils.propiedadNula(this.apellidos)+","+
-			   "usuario:"+JsonUtils.propiedadNula(this.usuario)+","+
-			   "contrasena:"+JsonUtils.propiedadNula(this.contrasena)+","+
-			   "eMail:"+JsonUtils.propiedadNula(this.eMail)+","+
-			   "numeroContacto:"+JsonUtils.propiedadNula(this.numeroContacto)+","+
-			   "fechaNacimiento:"+JsonUtils.propiedadNula(this.fechaNacimiento)+","+
-			   "fechaRegistro:"+JsonUtils.propiedadNula(this.fechaRegistro)+","+
-			   "sexo:"+JsonUtils.propiedadNula(this.sexo)+","+
-			   "estado:"+this.estado+","+
-			   "tipoUsuario:"+JsonUtils.propiedadNula(this.tipoUsuario)+"}";
-		
+		Object[] propiedades = new Object[]{
+				this.primerNombre,
+				this.segundoNombre,
+				this.apellidos,
+				this.usuario,
+				this.contrasena,
+				this.eMail,
+				this.numeroContacto,
+				this.fechaNacimiento,
+				this.fechaRegistro,
+				this.sexo,
+				this.estado
+		};
+		return "{"+
+				JsonUtils.propiedadNula("primerNombre",this.primerNombre,propiedades,0)+
+			    JsonUtils.propiedadNula("segundoNombre",this.segundoNombre,propiedades,1)+
+			    JsonUtils.propiedadNula("apellidos:",this.apellidos,propiedades,2)+
+			    JsonUtils.propiedadNula("usuario",this.usuario,propiedades,3)+
+			    JsonUtils.propiedadNula("contrasena",this.contrasena,propiedades,4)+
+			    JsonUtils.propiedadNula("eMail",this.eMail,propiedades,5)+
+			    JsonUtils.propiedadNula("numeroContacto",this.numeroContacto,propiedades,6)+
+			    JsonUtils.propiedadNula("fechaNacimiento",this.fechaNacimiento,propiedades,7)+
+			    JsonUtils.propiedadNula("fechaRegistro",this.fechaRegistro,propiedades,8)+
+			    JsonUtils.propiedadNula("sexo",this.sexo,propiedades,9)+
+			    JsonUtils.propiedadNulaTDPrimitivo("estado", this.estado,propiedades,10)+
+			    "}";
+		//Y ATRIBUTOS QUE NO ESTAN EN LA BD QUE? TipoUsuario, mas un label que otra cosa
 	}
 
 	@Override

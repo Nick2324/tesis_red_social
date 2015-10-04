@@ -2,12 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sportsallaround.snadeportivo" >
 
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +29,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -33,7 +40,7 @@
         <activity
             android:name=".usuarios.UserMainDrawer"
             android:label="@string/title_activity_user_main_drawer"
-            android:theme="@style/MainDrawerTheme">
+            android:theme="@style/MainDrawerTheme" >
         </activity>
         <activity
             android:name=".usuarios.UserUpdatePersonalInfoActivity"
@@ -46,17 +53,17 @@
         <activity
             android:name=".eventos.GestionEventosLista"
             android:label="@string/titulo_gestion_eventos_lista"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".eventos.CrearEvento"
-            android:label="@string/title_activity_crear_evento">
+            android:label="@string/title_activity_crear_evento" >
         </activity>
         <activity
             android:name=".eventos.InformacionGeneralEvento"
             android:label="@string/title_activity_informacion_general_evento"
-            android:windowSoftInputMode="stateHidden"
-            android:launchMode="singleInstance">
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".ErrorActivity"
@@ -69,19 +76,25 @@
         <activity
             android:name=".eventos.InformacionParticipantes"
             android:label="@string/title_activity_informacion_participantes"
-            android:launchMode="singleInstance">
+            android:launchMode="singleTop" >
         </activity>
         <activity
             android:name=".eventos.ManejoParticipantes"
-            android:label="@string/title_activity_manejo_participantes" >
+            android:label="@string/title_activity_manejo_participantes"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".eventos.ListadoParticipantes"
-            android:label="@string/title_activity_listado_participantes" >
+            android:label="@string/title_activity_listado_participantes"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name=".eventos.MenuAdministrarInvolucrados"
             android:label="@string/title_activity_menu_administrar_involucrados" >
+        </activity>
+        <activity
+            android:name=".eventos.PerfilEvento"
+            android:label="@string/title_activity_perfil_evento" >
         </activity>
     </application>
 

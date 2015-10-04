@@ -1,27 +1,32 @@
 package sportsallaround.snadeportivo.eventos;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
+import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.evento.TiposEventos;
+import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.utils.Peticion;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.DescripcionGo;
@@ -29,7 +34,6 @@ import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
 import sportsallaround.utils.gui.ObjetoListener;
 import sportsallaround.utils.gui.ObjetoListenerSpinner;
-import sportsallaround.utils.ServiceUtils;
 
 public class GestionEventosLista extends Activity
         implements AttachObjetoListener,
@@ -39,7 +43,76 @@ public class GestionEventosLista extends Activity
     private ArrayList<Evento> eventos;
     private KeyValueItem tipoNumeroEvento;
 
-    private class PeticionSpinner implements ObjetoListenerSpinner{
+    private class PeticionDatosEvento extends Peticion{
+
+        private ArrayList<Evento> eventos;
+        private KeyValueItem item;
+        private Bundle extra;
+        private Context context;
+        private Intent intent;
+
+        public PeticionDatosEvento(Context context,
+                                   Intent intent,
+                                   Bundle extra,
+                                   ArrayList<Evento> eventos,
+                                   KeyValueItem item){
+            this.item = item;
+            this.eventos = eventos;
+            this.extra = extra;
+            this.context = context;
+        }
+
+        @Override
+        public void calcularMetodo() {
+            super.metodo = "GET";
+        }
+
+        @Override
+        public void calcularServicio() {
+            if(this.item != null &&
+               this.eventos != null) {
+                super.servicio =
+                        Constants.SERVICES_PATH_EVENTOS +
+                        ((TiposEventos)this.item.getValue()).getServicio() + "/" +
+                        this.eventos.get((Integer)this.item.getKey()).getId();
+            }
+        }
+
+        @Override
+        public void calcularParams() {
+            try {
+                super.params = new JSONObject(this.eventos.get(
+                        (Integer)this.item.getKey()).toString());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void doInBackground() {}
+
+        @Override
+        public void onPostExcecute(String resultadoPeticion) {
+            if(resultadoPeticion != null){
+                //PONE DATOS DE GENERO Y DEPORTE*****
+                this.extra.putString(ConstantesEvento.GENERO_MANEJADO,null);
+                this.extra.putString(ConstantesEvento.DEPORTE_MANEJADO,null);
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,extra);
+                startActivity(intent);
+            }else{
+                new AlertDialog.Builder(this.context).
+                        setTitle(this.context.getResources().
+                                getString(R.string.descripcion_go_error_ir_eve_tit)).
+                        setMessage(this.context.getResources().
+                                getString(R.string.descripcion_go_error_ir_eve_msn)).
+                        setNeutralButton(this.context.getResources().
+                                getString(R.string.BOTON_NEUTRAL), null).
+                        create().show();
+            }
+        }
+    }
+
+    private class PeticionSpinner implements ObjetoListenerSpinner {
 
         private Context contexto;
 
@@ -49,71 +122,138 @@ public class GestionEventosLista extends Activity
 
         @Override
         public void onItemSelected(Object objetoSeleccionado) {
-            new PeticionEventos(this.contexto).
-                    realizarPeticion((TiposEventos) objetoSeleccionado);
+            if(ConstantesEvento.NO_OWNER.equals(
+                    getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
+                    .getString(ConstantesEvento.OWNER_EVENTO))) {
+                new PeticionEventos(this.contexto,
+                        (TiposEventos) objetoSeleccionado).ejecutarPeticion();
+            }else if(ConstantesEvento.OWNER.equals(
+                    getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
+                            .getString(ConstantesEvento.OWNER_EVENTO))){
+                Usuario usuario = (Usuario)new ProductorFactoryUsuario().
+                        producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNS();
+                try {
+                    usuario.deserializarJson((JsonObject)JsonUtils.JsonStringToObject(
+                            getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                                    getString(Constants.USUARIO)
+                    ));
+                    new PeticionEventos(this.contexto,
+                            (TiposEventos) objetoSeleccionado,
+                            usuario).ejecutarPeticion();
+                } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                    new AlertDialog.Builder(this.contexto).
+                            setTitle(this.contexto.getResources().
+                                    getString(R.string.alert_lista_eventos_err_tit))
+                            .setMessage(this.contexto.getResources().
+                                    getString(R.string.alert_lista_eventos_err_msn)).
+                            setNeutralButton(this.contexto.getResources()
+                                    .getString(R.string.BOTON_NEUTRAL), null).create().show();
+                    excepcionJsonDeserializacion.printStackTrace();
+                }
+            }else{
+                new AlertDialog.Builder(this.contexto).
+                        setTitle(this.contexto.getResources().
+                                getString(R.string.alert_lista_eventos_err_tit))
+                        .setMessage(this.contexto.getResources().
+                                getString(R.string.alert_lista_eventos_err_msn)).
+                        setNeutralButton(this.contexto.getResources()
+                                .getString(R.string.BOTON_NEUTRAL), null).create().show();
+            }
         }
 
         @Override
         public void onNothingSelected() {}
     }
 
-    private class PeticionEventos extends AsyncTask{
+    private class PeticionEventos extends Peticion {
 
-        Context contexto;
+        private Context contexto;
+        private TiposEventos tipoEvento;
+        private Usuario usuario;
 
-        public PeticionEventos(Context contexto){
+        public PeticionEventos(Context contexto,TiposEventos tipoEvento){
             this.contexto = contexto;
+            this.tipoEvento = tipoEvento;
+        }
+
+        public PeticionEventos(Context contexto,
+                               TiposEventos tipoEvento,
+                               Usuario usuario){
+            this.contexto = contexto;
+            this.tipoEvento = tipoEvento;
+            this.usuario = usuario;
         }
 
         @Override
-        protected Object doInBackground(Object[] params) {
-            TiposEventos itemSeleccionado = (TiposEventos)params[0];
-            return ServiceUtils.invokeService(null,
-                    Constants.SERVICES_PATH_EVENTOS + itemSeleccionado.getServicio(),
-                    "GET");
+        public void calcularMetodo() {
+            super.metodo = "GET";
         }
 
         @Override
-        protected void onPostExecute(Object response){
-            Spinner tipoEvento = (Spinner)findViewById(R.id.spinner_tipo_evento);
-            if (response != null && !((String)response).equals("")) {
-                try {
-                    JSONArray responseJson = new JSONArray((String) response);
-                    eventos = new ArrayList<Evento>();
-                    for (int i = 0; i < responseJson.length(); i++) {
-                        eventos.add(new ProductorFactoryEvento().
-                                getEventosFactory(((TiposEventos)tipoEvento.getSelectedItem()).
-                                        getServicio()).
-                                crearEvento());
-                        eventos.get(i).deserializarJson(
-                                JsonUtils.JsonStringToObject(responseJson.getString(i)));
-                    }
-                    ((ListaConFiltro)getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
-                            llenarLista();
-                } catch (JSONException e) {
-                    ((ListaConFiltro)getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
-                            limpiarLista();
-                    Log.w("SNA:JSONException", e.getMessage());
-                } catch (ExcepcionJsonDeserializacion e) {
-                    ((ListaConFiltro)getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
-                            limpiarLista();
-                    Log.w("SNA:ExcepcionJsonDes", e.getMessage());
-                }
-            }else{
-                ((ListaConFiltro)getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
-                        limpiarLista();
+        public void calcularServicio() {
+            super.servicio = Constants.SERVICES_PATH_EVENTOS + tipoEvento.getServicio();
+            if(this.usuario != null){
+                //super.servicio += "/" + this.usuario.getUsuario();
             }
-
         }
 
-        public void realizarPeticion(TiposEventos ce){
+        @Override
+        public void calcularParams() {
             try {
-                this.execute(new Object[]{ce});
-            }catch(Exception e){
-                Log.w("SNA:Exception",e.getMessage());
+                if(this.usuario != null) {
+                    //ERROR DE USUARIO
+                    super.params = new JSONObject("{nombre:'pru'}"/*this.usuario.stringJson()*/);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
         }
 
+        @Override
+        public void doInBackground() {}
+
+        @Override
+        public void onPostExcecute(String resultadoPeticion) {
+            if(this.usuario != null && params == null){
+                new AlertDialog.Builder(this.contexto).
+                        setTitle(this.contexto.getResources().
+                                getString(R.string.alert_lista_eventos_err_tit)).
+                        setMessage(this.contexto.getResources().
+                                getString(R.string.alert_lista_eventos_err_msn)).
+                        setNeutralButton(this.contexto.getResources().
+                                getString(R.string.BOTON_NEUTRAL),null).
+                        create().show();
+            }else {
+                Spinner tipoEvento = (Spinner) findViewById(R.id.spinner_tipo_evento);
+                if (resultadoPeticion != null && !resultadoPeticion.equals("")) {
+                    try {
+                        JSONArray responseJson = new JSONArray(resultadoPeticion);
+                        eventos = new ArrayList<Evento>();
+                        for (int i = 0; i < responseJson.length(); i++) {
+                            eventos.add(new ProductorFactoryEvento().
+                                    getEventosFactory(((TiposEventos) tipoEvento.getSelectedItem()).
+                                            getServicio()).
+                                    crearEvento());
+                            eventos.get(i).deserializarJson(
+                                    JsonUtils.JsonStringToObject(responseJson.getString(i)));
+                        }
+                        ((ListaConFiltro) getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
+                                llenarLista();
+                    } catch (JSONException e) {
+                        ((ListaConFiltro) getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
+                                limpiarLista();
+                        Log.w("SNA:JSONException", e.getMessage());
+                    } catch (ExcepcionJsonDeserializacion e) {
+                        ((ListaConFiltro) getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
+                                limpiarLista();
+                        Log.w("SNA:ExcepcionJsonDes", e.getMessage());
+                    }
+                } else {
+                    ((ListaConFiltro) getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
+                            limpiarLista();
+                }
+            }
+        }
     }
 
     @Override
@@ -121,21 +261,27 @@ public class GestionEventosLista extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gestion_eventos_lista);
         setTitle(getResources().getString(R.string.titulo_gestion_eventos_lista));
-        this.prepararListeners();
+        this.setUpListeners();
     }
 
-    protected void prepararListeners() {
+    protected void setUpListeners() {
         final Context actividad = this;
         Button crearEvento = (Button) findViewById(R.id.button_crear_evento);
-        crearEvento.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent crearEventoIntent = new Intent(actividad, CrearEvento.class);
-                crearEventoIntent.putExtra(Constants.USUARIO,
-                        getIntent().getExtras().getParcelable(Constants.USUARIO));
-                startActivity(crearEventoIntent);
-            }
-        });
+        if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                getString(ConstantesEvento.OWNER_EVENTO).equals(ConstantesEvento.OWNER)) {
+            crearEvento.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent crearEventoIntent = new Intent(actividad, CrearEvento.class);
+                    crearEventoIntent.putExtra(Constants.DATOS_FUNCIONALIDAD,
+                            getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD));
+                    startActivity(crearEventoIntent);
+                }
+            });
+        }else if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                getString(ConstantesEvento.OWNER_EVENTO).equals(ConstantesEvento.NO_OWNER)){
+            crearEvento.setVisibility(View.GONE);
+        }
     }
 
     private ArrayList<KeyValueItem> convertirEventosKeyValueItem(){
@@ -162,13 +308,14 @@ public class GestionEventosLista extends Activity
             ((DescripcionGo)getFragmentManager().findFragmentById(R.id.fragment_switcher_info)).
                     setDescripcion(eventos.get(i).getNombre() + "\n" +
                             eventos.get(i).getDescripcion() + "\n" +
-                            "Fecha de creacion: " + eventos.get(i).getFechaCreacion() + "\n" +
-                            "Fecha de inicio: " + eventos.get(i).getFechaInicio());
+                            getResources().getString(R.string.descripcion_go_eve_fecha_crea)
+                            + ": " + eventos.get(i).getFechaCreacion() + "\n" +
+                            getResources().getString(R.string.descripcion_go_eve_fecha_ini)
+                            + ": " + eventos.get(i).getFechaInicio());
 
             tipoNumeroEvento = new KeyValueItem(new Integer(i),
                     ((SpinnerEventos)getFragmentManager().
-                    findFragmentById(R.id.fragment_tipo_evento)).getValueSpinnerEventos().
-                    getServicio());
+                    findFragmentById(R.id.fragment_tipo_evento)).getValueSpinnerEventos());
         }
     }
 
@@ -193,31 +340,53 @@ public class GestionEventosLista extends Activity
 
     @Override
     public String getNombreBoton() {
-        return "Ir al evento";
+        return getResources().getString(R.string.descripcion_go_boton_ir_eve);
     }
 
     @Override
     public String getDefaultDescripcion() {
-        return "Elija un evento para desplegar su informacion";
+        return getResources().getString(R.string.descripcion_go_default_ir_eve);
     }
 
     @Override
     public void go() {
         if(this.tipoNumeroEvento != null) {
-            Intent intent = new Intent(this, InformacionGeneralEvento.class);
-            Bundle extra = new Bundle();
-            extra.putString(Constants.FUNCIONALIDAD,
-                    ConstantesEvento.ACTUALIZAR_EVENTO);
-            extra.putString(ConstantesEvento.TIPO_MENU,
-                            ConstantesEvento.MENU_ADMIN_EVENTOS);
+            Intent intent = null;
+            Bundle extra = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD);
+            if(ConstantesEvento.OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))) {
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.ACTUALIZAR_EVENTO);
+                extra.putString(ConstantesEvento.TIPO_MENU,
+                        ConstantesEvento.MENU_ADMIN_EVENTOS);
+                intent = new Intent(this, InformacionGeneralEvento.class);
+            }else if(ConstantesEvento.NO_OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))){
+                Log.d("Nick:no_owner","No soy owner");
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.PARTICIPANTE_EVENTO);
+                extra.putString(ConstantesEvento.TIPO_MENU,
+                        ConstantesEvento.MENU_PART_EVENTOS);
+                intent = new Intent(this,PerfilEvento.class);
+            }
             extra.putString(ConstantesEvento.TIPO_EVENTO,
-                    (String) tipoNumeroEvento.getValue());
+                    ((TiposEventos) tipoNumeroEvento.getValue()).getNombreClase());
             extra.putString(ConstantesEvento.EVENTO_MANEJADO,
                     this.eventos.get((Integer) tipoNumeroEvento.getKey()).stringJson());
-            intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extra);
-            intent.putExtra(Constants.USUARIO,
-                    getIntent().getExtras().getParcelable(Constants.USUARIO));
-            startActivity(intent);
+            extra.putString(ConstantesEvento.SERVICIO_EVENTO,
+                    ((TiposEventos) tipoNumeroEvento.getValue()).getServicio());
+            if(intent != null) {
+                /*new PeticionDatosEvento(this,intent,extra,this.eventos,this.tipoNumeroEvento).
+                        ejecutarPeticion();*/
+                intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extra);
+                startActivity(intent);
+            }else{
+                new AlertDialog.Builder(this).setTitle(getResources().
+                        getString(R.string.descripcion_go_error_ir_eve_tit)+" "+
+                        this.eventos.get((Integer) tipoNumeroEvento.getKey()).getNombre()).
+                        setMessage(getResources().getString(R.string.descripcion_go_error_ir_eve_msn)).
+                        setNeutralButton(getResources().getString(R.string.BOTON_NEUTRAL)
+                                ,null).create().show();
+
+            }
         }
     }
 

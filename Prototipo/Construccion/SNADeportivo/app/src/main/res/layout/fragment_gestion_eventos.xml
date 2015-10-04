@@ -5,17 +5,17 @@
     android:orientation="vertical">
 
     <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical|center"
         android:id="@+id/button_mis_eventos"
-        android:layout_gravity="center"
         android:text="@string/boton_mis_eventos"/>
 
     <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical|center"
         android:id="@+id/button_eventos_sna"
-        android:layout_gravity="center"
         android:text="@string/boton_explorar_eventos"/>
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 package com.sna_deportivo.pojo.evento;
 
+import java.util.ArrayList;
+
 import com.sna_deportivo.pojo.deportes.ProductorFactoryDeporte;
 import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
 import com.sna_deportivo.utils.bd.BDUtils;
@@ -8,6 +10,8 @@ import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 
@@ -64,6 +68,24 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		}
 		
 		return this.objectSNSDeportivo;
+	}
+	
+	public String getParticipantesEvento(String tipoEvento,
+										 String evento){
+		String retorno = "[]";
+		try {
+			Evento e = new ProductorFactoryEvento().getEventosFactory(tipoEvento).crearEvento();
+			e.deserializarJson(JsonUtils.JsonStringToObject(evento));
+			DeporteEvento de = (DeporteEvento)this.factoryOSNS.getObjetoSNS();
+			de.setEvento(e);
+			RelacionSNS relacionParticipantes = 
+					new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+									"participaEvento",
+									de.getParticipantes());
+		} catch (ExcepcionJsonDeserializacion e1) {
+			e1.printStackTrace();
+		}
+		return retorno;
 	}
 
 }

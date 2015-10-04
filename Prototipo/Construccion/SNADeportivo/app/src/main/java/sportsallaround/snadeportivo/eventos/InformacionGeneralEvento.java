@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.FactoryDeporte;
@@ -37,19 +37,28 @@ public class InformacionGeneralEvento extends Activity
     private Evento evento;
     private Deporte deporte;
     private MenuEventos menuEventos;
+    private boolean enCicloActividadSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_general_evento);
         setTitle(getResources().getString(R.string.title_activity_informacion_general_evento));
-        this.setUpObjetos();
+        this.enCicloActividadSpinner = true;
         this.setUpListeners();
     }
 
     @Override
     public void onStart(){
         super.onStart();
+        this.setUpViewsPropActividad();
+
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        this.setUpObjetos();
         this.setUpDatosActividad();
     }
 
@@ -76,6 +85,32 @@ public class InformacionGeneralEvento extends Activity
         extras.putString(ConstantesEvento.DEPORTE_MANEJADO, this.deporte.stringJson());
         this.menuEventos.comportamiento(this, item.getItemId(), extras);
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setUpViewsPropActividad(){
+        if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD) != null){
+            String funcionalidad = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                    getString(Constants.FUNCIONALIDAD);
+            if(funcionalidad.equals(ConstantesEvento.PARTICIPANTE_EVENTO)){
+                ((EditText)findViewById(R.id.nombre_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.descripcion_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.fecha_inicio_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.fecha_final_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.hora_inicio_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.hora_final_evento_info_general)).setEnabled(false);
+                ((EditText)findViewById(R.id.fecha_creacion_evento)).setEnabled(false);
+                ((SpinnerDesdeBD)getFragmentManager().findFragmentById(R.id.fragment_tipo_deporte)).
+                        inactivarSpinner();
+            }
+            if(funcionalidad.equals(ConstantesEvento.CREAR_EVENTO)){
+                ((TextView)findViewById(R.id.textview_fecha_creacion_eve)).setVisibility(View.GONE);
+                ((EditText)findViewById(R.id.fecha_creacion_evento)).setVisibility(View.GONE);
+            }
+            if(funcionalidad.equals(ConstantesEvento.ACTUALIZAR_EVENTO)){
+                ((TextView)findViewById(R.id.textview_fecha_creacion_eve)).setVisibility(View.VISIBLE);
+                ((EditText)findViewById(R.id.fecha_creacion_evento)).setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     public void setUpListeners(){
@@ -180,11 +215,12 @@ public class InformacionGeneralEvento extends Activity
 
     @Override
     public String getTituloSpinner() {
-        return "Deporte";
+        return getResources().getString(R.string.spinner_deporte_evento);
     }
 
     @Override
     public void onItemSelectedSpinnerBD(KeyValueItem seleccionado, String tagFragmento) {
+        //RESUELVE PROBLEMA
         this.deporte = (Deporte) seleccionado.getValue();
     }
 
@@ -256,11 +292,7 @@ public class InformacionGeneralEvento extends Activity
             evento.setFechaCreacion(((EditText) findViewById(R.id.fecha_creacion_evento)).
                     getText().toString());
         }
-        //DEPORTE
-        this.deporte =
-                (Deporte)(((SpinnerDesdeBD)getFragmentManager().
-                        findFragmentById(R.id.fragment_tipo_deporte)).
-                    getSeleccionado());
+
     }
 
     public void setUpDatosActividad(){
@@ -333,7 +365,8 @@ public class InformacionGeneralEvento extends Activity
     public void onPostExcecute() {
         //DEPORTE
         if(this.deporte.getNombre() != null){
-            ((SpinnerDesdeBD)getFragmentManager().findFragmentById(R.id.fragment_tipo_deporte)).
+            ((SpinnerDesdeBD)getFragmentManager().
+                    findFragmentById(R.id.fragment_tipo_deporte)).
                     setSeleccionado(this.deporte);
         }
     }

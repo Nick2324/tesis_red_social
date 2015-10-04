@@ -8,11 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.TiposEventos;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.gui.ObjetoListener;
@@ -42,21 +40,17 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
             @Override
             public void onClick(View v) {
                 //EL INTENT DEBERIA SER DISTINTO (O NO?) DEPENDIENDO DEL TIPO DE EVENTO
-                Bundle extras = new Bundle();
+                Bundle extras = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD);
                 extras.putString(ConstantesEvento.TIPO_EVENTO,
                         ((SpinnerEventos)getFragmentManager().findFragmentById(
                         R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().getNombreClase());
                 extras.putString(ConstantesEvento.SERVICIO_EVENTO,
                         ((SpinnerEventos)getFragmentManager().findFragmentById(
-                                R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().getServicio());
+                                R.id.fragment_tipo_evento_crear)).
+                                getValueSpinnerEventos().getServicio());
                 extras.putString(Constants.FUNCIONALIDAD,ConstantesEvento.CREAR_EVENTO);
                 extras.putString(ConstantesEvento.TIPO_MENU,
                         ConstantesEvento.MENU_ADMIN_EVENTOS);
-                extras.putString(Constants.USUARIO,
-                        ((Usuario) getIntent().
-                                getExtras().
-                                getParcelable(Constants.USUARIO)).
-                                toString());
                 Intent intent = new Intent(actividad, InformacionGeneralEvento.class);
                 intent.putExtra(Constants.DATOS_FUNCIONALIDAD,extras);
                 startActivity(intent);

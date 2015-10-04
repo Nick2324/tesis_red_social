@@ -79,5 +79,19 @@ public class GestionEventoService {
 		}
 	}
 	
+	/*@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/participantes")
+	public String consultarParticipantesEvento(@PathParam("tipoEvento") String tipoEvento,
+											   @PathParam("id") String id,
+											   Evento evento){
+		try{
+			return this.gestionEvento.
+		}catch(WebApplicationException e){
+			throw e;
+		}
+	}*/
+	
 }
 

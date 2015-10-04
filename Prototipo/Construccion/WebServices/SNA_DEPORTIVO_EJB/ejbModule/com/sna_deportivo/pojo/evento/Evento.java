@@ -405,18 +405,38 @@ public class Evento extends ObjectSNSDeportivo {
 	
 	@Override
 	public String stringJson(){
-		return "{id:"+this.id+","+
-				"nombre:"+JsonUtils.propiedadNula(this.nombre)+","+
-				"descripcion:"+JsonUtils.propiedadNula(this.descripcion)+","+
-				"fechaCreacion:"+JsonUtils.propiedadNula(this.fechaCreacion)+","+
-				"fechaInicio:"+JsonUtils.propiedadNula(this.fechaInicio)+","+
-				"fechaFinal:"+JsonUtils.propiedadNula(this.fechaFinal)+","+
-				"horaInicio:"+JsonUtils.propiedadNula(this.horaInicio)+","+
-				"horaFinal:"+JsonUtils.propiedadNula(this.horaFinal)+","+
-				"numMaxParticipantes:"+this.numMaxParticipantes+","+
-				"rangoMaxEdad:"+this.rangoMaxEdad+","+
-				"rangoMinEdad:"+this.rangoMinEdad +","+
-				"activo:"+this.activo+"}";
+		Object[] propiedades = new Object[]{
+				this.id,
+				this.nombre,
+				this.descripcion,
+				this.fechaCreacion,
+				this.fechaInicio,
+				this.fechaFinal,
+				this.horaInicio,
+				this.horaFinal,
+				this.numMaxParticipantes,
+				this.rangoMaxEdad,
+				this.rangoMinEdad,
+				this.activo
+		};
+		return "{"+
+				JsonUtils.propiedadNula("id", this.id, propiedades,0)+
+				JsonUtils.propiedadNula("nombre",this.nombre,propiedades,1)+
+				JsonUtils.propiedadNula("descripcion",this.descripcion,propiedades,2)+
+				JsonUtils.propiedadNula("fechaCreacion",this.fechaCreacion,propiedades,3)+
+				JsonUtils.propiedadNula("fechaInicio",this.fechaInicio,propiedades,4)+
+				JsonUtils.propiedadNula("fechaFinal",this.fechaFinal,propiedades,5)+
+				JsonUtils.propiedadNula("horaInicio",this.horaInicio,propiedades,6)+
+				JsonUtils.propiedadNula("horaFinal",this.horaFinal,propiedades,7)+
+				JsonUtils.propiedadNulaTDPrimitivo("numMaxParticipantes", 
+						this.numMaxParticipantes, propiedades,8)+
+				JsonUtils.propiedadNulaTDPrimitivo("rangoMaxEdad", 
+						this.rangoMaxEdad, propiedades,9)+
+				JsonUtils.propiedadNulaTDPrimitivo("rangoMinEdad", 
+						this.rangoMinEdad, propiedades,10)+
+				JsonUtils.propiedadNulaTDPrimitivo("activo", 
+						this.activo, propiedades,11)
+				+"}";
 	}
 	
 	/**
@@ -471,20 +491,20 @@ public class Evento extends ObjectSNSDeportivo {
 			this.setHoraFinal(JsonUtils.propiedadNulaBackwards((String)valor[0]));
 			asignado = true;
 		}else if(atributo.equals("numMaxParticipantes")){
-			this.setNumMaxParticipantes((((String)valor[0]).equals("null"))?null:
-										Integer.parseInt((String)valor[0]));
+			this.setNumMaxParticipantes((Integer)JsonUtils.
+					propiedadNulaBackwardsTDPrimi((String)valor[0],Integer.class));
 			asignado = true;
 		}else if(atributo.equals("rangoMaxEdad")){
-			this.setRangoMaxEdad((((String)valor[0]).equals("null"))?null:
-								 Integer.parseInt((String)valor[0]));
+			this.setRangoMaxEdad((Integer)JsonUtils.
+					propiedadNulaBackwardsTDPrimi((String)valor[0],Integer.class));
 			asignado = true;
 		}else if(atributo.equals("rangoMinEdad")){
-			this.setRangoMinEdad((((String)valor[0]).equals("null"))?null:
-								 Integer.parseInt((String)valor[0]));
+			this.setRangoMinEdad((Integer)JsonUtils.
+					propiedadNulaBackwardsTDPrimi((String)valor[0],Integer.class));
 			asignado = true;
 		}else if(atributo.equals("activo")){
-			this.setActivo((((String)valor[0]).equals("null"))?null:
-							Boolean.parseBoolean((String)valor[0]));
+			this.setActivo((Boolean)JsonUtils.
+					propiedadNulaBackwardsTDPrimi((String)valor[0],Boolean.class));
 			asignado = true;
 		}
 		
