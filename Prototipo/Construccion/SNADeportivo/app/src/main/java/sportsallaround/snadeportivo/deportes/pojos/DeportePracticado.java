@@ -1,5 +1,8 @@
 package sportsallaround.snadeportivo.deportes.pojos;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +12,7 @@ import sportsallaround.utils.MediaTypeTranslator;
 /**
  * Created by luis on 7/17/15.
  */
-public class DeportePracticado implements MediaTypeTranslator {
+public class DeportePracticado implements MediaTypeTranslator, Parcelable{
 
     private Deporte deporte;
     private PosicionDeporte[] posiciones;
@@ -24,6 +27,12 @@ public class DeportePracticado implements MediaTypeTranslator {
         for(int i=0;i<posiciones.length();i++)
             this.posiciones[i] = new PosicionDeporte(posiciones.getJSONObject(i));
         this.nivel = jsonObject.getString("nivel");
+    }
+
+    public DeportePracticado(Parcel in){
+        deporte = in.readParcelable(Deporte.class.getClassLoader());
+        posiciones = in.createTypedArray(PosicionDeporte.CREATOR);
+        nivel = in.readString();
     }
 
     public Deporte getDeporte() {
@@ -70,4 +79,27 @@ public class DeportePracticado implements MediaTypeTranslator {
         retorno.append("}");
         return retorno.toString();
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeParcelable(deporte,0);
+        dest.writeTypedArray(posiciones, 0);
+        dest.writeString(nivel);
+    }
+
+    public static final Parcelable.Creator<DeportePracticado> CREATOR = new Parcelable.Creator<DeportePracticado>(){
+        public DeportePracticado createFromParcel(Parcel in) {
+            return new DeportePracticado(in);
+        }
+
+        @Override
+        public DeportePracticado[] newArray(int size) {
+            return new DeportePracticado[size];
+        }
+    };
 }

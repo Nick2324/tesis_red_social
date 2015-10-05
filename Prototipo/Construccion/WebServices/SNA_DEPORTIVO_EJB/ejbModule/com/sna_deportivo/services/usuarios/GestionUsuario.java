@@ -212,8 +212,8 @@ public class GestionUsuario {
 		JsonObject row;
 		JsonObject arregloRow;
 		for (int i = 0; i < data.length; i++) {
-			if(!data[0].getClass().equals(String.class)){
-				row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			if(!data[i].getClass().equals(String.class)){
+				row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
 				arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
 				permisos[i] = new Permiso(arregloRow);
 			}

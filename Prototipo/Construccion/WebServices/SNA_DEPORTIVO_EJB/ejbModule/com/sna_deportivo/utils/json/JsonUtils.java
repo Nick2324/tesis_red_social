@@ -71,8 +71,12 @@ public class JsonUtils {
 		ArrayList<String> propiedades = new ArrayList<String>();
 		short llavesCuadradasAbiertas = 0;
 		short corchetesAbiertos = 0;
+		short comillasAbiertas = 0;
 		int ultimaPosicionComa = 0;
 		for (int i = 0; i < jsonString.length(); i++) {
+			if (jsonString.charAt(i) == '"')
+				if((i > 0 && jsonString.charAt(i-1) != '\\') || i==0)
+					comillasAbiertas = (short) ((comillasAbiertas + 1)%2);
 			if (jsonString.charAt(i) == '{')
 				corchetesAbiertos++;
 			if (jsonString.charAt(i) == '[')
@@ -81,7 +85,7 @@ public class JsonUtils {
 				corchetesAbiertos--;
 			if (jsonString.charAt(i) == ']')
 				llavesCuadradasAbiertas--;
-			if (llavesCuadradasAbiertas == 0 && corchetesAbiertos == 0
+			if (llavesCuadradasAbiertas == 0 && corchetesAbiertos == 0 && comillasAbiertas == 0
 					&& jsonString.charAt(i) == ',') {
 				propiedades.add(jsonString.substring(ultimaPosicionComa, i));
 				ultimaPosicionComa = i + 1;

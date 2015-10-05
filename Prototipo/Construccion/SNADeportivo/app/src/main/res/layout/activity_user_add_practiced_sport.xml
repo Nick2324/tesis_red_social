@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nuevo deporte practicado"
-        android:textSize="38sp"/>
+        android:textSize="38sp"
+        android:id="@+id/add_update_practiced_sport_title"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -63,6 +64,7 @@
         android:layout_height="wrap_content"
         android:text="Añadir deporte"
         android:layout_gravity="bottom|center"
-        android:onClick="anadirDeporte"/>
+        android:onClick="anadirDeporte"
+        android:id="@+id/add_update_practiced_sport"/>
 
 </LinearLayout>

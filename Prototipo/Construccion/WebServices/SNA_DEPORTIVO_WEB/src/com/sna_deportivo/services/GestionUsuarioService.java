@@ -291,4 +291,26 @@ public class GestionUsuarioService {
 		}
 		return response;
 	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("actualizarDeportePracticado")
+	public ResponseGenerico actualizarDeportePracticado(DeportePracticadoUsuario deportePracticadoUsuario){
+		DeportePracticado deportePracticado;
+		deportePracticado = deportePracticadoUsuario.getDeportePracticado();
+		String usuario = deportePracticadoUsuario.getUser();
+		
+		ResponseGenerico response;
+		try {
+			response = servicio.eliminarDeportePracticado(deportePracticado, usuario);
+			if(response.getCaracterAceptacion().equals("B"))
+				response = servicio.adicionarDeportePracticado(deportePracticado, usuario);
+		} catch (BDException e) {
+			response = new ResponseGenerico();
+			response.setCaracterAceptacion("M");
+			response.setCaracterAceptacion("Ha ocurrido un error con la base de datos. Intente nuevamente mas tarde.");
+		}
+		return response;
+	}
 }

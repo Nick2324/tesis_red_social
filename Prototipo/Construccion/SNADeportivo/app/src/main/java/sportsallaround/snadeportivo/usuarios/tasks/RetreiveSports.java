@@ -11,50 +11,39 @@ import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.deportes.pojos.Deporte;
 import sportsallaround.utils.Constants;
+import sportsallaround.utils.ObtainSports;
 import sportsallaround.utils.ServiceUtils;
 
 /**
  * Created by luis on 7/21/15.
  */
 public class RetreiveSports extends AsyncTask<Void, Void, Deporte[]> {
-    private Spinner availableSports;
-    private Context context;
+    private ObtainSports activity;
 
-    public RetreiveSports(Spinner availableSports, Context context) {
-        this.availableSports = availableSports;
-        this.context = context;
+    public RetreiveSports(ObtainSports activity) {
+        this.activity = activity;
     }
 
     @Override
     protected Deporte[] doInBackground(Void... params) {
         String responseRoles = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_DEPORTES, "GET");
-
+        Deporte[] deportes = null;
         try {
             JSONArray jsonRoles = new JSONArray(responseRoles);
-            Deporte[] deportes = new Deporte[jsonRoles.length()];
+            deportes = new Deporte[jsonRoles.length()];
             JSONObject deporte;
             for (int i = 0; i < jsonRoles.length(); i++) {
                 deporte = jsonRoles.getJSONObject(i);
                 deportes[i] = new Deporte(deporte);
             }
-            return deportes;
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return null;
+        return deportes;
     }
 
     @Override
-    protected void onPostExecute(Deporte[] result) {
-        if (result != null) {
-            String[] deportes = new String[result.length];
-            for(int i=0;i<result.length;i++)
-                deportes[i] = result[i].getNombre();
-            ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(context,
-                    android.R.layout.simple_spinner_dropdown_item,
-                    deportes);
-            availableSports.setAdapter(spinnerArrayAdapter);
-            availableSports.setTag(result);
-        }
+    protected void onPostExecute(Deporte[] deportes) {
+        activity.setSports(deportes);
     }
 }

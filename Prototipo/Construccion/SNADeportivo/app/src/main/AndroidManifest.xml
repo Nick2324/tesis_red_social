@@ -6,6 +6,19 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -52,6 +65,23 @@
         <activity
             android:name=".usuarios.UserAddPracticedSport"
             android:label="@string/title_activity_user_add_practiced_sport" >
+        </activity>
+        <activity
+            android:name=".usuarios.UserUpdatePracticedSport"
+            android:label="@string/title_activity_user_update_practiced_sport" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ubicaciones.NearbyLocationsActivity"
+            android:label="@string/title_activity_nearby_locations" >
+        </activity>
+        <activity
+            android:name=".ubicaciones.CreateLocationActivity"
+            android:label="@string/title_activity_create_location" >
         </activity>
     </application>
 

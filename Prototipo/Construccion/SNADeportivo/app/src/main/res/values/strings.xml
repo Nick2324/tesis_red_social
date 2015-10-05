@@ -24,4 +24,7 @@
 
     <string name="title_activity_error">Uups...</string>
     <string name="title_activity_user_add_practiced_sport">UserAddPracticedSport</string>
+    <string name="title_activity_user_update_practiced_sport">UserUpdatePracticedSport</string>
+    <string name="title_activity_nearby_locations">Map</string>
+    <string name="title_activity_create_location">CreateLocationActivity</string>
 </resources>

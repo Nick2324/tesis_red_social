@@ -1,0 +1,63 @@
+TASK sportsallaround.snadeportivo id=21
+  ACTIVITY sportsallaround.snadeportivo/.LoginActivity 2018c02 pid=2056
+    Local Activity 6b60c38 State:
+      mResumed=true mStopped=false mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc en_US ldltr sw360dp w360dp h568dp 640dpi nrml port finger qwerty/v/v -nav/h s.6}
+      mLoadersStarted=true
+      Loader Manager e8c7411:
+        Active Loaders:
+          #0: LoaderInfo{350c976 #0 : CursorLoader{1dbb3e4}}
+            mId=0 mArgs=null
+            mCallbacks=sportsallaround.snadeportivo.LoginActivity@6b60c38
+            mLoader=CursorLoader{1dbb3e4 id=0}
+              mId=0 mListener=LoaderInfo{350c976 #0 : CursorLoader{1dbb3e4}}
+              mStarted=true mContentChanged=false mProcessingChange=false
+              mUri=content://com.android.contacts/profile/data
+              mProjection=[data1, is_primary]
+              mSelection=mimetype = ?
+              mSelectionArgs=[vnd.android.cursor.item/email_v2]
+              mSortOrder=is_primary DESC
+              mCursor=android.content.ContentResolver$CursorWrapperInner@1b3404d
+              mContentChanged=false
+            mHaveData=true  mDeliveredData=true
+            mData=android.content.ContentResolver$CursorWrapperInner@1b3404d
+            mStarted=true mReportNextStart=false mDestroyed=false
+            mRetaining=false mRetainingStarted=false mListenerRegistered=true
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@f780702
+        mContainer=android.app.Activity$HostCallbacks@f780702
+        mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=98866 (144 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.PhoneWindow$DecorView{3922a50 V.E...... R....... 0,0-1440,2560}
+        android.widget.LinearLayout{8009449 V.E...... ........ 0,0-1440,2368}
+          android.view.ViewStub{ee3914e G.E...... ......I. 0,0-0,0 #10203a9 android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{d7ed26f V.E...... ........ 0,96-1440,2368 #1020002 android:id/content}
+            android.widget.LinearLayout{3f79b7c V.E...... ........ 0,0-1440,2272}
+              android.widget.ProgressBar{fb52c05 G.ED..... ......I. 0,0-0,0 #7f0e007d app:id/login_progress}
+              android.widget.LinearLayout{46b745a V.E...... ........ 64,64-1376,2208 #7f0e007e app:id/user_login_form}
+                android.widget.TextView{6d0268b V.ED..... ........ 147,0-1165,213}
+                android.widget.LinearLayout{ce0f368 V.E...... ........ 0,213-1312,1632}
+                  android.widget.AutoCompleteTextView{618381 VFED..CL. .F...... 0,528-1312,709 #7f0e007f app:id/user}
+                  android.widget.EditText{65c7c26 VFED..CL. ........ 0,709-1312,890 #7f0e0080 app:id/password}
+                android.widget.LinearLayout{e98a067 V.E...... ........ 0,1632-1312,2144}
+                  android.widget.Button{e85de14 VFED..C.. ........ 0,64-1312,256 #7f0e0082 app:id/user_sign_in_button}
+                  android.widget.Button{21d6bd VFED..C.. ........ 0,320-1312,512 #7f0e0083 app:id/user_create_button}
+        android.view.View{10434b2 V.ED..... ........ 0,2368-1440,2560 #1020030 android:id/navigationBarBackground}
+        android.view.View{a84dc03 V.ED..... ........ 0,0-1440,96 #102002f android:id/statusBarBackground}
+    Looper (main, tid 1) {9a21b9}
+      Message 0: { when=+350ms callback=android.widget.Editor$Blink target=android.widget.Editor$Blink }
+      (Total messages: 1, polling=false, quitting=false)

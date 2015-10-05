@@ -157,7 +157,10 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(activity.getApplicationContext(), UserUpdatePracticedSport.class);
+                intent.putExtra("deporte",deportePracticado);
+                intent.putExtra("user",user);
+                startActivity(intent);
             }
         });
 
