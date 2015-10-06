@@ -15,33 +15,41 @@ public class RelacionSNS {
 	private String identificadorRelacion;
 	private ArrayList<ObjectSNSDeportivo> objetosRelacion;
 	private ObjectSNSDeportivo propiedadesRelacion;
-	
-	public RelacionSNS(String relacion,
-					   String identificadorRelacion){
-		this.relacion = relacion;
-		this.identificadorRelacion = identificadorRelacion;
-		this.objetosRelacion = new ArrayList<ObjectSNSDeportivo>();
-	}
+	private String direccion;
 	
 	public RelacionSNS(String relacion,
 					   String identificadorRelacion,
-					   ArrayList<ObjectSNSDeportivo> objetosRelacion){
+					   String direccion){
 		this.relacion = relacion;
-		this.objetosRelacion = objetosRelacion;
 		this.identificadorRelacion = identificadorRelacion;
+		this.objetosRelacion = new ArrayList<ObjectSNSDeportivo>();
+		this.direccion = direccion;
 	}
 	
 	public RelacionSNS(String relacion,
 			   String identificadorRelacion,
-			   ObjectSNSDeportivo objetosRelacion){
+			   String direccion,
+			   ArrayList<ObjectSNSDeportivo> objetosRelacion){
+		this.relacion = relacion;
+		this.objetosRelacion = objetosRelacion;
+		this.identificadorRelacion = identificadorRelacion;
+		this.direccion = direccion;
+	}
+	
+	public RelacionSNS(String relacion,
+					   String identificadorRelacion,
+					   String direccion,
+					   ObjectSNSDeportivo objetosRelacion){
 		this.relacion = relacion;
 		this.objetosRelacion = new ArrayList<ObjectSNSDeportivo>();
 		this.objetosRelacion.add(objetosRelacion);
 		this.identificadorRelacion = identificadorRelacion;
+		this.direccion = direccion;
 	}
 	
 	public RelacionSNS(String relacion,
 			   		   String identificadorRelacion,
+			   		   String direccion,
 			   		   ArrayList<ObjectSNSDeportivo> objetosRelacion,
 			   		   ObjectSNSDeportivo propiedadesRelacion){
 		this.relacion = relacion;
@@ -71,6 +79,10 @@ public class RelacionSNS {
 		this.identificadorRelacion = identificadorRelacion;
 	}
 	
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
 	public String getRelacion() {
 		return relacion;
 	}
@@ -95,8 +107,16 @@ public class RelacionSNS {
 		return identificadorRelacion;
 	}
 	
+	public String getDireccion() {
+		return direccion;
+	}
+	
 	public String stringJson(){
 		StringBuilder json = new StringBuilder();
+		if(RelacionSNS.DIRECCION_ENTRADA.equals(this.direccion)){
+			json.append(RelacionSNS.DIRECCION_ENTRADA);
+		}
+		json.append("-");
 		json.append("[");
 		json.append(this.identificadorRelacion);
 		json.append(":");
@@ -105,6 +125,10 @@ public class RelacionSNS {
 			json.append(this.propiedadesRelacion.stringJson());
 		}
 		json.append("]");
+		json.append("-");
+		if(RelacionSNS.DIRECCION_SALIDA.equals(this.direccion)){
+			json.append(RelacionSNS.DIRECCION_SALIDA);
+		}
 		return json.toString();
 	}
 	

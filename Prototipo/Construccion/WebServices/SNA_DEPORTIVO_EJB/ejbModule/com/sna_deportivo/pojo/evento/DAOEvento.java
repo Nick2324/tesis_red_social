@@ -51,9 +51,30 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 			StringBuilder query = new StringBuilder("MATCH (evento:");
 			query.append(Entidades.EVENTODEPORTIVO);
 			query.append(")");
-			if(where != null)
+			ObjectSNSDeportivoDAO daoUsuario = null;
+			if(this.evento != null && 
+			   this.evento.getCreador() != null){
+				daoUsuario = 
+						new ProductorFactoryUsuario().
+						producirFacObjetoSNS(
+								this.evento.getCreador().getClass().getSimpleName()).
+						getObjetoSNSDAO();
+				RelacionSNS relacion = 
+						new RelacionSNS(Relaciones.CREAEVENTO,
+						     		   "creaEvento",
+						     		   RelacionSNS.DIRECCION_ENTRADA,
+									   daoUsuario.getObjetcSNSDeportivo());
+				query.append(relacion.getRelacion());
+				query.append(daoUsuario.producirNodoMatch());
+			}
+			if(where != null){
 				query.append(where);
+			}
 			query.append(" RETURN evento");
+			if(this.evento != null && 
+			   this.evento.getCreador() != null){
+				query.append("," + daoUsuario.getIdentificadorQueries());
+			}
 			try {
 				Object[] resultadoQuery = BDUtils.ejecutarQueryREST(
 											query.toString());
@@ -142,11 +163,11 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 			RelacionSNS relacionCreaEvento = 
 					new RelacionSNS(Relaciones.CREAEVENTO,
 									"creaEvento",
+									RelacionSNS.DIRECCION_ENTRADA,
 									evento.getCreador());
 			super.objectSNSDeportivo = this.evento;
 			super.crearRelacion(relacionCreaEvento, 
-								new ProductorFactoryUsuario(),
-								RelacionSNS.DIRECCION_ENTRADA);
+								new ProductorFactoryUsuario());
 		}
 		
 		return this.evento;

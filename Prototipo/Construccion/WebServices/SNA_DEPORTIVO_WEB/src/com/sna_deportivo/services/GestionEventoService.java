@@ -93,5 +93,19 @@ public class GestionEventoService {
 		}
 	}*/
 	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{usuario}")
+	public String consultarEventosDeUsuario(@PathParam("tipoEvento") String tipoEvento,
+											@PathParam("usuario") String usuario,
+											String jsonUsuario){
+		try{
+			return gestionEvento.consultarEventosDeUsuario(tipoEvento, jsonUsuario);
+		}catch(WebApplicationException e){
+			throw e;
+		}
+		
+	}
+	
 }
 

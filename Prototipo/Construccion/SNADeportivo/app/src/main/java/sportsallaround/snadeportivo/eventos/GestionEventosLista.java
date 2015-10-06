@@ -137,6 +137,7 @@ public class GestionEventosLista extends Activity
                             getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                     getString(Constants.USUARIO)
                     ));
+
                     new PeticionEventos(this.contexto,
                             (TiposEventos) objetoSeleccionado,
                             usuario).ejecutarPeticion();
@@ -193,7 +194,7 @@ public class GestionEventosLista extends Activity
         public void calcularServicio() {
             super.servicio = Constants.SERVICES_PATH_EVENTOS + tipoEvento.getServicio();
             if(this.usuario != null){
-                //super.servicio += "/" + this.usuario.getUsuario();
+                super.servicio += "/" + this.usuario.getUsuario();
             }
         }
 
@@ -202,7 +203,7 @@ public class GestionEventosLista extends Activity
             try {
                 if(this.usuario != null) {
                     //ERROR DE USUARIO
-                    super.params = new JSONObject("{nombre:'pru'}"/*this.usuario.stringJson()*/);
+                    super.params = new JSONObject(this.usuario.stringJson());
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

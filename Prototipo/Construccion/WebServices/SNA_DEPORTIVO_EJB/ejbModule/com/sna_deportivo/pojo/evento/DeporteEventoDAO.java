@@ -40,31 +40,28 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		BDUtils.ejecutarQueryREST(query.toString());
 		RelacionSNS relacionEventoNAria = 
 				new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-								"descripcionEvento");
+								"descripcionEvento",
+								RelacionSNS.DIRECCION_ENTRADA);
 		if(de.getEvento() != null){
 			relacionEventoNAria.setObjetoRelacion(de.getEvento());
 			super.crearRelacion(relacionEventoNAria, 
-								new ProductorFactoryEvento(),
-								RelacionSNS.DIRECCION_ENTRADA);
+								new ProductorFactoryEvento());
 		}
 		if(de.getDeporte() != null){
 			relacionEventoNAria.setObjetoRelacion(de.getDeporte());
 			super.crearRelacion(relacionEventoNAria, 
-					new ProductorFactoryDeporte(),
-					RelacionSNS.DIRECCION_ENTRADA);
+					new ProductorFactoryDeporte());
 		}
 		
 		if(de.getUbicacion() != null){
 			relacionEventoNAria.setObjetoRelacion(de.getUbicacion());
 			super.crearRelacion(relacionEventoNAria, 
-					null,
-					RelacionSNS.DIRECCION_ENTRADA);
+					null);
 		}
 		if(de.getGenero() != null){
 			relacionEventoNAria.setObjetoRelacion(de.getGenero());
 			super.crearRelacion(relacionEventoNAria, 
-								new ProductorFactoryGenerales(),
-								RelacionSNS.DIRECCION_ENTRADA);
+								new ProductorFactoryGenerales());
 		}
 		
 		return this.objectSNSDeportivo;
@@ -81,6 +78,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			RelacionSNS relacionParticipantes = 
 					new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
 									"participaEvento",
+									RelacionSNS.DIRECCION_ENTRADA,
 									de.getParticipantes());
 		} catch (ExcepcionJsonDeserializacion e1) {
 			e1.printStackTrace();

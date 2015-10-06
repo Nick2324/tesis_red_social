@@ -63,13 +63,21 @@ public abstract class ObjectSNSDeportivoDAO {
 		return nodo.toString();
 	}
 	
+	public String producirNodoMatchNoJson(){
+		StringBuilder nodo = new StringBuilder();
+		nodo.append("(");
+		nodo.append(this.identificadorQueries);
+		nodo.append(":");
+		nodo.append(this.tipoObjetoSNS);
+		nodo.append(")");
+		return nodo.toString(); 
+	}
+	
 	public boolean crearRelacion(RelacionSNS relacionACrear,
-							     ProductorSNSDeportivo productor,
-							     String direccion){
+							     ProductorSNSDeportivo productor){
 		if(this.objectSNSDeportivo != null &&
 		   relacionACrear != null &&
-		   productor != null &&
-		   direccion != null){
+		   productor != null){
 			String queryNodoPrincipal = this.producirNodoMatch();
 			StringBuilder queryIndividual = new StringBuilder();
 			for(ObjectSNSDeportivo obj:relacionACrear.getObjetosRelacion()){
@@ -86,15 +94,7 @@ public abstract class ObjectSNSDeportivoDAO {
 				queryIndividual.append("(");
 				queryIndividual.append(this.identificadorQueries);
 				queryIndividual.append(")");
-				if(RelacionSNS.DIRECCION_ENTRADA.equals(direccion)){
-					queryIndividual.append(RelacionSNS.DIRECCION_ENTRADA);
-				}
-				queryIndividual.append("-");
 				queryIndividual.append(relacionACrear.stringJson());
-				queryIndividual.append("-");
-				if(RelacionSNS.DIRECCION_SALIDA.equals(direccion)){
-					queryIndividual.append(RelacionSNS.DIRECCION_SALIDA);
-				}
 				queryIndividual.append("(");
 				queryIndividual.append(dao.getIdentificadorQueries());
 				queryIndividual.append(")");
@@ -121,11 +121,12 @@ public abstract class ObjectSNSDeportivoDAO {
 	 * El objeto manejado por éste DAO es asignado al valor que se ha obtenido después
 	 * de la búsqueda
 	 */
-	protected ArrayList<ArrayList<ObjectSNSDeportivo>> 
+	/*protected ArrayList<ArrayList<ObjectSNSDeportivo>> 
 				obtenerRelacionesObjSNS(ArrayList<RelacionSNS> relacionAObtener,
 		     							ArrayList<ProductorSNSDeportivo> productor,
 		     							ArrayList<String> direccion){
 		StringBuilder query = new StringBuilder();
+		StringBuilder where = new StringBuilder();
 		StringBuilder clausulaReturn = new StringBuilder("RETURN ");
 		String nodoManejado = this.producirNodoMatch();
 		query.append("MATCH ");
@@ -134,6 +135,7 @@ public abstract class ObjectSNSDeportivoDAO {
 		String nodoManejado2;
 		for(int i = 0; i < relacionAObtener.size(); i++){
 			int j = 0;
+			BDUtils.condicionWhere(objetoRedSocial, identificador)
 			for(ObjectSNSDeportivo obj:relacionAObtener.get(i).getObjetosRelacion()){
 				dao = productor.get(i).producirFacObjetoSNS(
 						obj.getClass().getSimpleName()).
@@ -154,7 +156,7 @@ public abstract class ObjectSNSDeportivoDAO {
 			}
 		}
 		return null;
-	}
+	}*/
 	
 	protected abstract void setUpDAOGeneral();
 	
