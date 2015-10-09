@@ -14,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.services.eventos.CrearEvento;
 import com.sna_deportivo.services.eventos.GestionEvento;
+import com.sna_deportivo.utils.gr.ResponseGenerico;
 
 @Path("eventos/")	
 public class GestionEventoService {
@@ -23,6 +24,8 @@ public class GestionEventoService {
 	public GestionEventoService(){
 		this.gestionEvento = new GestionEvento();
 	}
+	
+	//revisar
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -67,19 +70,40 @@ public class GestionEventoService {
 		}
 	}
 	
+	@PUT
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}")
+	public ResponseGenerico actualizarEventoCompleto(@PathParam("tipoEvento") String tipoEvento,
+								 		 @PathParam("id") String idEvento,
+								 		 String datosEvento){
+		try{
+			//this.gestionEvento.actualizarEvento(tipoEvento, evento);
+		}catch(WebApplicationException e){
+			throw e;
+		}
+		
+		return new ResponseGenerico("201","Evento actualizado");
+		
+	}
+	
 	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/")
-	public void cancelarEvento(@PathParam("tipoEvento") String tipoEvento,
-							   Evento evento){
+	@Path("{tipoEvento}/{id}")
+	public ResponseGenerico cancelarEvento(@PathParam("tipoEvento") String tipoEvento,
+										   @PathParam("id") String id,
+							   				Evento evento){
 		try{
 			this.gestionEvento.desactivarEvento(tipoEvento, evento);
 		}catch(WebApplicationException e){
 			throw e;
 		}
+		
+		return new ResponseGenerico("","Evento cancelado con exito");
+		
 	}
 	
-	/*@GET
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
@@ -87,24 +111,78 @@ public class GestionEventoService {
 											   @PathParam("id") String id,
 											   Evento evento){
 		try{
-			return this.gestionEvento.
+			
 		}catch(WebApplicationException e){
 			throw e;
 		}
-	}*/
+
+		return null;
+	}
 	
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/{usuario}")
-	public String consultarEventosDeUsuario(@PathParam("tipoEvento") String tipoEvento,
-											@PathParam("usuario") String usuario,
-											String jsonUsuario){
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/invitados")
+	public String consultarInvitadosEvento(@PathParam("tipoEvento") String tipoEvento,
+										   @PathParam("id") String id,
+										   Evento evento){
 		try{
-			return gestionEvento.consultarEventosDeUsuario(tipoEvento, jsonUsuario);
+			
 		}catch(WebApplicationException e){
 			throw e;
 		}
-		
+
+		return null;
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/ubicaciones")
+	public String consultarUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
+										     @PathParam("id") String id,
+										     Evento evento){
+		try{
+			
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return null;
+	}
+	
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{idEvento}/participantes/{idParticipante}")
+	public ResponseGenerico eliminarParticipanteEvento(@PathParam("tipoEvento") String tipoEvento,
+										   			   @PathParam("idEvento") String idEvento,
+										   			   @PathParam("idParticipante") String idParticipante,
+										   			   String datosEliminaParticipante){
+		try{
+			
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return new ResponseGenerico("","Participante eliminado con exito");
+	}
+
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{idEvento}/invitados/{idInvitado}")
+	public ResponseGenerico eliminarInvitacionEvento(@PathParam("tipoEvento") String tipoEvento,
+										   		     @PathParam("idEvento") String idEvento,
+										   			 @PathParam("idInvitado") String idInvitado,
+										   			 String datosEliminaInvitado){
+		try{
+			
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return new ResponseGenerico("","Invitado eliminado con exito");
 	}
 	
 }

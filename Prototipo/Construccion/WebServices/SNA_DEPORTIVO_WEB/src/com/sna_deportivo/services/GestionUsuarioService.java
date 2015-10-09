@@ -20,12 +20,12 @@ import com.sna_deportivo.pojo.deportes.DeportePracticadoUsuario;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.usuarios.Credenciales;
 import com.sna_deportivo.pojo.usuarios.Permiso;
-import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
 import com.sna_deportivo.pojo.usuarios.Rol;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
 import com.sna_deportivo.services.usuarios.GestionUsuario;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.ResponseGenerico;
 
 @Path("GestionUsuarioService/")
 public class GestionUsuarioService {
@@ -299,4 +299,20 @@ public class GestionUsuarioService {
 		}
 		return response;
 	}
+	
+	@GET	
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{id}/eventos")
+	public String getEventosUsuario(@PathParam("id") String idUsuario,
+									String infoEventosUsuario){
+		
+		try{
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return null;
+	}
+	
 }

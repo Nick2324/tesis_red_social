@@ -1,4 +1,4 @@
-package com.sna_deportivo.pojo.usuarios;
+package com.sna_deportivo.utils.gr;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -8,6 +8,23 @@ public class ResponseGenerico {
 	private String caracterAceptacion;
 	private String mensajeRespuesta;
 	private String datosExtra;
+	
+	public ResponseGenerico(){}
+	
+	public ResponseGenerico(String caracterAceptacion,
+							String mensajeRespuesta){
+		this.caracterAceptacion = caracterAceptacion;
+		this.mensajeRespuesta = mensajeRespuesta;
+	}
+	
+	public ResponseGenerico(String caracterAceptacion,
+							String mensajeRespuesta,
+							String datosExtra){
+		this.caracterAceptacion = caracterAceptacion;
+		this.mensajeRespuesta = mensajeRespuesta;
+		this.datosExtra = datosExtra;
+	}
+
 	
 	public String getCaracterAceptacion() {
 		return caracterAceptacion;

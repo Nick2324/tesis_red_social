@@ -5,7 +5,6 @@ import com.sna_deportivo.pojo.deportes.DeportePracticado;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.usuarios.DAOUsuario;
 import com.sna_deportivo.pojo.usuarios.Permiso;
-import com.sna_deportivo.pojo.usuarios.ResponseGenerico;
 import com.sna_deportivo.pojo.usuarios.Rol;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
@@ -15,6 +14,7 @@ import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.Constantes;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.ResponseGenerico;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 
