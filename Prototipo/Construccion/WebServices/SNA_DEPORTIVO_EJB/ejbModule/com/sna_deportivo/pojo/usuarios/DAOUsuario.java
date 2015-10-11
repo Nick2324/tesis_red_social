@@ -17,8 +17,14 @@ public class DAOUsuario extends ObjectSNSDeportivoDAO{
 	}
 	
 	public Usuario[] getUsuariosDB() throws BDException{
-
-		return (Usuario[])super.getObjetoSNSDeportivoDB();
+		ObjectSNSDeportivo[] snsArray =
+				super.getObjetoSNSDeportivoDB();
+		Usuario[] usuarios = new Usuario[snsArray.length];
+		for(int i = 0;i < snsArray.length; i++){
+			usuarios[i] = (Usuario)snsArray[i];
+		}
+		
+		return usuarios;
 	
 	}
 	
@@ -32,6 +38,12 @@ public class DAOUsuario extends ObjectSNSDeportivoDAO{
 	@Override
 	public ObjectSNSDeportivo crearObjetoSNS() {
 		return null;
+	}
+
+	@Override
+	public void encontrarObjetoManejado() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

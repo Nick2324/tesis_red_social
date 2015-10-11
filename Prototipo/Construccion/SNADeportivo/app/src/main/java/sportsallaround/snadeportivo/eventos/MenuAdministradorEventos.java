@@ -17,9 +17,14 @@ import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.entidadesEstaticas.ConstantesEntidadesGenerales;
 import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
+import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.StringUtils;
+import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,6 +32,7 @@ import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.Constants;
+import sportsallaround.utils.Peticion;
 import sportsallaround.utils.ServiceUtils;
 
 /**
@@ -50,7 +56,6 @@ public class MenuAdministradorEventos implements MenuEventos{
             try{
                 return ServiceUtils.invokeService(params[0],
                         Constants.SERVICES_PATH_EVENTOS +
-                                //CAMBIAR POR EL QUE VENGA DE LA TAREA ANTERIOR. HAY QUE MIGRAR A FRAGMENTO
                                 params[1].getString(ConstantesEvento.SERVICIO_EVENTO)+"/",
                         "POST");
             }catch(Exception e){
@@ -83,6 +88,81 @@ public class MenuAdministradorEventos implements MenuEventos{
             }
         }
 
+    }
+
+    private class CancelarEvento extends Peticion{
+
+        private Context contexto;
+        private Evento evento;
+        private Usuario usuario;
+        private String servicioEvento;
+        private String owner;
+
+        public CancelarEvento(Usuario usuario,
+                              Evento evento,
+                              String servicioEvento,
+                              String owner,
+                              Context contexto){
+            this.contexto = contexto;
+            this.evento = evento;
+            this.usuario = usuario;
+            this.servicioEvento = servicioEvento;
+            this.owner = owner;
+        }
+
+        @Override
+        public void calcularMetodo() {
+            super.metodo = "DELETE";
+        }
+
+        @Override
+        public void calcularServicio() {
+            super.servicio = Constants.SERVICES_PATH_EVENTOS +
+                    this.servicioEvento +
+                    "/" + this.evento.getId();
+        }
+
+        @Override
+        public void calcularParams() {
+            //SUPUESTAMENTE DELETE NO SOPORTA REQUEST BODY
+            /*try {
+                super.params = new JSONObject(this.evento.stringJson());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }*/
+        }
+
+        @Override
+        public void doInBackground() {}
+
+        @Override
+        public void onPostExcecute(String resultadoPeticion) {
+            if(resultadoPeticion != null){
+                try {
+                    JSONObject respuesta = new JSONObject(resultadoPeticion);
+                    if(respuesta.getString("caracterAceptacion").equals("200")) {
+                        Toast.makeText(contexto, contexto.getResources().
+                                getString(R.string.alert_cancel_eve_exito), Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(contexto,GestionEventosLista.class);
+                        Bundle extra = new Bundle();
+                        extra.putString(Constants.USUARIO,this.usuario.stringJson());
+                        extra.putString(ConstantesEvento.OWNER_EVENTO,this.owner);
+                        intent.putExtra(Constants.DATOS_FUNCIONALIDAD,extra);
+                        ((Activity)contexto).startActivity(intent);
+                    }else{
+                        Toast.makeText(contexto,this.contexto.getResources().
+                                getString(R.string.alert_cancel_eve_no_exito),Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    Toast.makeText(contexto,this.contexto.getResources().
+                            getString(R.string.alert_cancel_eve_no_exito),Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+            }else{
+                Toast.makeText(contexto,this.contexto.getResources().
+                        getString(R.string.alert_cancel_eve_no_exito),Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     public MenuAdministradorEventos(){}
@@ -238,13 +318,66 @@ public class MenuAdministradorEventos implements MenuEventos{
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        Toast.makeText(contexto,"Cancelando evento",Toast.LENGTH_LONG).show();
+                                        if(datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO)
+                                                != null &&
+                                           datosIntent.getString(ConstantesEvento.SERVICIO_EVENTO)
+                                                   != null &&
+                                           datosIntent.getString(Constants.USUARIO)
+                                                   != null){
+                                            Evento e = new ProductorFactoryEvento().
+                                                    getEventosFactory(datosIntent.
+                                                            getString(ConstantesEvento.SERVICIO_EVENTO)).
+                                                    crearEvento();
+                                            try {
+                                                e.deserializarJson((JsonObject)JsonUtils.JsonStringToObject(
+                                                        datosIntent.getString(ConstantesEvento.EVENTO_MANEJADO)));
+                                                if(e.getId() != null){
+                                                    Usuario u = new Usuario();
+                                                    try {
+                                                        u.deserializarJson((JsonObject)JsonUtils.JsonStringToObject(
+                                                                datosIntent.getString(Constants.USUARIO)));
+                                                        new CancelarEvento(u,e,
+                                                                datosIntent.getString(ConstantesEvento.SERVICIO_EVENTO),
+                                                                datosIntent.getString(ConstantesEvento.OWNER_EVENTO),
+                                                                contexto).ejecutarPeticion();
+                                                    } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                                                        despliegaAlertCanEveDatIncomp(contexto);
+                                                        excepcionJsonDeserializacion.printStackTrace();
+                                                    }
+                                                }else{
+                                                    new AlertDialog.Builder(contexto).
+                                                            setTitle(contexto.getResources().
+                                                                    getString(R.string.alert_cancelando_evento_tit)).
+                                                            setMessage(contexto.getResources().
+                                                                    getString(R.string.alert_cancel_eve_no_existe)).
+                                                            setNeutralButton(contexto.getResources().
+                                                                    getString(R.string.BOTON_NEUTRAL),null).
+                                                            create().show();
+                                                }
+                                            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                                                despliegaAlertCanEveDatIncomp(contexto);
+                                                excepcionJsonDeserializacion.printStackTrace();
+                                            }
+                                        }else{
+                                            despliegaAlertCanEveDatIncomp(contexto);
+                                        }
                                     }
                                 }).
                         setNegativeButton(contexto.getResources().
                                 getString(R.string.BOTON_NEGATIVO), null).create().show();
                 break;
         }
+    }
+
+    private void despliegaAlertCanEveDatIncomp(final Context contexto){
+        new AlertDialog.Builder(contexto).
+                setTitle(contexto.getResources().
+                        getString(R.string.alert_cancelando_evento_tit)).
+                setMessage(contexto.getResources().
+                        getString(R.string.alert_cancel_eve_dat_incomp)).
+                setNeutralButton(contexto.getResources().
+                        getString(R.string.BOTON_NEUTRAL),null).
+                create().show();
     }
 
 }

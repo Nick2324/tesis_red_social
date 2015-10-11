@@ -68,7 +68,8 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 		for(String propiedad:json.getPropiedades().keySet()){
 			if(!(this.esAtributo(propiedad) &&
 				 this.setAtributo(propiedad,json.getPropiedades().get(propiedad)))){
-				throw new ExcepcionJsonDeserializacion();
+				throw new ExcepcionJsonDeserializacion("La propiedad \""+propiedad+
+						"\" no existe en el objeto o no ha podido ser inicializada");
 			}
 		}
 	}

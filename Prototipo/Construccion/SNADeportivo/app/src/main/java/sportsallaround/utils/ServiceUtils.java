@@ -23,20 +23,10 @@ public class ServiceUtils {
 
     private ServiceUtils(){}
 
-    /*public static String invokeService(String parametros, String serviceURL, String method){
-        String resultado = null;
-        try {
-            JSONObject parametrosJson = new JSONObject(parametros);
-            resultado = invokeService(parametrosJson,serviceURL,method);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return resultado;
-
-    }*/
-
-    public static String invokeService(JSONObject parametros, String serviceURL, String method){
+    private static String invokeServiceAbstracto(JSONObject parametros,
+                                                 String serviceURL,
+                                                 String method,
+                                                 boolean conBody){
 
         Log.d("Nick:Servicio","Ejecutando servicio "+serviceURL);
 
@@ -47,7 +37,7 @@ public class ServiceUtils {
             URL completeUrl = null;
 
             //completeUrl = new URL(Constants.ROOT_URL + serviceURL);
-            if(parametros != null && method.equals("GET")){
+            if(parametros != null && method.equals("GET") && !conBody){
                 Iterator<String> it = parametros.keys();
                 StringBuilder queryParams = new StringBuilder();
                 String actualKey;
@@ -66,24 +56,32 @@ public class ServiceUtils {
             HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
             conn.setReadTimeout(10000 /* milliseconds */);
             conn.setConnectTimeout(15000 /* milliseconds */);
-            //if(parametros != null) {
-            if(parametros != null && !method.equals("GET"))
-                conn.setRequestProperty("Content-Type", "application/json");
+
+            if(!method.equals("GET") || conBody){
+                if(parametros != null) {
+                    conn.setRequestProperty("Content-Type", "application/json");
+                    Log.d("Nick:getContent", "OK");
+                }
+            }
+
             conn.setRequestProperty("Accept", "application/json");
             conn.setRequestMethod(method.toUpperCase());
             conn.setDoInput(true);
             // Starts the query
-            if(parametros != null && !method.equals("GET")) {
-                conn.setDoOutput(true);
-                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-                Log.d("Nick:JSONServ",parametros.toString());
-                wr.write(parametros.toString());
-                wr.flush();
+            if(!method.equals("GET") || conBody) {
+                if(parametros != null ) {
+                    conn.setDoOutput(true);
+                    Log.d("Nick:setParam", "OK");
+                    OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                    Log.d("Nick:JSONParam", parametros.toString());
+                    wr.write(parametros.toString());
+                    wr.flush();
+                }
             }
             conn.connect();
             STATUS = conn.getResponseCode();
             Log.d("Nick:Response", "Status: " + new Integer(conn.getResponseCode()).toString()+
-                  "Servicio: " + serviceURL);
+                    "Servicio: " + serviceURL);
             is = conn.getInputStream();
 
             retorno = Utils.convertStreamToString(is);
@@ -97,5 +95,25 @@ public class ServiceUtils {
         }
 
         return retorno;
+    }
+
+    public static String invokeServiceBody(JSONObject parametros,
+                                           String serviceURL,
+                                           String method){
+
+        return invokeServiceAbstracto(parametros,
+                serviceURL,
+                method,
+                true);
+
+    }
+
+    public static String invokeService(JSONObject parametros, String serviceURL, String method){
+
+        return invokeServiceAbstracto(parametros,
+                                      serviceURL,
+                                      method,
+                                      false);
+
     }
 }

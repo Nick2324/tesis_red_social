@@ -13,6 +13,7 @@ public class Constants {
     public static final String SERVICES_PATH_EVENTOS = "eventos/";
     public static final String SERVICES_PATH_EVE_PARTICIPANTES = "participantes/";
     public static final String SERVICES_PATH_EVE_SOLICITUDES = "solicitudes/";
+    public static final String SERVICES_PATH_EVE_INVITACIONES = "invitados/";
 
     //*********************************************************************************************
     //*************************************Servicios Deportes**************************************
@@ -28,7 +29,7 @@ public class Constants {
     * SERVICIOS GESTION DE USUARIO
     *
     * */
-    public static final String SERVICES_PATH_USUARIOS = "GestionUsuarioService";
+    public static final String SERVICES_PATH_USUARIOS = "GestionUsuarioService/";
     public static final String SERVICES_VERIFICAR_USUARIO = "GestionUsuarioService/verificarUsuario";
     public static final String SERVICES_CREAR_USUARIO = "GestionUsuarioService/crearUsuario";
     public static final String SERVICES_ACTUALIZAR_USUARIO = "GestionUsuarioService/actualizarDatosUsuario";

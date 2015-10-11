@@ -19,4 +19,10 @@ public class DEPracticaDeportiva extends DAOEvento{
 		super.identificadorQueries = "practicaDeportiva";
 	}
 
+	@Override
+	public void encontrarObjetoManejado() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

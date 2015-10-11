@@ -17,6 +17,8 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 	private Ubicacion ubicacion;
 	private Deporte deporte;
 	private ArrayList<ObjectSNSDeportivo> participantes;
+	private ArrayList<ObjectSNSDeportivo> invitaciones;
+	private ArrayList<ObjectSNSDeportivo> solicitudes;
 	
 	public DeporteEvento(){}
 
@@ -44,6 +46,14 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 		this.participantes = participantes;
 	}
 	
+	public void setSolicitudes(ArrayList<ObjectSNSDeportivo> solicitudes) {
+		this.solicitudes = solicitudes;
+	}
+	
+	public void setInvitaciones(ArrayList<ObjectSNSDeportivo> invitaciones) {
+		this.invitaciones = invitaciones;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
@@ -66,6 +76,14 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 	
 	public ArrayList<ObjectSNSDeportivo> getParticipantes() {
 		return participantes;
+	}
+	
+	public ArrayList<ObjectSNSDeportivo> getInvitaciones() {
+		return invitaciones;
+	}
+	
+	public ArrayList<ObjectSNSDeportivo> getSolicitudes() {
+		return solicitudes;
 	}
 	
 	@Override

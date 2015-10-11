@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.sna_deportivo.pojo.evento.ConstantesEventos;
+import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.evento.Evento;
@@ -72,20 +74,20 @@ public class GestionEventosLista extends Activity
             if(this.item != null &&
                this.eventos != null) {
                 super.servicio =
-                        Constants.SERVICES_PATH_EVENTOS +
+                        Constants.SERVICES_PATH_EVENTOS /*+
                         ((TiposEventos)this.item.getValue()).getServicio() + "/" +
-                        this.eventos.get((Integer)this.item.getKey()).getId();
+                        this.eventos.get((Integer)this.item.getKey()).getId()*/;
             }
         }
 
         @Override
         public void calcularParams() {
-            try {
+            /*try {
                 super.params = new JSONObject(this.eventos.get(
                         (Integer)this.item.getKey()).toString());
             } catch (JSONException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
 
         @Override
@@ -133,11 +135,10 @@ public class GestionEventosLista extends Activity
                 Usuario usuario = (Usuario)new ProductorFactoryUsuario().
                         producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNS();
                 try {
-                    usuario.deserializarJson((JsonObject)JsonUtils.JsonStringToObject(
+                    usuario.deserializarJson((JsonObject) JsonUtils.JsonStringToObject(
                             getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                     getString(Constants.USUARIO)
                     ));
-
                     new PeticionEventos(this.contexto,
                             (TiposEventos) objetoSeleccionado,
                             usuario).ejecutarPeticion();
@@ -192,18 +193,44 @@ public class GestionEventosLista extends Activity
 
         @Override
         public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_EVENTOS + tipoEvento.getServicio();
             if(this.usuario != null){
-                super.servicio += "/" + this.usuario.getUsuario();
+                super.servicio = Constants.SERVICES_PATH_USUARIOS +
+                        this.usuario.getUsuario() + "/" +
+                        Constants.SERVICES_PATH_EVENTOS + tipoEvento.getServicio();
+            }else{
+                super.servicio = Constants.SERVICES_PATH_EVENTOS + tipoEvento.getServicio();
             }
+
         }
 
         @Override
         public void calcularParams() {
             try {
                 if(this.usuario != null) {
-                    //ERROR DE USUARIO
-                    super.params = new JSONObject(this.usuario.stringJson());
+                    super.params = new JSONObject();
+                    //PONIENDO USUARIO
+                    JSONArray arrayUsuarios = new JSONArray();
+                    arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
+                    JSONObject parametrosUsuario = new JSONObject();
+                    parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
+                            arrayUsuarios);
+                    super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
+                            parametrosUsuario);
+
+                    //PONIENDO EVENTO
+                    Evento e = new ProductorFactoryEvento().
+                            getEventosFactory(this.tipoEvento.getServicio()).
+                            crearEvento();
+                    //Los eventos deben estar activos
+                    e.setActivo(true);
+                    JSONArray arrayEventos = new JSONArray();
+                    arrayEventos.put(new JSONObject(e.stringJson()));
+                    JSONObject parametrosEvento = new JSONObject();
+                    parametrosEvento.put(e.getClass().getSimpleName(),
+                            arrayEventos);
+                    super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
+                            parametrosEvento);
+                    Log.d("Nick:params", super.params.toString());
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -211,7 +238,9 @@ public class GestionEventosLista extends Activity
         }
 
         @Override
-        public void doInBackground() {}
+        public void doInBackground() {
+            super.setPeticionBody(true);
+        }
 
         @Override
         public void onPostExcecute(String resultadoPeticion) {
@@ -361,7 +390,6 @@ public class GestionEventosLista extends Activity
                         ConstantesEvento.MENU_ADMIN_EVENTOS);
                 intent = new Intent(this, InformacionGeneralEvento.class);
             }else if(ConstantesEvento.NO_OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))){
-                Log.d("Nick:no_owner","No soy owner");
                 extra.putString(Constants.FUNCIONALIDAD,
                         ConstantesEvento.PARTICIPANTE_EVENTO);
                 extra.putString(ConstantesEvento.TIPO_MENU,

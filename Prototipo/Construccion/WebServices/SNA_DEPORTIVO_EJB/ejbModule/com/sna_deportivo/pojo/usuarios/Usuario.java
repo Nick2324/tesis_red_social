@@ -34,7 +34,7 @@ public class Usuario extends ObjectSNSDeportivo {
 		fechaNacimiento = (String) user.getPropiedades().get("fechaNacimiento")[0];
 		fechaRegistro = (String) user.getPropiedades().get("fechaRegistro")[0];
 		sexo = (String) user.getPropiedades().get("sexo")[0];
-		estado = ((String)user.getPropiedades().get("estado")[0]).toLowerCase() == "true"?true:false;
+		estado = ((String)user.getPropiedades().get("estado")[0]).toLowerCase().equals("true")?true:false;
 	}
 	
 	public Usuario() {
@@ -235,7 +235,7 @@ public class Usuario extends ObjectSNSDeportivo {
 		return "{"+
 				JsonUtils.propiedadNula("primerNombre",this.primerNombre,propiedades,0)+
 			    JsonUtils.propiedadNula("segundoNombre",this.segundoNombre,propiedades,1)+
-			    JsonUtils.propiedadNula("apellidos:",this.apellidos,propiedades,2)+
+			    JsonUtils.propiedadNula("apellidos",this.apellidos,propiedades,2)+
 			    JsonUtils.propiedadNula("usuario",this.usuario,propiedades,3)+
 			    JsonUtils.propiedadNula("contrasena",this.contrasena,propiedades,4)+
 			    JsonUtils.propiedadNula("eMail",this.eMail,propiedades,5)+
@@ -243,7 +243,7 @@ public class Usuario extends ObjectSNSDeportivo {
 			    JsonUtils.propiedadNula("fechaNacimiento",this.fechaNacimiento,propiedades,7)+
 			    JsonUtils.propiedadNula("fechaRegistro",this.fechaRegistro,propiedades,8)+
 			    JsonUtils.propiedadNula("sexo",this.sexo,propiedades,9)+
-			    JsonUtils.propiedadNulaTDPrimitivo("estado", this.estado,propiedades,10)+
+			    JsonUtils.propiedadNula("estado", this.estado,propiedades,10)+
 			    "}";
 		//Y ATRIBUTOS QUE NO ESTAN EN LA BD QUE? TipoUsuario, mas un label que otra cosa
 	}

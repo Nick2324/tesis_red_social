@@ -42,4 +42,13 @@ public class StringUtils {
 			   (string1 != null && string1.equals(string2));
 	}
 	
+	public static String corregirDobleBackslash(String aCorregir){
+		if(aCorregir != null){
+			aCorregir = aCorregir.replace("\\","");
+		}
+		
+		return aCorregir;
+		
+	}
+	
 }

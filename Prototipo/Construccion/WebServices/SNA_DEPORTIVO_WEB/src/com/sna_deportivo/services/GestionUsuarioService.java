@@ -300,19 +300,35 @@ public class GestionUsuarioService {
 		return response;
 	}
 	
-	@GET	
+	@POST	
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{id}/eventos")
-	public String getEventosUsuario(@PathParam("id") String idUsuario,
-									String infoEventosUsuario){
-		
+	@Path("{id}/eventos/{tipoEvento}")
+	public String consultarEventosUsuario(@PathParam("id") String idUsuario,
+										  @PathParam("tipoEvento") String tipoEvento,
+										  String body){
 		try{
+			return this.servicio.consultarEventosDeUsuario(tipoEvento, body);
+		}catch(WebApplicationException e){
+			throw e;
+		}
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{id}/eventos/{tipoEvento}/invitaciones")
+	public String consultarInvitacionesEventosUsuario(@PathParam("id") String idUsuario,
+													  @PathParam("tipoEvento") String tipoEvento,
+			  										  String body){
+		try{
+			
 		}catch(WebApplicationException e){
 			throw e;
 		}
 
 		return null;
+		
 	}
 	
 }

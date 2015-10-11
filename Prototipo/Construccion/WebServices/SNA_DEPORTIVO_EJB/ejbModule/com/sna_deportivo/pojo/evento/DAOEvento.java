@@ -47,7 +47,8 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		
 		String where = BDUtils.condicionWhere(this.evento,"evento");
 		if(where != null ||
-		   this.evento == null){
+		   this.evento == null ||
+		   this.evento.stringJson().equals("{}")){
 			StringBuilder query = new StringBuilder("MATCH (evento:");
 			query.append(Entidades.EVENTODEPORTIVO);
 			query.append(")");
@@ -59,12 +60,13 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 						producirFacObjetoSNS(
 								this.evento.getCreador().getClass().getSimpleName()).
 						getObjetoSNSDAO();
+				daoUsuario.setObjetcSNSDeportivo(this.evento.getCreador());
 				RelacionSNS relacion = 
 						new RelacionSNS(Relaciones.CREAEVENTO,
 						     		   "creaEvento",
 						     		   RelacionSNS.DIRECCION_ENTRADA,
 									   daoUsuario.getObjetcSNSDeportivo());
-				query.append(relacion.getRelacion());
+				query.append(relacion.stringJson());
 				query.append(daoUsuario.producirNodoMatch());
 			}
 			if(where != null){

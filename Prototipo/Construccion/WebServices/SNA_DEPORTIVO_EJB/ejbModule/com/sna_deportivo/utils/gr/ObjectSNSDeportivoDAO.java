@@ -2,6 +2,7 @@ package com.sna_deportivo.utils.gr;
 
 import java.util.ArrayList;
 
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
@@ -41,6 +42,7 @@ public abstract class ObjectSNSDeportivoDAO {
 										get("data")[0];
 					objetos[i] = this.factoryOSNS.getObjetoSNS();
 					objetos[i].deserializarJson(datos);
+					System.out.println(objetos[i].stringJson());
 				}
 			}catch(BDException e){
 				throw e;
@@ -52,25 +54,37 @@ public abstract class ObjectSNSDeportivoDAO {
 		return objetos;
 	}
 	
-	public String producirNodoMatch(){
+	private String producirNodoMatchAbstracto(Integer i, boolean json){
 		StringBuilder nodo = new StringBuilder();
 		nodo.append("(");
-		nodo.append(this.identificadorQueries);
+		if(i != null){
+			nodo.append(this.identificadorQueries + i);
+		}else{
+			nodo.append(this.identificadorQueries);
+		}
 		nodo.append(":");
 		nodo.append(this.tipoObjetoSNS);
-		nodo.append(this.objectSNSDeportivo.stringJson());
+		if(json){
+			nodo.append(this.objectSNSDeportivo.stringJson());
+		}
 		nodo.append(")");
 		return nodo.toString();
 	}
 	
+	public String producirNodoMathIndice(Integer i){
+		return this.producirNodoMatchAbstracto(i, true);
+	}
+	
+	public String producirNodoMatchNoJsonIndice(Integer i){
+		return this.producirNodoMatchAbstracto(i,false);
+	}
+	
+	public String producirNodoMatch(){
+		return this.producirNodoMatchAbstracto(null, true);
+	}
+	
 	public String producirNodoMatchNoJson(){
-		StringBuilder nodo = new StringBuilder();
-		nodo.append("(");
-		nodo.append(this.identificadorQueries);
-		nodo.append(":");
-		nodo.append(this.tipoObjetoSNS);
-		nodo.append(")");
-		return nodo.toString(); 
+		return this.producirNodoMatchAbstracto(null, false);
 	}
 	
 	public boolean crearRelacion(RelacionSNS relacionACrear,
@@ -112,6 +126,29 @@ public abstract class ObjectSNSDeportivoDAO {
 		return false;
 		
 	}
+	
+	public abstract void encontrarObjetoManejado() 
+			throws BDException;
+	
+	public StringBuilder integrarQueryRelacion(StringBuilder query,
+											   RelacionSNS relacion,
+											   ProductorSNSDeportivo factory){
+		ArrayList<String> patrones = new ArrayList<String>();
+		
+		//Hay que lograr generar los factory desde la relacion
+		patrones = relacion.stringJsonPatrones(
+				factory.producirFacObjetoSNS(relacion.getObjetoRelacion().
+						getClass().getSimpleName()).
+				getObjetoSNSDAO());
+		for(String patron:patrones){
+			query.append(this.identificadorQueries);
+			query.append(patron);
+			query.append(",");
+		}
+
+		return query;
+	}
+	
 	/**
 	 * Retorna los nodos unidos al objeto de éste DAO en la BD
 	 * @param relacionACrear Lista de relaciones que se desean
@@ -180,10 +217,6 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	public String getIdentificadorQueries() {
 		return identificadorQueries;
-	}
-	
-	public static void main(String[] args){
-		BDUtils.ejecutarQueryREST("MATCH (evento:E_DeporteEvento),(evento)-[r]-(ev:E_EventoDeportivo{id:1}), (evento)-[r2]-(dep:E_Deporte), (evento)-[r3]-(us:E_Usuario) RETURN collect(DISTINCT evento) as eventos ,collect(DISTINCT ev) as evs, collect(DISTINCT dep) as dep,collect(DISTINCT us) as us");
 	}
 	
 }

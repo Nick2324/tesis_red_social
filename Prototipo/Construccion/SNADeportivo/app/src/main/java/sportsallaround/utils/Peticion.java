@@ -1,6 +1,7 @@
 package sportsallaround.utils;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,6 +15,7 @@ public abstract class Peticion {
     protected String servicio;
     protected JSONObject params;
     protected Object[] resultado;
+    private boolean peticionBody;
 
     private class EjecucionPeticion extends AsyncTask<Peticion,Object,String>{
 
@@ -26,9 +28,15 @@ public abstract class Peticion {
             this.peticion.calcularServicio();
             this.peticion.calcularMetodo();
             this.peticion.calcularParams();
-            return ServiceUtils.invokeService(this.peticion.getParams(),
-                                              this.peticion.getServicio(),
-                                              this.peticion.getMetodo());
+            if(peticionBody) {
+                return ServiceUtils.invokeServiceBody(this.peticion.getParams(),
+                        this.peticion.getServicio(),
+                        this.peticion.getMetodo());
+            }else{
+                return ServiceUtils.invokeService(this.peticion.getParams(),
+                        this.peticion.getServicio(),
+                        this.peticion.getMetodo());
+            }
         }
 
         @Override
@@ -41,6 +49,10 @@ public abstract class Peticion {
     public abstract void calcularMetodo();
     public abstract void calcularServicio();
     public abstract void calcularParams();
+
+    public void setPeticionBody(boolean peticionBody){
+        this.peticionBody = peticionBody; 
+    }
 
     public String getMetodo(){
         return this.metodo;

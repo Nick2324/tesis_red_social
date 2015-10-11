@@ -3,6 +3,7 @@ package com.sna_deportivo.utils.bd;
 import java.util.ArrayList;
 
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 
 public class RelacionSNS {
 
@@ -130,6 +131,21 @@ public class RelacionSNS {
 			json.append(RelacionSNS.DIRECCION_SALIDA);
 		}
 		return json.toString();
+	}
+	
+	public ArrayList<String> stringJsonPatrones(ObjectSNSDeportivoDAO dao){
+		ArrayList<String> patrones = new ArrayList<String>();
+		if(this.objetosRelacion != null &&
+		   this.objetosRelacion.size() > 0 &&
+		   dao != null){
+			int i = 0;
+			for(ObjectSNSDeportivo obj:this.objetosRelacion){
+				dao.setObjetcSNSDeportivo(obj);
+				patrones.add(this.stringJson() + 
+						dao.producirNodoMathIndice(i));
+			}
+		}
+		return patrones;
 	}
 	
 }

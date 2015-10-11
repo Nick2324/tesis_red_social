@@ -83,6 +83,7 @@ public class BDUtils {
 	}
 	
 	public static Object[] ejecutarQueryREST(String query) throws BDException{
+		System.out.println(query.length());
 		return BDUtils.abstractoQuery(
 				"{\"statements\": "+
 					"[{\"statement\" :\"" + query + "\","+
@@ -230,9 +231,14 @@ public class BDUtils {
 										String identificador){
 		StringBuilder retorno = new StringBuilder(" WHERE ");
 		if(objetoRedSocial != null && identificador != null){
+			System.out.println("En where = "+objetoRedSocial.stringJson());
 			JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 			for(String propiedad:objetoJson.getPropiedades().keySet()){
-				if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null"))){
+				if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null")) &&					
+					objetoJson.getPropiedades().get(propiedad)[0] != null && propiedad != null &&
+					propiedad != ""){
+					System.out.println("Propiedad: "+propiedad);
+					System.out.println("Valor: "+(String)objetoJson.getPropiedades().get(propiedad)[0]);	
 					retorno.append(identificador);
 					retorno.append(".");
 					retorno.append(propiedad);
@@ -284,6 +290,13 @@ public class BDUtils {
 		return Integer.parseInt((String)((JsonObject)((JsonObject)
 				resultado[0]).getPropiedades().get("row")[0]).
 				getPropiedades().get("arreglo")[0]);
+	}
+	
+	
+	public static void main(String[] args){
+		String query = "MATCH (evento:E_EventoDeportivo)<-[creaEvento:R_CreaEvento]-(usua"
+				+ "rio:E_Usuario{\"primerNombre\":'pru'}) RETURN evento,usuario";
+		BDUtils.ejecutarQueryREST(query);
 	}
 	
 }

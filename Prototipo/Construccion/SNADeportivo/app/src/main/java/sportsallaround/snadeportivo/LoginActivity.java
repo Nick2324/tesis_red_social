@@ -320,6 +320,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 if(response.getString("caracterAceptacion").equals("M"))
                     retorno = false;
                 else{
+                    Log.d("Nick:login",response.getString("datosExtra"));
                     user = new Usuario(new JSONObject(response.getString("datosExtra")));
                 }
                 Log.i("SNA_DEPORTIVO", "Caracter aceptacion: " + response.getString("caracterAceptacion") +" - Mensaje de respuesta: " + response.getString("mensajeRespuesta") );

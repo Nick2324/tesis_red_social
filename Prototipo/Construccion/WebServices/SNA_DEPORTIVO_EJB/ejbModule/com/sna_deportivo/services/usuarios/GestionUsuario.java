@@ -1,10 +1,18 @@
 package com.sna_deportivo.services.usuarios;
 
+import java.util.ArrayList;
+
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.DeportePracticado;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
+import com.sna_deportivo.pojo.evento.ConstantesEventos;
+import com.sna_deportivo.pojo.evento.DAOEvento;
+import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
+import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.DAOUsuario;
 import com.sna_deportivo.pojo.usuarios.Permiso;
+import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Rol;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.usuarios.excepciones.CredentialsException;
@@ -15,8 +23,10 @@ import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.Constantes;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionUsuario {
 	
@@ -151,7 +161,6 @@ public class GestionUsuario {
 				+ "'}) return u";
 		Object[] data = BDUtils.ejecutarQuery(query);
 		JsonObject user;
-		System.out.println(data[0].getClass());
 		if (data[0].getClass() == JsonObject.class) {
 			JsonObject row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
 			user = (JsonObject) row.getPropiedades().get("arreglo")[0];
@@ -163,7 +172,6 @@ public class GestionUsuario {
 			response.setCaracterAceptacion("B");
 			response.setMensajeRespuesta("Credenciales correctas");
 			response.setDatosExtra(new Usuario(user).toString());
-			System.out.println(response.getDatosExtra());
 		} else
 			throw new CredentialsException();
 		return response;
@@ -441,6 +449,49 @@ public class GestionUsuario {
 			response.setMensajeRespuesta("Este deporte no se encuentra en los deportes practicados actualmente.");
 		}
 		return response;
+	}
+	
+	public String consultarEventosDeUsuario(String tipoEvento,
+											String body) throws BDException, ProductorFactoryExcepcion{
+		String eventos = "[]";
+		
+		try {
+			//Deduce datos de body
+			ArrayList<ObjectSNSDeportivo> arregloUsuarios =
+					JsonUtils.convertirMensajeJsonAObjectSNS(
+							body, 
+							ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU, 
+							new ProductorFactoryUsuario());
+			ArrayList<ObjectSNSDeportivo> arregloEventos =
+					JsonUtils.convertirMensajeJsonAObjectSNS(body, 
+							ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE, 
+							new ProductorFactoryEvento());
+			if(arregloUsuarios != null &&
+			   arregloUsuarios.size() == 1 &&
+			   arregloEventos != null &&
+			   arregloEventos.size() == 1){
+				Usuario usuario = (Usuario)arregloUsuarios.get(0);
+				//Por ahora el evento sera nuevo siempre
+				Evento evento = null;
+				try {
+					evento = new ProductorFactoryEvento().
+								   getEventosFactory(tipoEvento).crearEvento();
+					evento = (Evento)arregloEventos.get(0);
+					DAOEvento de = new ProductorFactoryEvento().
+								   getEventosFactory(tipoEvento).crearDAOEvento();
+					evento.setCreador(usuario);
+					de.setEvento(evento);
+					eventos = JsonUtils.arrayObjectSNSToStringJson(de.getEventosDB());
+				} catch (BDException e) {
+					throw e;
+				} catch (ProductorFactoryExcepcion e){
+					throw e;
+				}
+			}
+		} catch (ExcepcionJsonDeserializacion e2) {
+			e2.printStackTrace();
+		}
+		return eventos;
 	}
 
 }

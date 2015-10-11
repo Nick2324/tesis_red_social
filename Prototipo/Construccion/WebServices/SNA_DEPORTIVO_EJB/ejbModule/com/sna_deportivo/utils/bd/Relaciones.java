@@ -103,7 +103,18 @@ public class Relaciones {
 	 * uno de los eventos contiene otros
 	 */
 	public static final String CONTIENEEVENTO = "R_ContieneEvento";
-	
+	/**
+	 * Relacion que existe entre un usuario y un evento con concepto de
+	 * solicitud de participar en el evento. Relacion entre {@link Entidades#DEPORTEEVENTO}
+	 * y {@link Entidades#USUARIO}
+	 */
+	public static final String SOLICITAPARTICIPAR = "R_SolicitaParticipar";
+	/**
+	 * Relacion que existe entre un usuario y un evento con concepto de
+	 * invitacion a participar en el evento. Relacion entre {@link Entidades#DEPORTEEVENTO}
+	 * y {@link Entidades#USUARIO}
+	 */
+	public static final String INVITADOAPARTICIPAR = "R_InvitadoAParticipar";
 	//****************************Ubicaciones******************************
 	/**
 	 * 

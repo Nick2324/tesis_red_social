@@ -11,5 +11,11 @@ public class DEventoDeportivo extends DAOEvento {
 
 	@Override
 	protected void setUpDAOGeneral() {}
+
+	@Override
+	public void encontrarObjetoManejado() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

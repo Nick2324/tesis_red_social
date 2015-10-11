@@ -57,4 +57,14 @@
     <string name="alert_resolver_pet_eve_msn">Decide que hacer con</string>
     <string name="alert_invita_eve_msn">¿Invitar a</string>
     <string name="alert_invita_eve_button">Invitar</string>
+    <string name="alert_cancel_eve_no_existe">El evento no ha podido ser cancelado debido a que no se ha creado</string>
+    <string name="alert_cancel_eve_dat_incomp">No se cuenta con todos los datos del evento para realizar la acción</string>
+    <string name="alert_cancel_eve_exito">Cancelación de evento exitosa</string>
+    <string name="alert_cancel_eve_no_exito">El evento no ha podido ser cancelado</string>
+    <string name="toast_crea_participante_eve">El participante ha sido creado con éxito</string>
+    <string name="alert_crea_participante_eve_tit">Creación de participante</string>
+    <string name="alert_error_crea_participante_eve_msn">El participante no pudo ser creado</string>
+    <string name="toast_invita_usu_eve">El usuario ha sido invitado con éxito</string>
+    <string name="alert_invita_usu_eve_tit">Invitación a usuario</string>
+    <string name="alert_error_invita_usu_eve_msn">El usuario no pudo ser invitado</string>
 </resources>

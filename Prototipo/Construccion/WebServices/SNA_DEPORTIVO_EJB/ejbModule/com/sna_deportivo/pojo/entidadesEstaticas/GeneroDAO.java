@@ -26,5 +26,11 @@ public class GeneroDAO extends ObjectSNSDeportivoDAO{
 	public ObjectSNSDeportivo crearObjetoSNS() {
 		return null;
 	}
+
+	@Override
+	public void encontrarObjetoManejado() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
