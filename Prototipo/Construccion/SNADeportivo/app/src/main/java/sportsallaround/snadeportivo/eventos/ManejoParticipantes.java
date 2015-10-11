@@ -85,7 +85,6 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
         @Override
         public void onPostExcecute(String resultadoPeticion){
-            Log.d("Nick:Resultado","res = "+resultadoPeticion);
             if(resultadoPeticion != null) {
                 try {
                     solicitudDeParticipantes =
@@ -273,7 +272,6 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
 
         @Override
@@ -295,6 +293,105 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
                                 getString(R.string.BOTON_NEUTRAL), null).
                         create().show();
             }
+        }
+
+    }
+
+    private class EliminarSolicitud extends Peticion{
+
+        private Context contexto;
+        private Evento evento;
+        private Usuario usuario;
+        private String tipoEvento;
+        private KeyValueItem itemSolicitud;
+
+        public EliminarSolicitud(Context contexto,
+                                 Evento evento,
+                                 Usuario usuario,
+                                 String tipoEvento,
+                                 KeyValueItem itemSolicitud) {
+            this.contexto = contexto;
+            this.evento = evento;
+            this.usuario = usuario;
+            this.tipoEvento = tipoEvento;
+            this.itemSolicitud = itemSolicitud;
+        }
+
+        @Override
+        public void calcularMetodo() {
+            super.metodo = "POST";
+        }
+
+        @Override
+        public void calcularServicio() {
+            super.servicio = Constants.SERVICES_PATH_EVENTOS +
+                    this.tipoEvento + "/" + this.evento.getId() + "/" +
+                    Constants.SERVICES_PATH_EVE_SOLICITUDES + this.usuario.getUsuario();
+        }
+
+        @Override
+        public void calcularParams() {
+            super.params = new JSONObject();
+            try {
+                //PONIENDO USUARIO
+                JSONArray arrayUsuarios = new JSONArray();
+                arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
+                JSONObject parametrosUsuario = new JSONObject();
+                parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
+                        arrayUsuarios);
+                super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
+                        parametrosUsuario);
+
+                //PONIENDO EVENTO
+                JSONArray arrayEventos = new JSONArray();
+                arrayEventos.put(new JSONObject(this.evento.stringJson()));
+                JSONObject parametrosEvento = new JSONObject();
+                parametrosEvento.put(this.evento.getClass().getSimpleName(),
+                        arrayEventos);
+                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
+                        parametrosEvento);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void doInBackground() {}
+
+        @Override
+        public void onPostExcecute(String resultadoPeticion) {
+            if(resultadoPeticion != null){
+                try {
+                    JSONObject resultado = new JSONObject(resultadoPeticion);
+                    if(resultado.getString("caracterAceptacion").equals("200")){
+                        ((ListaConFiltro)((Activity)this.contexto).
+                                getFragmentManager().findFragmentById(
+                                R.id.fragment_solicitud_de_participante)).
+                                eliminarElemento(this.itemSolicitud);
+                        Toast.makeText(this.contexto,
+                                this.contexto.getResources().getString(
+                                        R.string.toast_elimina_solicitud_exito),
+                                Toast.LENGTH_LONG).show();
+                    }else{
+                        this.alertError();
+                    }
+                } catch (JSONException e) {
+                    this.alertError();
+                    e.printStackTrace();
+                }
+            }else{
+                this.alertError();
+            }
+        }
+
+        private void alertError(){
+            new AlertDialog.Builder(this.contexto).
+                    setTitle(this.contexto.getResources().
+                            getString(R.string.alert_elimina_sol_eve_tit)).
+                    setMessage(this.contexto.getResources().
+                            getString(R.string.alert_error_sol_eve_msn)).
+                    setNeutralButton(this.contexto.getResources().
+                            getString(R.string.BOTON_NEUTRAL),null).create().show();
         }
 
     }
@@ -383,10 +480,12 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
                                                 getString(ConstantesEvento.SERVICIO_EVENTO),evento,
                                                 usuario).ejecutarPeticion();
                                     }else if(which == 1){
-                                        ((ListaConFiltro)getFragmentManager().findFragmentById(
-                                                R.id.fragment_solicitud_de_participante)).
-                                                eliminarElemento(itemSeleccionado);
-                                        Toast.makeText(contexto,"por implementar Eliminar petición participante", Toast.LENGTH_LONG);
+                                        new EliminarSolicitud(contexto,evento,
+                                                usuario,
+                                                getIntent().
+                                                getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                                                getString(ConstantesEvento.SERVICIO_EVENTO),
+                                                itemSeleccionado).ejecutarPeticion();
                                     }
                                 } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
                                     excepcionJsonDeserializacion.printStackTrace();

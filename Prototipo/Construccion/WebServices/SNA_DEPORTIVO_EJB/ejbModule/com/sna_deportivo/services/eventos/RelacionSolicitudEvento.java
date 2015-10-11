@@ -52,5 +52,26 @@ public class RelacionSolicitudEvento extends HandlerRelacionUsuarioEvento{
 			throws BDException, ExcepcionJsonDeserializacion {
 		return ded.getSolicitudesEvento();
 	}
+
+	@Override
+	protected DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento) {
+		Evento evento = null;
+		evento = new ProductorFactoryEvento().
+		   getEventosFactory(tipoEvento).crearEvento();
+		evento = (Evento)arregloEventos.get(0);
+		DeporteEvento de = new DeporteEvento();
+		de.setEvento(evento);
+		ded.setObjetcSNSDeportivo(de);
+		ded.encontrarObjetoManejado();
+		de = (DeporteEvento)ded.getObjetcSNSDeportivo();
+		de.setSolicitudes(arregloUsuarios);
+		return de;
+	}
+
+	@Override
+	protected String manejarEliminacion() 
+			throws BDException, ExcepcionJsonDeserializacion {
+		return ded.eliminarSolicitudes();
+	}
 	
 }

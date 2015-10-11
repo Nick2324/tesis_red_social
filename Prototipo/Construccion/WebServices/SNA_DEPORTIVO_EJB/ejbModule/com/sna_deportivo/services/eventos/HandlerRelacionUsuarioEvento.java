@@ -42,10 +42,15 @@ public abstract class HandlerRelacionUsuarioEvento {
 	
 	protected abstract DeporteEvento prepararDeporteEventoObtencion(String tipoEvento);
 	
+	protected abstract DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento);
+	
 	protected abstract String manejarCreacion()throws BDException;
 	
 	protected abstract String manejarObtencion() 
-			throws BDException, ExcepcionJsonDeserializacion ;
+			throws BDException, ExcepcionJsonDeserializacion;
+	
+	protected abstract String manejarEliminacion()
+			throws BDException, ExcepcionJsonDeserializacion;
 	
 	public String manejarObtencion(String aManejar,
 								   String tipoEvento,
@@ -115,6 +120,49 @@ public abstract class HandlerRelacionUsuarioEvento {
 						  tipoEvento,
 						  idEvento,
 						  body);
+			}
+		}
+		return retorno;
+	}
+	
+	public String manejarEliminacion(String aManejar,
+									 String tipoEvento,
+									 String idEvento,
+									 String idParticipante,
+									 String body) 
+							throws BDException, ExcepcionJsonDeserializacion {
+		String retorno = null;
+		if(this.esManejado(aManejar)){
+			try {
+				this.arregloUsuarios =
+				JsonUtils.convertirMensajeJsonAObjectSNS(
+								body, 
+								ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU, 
+								new ProductorFactoryUsuario());
+				this.arregloEventos =
+				JsonUtils.convertirMensajeJsonAObjectSNS(body, 
+				ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE, 
+				new ProductorFactoryEvento());
+				if(arregloUsuarios != null &&
+				   arregloUsuarios.size() == 1 &&
+				   arregloEventos != null &&
+				   arregloEventos.size() == 1){
+					DeporteEvento de = this.prepararDeporteEventoEliminacion(tipoEvento);
+					ded.setObjetcSNSDeportivo(de);
+					retorno = this.manejarEliminacion();
+				}
+			} catch (ExcepcionJsonDeserializacion e) {
+				e.printStackTrace();
+				throw e;
+			}
+		}else{
+			if(this.handler != null){
+				retorno = this.handler.manejarEliminacion(
+					  aManejar,
+					  tipoEvento,
+					  idEvento,
+					  idParticipante,
+					  body);
 			}
 		}
 		return retorno;

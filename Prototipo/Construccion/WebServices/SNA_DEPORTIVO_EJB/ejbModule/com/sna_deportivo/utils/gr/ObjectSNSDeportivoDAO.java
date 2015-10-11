@@ -2,7 +2,6 @@ package com.sna_deportivo.utils.gr;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
@@ -125,6 +124,40 @@ public abstract class ObjectSNSDeportivoDAO {
 		
 		return false;
 		
+	}
+	
+	public boolean eliminarRelacion(RelacionSNS relacionACrear,
+								 	ProductorSNSDeportivo productor){
+		if(this.objectSNSDeportivo != null &&
+		   relacionACrear != null &&
+		   productor != null){
+			String queryNodoPrincipal = this.producirNodoMatch();
+			StringBuilder queryIndividual = new StringBuilder();
+			for(ObjectSNSDeportivo obj:relacionACrear.getObjetosRelacion()){
+				ObjectSNSDeportivoDAO dao = 
+					productor.
+					producirFacObjetoSNS(obj.getClass().getSimpleName()).
+					getObjetoSNSDAO();
+				dao.setObjetcSNSDeportivo(obj);
+				queryIndividual.append("MATCH ");
+				queryIndividual.append(queryNodoPrincipal);
+				queryIndividual.append(relacionACrear.stringJson());
+				queryIndividual.append(dao.producirNodoMatch());
+				queryIndividual.append(" DELETE ");
+				queryIndividual.append(relacionACrear.getIdentificadorRelacion());
+				try{
+					BDUtils.ejecutarQueryREST(queryIndividual.toString());
+				}catch(BDException e){
+					return false;
+				}
+			}
+		
+			return true;
+		
+		}
+		
+		return false;
+
 	}
 	
 	public boolean mergeRelacion(RelacionSNS relacionACrear,

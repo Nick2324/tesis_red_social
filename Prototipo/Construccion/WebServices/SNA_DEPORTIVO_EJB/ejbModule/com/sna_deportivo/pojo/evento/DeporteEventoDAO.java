@@ -278,6 +278,69 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		}
 		return retorno;
 	}
+	
+	public String eliminarSolicitudes()
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = null;
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			if(de.getSolicitudes() != null &&
+			   de.getSolicitudes().size() > 0){
+				RelacionSNS relacionACrear =
+						new RelacionSNS(Relaciones.SOLICITAPARTICIPAR,
+								"solicitudParticipar",
+								RelacionSNS.DIRECCION_ENTRADA,
+								de.getSolicitudes());
+				if(!super.eliminarRelacion(relacionACrear, 
+						new ProductorFactoryUsuario())){
+					throw new BDException();
+				}
+			}
+		}
+		return retorno;
+	}
+	
+	public String eliminarParticipantes()
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = null;
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			if(de.getParticipantes() != null &&
+			   de.getParticipantes().size() > 0){
+				RelacionSNS relacionACrear =
+						new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+								"relacionParticipante",
+								RelacionSNS.DIRECCION_ENTRADA,
+								de.getParticipantes());
+				if(!super.eliminarRelacion(relacionACrear, 
+						new ProductorFactoryUsuario())){
+					throw new BDException();
+				}
+			}
+		}
+		return retorno;
+	}
+	
+	public String eliminarInvitaciones()
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = null;
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			if(de.getInvitaciones() != null &&
+			   de.getInvitaciones().size() > 0){
+				RelacionSNS relacionACrear =
+						new RelacionSNS(Relaciones.INVITADOAPARTICIPAR,
+								"invitacionParticipar",
+								RelacionSNS.DIRECCION_ENTRADA,
+								de.getInvitaciones());
+				if(!super.eliminarRelacion(relacionACrear, 
+						new ProductorFactoryUsuario())){
+					throw new BDException();
+				}
+			}
+		}
+		return retorno;
+	}
 
 	@Override
 	public void encontrarObjetoManejado()  

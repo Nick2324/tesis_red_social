@@ -67,4 +67,7 @@
     <string name="toast_invita_usu_eve">El usuario ha sido invitado con éxito</string>
     <string name="alert_invita_usu_eve_tit">Invitación a usuario</string>
     <string name="alert_error_invita_usu_eve_msn">El usuario no pudo ser invitado</string>
+    <string name="toast_elimina_solicitud_exito">La solicitud ha sido eliminada con éxito</string>
+    <string name="alert_elimina_sol_eve_tit">Eliminacion de solicitud</string>
+    <string name="alert_error_sol_eve_msn">La solicitud no ha podido ser eliminada</string>
 </resources>
