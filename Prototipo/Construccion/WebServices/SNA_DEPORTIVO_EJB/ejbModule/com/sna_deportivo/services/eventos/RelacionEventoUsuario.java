@@ -11,7 +11,7 @@ public class RelacionEventoUsuario {
 	
 	public RelacionEventoUsuario(){
 		this.handlerUsuarioEvento =
-				new RelacionPosibleParticipante();
+				new RelacionParticipante();
 		HandlerRelacionUsuarioEvento h1 =
 				new RelacionInvitacionEvento();
 		HandlerRelacionUsuarioEvento h2 =

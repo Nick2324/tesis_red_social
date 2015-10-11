@@ -138,14 +138,17 @@ public class GestionEventoService {
 	@Path("{tipoEvento}/{id}/invitados")
 	public String consultarInvitadosEvento(@PathParam("tipoEvento") String tipoEvento,
 										   @PathParam("id") String id,
-										   Evento evento){
+										   String body){
 		try{
-			
+			return this.gestionRelacionUsuarioEvento.getHandler().
+					manejarObtencion(
+					   RelacionEventoUsuario.RELACION_INVITACION,
+					   tipoEvento,id,body);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
 		}
-
-		return null;
 	}
 	
 	@POST
@@ -159,8 +162,10 @@ public class GestionEventoService {
 			return this.gestionRelacionUsuarioEvento.getHandler().
 					manejarCreacion(RelacionEventoUsuario.RELACION_INVITACION,
 									tipoEvento,idEvento,body);
+		}catch(WebApplicationException e){
+			throw e;
 		}catch(Exception e){
-			throw new WebApplicationException();
+			throw new WebApplicationException(500);
 		}
 	}
 	
@@ -187,14 +192,17 @@ public class GestionEventoService {
 	@Path("{tipoEvento}/{id}/participantes")
 	public String consultarParticipantesEvento(@PathParam("tipoEvento") String tipoEvento,
 											   @PathParam("id") String id,
-											   Evento evento){
+											   String body){
 		try{
-			
+			return this.gestionRelacionUsuarioEvento.getHandler().
+					manejarObtencion(
+					   RelacionEventoUsuario.RELACION_PARTICIPANTE,
+					   tipoEvento,id,body);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
 		}
-
-		return null;
 	}
 	
 	@POST
@@ -206,33 +214,55 @@ public class GestionEventoService {
 									//Por solicitud o por invitacion
 									@QueryParam("tipoParticipante") String tipoParticipante,
 									String body){
-		return this.gestionRelacionUsuarioEvento.getHandler().
-				manejarCreacion(RelacionEventoUsuario.RELACION_PARTICIPANTE,
-								tipoEvento,idEvento,body);
+		try{
+			return this.gestionRelacionUsuarioEvento.getHandler().
+					manejarCreacion(RelacionEventoUsuario.RELACION_PARTICIPANTE,
+									tipoEvento,idEvento,body);
+		}catch(WebApplicationException e){
+			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
+		}
 	}
 	
-	@GET
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
 	public String consultarSolicitudesParticipante(@PathParam("tipoEvento") String tipoEvento,
 											 	   @PathParam("id") String idEvento,
 											 	   String body){
-		return null;
+		try{
+			System.out.println("body = "+body);
+			return this.gestionRelacionUsuarioEvento.getHandler().
+					manejarObtencion(
+					   RelacionEventoUsuario.RELACION_SOLICITUD,
+					   tipoEvento,idEvento,body);
+		}catch(WebApplicationException e){
+			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
+		}
 	}
 
 
-	@POST
+	/*@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
 	public String crearSolicitudParticipante(@PathParam("tipoEvento") String tipoEvento,
 											 @PathParam("id") String idEvento,
 											 String body){
-		return this.gestionRelacionUsuarioEvento.getHandler().
-				manejarCreacion(RelacionEventoUsuario.RELACION_SOLICITUD,
-								tipoEvento,idEvento,body);
-	}
+		try{
+			return this.gestionRelacionUsuarioEvento.getHandler().
+					manejarCreacion(RelacionEventoUsuario.RELACION_SOLICITUD,
+									tipoEvento,idEvento,body);
+		}catch(WebApplicationException e){
+			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
+		}
+	}*/
 	
 	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)

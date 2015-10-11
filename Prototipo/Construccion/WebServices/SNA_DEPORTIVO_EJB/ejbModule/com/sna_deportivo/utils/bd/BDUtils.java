@@ -83,7 +83,6 @@ public class BDUtils {
 	}
 	
 	public static Object[] ejecutarQueryREST(String query) throws BDException{
-		System.out.println(query.length());
 		return BDUtils.abstractoQuery(
 				"{\"statements\": "+
 					"[{\"statement\" :\"" + query + "\","+

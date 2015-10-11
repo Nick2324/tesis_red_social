@@ -12,7 +12,7 @@ public class Constants {
     //**************************************Servicios Eventos**************************************
     public static final String SERVICES_PATH_EVENTOS = "eventos/";
     public static final String SERVICES_PATH_EVE_PARTICIPANTES = "participantes/";
-    public static final String SERVICES_PATH_EVE_SOLICITUDES = "solicitudes/";
+    public static final String SERVICES_PATH_EVE_SOLICITUDES = "participantes/solicitudes/";
     public static final String SERVICES_PATH_EVE_INVITACIONES = "invitados/";
 
     //*********************************************************************************************

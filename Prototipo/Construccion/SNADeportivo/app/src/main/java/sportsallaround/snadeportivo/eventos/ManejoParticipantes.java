@@ -15,7 +15,6 @@ import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
-import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonObject;
@@ -43,31 +42,42 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
     private class PeticionSolicitudParticipantes extends Peticion{
 
-        private String fragmento;
+        private Evento evento;
+        private String tipoEvento;
 
-        public PeticionSolicitudParticipantes(String fragmento){
-            this.fragmento = fragmento;
+        public PeticionSolicitudParticipantes(Evento evento, String tipoEvento){
+            this.evento = evento;
+            this.tipoEvento = tipoEvento;
         }
 
         @Override
         public void calcularMetodo() {
-            this.metodo = "GET";
+            this.metodo = "POST";
         }
 
         @Override
         public void calcularServicio() {
-            this.servicio = Constants.SERVICES_PATH_USUARIOS/*Constants.SERVICES_PATH_EVENTOS +
-                            Constants.SERVICES_PATH_EVE_SOLICITUDES*/;
+            this.servicio = Constants.SERVICES_PATH_EVENTOS + this.tipoEvento + "/" +
+                            this.evento.getId() + "/" +
+                            Constants.SERVICES_PATH_EVE_SOLICITUDES;
         }
 
         @Override
         public void calcularParams(){
-            /*try {
-                super.params = new JSONObject(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
-                        getString(ConstantesEvento.EVENTO_MANEJADO));
+            try {
+                super.params = new JSONObject();
+                //PONIENDO EVENTO
+                //Los eventos deben estar activos
+                JSONArray arrayEventos = new JSONArray();
+                arrayEventos.put(new JSONObject(this.evento.stringJson()));
+                JSONObject parametrosEvento = new JSONObject();
+                parametrosEvento.put(this.evento.getClass().getSimpleName(),
+                        arrayEventos);
+                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
+                        parametrosEvento);
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
 
         @Override
@@ -75,19 +85,18 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
 
         @Override
         public void onPostExcecute(String resultadoPeticion){
-            try{
-                solicitudDeParticipantes =
-                        ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
+            Log.d("Nick:Resultado","res = "+resultadoPeticion);
+            if(resultadoPeticion != null) {
+                try {
+                    solicitudDeParticipantes =
+                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
                                     new JSONArray(resultadoPeticion));
-                ((ListaConFiltro) getFragmentManager().findFragmentById(
+                    ((ListaConFiltro) getFragmentManager().findFragmentById(
                             R.id.fragment_solicitud_de_participante)).llenarLista();
-            }catch (JSONException e) {
-                e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
-        }
-
-        public void setFragmento(String fragmento){
-            this.fragmento = fragmento;
         }
 
     }
@@ -321,8 +330,22 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
     @Override
     public void onStart(){
         super.onStart();
-        new PeticionSolicitudParticipantes(getResources().getString(
-                R.string.fragment_solicitud_de_participante)).ejecutarPeticion();
+        try {
+            Evento evento = new ProductorFactoryEvento().getEventosFactory(
+                    getIntent().
+                    getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                    getString(ConstantesEvento.SERVICIO_EVENTO)).crearEvento();
+            evento.deserializarJson((JsonObject)JsonUtils.JsonStringToObject(getIntent().
+                    getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                    getString(ConstantesEvento.EVENTO_MANEJADO)));
+            new PeticionSolicitudParticipantes(
+                    evento,
+                    getIntent().
+                    getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                    getString(ConstantesEvento.SERVICIO_EVENTO)).ejecutarPeticion();
+        } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+            excepcionJsonDeserializacion.printStackTrace();
+        }
         new PeticionListaUsuarios(getResources().getString(
                 R.string.fragment_solicitud_para_participante)).ejecutarPeticion();
     }
@@ -350,7 +373,7 @@ public class ManejoParticipantes extends Activity implements ListaConFiltro.Call
                                                     getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                                     getString(ConstantesEvento.SERVICIO_EVENTO)).
                                             crearEvento();
-                                    evento.deserializarJson((JsonObject)JsonUtils.
+                                    evento.deserializarJson((JsonObject) JsonUtils.
                                             JsonStringToObject(getIntent().
                                                     getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                                     getString(ConstantesEvento.EVENTO_MANEJADO)));

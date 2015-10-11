@@ -127,6 +127,38 @@ public abstract class ObjectSNSDeportivoDAO {
 		
 	}
 	
+	public boolean mergeRelacion(RelacionSNS relacionACrear,
+		     ProductorSNSDeportivo productor){
+		if(this.objectSNSDeportivo != null &&
+		   relacionACrear != null &&
+		   productor != null){
+			String queryNodoPrincipal = this.producirNodoMatch();
+			StringBuilder queryIndividual = new StringBuilder();
+			for(ObjectSNSDeportivo obj:relacionACrear.getObjetosRelacion()){
+				ObjectSNSDeportivoDAO dao = 
+					productor.
+					producirFacObjetoSNS(obj.getClass().getSimpleName()).
+					getObjetoSNSDAO();
+				dao.setObjetcSNSDeportivo(obj);
+				queryIndividual.append("MERGE ");
+				queryIndividual.append(queryNodoPrincipal);
+				queryIndividual.append(relacionACrear.stringJson());
+				queryIndividual.append(dao.producirNodoMatch());
+				try{
+					BDUtils.ejecutarQueryREST(queryIndividual.toString());
+				}catch(BDException e){
+					return false;
+				}
+			}
+
+			return true;
+
+		}
+		
+		return false;
+	
+	}
+	
 	public abstract void encontrarObjetoManejado() 
 			throws BDException;
 	

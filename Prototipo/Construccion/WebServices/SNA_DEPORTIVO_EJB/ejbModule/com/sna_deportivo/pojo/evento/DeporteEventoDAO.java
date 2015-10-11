@@ -3,6 +3,7 @@ package com.sna_deportivo.pojo.evento;
 import com.sna_deportivo.pojo.deportes.ProductorFactoryDeporte;
 import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
+import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.RelacionSNS;
@@ -128,21 +129,152 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return resultado;
 	}
 	
-	public String getParticipantesEvento(String tipoEvento,
-										 String evento){
+	public String getInvitadosEvento()
+			throws BDException,ExcepcionJsonDeserializacion{
 		String retorno = "[]";
 		try {
-			Evento e = new ProductorFactoryEvento().getEventosFactory(tipoEvento).crearEvento();
-			e.deserializarJson(JsonUtils.JsonStringToObject(evento));
-			DeporteEvento de = (DeporteEvento)this.factoryOSNS.getObjetoSNS();
-			de.setEvento(e);
-			RelacionSNS relacionParticipantes = 
-					new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
-									"participaEvento",
-									RelacionSNS.DIRECCION_ENTRADA,
-									de.getParticipantes());
-		} catch (ExcepcionJsonDeserializacion e1) {
-			e1.printStackTrace();
+			if(this.objectSNSDeportivo != null){
+					RelacionSNS relacionParticipantes = 
+							new RelacionSNS(Relaciones.INVITADOAPARTICIPAR,
+										"invitadoEvento",
+										RelacionSNS.DIRECCION_ENTRADA);
+				//COMO ABSTRAER?
+				ObjectSNSDeportivoDAO dao = new ProductorFactoryUsuario().
+						producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNSDAO();
+					
+				//Formando query
+				StringBuilder query = new StringBuilder();
+				query.append("MATCH ");
+				query.append(this.producirNodoMatch());
+				query.append(relacionParticipantes.stringJson());
+				query.append(dao.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(dao.getIdentificadorQueries());
+				
+				//Ejecutando query
+				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+				if(resultado != null && resultado.length > 0){
+					ObjectSNSDeportivo[] invitados = new ObjectSNSDeportivo[resultado.length];
+					for(int i = 0; i < resultado.length; i++){
+						JsonObject datos = 
+								(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+								getPropiedades().get("data")[0];
+						invitados[i] = dao.getFactoryOSNS().getObjetoSNS();
+						try {
+							invitados[i].deserializarJson(datos);
+						} catch (ExcepcionJsonDeserializacion e) {
+							e.printStackTrace();
+							throw e;
+						}
+					}
+					retorno = JsonUtils.arrayObjectSNSToStringJson(invitados);
+				}
+			}
+		} catch (BDException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return retorno;
+	}
+	
+	public String getSolicitudesEvento()
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = "[]";
+		try {
+			if(this.objectSNSDeportivo != null){
+				RelacionSNS relacionParticipantes = 
+						new RelacionSNS(Relaciones.SOLICITAPARTICIPAR,
+										"solicitanteParticipaEvento",
+										RelacionSNS.DIRECCION_ENTRADA);
+				//COMO ABSTRAER?
+				ObjectSNSDeportivoDAO dao = new ProductorFactoryUsuario().
+						producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNSDAO();
+				
+				//Formando query
+				StringBuilder query = new StringBuilder();
+				query.append("MATCH ");
+				query.append(this.producirNodoMatch());
+				query.append(relacionParticipantes.stringJson());
+				query.append(dao.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(dao.getIdentificadorQueries());
+					
+				//Ejecutando query				
+				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+				if(resultado != null && resultado.length > 0){
+					System.out.println("tengo resultados");
+					ObjectSNSDeportivo[] solicitudes = new ObjectSNSDeportivo[resultado.length];
+					for(int i = 0; i < resultado.length; i++){
+						JsonObject datos = 
+								(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+								getPropiedades().get("data")[0];
+						solicitudes[i] = dao.getFactoryOSNS().getObjetoSNS();
+
+						try {
+							solicitudes[i].deserializarJson(datos);
+						} catch (ExcepcionJsonDeserializacion e) {
+							e.printStackTrace();
+							throw e;
+						}
+					}
+					retorno = JsonUtils.arrayObjectSNSToStringJson(solicitudes);
+				}
+			}
+		} catch (BDException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		
+		System.out.println("retorno total "+retorno);
+		return retorno;
+	
+	}
+	
+	
+	public String getParticipantesEvento() 
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = "[]";
+		try {
+			if(this.objectSNSDeportivo != null){
+				RelacionSNS relacionParticipantes = 
+						new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+										"participaEvento",
+										RelacionSNS.DIRECCION_ENTRADA);
+				//COMO ABSTRAER?
+				ObjectSNSDeportivoDAO dao = new ProductorFactoryUsuario().
+						producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNSDAO();
+					
+				//Formando query
+				StringBuilder query = new StringBuilder();
+				query.append("MATCH ");
+				query.append(this.producirNodoMatch());
+				query.append(relacionParticipantes.stringJson());
+				query.append(dao.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(dao.getIdentificadorQueries());
+					
+				//Ejecutando query
+				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+				if(resultado != null && resultado.length > 0){
+					ObjectSNSDeportivo[] participantes = new ObjectSNSDeportivo[resultado.length];
+					for(int i = 0; i < resultado.length; i++){
+						JsonObject datos = 
+								(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+								getPropiedades().get("data")[0];
+						participantes[i] = dao.getFactoryOSNS().getObjetoSNS();
+						try {
+							participantes[i].deserializarJson(datos);
+						} catch (ExcepcionJsonDeserializacion e) {
+							e.printStackTrace();
+							throw e;
+						}
+					}
+					retorno = JsonUtils.arrayObjectSNSToStringJson(participantes);
+				}
+			}
+		} catch (BDException e) {
+			e.printStackTrace();
+			throw e;
 		}
 		return retorno;
 	}

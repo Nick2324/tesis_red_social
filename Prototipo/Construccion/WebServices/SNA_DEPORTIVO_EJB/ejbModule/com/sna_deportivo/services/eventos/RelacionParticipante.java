@@ -6,10 +6,10 @@ import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
-
-	public RelacionInvitacionEvento(){
-		super("invitacion");
+public class RelacionParticipante extends HandlerRelacionUsuarioEvento{
+	
+	public RelacionParticipante(){
+		super("participante");
 	}
 
 	@Override
@@ -23,13 +23,13 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 		ded.setObjetcSNSDeportivo(de);
 		ded.encontrarObjetoManejado();
 		de = (DeporteEvento)ded.getObjetcSNSDeportivo();
-		de.setInvitaciones(arregloUsuarios);
+		de.setParticipantes(arregloUsuarios);
 		return de;
 	}
 
 	@Override
 	protected String manejarCreacion() throws BDException{
-		return ded.crearInvitaciones();
+		return ded.crearParticipantes();
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 	@Override
 	protected String manejarObtencion() 
 			throws BDException, ExcepcionJsonDeserializacion {
-		return ded.getInvitadosEvento();
+		return ded.getParticipantesEvento();
 	}
 	
 }

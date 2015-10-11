@@ -40,12 +40,50 @@ public abstract class HandlerRelacionUsuarioEvento {
 	
 	protected abstract DeporteEvento prepararDeporteEvento(String tipoEvento);
 	
-	protected abstract String manejarCreacion();
+	protected abstract DeporteEvento prepararDeporteEventoObtencion(String tipoEvento);
+	
+	protected abstract String manejarCreacion()throws BDException;
+	
+	protected abstract String manejarObtencion() 
+			throws BDException, ExcepcionJsonDeserializacion ;
+	
+	public String manejarObtencion(String aManejar,
+								   String tipoEvento,
+								   String idEvento,
+								   String body){
+		String retorno = null;
+		if(this.esManejado(aManejar)){
+			try {
+				this.arregloEventos =
+				JsonUtils.convertirMensajeJsonAObjectSNS(body, 
+						ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE, 
+						new ProductorFactoryEvento());
+				if(arregloEventos != null &&
+				   arregloEventos.size() == 1){
+					DeporteEvento de = this.prepararDeporteEventoObtencion(tipoEvento);
+					ded.setObjetcSNSDeportivo(de);
+					retorno = this.manejarObtencion();
+				}
+			} catch (ExcepcionJsonDeserializacion e) {
+			e.printStackTrace();
+			}
+		}else{
+			if(this.handler != null){
+				retorno = this.handler.manejarObtencion(
+						  aManejar,
+						  tipoEvento,
+						  idEvento,
+						  body);
+			}
+		}
+		return retorno;
+	}
 	
 	public String manejarCreacion(String aManejar,
 								  String tipoEvento,
 								  String idEvento,
-								  String body) throws BDException{
+								  String body) 
+						throws BDException, ExcepcionJsonDeserializacion {
 		String retorno = null;
 		if(this.esManejado(aManejar)){
 			try {
@@ -67,7 +105,8 @@ public abstract class HandlerRelacionUsuarioEvento {
 					retorno = this.manejarCreacion();
 				}
 			} catch (ExcepcionJsonDeserializacion e) {
-			e.printStackTrace();
+				e.printStackTrace();
+				throw e;
 			}
 		}else{
 			if(this.handler != null){
