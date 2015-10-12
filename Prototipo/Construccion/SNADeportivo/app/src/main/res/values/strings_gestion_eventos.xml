@@ -70,4 +70,9 @@
     <string name="toast_elimina_solicitud_exito">La solicitud ha sido eliminada con éxito</string>
     <string name="alert_elimina_sol_eve_tit">Eliminacion de solicitud</string>
     <string name="alert_error_sol_eve_msn">La solicitud no ha podido ser eliminada</string>
+    <string name="toast_elimina_participante">El participante ha sido eliminado con éxito</string>
+    <string name="alert_elimina_participante_tit">Eliminación de participante</string>
+    <string name="alert_error_elimina_participante_msn">El participante no ha podido ser eliminado con éxito</string>
+    <string name="alert_selecciona_participante_tit">¿Que desea hacer con el participante?</string>
+    <string name="alert_selecciona_participante_eliminar">Eliminar participante</string>
 </resources>

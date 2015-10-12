@@ -191,7 +191,7 @@ public class GestionEventoService {
 		return new ResponseGenerico("200","Invitado eliminado con exito");
 	}
 	
-	@GET
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
@@ -210,7 +210,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	@POST
+	/*@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
@@ -228,9 +228,9 @@ public class GestionEventoService {
 		}catch(Exception e){
 			throw new WebApplicationException(500);
 		}
-	}
+	}*/
 	
-	@DELETE
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/{idParticipante}")
