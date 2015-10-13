@@ -68,9 +68,6 @@ public class ListadoParticipantes extends Activity
                         evento.getId() + "/" +
                         Constants.SERVICES_PATH_EVE_PARTICIPANTES;
             }
-
-            Log.d("Nick:Servicio","Servicio: "+super.servicio);
-
         }
 
         @Override

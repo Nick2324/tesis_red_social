@@ -2,6 +2,7 @@
 <resources>
     <string name="titulo_gestion_eventos_lista">Eventos deportivos</string>
     <string name="hint_carga_informacion">Información del evento</string>
+    <string name="item_actualizar_evento">Actualiza general evento</string>
     <string name="crear_evento">Crear evento</string>
     <string name="tipo_evento">Tipo de evento</string>
     <string name="lista_evento_string">ListaEventos</string>
@@ -75,4 +76,8 @@
     <string name="alert_error_elimina_participante_msn">El participante no ha podido ser eliminado con éxito</string>
     <string name="alert_selecciona_participante_tit">¿Que desea hacer con el participante?</string>
     <string name="alert_selecciona_participante_eliminar">Eliminar participante</string>
+    <string name="toast_actualiza_evento_exito">Evento actualizado con éxito</string>
+    <string name="alert_actualiza_evento_tit">Actualización de evento</string>
+    <string name="alert_actualiza_evento_msn">¿Desea actualizar el evento?</string>
+    <string name="alert_actualiza_evento_err_msn">Ocurrió un error al intentar actualizar el evento</string>
 </resources>

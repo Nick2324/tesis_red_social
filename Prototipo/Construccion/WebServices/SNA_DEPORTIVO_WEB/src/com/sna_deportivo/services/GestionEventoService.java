@@ -14,8 +14,11 @@ import javax.ws.rs.core.MediaType;
 
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
+import com.sna_deportivo.services.eventos.ActualizarEvento;
 import com.sna_deportivo.services.eventos.CrearEvento;
 import com.sna_deportivo.services.eventos.GestionEvento;
+import com.sna_deportivo.services.eventos.ObtenerDeporteEvento;
+import com.sna_deportivo.services.eventos.ObtenerGeneroEvento;
 import com.sna_deportivo.services.eventos.RelacionEventoUsuario;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
 
@@ -30,8 +33,6 @@ public class GestionEventoService {
 		this.gestionRelacionUsuarioEvento =
 				new RelacionEventoUsuario();
 	}
-	
-	//revisar
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -81,12 +82,16 @@ public class GestionEventoService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}")
 	public ResponseGenerico actualizarEventoCompleto(@PathParam("tipoEvento") String tipoEvento,
-								 		 @PathParam("id") String idEvento,
-								 		 String datosEvento){
+											 		 @PathParam("id") String idEvento,
+											 		 String body){
 		try{
-			//this.gestionEvento.actualizarEvento(tipoEvento, evento);
+			new ActualizarEvento().actualizarEvento(tipoEvento,
+													idEvento,
+													body);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
 		}
 		
 		return new ResponseGenerico("201","Evento actualizado");
@@ -131,6 +136,39 @@ public class GestionEventoService {
 		return null;
 	}
 
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/ubicaciones")
+	public String crearUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
+										 @PathParam("id") String id,
+										 String body){
+		try{
+			
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return null;
+	}
+	
+	@DELETE
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/ubicaciones/{idUbicacion}")
+	public String eliminarUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
+										    @PathParam("id") String id,
+										    @PathParam("idUbicacion") String idUbicacion,
+										    String body){
+		try{
+			
+		}catch(WebApplicationException e){
+			throw e;
+		}
+
+		return null;
+	}
+	
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
@@ -191,7 +229,7 @@ public class GestionEventoService {
 		return new ResponseGenerico("200","Invitado eliminado con exito");
 	}
 	
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
@@ -210,7 +248,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	/*@POST
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
@@ -228,9 +266,9 @@ public class GestionEventoService {
 		}catch(Exception e){
 			throw new WebApplicationException(500);
 		}
-	}*/
+	}
 	
-	@POST
+	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/{idParticipante}")
@@ -312,6 +350,42 @@ public class GestionEventoService {
 		}
 
 		return new ResponseGenerico("200","Solicitud eliminada con exito");
+	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/deportes")
+	public ResponseGenerico obtenerDeporteEvento(@PathParam("tipoEvento") String tipoEvento,
+												 @PathParam("id") String idEvento,
+												 String body){
+		try{
+			return new ResponseGenerico("200","Deporte de evento enviado",
+					new ObtenerDeporteEvento().obtenerDeporteEvento(
+							idEvento, tipoEvento, body));
+		}catch(WebApplicationException e){
+			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
+		}
+	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("{tipoEvento}/{id}/generos")
+	public ResponseGenerico obtenerGeneroEvento(@PathParam("tipoEvento") String tipoEvento,
+												 @PathParam("id") String idEvento,
+												 String body){
+		try{
+			return new ResponseGenerico("200","Deporte de evento enviado",
+					new ObtenerGeneroEvento().obtenerGeneroEvento(
+							idEvento, tipoEvento, body));
+		}catch(WebApplicationException e){
+			throw e;
+		}catch(Exception e){
+			throw new WebApplicationException(500);
+		}
 	}
 	
 }

@@ -126,14 +126,14 @@ public abstract class ObjectSNSDeportivoDAO {
 		
 	}
 	
-	public boolean eliminarRelacion(RelacionSNS relacionACrear,
+	public boolean eliminarRelacion(RelacionSNS aEliminar,
 								 	ProductorSNSDeportivo productor){
 		if(this.objectSNSDeportivo != null &&
-		   relacionACrear != null &&
+		   aEliminar != null &&
 		   productor != null){
 			String queryNodoPrincipal = this.producirNodoMatch();
 			StringBuilder queryIndividual = new StringBuilder();
-			for(ObjectSNSDeportivo obj:relacionACrear.getObjetosRelacion()){
+			for(ObjectSNSDeportivo obj:aEliminar.getObjetosRelacion()){
 				ObjectSNSDeportivoDAO dao = 
 					productor.
 					producirFacObjetoSNS(obj.getClass().getSimpleName()).
@@ -141,10 +141,10 @@ public abstract class ObjectSNSDeportivoDAO {
 				dao.setObjetcSNSDeportivo(obj);
 				queryIndividual.append("MATCH ");
 				queryIndividual.append(queryNodoPrincipal);
-				queryIndividual.append(relacionACrear.stringJson());
+				queryIndividual.append(aEliminar.stringJson());
 				queryIndividual.append(dao.producirNodoMatch());
 				queryIndividual.append(" DELETE ");
-				queryIndividual.append(relacionACrear.getIdentificadorRelacion());
+				queryIndividual.append(aEliminar.getIdentificadorRelacion());
 				try{
 					BDUtils.ejecutarQueryREST(queryIndividual.toString());
 				}catch(BDException e){

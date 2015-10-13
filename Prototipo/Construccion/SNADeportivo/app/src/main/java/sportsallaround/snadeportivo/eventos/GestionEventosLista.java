@@ -28,7 +28,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.utils.LanzadorPeticionEncadenada;
 import sportsallaround.utils.Peticion;
+import sportsallaround.utils.PeticionEncadenada;
 import sportsallaround.utils.gui.AttachObjetoListener;
 import sportsallaround.utils.Constants;
 import sportsallaround.utils.gui.DescripcionGo;
@@ -45,73 +47,198 @@ public class GestionEventosLista extends Activity
     private ArrayList<Evento> eventos;
     private KeyValueItem tipoNumeroEvento;
 
-    private class PeticionDatosEvento extends Peticion{
+    private class PeticionDeporteEvento extends PeticionEncadenada{
 
-        private ArrayList<Evento> eventos;
-        private KeyValueItem item;
-        private Bundle extra;
-        private Context context;
-        private Intent intent;
+        private Context contexto;
+        private Evento evento;
+        private String tipoEvento;
+        private Bundle extras;
 
-        public PeticionDatosEvento(Context context,
-                                   Intent intent,
-                                   Bundle extra,
-                                   ArrayList<Evento> eventos,
-                                   KeyValueItem item){
-            this.item = item;
-            this.eventos = eventos;
-            this.extra = extra;
-            this.context = context;
+        public PeticionDeporteEvento(Context contexto,
+                                     Evento evento,
+                                     String tipoEvento,
+                                     Bundle extras) {
+            super("Deporte");
+            this.contexto = contexto;
+            this.evento = evento;
+            this.tipoEvento = tipoEvento;
+            this.extras = extras;
         }
 
         @Override
+        public boolean onPostExecuteEncadenado(String resultadoPeticion) {
+            if(resultadoPeticion != null) {
+                try {
+                    JSONObject resultado = new JSONObject(resultadoPeticion);
+                    String caracterAceptacion =
+                            resultado.getString("caracterAceptacion");
+                    if(caracterAceptacion != null &&
+                            (caracterAceptacion.equals("200") ||
+                                    caracterAceptacion.equals("204"))){
+                        return true;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public void ejecutaTareaUltimaPeticion() {}
+
+        @Override
         public void calcularMetodo() {
-            super.metodo = "GET";
+            super.metodo = "POST";
         }
 
         @Override
         public void calcularServicio() {
-            if(this.item != null &&
-               this.eventos != null) {
-                super.servicio =
-                        Constants.SERVICES_PATH_EVENTOS /*+
-                        ((TiposEventos)this.item.getValue()).getServicio() + "/" +
-                        this.eventos.get((Integer)this.item.getKey()).getId()*/;
-            }
+            super.servicio = Constants.SERVICES_PATH_EVENTOS +
+                    this.tipoEvento + "/" + this.evento.getId() + "/" +
+                    Constants.SERVICES_PATH_DEPORTES;
         }
 
         @Override
         public void calcularParams() {
-            /*try {
-                super.params = new JSONObject(this.eventos.get(
-                        (Integer)this.item.getKey()).toString());
+            super.params = new JSONObject();
+            try {
+                //PONIENDO EVENTO
+                JSONArray arrayEventos = new JSONArray();
+                arrayEventos.put(new JSONObject(this.evento.stringJson()));
+                JSONObject parametrosEvento = new JSONObject();
+                parametrosEvento.put(this.evento.getClass().getSimpleName(),
+                        arrayEventos);
+                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
+                        parametrosEvento);
             } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
+        }
+
+        @Override
+        public void doInBackground() {
+
+        }
+    }
+
+    private class PeticionGeneroEvento extends PeticionEncadenada{
+
+        private Context contexto;
+        private Evento evento;
+        private String tipoEvento;
+        private Bundle extras;
+
+        public PeticionGeneroEvento(Context contexto,
+                                    Evento evento,
+                                    String tipoEvento,
+                                    Bundle extras) {
+            super("Genero");
+            this.contexto = contexto;
+            this.evento = evento;
+            this.tipoEvento = tipoEvento;
+            this.extras = extras;
+        }
+
+        @Override
+        public boolean onPostExecuteEncadenado(String resultadoPeticion) {
+            if(resultadoPeticion != null) {
+                try {
+                    JSONObject resultado = new JSONObject(resultadoPeticion);
+                    String caracterAceptacion =
+                            resultado.getString("caracterAceptacion");
+                    if(caracterAceptacion != null &&
+                       (caracterAceptacion.equals("200") ||
+                        caracterAceptacion.equals("204"))){
+                        return true;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public void ejecutaTareaUltimaPeticion() {
+            //Preparando datos adicionales del intent
+            if(super.peticionesEncadenadas != null) {
+                try {
+                    if(peticionesEncadenadas.getString("Deporte") != null) {
+                        //PONE DATOS DE DEPORTE
+                        JSONObject respuesta = new JSONObject(peticionesEncadenadas.
+                                getString("Deporte"));
+                        if(respuesta.getString("datosExtra") != null) {
+                            this.extras.putString(ConstantesEvento.DEPORTE_MANEJADO,
+                                    respuesta.getString("datosExtra"));
+                            Log.d("Nick:Deporte",this.extras.getString(ConstantesEvento.DEPORTE_MANEJADO));
+                        }
+                    }
+                    if(peticionesEncadenadas.getString("Genero") != null) {
+                        //PONE DATOS DE GENERO
+                        JSONObject respuesta = new JSONObject(peticionesEncadenadas.
+                                getString("Genero"));
+                        if(respuesta.getString("datosExtra") != null) {
+                            this.extras.putString(ConstantesEvento.GENERO_MANEJADO,
+                                    respuesta.getString("datosExtra"));
+                            Log.d("Nick:Genero",this.extras.getString(ConstantesEvento.GENERO_MANEJADO));
+                        }
+                    }
+                    Intent intent = new Intent(this.contexto, InformacionGeneralEvento.class);
+                    intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extras);
+                    startActivity(intent);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    this.alertError();
+                }
+            } else {
+                this.alertError();
+            }
+        }
+
+        @Override
+        public void calcularMetodo() {
+            super.metodo = "POST";
+        }
+
+        @Override
+        public void calcularServicio() {
+            super.servicio = Constants.SERVICES_PATH_EVENTOS +
+                    this.tipoEvento + "/" + this.evento.getId() + "/" +
+                    Constants.SERVICES_PATH_GENERO;
+        }
+
+        @Override
+        public void calcularParams() {
+            super.params = new JSONObject();
+            try {
+                //PONIENDO EVENTO
+                JSONArray arrayEventos = new JSONArray();
+                arrayEventos.put(new JSONObject(this.evento.stringJson()));
+                JSONObject parametrosEvento = new JSONObject();
+                parametrosEvento.put(this.evento.getClass().getSimpleName(),
+                        arrayEventos);
+                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
+                        parametrosEvento);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
         public void doInBackground() {}
 
-        @Override
-        public void onPostExcecute(String resultadoPeticion) {
-            if(resultadoPeticion != null){
-                //PONE DATOS DE GENERO Y DEPORTE*****
-                this.extra.putString(ConstantesEvento.GENERO_MANEJADO,null);
-                this.extra.putString(ConstantesEvento.DEPORTE_MANEJADO,null);
-                intent.putExtra(Constants.DATOS_FUNCIONALIDAD,extra);
-                startActivity(intent);
-            }else{
-                new AlertDialog.Builder(this.context).
-                        setTitle(this.context.getResources().
-                                getString(R.string.descripcion_go_error_ir_eve_tit)).
-                        setMessage(this.context.getResources().
-                                getString(R.string.descripcion_go_error_ir_eve_msn)).
-                        setNeutralButton(this.context.getResources().
-                                getString(R.string.BOTON_NEUTRAL), null).
-                        create().show();
-            }
+        private void alertError(){
+            new AlertDialog.Builder(this.contexto).
+                    setTitle(this.contexto.getResources().
+                            getString(R.string.descripcion_go_error_ir_eve_tit)).
+                    setMessage(this.contexto.getResources().
+                            getString(R.string.descripcion_go_error_ir_eve_msn)).
+                    setNeutralButton(this.contexto.getResources().
+                            getString(R.string.BOTON_NEUTRAL), null).
+                    create().show();
         }
+
     }
 
     private class PeticionSpinner implements ObjetoListenerSpinner {
@@ -381,30 +508,35 @@ public class GestionEventosLista extends Activity
     @Override
     public void go() {
         if(this.tipoNumeroEvento != null) {
-            Intent intent = null;
             Bundle extra = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD);
-            if(ConstantesEvento.OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))) {
-                extra.putString(Constants.FUNCIONALIDAD,
-                        ConstantesEvento.ACTUALIZAR_EVENTO);
-                extra.putString(ConstantesEvento.TIPO_MENU,
-                        ConstantesEvento.MENU_ADMIN_EVENTOS);
-                intent = new Intent(this, InformacionGeneralEvento.class);
-            }else if(ConstantesEvento.NO_OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))){
-                extra.putString(Constants.FUNCIONALIDAD,
-                        ConstantesEvento.PARTICIPANTE_EVENTO);
-                extra.putString(ConstantesEvento.TIPO_MENU,
-                        ConstantesEvento.MENU_PART_EVENTOS);
-                intent = new Intent(this,PerfilEvento.class);
-            }
+            //Poniendo extras generales
             extra.putString(ConstantesEvento.TIPO_EVENTO,
                     ((TiposEventos) tipoNumeroEvento.getValue()).getNombreClase());
             extra.putString(ConstantesEvento.EVENTO_MANEJADO,
                     this.eventos.get((Integer) tipoNumeroEvento.getKey()).stringJson());
             extra.putString(ConstantesEvento.SERVICIO_EVENTO,
                     ((TiposEventos) tipoNumeroEvento.getValue()).getServicio());
-            if(intent != null) {
-                /*new PeticionDatosEvento(this,intent,extra,this.eventos,this.tipoNumeroEvento).
-                        ejecutarPeticion();*/
+            //Poniendo extras especificos y lanzando intent
+            if(ConstantesEvento.OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))) {
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.ACTUALIZAR_EVENTO);
+                extra.putString(ConstantesEvento.TIPO_MENU,
+                        ConstantesEvento.MENU_ADMIN_EVENTOS);
+                //Ejecutando peticion encadenada
+                LanzadorPeticionEncadenada lpe = new LanzadorPeticionEncadenada();
+                lpe.setSiguientePeticion(new PeticionDeporteEvento(this,
+                        this.eventos.get((Integer) tipoNumeroEvento.getKey()),
+                        extra.getString(ConstantesEvento.SERVICIO_EVENTO),extra));
+                lpe.setSiguientePeticion(new PeticionGeneroEvento(this,
+                        this.eventos.get((Integer) tipoNumeroEvento.getKey()),
+                        extra.getString(ConstantesEvento.SERVICIO_EVENTO),extra));
+                lpe.ejecutarPeticion();
+            }else if(ConstantesEvento.NO_OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))){
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.PARTICIPANTE_EVENTO);
+                extra.putString(ConstantesEvento.TIPO_MENU,
+                        ConstantesEvento.MENU_PART_EVENTOS);
+                Intent intent = new Intent(this,PerfilEvento.class);
                 intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extra);
                 startActivity(intent);
             }else{

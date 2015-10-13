@@ -37,14 +37,12 @@ public class InformacionGeneralEvento extends Activity
     private Evento evento;
     private Deporte deporte;
     private MenuEventos menuEventos;
-    private boolean enCicloActividadSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_general_evento);
         setTitle(getResources().getString(R.string.title_activity_informacion_general_evento));
-        this.enCicloActividadSpinner = true;
         this.setUpListeners();
     }
 

@@ -1,6 +1,8 @@
 package com.sna_deportivo.pojo.evento;
 
+import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.ProductorFactoryDeporte;
+import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
 import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
@@ -28,6 +30,118 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		this.tipoObjetoSNS = Entidades.DEPORTEEVENTO;
 	}
 
+	@Override
+	public void encontrarObjetoManejado()  
+			throws BDException{
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)
+					this.objectSNSDeportivo;
+			StringBuilder query = new StringBuilder();
+			query.append("MATCH ");
+			query.append(this.producirNodoMatchNoJson());
+			query.append(",");
+			
+			//Encontrando objeto por cada uno de los nodos
+			//que se unen a el
+			RelacionSNS relacion = null;
+			if(de.getDeporte() != null){
+				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+										   "relacionDeporte",
+										   RelacionSNS.DIRECCION_ENTRADA,
+										   de.getDeporte());
+			}
+			
+			if(de.getEvento() != null){
+				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+						   "relacionEvento",
+						   RelacionSNS.DIRECCION_ENTRADA,
+						   de.getEvento());
+				//Patrones para evento
+				query = this.integrarQueryRelacion(query, 
+								relacion, 
+								new ProductorFactoryEvento());
+
+			}
+			
+			if(de.getGenero() != null){
+				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+						   "relacionGenero",
+						   RelacionSNS.DIRECCION_ENTRADA,
+						   de.getGenero());
+				//Patrones para genero
+				query = this.integrarQueryRelacion(query, 
+								relacion,
+								new ProductorFactoryGenerales());
+			}
+			
+			if(de.getInvitaciones() != null &&
+			   de.getInvitaciones().size() > 0){
+				relacion = new RelacionSNS(Relaciones.INVITADOAPARTICIPAR,
+						   "relacionInvitacion",
+						   RelacionSNS.DIRECCION_ENTRADA,
+						   de.getInvitaciones());
+				//Patrones para invitaciones
+				query = this.integrarQueryRelacion(query, 
+								relacion,
+								new ProductorFactoryUsuario());
+			}
+			
+			if(de.getSolicitudes() != null &&
+			   de.getSolicitudes().size() > 0){
+				relacion = new RelacionSNS(Relaciones.SOLICITAPARTICIPAR,
+						   "relacionSolicitud",
+						   RelacionSNS.DIRECCION_ENTRADA,
+						   de.getSolicitudes());
+				//Patrones para solicitudes
+				query = this.integrarQueryRelacion(query, 
+								relacion, 
+								new ProductorFactoryUsuario());
+			}
+			
+			if(de.getParticipantes() != null &&
+			   de.getParticipantes().size() > 0){
+				relacion = new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+						   "relacionParticipante",
+						   RelacionSNS.DIRECCION_ENTRADA,
+						   de.getParticipantes());
+				//Patrones para participantes
+				query = this.integrarQueryRelacion(query, 
+								relacion,
+								new ProductorFactoryUsuario());
+			}
+			
+			query = new StringBuilder(query.substring(0, query.length() - 1));
+			query.append(" RETURN ");
+			query.append(this.identificadorQueries);
+			
+			try{
+				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+				if(resultado.length == 1){
+					Object[] datos =
+							((JsonObject)BDUtils.obtenerRestRegistro(resultado[0])).
+							getPropiedades().
+							get("data");
+					if(datos.length == 1){
+						try {
+							de.deserializarJson((JsonObject)datos[0]);
+							this.setObjetcSNSDeportivo(de);
+						} catch (ExcepcionJsonDeserializacion e) {
+							e.printStackTrace();
+						}
+					}else{
+						throw new BDException();
+					}
+				}else{
+					throw new BDException();
+				}
+			}catch(BDException e){
+				e.printStackTrace();
+				throw e;
+			}
+			
+		}
+	}
+	
 	@Override
 	public ObjectSNSDeportivo crearObjetoSNS() {
 		final DeporteEvento de = (DeporteEvento)super.objectSNSDeportivo;
@@ -341,117 +455,163 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		}
 		return retorno;
 	}
-
-	@Override
-	public void encontrarObjetoManejado()  
-			throws BDException{
+	
+	public boolean eliminarDeporte() throws BDException{
 		if(this.objectSNSDeportivo != null){
-			DeporteEvento de = (DeporteEvento)
-					this.objectSNSDeportivo;
-			StringBuilder query = new StringBuilder();
-			query.append("MATCH ");
-			query.append(this.producirNodoMatchNoJson());
-			query.append(",");
-			
-			//Encontrando objeto por cada uno de los nodos
-			//que se unen a el
-			RelacionSNS relacion = null;
-			if(de.getDeporte() != null){
-				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-										   "relacionDeporte",
-										   RelacionSNS.DIRECCION_ENTRADA,
-										   de.getDeporte());
+			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+					"deporteEvento",
+					RelacionSNS.DIRECCION_ENTRADA,
+					((DeporteEvento)this.objectSNSDeportivo).
+					getDeporte());
+			return this.eliminarRelacion(aEliminar,
+					new ProductorFactoryDeporte());
+		}
+		return true;
+	}
+	
+	public boolean eliminarGenero() throws BDException{
+		if(this.objectSNSDeportivo != null){
+			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+					"deporteEvento",
+					RelacionSNS.DIRECCION_ENTRADA,
+					((DeporteEvento)this.objectSNSDeportivo).
+					getGenero());
+			return this.eliminarRelacion(aEliminar,
+					new ProductorFactoryGenerales());
+		}
+		return true;
+	}
+	
+	public boolean eliminarUbicacion() throws BDException{
+		if(this.objectSNSDeportivo != null){
+			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+					"deporteEvento",
+					RelacionSNS.DIRECCION_ENTRADA,
+					((DeporteEvento)this.objectSNSDeportivo).
+					getUbicacion());
+			/*return this.eliminarRelacion(aEliminar,
+					new ProductorFactoryUbicacion());*/
+		}
+		return true;
+	}
+	
+	public boolean actualizarDeporteEvento() throws BDException{
+		//Ampliar a todo el evento, con invitaciones, participantes, etc.
+		if(this.objectSNSDeportivo != null){
+			((DeporteEvento)this.objectSNSDeportivo).
+				setEvento(null);
+			if(this.eliminarDeporte() && 
+			   this.eliminarGenero() &&
+			   this.eliminarUbicacion()){
+				this.crearObjetoSNS();
+			}else{
+				return false;
 			}
-			
-			if(de.getEvento() != null){
-				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-						   "relacionEvento",
-						   RelacionSNS.DIRECCION_ENTRADA,
-						   de.getEvento());
-				//Patrones para evento
-				query = this.integrarQueryRelacion(query, 
-								relacion, 
-								new ProductorFactoryEvento());
-
-			}
-			
-			if(de.getGenero() != null){
-				relacion = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-						   "relacionGenero",
-						   RelacionSNS.DIRECCION_ENTRADA,
-						   de.getGenero());
-				//Patrones para genero
-				query = this.integrarQueryRelacion(query, 
-								relacion,
-								new ProductorFactoryGenerales());
-			}
-			
-			if(de.getInvitaciones() != null &&
-			   de.getInvitaciones().size() > 0){
-				relacion = new RelacionSNS(Relaciones.INVITADOAPARTICIPAR,
-						   "relacionInvitacion",
-						   RelacionSNS.DIRECCION_ENTRADA,
-						   de.getInvitaciones());
-				//Patrones para invitaciones
-				query = this.integrarQueryRelacion(query, 
-								relacion,
-								new ProductorFactoryUsuario());
-			}
-			
-			if(de.getSolicitudes() != null &&
-			   de.getSolicitudes().size() > 0){
-				relacion = new RelacionSNS(Relaciones.SOLICITAPARTICIPAR,
-						   "relacionSolicitud",
-						   RelacionSNS.DIRECCION_ENTRADA,
-						   de.getSolicitudes());
-				//Patrones para solicitudes
-				query = this.integrarQueryRelacion(query, 
-								relacion, 
-								new ProductorFactoryUsuario());
-			}
-			
-			if(de.getParticipantes() != null &&
-			   de.getParticipantes().size() > 0){
-				relacion = new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
-						   "relacionParticipante",
-						   RelacionSNS.DIRECCION_ENTRADA,
-						   de.getParticipantes());
-				//Patrones para participantes
-				query = this.integrarQueryRelacion(query, 
-								relacion,
-								new ProductorFactoryUsuario());
-			}
-			
-			query = new StringBuilder(query.substring(0, query.length() - 1));
-			query.append(" RETURN ");
-			query.append(this.identificadorQueries);
-			
-			try{
+		}
+		return true;
+	}
+	
+	public String obtenerDeporteEvento() 
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = "{}";
+		try{
+			if(this.objectSNSDeportivo != null){
+				RelacionSNS relacionParticipantes = 
+						new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+										"participaEvento",
+										RelacionSNS.DIRECCION_ENTRADA);
+				//COMO ABSTRAER?
+				ObjectSNSDeportivoDAO dao = new ProductorFactoryDeporte().
+						producirFacObjetoSNS(Deporte.class.getSimpleName()).getObjetoSNSDAO();
+					
+				//Formando query
+				StringBuilder query = new StringBuilder();
+				query.append("MATCH ");
+				query.append(this.producirNodoMatch());
+				query.append(relacionParticipantes.stringJson());
+				query.append(dao.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(dao.getIdentificadorQueries());
+					
+				//Ejecutando query
 				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
-				if(resultado.length == 1){
-					Object[] datos =
-							((JsonObject)BDUtils.obtenerRestRegistro(resultado[0])).
-							getPropiedades().
-							get("data");
-					if(datos.length == 1){
+				if(resultado != null && resultado.length > 0){
+					ObjectSNSDeportivo[] deportes = new ObjectSNSDeportivo[resultado.length];
+					for(int i = 0; i < resultado.length; i++){
+						JsonObject datos = 
+								(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+								getPropiedades().get("data")[0];
+						deportes[i] = dao.getFactoryOSNS().getObjetoSNS();
 						try {
-							de.deserializarJson((JsonObject)datos[0]);
-							this.setObjetcSNSDeportivo(de);
+							deportes[i].deserializarJson(datos);
 						} catch (ExcepcionJsonDeserializacion e) {
 							e.printStackTrace();
+							throw e;
 						}
-					}else{
-						throw new BDException();
 					}
-				}else{
-					throw new BDException();
+					if(deportes.length == 1){
+						retorno = deportes[0].stringJson();
+					}
 				}
-			}catch(BDException e){
-				e.printStackTrace();
-				throw e;
 			}
-			
+		} catch (BDException e) {
+			e.printStackTrace();
+			throw e;
 		}
+		return retorno;
+	}
+	
+	public String obtenerGeneroEvento()
+			throws BDException,ExcepcionJsonDeserializacion{
+		String retorno = "{}";
+		try{
+			if(this.objectSNSDeportivo != null){
+				RelacionSNS relacionParticipantes = 
+						new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+										"participaEvento",
+										RelacionSNS.DIRECCION_ENTRADA);
+				//COMO ABSTRAER?
+				ObjectSNSDeportivoDAO dao = new ProductorFactoryGenerales().
+						producirFacObjetoSNS(Genero.class.getSimpleName()).getObjetoSNSDAO();
+					
+				//Formando query
+				StringBuilder query = new StringBuilder();
+				query.append("MATCH ");
+				query.append(this.producirNodoMatch());
+				query.append(relacionParticipantes.stringJson());
+				query.append(dao.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(dao.getIdentificadorQueries());
+					
+				//Ejecutando query
+				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+				if(resultado != null && resultado.length > 0){
+					ObjectSNSDeportivo[] generos = new ObjectSNSDeportivo[resultado.length];
+					for(int i = 0; i < resultado.length; i++){
+						JsonObject datos = 
+								(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+								getPropiedades().get("data")[0];
+						generos[i] = dao.getFactoryOSNS().getObjetoSNS();
+						try {
+							generos[i].deserializarJson(datos);
+						} catch (ExcepcionJsonDeserializacion e) {
+							e.printStackTrace();
+							throw e;
+						}
+					}
+					if(generos.length == 1){
+						retorno = generos[0].stringJson();
+					}
+				}
+			}
+		} catch (BDException e) {
+			e.printStackTrace();
+			throw e;
+		} catch(Exception e){
+			e.printStackTrace();
+			throw e;
+		}
+		return retorno;
 	}
 
 }
