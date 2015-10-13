@@ -138,4 +138,10 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 		return null;
 	}
 
+	@Override
+	public Class<?> getTipoDatoPropiedad(String propiedad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

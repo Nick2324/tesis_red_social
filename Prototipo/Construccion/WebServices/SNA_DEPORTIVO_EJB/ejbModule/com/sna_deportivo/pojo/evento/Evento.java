@@ -562,5 +562,37 @@ public class Evento extends ObjectSNSDeportivo {
 		throw new AtributoInexistenteException();
 	
 	}
+
+	@Override
+	public Class<?> getTipoDatoPropiedad(String propiedad) {
+		if(this.esAtributo(propiedad)){
+			if(propiedad.equals("id")){
+				return this.getId().getClass();
+			}else if(propiedad.equals("nombre")){
+				return this.getNombre().getClass();
+			}else if(propiedad.equals("descripcion")){
+				return this.getDescripcion().getClass();
+			}else if(propiedad.equals("fechaCreacion")){
+				return this.getFechaCreacion().getClass();
+			}else if(propiedad.equals("fechaInicio")){
+				return this.getFechaInicio().getClass();
+			}else if(propiedad.equals("fechaFinal")){
+				return this.getFechaFinal().getClass();
+			}else if(propiedad.equals("horaInicio")){
+				return this.getHoraInicio().getClass();
+			}else if(propiedad.equals("horaFinal")){
+				return this.getHoraFinal().getClass();
+			}else if(propiedad.equals("numMaxParticipantes")){
+				return this.getNumMaxParticipantes().getClass();
+			}else if(propiedad.equals("rangoMaxEdad")){
+				return this.getRangoMaxEdad().getClass();
+			}else if(propiedad.equals("rangoMinEdad")){
+				return this.getRangoMinEdad().getClass();
+			}else if(propiedad.equals("activo")){
+				return this.getActivo().getClass();
+			}
+		}
+		return null;
+	}
 	
 }

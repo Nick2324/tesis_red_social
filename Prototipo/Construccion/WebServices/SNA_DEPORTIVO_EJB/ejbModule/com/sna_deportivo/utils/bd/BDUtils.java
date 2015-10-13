@@ -17,6 +17,7 @@ import com.sna_deportivo.utils.gr.Constantes;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class BDUtils {
 
@@ -227,7 +228,7 @@ public class BDUtils {
 	
 	//SE PODRIA AGREGAR UN IGNORE
 	public static String condicionWhere(ObjectSNSDeportivo objetoRedSocial,
-										String identificador){
+										String identificador) throws ExcepcionJsonDeserializacion{
 		StringBuilder retorno = new StringBuilder(" WHERE ");
 		if(objetoRedSocial != null && identificador != null){
 			System.out.println("En where = "+objetoRedSocial.stringJson());
@@ -240,10 +241,24 @@ public class BDUtils {
 					System.out.println("Valor: "+(String)objetoJson.getPropiedades().get(propiedad)[0]);	
 					retorno.append(identificador);
 					retorno.append(".");
-					retorno.append(propiedad);
-					retorno.append(" = ");
-					retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
-					retorno.append(" AND ");
+					if(!propiedad.equals("null")){
+						if(objetoJson.getPropiedades().get(propiedad)[0].toString().equals("null")){
+							retorno.append("NOT HAS(");
+							retorno.append(propiedad);
+							retorno.append(")");
+						}else{
+							try {
+								retorno.append(JsonUtils.propiedadNulaTodoTipo(propiedad, 
+										objetoJson.getPropiedades().get(propiedad)[0].toString(), 
+										objetoRedSocial.getTipoDatoPropiedad(propiedad)).
+										replace(":", " = "));
+							} catch (ExcepcionJsonDeserializacion e) {
+								e.printStackTrace();
+								throw e;
+							}
+						}
+						retorno.append(" AND ");
+					}
 				}
 			}
 		}
@@ -257,17 +272,21 @@ public class BDUtils {
 	
 	//SE PODRIA TENER UN ARREGLO DE IGNORE
 	public static String producirSET(ObjectSNSDeportivo objetoRedSocial,
-								     String identificador){
+								     String identificador) throws ExcepcionJsonDeserializacion{
 		StringBuilder retorno = new StringBuilder("SET ");
 		retorno.append(identificador);
 		retorno.append("+=");
 		retorno.append("{");
-		
 		JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 		for(String propiedad:objetoJson.getPropiedades().keySet()){
-			retorno.append(propiedad);
-			retorno.append(":");
-			retorno.append(objetoJson.getPropiedades().get(propiedad)[0]);
+			try {
+				retorno.append(JsonUtils.propiedadNulaTodoTipo(propiedad, 
+						objetoJson.getPropiedades().get(propiedad)[0].toString(), 
+						objetoRedSocial.getTipoDatoPropiedad(propiedad)));
+			} catch (ExcepcionJsonDeserializacion e) {
+				e.printStackTrace();
+				throw e;
+			}
 			retorno.append(",");
 		}
 		retorno.delete(retorno.length() - 1, retorno.length());
@@ -277,9 +296,12 @@ public class BDUtils {
 	}
 	
 	public static JsonObject obtenerRestRegistro(Object registroResultadoRest){
-		JsonObject registro = (JsonObject)registroResultadoRest;
-		JsonObject rest = (JsonObject)registro.getPropiedades().get("rest")[0];
-		JsonObject restArreglo = (JsonObject)rest.getPropiedades().get("arreglo")[0];
+		JsonObject restArreglo = null;
+		try{
+			JsonObject registro = (JsonObject)registroResultadoRest;
+			JsonObject rest = (JsonObject)registro.getPropiedades().get("rest")[0];
+			restArreglo = (JsonObject)rest.getPropiedades().get("arreglo")[0];
+		}catch(Exception e){}
 		return restArreglo;
 	}
 	

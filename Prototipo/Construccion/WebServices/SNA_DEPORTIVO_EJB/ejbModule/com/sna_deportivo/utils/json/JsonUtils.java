@@ -169,6 +169,21 @@ public class JsonUtils {
 		return retorno;
 	}
 	
+	public static String propiedadNulaTodoTipo(String propiedad,String valor, Class<?> tipoValor)
+		throws ExcepcionJsonDeserializacion{
+		if(tipoValor != null && propiedad != null && 
+		   !propiedad.equals("null") && valor != null &&
+		   !valor.equals("null")){
+			if(tipoValor.equals(String.class)){
+				return propiedadNula(propiedad, valor, null, -1);
+			}else{
+				return propiedadNulaTDPrimitivo(propiedad, 
+							valor, null, -1);
+			}
+		}
+		throw new ExcepcionJsonDeserializacion();
+	}
+	
 	public static String propiedadNulaBackwards(Object obj){
 		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
 			return null;
@@ -177,7 +192,7 @@ public class JsonUtils {
 		}
 	}
 	
-	public static Object propiedadNulaBackwardsTDPrimi(Object obj,Class claseTDP){
+	public static Object propiedadNulaBackwardsTDPrimi(Object obj,Class<?> claseTDP){
 		if(obj == null || obj.toString() == null || obj.toString().equals("null"))
 			return null;
 		else{

@@ -219,9 +219,14 @@ public class MenuAdministradorEventos implements MenuEventos{
                         objetoTemporal);
 
                 //ARMANDO DATOS DE DEPORTE
+                objetoTemporal = new JSONObject();
+                arrayTemporal = new JSONArray();
                 arrayTemporal.put(new JSONObject(this.deporte.stringJson()));
                 objetoTemporal.put(this.deporte.getClass().getSimpleName(),arrayTemporal);
                 super.params.put(ConstantesDeportes.ELEMENTO_MENSAJE_SERVICIO_DEP, objetoTemporal);
+
+                Log.d("Nick:Actualiza", super.params.toString());
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }

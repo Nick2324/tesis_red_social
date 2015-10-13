@@ -40,5 +40,11 @@ public class Ubicacion extends ObjectSNSDeportivo{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Class<?> getTipoDatoPropiedad(String propiedad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

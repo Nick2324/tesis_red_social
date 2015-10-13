@@ -42,9 +42,9 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		return this.evento;
 	}
 	
-	public Evento[] getEventosDB() throws ProductorFactoryExcepcion,BDException{
+	public Evento[] getEventosDB() throws ProductorFactoryExcepcion,
+		BDException,ExcepcionJsonDeserializacion{
 		Evento[] eventos = null;
-		
 		String where = BDUtils.condicionWhere(this.evento,"evento");
 		if(where != null ||
 		   this.evento == null ||
@@ -107,18 +107,18 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	
 	}
 	
-	private String generalUpdate(Evento e){
+	private String generalUpdate(Evento e) throws ExcepcionJsonDeserializacion{
 		String set = BDUtils.producirSET(e,"evento");
 		StringBuilder query = new StringBuilder("MATCH (evento:");
 		query.append(Entidades.EVENTODEPORTIVO);
 		query.append("{id:");
-		query.append(this.evento.getId());
+		query.append("'"+this.evento.getId()+"'");
 		query.append("}) ");
 		query.append(set);
 		return query.toString();
 	}
 	
-	public void updateEventoDB() throws BDException{
+	public void updateEventoDB() throws BDException,ExcepcionJsonDeserializacion{
 		try {
 			BDUtils.ejecutarQueryREST(
 					this.generalUpdate(this.evento));
@@ -127,7 +127,7 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void updateEventoDB(Evento evento) throws BDException{
+	public void updateEventoDB(Evento evento) throws BDException,ExcepcionJsonDeserializacion{
 		try {
 			BDUtils.ejecutarQueryREST(this.generalUpdate(evento));
 		} catch (BDException e) {
@@ -135,7 +135,8 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void deleteEventoDB()throws BDException,ProductorFactoryExcepcion{
+	public void deleteEventoDB() throws BDException,
+					ProductorFactoryExcepcion,ExcepcionJsonDeserializacion{
 		Evento evento = null;
 		try {
 			evento = new ProductorFactoryEvento().

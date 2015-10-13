@@ -29,9 +29,6 @@ public class ObtenerDeporteEvento {
 				DeporteEvento de = new DeporteEvento();
 				de.setEvento((Evento)eventos.get(0));
 				ded.setObjetcSNSDeportivo(de);
-				System.out.println("hallando ded");
-				ded.encontrarObjetoManejado();
-				System.out.println("ded hallado");
 				try {
 					retorno = ded.obtenerDeporteEvento();
 				} catch (BDException e) {

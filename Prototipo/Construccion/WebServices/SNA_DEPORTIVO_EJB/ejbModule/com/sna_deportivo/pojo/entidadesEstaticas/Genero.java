@@ -112,4 +112,10 @@ public class Genero extends ObjectSNSDeportivo{
 		return igual;
 	}
 
+	@Override
+	public Class<?> getTipoDatoPropiedad(String propiedad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

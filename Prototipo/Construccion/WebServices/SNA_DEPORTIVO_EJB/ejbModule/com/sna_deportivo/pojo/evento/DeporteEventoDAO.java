@@ -163,22 +163,10 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			super.crearRelacion(relacionEventoNAria, 
 								new ProductorFactoryEvento());
 		}
-		if(de.getDeporte() != null){
-			relacionEventoNAria.setObjetoRelacion(de.getDeporte());
-			super.crearRelacion(relacionEventoNAria, 
-					new ProductorFactoryDeporte());
-		}
 		
-		if(de.getUbicacion() != null){
-			relacionEventoNAria.setObjetoRelacion(de.getUbicacion());
-			super.crearRelacion(relacionEventoNAria, 
-					null);
-		}
-		if(de.getGenero() != null){
-			relacionEventoNAria.setObjetoRelacion(de.getGenero());
-			super.crearRelacion(relacionEventoNAria, 
-								new ProductorFactoryGenerales());
-		}
+		this.crearDeporte();
+		this.crearGenero();
+		this.crearUbicacion();
 		
 		return this.objectSNSDeportivo;
 	}
@@ -459,10 +447,9 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	public boolean eliminarDeporte() throws BDException{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-					"deporteEvento",
+					"deporteEventoRelacion",
 					RelacionSNS.DIRECCION_ENTRADA,
-					((DeporteEvento)this.objectSNSDeportivo).
-					getDeporte());
+					new Deporte());
 			return this.eliminarRelacion(aEliminar,
 					new ProductorFactoryDeporte());
 		}
@@ -472,10 +459,9 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	public boolean eliminarGenero() throws BDException{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-					"deporteEvento",
+					"generoEventoRelacion",
 					RelacionSNS.DIRECCION_ENTRADA,
-					((DeporteEvento)this.objectSNSDeportivo).
-					getGenero());
+					new Genero());
 			return this.eliminarRelacion(aEliminar,
 					new ProductorFactoryGenerales());
 		}
@@ -485,10 +471,8 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	public boolean eliminarUbicacion() throws BDException{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
-					"deporteEvento",
-					RelacionSNS.DIRECCION_ENTRADA,
-					((DeporteEvento)this.objectSNSDeportivo).
-					getUbicacion());
+					"ubicacionEventoRelacion",
+					RelacionSNS.DIRECCION_ENTRADA);
 			/*return this.eliminarRelacion(aEliminar,
 					new ProductorFactoryUbicacion());*/
 		}
@@ -503,7 +487,9 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			if(this.eliminarDeporte() && 
 			   this.eliminarGenero() &&
 			   this.eliminarUbicacion()){
-				this.crearObjetoSNS();
+				this.crearDeporte();
+				this.crearGenero();
+				this.crearUbicacion();
 			}else{
 				return false;
 			}
@@ -612,6 +598,51 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			throw e;
 		}
 		return retorno;
+	}
+	
+	public void crearDeporte(){
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			RelacionSNS relacionEventoNAria = 
+					new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+									"descripcionEvento",
+									RelacionSNS.DIRECCION_ENTRADA);
+			if(de.getDeporte() != null){
+				relacionEventoNAria.setObjetoRelacion(de.getDeporte());
+				super.crearRelacion(relacionEventoNAria, 
+						new ProductorFactoryDeporte());
+			}
+		}
+	}
+	
+	public void crearGenero(){
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			RelacionSNS relacionEventoNAria = 
+					new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+									"descripcionEvento",
+									RelacionSNS.DIRECCION_ENTRADA);
+			if(de.getGenero() != null){
+				relacionEventoNAria.setObjetoRelacion(de.getGenero());
+				super.crearRelacion(relacionEventoNAria, 
+									new ProductorFactoryGenerales());
+			}
+		}
+	}
+	
+	public void crearUbicacion(){
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			RelacionSNS relacionEventoNAria = 
+					new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+									"descripcionEvento",
+									RelacionSNS.DIRECCION_ENTRADA);
+			if(de.getUbicacion() != null){
+				relacionEventoNAria.setObjetoRelacion(de.getUbicacion());
+				super.crearRelacion(relacionEventoNAria, 
+						null);
+			}
+		}
 	}
 
 }

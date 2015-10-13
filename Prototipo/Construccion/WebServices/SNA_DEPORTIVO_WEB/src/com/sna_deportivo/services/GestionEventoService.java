@@ -74,6 +74,9 @@ public class GestionEventoService {
 			this.gestionEvento.actualizarEvento(tipoEvento, evento);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(500);
 		}
 	}
 	
@@ -85,12 +88,14 @@ public class GestionEventoService {
 											 		 @PathParam("id") String idEvento,
 											 		 String body){
 		try{
+			System.out.println(body);
 			new ActualizarEvento().actualizarEvento(tipoEvento,
 													idEvento,
 													body);
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 		
@@ -114,6 +119,9 @@ public class GestionEventoService {
 			this.gestionEvento.desactivarEvento(tipoEvento, evento);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(500);
 		}
 		
 		return new ResponseGenerico("200","Evento cancelado con exito");
@@ -184,6 +192,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -202,6 +211,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -244,6 +254,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -264,6 +275,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -306,6 +318,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -325,6 +338,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -366,6 +380,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}
@@ -384,6 +399,7 @@ public class GestionEventoService {
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
+			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
 	}

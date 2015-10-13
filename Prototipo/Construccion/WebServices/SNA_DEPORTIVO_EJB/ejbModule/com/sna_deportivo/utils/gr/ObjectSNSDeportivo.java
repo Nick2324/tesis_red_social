@@ -17,6 +17,8 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 	
 	public abstract ObjectSNSDeportivo setNullObject();
 	
+	public abstract Class<?> getTipoDatoPropiedad(String propiedad);
+	
 	public void retornoToString(String[] aRetornar){
 		this.aRetornar = aRetornar;
 	}

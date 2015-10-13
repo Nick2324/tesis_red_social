@@ -30,7 +30,7 @@ public class ActualizarEvento {
 			ArrayList<ObjectSNSDeportivo> eventos =
 					JsonUtils.convertirMensajeJsonAObjectSNS(body, 
 							ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE, 
-							new ProductorFactoryDeporte());
+							new ProductorFactoryEvento());
 			ArrayList<ObjectSNSDeportivo> deportes =
 					JsonUtils.convertirMensajeJsonAObjectSNS(body, 
 							ConstantesDeportes.ELEMENTO_MENSAJE_SERVICIO_DEP, 
@@ -80,6 +80,10 @@ public class ActualizarEvento {
 			e.printStackTrace();
 			throw e;
 		} catch(BDException e){
+			e.printStackTrace();
+			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
 			throw e;
 		}
 		return retorno;

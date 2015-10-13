@@ -295,4 +295,10 @@ public class Usuario extends ObjectSNSDeportivo {
 		throw new AtributoInexistenteException();
 	}
 
+	@Override
+	public Class<?> getTipoDatoPropiedad(String propiedad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

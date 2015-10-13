@@ -21,7 +21,8 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 		this.deporte = deporte;
 	}
 	
-	public Deporte[] getDeportesDB() throws BDException{
+	public Deporte[] getDeportesDB() throws 
+			BDException,ExcepcionJsonDeserializacion{
 		Deporte[] deportes = null;
 		String where = BDUtils.condicionWhere(this.deporte, "deporte");
 		if(where != null || this.deporte == null){
@@ -52,7 +53,7 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 		return deportes;
 	}
 	
-	public String generalUpdate(Deporte deporte){
+	public String generalUpdate(Deporte deporte) throws ExcepcionJsonDeserializacion{
 		String set = BDUtils.producirSET(deporte, "deporte");
 		StringBuilder query = new StringBuilder("MATCH (deporte:");
 		query.append(Entidades.DEPORTE);
@@ -63,7 +64,7 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 		return query.toString();
 	}
 	
-	public void updateDeporteDB() throws BDException{
+	public void updateDeporteDB() throws BDException,ExcepcionJsonDeserializacion{
 		try{
 			BDUtils.ejecutarQueryREST(
 					this.generalUpdate(this.deporte));
@@ -72,7 +73,7 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void updateDeporteDB(Deporte deporte) throws BDException{
+	public void updateDeporteDB(Deporte deporte) throws BDException,ExcepcionJsonDeserializacion{
 		try{
 			BDUtils.ejecutarQueryREST(this.generalUpdate(deporte));
 		}catch(BDException e){
@@ -80,7 +81,7 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void deleteDeporteDB() throws BDException{
+	public void deleteDeporteDB() throws BDException,ExcepcionJsonDeserializacion{
 		try{
 			Deporte deporte = new Deporte();
 			deporte.setId(this.deporte.getId());

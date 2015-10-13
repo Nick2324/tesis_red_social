@@ -4,6 +4,7 @@ import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class DAOUsuario extends ObjectSNSDeportivoDAO{
 	
@@ -16,7 +17,7 @@ public class DAOUsuario extends ObjectSNSDeportivoDAO{
 		this.setUpDAOGeneral();
 	}
 	
-	public Usuario[] getUsuariosDB() throws BDException{
+	public Usuario[] getUsuariosDB() throws BDException,ExcepcionJsonDeserializacion{
 		ObjectSNSDeportivo[] snsArray =
 				super.getObjetoSNSDeportivoDB();
 		Usuario[] usuarios = new Usuario[snsArray.length];

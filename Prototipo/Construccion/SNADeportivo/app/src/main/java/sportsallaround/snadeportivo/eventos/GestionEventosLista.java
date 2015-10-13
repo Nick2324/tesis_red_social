@@ -171,7 +171,6 @@ public class GestionEventosLista extends Activity
                         if(respuesta.getString("datosExtra") != null) {
                             this.extras.putString(ConstantesEvento.DEPORTE_MANEJADO,
                                     respuesta.getString("datosExtra"));
-                            Log.d("Nick:Deporte",this.extras.getString(ConstantesEvento.DEPORTE_MANEJADO));
                         }
                     }
                     if(peticionesEncadenadas.getString("Genero") != null) {
@@ -181,7 +180,6 @@ public class GestionEventosLista extends Activity
                         if(respuesta.getString("datosExtra") != null) {
                             this.extras.putString(ConstantesEvento.GENERO_MANEJADO,
                                     respuesta.getString("datosExtra"));
-                            Log.d("Nick:Genero",this.extras.getString(ConstantesEvento.GENERO_MANEJADO));
                         }
                     }
                     Intent intent = new Intent(this.contexto, InformacionGeneralEvento.class);

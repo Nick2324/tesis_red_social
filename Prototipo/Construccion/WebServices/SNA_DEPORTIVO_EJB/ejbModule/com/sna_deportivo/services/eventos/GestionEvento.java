@@ -7,13 +7,15 @@ import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionEvento {
 	
 	public GestionEvento(){}
 	
 	public String consultarEventos(String tipo, Evento evento)
-									 throws BDException, ProductorFactoryExcepcion{
+									 throws BDException, 
+									 ProductorFactoryExcepcion,ExcepcionJsonDeserializacion{
 		DAOEvento accesoEvento;
 		try {
 			accesoEvento = new ProductorFactoryEvento().
@@ -50,7 +52,7 @@ public class GestionEvento {
 	
 	public void actualizarEvento(String tipo,
 								 Evento evento)
-								 throws BDException, ProductorFactoryExcepcion{
+								 throws BDException, ProductorFactoryExcepcion,ExcepcionJsonDeserializacion{
 		DAOEvento accesoEvento = null;
 		try {
 			accesoEvento = new ProductorFactoryEvento().
@@ -68,7 +70,7 @@ public class GestionEvento {
 	
 	public void desactivarEvento(String tipo,
 							     Evento evento) 
-						         throws BDException, ProductorFactoryExcepcion{
+						         throws BDException, ProductorFactoryExcepcion,ExcepcionJsonDeserializacion{
 		DAOEvento accesoEvento = null;
 		try {
 			accesoEvento = new ProductorFactoryEvento().

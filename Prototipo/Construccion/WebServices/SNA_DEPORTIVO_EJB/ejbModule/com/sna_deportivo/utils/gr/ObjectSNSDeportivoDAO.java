@@ -19,7 +19,8 @@ public abstract class ObjectSNSDeportivoDAO {
 		this.setUpDAOGeneral();
 	}
 	
-	public ObjectSNSDeportivo[] getObjetoSNSDeportivoDB() throws BDException{
+	public ObjectSNSDeportivo[] getObjetoSNSDeportivoDB() throws 
+		BDException,ExcepcionJsonDeserializacion{
 		ObjectSNSDeportivo[] objetos = null;
 		String where = BDUtils.condicionWhere(this.objectSNSDeportivo, identificadorQueries);
 		if(where != null || this.objectSNSDeportivo == null){

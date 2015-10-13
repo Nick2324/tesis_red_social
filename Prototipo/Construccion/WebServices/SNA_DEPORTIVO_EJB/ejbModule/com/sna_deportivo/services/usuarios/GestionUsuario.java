@@ -30,7 +30,8 @@ import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionUsuario {
 	
-	public String consultarUsuarios(Usuario usuario) throws BDException{
+	public String consultarUsuarios(Usuario usuario) throws 
+		BDException,ExcepcionJsonDeserializacion{
 		try{
 			DAOUsuario accesoUsuario = new DAOUsuario(usuario);
 			return JsonUtils.arrayObjectSNSToStringJson(
