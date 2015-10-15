@@ -495,4 +495,8 @@ public class GestionUsuario {
 		return eventos;
 	}
 
+	public String consultarEventosDeUsuarioAsistente(String tipoEvento,String body){
+		return null;
+	}
+	
 }

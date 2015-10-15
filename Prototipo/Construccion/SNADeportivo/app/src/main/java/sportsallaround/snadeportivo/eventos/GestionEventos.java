@@ -4,7 +4,6 @@ package sportsallaround.snadeportivo.eventos;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +50,35 @@ public class GestionEventos extends Fragment {
                 Bundle extra = new Bundle();
                 extra.putString(ConstantesEvento.OWNER_EVENTO,
                         ConstantesEvento.NO_OWNER);
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.POSIBLE_PARTICIPANTE_EVENTO);
                 startActivity(formarIntent(GestionEventosLista.class, extra));
+            }
+        });
+
+        Button eventosParticipante = (Button)getView().
+                findViewById(R.id.button_eventos_participante);
+        eventosParticipante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle extra = new Bundle();
+                extra.putString(ConstantesEvento.OWNER_EVENTO,
+                        ConstantesEvento.NO_OWNER);
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.PARTICIPANTE_EVENTO);
+                startActivity(formarIntent(GestionEventosLista.class, extra));
+            }
+        });
+
+        Button eventosInvitaciones = (Button)getView().
+                findViewById(R.id.button_mis_invitaciones_eventos);
+        eventosInvitaciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle extra = new Bundle();
+                extra.putString(Constants.FUNCIONALIDAD,
+                        ConstantesEvento.MIS_INVITACIONES_EVENTO);
+                startActivity(formarIntent(ListadoInvitacionesEvento.class,extra));
             }
         });
     }

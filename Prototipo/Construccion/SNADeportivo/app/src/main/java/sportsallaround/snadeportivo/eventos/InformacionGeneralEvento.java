@@ -89,7 +89,7 @@ public class InformacionGeneralEvento extends Activity
         if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD) != null){
             String funcionalidad = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                     getString(Constants.FUNCIONALIDAD);
-            if(funcionalidad.equals(ConstantesEvento.PARTICIPANTE_EVENTO)){
+            if(funcionalidad.equals(ConstantesEvento.POSIBLE_PARTICIPANTE_EVENTO)){
                 ((EditText)findViewById(R.id.nombre_evento_info_general)).setEnabled(false);
                 ((EditText)findViewById(R.id.descripcion_evento_info_general)).setEnabled(false);
                 ((EditText)findViewById(R.id.fecha_inicio_evento_info_general)).setEnabled(false);

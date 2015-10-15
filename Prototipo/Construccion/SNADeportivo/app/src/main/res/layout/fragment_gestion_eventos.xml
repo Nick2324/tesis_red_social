@@ -18,4 +18,18 @@
         android:id="@+id/button_eventos_sna"
         android:text="@string/boton_explorar_eventos"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:id="@+id/button_eventos_participante"
+        android:text="@string/button_eventos_participante"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:id="@+id/button_mis_invitaciones_eventos"
+        android:text="@string/button_mis_invitaciones_evento"/>
+
 </LinearLayout>

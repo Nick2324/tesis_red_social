@@ -80,4 +80,17 @@
     <string name="alert_actualiza_evento_tit">Actualización de evento</string>
     <string name="alert_actualiza_evento_msn">¿Desea actualizar el evento?</string>
     <string name="alert_actualiza_evento_err_msn">Ocurrió un error al intentar actualizar el evento</string>
+    <string name="button_mis_invitaciones_evento">Invitaciones a eventos</string>
+    <string name="button_eventos_participante">Eventos a los que asistiré</string>
+    <string name="titulo_invitacion_eventos_participante">Invitaciones</string>
+    <string name="alert_selecciona_invitacion_tit">Manejar invitación</string>
+    <string name="alert_button_aceptar_invitacion">Aceptar invitación</string>
+    <string name="alert_button_eliminar_invitacion">Eliminar invitación</string>
+    <string name="toast_listado_invitaciones_vacio">Cero invitaciones</string>
+    <string name="toast_invitacion_eliminada_exito">Invitación eliminada con éxito</string>
+    <string name="alert_elimina_invitacion_tit">Eliminación de invitación</string>
+    <string name="alert_elimina_invitacion_err_msn">Ocurrió un error al intentar eliminar la invitación al evento</string>
+    <string name="alert_acepta_invitacion_tit">Aceptación de invitación</string>
+    <string name="alert_acepta_invitacion_err_msn">Ocurrió un error al intentar aceptar la invitación al evento</string>
+    <string name="toast_invitacion_aceptada_exito">Aceptación de invitación realizada con éxito</string>
 </resources>

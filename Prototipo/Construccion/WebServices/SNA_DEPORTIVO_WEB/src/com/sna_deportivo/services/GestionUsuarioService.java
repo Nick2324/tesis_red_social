@@ -309,9 +309,16 @@ public class GestionUsuarioService {
 	@Path("{id}/eventos/{tipoEvento}")
 	public String consultarEventosUsuario(@PathParam("id") String idUsuario,
 										  @PathParam("tipoEvento") String tipoEvento,
+										  @QueryParam("propietario") String propietario,
 										  String body){
 		try{
-			return this.servicio.consultarEventosDeUsuario(tipoEvento, body);
+			if(propietario == null || propietario.equals("Y")){
+				return this.servicio.consultarEventosDeUsuario(tipoEvento, body);
+			}else if(propietario.equals("N")){
+				return this.servicio.consultarEventosDeUsuarioAsistente(tipoEvento, body);
+			}else{
+				throw new WebApplicationException(404);
+			}
 		}catch(WebApplicationException e){
 			throw e;
 		}

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
@@ -252,8 +253,29 @@ public class GestionEventosLista extends Activity
             if(ConstantesEvento.NO_OWNER.equals(
                     getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
                     .getString(ConstantesEvento.OWNER_EVENTO))) {
-                new PeticionEventos(this.contexto,
-                        (TiposEventos) objetoSeleccionado).ejecutarPeticion();
+                if(ConstantesEvento.POSIBLE_PARTICIPANTE_EVENTO.equals(
+                        getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
+                                .getString(Constants.FUNCIONALIDAD))) {
+                    new PeticionEventos(this.contexto,
+                            (TiposEventos) objetoSeleccionado).ejecutarPeticion();
+                }else if(ConstantesEvento.PARTICIPANTE_EVENTO.equals(
+                        getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
+                                .getString(Constants.FUNCIONALIDAD))){
+                    Usuario usuario = (Usuario)new ProductorFactoryUsuario().
+                            producirFacObjetoSNS(Usuario.class.getSimpleName()).getObjetoSNS();
+                    try {
+                        usuario.deserializarJson((JsonObject) JsonUtils.JsonStringToObject(
+                                getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
+                                        getString(Constants.USUARIO)
+                        ));
+                        new PeticionEventosAsistente(this.contexto,
+                                (TiposEventos) objetoSeleccionado,usuario).
+                                ejecutarPeticion();
+                        Toast.makeText(this.contexto, "Elijo mis eventos participante", Toast.LENGTH_LONG).show();
+                    }catch(ExcepcionJsonDeserializacion e){
+                        e.printStackTrace();
+                    }
+                }
             }else if(ConstantesEvento.OWNER.equals(
                     getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
                             .getString(ConstantesEvento.OWNER_EVENTO))){
@@ -267,25 +289,23 @@ public class GestionEventosLista extends Activity
                     new PeticionEventos(this.contexto,
                             (TiposEventos) objetoSeleccionado,
                             usuario).ejecutarPeticion();
-                } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
-                    new AlertDialog.Builder(this.contexto).
-                            setTitle(this.contexto.getResources().
-                                    getString(R.string.alert_lista_eventos_err_tit))
-                            .setMessage(this.contexto.getResources().
-                                    getString(R.string.alert_lista_eventos_err_msn)).
-                            setNeutralButton(this.contexto.getResources()
-                                    .getString(R.string.BOTON_NEUTRAL), null).create().show();
-                    excepcionJsonDeserializacion.printStackTrace();
+                } catch (ExcepcionJsonDeserializacion e) {
+                    this.alertError();
+                    e.printStackTrace();
                 }
             }else{
-                new AlertDialog.Builder(this.contexto).
-                        setTitle(this.contexto.getResources().
-                                getString(R.string.alert_lista_eventos_err_tit))
-                        .setMessage(this.contexto.getResources().
-                                getString(R.string.alert_lista_eventos_err_msn)).
-                        setNeutralButton(this.contexto.getResources()
-                                .getString(R.string.BOTON_NEUTRAL), null).create().show();
+                this.alertError();
             }
+        }
+
+        private void alertError(){
+            new AlertDialog.Builder(this.contexto).
+                    setTitle(this.contexto.getResources().
+                            getString(R.string.alert_lista_eventos_err_tit))
+                    .setMessage(this.contexto.getResources().
+                            getString(R.string.alert_lista_eventos_err_msn)).
+                    setNeutralButton(this.contexto.getResources()
+                            .getString(R.string.BOTON_NEUTRAL), null).create().show();
         }
 
         @Override
@@ -294,9 +314,9 @@ public class GestionEventosLista extends Activity
 
     private class PeticionEventos extends Peticion {
 
-        private Context contexto;
-        private TiposEventos tipoEvento;
-        private Usuario usuario;
+        protected Context contexto;
+        protected TiposEventos tipoEvento;
+        protected Usuario usuario;
 
         public PeticionEventos(Context contexto,TiposEventos tipoEvento){
             this.contexto = contexto;
@@ -407,6 +427,23 @@ public class GestionEventosLista extends Activity
                     ((ListaConFiltro) getFragmentManager().findFragmentById(R.id.fragment_lista_eventos)).
                             limpiarLista();
                 }
+            }
+        }
+    }
+
+    private class PeticionEventosAsistente extends PeticionEventos{
+
+
+        public PeticionEventosAsistente(Context contexto, TiposEventos tipoEvento, Usuario usuario) {
+            super(contexto, tipoEvento, usuario);
+        }
+
+        @Override
+        public void calcularServicio(){
+            if(super.usuario != null){
+                super.servicio = Constants.SERVICES_PATH_USUARIOS+
+                        Constants.SERVICES_PATH_EVENTOS +
+                        super.tipoEvento.getServicio() + "?propietario=N";
             }
         }
     }
@@ -530,8 +567,6 @@ public class GestionEventosLista extends Activity
                         extra.getString(ConstantesEvento.SERVICIO_EVENTO),extra));
                 lpe.ejecutarPeticion();
             }else if(ConstantesEvento.NO_OWNER.equals(extra.getString(ConstantesEvento.OWNER_EVENTO))){
-                extra.putString(Constants.FUNCIONALIDAD,
-                        ConstantesEvento.PARTICIPANTE_EVENTO);
                 extra.putString(ConstantesEvento.TIPO_MENU,
                         ConstantesEvento.MENU_PART_EVENTOS);
                 Intent intent = new Intent(this,PerfilEvento.class);

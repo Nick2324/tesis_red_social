@@ -11,7 +11,9 @@ public class ConstantesEvento {
     public static final String OWNER = "OW";
 
     //FUNCIONALIDADES DE EVENTOS DE PARTICIPANTES
-    public static final String PARTICIPANTE_EVENTO = "PE";
+    public static final String POSIBLE_PARTICIPANTE_EVENTO = "PPE";
+    public static final String PARTICIPANTE_EVENTO ="PE";
+    public static final String MIS_INVITACIONES_EVENTO = "MIE";
     public static final String NO_OWNER = "NOW";
 
     //TIPOS DE MENU DE EVENTOS

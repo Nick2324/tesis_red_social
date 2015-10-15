@@ -83,7 +83,7 @@ public class InformacionParticipantes extends Activity
         if(getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD) != null){
             String funcionalidad = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                     getString(Constants.FUNCIONALIDAD);
-            if(funcionalidad.equals(ConstantesEvento.PARTICIPANTE_EVENTO)){
+            if(funcionalidad.equals(ConstantesEvento.POSIBLE_PARTICIPANTE_EVENTO)){
                 ((EditText)findViewById(R.id.numero_participantes_evento_info_general)).setClickable(false);
                 ((EditText)findViewById(R.id.rango_minimo_edad_evento_info_general)).setEnabled(false);
                 ((EditText)findViewById(R.id.rango_maximo_edad_evento_info_general)).setEnabled(false);

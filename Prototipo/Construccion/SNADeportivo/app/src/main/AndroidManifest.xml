@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -81,12 +80,12 @@
         <activity
             android:name=".eventos.ManejoParticipantes"
             android:label="@string/title_activity_manejo_participantes"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".eventos.ListadoParticipantes"
             android:label="@string/title_activity_listado_participantes"
-            android:windowSoftInputMode="stateHidden">
+            android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
             android:name=".eventos.MenuAdministrarInvolucrados"
@@ -95,6 +94,10 @@
         <activity
             android:name=".eventos.PerfilEvento"
             android:label="@string/title_activity_perfil_evento" >
+        </activity>
+        <activity
+            android:name=".eventos.ListadoInvitacionesEvento"
+            android:label="@string/title_activity_listado_invitaciones_evento" >
         </activity>
     </application>
 
