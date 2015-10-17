@@ -36,8 +36,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/SNA_DEPORTIVO_EJB.jar')
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.google.android.gms:play-services-maps:7.5.0'
     compile 'org.jboss.resteasy.mobile:resteasy-mobile:1.0.0'
-    compile files('libs/SNA_DEPORTIVO_EJB.jar')
+    compile 'com.google.android.gms:play-services:7.5.0'
 }

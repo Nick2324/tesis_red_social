@@ -1,5 +1,8 @@
 package sportsallaround.snadeportivo.deportes.pojos;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -8,7 +11,7 @@ import sportsallaround.utils.generales.MediaTypeTranslator;
 /**
  * Created by luis on 7/13/15.
  */
-public class Deporte implements MediaTypeTranslator {
+public class Deporte implements MediaTypeTranslator, Parcelable {
 
     private int id;
     private String nombre;
@@ -24,6 +27,15 @@ public class Deporte implements MediaTypeTranslator {
         fechaCreacion = object.getString("fechaCreacion");
         historia = object.getString("historia");
         esOlimpico = object.getString("esOlimpico").equals("true");
+    }
+
+    public Deporte(Parcel in){
+        id = in.readInt();
+        nombre = in.readString();
+        descripcion = in.readString();
+        fechaCreacion = in.readString();
+        historia = in.readString();
+        esOlimpico = in.readByte() == 1;
     }
 
     public int getId() {
@@ -78,4 +90,30 @@ public class Deporte implements MediaTypeTranslator {
     public String toJSONObject() {
         return "{" + "\"id\":" + id + ",\"nombre\":" + "\"" + nombre + "\",\"descripcion\":" + "\"" + descripcion + "\",\"fechaCreacion\":" + "\"" + fechaCreacion + "\",\"historia\":" + "\"" + historia + "\",\"esOlimpico\":" + "\"" + (esOlimpico ? "true" : "false") + "\"}";
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(nombre);
+        dest.writeString(descripcion);
+        dest.writeString(fechaCreacion);
+        dest.writeString(historia);
+        dest.writeByte((byte) (esOlimpico ? 1 : 0));
+    }
+
+    public static final Parcelable.Creator<Deporte> CREATOR = new Parcelable.Creator<Deporte>(){
+        public Deporte createFromParcel(Parcel in) {
+            return new Deporte(in);
+        }
+
+        @Override
+        public Deporte[] newArray(int size) {
+            return new Deporte[size];
+        }
+    };
 }

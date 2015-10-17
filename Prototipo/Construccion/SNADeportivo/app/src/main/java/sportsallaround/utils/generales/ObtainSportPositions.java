@@ -7,6 +7,7 @@ import sportsallaround.snadeportivo.deportes.pojos.PosicionDeporte;
  */
 public interface ObtainSportPositions {
 
+
     public void setSportPositions (PosicionDeporte[] posiciones);
 
     public PosicionDeporte[] getSportPositions();

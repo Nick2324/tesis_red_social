@@ -26,7 +26,6 @@
 
     <string name="title_activity_error">Uups...</string>
     <string name="title_activity_user_add_practiced_sport">UserAddPracticedSport</string>
-
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_informacion_participantes">InformacionParticipantes</string>
@@ -39,4 +38,7 @@
     <string name="title_activity_listado_invitaciones_evento">ListadoInvitacionesEvento</string>
     <string name="title_activity_ubicaciones_evento">UbicacionesEvento</string>
     <string name="title_activity_listado_invitar_aparticipar">ListadoInvitarAParticipar</string>
+    <string name="title_activity_user_update_practiced_sport">UserUpdatePracticedSport</string>
+    <string name="title_activity_nearby_locations">Map</string>
+    <string name="title_activity_create_location">CreateLocationActivity</string>
 </resources>

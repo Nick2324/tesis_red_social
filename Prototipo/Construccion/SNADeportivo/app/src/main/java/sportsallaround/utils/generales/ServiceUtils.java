@@ -34,7 +34,6 @@ public class ServiceUtils {
         try {
             URL completeUrl = null;
 
-            //completeUrl = new URL(Constants.ROOT_URL + serviceURL);
             if(parametros != null && method.equals("GET") && !conBody){
                 Iterator<String> it = parametros.keys();
                 StringBuilder queryParams = new StringBuilder();

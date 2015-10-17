@@ -62,3 +62,44 @@ match (d:E_Deporte {id:2}),(p:E_Posicion{id:11}) create (d)-[:R_PosicionDeporte 
 
 match (d:E_Deporte {id:1}),(p:E_Posicion{id:1}) create (d)-[:R_PosicionDeporte {id:11}]->(p)
 
+create (:E_Pais {id:1,nombre:"Colombia",coordenada:"4.1156602,-72.953885"})
+create (:E_Pais {id:2,nombre:"Venezuela",coordenada:"6.6571135,-66.6146706"})
+create (:E_Pais {id:3,nombre:"Ecuador",coordenada:"-1.7864639,-78.1368875"})
+
+-- create (:E_Pais {id:4,nombre:"Argentina",coordenada:"-38.4191625,-63.5989206"})
+-- create (:E_Pais {id:5,nombre:"Chile",coordenada:"-36.7394323,-71.0565808"})
+-- create (:E_Pais {id:6,nombre:"Peru",coordenada:"-9.1951882,-74.9904165"})
+-- create (:E_Pais {id:7,nombre:"Bolivia",coordenada:"-16.2837064,-63.5493965"})
+-- create (:E_Pais {id:8,nombre:"Brasil",coordenada:"-14.2392976,-53.1805017"})
+-- create (:E_Pais {id:9,nombre:"Paraguay",coordenada:"-23.4347091,-58.4483504"})
+-- create (:E_Pais {id:10,nombre:"Uruaguay",coordenada:"-32.5583167,-55.8117575"})
+
+create (:E_Ciudad{id:1,nombre:"Bogota",zipCode:0,coordenada:"4.6482975,-74.107807"})
+create (:E_Ciudad{id:2,nombre:"Medellin",zipCode:0,coordenada:"6.268678,-75.596392"})
+create (:E_Ciudad{id:3,nombre:"Cali",zipCode:0,coordenada:"3.4105946,-76.5831221"})
+create (:E_Ciudad{id:4,nombre:"Barranquilla",zipCode:0,coordenada:"10.9916034,-74.8390048"})
+
+create (:E_Ciudad{id:5,nombre:"Caracas",zipCode:0,coordenada:"10.4683918,-66.8903658"})
+create (:E_Ciudad{id:6,nombre:"Barquisimeto",zipCode:0,coordenada:"10.0618664,-69.3628478"})
+create (:E_Ciudad{id:7,nombre:"Maracaibo",zipCode:0,coordenada:"10.6335713,-71.6769563"})
+create (:E_Ciudad{id:8,nombre:"Valencia",zipCode:0,coordenada:"10.1725819,-67.9942239"})
+
+create (:E_Ciudad{id:9,nombre:"Quito",zipCode:0,coordenada:"-0.1865943,-78.4305382"})
+create (:E_Ciudad{id:10,nombre:"Guayaquil",zipCode:0,coordenada:"-2.1523874,-79.9799096"})
+create (:E_Ciudad{id:11,nombre:"Manta",zipCode:0,coordenada:"-0.9684814,-80.7095146"})
+create (:E_Ciudad{id:12,nombre:"Machala",zipCode:0,coordenada:"-3.2568595,-79.960738"})
+
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:1}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:2}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:3}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:4}) create (p)-[:R_PaisCiudad]->(c)
+
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:5}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:6}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:7}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:8}) create (p)-[:R_PaisCiudad]->(c)
+
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:9}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:10}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:11}) create (p)-[:R_PaisCiudad]->(c)
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:12}) create (p)-[:R_PaisCiudad]->(c)

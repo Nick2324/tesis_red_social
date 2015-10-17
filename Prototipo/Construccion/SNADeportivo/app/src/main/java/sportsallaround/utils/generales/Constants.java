@@ -46,6 +46,8 @@ public class Constants {
     public static final String SERVICES_OBTENER_POSICIONES_DEPORTE = "GestionUsuarioService/obtenerPosicionesDeporte";
     public static final String SERVICES_ADICIONAR_DEPORTE_PRACTICADO = "GestionUsuarioService/adicionarDeportePracticado";
     public static final String SERVICES_ELIMINAR_DEPORTE_PRACTICADO = "GestionUsuarioService/eliminarDeportePracticado";
+    public static final String SERVICES_ACTUALIZAR_DEPORTE_PRACTICADO = "GestionUsuarioService/actualizarDeportePracticado";
+
 
     public static final String DATE_FORMAT = "dd/MM/yyyy";
     public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -55,5 +57,8 @@ public class Constants {
     public static final String DATOS_FUNCIONALIDAD = "datos_funcionalidad";
     public static final String FUNCIONALIDAD = "funcionalidad";
     public static final String USUARIO = "user";
+
+    public static final String SERVICES_CREAR_UBICACION ="GestionUbicacionService/crearLugarPractica";
+    public static final String SERVICES_OBTENER_UBICACIONES = "GestionUbicacionService/obtenerLugaresPractica";
 
 }

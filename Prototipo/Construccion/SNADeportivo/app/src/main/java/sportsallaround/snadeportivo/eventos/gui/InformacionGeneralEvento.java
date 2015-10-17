@@ -338,23 +338,25 @@ public class InformacionGeneralEvento extends Activity
 
     public void setUpObjetos(){
         //EVENTO
-        if(getIntent().getExtras().
-                getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                ConstantesEvento.EVENTO_MANEJADO) != null){
-            try {
-                this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
-                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                        ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
-                this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
-                        getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
-                        ConstantesEvento.EVENTO_MANEJADO)));
-            } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
-                excepcionJsonDeserializacion.printStackTrace();
-            } catch (ProductorFactoryExcepcion productorFactoryExcepcion) {
-                productorFactoryExcepcion.printStackTrace();
-            }
-        }
+        try {
+            this.evento = (Evento) new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
+                    getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                    ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
+            if (getIntent().getExtras().
+                    getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                    ConstantesEvento.EVENTO_MANEJADO) != null) {
+                try {
 
+                    this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                            getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
+                            ConstantesEvento.EVENTO_MANEJADO)));
+                } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
+                    excepcionJsonDeserializacion.printStackTrace();
+                }
+            }
+        }catch (ProductorFactoryExcepcion productorFactoryExcepcion) {
+            productorFactoryExcepcion.printStackTrace();
+        }
         //DEPORTE
         this.deporte = new Deporte();
         if(getIntent().getExtras().

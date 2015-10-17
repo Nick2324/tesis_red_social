@@ -32,9 +32,10 @@ import sportsallaround.snadeportivo.usuarios.tasks.RetreiveSports;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveSportsPositions;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ObtainSportPositions;
+import sportsallaround.utils.generales.ObtainSports;
 import sportsallaround.utils.generales.ServiceUtils;
 
-public class UserAddPracticedSport extends ActionBarActivity implements ObtainSportPositions {
+public class UserAddPracticedSport extends ActionBarActivity implements ObtainSports, ObtainSportPositions {
 
     private Usuario user;
     private Spinner availableSports;
@@ -54,7 +55,7 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
         layoutPosiciones = (LinearLayout) findViewById(R.id.available_sport_positions);
 
         try {
-            new RetreiveSports(availableSports, this).execute((Void) null).get();
+            new RetreiveSports(this).execute((Void) null).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -162,6 +163,25 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
         nuevoDeporteUsuario.setUser(user.getUsuario());
 
         new AddPracticedSportTask(getApplicationContext()).execute(nuevoDeporteUsuario);
+    }
+
+    @Override
+    public void setSports(Deporte[] deportes) {
+        if (deportes != null) {
+            String[] sDeportes = new String[deportes.length];
+            for(int i=0;i<deportes.length;i++)
+                sDeportes[i] = deportes[i].getNombre();
+            ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
+                    android.R.layout.simple_spinner_dropdown_item,
+                    sDeportes);
+            availableSports.setAdapter(spinnerArrayAdapter);
+            availableSports.setTag(deportes);
+        }
+    }
+
+    @Override
+    public Deporte[] getSports() {
+        return new Deporte[0];
     }
 
     public class AddPracticedSportTask extends AsyncTask<DeportePracticadoUsuario, Void, Boolean>{
