@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -31,11 +30,9 @@ import sportsallaround.snadeportivo.deportes.pojos.PosicionDeporte;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveSports;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveSportsPositions;
-import sportsallaround.snadeportivo.usuarios.tasks.RetreiveUserData;
-import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.ObtainSportPositions;
-import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.ObtainSportPositions;
+import sportsallaround.utils.generales.ServiceUtils;
 
 public class UserAddPracticedSport extends ActionBarActivity implements ObtainSportPositions {
 

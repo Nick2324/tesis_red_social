@@ -22,11 +22,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.security.Key;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.utils.Peticion;
+import sportsallaround.utils.generales.Peticion;
 
 public class SpinnerDesdeBD extends Fragment {
 

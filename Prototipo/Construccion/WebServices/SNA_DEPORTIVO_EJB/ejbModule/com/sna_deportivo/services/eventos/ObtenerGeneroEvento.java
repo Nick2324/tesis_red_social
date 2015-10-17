@@ -10,6 +10,7 @@ import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -19,7 +20,7 @@ public class ObtenerGeneroEvento {
 	public String obtenerGeneroEvento(String idEvento,
 									  String tipoEvento,
 									  String body) throws 
-			BDException,ExcepcionJsonDeserializacion{
+			BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		String retorno = "{}";
 		if(body != null && idEvento != null && tipoEvento != null){
 			ArrayList<ObjectSNSDeportivo> eventos =

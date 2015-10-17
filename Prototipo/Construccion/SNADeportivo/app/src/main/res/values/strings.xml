@@ -37,4 +37,6 @@
     <string name="title_activity_menu_administrar_involucrados">MenuAdministrarInvolucrados</string>
     <string name="title_activity_perfil_evento">Perfil del evento</string>
     <string name="title_activity_listado_invitaciones_evento">ListadoInvitacionesEvento</string>
+    <string name="title_activity_ubicaciones_evento">UbicacionesEvento</string>
+    <string name="title_activity_listado_invitar_aparticipar">ListadoInvitarAParticipar</string>
 </resources>

@@ -62,16 +62,20 @@ public class GestionEventoService {
 			return new CrearEvento().crearEvento(tipoEvento, datosEvento);
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(500);
 		}
 	}
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/")
-	public void actualizarEvento(@PathParam("tipoEvento") String tipoEvento,
+	public ResponseGenerico actualizarEvento(@PathParam("tipoEvento") String tipoEvento,
 							   Evento evento){
 		try{
 			this.gestionEvento.actualizarEvento(tipoEvento, evento);
+			return new ResponseGenerico("200","Evento actualizado con exito");
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
@@ -148,7 +152,7 @@ public class GestionEventoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/ubicaciones")
-	public String crearUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
+	public ResponseGenerico crearUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
 										 @PathParam("id") String id,
 										 String body){
 		try{
@@ -164,7 +168,7 @@ public class GestionEventoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/ubicaciones/{idUbicacion}")
-	public String eliminarUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
+	public ResponseGenerico eliminarUbicacionesEvento(@PathParam("tipoEvento") String tipoEvento,
 										    @PathParam("id") String id,
 										    @PathParam("idUbicacion") String idUbicacion,
 										    String body){
@@ -180,7 +184,7 @@ public class GestionEventoService {
 	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/{id}/invitados")
+	@Path("{tipoEvento}/{id}/invitaciones")
 	public String consultarInvitadosEvento(@PathParam("tipoEvento") String tipoEvento,
 										   @PathParam("id") String id,
 										   String body){
@@ -200,14 +204,15 @@ public class GestionEventoService {
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/{id}/invitados")
-	public String crearInvitacionEvento(@PathParam("tipoEvento") String tipoEvento,
+	@Path("{tipoEvento}/{id}/invitaciones")
+	public ResponseGenerico crearInvitacionEvento(@PathParam("tipoEvento") String tipoEvento,
 										 @PathParam("id") String idEvento,
 										 String body){
 		try{
-			return this.gestionRelacionUsuarioEvento.getHandler().
+			return new ResponseGenerico("200","Invitacion creada con exito",
+					this.gestionRelacionUsuarioEvento.getHandler().
 					manejarCreacion(RelacionEventoUsuario.RELACION_INVITACION,
-									tipoEvento,idEvento,body);
+									tipoEvento,idEvento,body));
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
@@ -216,19 +221,20 @@ public class GestionEventoService {
 		}
 	}
 	
-	@DELETE
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/{idEvento}/invitados/{idInvitado}")
+	@Path("{tipoEvento}/{idEvento}/invitaciones/{idInvitado}")
 	public ResponseGenerico eliminarInvitacionEvento(@PathParam("tipoEvento") String tipoEvento,
 										   		     @PathParam("idEvento") String idEvento,
 										   			 @PathParam("idInvitado") String idInvitado,
 										   			 String body){
 		try{
-			this.gestionRelacionUsuarioEvento.
-				getHandler().
-			manejarEliminacion(RelacionEventoUsuario.RELACION_INVITACION, 
-						tipoEvento, idEvento, idInvitado, body);
+			return new ResponseGenerico("200","Invitado eliminado con exito",
+					this.gestionRelacionUsuarioEvento.
+					getHandler().
+					manejarEliminacion(RelacionEventoUsuario.RELACION_INVITACION, 
+							tipoEvento, idEvento, idInvitado, body));
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
@@ -236,7 +242,6 @@ public class GestionEventoService {
 			throw new WebApplicationException(500);
 		}
 
-		return new ResponseGenerico("200","Invitado eliminado con exito");
 	}
 	
 	@GET
@@ -263,24 +268,26 @@ public class GestionEventoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes")
-	public String crearParticipante(@PathParam("tipoEvento") String tipoEvento,
+	public ResponseGenerico crearParticipante(@PathParam("tipoEvento") String tipoEvento,
 									@PathParam("id") String idEvento,
 									//Por solicitud o por invitacion
 									@QueryParam("tipoParticipante") String tipoParticipante,
 									String body){
 		try{
-			return this.gestionRelacionUsuarioEvento.getHandler().
+			return new ResponseGenerico("204","Participante creado con exito",
+					this.gestionRelacionUsuarioEvento.getHandler().
 					manejarCreacion(RelacionEventoUsuario.RELACION_PARTICIPANTE,
-									tipoEvento,idEvento,body);
+									tipoEvento,idEvento,body));
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
 			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
+		
 	}
 	
-	@DELETE
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/{idParticipante}")
@@ -303,7 +310,7 @@ public class GestionEventoService {
 		return new ResponseGenerico("200","Participante eliminado con exito");
 	}
 	
-	@GET
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
@@ -324,18 +331,20 @@ public class GestionEventoService {
 	}
 
 
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
-	public String crearSolicitudParticipante(@PathParam("tipoEvento") String tipoEvento,
+	public ResponseGenerico crearSolicitudParticipante(@PathParam("tipoEvento") String tipoEvento,
 											 @PathParam("id") String idEvento,
 											 String body){
 		try{
-			return this.gestionRelacionUsuarioEvento.getHandler().
+			return new ResponseGenerico("200","Solicitud creada con exito",
+					this.gestionRelacionUsuarioEvento.getHandler().
 					manejarCreacion(RelacionEventoUsuario.RELACION_SOLICITUD,
-									tipoEvento,idEvento,body);
+									tipoEvento,idEvento,body));
 		}catch(WebApplicationException e){
+			e.printStackTrace();
 			throw e;
 		}catch(Exception e){
 			e.printStackTrace();
@@ -343,7 +352,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	@DELETE
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/solicitudes/{idParticipante}")
@@ -352,18 +361,18 @@ public class GestionEventoService {
 										   			@PathParam("idParticipante") String idSolicitud,
 										   			String body){
 		try{
-			this.gestionRelacionUsuarioEvento.
-				getHandler().
-				manejarEliminacion(RelacionEventoUsuario.RELACION_SOLICITUD, 
-						tipoEvento, idEvento, idSolicitud, body);
+			return new ResponseGenerico("200","Solicitud eliminada con exito",
+					this.gestionRelacionUsuarioEvento.
+						getHandler().
+						manejarEliminacion(RelacionEventoUsuario.RELACION_SOLICITUD,
+								tipoEvento, idEvento, idSolicitud, body));
 		}catch(WebApplicationException e){
 			throw e;
 		}catch(Exception e){
 			e.printStackTrace();
 			throw new WebApplicationException(500);
 		}
-
-		return new ResponseGenerico("200","Solicitud eliminada con exito");
+		
 	}
 	
 	@POST

@@ -1,8 +1,10 @@
 package com.sna_deportivo.utils.gr;
 
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
+
 public interface ProductorSNSDeportivo {
 
-	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar);
+	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar) throws ProductorFactoryExcepcion;
 	
 	/*protected ArrayList<String> objetosSNSManejado;
 	protected ProductorChainSNSDeportivo pcsnsd;

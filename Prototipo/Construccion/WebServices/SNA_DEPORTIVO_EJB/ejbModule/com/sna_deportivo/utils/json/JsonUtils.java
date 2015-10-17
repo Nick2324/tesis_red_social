@@ -6,6 +6,7 @@ import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ProductorSNSDeportivo;
 import com.sna_deportivo.utils.gr.StringUtils;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class JsonUtils {
@@ -224,7 +225,7 @@ public class JsonUtils {
 	public static ArrayList<ObjectSNSDeportivo> convertirMensajeJsonAObjectSNS(String jsonString,
 																			   String objetoDeseadoMensaje,
 																			   ProductorSNSDeportivo pcsnsd)
-				throws ExcepcionJsonDeserializacion{
+				throws ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		ArrayList<ObjectSNSDeportivo> convertidos = new ArrayList<ObjectSNSDeportivo>();
 		if(jsonString != null){
 			JsonObject objetoJson = JsonUtils.JsonStringToObject(jsonString);

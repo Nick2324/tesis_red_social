@@ -16,6 +16,7 @@ import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -24,7 +25,7 @@ public class ActualizarEvento {
 	public String actualizarEvento(String tipoEvento,
 								   String idEvento,
 								   String body) 
-						throws ExcepcionJsonDeserializacion,BDException{
+						throws ExcepcionJsonDeserializacion,BDException,ProductorFactoryExcepcion{
 		String retorno = null;
 		try {
 			ArrayList<ObjectSNSDeportivo> eventos =

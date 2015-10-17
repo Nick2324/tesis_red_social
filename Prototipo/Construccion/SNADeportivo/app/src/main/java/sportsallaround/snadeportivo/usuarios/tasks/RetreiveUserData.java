@@ -1,18 +1,14 @@
 package sportsallaround.snadeportivo.usuarios.tasks;
 
-import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.ObtainUserInfo;
-import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.ObtainUserInfo;
+import sportsallaround.utils.generales.ServiceUtils;
 
 /**
  * Created by luis on 6/30/15.

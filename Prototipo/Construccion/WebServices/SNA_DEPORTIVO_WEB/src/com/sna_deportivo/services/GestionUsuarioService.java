@@ -321,24 +321,28 @@ public class GestionUsuarioService {
 			}
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(500);
 		}
 	}
 	
-	@GET
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	@Path("{id}/eventos/{tipoEvento}/invitaciones")
+	@Path("{id}/eventos/invitaciones")
 	public String consultarInvitacionesEventosUsuario(@PathParam("id") String idUsuario,
-													  @PathParam("tipoEvento") String tipoEvento,
 			  										  String body){
 		try{
-			
+			return this.servicio.consultarInvitacionesEvento(idUsuario,body);
 		}catch(WebApplicationException e){
+			e.printStackTrace();
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(500);
 		}
-
-		return null;
+		
 		
 	}
-	
 }

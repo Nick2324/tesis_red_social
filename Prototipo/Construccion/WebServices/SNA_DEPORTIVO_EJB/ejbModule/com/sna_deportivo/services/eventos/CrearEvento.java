@@ -18,6 +18,7 @@ import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -34,7 +35,7 @@ public class CrearEvento {
 		this.gestionEvento = new GestionEvento();
 	}
 	
-	public String crearEvento(String tipoEvento,String jsonString){
+	public String crearEvento(String tipoEvento,String jsonString) throws ProductorFactoryExcepcion{
 		String retornoEntidadesEventoCreado = null;
 		ProductorFactoryEvento productorEventos = new ProductorFactoryEvento();
 		ProductorFactoryUsuario productorUsuario = new ProductorFactoryUsuario();

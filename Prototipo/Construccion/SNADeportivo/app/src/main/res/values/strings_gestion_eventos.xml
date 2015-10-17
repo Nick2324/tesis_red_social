@@ -93,4 +93,14 @@
     <string name="alert_acepta_invitacion_tit">Aceptación de invitación</string>
     <string name="alert_acepta_invitacion_err_msn">Ocurrió un error al intentar aceptar la invitación al evento</string>
     <string name="toast_invitacion_aceptada_exito">Aceptación de invitación realizada con éxito</string>
+    <string name="textview_pais">Pais del evento</string>
+    <string name="textview_ciudad">Ciudad del evento</string>
+    <string name="textview_lugar">Lugar del evento</string>
+    <string name="button_cambiar_ubicacion_evento">Cambiar ubicación</string>
+    <string name="button_ver_ubicacion_evento">Ver ubicación</string>
+    <string name="alert_traer_ubicacion_evento_tit">Cargando ubicación del evento</string>
+    <string name="alert_traer_ubicacion_evento_msn_err">Se produjo un error cargando la ubicación del evento</string>
+    <string name="toast_deja_evento">Has dejado el evento</string>
+    <string name="toast_une_evento">Se ha enviado la solicitud de participación al evento</string>
+    <string name="button_invitar_participantes">Invitar participantes</string>
 </resources>

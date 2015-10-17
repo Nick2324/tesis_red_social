@@ -21,6 +21,7 @@ public class ConstantesEvento {
     public static final String MENU_PART_EVENTOS = "MPE";
 
     //TAGS COMUNICACION JSON POR INTENT EVENTOS
+    public static final String UBICACION_MANEJADA = "ubicacion";
     public static final String EVENTO_MANEJADO = "evento";
     public static final String DEPORTE_MANEJADO = "deporte";
     public static final String GENERO_MANEJADO = "genero";

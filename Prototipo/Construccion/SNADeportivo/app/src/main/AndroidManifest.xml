@@ -50,22 +50,22 @@
             android:label="@string/title_activity_user_update_sports" >
         </activity>
         <activity
-            android:name=".eventos.GestionEventosLista"
+            android:name=".eventos.gui.GestionEventosLista"
             android:label="@string/titulo_gestion_eventos_lista"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".eventos.CrearEvento"
+            android:name=".eventos.gui.CrearEvento"
             android:label="@string/title_activity_crear_evento" >
         </activity>
         <activity
-            android:name=".eventos.InformacionGeneralEvento"
+            android:name=".eventos.gui.InformacionGeneralEvento"
             android:label="@string/title_activity_informacion_general_evento"
             android:launchMode="singleTop"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".ErrorActivity"
+            android:name=".error.ErrorActivity"
             android:label="@string/title_activity_error" >
         </activity>
         <activity
@@ -73,31 +73,39 @@
             android:label="@string/title_activity_user_add_practiced_sport" >
         </activity>
         <activity
-            android:name=".eventos.InformacionParticipantes"
+            android:name=".eventos.gui.InformacionParticipantes"
             android:label="@string/title_activity_informacion_participantes"
             android:launchMode="singleTop" >
         </activity>
         <activity
-            android:name=".eventos.ManejoParticipantes"
+            android:name=".eventos.gui.ListadoSolicitudes"
             android:label="@string/title_activity_manejo_participantes"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".eventos.ListadoParticipantes"
+            android:name=".eventos.gui.ListadoParticipantes"
             android:label="@string/title_activity_listado_participantes"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".eventos.MenuAdministrarInvolucrados"
+            android:name=".eventos.gui.MenuAdministrarInvolucrados"
             android:label="@string/title_activity_menu_administrar_involucrados" >
         </activity>
         <activity
-            android:name=".eventos.PerfilEvento"
+            android:name=".eventos.gui.PerfilEvento"
             android:label="@string/title_activity_perfil_evento" >
         </activity>
         <activity
-            android:name=".eventos.ListadoInvitacionesEvento"
+            android:name=".eventos.gui.ListadoInvitacionesEvento"
             android:label="@string/title_activity_listado_invitaciones_evento" >
+        </activity>
+        <activity
+            android:name=".eventos.gui.UbicacionesEvento"
+            android:label="@string/title_activity_ubicaciones_evento" >
+        </activity>
+        <activity
+            android:name=".eventos.gui.ListadoInvitarAParticipar"
+            android:label="@string/title_activity_listado_invitar_aparticipar" >
         </activity>
     </application>
 

@@ -1,12 +1,14 @@
 package com.sna_deportivo.services.general;
 
 import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionGenerales {
 
-	public String getEntidadGeneral(String tipo) throws ExcepcionJsonDeserializacion{
+	public String getEntidadGeneral(String tipo) 
+			throws ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		return JsonUtils.arrayObjectSNSToStringJson(
 				new ProductorFactoryGenerales().
 					getFactorySegunTipo(tipo).

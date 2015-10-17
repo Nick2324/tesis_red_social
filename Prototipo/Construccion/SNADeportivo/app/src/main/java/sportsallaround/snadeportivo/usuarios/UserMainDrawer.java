@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,14 +20,13 @@ import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
-import sportsallaround.snadeportivo.ErrorFragment;
+import sportsallaround.snadeportivo.error.ErrorFragment;
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.ErrorActivity;
 import sportsallaround.snadeportivo.usuarios.pojos.Permiso;
 import sportsallaround.snadeportivo.usuarios.pojos.Rol;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.ServiceUtils;
 
 public class UserMainDrawer extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {

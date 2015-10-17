@@ -7,7 +7,10 @@ import com.sna_deportivo.pojo.deportes.DeportePracticado;
 import com.sna_deportivo.pojo.deportes.PosicionDeporte;
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.DAOEvento;
+import com.sna_deportivo.pojo.evento.DeporteEvento;
+import com.sna_deportivo.pojo.evento.DeporteEventoDAO;
 import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.PracticaDeportiva;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.DAOUsuario;
@@ -495,8 +498,73 @@ public class GestionUsuario {
 		return eventos;
 	}
 
-	public String consultarEventosDeUsuarioAsistente(String tipoEvento,String body){
-		return null;
+	public String consultarEventosDeUsuarioAsistente(String tipoEvento,String body)
+			 throws BDException, ProductorFactoryExcepcion{
+		String eventos = "[]";
+		try {
+			//Deduce datos de body
+			ArrayList<ObjectSNSDeportivo> arregloUsuarios =
+					JsonUtils.convertirMensajeJsonAObjectSNS(
+							body, 
+							ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU, 
+							new ProductorFactoryUsuario());
+			if(arregloUsuarios != null &&
+			   arregloUsuarios.size() == 1){
+				//Por ahora el evento sera nuevo siempre
+				Evento evento = null;
+				try {
+					evento = new ProductorFactoryEvento().
+								   getEventosFactory(tipoEvento).crearEvento();
+					DeporteEventoDAO ded = new DeporteEventoDAO();
+					DeporteEvento de = new DeporteEvento();
+					de.setParticipantes(arregloUsuarios);
+					de.setEvento(evento);
+					ded.setObjetcSNSDeportivo(de);
+					eventos = ded.obtenerEventos();
+				} catch (BDException e) {
+					throw e;
+				} catch (ProductorFactoryExcepcion e){
+					throw e;
+				}
+			}
+		} catch (ExcepcionJsonDeserializacion e2) {
+			e2.printStackTrace();
+		}
+		return eventos;
+	}
+	
+	public String consultarInvitacionesEvento(String idUsuario,String body)
+			 throws BDException, ProductorFactoryExcepcion{
+		String invitaciones = "[]";
+		try {
+			//Deduce datos de body
+			ArrayList<ObjectSNSDeportivo> arregloUsuarios =
+					JsonUtils.convertirMensajeJsonAObjectSNS(
+							body, 
+							ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU, 
+							new ProductorFactoryUsuario());
+			if(arregloUsuarios != null &&
+			   arregloUsuarios.size() == 1){
+				//Por ahora el evento sera nuevo siempre
+				//ABSTRAER?
+				Evento evento = new PracticaDeportiva();
+				try {
+					DeporteEventoDAO ded = new DeporteEventoDAO();
+					DeporteEvento de = new DeporteEvento();
+					de.setInvitaciones(arregloUsuarios);
+					de.setEvento(evento);
+					ded.setObjetcSNSDeportivo(de);
+					invitaciones = ded.obtenerEventos();
+				} catch (BDException e) {
+					throw e;
+				} catch (ProductorFactoryExcepcion e){
+					throw e;
+				}
+			}
+		} catch (ExcepcionJsonDeserializacion e2) {
+			e2.printStackTrace();
+		}
+		return invitaciones;
 	}
 	
 }

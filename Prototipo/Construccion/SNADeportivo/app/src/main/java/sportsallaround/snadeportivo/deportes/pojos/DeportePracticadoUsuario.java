@@ -1,6 +1,6 @@
 package sportsallaround.snadeportivo.deportes.pojos;
 
-import sportsallaround.utils.MediaTypeTranslator;
+import sportsallaround.utils.generales.MediaTypeTranslator;
 
 /**
  * Created by luis on 7/29/15.

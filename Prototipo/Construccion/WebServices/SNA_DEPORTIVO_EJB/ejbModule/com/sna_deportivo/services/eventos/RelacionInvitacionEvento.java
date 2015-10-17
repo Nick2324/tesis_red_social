@@ -4,6 +4,7 @@ import com.sna_deportivo.pojo.evento.DeporteEvento;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
@@ -13,7 +14,8 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 	}
 
 	@Override
-	protected DeporteEvento prepararDeporteEvento(String tipoEvento) {
+	protected DeporteEvento prepararDeporteEvento(String tipoEvento) 
+			throws ProductorFactoryExcepcion{
 		Evento evento = null;
 		evento = new ProductorFactoryEvento().
 		   getEventosFactory(tipoEvento).crearEvento();
@@ -28,12 +30,13 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 	}
 
 	@Override
-	protected String manejarCreacion() throws BDException{
+	protected String manejarCreacion() 
+			throws BDException,ProductorFactoryExcepcion{
 		return ded.crearInvitaciones();
 	}
 	
 	@Override
-	protected DeporteEvento prepararDeporteEventoObtencion(String tipoEvento) {
+	protected DeporteEvento prepararDeporteEventoObtencion(String tipoEvento) throws ProductorFactoryExcepcion{
 		Evento evento = null;
 		evento = new ProductorFactoryEvento().
 		   getEventosFactory(tipoEvento).crearEvento();
@@ -53,7 +56,8 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 	}
 
 	@Override
-	protected DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento) {
+	protected DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento) 
+			 throws ProductorFactoryExcepcion{
 		Evento evento = null;
 		evento = new ProductorFactoryEvento().
 		   getEventosFactory(tipoEvento).crearEvento();
@@ -68,7 +72,8 @@ public class RelacionInvitacionEvento extends HandlerRelacionUsuarioEvento{
 	}
 
 	@Override
-	protected String manejarEliminacion() throws BDException, ExcepcionJsonDeserializacion {
+	protected String manejarEliminacion() 
+			throws BDException, ExcepcionJsonDeserializacion,ProductorFactoryExcepcion {
 		return ded.eliminarInvitaciones();
 	}
 	

@@ -13,11 +13,13 @@ public class ProductorFactoryEvento implements ProductorSNSDeportivo{
 			return new PracticaDeportivaFactory();
 		if(tipo.equals(TiposEventos.EVENTODEPORTIVO.getServicio()))
 			return new EventoDeportivoFactory();
+		if(tipo.equals(TiposEventos.EVENTOGENERICO.getServicio()))
+			return new EventosFactory();
 		throw new ProductorFactoryExcepcion();
 	}
 
 	@Override
-	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar) {
+	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar) throws ProductorFactoryExcepcion{
 		String aCrear = null;
 		for(TiposEventos ce:TiposEventos.values()){
 			if(ce.getNombreClase().equals(objetoAManejar)){

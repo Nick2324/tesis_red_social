@@ -44,10 +44,10 @@ import sportsallaround.snadeportivo.usuarios.CreateUserActivity;
 //import sportsallaround.snadeportivo.Users.UserMainActivity;
 import sportsallaround.snadeportivo.usuarios.UserMainDrawer;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.Utils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.Utils;
 
-import static sportsallaround.utils.Utils.StringToSHA1;
+import static sportsallaround.utils.generales.Utils.StringToSHA1;
 
 
 /**

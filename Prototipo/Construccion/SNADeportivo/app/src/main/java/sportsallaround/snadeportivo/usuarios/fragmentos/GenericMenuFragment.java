@@ -22,13 +22,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
-import sportsallaround.snadeportivo.ErrorActivity;
+import sportsallaround.snadeportivo.error.ErrorActivity;
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.pojos.Permiso;
 import sportsallaround.snadeportivo.usuarios.pojos.Rol;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.ServiceUtils;
 
 /**
  * Created by LuisFelipe on 21/06/2015.

@@ -4,7 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import sportsallaround.utils.MediaTypeTranslator;
+import sportsallaround.utils.generales.MediaTypeTranslator;
 
 /**
  * Created by luis on 7/17/15.

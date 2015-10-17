@@ -4,7 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="sportsallaround.snadeportivo.eventos.MenuAdministrarInvolucrados"
+    tools:context="sportsallaround.snadeportivo.eventos.gui.MenuAdministrarInvolucrados"
     android:orientation="vertical">
 
     <Button
@@ -14,6 +14,14 @@
         android:id="@+id/button_aniadir_participantes"
         android:text="@string/boton_aniadir_participantes"
         android:onClick="startAniadirPart"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center"
+        android:id="@+id/button_invitar_participantes"
+        android:text="@string/button_invitar_participantes"
+        android:onClick="startInvitarPart"/>
 
     <Button
         android:layout_width="match_parent"

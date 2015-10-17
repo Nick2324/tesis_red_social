@@ -31,8 +31,8 @@ import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.deportes.pojos.DeportePracticado;
 import sportsallaround.snadeportivo.deportes.pojos.DeportePracticadoUsuario;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
-import sportsallaround.utils.Constants;
-import sportsallaround.utils.ServiceUtils;
+import sportsallaround.utils.generales.Constants;
+import sportsallaround.utils.generales.ServiceUtils;
 
 public class UserUpdateSportsActivity extends ActionBarActivity {
 

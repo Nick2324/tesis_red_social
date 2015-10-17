@@ -10,6 +10,7 @@ import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -38,24 +39,27 @@ public abstract class HandlerRelacionUsuarioEvento {
 		return this.aManejar.equals(aManejar);
 	}
 	
-	protected abstract DeporteEvento prepararDeporteEvento(String tipoEvento);
+	protected abstract DeporteEvento prepararDeporteEvento(String tipoEvento) 
+				throws ProductorFactoryExcepcion;
 	
-	protected abstract DeporteEvento prepararDeporteEventoObtencion(String tipoEvento);
+	protected abstract DeporteEvento prepararDeporteEventoObtencion(String tipoEvento) 
+				throws ProductorFactoryExcepcion;
 	
-	protected abstract DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento);
+	protected abstract DeporteEvento prepararDeporteEventoEliminacion(String tipoEvento) 
+				throws ProductorFactoryExcepcion;
 	
-	protected abstract String manejarCreacion()throws BDException;
+	protected abstract String manejarCreacion()throws BDException, ProductorFactoryExcepcion;
 	
 	protected abstract String manejarObtencion() 
 			throws BDException, ExcepcionJsonDeserializacion;
 	
 	protected abstract String manejarEliminacion()
-			throws BDException, ExcepcionJsonDeserializacion;
+			throws BDException, ExcepcionJsonDeserializacion, ProductorFactoryExcepcion;
 	
 	public String manejarObtencion(String aManejar,
 								   String tipoEvento,
 								   String idEvento,
-								   String body){
+								   String body) throws ProductorFactoryExcepcion{
 		String retorno = null;
 		if(this.esManejado(aManejar)){
 			try {
@@ -88,7 +92,8 @@ public abstract class HandlerRelacionUsuarioEvento {
 								  String tipoEvento,
 								  String idEvento,
 								  String body) 
-						throws BDException, ExcepcionJsonDeserializacion {
+							throws ProductorFactoryExcepcion, BDException, 
+									ExcepcionJsonDeserializacion {
 		String retorno = null;
 		if(this.esManejado(aManejar)){
 			try {
@@ -130,7 +135,8 @@ public abstract class HandlerRelacionUsuarioEvento {
 									 String idEvento,
 									 String idParticipante,
 									 String body) 
-							throws BDException, ExcepcionJsonDeserializacion {
+						throws ProductorFactoryExcepcion, BDException, 
+							ExcepcionJsonDeserializacion {
 		String retorno = null;
 		if(this.esManejado(aManejar)){
 			try {

@@ -24,12 +24,12 @@ import sportsallaround.snadeportivo.usuarios.pojos.Rol;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveUserData;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
-import sportsallaround.utils.Constants;
+import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.gui.DatePickerFragment;
-import sportsallaround.utils.ObtainUserInfo;
+import sportsallaround.utils.generales.ObtainUserInfo;
 import sportsallaround.utils.gui.OnDatePickedListener;
-import sportsallaround.utils.ServiceUtils;
-import sportsallaround.utils.Utils;
+import sportsallaround.utils.generales.ServiceUtils;
+import sportsallaround.utils.generales.Utils;
 
 public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements OnDatePickedListener, ObtainUserInfo {
 

@@ -1,9 +1,14 @@
 package com.sna_deportivo.pojo.evento;
 
+import java.util.ArrayList;
+
+import com.sna_deportivo.pojo.deportes.DAODeporte;
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.ProductorFactoryDeporte;
 import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
+import com.sna_deportivo.pojo.entidadesEstaticas.GeneroDAO;
 import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
+import com.sna_deportivo.pojo.usuarios.DAOUsuario;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.bd.BDUtils;
@@ -13,6 +18,7 @@ import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
@@ -32,7 +38,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 
 	@Override
 	public void encontrarObjetoManejado()  
-			throws BDException{
+			throws BDException,ProductorFactoryExcepcion,ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)
 					this.objectSNSDeportivo;
@@ -143,7 +149,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	}
 	
 	@Override
-	public ObjectSNSDeportivo crearObjetoSNS() {
+	public ObjectSNSDeportivo crearObjetoSNS() throws ProductorFactoryExcepcion{
 		final DeporteEvento de = (DeporteEvento)super.objectSNSDeportivo;
 		de.setId(BDUtils.generarNumeradorEntidad(this.tipoObjetoSNS));
 		super.objectSNSDeportivo = de;
@@ -171,7 +177,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return this.objectSNSDeportivo;
 	}
 	
-	public String crearInvitaciones() throws BDException{
+	public String crearInvitaciones() throws BDException,ProductorFactoryExcepcion{
 		String resultado = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
@@ -182,16 +188,23 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 								"invitacionParticipar",
 								RelacionSNS.DIRECCION_ENTRADA,
 								de.getInvitaciones());
-				if(!super.crearRelacion(relacionACrear, 
-						new ProductorFactoryUsuario())){
-					throw new BDException();
+				ArrayList<Boolean> existeRelacion =
+						this.verificarExistenciaRelacion(relacionACrear, 
+								new ProductorFactoryUsuario());
+				if(existeRelacion != null && 
+				   existeRelacion.size() > 0 &&
+				   !existeRelacion.get(0)){
+					if(!super.crearRelacion(relacionACrear, 
+							new ProductorFactoryUsuario())){
+						throw new BDException();
+					}
 				}
 			}
 		}
 		return resultado;
 	}
 	
-	public String crearSolicitudes() throws BDException{
+	public String crearSolicitudes() throws BDException,ProductorFactoryExcepcion{
 		String resultado = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
@@ -202,30 +215,56 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 								"solicitudParticipar",
 								RelacionSNS.DIRECCION_ENTRADA,
 								de.getSolicitudes());
-				if(!super.crearRelacion(relacionACrear, 
-						new ProductorFactoryUsuario())){
-					throw new BDException();
+				ArrayList<Boolean> existeRelacion =
+						this.verificarExistenciaRelacion(relacionACrear, 
+								new ProductorFactoryUsuario());
+				if(existeRelacion != null && 
+				   existeRelacion.size() > 0 &&
+				   !existeRelacion.get(0)){
+					if(!super.crearRelacion(relacionACrear, 
+							new ProductorFactoryUsuario())){
+						throw new BDException();
+					}
 				}
 			}
 		}
 		return resultado;
 	}
 	
-	public String crearParticipantes() throws BDException{
+	public String crearParticipantes() throws BDException,ProductorFactoryExcepcion{
 		String resultado = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
-			if(de.getParticipantes() != null &&
-			   de.getParticipantes().size() > 0){
-				RelacionSNS relacionACrear =
-						new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
-								"crearParticipante",
-								RelacionSNS.DIRECCION_ENTRADA,
-								de.getParticipantes());
-				if(!super.crearRelacion(relacionACrear, 
-						new ProductorFactoryUsuario())){
-					throw new BDException();
+			try {
+				if(de.getParticipantes() != null &&
+				   de.getParticipantes().size() > 0){
+					RelacionSNS relacionACrear =
+							new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+											"crearParticipante",
+											RelacionSNS.DIRECCION_ENTRADA,
+											de.getParticipantes());
+					ArrayList<Boolean> existeRelacion =
+							super.verificarExistenciaRelacion(relacionACrear, 
+									new ProductorFactoryUsuario());
+					if(existeRelacion != null &&
+					   existeRelacion.size() > 0 &&
+					   !existeRelacion.get(0)){
+						de.setSolicitudes(de.getParticipantes());
+						de.setInvitaciones(de.getParticipantes());
+						this.objectSNSDeportivo = de;
+						this.eliminarInvitaciones();
+						this.eliminarSolicitudes();
+						de.setInvitaciones(null);
+						de.setSolicitudes(null);
+						this.objectSNSDeportivo = de;
+						if(!super.crearRelacion(relacionACrear, 
+								new ProductorFactoryUsuario())){
+							throw new BDException();
+						}
+					}
 				}
+			} catch (ExcepcionJsonDeserializacion e) {
+				e.printStackTrace();
 			}
 		}
 		return resultado;
@@ -255,7 +294,8 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 				
 				//Ejecutando query
 				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
-				if(resultado != null && resultado.length > 0){
+				if(resultado != null && resultado.length > 0 &&
+				   BDUtils.obtenerRestRegistro(resultado[0]) != null){
 					ObjectSNSDeportivo[] invitados = new ObjectSNSDeportivo[resultado.length];
 					for(int i = 0; i < resultado.length; i++){
 						JsonObject datos = 
@@ -304,7 +344,6 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 				//Ejecutando query				
 				Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
 				if(resultado != null && resultado.length > 0){
-					System.out.println("tengo resultados");
 					ObjectSNSDeportivo[] solicitudes = new ObjectSNSDeportivo[resultado.length];
 					for(int i = 0; i < resultado.length; i++){
 						JsonObject datos = 
@@ -327,11 +366,9 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			throw e;
 		}
 		
-		System.out.println("retorno total "+retorno);
 		return retorno;
 	
 	}
-	
 	
 	public String getParticipantesEvento() 
 			throws BDException,ExcepcionJsonDeserializacion{
@@ -382,7 +419,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	}
 	
 	public String eliminarSolicitudes()
-			throws BDException,ExcepcionJsonDeserializacion{
+			throws BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		String retorno = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
@@ -403,7 +440,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	}
 	
 	public String eliminarParticipantes()
-			throws BDException,ExcepcionJsonDeserializacion{
+			throws BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		String retorno = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
@@ -424,7 +461,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	}
 	
 	public String eliminarInvitaciones()
-			throws BDException,ExcepcionJsonDeserializacion{
+			throws BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		String retorno = null;
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
@@ -444,7 +481,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return retorno;
 	}
 	
-	public boolean eliminarDeporte() throws BDException{
+	public boolean eliminarDeporte() throws BDException,ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
 					"deporteEventoRelacion",
@@ -456,7 +493,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return true;
 	}
 	
-	public boolean eliminarGenero() throws BDException{
+	public boolean eliminarGenero() throws BDException,ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
 					"generoEventoRelacion",
@@ -479,7 +516,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return true;
 	}
 	
-	public boolean actualizarDeporteEvento() throws BDException{
+	public boolean actualizarDeporteEvento() throws BDException,ProductorFactoryExcepcion{
 		//Ampliar a todo el evento, con invitaciones, participantes, etc.
 		if(this.objectSNSDeportivo != null){
 			((DeporteEvento)this.objectSNSDeportivo).
@@ -548,7 +585,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 	}
 	
 	public String obtenerGeneroEvento()
-			throws BDException,ExcepcionJsonDeserializacion{
+			throws BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
 		String retorno = "{}";
 		try{
 			if(this.objectSNSDeportivo != null){
@@ -593,6 +630,9 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		} catch (BDException e) {
 			e.printStackTrace();
 			throw e;
+		}catch (ProductorFactoryExcepcion e){
+			e.printStackTrace();
+			throw e;
 		} catch(Exception e){
 			e.printStackTrace();
 			throw e;
@@ -600,7 +640,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return retorno;
 	}
 	
-	public void crearDeporte(){
+	public void crearDeporte() throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
 			RelacionSNS relacionEventoNAria = 
@@ -615,7 +655,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void crearGenero(){
+	public void crearGenero() throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
 			RelacionSNS relacionEventoNAria = 
@@ -630,7 +670,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		}
 	}
 	
-	public void crearUbicacion(){
+	public void crearUbicacion() throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
 			RelacionSNS relacionEventoNAria = 
@@ -643,6 +683,114 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 						null);
 			}
 		}
+	}
+	
+	public String obtenerEventos() throws 
+		BDException,ExcepcionJsonDeserializacion,ProductorFactoryExcepcion{
+		String eventos = "[]";
+		if(this.objectSNSDeportivo != null){
+			DeporteEvento de = (DeporteEvento)this.objectSNSDeportivo;
+			RelacionSNS relacionIntermedia = null;
+			ArrayList<String> patrones = new ArrayList<String>();
+			StringBuilder query = new StringBuilder("MATCH ");
+			if(de.getParticipantes() != null && 
+			   de.getParticipantes().size() > 0){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.PARTICIPANTEEVENTO,
+								        "relacionParticipanteEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getParticipantes());
+				patrones.addAll(relacionIntermedia.stringJsonPatrones(
+							new DAOUsuario()));
+			}
+			if(de.getInvitaciones() != null && 
+			   de.getInvitaciones().size() > 0){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.INVITADOAPARTICIPAR,
+								        "relacionInvitadoEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getInvitaciones());
+				patrones.addAll(relacionIntermedia.stringJsonPatrones(
+						new DAOUsuario()));
+			}
+			if(de.getSolicitudes() != null &&
+			   de.getSolicitudes().size() > 0){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.SOLICITAPARTICIPAR,
+								        "relacionSolicitudesEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getSolicitudes());
+				patrones.addAll(relacionIntermedia.stringJsonPatrones(
+						new DAOUsuario()));
+			}
+			if(de.getDeporte() != null){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+								        "relacionDeporteEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getDeporte());
+				patrones.addAll(relacionIntermedia.stringJsonPatrones(
+						new DAODeporte()));
+			}
+			if(de.getGenero() != null){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+								        "relacionGeneroEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getGenero());
+				patrones.addAll(relacionIntermedia.stringJsonPatrones(
+						new GeneroDAO()));
+				relacionIntermedia.stringJson();
+			}
+			for(String patron:patrones){
+				query.append(this.producirNodoMatch());
+				query.append(patron);
+				query.append(",");
+			}
+			if(de.getEvento() != null && patrones.size() > 0){
+				relacionIntermedia = 
+						new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
+								        "relacionEvento",
+								        RelacionSNS.DIRECCION_ENTRADA,
+								        de.getEvento());
+				EventosFactory factory = (EventosFactory)
+						new ProductorFactoryEvento().producirFacObjetoSNS(
+						de.getEvento().getClass().getSimpleName());
+				DAOEvento deve = factory.crearDAOEvento();
+				query.append(this.producirNodoMatch());
+				query.append(relacionIntermedia.stringJson());
+				query.append(deve.producirNodoMatchNoJson());
+				query.append(" RETURN ");
+				query.append(deve.getIdentificadorQueries());
+				//EJECUTA QUERY
+				try{
+					Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+					if(resultado != null && resultado.length > 0){
+						Evento[] eventosArray = null;
+						if(BDUtils.obtenerRestRegistro(resultado[0]) != null){
+							eventosArray = new Evento[resultado.length];
+							for(int i = 0; i < resultado.length; i++){
+								JsonObject datos = 
+										(JsonObject)BDUtils.obtenerRestRegistro(resultado[i]).
+										getPropiedades().get("data")[0];
+								eventosArray[i] = factory.crearEvento();
+								try {
+									eventosArray[i].deserializarJson(datos);
+								} catch (ExcepcionJsonDeserializacion e) {
+									e.printStackTrace();
+									throw e;
+								}
+							}
+						}
+						eventos = JsonUtils.arrayObjectSNSToStringJson(eventosArray);
+					}
+				}catch(BDException e){
+					e.printStackTrace();
+					throw e;
+				}
+			}
+		}
+		return eventos;
 	}
 
 }

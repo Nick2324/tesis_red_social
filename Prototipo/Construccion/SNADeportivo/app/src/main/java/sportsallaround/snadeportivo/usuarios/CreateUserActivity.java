@@ -23,11 +23,11 @@ import java.io.InputStream;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
-import sportsallaround.utils.Constants;
+import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.gui.DatePickerFragment;
 import sportsallaround.utils.gui.OnDatePickedListener;
-import sportsallaround.utils.ServiceUtils;
-import sportsallaround.utils.Utils;
+import sportsallaround.utils.generales.ServiceUtils;
+import sportsallaround.utils.generales.Utils;
 
 
 public class CreateUserActivity extends Activity implements OnDatePickedListener {

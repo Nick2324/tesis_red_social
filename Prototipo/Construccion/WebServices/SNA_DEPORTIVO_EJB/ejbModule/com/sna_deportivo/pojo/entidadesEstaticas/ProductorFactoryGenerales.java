@@ -9,7 +9,7 @@ public class ProductorFactoryGenerales implements ProductorSNSDeportivo{
 	
 	public ProductorFactoryGenerales(){}
 	
-	public FactoryObjectSNSDeportivo getFactorySegunTipo(String tipo){
+	public FactoryObjectSNSDeportivo getFactorySegunTipo(String tipo) throws ProductorFactoryExcepcion{
 		if(tipo.equals(EntidadesGenerales.GENERO.getServicio())){
 			return new FactoryGenero();
 		}
@@ -17,7 +17,7 @@ public class ProductorFactoryGenerales implements ProductorSNSDeportivo{
 	}
 
 	@Override
-	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar) {
+	public FactoryObjectSNSDeportivo producirFacObjetoSNS(String objetoAManejar) throws ProductorFactoryExcepcion{
 		String aCrear = null;
 		for(EntidadesGenerales ceg:EntidadesGenerales.values()){
 			if(ceg.getNombreClase().equals(objetoAManejar)){

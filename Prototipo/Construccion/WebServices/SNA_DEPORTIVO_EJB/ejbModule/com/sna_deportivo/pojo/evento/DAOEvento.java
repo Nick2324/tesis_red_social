@@ -14,7 +14,7 @@ import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 //!*!*!*!*! Ampliar para devolver el recurso
 
-public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
+public class DAOEvento extends ObjectSNSDeportivoDAO{
 	
 	private Evento evento;
 	protected String eventoManejado;
@@ -32,6 +32,8 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	@Override
 	protected void setUpDAOGeneral() {
 		super.tipoObjetoSNS = Entidades.EVENTODEPORTIVO;
+		super.factoryOSNS = new EventosFactory();
+		super.identificadorQueries = "eventoGeneral";
 	}
 	
 	public void setEvento(Evento e){
@@ -156,7 +158,7 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 		
 	}
 	
-	public Evento crearEventoDB() throws BDException{
+	public Evento crearEventoDB() throws BDException, ProductorFactoryExcepcion{
 		StringBuilder query = new StringBuilder("CREATE (evento:"+Entidades.EVENTODEPORTIVO);
 		this.evento.setId(""+BDUtils.generarNumeradorEntidad(Entidades.EVENTODEPORTIVO));
 		query.append(this.evento.toString());
@@ -184,6 +186,13 @@ public abstract class DAOEvento extends ObjectSNSDeportivoDAO{
 	@Override
 	public ObjectSNSDeportivo crearObjetoSNS() {
 		return this.crearObjetoSNS();
+	}
+
+	@Override
+	public void encontrarObjetoManejado() 
+			throws BDException, ProductorFactoryExcepcion, ProductorFactoryExcepcion {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

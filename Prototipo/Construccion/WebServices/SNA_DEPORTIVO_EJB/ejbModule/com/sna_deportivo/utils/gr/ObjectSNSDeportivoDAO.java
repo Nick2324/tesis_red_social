@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
@@ -88,7 +89,8 @@ public abstract class ObjectSNSDeportivoDAO {
 	}
 	
 	public boolean crearRelacion(RelacionSNS relacionACrear,
-							     ProductorSNSDeportivo productor){
+							     ProductorSNSDeportivo productor)
+				throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null &&
 		   relacionACrear != null &&
 		   productor != null){
@@ -128,7 +130,8 @@ public abstract class ObjectSNSDeportivoDAO {
 	}
 	
 	public boolean eliminarRelacion(RelacionSNS aEliminar,
-								 	ProductorSNSDeportivo productor){
+								 	ProductorSNSDeportivo productor) 
+								 			throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null &&
 		   aEliminar != null &&
 		   productor != null){
@@ -162,7 +165,7 @@ public abstract class ObjectSNSDeportivoDAO {
 	}
 	
 	public boolean mergeRelacion(RelacionSNS relacionACrear,
-		     ProductorSNSDeportivo productor){
+		     ProductorSNSDeportivo productor) throws ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null &&
 		   relacionACrear != null &&
 		   productor != null){
@@ -193,12 +196,46 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	}
 	
+	public ArrayList<Boolean> verificarExistenciaRelacion(RelacionSNS aVerificar,
+											   ProductorSNSDeportivo factory) 
+													   throws ProductorFactoryExcepcion{
+		ArrayList<Boolean> existe = new ArrayList<Boolean>();
+		
+		//Hay que lograr generar los factory desde la relacion
+		ArrayList<String> patrones = new ArrayList<String>();
+		ObjectSNSDeportivoDAO dao = 
+				factory.producirFacObjetoSNS(aVerificar.getObjetoRelacion().
+				getClass().getSimpleName()).getObjetoSNSDAO();
+		patrones = aVerificar.stringJsonPatrones(dao);
+		StringBuilder query = null;
+		for(String patron:patrones){
+			query = new StringBuilder();
+			query.append("MATCH ");
+			query.append(this.producirNodoMatch());
+			query.append(patron);
+			query.append(" RETURN COUNT(");
+			query.append(dao.identificadorQueries);
+			query.append(") AS cuenta");
+			Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+			if(resultado != null && resultado.length > 0 &&
+			   BDUtils.obtenerRestRegistro(resultado[0]) != null){
+			   String resultadoJson = (String)BDUtils.obtenerRestRegistro(resultado[0]).
+					   getPropiedades().get("arreglo")[0];
+			   existe.add(!"0".equals(resultadoJson));
+			}else{
+				existe.add(new Boolean(false));
+			}
+		}
+		return existe;
+	}
+	
 	public abstract void encontrarObjetoManejado() 
-			throws BDException;
+			throws BDException, ProductorFactoryExcepcion, ProductorFactoryExcepcion;
 	
 	public StringBuilder integrarQueryRelacion(StringBuilder query,
 											   RelacionSNS relacion,
-											   ProductorSNSDeportivo factory){
+											   ProductorSNSDeportivo factory)
+	 					 throws ProductorFactoryExcepcion{
 		ArrayList<String> patrones = new ArrayList<String>();
 		
 		//Hay que lograr generar los factory desde la relacion
@@ -263,7 +300,7 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	protected abstract void setUpDAOGeneral();
 	
-	public abstract ObjectSNSDeportivo crearObjetoSNS();
+	public abstract ObjectSNSDeportivo crearObjetoSNS() throws ProductorFactoryExcepcion;
 	
 	public void setObjetcSNSDeportivo(ObjectSNSDeportivo objectSNSDeportivo){
 		this.objectSNSDeportivo = objectSNSDeportivo;
@@ -283,6 +320,10 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	public String getIdentificadorQueries() {
 		return identificadorQueries;
+	}
+	
+	public static void main(String[] args){
+		BDUtils.ejecutarQueryREST("MATCH (u:E_Usuario) RETURN COUNT(u) AS cuenta");
 	}
 	
 }

@@ -3,7 +3,7 @@ package sportsallaround.snadeportivo.deportes.pojos;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import sportsallaround.utils.MediaTypeTranslator;
+import sportsallaround.utils.generales.MediaTypeTranslator;
 
 /**
  * Created by luis on 7/13/15.
