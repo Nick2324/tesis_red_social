@@ -84,18 +84,35 @@ public class CreaInvitadoEvento extends Peticion {
     @Override
     public void onPostExcecute(String resultadoPeticion) {
         if(resultadoPeticion != null){
-            Toast.makeText(this.contexto, this.contexto.getResources().
-                            getString(R.string.toast_invita_usu_eve),
-                    Toast.LENGTH_SHORT).show();
+            try {
+                JSONObject resultado = new JSONObject(resultadoPeticion);
+                if(resultado.getString("caracterAceptacion") != null &&
+                  ("200".equals(resultado.getString("caracterAceptacion")) ||
+                   "204".equals(resultado.getString("caracterAceptacion")))){
+                    Toast.makeText(this.contexto, this.contexto.getResources().
+                                    getString(R.string.toast_invita_usu_eve),
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    this.alertError();
+                }
+            } catch (JSONException e) {
+                this.alertError();
+                e.printStackTrace();
+            }
         }else{
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_invita_usu_eve_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_error_invita_usu_eve_msn)).
-                    setNeutralButton(this.contexto.getResources().
-                            getString(R.string.BOTON_NEUTRAL), null).
-                    create().show();
+            this.alertError();
         }
     }
+
+    private void alertError(){
+        new AlertDialog.Builder(this.contexto).
+                setTitle(this.contexto.getResources().
+                        getString(R.string.alert_invita_usu_eve_tit)).
+                setMessage(this.contexto.getResources().
+                        getString(R.string.alert_error_invita_usu_eve_msn)).
+                setNeutralButton(this.contexto.getResources().
+                        getString(R.string.BOTON_NEUTRAL), null).
+                create().show();
+    }
+
 }

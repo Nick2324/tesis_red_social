@@ -5,8 +5,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 
+import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.json.JsonObject;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
-import sportsallaround.snadeportivo.eventos.peticiones.AceptarInvitacion;
+import sportsallaround.snadeportivo.eventos.peticiones.CreaParticipante;
 import sportsallaround.snadeportivo.eventos.peticiones.EliminarInvitacion;
 import sportsallaround.snadeportivo.eventos.peticiones.TraerInvitacionesUsuario;
 import sportsallaround.utils.generales.Constants;
@@ -61,10 +61,11 @@ public class ListadoInvitacionesEvento extends Activity
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (which == 0) {
-                            new AceptarInvitacion(contexto,usuario,
+                            new CreaParticipante(contexto,
                                     getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                     getString(ConstantesEvento.SERVICIO_EVENTO),
-                                    itemSeleccionado).ejecutarPeticion();
+                                    (Evento)itemSeleccionado.getValue(),usuario,itemSeleccionado).
+                                    ejecutarPeticion();
                         }else if(which == 1){
                             new EliminarInvitacion(contexto,usuario,
                                     getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD).

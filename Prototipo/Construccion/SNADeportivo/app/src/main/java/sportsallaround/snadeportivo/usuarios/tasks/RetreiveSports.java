@@ -27,7 +27,6 @@ public class RetreiveSports extends AsyncTask<Void, Void, Deporte[]> {
         String responseRoles = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_DEPORTES, "GET");
         Deporte[] deportes = null;
         try {
-            Log.d("Nick:Deportes",responseRoles+" ?");
             JSONArray jsonRoles = new JSONArray(responseRoles);
             deportes = new Deporte[jsonRoles.length()];
             JSONObject deporte;

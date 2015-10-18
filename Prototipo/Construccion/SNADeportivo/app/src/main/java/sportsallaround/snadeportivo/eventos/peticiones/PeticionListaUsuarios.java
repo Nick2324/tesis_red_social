@@ -7,6 +7,7 @@ import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -41,10 +42,14 @@ public class PeticionListaUsuarios extends Peticion {
     }
 
     @Override
-    public void calcularParams() {}
+    public void calcularParams() {
+        this.params = new JSONObject();
+    }
 
     @Override
-    public void doInBackground() {}
+    public void doInBackground() {
+        this.setPeticionBody(true);
+    }
 
     @Override
     public void onPostExcecute(String resultadoPeticion){

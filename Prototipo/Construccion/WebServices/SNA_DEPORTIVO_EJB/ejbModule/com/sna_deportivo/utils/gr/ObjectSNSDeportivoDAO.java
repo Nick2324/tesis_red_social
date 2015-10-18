@@ -24,7 +24,8 @@ public abstract class ObjectSNSDeportivoDAO {
 		BDException,ExcepcionJsonDeserializacion{
 		ObjectSNSDeportivo[] objetos = null;
 		String where = BDUtils.condicionWhere(this.objectSNSDeportivo, identificadorQueries);
-		if(where != null || this.objectSNSDeportivo == null){
+		if(where != null || this.objectSNSDeportivo == null ||
+			this.objectSNSDeportivo.stringJson().equals("{}")){
 			StringBuilder query = new StringBuilder("MATCH ("+identificadorQueries+":");
 			query.append(tipoObjetoSNS);
 			query.append(")");
@@ -32,7 +33,6 @@ public abstract class ObjectSNSDeportivoDAO {
 				query.append(where);
 			query.append("RETURN "+identificadorQueries);
 			try{
-				System.out.println(query.toString());
 				Object[] resultadoQuery = BDUtils.
 						ejecutarQueryREST(query.toString());
 				objetos = new ObjectSNSDeportivo[resultadoQuery.length];
@@ -43,13 +43,16 @@ public abstract class ObjectSNSDeportivoDAO {
 										get("data")[0];
 					objetos[i] = this.factoryOSNS.getObjetoSNS();
 					objetos[i].deserializarJson(datos);
-					System.out.println(objetos[i].stringJson());
 				}
 			}catch(BDException e){
 				throw e;
 			}catch(ExcepcionJsonDeserializacion e){
 				e.printStackTrace();
 			}
+		}
+		
+		if(objetos == null){
+			objetos = new ObjectSNSDeportivo[0];
 		}
 		
 		return objetos;
@@ -208,13 +211,14 @@ public abstract class ObjectSNSDeportivoDAO {
 				getClass().getSimpleName()).getObjetoSNSDAO();
 		patrones = aVerificar.stringJsonPatrones(dao);
 		StringBuilder query = null;
+		int i = 0;
 		for(String patron:patrones){
 			query = new StringBuilder();
 			query.append("MATCH ");
 			query.append(this.producirNodoMatch());
 			query.append(patron);
 			query.append(" RETURN COUNT(");
-			query.append(dao.identificadorQueries);
+			query.append(dao.identificadorQueries+(i++));
 			query.append(") AS cuenta");
 			Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
 			if(resultado != null && resultado.length > 0 &&

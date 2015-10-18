@@ -16,6 +16,8 @@ import org.json.JSONObject;
 import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.Peticion;
+import sportsallaround.utils.generales.PeticionListaCallback;
+import sportsallaround.utils.gui.KeyValueItem;
 
 /**
  * Created by nicolas on 17/10/15.
@@ -26,15 +28,22 @@ public class CreaParticipante extends Peticion {
     private String tipoEvento;
     private Evento evento;
     private Usuario usuario;
+    private KeyValueItem elegido;
 
     public CreaParticipante(Context contexto,
                             String tipoEvento,
                             Evento evento,
-                            Usuario usuario) {
-        this.contexto = contexto;
-        this.tipoEvento = tipoEvento;
-        this.evento = evento;
-        this.usuario = usuario;
+                            Usuario usuario,
+                            KeyValueItem elegido) {
+        if(contexto instanceof PeticionListaCallback){
+            this.contexto = contexto;
+            this.tipoEvento = tipoEvento;
+            this.evento = evento;
+            this.usuario = usuario;
+            this.elegido = elegido;
+        }else{
+            throw new ClassCastException();
+        }
     }
 
     @Override
@@ -81,19 +90,36 @@ public class CreaParticipante extends Peticion {
     @Override
     public void onPostExcecute(String resultadoPeticion) {
         if(resultadoPeticion != null){
-            Toast.makeText(this.contexto, this.contexto.getResources().
-                            getString(R.string.toast_crea_participante_eve),
-                    Toast.LENGTH_SHORT).show();
+            try {
+                JSONObject respuesta = new JSONObject(resultadoPeticion);
+                if(respuesta.getString("caracterAceptacion") != null &&
+                        (respuesta.getString("caracterAceptacion").equals("200") ||
+                                respuesta.getString("caracterAceptacion").equals("204"))) {
+                    ((PeticionListaCallback)this.contexto).eliminarItem(this.elegido);
+                    Toast.makeText(this.contexto, this.contexto.getResources().
+                                    getString(R.string.toast_crea_participante_eve),
+                            Toast.LENGTH_SHORT).show();
+                }else{
+                    this.alertError();
+                }
+            } catch (JSONException e) {
+                this.alertError();
+                e.printStackTrace();
+            }
         }else{
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_crea_participante_eve_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_error_crea_participante_eve_msn)).
-                    setNeutralButton(this.contexto.getResources().
-                            getString(R.string.BOTON_NEUTRAL), null).
-                    create().show();
+            this.alertError();
         }
+    }
+
+    private void alertError(){
+        new AlertDialog.Builder(this.contexto).
+                setTitle(this.contexto.getResources().
+                        getString(R.string.alert_crea_participante_eve_tit)).
+                setMessage(this.contexto.getResources().
+                        getString(R.string.alert_error_crea_participante_eve_msn)).
+                setNeutralButton(this.contexto.getResources().
+                        getString(R.string.BOTON_NEUTRAL), null).
+                create().show();
     }
 
 }

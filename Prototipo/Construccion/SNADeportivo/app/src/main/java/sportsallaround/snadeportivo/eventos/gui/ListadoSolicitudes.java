@@ -122,7 +122,7 @@ public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallB
                                             new CreaParticipante(contexto, getIntent().
                                                     getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                                                     getString(ConstantesEvento.SERVICIO_EVENTO), evento,
-                                                    usuario).ejecutarPeticion();
+                                                    usuario,itemSeleccionado).ejecutarPeticion();
                                         } else if (which == 1) {
                                             new EliminarSolicitud(contexto, evento,
                                                     usuario,
@@ -177,6 +177,7 @@ public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallB
 
     @Override
     public void eliminarItem(KeyValueItem aEliminar) {
-
+        ((ListaConFiltro) getFragmentManager().findFragmentById(
+                R.id.fragment_solicitud_de_participante)).eliminarElemento(aEliminar);
     }
 }

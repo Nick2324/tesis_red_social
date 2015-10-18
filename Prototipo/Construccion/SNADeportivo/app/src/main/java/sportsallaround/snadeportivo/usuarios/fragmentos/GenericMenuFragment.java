@@ -85,9 +85,7 @@ public class GenericMenuFragment extends Fragment{
         Button boton;
         LinearLayout buttonLayout = new LinearLayout(context);
         buttonLayout.setOrientation(LinearLayout.VERTICAL);
-        Log.d("Nick:Cantidad","Size: " + permisos.size());
         for(final Permiso permiso : permisos){
-            Log.d("Nick:Permisos", permiso.getNombre() + " " + permiso.getRuta());
             boton = new Button(context);
             boton.setText(permiso.getNombre());
             boton.setOnClickListener(new View.OnClickListener() {

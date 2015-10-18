@@ -41,7 +41,6 @@ public class PickImagen extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Log.d("Nick:imagenEv", "He sido clickeado");
                 Intent intent =
                         new Intent(Intent.ACTION_PICK, Uri.parse(
                                 "content://media/internal/images/media"));
@@ -57,7 +56,7 @@ public class PickImagen extends Fragment {
             ImageButton imagenEvento = (ImageButton)getView().findViewById(R.id.button_imagen);
             imagenEvento.setImageURI(data.getData());
         }else{
-            Log.d("Nick:Imagen", "Error cargando imagen");
+            Log.e("Imagen", "Error cargando imagen");
         }
     }
 
