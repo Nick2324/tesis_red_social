@@ -1,0 +1,5 @@
+//*******************************************************************CREACION NODOS***********************************************************************************
+CREATE (estilosjuego1:E_EstiloJuego{id:1,nombre:"Defensivo",descripcion:"Este estilo del tenis se caracteriza por el uso continuo de golpes que desaceleran el ritmo de juego, tales como los cortes y los golpes con top spin alto. El jugador defensivo ocupa lugares por los 2 o 3 metros detrás de la linea base"})
+CREATE (estilosjuego2:E_EstiloJuego{id:2,nombre:"Contraataque",descripcion:"Este estilo del tenis se caracteriza por el uso de golpes que aprovechan la fuerza del contrario para ganar potencia en los propios. Los passing shot y los loops son los golpes más marcados en el contraataque."})
+CREATE (estilosjuego3:E_EstiloJuego{id:3,nombre:"Ofensivo",descripcion:"Este estilo se caracterisa por un ataque intenso al oponente con golpes planos, angulados y por approaches, así como también boleas"})
+

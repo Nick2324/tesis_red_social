@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -174,9 +175,10 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
             availableSports.setAdapter(spinnerArrayAdapter);
             availableSports.setTag(deportes);
 
-            for (int i=0;i<deportes.length;i++)
+            for (int i=0;i<deportes.length;i++) {
                 if (deportes[i].getId() == deporte.getDeporte().getId())
                     availableSports.setSelection(i);
+            }
 
             String selectedSport = deporte.getDeporte().getId() + "";
             positionsTask.setSportId(selectedSport);

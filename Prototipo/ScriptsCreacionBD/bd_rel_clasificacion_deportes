@@ -1,0 +1,6 @@
+//*******************************************************RELACIONES********************************************************************
+MATCH (deporte1:E_Deporte{id:1}),(clasificaciondeporte1:E_ClasificacionDeporte{id:1}) CREATE (deporte1)-[categoriaclasificacion1:R_CategoriaClasificacion{id:1}]->(clasificaciondeporte1);
+
+MATCH (deporte2:E_Deporte{id:2}),(clasificaciondeporte1:E_ClasificacionDeporte{id:1}) CREATE (deporte2)-[categoriaclasificacion2:R_CategoriaClasificacion{id:2}]->(clasificaciondeporte1);
+
+MATCH (deporte2:E_Deporte{id:2}),(clasificaciondeporte2:E_ClasificacionDeporte{id:2}) CREATE (deporte2)-[categoriaclasificacion3:R_CategoriaClasificacion{id:3}]->(clasificaciondeporte2);

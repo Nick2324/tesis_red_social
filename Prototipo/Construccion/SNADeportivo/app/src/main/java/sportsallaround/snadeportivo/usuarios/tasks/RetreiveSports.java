@@ -1,6 +1,7 @@
 package sportsallaround.snadeportivo.usuarios.tasks;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,6 +27,7 @@ public class RetreiveSports extends AsyncTask<Void, Void, Deporte[]> {
         String responseRoles = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_DEPORTES, "GET");
         Deporte[] deportes = null;
         try {
+            Log.d("Nick:Deportes",responseRoles+" ?");
             JSONArray jsonRoles = new JSONArray(responseRoles);
             deportes = new Deporte[jsonRoles.length()];
             JSONObject deporte;

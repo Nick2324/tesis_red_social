@@ -1,0 +1,6 @@
+//**************************************************RELACIONES*********************************************
+MATCH (genero1:E_Genero{id:1}),(genero2:E_Genero{id:2}),(deporte2:E_Deporte{id:2}) CREATE (genero2)<-[deportegenero3:R_CategoriaGenero{id:3}]-(deporte2)-[deportegenero4:R_CategoriaGenero{id:4}]->(genero1);
+
+MATCH (genero1:E_Genero{id:1}),(genero2:E_Genero{id:2}),(deporte1:E_Deporte{id:1}) CREATE (genero2)<-[deportegenero2:R_CategoriaGenero{id:2}]-(deporte1)-[deportegenero1:R_CategoriaGenero{id:1}]->(genero1);
+
+MATCH (genero3:E_Genero{id:3}),(deporte2:E_Deporte{id:2}) CREATE (deporte2)-[deportegenero5:R_CategoriaGenero{id:5}]->(genero3);

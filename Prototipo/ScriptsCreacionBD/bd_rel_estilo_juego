@@ -1,0 +1,6 @@
+//*******************************************************************CREACION RELACIONES*******************************************************************************
+MATCH (deporte2:E_Deporte{id:2}),(estilosjuego1:E_EstiloJuego{id:1}) CREATE (deporte2)-[tieneestilodeporte1:R_TieneEstiloDeporte{id:1}]->(estilosjuego1);
+
+MATCH (deporte2:E_Deporte{id:2}),(estilosjuego2:E_EstiloJuego{id:2}) CREATE (deporte2)-[tieneestilodeporte2:R_TieneEstiloDeporte{id:2}]->(estilosjuego2);
+
+MATCH (deporte2:E_Deporte{id:2}),(estilosjuego3:E_EstiloJuego{id:3}) CREATE (deporte2)-[tieneestilodeporte3:R_TieneEstiloDeporte{id:3}]->(estilosjuego3);

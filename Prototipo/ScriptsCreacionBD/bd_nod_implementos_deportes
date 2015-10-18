@@ -1,0 +1,16 @@
+//************************************************************************CREACION DE NODOS*************************************************
+CREATE (d1implementos1:E_Implemento{id:1,nombre:"Pelota de rugby",descripcion:"Es de forma ovalada, está construida con cuatro gajos de cuero o material sintético parecido y pesa algo menos de medio kilo",uso:"Manos y pies"})
+CREATE (d1implementos2:E_Implemento{id:2,nombre:"Casquete rugby",descripcion:"Protege las orejas de los roces en las melés",parteCuerpo:"Cabeza"})
+CREATE (d1implementos3:E_Implemento{id:3,nombre:"Protector corporal",descripcion:"Protege de choques en las extremidades superiores",parteCuerpo:"Extremidades superiores"})
+CREATE (d1implementos4:E_Implemento{id:4,nombre:"Botas",descripcion:"Botas, botines o guayos",parteCuerpo:"Pies"})
+CREATE (d2implementos1:E_Implemento{id:5,nombre:"Raqueta de tenis",descripcion:"Es un instrumento deportivo que consiste en un marco con un aro abierto y con una especie de red o caucho que lo cubre",parteCuerpo:"Manos"})
+CREATE (d2implementos2:E_Implemento{id:6,nombre:"Bola de tenis",descripcion:"Dentro del diámetro de éstas, debe oscilar entre 6.35 y 6.67 centímetros, mientras que su peso no debe sobrepasar por ningún motivo los 58.5 gramos",uso:"Raqueta de tenis"})
+CREATE (d2implementos3:E_Implemento{id:7,nombre:"Zapatillas de tenis",descripcion:"Son zapatillas especiales para la práctica del juego. Existe una clase de zapatilla para cada tipo de terreno",parteCuerpo:"pies"})
+//*****************************************************************CREACION DE NODOS RELACION N-ARIA*****************************************
+CREATE (d1implementosegungenero1:E_ImplementoSegunGenero{id:1})
+CREATE (d1implementosegungenero2:E_ImplementoSegunGenero{id:2})
+CREATE (d1implementosegungenero3:E_ImplementoSegunGenero{id:3})
+CREATE (d1implementosegungenero4:E_ImplementoSegunGenero{id:4})
+CREATE (d2implementosegungenero1:E_ImplementoSegunGenero{id:5})
+CREATE (d2implementosegungenero2:E_ImplementoSegunGenero{id:6})
+CREATE (d2implementosegungenero3:E_ImplementoSegunGenero{id:7})

@@ -1,0 +1,14 @@
+//****************************************************CREACION DE RELACIONES**************************************************************************
+match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:1}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:6}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:2}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:3}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:4}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:5}) create (p)-[:R_Permiso]->(r);
+
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:6}) create (p)-[:R_Permiso]->(r);

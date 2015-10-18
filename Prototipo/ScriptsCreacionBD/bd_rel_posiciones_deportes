@@ -1,0 +1,20 @@
+//*****************************************************************RELACIONES**********************************************************
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion1:E_Posicion{id:1}) CREATE (deporte1)-[posiciondeporte1:R_PosicionDeporte{id:1}]->(d1posicion1);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion2:E_Posicion{id:2}) CREATE (deporte1)-[posiciondeporte2:R_PosicionDeporte{id:2}]->(d1posicion2);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion3:E_Posicion{id:3}) CREATE (deporte1)-[posiciondeporte3:R_PosicionDeporte{id:3}]->(d1posicion3);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion4:E_Posicion{id:4}) CREATE (deporte1)-[posiciondeporte4:R_PosicionDeporte{id:4}]->(d1posicion4);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion5:E_Posicion{id:5}) CREATE (deporte1)-[posiciondeporte5:R_PosicionDeporte{id:5}]->(d1posicion5);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion6:E_Posicion{id:6}) CREATE (deporte1)-[posiciondeporte6:R_PosicionDeporte{id:6}]->(d1posicion6);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion7:E_Posicion{id:7}) CREATE (deporte1)-[posiciondeporte7:R_PosicionDeporte{id:7}]->(d1posicion7);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion8:E_Posicion{id:8}) CREATE (deporte1)-[posiciondeporte8:R_PosicionDeporte{id:8}]->(d1posicion8);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion9:E_Posicion{id:9}) CREATE (deporte1)-[posiciondeporte9:R_PosicionDeporte{id:9}]->(d1posicion9);
+
+MATCH (deporte1:E_Deporte{id:1}),(d1posicion10:E_Posicion{id:10}) CREATE (deporte1)-[posiciondeporte10:R_PosicionDeporte{id:10}]->(d1posicion10);

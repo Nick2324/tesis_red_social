@@ -1,0 +1,2 @@
+//*************************************************************RELACIONES***************************************************
+MATCH (movimientotecnico1:E_MovimientoTecnico{id:1}),(recursoexterno:E_RecursoExterno{id:1}) CREATE (movimientotecnico1)-[relacionrecurso:R_RelacionRecurso{id:1}]->(recursoexterno);

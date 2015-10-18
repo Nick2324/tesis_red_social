@@ -1,0 +1,30 @@
+#!/bin/bash
+
+NEO4J_BIN='/opt/neo4j-community-2.2.3/bin'
+TESIS_BD_HOME='/home/nicolas/tesis_red_social/Prototipo/ScriptsCreacionBD'
+
+#Creacion de todos los nodos
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_roles
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_generos
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_ubicaciones
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_estilo_juego
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_resursos_externos
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_posiciones_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_implementos_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_clasificacion_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_tacticas_tecnicas_movimientos
+
+#Creacion de todas las relaciones
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_roles
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_generos
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_ubicaciones
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_estilo_juego
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_resursos_externos
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_posiciones_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_implementos_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_clasificacion_deportes
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_tacticas_tecnicas_movimientos
+
+#Instrucciones de control
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_control

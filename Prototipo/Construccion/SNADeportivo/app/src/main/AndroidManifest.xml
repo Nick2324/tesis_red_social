@@ -53,11 +53,13 @@
         </activity>
         <activity
             android:name=".usuarios.UserUpdatePersonalInfoActivity"
-            android:label="@string/title_activity_user_update_personal_info" >
+            android:label="@string/title_activity_user_update_personal_info"
+            android:theme="@style/MainDrawerTheme" >
         </activity>
         <activity
             android:name=".usuarios.UserUpdateSportsActivity"
-            android:label="@string/title_activity_user_update_sports" >
+            android:label="@string/title_activity_user_update_sports"
+            android:theme="@style/MainDrawerTheme" >
         </activity>
         <activity
             android:name=".eventos.gui.GestionEventosLista"
@@ -80,7 +82,8 @@
         </activity>
         <activity
             android:name=".usuarios.UserAddPracticedSport"
-            android:label="@string/title_activity_user_add_practiced_sport" >
+            android:label="@string/title_activity_user_add_practiced_sport"
+            android:theme="@style/MainDrawerTheme" >
         </activity>
         <activity
             android:name=".eventos.gui.InformacionParticipantes"
@@ -118,7 +121,8 @@
             android:label="@string/title_activity_listado_invitar_aparticipar" ></activity>
         <activity
             android:name=".usuarios.UserUpdatePracticedSport"
-            android:label="@string/title_activity_user_update_practiced_sport" >
+            android:label="@string/title_activity_user_update_practiced_sport"
+            android:theme="@style/MainDrawerTheme" >
         </activity>
 
         <meta-data
@@ -127,11 +131,14 @@
 
         <activity
             android:name=".ubicaciones.NearbyLocationsActivity"
-            android:label="@string/title_activity_nearby_locations" >
+            android:label="@string/title_activity_nearby_locations"
+            android:theme="@style/MainDrawerTheme" >
         </activity>
+
         <activity
             android:name=".ubicaciones.CreateLocationActivity"
-            android:label="@string/title_activity_create_location" ></activity>
+            android:label="@string/title_activity_create_location"
+            android:theme="@style/MainDrawerTheme" ></activity>
 
     </application>
 

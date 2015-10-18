@@ -1,0 +1,10 @@
+//*************************************************CONTROL************************************************************
+//Elimina comas
+match n where has(n.descripcion) and n.descripcion =~ '.*,.*' set n.descripcion = replace(n.descripcion,',',' <comma> ');
+
+match n where has(n.historia) and n.historia =~ '.*,.*' set n.historia = replace(n.historia,',',' <comma> ');
+
+//************************************Control de eliminacion de nodos y patrones*******************************
+//match (a)-[r]-(b) return *;
+//match (a)-[r]-(b) delete a,r,b;
+//match n delete n;

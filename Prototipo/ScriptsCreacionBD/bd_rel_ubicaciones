@@ -1,0 +1,16 @@
+//********************************CREACION DE RELACIONES***********************************
+
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:1}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:2}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:3}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:1}), (c:E_Ciudad {id:4}) create (p)-[:R_PaisCiudad]->(c);
+
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:5}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:6}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:7}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:2}), (c:E_Ciudad {id:8}) create (p)-[:R_PaisCiudad]->(c);
+
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:9}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:10}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:11}) create (p)-[:R_PaisCiudad]->(c);
+match (p:E_Pais {id:3}), (c:E_Ciudad {id:12}) create (p)-[:R_PaisCiudad]->(c);
