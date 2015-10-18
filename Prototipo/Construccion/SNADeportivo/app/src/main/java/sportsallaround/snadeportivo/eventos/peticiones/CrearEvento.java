@@ -12,7 +12,7 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.gui.InformacionGeneralEvento;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ServiceUtils;

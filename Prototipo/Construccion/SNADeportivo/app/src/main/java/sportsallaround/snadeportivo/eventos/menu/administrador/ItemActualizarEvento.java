@@ -15,7 +15,7 @@ import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.peticiones.ActualizarEvento;
 import sportsallaround.utils.generales.ItemMenuSNS;
 

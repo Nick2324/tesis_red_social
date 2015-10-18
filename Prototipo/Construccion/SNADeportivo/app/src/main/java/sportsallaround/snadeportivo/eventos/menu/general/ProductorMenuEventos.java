@@ -1,6 +1,6 @@
 package sportsallaround.snadeportivo.eventos.menu.general;
 
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.menu.administrador.AnalizadorItemAdminEvento;
 import sportsallaround.snadeportivo.eventos.menu.administrador.MenuAdministradorEventos;
 import sportsallaround.snadeportivo.eventos.menu.participante.AnalizadorItemParticipaEve;

@@ -12,7 +12,7 @@ import android.widget.Button;
 import com.sna_deportivo.pojo.evento.TiposEventos;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.utils.generales.Constants;
 

@@ -19,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.peticiones.CrearEvento;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ItemMenuSNS;

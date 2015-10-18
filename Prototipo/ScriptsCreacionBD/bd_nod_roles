@@ -1,17 +1,17 @@
 //********************************************************CREACION DE ROLES Y PERMISOS*************************************************************
-create (:E_Rol {nombre:"Jugador", descripcion:"Rol asociado a los usuarios que practican un deporte", consecutivoRol:1})
+create (:E_Rol {nombre:"Jugador", descripcion:"Rol asociado a los usuarios que practican un deporte", consecutivoRol:1});
 
-create (:E_Rol {nombre:"Entrenador", descripcion:"Rol asociado a los usuarios que se dedican a entrenar a jugadores", consecutivoRol:2})
+create (:E_Rol {nombre:"Entrenador", descripcion:"Rol asociado a los usuarios que se dedican a entrenar a jugadores", consecutivoRol:2});
 
-create (:E_Permiso {nombre:"Administración de usuario", descripcion:"Funcionalidad que permite a los usuarios acceder al menú de administración de la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.fragmentos.GenericMenuFragment", consecutivoPermiso:1})
+create (:E_Permiso {nombre:"Administración de usuario", descripcion:"Funcionalidad que permite a los usuarios acceder al menú de administración de la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.fragmentos.GenericMenuFragment", consecutivoPermiso:1});
 
-create (:E_Permiso {nombre:"Actualizar datos personales", descripcion:"Funcionalidad que permite a los usuarios actualizar su información de contacto en la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePersonalInfoActivity", consecutivoPermiso:2})
+create (:E_Permiso {nombre:"Actualizar datos personales", descripcion:"Funcionalidad que permite a los usuarios actualizar su información de contacto en la aplicación", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePersonalInfoActivity", consecutivoPermiso:2});
 
-create (:E_Permiso {nombre:"Actualizar datos de jugador", descripcion:"Funcionalidad que permite a los usuarios actualizar su información general de jugador", ruta:"", consecutivoPermiso:3})
+create (:E_Permiso {nombre:"Actualizar datos de jugador", descripcion:"Funcionalidad que permite a los usuarios actualizar su información general de jugador", ruta:"", consecutivoPermiso:3});
 
-create (:E_Permiso {nombre:"Actualizar mis deportes practicados", descripcion:"Funcionalidad que permite a los usuarios actualizar sus deportes practicados", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePracticedSport", consecutivoPermiso:4})
+create (:E_Permiso {nombre:"Actualizar mis deportes practicados", descripcion:"Funcionalidad que permite a los usuarios actualizar sus deportes practicados", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePracticedSport", consecutivoPermiso:4});
 
-create (:E_Permiso {nombre:"Mis patrocinios", descripcion:"Funcionalidad que permite a los acceder al menu de actualizacion de patrocinios", ruta:"", consecutivoPermiso:5})
+create (:E_Permiso {nombre:"Mis patrocinios", descripcion:"Funcionalidad que permite a los acceder al menu de actualizacion de patrocinios", ruta:"", consecutivoPermiso:5});
 
 create (:E_Permiso {nombre:"Gestionar eventos", descripcion:"Funcionalidad que permite acceder al menu de gestion de eventos",
-ruta:"sportsallaround.snadeportivo.eventos.gui.GestionEventos", consecutivoPermiso:6})
+ruta:"sportsallaround.snadeportivo.eventos.gui.GestionEventos", consecutivoPermiso:6});

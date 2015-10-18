@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -54,11 +55,13 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
         //mMap.moveCamera(CameraUpdateFactory.zoomBy(12));
         mMap.addCircle(new CircleOptions().center(ubicacion).radius(2).fillColor(Color.BLUE).strokeColor(Color.BLUE));
         for(LugarPractica lugar : locations){
-            mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(lugar.getLatitud(),lugar.getLongitud()))
-                    .title(lugar.getNombre())
-                    .snippet("Deportes practicados: PENDIENTE" )
-            );
+            if(lugar != null) {
+                mMap.addMarker(new MarkerOptions()
+                                .position(new LatLng(lugar.getLatitud(), lugar.getLongitud()))
+                                .title(lugar.getNombre())
+                                .snippet("Deportes practicados: PENDIENTE")
+                );
+            }
         }
     }
 

@@ -51,6 +51,10 @@ public class ServiceUtils {
             else
                 completeUrl = new URL(Constants.ROOT_URL + serviceURL);
             HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+            if(!method.equals("POST")){
+                conn.addRequestProperty("X-HTTP-Method-Override",method);
+                method = "POST";
+            }
             conn.setReadTimeout(10000 /* milliseconds */);
             conn.setConnectTimeout(15000 /* milliseconds */);
 

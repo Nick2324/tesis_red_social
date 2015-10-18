@@ -1,5 +1,7 @@
 package com.sna_deportivo.pojo.evento;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.bd.FechaSNS;
 import com.sna_deportivo.utils.bd.TiempoSNS;
@@ -17,6 +19,7 @@ import com.sna_deportivo.utils.json.JsonUtils;
  *
  */
 
+@XmlRootElement
 public class Evento extends ObjectSNSDeportivo {
 
 	private String id;

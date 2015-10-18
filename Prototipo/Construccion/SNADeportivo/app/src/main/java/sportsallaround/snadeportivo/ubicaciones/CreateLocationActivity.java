@@ -43,8 +43,8 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
     private EditText observacionesLugar;
     private Spinner tipoLugar;
     private LinearLayout deportesPracticadosLugar;
-    private Deporte[] deportesPosibles;
-    private ArrayList<Deporte> deportes;
+    //private Deporte[] deportesPosibles;
+    //private ArrayList<Deporte> deportes;
     private float latitud, longitud;
     private LocationManager locationManager;
     private String provider;
@@ -135,7 +135,7 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
 
     @Override
     public void setSports(Deporte[] deportesExistentes) {
-        this.deportesPosibles = deportesExistentes;
+        /*this.deportesPosibles = deportesExistentes;
         if (deportesPosibles != null) {
             this.deportesPracticadosLugar.removeAllViews();
             CheckBox checkDeporte;
@@ -146,12 +146,13 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
                 checkDeporte.setTag(deporte);
                 deportesPracticadosLugar.addView(checkDeporte,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             }
-        }
+        }*/
     }
 
     @Override
     public Deporte[] getSports() {
-        return this.deportesPosibles;
+        //return this.deportesPosibles;
+        return null;
     }
 
     public boolean validarDatosIngresados(){
@@ -160,7 +161,7 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
             retorno = false;
 
         CheckBox check;
-        deportes = new ArrayList<>();
+        /*deportes = new ArrayList<>();
         for(int i=0;i<deportesPracticadosLugar.getChildCount();i++){
             check = (CheckBox)deportesPracticadosLugar.getChildAt(i);
             if (check.isChecked()){
@@ -169,7 +170,7 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
         }
         if(deportes.size() == 0){
             retorno = false;
-        }
+        }*/
 
         return retorno;
     }
@@ -194,10 +195,10 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
             nuevaUbicacion.setLugar(lugar);
             new CreateLocation(this).execute(nuevaUbicacion);
         }
-        else if (deportes.size() == 0)
+        /*else if (deportes.size() == 0)
             Toast.makeText(getApplicationContext(), "Debe seleccionar por lo menos un deporte.", Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(getApplicationContext(), "Verifique que todos los campos esten debidamente diligenciados.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Verifique que todos los campos esten debidamente diligenciados.", Toast.LENGTH_LONG).show();*/
 
     }
 

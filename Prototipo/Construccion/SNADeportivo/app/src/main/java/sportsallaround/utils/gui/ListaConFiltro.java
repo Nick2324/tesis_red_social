@@ -16,7 +16,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import sportsallaround.snadeportivo.R;
 
@@ -27,11 +26,8 @@ public class ListaConFiltro extends Fragment {
     public interface CallBackListaConFiltro {
 
         public void realizarAccionAlClick(KeyValueItem item, String identificadorFragmento);
-
         public ArrayList<KeyValueItem> generarAdapter(String identificadorFragmento);
-
         public ArrayList<KeyValueItem> regenerarAdapter(String identificadorFragmento);
-
         public void realizarAccionLongClick(KeyValueItem item, String identificadorFragmento);
 
     }
@@ -52,7 +48,7 @@ public class ListaConFiltro extends Fragment {
         try {
             this.actividad = (CallBackListaConFiltro) activity;
         } catch (Exception e) {
-            Log.d("Nick:ListaFil", "No soporta CallBackListaConFiltro");
+            Log.e("Nick:ListaFil", "No soporta CallBackListaConFiltro");
         }
     }
 

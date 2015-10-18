@@ -86,7 +86,7 @@ public class GestionUbicacion {
 		JsonObject row;
 		
 		ResponseGenerico response = new ResponseGenerico();
-		
+		System.out.println("armando query");
 		//Crear nodo E_Ubicacion
 		nodoUbicacion = BDUtils.crearNodo();
 		// Asignar label a nodo
@@ -107,6 +107,7 @@ public class GestionUbicacion {
 		idPais = (String) row.getPropiedades().get("arreglo")[0];
 		//Obtener ID Ciudad
 		query = "MATCH (n:" + Entidades.CIUDAD + "{id:" + pais.getId() + "}) RETURN id(n)";
+		System.out.println(query);
 		data = BDUtils.ejecutarQuery(query);
 		row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
 		idCiudad = (String) row.getPropiedades().get("arreglo")[0];

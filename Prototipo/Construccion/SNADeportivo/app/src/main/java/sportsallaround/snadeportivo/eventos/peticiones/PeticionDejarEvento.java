@@ -17,7 +17,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.gui.PerfilEvento;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.Peticion;
@@ -47,7 +47,7 @@ public class PeticionDejarEvento extends Peticion {
 
     @Override
     public void calcularMetodo() {
-        super.metodo = "POST";
+        super.metodo = "DELETE";
     }
 
     @Override

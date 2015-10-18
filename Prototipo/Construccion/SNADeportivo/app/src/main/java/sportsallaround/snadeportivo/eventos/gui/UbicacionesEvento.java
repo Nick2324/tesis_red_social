@@ -2,7 +2,6 @@ package sportsallaround.snadeportivo.eventos.gui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
@@ -18,98 +16,17 @@ import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.menu.general.ProductorMenuEventos;
+import sportsallaround.snadeportivo.eventos.peticiones.TraerUbicacionEvento;
 import sportsallaround.utils.generales.MenuSNS;
 import sportsallaround.utils.generales.Constants;
-import sportsallaround.utils.generales.Peticion;
+import sportsallaround.utils.generales.PeticionObjectCallback;
 
-public class UbicacionesEvento extends Activity {
+public class UbicacionesEvento extends Activity implements PeticionObjectCallback{
 
     private MenuSNS menuSNS;
-
-    private class TraerUbicacionEvento extends Peticion {
-
-        private Context contexto;
-        private Evento evento;
-        private String tipoEvento;
-
-        private TraerUbicacionEvento(Context contexto, Evento evento, String tipoEvento) {
-            this.contexto = contexto;
-            this.evento = evento;
-            this.tipoEvento = tipoEvento;
-        }
-
-        @Override
-        public void calcularMetodo() {
-            super.metodo = "GET";
-        }
-
-        @Override
-        public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_EVENTOS +
-                    this.tipoEvento + "/" +
-                    this.evento.getId() + "/" +
-                    Constants.SERVICES_PATH_UBICACIONES;
-        }
-
-        @Override
-        public void calcularParams() {
-            try {
-                super.params = new JSONObject();
-                //PONIENDO EVENTO
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(this.evento.stringJson()));
-                JSONObject parametrosEvento = new JSONObject();
-                parametrosEvento.put(this.evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEvento);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {
-            super.setPeticionBody(true);
-        }
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion) {
-            if(resultadoPeticion != null){
-                try {
-                    JSONObject resultado = new JSONObject(resultadoPeticion);
-                    if(resultado.getString("caracterAceptacion") != null &&
-                       resultado.getString("caracterAceptacion").equals("200")){
-                        setUpDatosActividad(resultado.getString("datosExtra"));
-                    }else{
-                        this.alertError();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    this.alertError();
-                }
-            }
-        }
-
-        private void alertError(){
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_traer_ubicacion_evento_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_traer_ubicacion_evento_msn_err)).
-                    setNeutralButton(this.contexto.getResources().getString(R.string.BOTON_NEUTRAL),
-                            null).
-                    create().show();
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,4 +126,10 @@ public class UbicacionesEvento extends Activity {
 
     }
 
+    @Override
+    public void getObjetoPeticion(Object objetoPeticion) {
+        if(objetoPeticion instanceof String) {
+            setUpDatosActividad((String)objetoPeticion);
+        }
+    }
 }

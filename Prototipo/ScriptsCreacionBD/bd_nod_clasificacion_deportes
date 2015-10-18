@@ -1,3 +1,4 @@
 //************************************************************NODOS********************************************************************
-CREATE (clasificaciondeporte1:E_ClasificacionDeporte{id:1,nombre:"De pelota",descripcion:"Deportes cuyo elemento principal es una pelota"})
-CREATE (clasificaciondeporte2:E_ClasificacionDeporte{id:2,nombre:"De raqueta",descripcion:"Deportes cuyo elemento principal es una raqueta"})
+CREATE (clasificaciondeporte1:E_ClasificacionDeporte{id:1,nombre:"De pelota",descripcion:"Deportes cuyo elemento principal es una pelota"});
+
+CREATE (clasificaciondeporte2:E_ClasificacionDeporte{id:2,nombre:"De raqueta",descripcion:"Deportes cuyo elemento principal es una raqueta"});

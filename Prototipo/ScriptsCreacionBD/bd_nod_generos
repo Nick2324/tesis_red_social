@@ -1,4 +1,6 @@
 //***********************************CREACION DE GENEROS***************************************************
-CREATE (genero1:E_Genero{id:1,nombre:"Masculino",descripcion:"Aplica para entidades del género masculino"})
-CREATE (genero2:E_Genero{id:2,nombre:"Femenino",descripcion:"Aplica para entidades del género femenino"})
-CREATE (genero3:E_Genero{id:3,nombre:"Mixto",descripcion:"Aplica para entidades que tengan tanto género femenino como masculino incluyente"})
+CREATE (genero1:E_Genero{id:1,nombre:"Masculino",descripcion:"Aplica para entidades del género masculino"});
+
+CREATE (genero2:E_Genero{id:2,nombre:"Femenino",descripcion:"Aplica para entidades del género femenino"});
+
+CREATE (genero3:E_Genero{id:3,nombre:"Mixto",descripcion:"Aplica para entidades que tengan tanto género femenino como masculino incluyente"});

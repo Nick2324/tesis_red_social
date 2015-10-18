@@ -133,12 +133,15 @@
             android:name=".ubicaciones.NearbyLocationsActivity"
             android:label="@string/title_activity_nearby_locations"
             android:theme="@style/MainDrawerTheme" >
+
         </activity>
 
         <activity
             android:name=".ubicaciones.CreateLocationActivity"
             android:label="@string/title_activity_create_location"
-            android:theme="@style/MainDrawerTheme" ></activity>
+            android:theme="@style/MainDrawerTheme" >
+
+        </activity>
 
     </application>
 

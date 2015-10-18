@@ -5,14 +5,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
-import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
@@ -20,89 +17,26 @@ import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.menu.general.ProductorMenuEventos;
+import sportsallaround.snadeportivo.eventos.peticiones.PeticionSolicitudParticipantes;
 import sportsallaround.utils.generales.MenuSNS;
 import sportsallaround.snadeportivo.eventos.peticiones.CreaParticipante;
 import sportsallaround.snadeportivo.eventos.peticiones.EliminarSolicitud;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ConstructorArrObjSNS;
-import sportsallaround.utils.generales.Peticion;
+import sportsallaround.utils.generales.PeticionListaCallback;
 import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
 
-public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallBackListaConFiltro{
+public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallBackListaConFiltro,
+        PeticionListaCallback {
 
     private ArrayList<ObjectSNSDeportivo> solicitudes;
     private MenuSNS menuSNS;
-
-    private class PeticionSolicitudParticipantes extends Peticion{
-
-        private Evento evento;
-        private String tipoEvento;
-
-        public PeticionSolicitudParticipantes(Evento evento, String tipoEvento){
-            this.evento = evento;
-            this.tipoEvento = tipoEvento;
-        }
-
-        @Override
-        public void calcularMetodo() {
-            this.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            this.servicio = Constants.SERVICES_PATH_EVENTOS + this.tipoEvento + "/" +
-                            this.evento.getId() + "/" +
-                            Constants.SERVICES_PATH_EVE_SOLICITUDES;
-        }
-
-        @Override
-        public void calcularParams(){
-            try {
-                super.params = new JSONObject();
-                //PONIENDO EVENTO
-                //Los eventos deben estar activos
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(this.evento.stringJson()));
-                JSONObject parametrosEvento = new JSONObject();
-                parametrosEvento.put(this.evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEvento);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {}
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion){
-            Log.d("Nick:RespuestaTask",resultadoPeticion);
-            if(resultadoPeticion != null) {
-                try {
-                    solicitudes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
-                                    new JSONArray(resultadoPeticion));
-                    ((ListaConFiltro) getFragmentManager().findFragmentById(
-                            R.id.fragment_solicitud_de_participante)).llenarLista();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,6 +79,7 @@ public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallB
                     getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
                     getString(ConstantesEvento.EVENTO_MANEJADO)));
             new PeticionSolicitudParticipantes(
+                    this,
                     evento,
                     getIntent().
                     getBundleExtra(Constants.DATOS_FUNCIONALIDAD).
@@ -228,4 +163,20 @@ public class ListadoSolicitudes extends Activity implements ListaConFiltro.CallB
     @Override
     public void realizarAccionLongClick(KeyValueItem item, String identificadorFragmento) {}
 
+    @Override
+    public void llenarListaDesdePeticion(ArrayList<ObjectSNSDeportivo> listaObtenida) {
+        this.solicitudes = listaObtenida;
+        ((ListaConFiltro) getFragmentManager().findFragmentById(
+                R.id.fragment_solicitud_de_participante)).llenarLista();
+    }
+
+    @Override
+    public void limpiarListaDesdePeticion() {
+
+    }
+
+    @Override
+    public void eliminarItem(KeyValueItem aEliminar) {
+
+    }
 }

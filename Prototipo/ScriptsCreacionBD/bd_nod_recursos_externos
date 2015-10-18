@@ -1,2 +1,2 @@
 //*************************************************************NODOS********************************************************
-CREATE (recursoexterno:E_RecursoExterno{id:1,nombre:"Volea explicada",descripcion:"Video explicativo de una volea",url:"https://www.youtube.com/watch?v=Otjx6rL79NM"})
+CREATE (recursoexterno:E_RecursoExterno{id:1,nombre:"Volea explicada",descripcion:"Video explicativo de una volea",url:"https://www.youtube.com/watch?v=Otjx6rL79NM"});

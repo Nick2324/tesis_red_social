@@ -1,6 +1,7 @@
 package sportsallaround.snadeportivo.usuarios.tasks;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;

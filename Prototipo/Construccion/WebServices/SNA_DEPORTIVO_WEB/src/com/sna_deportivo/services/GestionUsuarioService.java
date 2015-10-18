@@ -303,7 +303,7 @@ public class GestionUsuarioService {
 		return response;
 	}
 	
-	@POST	
+	@GET	
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{id}/eventos/{tipoEvento}")
@@ -327,7 +327,7 @@ public class GestionUsuarioService {
 		}
 	}
 	
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{id}/eventos/invitaciones")

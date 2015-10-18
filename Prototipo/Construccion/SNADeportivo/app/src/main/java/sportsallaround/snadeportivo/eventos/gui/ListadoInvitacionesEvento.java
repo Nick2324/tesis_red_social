@@ -5,313 +5,34 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.util.Log;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
-import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
-import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
-import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.peticiones.AceptarInvitacion;
+import sportsallaround.snadeportivo.eventos.peticiones.EliminarInvitacion;
+import sportsallaround.snadeportivo.eventos.peticiones.TraerInvitacionesUsuario;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ConstructorArrObjSNS;
-import sportsallaround.utils.generales.Peticion;
+import sportsallaround.utils.generales.PeticionListaCallback;
 import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
 import sportsallaround.utils.gui.TituloActividad;
 
 public class ListadoInvitacionesEvento extends Activity
-        implements TituloActividad.InitializerTituloActividad,ListaConFiltro.CallBackListaConFiltro{
+        implements TituloActividad.InitializerTituloActividad,ListaConFiltro.CallBackListaConFiltro,
+        PeticionListaCallback {
 
     private ArrayList<ObjectSNSDeportivo> invitaciones;
     private Usuario usuario;
-
-    private class TraerInvitacionesUsuario extends Peticion {
-
-        private Context contexto;
-        private Usuario usuario;
-        private String tipoEvento;
-
-        public TraerInvitacionesUsuario(Context contexto,
-                                        Usuario usuario,
-                                        String tipoEvento) {
-            this.contexto = contexto;
-            this.usuario = usuario;
-            this.tipoEvento = tipoEvento;
-        }
-
-        @Override
-        public void calcularMetodo() {
-            super.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_USUARIOS +
-                    this.usuario.getUsuario() + "/" +
-                    Constants.SERVICES_PATH_EVENTOS +
-                    Constants.SERVICES_PATH_EVE_INVITACIONES;
-        }
-
-        @Override
-        public void calcularParams() {
-            try {
-                super.params = new JSONObject();
-                //PONIENDO USUARIO
-                JSONArray arrayUsuarios = new JSONArray();
-                arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
-                JSONObject parametrosUsuario = new JSONObject();
-                parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
-                        arrayUsuarios);
-                super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
-                        parametrosUsuario);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {
-            this.setPeticionBody(true);
-        }
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion) {
-            if(resultadoPeticion != null){
-                try {
-                    invitaciones =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new ProductorFactoryEvento().
-                                            producirFacObjetoSNS(this.tipoEvento),
-                                    new JSONArray(resultadoPeticion));
-                    ((ListaConFiltro)getFragmentManager().
-                            findFragmentById(R.id.fragment_lista_invitaciones_evento)).llenarLista();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                } catch (ProductorFactoryExcepcion productorFactoryExcepcion) {
-                    productorFactoryExcepcion.printStackTrace();
-                }
-            }else{
-                Toast.makeText(this.contexto, this.contexto.getResources().
-                        getString(R.string.toast_listado_invitaciones_vacio), Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    private class EliminarInvitacion extends Peticion{
-
-        private Context contexto;
-        private Usuario usuario;
-        private String tipoEvento;
-        private Evento evento;
-        private KeyValueItem seleccionado;
-
-        public EliminarInvitacion(Context contexto,
-                                  Usuario usuario,
-                                  String tipoEvento,
-                                  KeyValueItem seleccionado) {
-            this.contexto = contexto;
-            this.usuario = usuario;
-            this.tipoEvento = tipoEvento;
-            this.seleccionado = seleccionado;
-            this.evento = (Evento)seleccionado.getValue();
-        }
-
-        @Override
-        public void calcularMetodo() {
-            super.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_EVENTOS +
-                    this.tipoEvento  + "/" + this.evento.getId() + "/" +
-                    Constants.SERVICES_PATH_EVE_INVITACIONES +
-                    this.usuario.getUsuario();
-        }
-
-        @Override
-        public void calcularParams() {
-            try {
-                super.params = new JSONObject();
-                //PONIENDO USUARIO
-                JSONArray arrayUsuarios = new JSONArray();
-                arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
-                JSONObject parametrosUsuario = new JSONObject();
-                parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
-                        arrayUsuarios);
-                super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
-                        parametrosUsuario);
-
-                //PONIENDO EVENTO
-                Evento evento = (Evento)this.seleccionado.getValue();
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(evento.stringJson()));
-                JSONObject parametrosEventos = new JSONObject();
-                parametrosEventos.put(evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEventos);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {}
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion){
-            if(resultadoPeticion != null){
-                try {
-                    JSONObject respuesta = new JSONObject(resultadoPeticion);
-                    if(respuesta.getString("caracterAceptacion") != null &&
-                       (respuesta.getString("caracterAceptacion").equals("200") ||
-                               respuesta.getString("caracterAceptacion").equals("204"))){
-                        //ELIMINANDO ELEMENTO DE LA LISTA
-                        ((ListaConFiltro)((Activity)this.contexto).getFragmentManager().
-                                findFragmentById(R.id.fragment_lista_invitaciones_evento)).
-                                eliminarElemento(this.seleccionado);
-                        Toast.makeText(this.contexto,this.contexto.getResources().
-                                getString(R.string.toast_invitacion_eliminada_exito),
-                                Toast.LENGTH_LONG).show();
-                    }else{
-                        this.alertError();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    this.alertError();
-                }
-            }else{
-                this.alertError();
-            }
-        }
-
-        private void alertError(){
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_elimina_invitacion_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_elimina_invitacion_err_msn)).
-                    setNeutralButton(this.contexto.getResources().
-                            getString(R.string.BOTON_NEUTRAL), null).
-                    create().show();
-        }
-    }
-
-    private class AceptarInvitacion extends Peticion{
-
-        private Context contexto;
-        private Usuario usuario;
-        private String tipoEvento;
-        private Evento evento;
-        private KeyValueItem seleccionado;
-
-        public AceptarInvitacion(Context contexto,
-                                  Usuario usuario,
-                                  String tipoEvento,
-                                  KeyValueItem seleccionado) {
-            this.contexto = contexto;
-            this.usuario = usuario;
-            this.tipoEvento = tipoEvento;
-            this.seleccionado = seleccionado;
-            this.evento = (Evento)seleccionado.getValue();
-        }
-
-        @Override
-        public void calcularMetodo() {
-            super.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_USUARIOS +
-                    this.usuario.getUsuario() + "/" +
-                    Constants.SERVICES_PATH_EVENTOS +
-                    this.tipoEvento + this.evento.getId() + "/" +
-                    Constants.SERVICES_PATH_EVE_INVITACIONES;
-        }
-
-        @Override
-        public void calcularParams() {
-            try {
-                super.params = new JSONObject();
-                //PONIENDO USUARIO
-                JSONArray arrayUsuarios = new JSONArray();
-                arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
-                JSONObject parametrosUsuario = new JSONObject();
-                parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
-                        arrayUsuarios);
-                super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
-                        parametrosUsuario);
-
-                //PONIENDO EVENTO
-                Evento evento = (Evento)this.seleccionado.getValue();
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(evento.stringJson()));
-                JSONObject parametrosEventos = new JSONObject();
-                parametrosEventos.put(evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEventos);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {}
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion){
-            if(resultadoPeticion != null){
-                try {
-                    JSONObject respuesta = new JSONObject(resultadoPeticion);
-                    if(respuesta.getString("caracterAceptacion") != null &&
-                            (respuesta.getString("caracterAceptacion").equals("200") ||
-                                    respuesta.getString("caracterAceptacion").equals("204"))){
-                        //ELIMINANDO ELEMENTO DE LA LISTA
-                        ((ListaConFiltro)((Activity)this.contexto).getFragmentManager().
-                                findFragmentById(R.id.fragment_lista_invitaciones_evento)).
-                                eliminarElemento(this.seleccionado);
-                        Toast.makeText(this.contexto,this.contexto.getResources().
-                                        getString(R.string.toast_invitacion_aceptada_exito),
-                                Toast.LENGTH_LONG).show();
-                    }else{
-                        this.alertError();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    this.alertError();
-                }
-            }else{
-                this.alertError();
-            }
-        }
-
-        private void alertError(){
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_acepta_invitacion_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_acepta_invitacion_err_msn)).
-                    setNeutralButton(this.contexto.getResources().
-                            getString(R.string.BOTON_NEUTRAL), null).
-                    create().show();
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -402,4 +123,25 @@ public class ListadoInvitacionesEvento extends Activity
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void llenarListaDesdePeticion(ArrayList<ObjectSNSDeportivo> listaObtenida) {
+        this.invitaciones = listaObtenida;
+        ((ListaConFiltro)getFragmentManager().
+                findFragmentById(R.id.fragment_lista_invitaciones_evento)).llenarLista();
+    }
+
+    @Override
+    public void limpiarListaDesdePeticion() {
+        ((ListaConFiltro)getFragmentManager().
+                findFragmentById(R.id.fragment_lista_invitaciones_evento)).limpiarLista();
+    }
+
+    @Override
+    public void eliminarItem(KeyValueItem aEliminar) {
+        ((ListaConFiltro)this.getFragmentManager().
+                findFragmentById(R.id.fragment_lista_invitaciones_evento)).
+                eliminarElemento(aEliminar);
+    }
+
 }

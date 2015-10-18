@@ -39,7 +39,7 @@ public class GestionEventoService {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}")
 	public String consultarEventos(@PathParam("tipoEvento") String tipoEvento,
-							 	   Evento evento){
+								   Evento evento){
 		try{
 			return gestionEvento.consultarEventos(tipoEvento,
 										   		  evento);
@@ -70,27 +70,11 @@ public class GestionEventoService {
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Path("{tipoEvento}/")
-	public ResponseGenerico actualizarEvento(@PathParam("tipoEvento") String tipoEvento,
-							   Evento evento){
-		try{
-			this.gestionEvento.actualizarEvento(tipoEvento, evento);
-			return new ResponseGenerico("200","Evento actualizado con exito");
-		}catch(WebApplicationException e){
-			throw e;
-		}catch(Exception e){
-			e.printStackTrace();
-			throw new WebApplicationException(500);
-		}
-	}
-	
-	@PUT
-	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}")
-	public ResponseGenerico actualizarEventoCompleto(@PathParam("tipoEvento") String tipoEvento,
-											 		 @PathParam("id") String idEvento,
-											 		 String body){
+	public ResponseGenerico actualizarEvento(@PathParam("tipoEvento") String tipoEvento,
+											 @PathParam("id") String idEvento,
+											 String body){
 		try{
 			System.out.println(body);
 			new ActualizarEvento().actualizarEvento(tipoEvento,
@@ -221,7 +205,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	@POST
+	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/invitaciones/{idInvitado}")
@@ -287,7 +271,7 @@ public class GestionEventoService {
 		
 	}
 	
-	@POST
+	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/{idParticipante}")
@@ -310,7 +294,7 @@ public class GestionEventoService {
 		return new ResponseGenerico("200","Participante eliminado con exito");
 	}
 	
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
@@ -331,7 +315,7 @@ public class GestionEventoService {
 	}
 
 
-	@GET
+	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/participantes/solicitudes")
@@ -352,7 +336,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	@POST
+	@DELETE
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{idEvento}/participantes/solicitudes/{idParticipante}")
@@ -375,7 +359,7 @@ public class GestionEventoService {
 		
 	}
 	
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/deportes")
@@ -394,7 +378,7 @@ public class GestionEventoService {
 		}
 	}
 	
-	@POST
+	@GET
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("{tipoEvento}/{id}/generos")

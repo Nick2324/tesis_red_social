@@ -1,4 +1,4 @@
-package sportsallaround.snadeportivo.eventos;
+package sportsallaround.snadeportivo.eventos.general;
 
 /**
  * Created by nicolas on 13/09/15.

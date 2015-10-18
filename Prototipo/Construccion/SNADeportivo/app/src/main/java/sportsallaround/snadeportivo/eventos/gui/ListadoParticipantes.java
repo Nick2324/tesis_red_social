@@ -7,213 +7,37 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.Usuario;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
-import com.sna_deportivo.pojo.usuarios.FactoryUsuario;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.utils.json.JsonObject;
 import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.menu.general.ProductorMenuEventos;
+import sportsallaround.snadeportivo.eventos.peticiones.EliminarParticipante;
+import sportsallaround.snadeportivo.eventos.peticiones.ObtenerParticipantes;
 import sportsallaround.utils.generales.MenuSNS;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ConstructorArrObjSNS;
-import sportsallaround.utils.generales.Peticion;
+import sportsallaround.utils.generales.PeticionListaCallback;
 import sportsallaround.utils.gui.KeyValueItem;
 import sportsallaround.utils.gui.ListaConFiltro;
 import sportsallaround.utils.gui.TituloActividad;
 
 public class ListadoParticipantes extends Activity
-        implements TituloActividad.InitializerTituloActividad,ListaConFiltro.CallBackListaConFiltro{
+        implements TituloActividad.InitializerTituloActividad,
+        ListaConFiltro.CallBackListaConFiltro,PeticionListaCallback {
 
     private ArrayList<ObjectSNSDeportivo> participantes;
     private MenuSNS menuSNS;
-
-    private class ObtenerParticipantes extends Peticion{
-
-        private Context contexto;
-        private Evento evento;
-        private String tipoEvento;
-
-        public ObtenerParticipantes(Context contexto,
-                                    Evento evento,
-                                    String tipoEvento){
-            this.contexto = contexto;
-            this.evento = evento;
-            this.tipoEvento = tipoEvento;
-        }
-
-        @Override
-        public void calcularMetodo() {
-            this.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            if(this.evento != null && this.evento.getId() != null) {
-                super.servicio = Constants.SERVICES_PATH_EVENTOS +
-                       tipoEvento + "/" +
-                        evento.getId() + "/" +
-                        Constants.SERVICES_PATH_EVE_PARTICIPANTES;
-            }
-        }
-
-        @Override
-        public void calcularParams() {
-            try {
-                super.params = new JSONObject();
-                //PONIENDO EVENTO
-                //Los eventos deben estar activos
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(this.evento.stringJson()));
-                JSONObject parametrosEvento = new JSONObject();
-                parametrosEvento.put(this.evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEvento);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {}
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion) {
-            if(resultadoPeticion != null){
-                try {
-                    participantes =
-                            ConstructorArrObjSNS.producirArrayObjetoSNS(new FactoryUsuario(),
-                                                                        new JSONArray(resultadoPeticion));
-                    ((ListaConFiltro)getFragmentManager().
-                            findFragmentById(R.id.fragment_lista_participantes)).llenarLista();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }else{
-                Toast.makeText(this.contexto,this.contexto.getResources().
-                        getString(R.string.toast_listado_participantes_vacio),Toast.LENGTH_LONG).show();
-            }
-        }
-    }
-
-    private class EliminarParticipante extends Peticion {
-
-        Context contexto;
-        Evento evento;
-        Usuario usuario;
-        String tipoEvento;
-        KeyValueItem itemSeleccionado;
-
-        public EliminarParticipante(Context contexto,
-                                    Evento evento,
-                                    Usuario usuario,
-                                    String tipoEvento,
-                                    KeyValueItem itemSeleccionado) {
-            this.contexto = contexto;
-            this.evento = evento;
-            this.usuario = usuario;
-            this.tipoEvento = tipoEvento;
-            this.itemSeleccionado = itemSeleccionado;
-        }
-
-        @Override
-        public void calcularMetodo() {
-            super.metodo = "POST";
-        }
-
-        @Override
-        public void calcularServicio() {
-            super.servicio = Constants.SERVICES_PATH_EVENTOS +
-                    this.tipoEvento + "/" +
-                    this.evento.getId() + "/" +
-                    Constants.SERVICES_PATH_EVE_PARTICIPANTES +
-                    this.usuario.getUsuario();
-        }
-
-        @Override
-        public void calcularParams() {
-            super.params = new JSONObject();
-            try {
-                //PONIENDO USUARIO
-                JSONArray arrayUsuarios = new JSONArray();
-                arrayUsuarios.put(new JSONObject(this.usuario.stringJson()));
-                JSONObject parametrosUsuario = new JSONObject();
-                parametrosUsuario.put(this.usuario.getClass().getSimpleName(),
-                        arrayUsuarios);
-                super.params.put(ConstantesUsuarios.ELEMENTO_MENSAJE_SERVICIO_USU,
-                        parametrosUsuario);
-
-                //PONIENDO EVENTO
-                //Los eventos deben estar activos
-                JSONArray arrayEventos = new JSONArray();
-                arrayEventos.put(new JSONObject(this.evento.stringJson()));
-                JSONObject parametrosEvento = new JSONObject();
-                parametrosEvento.put(this.evento.getClass().getSimpleName(),
-                        arrayEventos);
-                super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                        parametrosEvento);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void doInBackground() {}
-
-        @Override
-        public void onPostExcecute(String resultadoPeticion){
-            if(resultadoPeticion != null){
-                try {
-                    JSONObject resultado = new JSONObject(resultadoPeticion);
-                    if("200".equals(resultado.getString("caracterAceptacion"))){
-                        ((ListaConFiltro)getFragmentManager().findFragmentById(
-                                R.id.fragment_lista_participantes)).
-                                eliminarElemento(itemSeleccionado);
-                        Toast.makeText(this.contexto,
-                                this.contexto.getResources().
-                                        getString(R.string.toast_elimina_participante),
-                                Toast.LENGTH_LONG).show();
-                    }else{
-                        this.alertError();
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    this.alertError();
-                }
-            }else{
-                this.alertError();
-            }
-        }
-
-        private void alertError(){
-            new AlertDialog.Builder(this.contexto).
-                    setTitle(this.contexto.getResources().
-                            getString(R.string.alert_elimina_participante_tit)).
-                    setMessage(this.contexto.getResources().
-                            getString(R.string.alert_error_elimina_participante_msn)).
-                    setNeutralButton(this.contexto.getResources().
-                            getString(R.string.BOTON_NEUTRAL), null).
-                    create().show();
-        }
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -338,4 +162,24 @@ public class ListadoParticipantes extends Activity
             productorFactoryExcepcion.printStackTrace();
         }
     }
+
+    @Override
+    public void llenarListaDesdePeticion(ArrayList<ObjectSNSDeportivo> listaObtenida) {
+        this.participantes = listaObtenida;
+        ((ListaConFiltro)getFragmentManager().
+                findFragmentById(R.id.fragment_lista_participantes)).llenarLista();
+    }
+
+    @Override
+    public void limpiarListaDesdePeticion() {
+
+    }
+
+    @Override
+    public void eliminarItem(KeyValueItem aEliminar) {
+        ((ListaConFiltro)getFragmentManager().findFragmentById(
+                R.id.fragment_lista_participantes)).
+                eliminarElemento(aEliminar);
+    }
+
 }

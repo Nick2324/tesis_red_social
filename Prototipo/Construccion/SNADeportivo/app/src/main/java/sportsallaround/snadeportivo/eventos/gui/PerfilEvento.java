@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import com.sna_deportivo.pojo.evento.Evento;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.menu.general.ProductorMenuEventos;
 import sportsallaround.utils.generales.MenuSNS;
 import sportsallaround.utils.generales.Constants;

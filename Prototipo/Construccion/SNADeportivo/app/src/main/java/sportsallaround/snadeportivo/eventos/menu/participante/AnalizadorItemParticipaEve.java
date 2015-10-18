@@ -3,7 +3,7 @@ package sportsallaround.snadeportivo.eventos.menu.participante;
 import java.util.ArrayList;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.utils.generales.AnalizadorUsoItem;
 
 /**

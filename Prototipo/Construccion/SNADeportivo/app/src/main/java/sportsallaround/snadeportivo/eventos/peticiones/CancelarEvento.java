@@ -13,7 +13,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
-import sportsallaround.snadeportivo.eventos.ConstantesEvento;
+import sportsallaround.snadeportivo.eventos.general.ConstantesEvento;
 import sportsallaround.snadeportivo.eventos.gui.GestionEventosLista;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.Peticion;
@@ -55,12 +55,11 @@ public class CancelarEvento extends Peticion {
 
     @Override
     public void calcularParams() {
-        //SUPUESTAMENTE DELETE NO SOPORTA REQUEST BODY
-            /*try {
-                super.params = new JSONObject(this.evento.stringJson());
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }*/
+        try {
+            super.params = new JSONObject(this.evento.stringJson());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
