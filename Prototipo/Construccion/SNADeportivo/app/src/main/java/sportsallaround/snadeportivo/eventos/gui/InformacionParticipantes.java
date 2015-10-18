@@ -2,6 +2,7 @@ package sportsallaround.snadeportivo.eventos.gui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,10 +38,17 @@ public class InformacionParticipantes extends Activity
     private MenuSNS menuSNS;
 
     @Override
+    protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        this.setUpObjetos(intent);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_participantes);
         setTitle(getResources().getString(R.string.titulo_gestion_eventos_lista));
+        this.setUpObjetos(getIntent());
     }
 
     @Override
@@ -52,7 +60,6 @@ public class InformacionParticipantes extends Activity
     @Override
     public void onResume(){
         super.onResume();
-        this.setUpObjetos();
         this.setUpDatosActividad();
     }
 
@@ -125,7 +132,7 @@ public class InformacionParticipantes extends Activity
 
     @Override
     public JSONObject getParam() {
-        return null;
+        return new JSONObject();
     }
 
     @Override
@@ -187,42 +194,41 @@ public class InformacionParticipantes extends Activity
             return false;
         }
 
-        this.genero = (Genero)((SpinnerDesdeBD)getFragmentManager().
-                                findFragmentById(R.id.spinner_genero)).getSeleccionado();
-
         return true;
     }
 
     public void setUpDatosActividad() {
         //DATOS DE EVENTO
-        if(this.evento.getNumMaxParticipantes() != null) {
-            ((EditText) findViewById(R.id.numero_participantes_evento_info_general)).setText(
-                    this.evento.getNumMaxParticipantes() + ""
-            );
-        }
-        if(this.evento.getRangoMaxEdad() != null) {
-            ((EditText) findViewById(R.id.rango_maximo_edad_evento_info_general)).setText(
-                    this.evento.getRangoMaxEdad() + ""
-            );
-        }
-        if(this.evento.getRangoMinEdad() != null) {
-            ((EditText) findViewById(R.id.rango_minimo_edad_evento_info_general)).setText(
-                    this.evento.getRangoMinEdad() + ""
-            );
+        if(this.evento != null) {
+            if (this.evento.getNumMaxParticipantes() != null) {
+                ((EditText) findViewById(R.id.numero_participantes_evento_info_general)).setText(
+                        this.evento.getNumMaxParticipantes() + ""
+                );
+            }
+            if (this.evento.getRangoMaxEdad() != null) {
+                ((EditText) findViewById(R.id.rango_maximo_edad_evento_info_general)).setText(
+                        this.evento.getRangoMaxEdad() + ""
+                );
+            }
+            if (this.evento.getRangoMinEdad() != null) {
+                ((EditText) findViewById(R.id.rango_minimo_edad_evento_info_general)).setText(
+                        this.evento.getRangoMinEdad() + ""
+                );
+            }
         }
 
     }
 
-    public void setUpObjetos(){
+    public void setUpObjetos(Intent intent){
         try {
-            this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
+            this.evento = (Evento)new ProductorFactoryEvento().producirFacObjetoSNS(intent.getExtras().
                     getBundle(Constants.DATOS_FUNCIONALIDAD).
                     getString(ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
-            if(getIntent().getExtras().
+            if(intent.getExtras().
                     getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                     ConstantesEvento.EVENTO_MANEJADO) != null){
                 try {
-                    this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                    this.evento.deserializarJson(JsonUtils.JsonStringToObject(intent.getExtras().
                             getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                             ConstantesEvento.EVENTO_MANEJADO)));
                 } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
@@ -233,11 +239,11 @@ public class InformacionParticipantes extends Activity
             productorFactoryExcepcion.printStackTrace();
         }
         this.genero = new Genero();
-        if(getIntent().getExtras().
+        if(intent.getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                 ConstantesEvento.GENERO_MANEJADO) != null){
             try {
-                this.genero.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                this.genero.deserializarJson(JsonUtils.JsonStringToObject(intent.getExtras().
                         getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                         ConstantesEvento.GENERO_MANEJADO)));
             } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {

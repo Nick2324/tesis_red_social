@@ -41,7 +41,6 @@ public class GestionDeporteService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Deporte crearDeporte(Deporte deporte){
-		System.out.println("Paso por la creacion del deporte");
 		try{
 			return this.gestionDeporte.crearDeporte(deporte);
 		}catch(WebApplicationException e){

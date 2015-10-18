@@ -581,6 +581,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			e.printStackTrace();
 			throw e;
 		}
+		
 		return retorno;
 	}
 	
@@ -662,6 +663,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 					new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
 									"descripcionEvento",
 									RelacionSNS.DIRECCION_ENTRADA);
+			System.out.println(de.getGenero() != null);
 			if(de.getGenero() != null){
 				relacionEventoNAria.setObjetoRelacion(de.getGenero());
 				super.crearRelacion(relacionEventoNAria, 

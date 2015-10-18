@@ -25,7 +25,9 @@ public class DAODeporte extends ObjectSNSDeportivoDAO{
 			BDException,ExcepcionJsonDeserializacion{
 		Deporte[] deportes = null;
 		String where = BDUtils.condicionWhere(this.deporte, "deporte");
-		if(where != null || this.deporte == null){
+		if(where != null || 
+		   this.deporte == null ||
+		   this.deporte.stringJson().equals("{}")){
 			StringBuilder query = new StringBuilder("MATCH (deporte:");
 			query.append(Entidades.DEPORTE);
 			query.append(")");

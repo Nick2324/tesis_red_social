@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
@@ -63,6 +64,7 @@ public class PeticionGeneroEvento extends PeticionEncadenada {
     public void ejecutaTareaUltimaPeticion() {
         //Preparando datos adicionales del intent
         if(super.peticionesEncadenadas != null) {
+            Log.d("Nick:encadenada",peticionesEncadenadas.toString());
             try {
                 if(peticionesEncadenadas.getString("Deporte") != null) {
                     //PONE DATOS DE DEPORTE
@@ -84,6 +86,7 @@ public class PeticionGeneroEvento extends PeticionEncadenada {
                 }
                 Intent intent = new Intent(this.contexto, InformacionGeneralEvento.class);
                 intent.putExtra(Constants.DATOS_FUNCIONALIDAD, extras);
+                Log.d("Nick:extras",extras.toString());
                 ((Activity)this.contexto).startActivity(intent);
             } catch (JSONException e) {
                 e.printStackTrace();

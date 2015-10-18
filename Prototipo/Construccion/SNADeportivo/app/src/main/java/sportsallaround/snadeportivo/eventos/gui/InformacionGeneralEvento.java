@@ -2,8 +2,10 @@ package sportsallaround.snadeportivo.eventos.gui;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,24 +45,29 @@ public class InformacionGeneralEvento extends Activity
     private MenuSNS menuSNS;
 
     @Override
+    protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);
+        this.setUpObjetos(intent);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion_general_evento);
         setTitle(getResources().getString(R.string.title_activity_informacion_general_evento));
         this.setUpListeners();
+        this.setUpObjetos(getIntent());
     }
 
     @Override
     public void onStart(){
         super.onStart();
         this.setUpViewsPropActividad();
-
     }
 
     @Override
     public void onResume(){
         super.onResume();
-        this.setUpObjetos();
         this.setUpDatosActividad();
     }
 
@@ -213,7 +220,7 @@ public class InformacionGeneralEvento extends Activity
 
     @Override
     public JSONObject getParam() {
-        return null;
+        return new JSONObject();
     }
 
     @Override
@@ -223,7 +230,6 @@ public class InformacionGeneralEvento extends Activity
 
     @Override
     public void onItemSelectedSpinnerBD(KeyValueItem seleccionado, String tagFragmento) {
-        //RESUELVE PROBLEMA
         this.deporte = (Deporte) seleccionado.getValue();
     }
 
@@ -304,50 +310,52 @@ public class InformacionGeneralEvento extends Activity
 
     public void setUpDatosActividad(){
         //EVENTO
-        if(evento.getNombre() != null){
-            ((EditText) (findViewById(R.id.nombre_evento_info_general))).setText(evento.getNombre());
+        if(evento != null) {
+            if (evento.getNombre() != null) {
+                ((EditText) (findViewById(R.id.nombre_evento_info_general))).setText(evento.getNombre());
+            }
+            if (evento.getDescripcion() != null) {
+                ((EditText) (findViewById(R.id.descripcion_evento_info_general))).
+                        setText(evento.getDescripcion());
+            }
+            if (evento.getFechaInicio() != null) {
+                ((EditText) (findViewById(R.id.fecha_inicio_evento_info_general))).
+                        setText(evento.getFechaInicio());
+            }
+            if (evento.getFechaFinal() != null) {
+                ((EditText) (findViewById(R.id.fecha_final_evento_info_general))).setText(
+                        evento.getFechaFinal());
+            }
+            if (evento.getHoraInicio() != null) {
+                ((EditText) (findViewById(R.id.hora_inicio_evento_info_general))).
+                        setText(evento.getHoraInicio());
+            }
+            if (evento.getHoraFinal() != null) {
+                ((EditText) (findViewById(R.id.hora_final_evento_info_general))).
+                        setText(evento.getHoraFinal());
+            }
+            if (evento.getFechaCreacion() != null) {
+                ((EditText) (findViewById(R.id.fecha_creacion_evento))).setText(
+                        evento.getFechaCreacion());
+            }
+            //!*!*!*!*! PENDIENTE
+            //evento.setActivo(true);
         }
-        if(evento.getDescripcion() != null){
-            ((EditText) (findViewById(R.id.descripcion_evento_info_general))).
-                    setText(evento.getDescripcion());
-        }
-        if(evento.getFechaInicio() != null){
-            ((EditText) (findViewById(R.id.fecha_inicio_evento_info_general))).
-                    setText(evento.getFechaInicio());
-        }
-        if(evento.getFechaFinal() != null){
-            ((EditText) (findViewById(R.id.fecha_final_evento_info_general))).setText(
-                    evento.getFechaFinal());
-        }
-        if(evento.getHoraInicio() != null){
-            ((EditText) (findViewById(R.id.hora_inicio_evento_info_general))).
-                    setText(evento.getHoraInicio());
-        }
-        if(evento.getHoraFinal() != null){
-            ((EditText) (findViewById(R.id.hora_final_evento_info_general))).
-                    setText(evento.getHoraFinal());
-        }
-        if(evento.getFechaCreacion() != null){
-            ((EditText) (findViewById(R.id.fecha_creacion_evento))).setText(
-                    evento.getFechaCreacion());
-        }
-        //!*!*!*!*! PENDIENTE
-        //evento.setActivo(true);
 
     }
 
-    public void setUpObjetos(){
+    public void setUpObjetos(Intent intent){
         //EVENTO
         try {
-            this.evento = (Evento) new ProductorFactoryEvento().producirFacObjetoSNS(getIntent().getExtras().
+            this.evento = (Evento) new ProductorFactoryEvento().producirFacObjetoSNS(intent.getExtras().
                     getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                     ConstantesEvento.TIPO_EVENTO)).getObjetoSNS();
-            if (getIntent().getExtras().
+            if (intent.getExtras().
                     getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                     ConstantesEvento.EVENTO_MANEJADO) != null) {
                 try {
 
-                    this.evento.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                    this.evento.deserializarJson(JsonUtils.JsonStringToObject(intent.getExtras().
                             getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                             ConstantesEvento.EVENTO_MANEJADO)));
                 } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
@@ -359,11 +367,11 @@ public class InformacionGeneralEvento extends Activity
         }
         //DEPORTE
         this.deporte = new Deporte();
-        if(getIntent().getExtras().
+        if(intent.getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                 ConstantesEvento.DEPORTE_MANEJADO) != null){
             try {
-                this.deporte.deserializarJson(JsonUtils.JsonStringToObject(getIntent().getExtras().
+                this.deporte.deserializarJson(JsonUtils.JsonStringToObject(intent.getExtras().
                         getBundle(Constants.DATOS_FUNCIONALIDAD).getString(
                         ConstantesEvento.DEPORTE_MANEJADO)));
             } catch (ExcepcionJsonDeserializacion excepcionJsonDeserializacion) {
@@ -375,7 +383,7 @@ public class InformacionGeneralEvento extends Activity
     @Override
     public void onPostExcecute() {
         //DEPORTE
-        if(this.deporte.getNombre() != null){
+        if(this.deporte != null && this.deporte.getNombre() != null){
             ((SpinnerDesdeBD)getFragmentManager().
                     findFragmentById(R.id.fragment_tipo_deporte)).
                     setSeleccionado(this.deporte);

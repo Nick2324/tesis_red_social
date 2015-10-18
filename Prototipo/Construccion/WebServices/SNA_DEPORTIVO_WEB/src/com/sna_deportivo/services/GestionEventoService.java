@@ -76,7 +76,6 @@ public class GestionEventoService {
 											 @PathParam("id") String idEvento,
 											 String body){
 		try{
-			System.out.println(body);
 			new ActualizarEvento().actualizarEvento(tipoEvento,
 													idEvento,
 													body);

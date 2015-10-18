@@ -70,11 +70,13 @@ public class SpinnerDesdeBD extends Fragment {
         }
 
         @Override
-        public void doInBackground() {}
+        public void doInBackground() {
+            this.setPeticionBody(true);
+        }
 
         @Override
         public void onPostExcecute(String resultadoPeticion) {
-            if (resultadoPeticion != null && !((String)resultadoPeticion).equals("")) {
+            if (resultadoPeticion != null && !resultadoPeticion.equals("")) {
                 try {
                     JSONArray responseJson = new JSONArray((String) resultadoPeticion);
                     ArrayList<KeyValueItem> listaObjetosSNS = new ArrayList<KeyValueItem>();

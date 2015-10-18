@@ -30,6 +30,7 @@ public class ObtenerDeporteEvento {
 				DeporteEvento de = new DeporteEvento();
 				de.setEvento((Evento)eventos.get(0));
 				ded.setObjetcSNSDeportivo(de);
+				ded.encontrarObjetoManejado();
 				try {
 					retorno = ded.obtenerDeporteEvento();
 				} catch (BDException e) {

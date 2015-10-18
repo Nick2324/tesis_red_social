@@ -13,10 +13,10 @@ MATCH (deporte2:E_Deporte{id:2}),(movimientotecnico1:E_MovimientoTecnico{id:1}) 
 MATCH (deporte2:E_Deporte{id:2}),(movimientotecnico2:E_MovimientoTecnico{id:2}) CREATE (deporte2)-[utilizatecnica2:R_UtilizaTecnica{id:2}]->(movimientotecnico2);
 
 //Tecnica especializada
-MATCH (movimientotecnico1:E_MovimientoTecnico{id:1}),(movimientotecnico3:E_MovimientoTecnico{id:3}) CREATE (movimientotecnico1:E_MovimientoTecnico{id:1})-[tecnicaespecializada1:R_TecnicaEspecializada{id:1}]->(movimientotecnico3);
+MATCH (movimientotecnico1:E_MovimientoTecnico{id:1}),(movimientotecnico3:E_MovimientoTecnico{id:3}) CREATE (movimientotecnico1)-[tecnicaespecializada1:R_TecnicaEspecializada{id:1}]->(movimientotecnico3);
 
 MATCH (movimientotecnico1:E_MovimientoTecnico{id:1}),(movimientotecnico4:E_MovimientoTecnico{id:4}) CREATE (movimientotecnico1)-[tecnicaespecializada2:R_TecnicaEspecializada{id:2}]->(movimientotecnico4);
 
 MATCH (movimientotecnico2:E_MovimientoTecnico{id:2}),(movimientotecnico3:E_MovimientoTecnico{id:3}) CREATE (movimientotecnico2)-[tecnicaespecializada3:R_TecnicaEspecializada{id:3}]->(movimientotecnico3);
 
-MATCH (movimientotecnico2:E_MovimientoTecnico{id:2}),(movimientotecnico3:E_movimientotecnico4{id:4}) CREATE (movimientotecnico2)-[tecnicaespecializada4:R_TecnicaEspecializada{id:4}]->(movimientotecnico4);
+MATCH (movimientotecnico2:E_MovimientoTecnico{id:2}),(movimientotecnico4:E_MovimientoTecnico{id:4}) CREATE (movimientotecnico2)-[tecnicaespecializada4:R_TecnicaEspecializada{id:4}]->(movimientotecnico4);
