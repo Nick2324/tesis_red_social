@@ -1,5 +1,7 @@
 package sportsallaround.utils.generales;
 
+import sportsallaround.snadeportivo.ubicaciones.pojos.TipoUbicacion;
+
 /**
  * Created by LuisFelipe on 12/04/2015.
  */
@@ -25,7 +27,7 @@ public class Constants {
     public static final String SERVICES_PATH_UBICACIONES = "ubicaciones/";
     //*********************************************************************************************
     //******************************Strings de formato y patrones**********************************
-    public static final String ROOT_URL = "http://192.168.0.12:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://192.168.0.15:8080/SNA_DEPORTIVO_WEB/services/";
     //public static final String ROOT_URL = "http://10.42.0.1:8080/SNA_DEPORTIVO_WEB/services/";
     /*
     *
@@ -60,5 +62,14 @@ public class Constants {
 
     public static final String SERVICES_CREAR_UBICACION ="GestionUbicacionService/crearLugarPractica";
     public static final String SERVICES_OBTENER_UBICACIONES = "GestionUbicacionService/obtenerLugaresPractica";
+    public static final String SERVICES_ASIGNAR_DEPORTE_UBICACION = "GestionUbicacionService/asignarDeportesPracticadosLugar";
+
+    public static final TipoUbicacion[] TIPOS_UBICACION =
+            {new TipoUbicacion("Parque", true),
+             new TipoUbicacion("Complejo", true),
+             new TipoUbicacion("Campo", true),
+             new TipoUbicacion("Coliseo", true),
+             new TipoUbicacion("Estadio", true),
+             new TipoUbicacion("Centro de convenciones", false)};
 
 }

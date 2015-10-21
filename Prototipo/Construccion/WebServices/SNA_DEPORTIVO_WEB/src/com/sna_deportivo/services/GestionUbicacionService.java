@@ -8,6 +8,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
+import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.pojo.ubicacion.Pais;
@@ -104,5 +105,23 @@ public class GestionUbicacionService {
 		return response;
 		
 	}
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("asignarDeportesPracticadosLugar")
+	public ResponseGenerico asignarDeportesPracticadosLugar(DeportePracticadoUbicacion[] deportes){
+		
+		ResponseGenerico response = new ResponseGenerico();
+		
+		try{
+			for(DeportePracticadoUbicacion deporte : deportes){
+				servicio.asociarDeporteLugar(deporte);
+			}
+		}catch (BDException e){
+			response.setCaracterAceptacion("M");
+			response.setMensajeRespuesta("Ha ocurrido un error con la base de datos.");
+		}
 
+		return response;
+	}
 }

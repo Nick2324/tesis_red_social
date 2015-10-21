@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Nuevo deporte practicado"
         android:textSize="38sp"
-        android:id="@+id/add_update_practiced_sport_title"/>
+        android:id="@+id/add_update_practiced_sport_title"
+        android:gravity="center"/>
 
     <GridLayout
         android:layout_width="match_parent"

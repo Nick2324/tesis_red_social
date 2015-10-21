@@ -33,7 +33,7 @@ public class RetreiveSportsPositions extends AsyncTask<Void, Void, PosicionDepor
             e.printStackTrace();
         }
 
-        String responseRoles = ServiceUtils.invokeService(parametros, Constants.SERVICES_OBTENER_POSICIONES_DEPORTE, "GET");
+        String responseRoles = ServiceUtils.invokeService_(parametros, Constants.SERVICES_OBTENER_POSICIONES_DEPORTE, "GET");
 
         try {
             JSONArray jsonPosiciones = new JSONArray(responseRoles);

@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -28,9 +29,11 @@ import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
 import sportsallaround.snadeportivo.deportes.pojos.Deporte;
+import sportsallaround.snadeportivo.deportes.pojos.DeportePracticadoUbicacion;
 import sportsallaround.snadeportivo.ubicaciones.pojos.Ciudad;
 import sportsallaround.snadeportivo.ubicaciones.pojos.LugarPractica;
 import sportsallaround.snadeportivo.ubicaciones.pojos.Pais;
+import sportsallaround.snadeportivo.ubicaciones.pojos.TipoUbicacion;
 import sportsallaround.snadeportivo.ubicaciones.pojos.Ubicacion;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveSports;
 import sportsallaround.utils.generales.Constants;
@@ -43,8 +46,8 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
     private EditText observacionesLugar;
     private Spinner tipoLugar;
     private LinearLayout deportesPracticadosLugar;
-    //private Deporte[] deportesPosibles;
-    //private ArrayList<Deporte> deportes;
+    private Deporte[] deportesPosibles;
+    private ArrayList<Deporte> deportes;
     private float latitud, longitud;
     private LocationManager locationManager;
     private String provider;
@@ -54,15 +57,22 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_location);
 
+        setTitle(getResources().getString(R.string.title_activity_crear_ubicacion));
+
         nombreLugar = (EditText)findViewById(R.id.new_location_name);
         observacionesLugar = (EditText)findViewById(R.id.new_location_observations);
         tipoLugar = (Spinner) findViewById(R.id.new_location_type);
         deportesPracticadosLugar = (LinearLayout) findViewById(R.id.new_location_practiced_sports);
 
-        String[] tiposLugarPosibles = {"Parque","Complejo","Campo","Coliseo"};
+        ArrayList<String> tiposUbicacion = new ArrayList<>();
+
+        for(TipoUbicacion ubicacion : Constants.TIPOS_UBICACION ){
+            tiposUbicacion.add(ubicacion.getNombre());
+        }
+
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_spinner_dropdown_item,
-                tiposLugarPosibles);
+                R.layout.spinner_black_item,
+                tiposUbicacion);
         tipoLugar.setAdapter(spinnerArrayAdapter);
 
         try {
@@ -85,17 +95,6 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
             latitud = (float) 100.0;
             longitud = (float) 100.0;
         }
-
-        /*boolean enabled = locationManager
-                .isProviderEnabled(LocationManager.GPS_PROVIDER);
-
-        // check if enabled and if not send user to the GSP settings
-        // Better solution would be to display a dialog and suggesting to
-        // go to the settings
-        if (!enabled) {
-            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-            startActivity(intent);
-        }*/
 
     }
 
@@ -135,7 +134,7 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
 
     @Override
     public void setSports(Deporte[] deportesExistentes) {
-        /*this.deportesPosibles = deportesExistentes;
+        this.deportesPosibles = deportesExistentes;
         if (deportesPosibles != null) {
             this.deportesPracticadosLugar.removeAllViews();
             CheckBox checkDeporte;
@@ -146,13 +145,12 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
                 checkDeporte.setTag(deporte);
                 deportesPracticadosLugar.addView(checkDeporte,new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             }
-        }*/
+        }
     }
 
     @Override
     public Deporte[] getSports() {
-        //return this.deportesPosibles;
-        return null;
+        return this.deportesPosibles;
     }
 
     public boolean validarDatosIngresados(){
@@ -160,17 +158,28 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
         if(nombreLugar.getText().toString().equals(""))
             retorno = false;
 
-        CheckBox check;
-        /*deportes = new ArrayList<>();
-        for(int i=0;i<deportesPracticadosLugar.getChildCount();i++){
-            check = (CheckBox)deportesPracticadosLugar.getChildAt(i);
-            if (check.isChecked()){
-                deportes.add((Deporte)check.getTag());
+        boolean deporteRequerido = true;
+
+        for(TipoUbicacion ubicacion : Constants.TIPOS_UBICACION ){
+            if(ubicacion.getNombre().equals(tipoLugar.getSelectedItem().toString())) {
+                deporteRequerido = ubicacion.isRequereDeporte();
+                break;
             }
         }
-        if(deportes.size() == 0){
+
+
+        CheckBox check;
+        deportes = new ArrayList<>();
+        for (int i = 0; i < deportesPracticadosLugar.getChildCount(); i++) {
+            check = (CheckBox) deportesPracticadosLugar.getChildAt(i);
+            if (check.isChecked()) {
+                deportes.add((Deporte) check.getTag());
+            }
+        }
+
+        if (deportes.size() == 0 && deporteRequerido) {
             retorno = false;
-        }*/
+        }
 
         return retorno;
     }
@@ -193,12 +202,21 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
             nuevaUbicacion.setPais(pais);
             nuevaUbicacion.setCiudad(ciudad);
             nuevaUbicacion.setLugar(lugar);
-            new CreateLocation(this).execute(nuevaUbicacion);
+            CreateLocation service = new CreateLocation(this);
+            if(deportes.size()>0){
+                Deporte[] arregloDeportes = new Deporte[deportes.size()];
+                int j = 0;
+                for (Deporte deporte : deportes){
+                    arregloDeportes[j++] = deporte;
+                }
+                service.setDeportes(arregloDeportes);
+            }
+            service.execute(nuevaUbicacion);
         }
-        /*else if (deportes.size() == 0)
+        else if (deportes.size() == 0)
             Toast.makeText(getApplicationContext(), "Debe seleccionar por lo menos un deporte.", Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(getApplicationContext(), "Verifique que todos los campos esten debidamente diligenciados.", Toast.LENGTH_LONG).show();*/
+            Toast.makeText(getApplicationContext(), "Verifique que todos los campos esten debidamente diligenciados.", Toast.LENGTH_LONG).show();
 
     }
 
@@ -229,9 +247,14 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
 
         private Context context;
         private String mensajeRespuesta;
+        private Deporte[] deportes;
 
         public CreateLocation(Context context) {
             this.context = context;
+        }
+
+        public void setDeportes(Deporte[] deportes){
+            this.deportes = deportes;
         }
 
         @Override
@@ -246,6 +269,26 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
                 mensajeRespuesta = response.getString("mensajeRespuesta");
                 if(!response.getString("caracterAceptacion").equals("B")){
                     retorno = false;
+                }
+                if(retorno && this.deportes != null){
+                    JSONArray deportesUbicacion = new JSONArray();
+                    int i = 0;
+                    DeportePracticadoUbicacion temp;
+                    String[] desc = response.getString("datosExtra").split("/");
+                    nuevaUbicacion[0].getLugar().setId(Integer.valueOf(desc[desc.length-1])*-1);
+                    for (Deporte deporteUbicacion : deportes){
+                        temp = new DeportePracticadoUbicacion();
+                        temp.setDeporte(deporteUbicacion);
+                        temp.setUbicacion(nuevaUbicacion[0]);
+                        deportesUbicacion.put(new JSONObject(temp.toJSONObject()));
+                    }
+
+                    resultadoString = ServiceUtils.invokeService(deportesUbicacion, Constants.SERVICES_ASIGNAR_DEPORTE_UBICACION, "POST");
+                    response = new JSONObject(resultadoString);
+                    mensajeRespuesta = response.getString("mensajeRespuesta");
+                    if(!response.getString("caracterAceptacion").equals("B")){
+                        retorno = false;
+                    }
                 }
             } catch (JSONException e) {
                 retorno = false;

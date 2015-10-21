@@ -49,6 +49,8 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
 
+        setTitle(getResources().getString(R.string.title_activity_crear_usuario));
+
         firstName = (EditText) findViewById(R.id.new_user_first_name);
         middleName = (EditText) findViewById(R.id.new_user_middle_name);
         lastName = (EditText) findViewById(R.id.new_user_last_name);
@@ -62,9 +64,9 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
-                R.array.gender, android.R.layout.simple_spinner_item);
+                R.array.gender, R.layout.spinner_black_item);
         // Specify the layout to use when the list of choices appears
-        genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genderAdapter.setDropDownViewResource(R.layout.spinner_black_item);
         // Apply the adapter to the spinner
         gender.setAdapter(genderAdapter);
 
@@ -224,7 +226,7 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
                 retorno = false;
             }
 
-            String responseString = ServiceUtils.invokeService(parametros, Constants.SERVICES_CREAR_USUARIO, "POST");
+            String responseString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_CREAR_USUARIO, "POST");
 
             try {
                 JSONObject response = new JSONObject(responseString);

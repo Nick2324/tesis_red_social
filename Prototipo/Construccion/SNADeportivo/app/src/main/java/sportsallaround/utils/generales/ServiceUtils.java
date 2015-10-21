@@ -2,6 +2,7 @@ package sportsallaround.utils.generales;
 
 import android.util.Log;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -115,5 +116,110 @@ public class ServiceUtils {
                                       method,
                                       false);
 
+    }
+
+    public static String invokeService_(JSONObject parametros, String serviceURL, String method){
+
+        InputStream is;
+        String retorno = "";
+
+        try {
+            URL completeUrl = null;
+            if(parametros != null && method.equals("GET")){
+                Iterator<String> it = parametros.keys();
+                StringBuilder queryParams = new StringBuilder();
+                String actualKey;
+                while(it.hasNext()){
+                    actualKey = it.next();
+                    try {
+                        queryParams.append("&").append(actualKey).append("=").append(parametros.get(actualKey));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                completeUrl = new URL(Constants.ROOT_URL + serviceURL + "?" + queryParams.substring(1));
+            }
+            else
+                completeUrl = new URL(Constants.ROOT_URL + serviceURL);
+
+            HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+
+            conn.setReadTimeout(10000 /* milliseconds */);
+            conn.setConnectTimeout(15000 /* milliseconds */);
+            if(parametros != null && !method.equals("GET"))
+                conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setRequestMethod(method.toUpperCase());
+
+
+            conn.setDoInput(true);
+
+            // Starts the query
+            if(parametros != null && !method.equals("GET")) {
+                if (!method.equals("DELETE"))
+                    conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                wr.write(parametros.toString());
+                wr.flush();
+            }
+            conn.connect();
+
+            is = conn.getInputStream();
+
+            retorno = Utils.convertStreamToString(is);
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return retorno;
+    }
+
+    public static String invokeService(JSONArray parametros, String serviceURL, String method){
+
+        InputStream is;
+        String retorno = "";
+
+        try {
+            URL completeUrl = null;
+
+            completeUrl = new URL(Constants.ROOT_URL + serviceURL);
+
+            HttpURLConnection conn = (HttpURLConnection) completeUrl.openConnection();
+
+            conn.setReadTimeout(10000 /* milliseconds */);
+            conn.setConnectTimeout(15000 /* milliseconds */);
+            if(parametros != null)
+                conn.setRequestProperty("Content-Type", "application/json");
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setRequestMethod(method.toUpperCase());
+
+
+            conn.setDoInput(true);
+
+            // Starts the query
+            if(parametros != null) {
+                conn.setDoOutput(true);
+                OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+                wr.write(parametros.toString());
+                wr.flush();
+            }
+            conn.connect();
+
+            is = conn.getInputStream();
+
+            retorno = Utils.convertStreamToString(is);
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return retorno;
     }
 }

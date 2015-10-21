@@ -13,7 +13,7 @@
         android:text="Mis deportes practicados:"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:gravity="center"/>
 
     <ProgressBar
         android:id="@+id/practiced_sports_progress"

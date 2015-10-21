@@ -49,6 +49,9 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_add_practiced_sport);
+
+        setTitle(getResources().getString(R.string.title_activity_actualizar_deporte_practicado));
+
         user = (Usuario) getIntent().getExtras().get("user");
         deporte = (DeportePracticado) getIntent().getExtras().get("deporte");
 
@@ -68,7 +71,7 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
         availableLevels = (Spinner) findViewById(R.id.availavle_levels);
 
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_black_item,
                 levels);
         availableLevels.setAdapter(spinnerArrayAdapter);
         availableLevels.setTag(levels);
@@ -169,7 +172,7 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
             for(int i=0;i<deportes.length;i++)
                 sDeportes[i] = deportes[i].getNombre();
             ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                    android.R.layout.simple_spinner_dropdown_item,
+                    R.layout.spinner_black_item,
                     sDeportes);
             availableSports.setAdapter(spinnerArrayAdapter);
             availableSports.setTag(deportes);
@@ -207,7 +210,7 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
                 JSONObject parametros;
                 parametros = new JSONObject(nuevoDeporte[0].toJSONObject());
 
-                String resultadoString = ServiceUtils.invokeService(parametros, Constants.SERVICES_ACTUALIZAR_DEPORTE_PRACTICADO, "POST");
+                String resultadoString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_ACTUALIZAR_DEPORTE_PRACTICADO, "POST");
                 JSONObject response = new JSONObject(resultadoString);
                 if(!response.getString("caracterAceptacion").equals("B")){
                     mensajeRespuesta = response.getString("mensajeRespuesta");

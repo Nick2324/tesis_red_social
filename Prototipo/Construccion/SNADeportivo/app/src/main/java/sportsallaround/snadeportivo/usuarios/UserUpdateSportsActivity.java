@@ -46,6 +46,8 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_update_sports);
 
+        setTitle(getResources().getString(R.string.title_activity_mis_deportes));
+
         progressView = findViewById(R.id.practiced_sports_progress);
 
         GetPracticedSportsTask sportsTask = new GetPracticedSportsTask(this);
@@ -110,7 +112,8 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
         root.setOrientation(LinearLayout.VERTICAL);
 
         TextView nombreDeporte = new TextView(getApplicationContext());
-        nombreDeporte.setText(deportePracticado.getDeporte().getNombre());
+        nombreDeporte.setText(Html.fromHtml("<b>" + deportePracticado.getDeporte().getNombre() + "<b/>"));
+        nombreDeporte.setTextColor(Color.WHITE);
 
         LinearLayout infoDeporte = new LinearLayout(getApplicationContext());
         infoDeporte.setOrientation(LinearLayout.HORIZONTAL);
@@ -139,7 +142,9 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
         TextView nivelView = new TextView(getApplicationContext());
 
         posicionesView.setText(Html.fromHtml(posiciones.toString()));
+        posicionesView.setTextColor(Color.WHITE);
         nivelView.setText(Html.fromHtml("<b>Nivel: </b>" + deportePracticado.getNivel()));
+        nivelView.setTextColor(Color.WHITE);
 
         LinearLayout optionsLayout = new LinearLayout(getApplicationContext());
         optionsLayout.setGravity(Gravity.END);
@@ -249,7 +254,7 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
                     retorno = false;
                 }
 
-                String resultadoString = ServiceUtils.invokeService(parametros, Constants.SERVICES_OBTENER_DEPORTES_PRACTICADOS, "GET");
+                String resultadoString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_OBTENER_DEPORTES_PRACTICADOS, "GET");
                 if(!resultadoString.equals("")){
                     JSONArray jsonDeportes = new JSONArray(resultadoString);
                     DeportePracticado tmp;
@@ -314,7 +319,7 @@ public class UserUpdateSportsActivity extends ActionBarActivity {
                 deporte.setDeportePracticado(deportePracticado[0]);
                 JSONObject parametros = new JSONObject(deporte.toJSONObject());
 
-                String resultadoString = ServiceUtils.invokeService(parametros, Constants.SERVICES_ELIMINAR_DEPORTE_PRACTICADO, "DELETE");
+                String resultadoString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_ELIMINAR_DEPORTE_PRACTICADO, "POST");
                 JSONObject jsonRespuesta = new JSONObject(resultadoString);
 
             } catch (JSONException e) {

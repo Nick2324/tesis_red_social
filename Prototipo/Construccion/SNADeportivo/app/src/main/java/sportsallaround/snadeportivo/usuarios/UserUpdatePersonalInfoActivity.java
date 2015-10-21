@@ -50,6 +50,8 @@ public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_update_personal_info);
 
+        setTitle(getResources().getString(R.string.title_activity_actualizar_informacion_personal));
+
         firstName = (EditText) findViewById(R.id.update_user_first_name);
         middleName = (EditText) findViewById(R.id.update_user_middle_name);
         lastName = (EditText) findViewById(R.id.update_user_last_name);
@@ -233,7 +235,7 @@ public class UserUpdatePersonalInfoActivity extends ActionBarActivity implements
                 retorno = false;
             }
 
-            String responseString = ServiceUtils.invokeService(parametros, Constants.SERVICES_ACTUALIZAR_USUARIO, "POST");
+            String responseString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_ACTUALIZAR_USUARIO, "POST");
 
             try {
                 JSONObject response = new JSONObject(responseString);

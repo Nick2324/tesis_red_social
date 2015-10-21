@@ -25,7 +25,7 @@ public class RetreiveUserData extends AsyncTask<Void, Void, Usuario> {
 
     @Override
     protected Usuario doInBackground(Void... params) {
-        String responseUsuario = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_INFO_USUARIO.replace("{user}",userInfo.getUsuario()), "GET");
+        String responseUsuario = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_INFO_USUARIO.replace("{user}",userInfo.getUsuario()), "GET");
 
         try {
             JSONObject jsonUsuario = new JSONObject(responseUsuario);

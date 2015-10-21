@@ -48,6 +48,9 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_add_practiced_sport);
+
+        setTitle(getResources().getString(R.string.title_activity_aniadir_deporte_practicado));
+
         user = (Usuario) getIntent().getExtras().get("user");
 
         availableSports = (Spinner) findViewById(R.id.available_sports);
@@ -86,7 +89,7 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
         availableLevels = (Spinner) findViewById(R.id.availavle_levels);
 
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.spinner_black_item,
                 levels);
         availableLevels.setAdapter(spinnerArrayAdapter);
         availableLevels.setTag(levels);
@@ -172,7 +175,7 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
             for(int i=0;i<deportes.length;i++)
                 sDeportes[i] = deportes[i].getNombre();
             ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(),
-                    android.R.layout.simple_spinner_dropdown_item,
+                    R.layout.spinner_black_item,
                     sDeportes);
             availableSports.setAdapter(spinnerArrayAdapter);
             availableSports.setTag(deportes);
@@ -200,7 +203,7 @@ public class UserAddPracticedSport extends ActionBarActivity implements ObtainSp
                 JSONObject parametros;
                 parametros = new JSONObject(nuevoDeporte[0].toJSONObject());
 
-                String resultadoString = ServiceUtils.invokeService(parametros, Constants.SERVICES_ADICIONAR_DEPORTE_PRACTICADO, "POST");
+                String resultadoString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_ADICIONAR_DEPORTE_PRACTICADO, "POST");
                 JSONObject response = new JSONObject(resultadoString);
                 if(!response.getString("caracterAceptacion").equals("B")){
                     mensajeRespuesta = response.getString("mensajeRespuesta");

@@ -50,6 +50,7 @@ public class GenericMenuFragment extends Fragment{
         user = extras.getParcelable("user");
         userRole = extras.getParcelable("userRole");
         permission = extras.getParcelable("permission");
+
     }
 
     @Override

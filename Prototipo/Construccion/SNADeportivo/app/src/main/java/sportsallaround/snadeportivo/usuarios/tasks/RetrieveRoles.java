@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sportsallaround.snadeportivo.R;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ServiceUtils;
 
@@ -27,7 +28,7 @@ public class RetrieveRoles extends AsyncTask<Void, Void, String[]> {
 
     @Override
     protected String[] doInBackground(Void... params) {
-        String responseRoles = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_ROLES, "GET");
+        String responseRoles = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_ROLES, "GET");
 
         try {
             JSONArray jsonRoles = new JSONArray(responseRoles);
@@ -48,7 +49,7 @@ public class RetrieveRoles extends AsyncTask<Void, Void, String[]> {
     protected void onPostExecute(String[] result) {
         if (result != null) {
             ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(context,
-                    android.R.layout.simple_spinner_dropdown_item,
+                    R.layout.spinner_black_item,
                     result);
             roles.setAdapter(spinnerArrayAdapter);
         }

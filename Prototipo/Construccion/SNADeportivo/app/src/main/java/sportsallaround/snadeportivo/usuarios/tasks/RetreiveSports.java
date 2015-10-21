@@ -24,7 +24,7 @@ public class RetreiveSports extends AsyncTask<Void, Void, Deporte[]> {
 
     @Override
     protected Deporte[] doInBackground(Void... params) {
-        String responseRoles = ServiceUtils.invokeService(null, Constants.SERVICES_OBTENER_DEPORTES, "GET");
+        String responseRoles = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_DEPORTES, "GET");
         Deporte[] deportes = null;
         try {
             JSONArray jsonRoles = new JSONArray(responseRoles);

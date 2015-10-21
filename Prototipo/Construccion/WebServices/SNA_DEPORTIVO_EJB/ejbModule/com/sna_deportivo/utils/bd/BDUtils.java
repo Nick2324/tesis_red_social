@@ -30,7 +30,7 @@ public class BDUtils {
 		ResteasyClient client = new ResteasyClientBuilder().build();
 		WebTarget target = client.target(Constantes.SERVER_ROOT_URI).path("/");
 		Response result = target.request()
-				.header("Authorization", "Basic " + Base64.encodeBytes("nicolas2324:mifamilia".getBytes()))
+				.header("Authorization", "Basic " + Base64.encodeBytes("neo4j:21316789".getBytes()))
 				.accept(MediaType.TEXT_PLAIN)
 				.get(Response.class);
 		System.out.println("Status BD: "+result.getStatus());

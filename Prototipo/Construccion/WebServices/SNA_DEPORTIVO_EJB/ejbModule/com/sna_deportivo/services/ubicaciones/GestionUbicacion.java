@@ -1,5 +1,6 @@
 package com.sna_deportivo.services.ubicaciones;
 
+import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.Pais;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
@@ -146,6 +147,68 @@ public class GestionUbicacion {
 		response.setCaracterAceptacion("B");
 		response.setMensajeRespuesta("Lugar de práctica creado exitosamente");
 		response.setDatosExtra(nodoLugarPractica);
+		return response;
+	}
+	
+	public ResponseGenerico asociarDeporteLugar(DeportePracticadoUbicacion deporte) {
+		String nodoUbicacionDeporte;
+		String idDeporte;
+		String idUbicacion;
+		String query;
+		
+		StringBuilder propiedades;
+		
+		int idLugar;
+		
+		Object[] data;
+		JsonObject row;
+		
+		ResponseGenerico response = new ResponseGenerico();
+		
+		//Crear nodo UbicacionDeporte
+		nodoUbicacionDeporte = BDUtils.crearNodo();
+		//Asignar Label al nodo
+		if (!BDUtils.adicionarLabel(nodoUbicacionDeporte, "\"" + Entidades.UBICACIONDEPORTE + "\""))
+			throw new BDException();
+		
+		propiedades = new StringBuilder("{");
+		propiedades.append("\"to\":\"" + Constantes.SERVER_ROOT_URI + "/node/" + nodoUbicacionDeporte + "\",");
+		propiedades.append("\"type\":\"" + Relaciones.PRACTICADOEN + "\"");
+		propiedades.append("}");
+		
+		//Crear relacion entre nodo Deporte y nodo UbicacionDeporte
+		//obtener ID nodo Deporte
+		query = "MATCH (n:" + Entidades.DEPORTE + "{id:" + deporte.getDeporte().getId() + "}) RETURN id(n)";
+		data = BDUtils.ejecutarQuery(query);
+		row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+		idDeporte = (String) row.getPropiedades().get("arreglo")[0];
+		
+		if(!BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idDeporte, propiedades.toString()))
+			throw new BDException();
+		
+		//Crear relacion entre nodo Ubicacon y nodo UbicacionDeporte
+		//obtener ID nodo Ubicacion
+		idLugar = deporte.getUbicacion().getLugar().getId();
+		if(idLugar < 0){
+			query = "MATCH (n:" + Entidades.LUGARPRACTICA + ") where id(n)=" + (idLugar*-1) + " RETURN n.id";
+			data = BDUtils.ejecutarQuery(query);
+			row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			idLugar = Integer.valueOf((String) row.getPropiedades().get("arreglo")[0]);
+		}
+		query = "MATCH (n:" + Entidades.UBICACION + ")<-[:" + Relaciones.COMPLETAUBICACION + "]-(p:" + Entidades.PAIS + " {id:" + deporte.getUbicacion().getPais().getId() + "}),"
+				+ "(n)<-[:" + Relaciones.COMPLETAUBICACION + "]-(c:" + Entidades.CIUDAD + "{id:" + deporte.getUbicacion().getCiudad().getId() + "}),"
+				+ "(n)<-[:" + Relaciones.COMPLETAUBICACION + "]-(l:" + Entidades.LUGARPRACTICA + " {id:" + idLugar + "}) RETURN id(n)";
+		data = BDUtils.ejecutarQuery(query);
+		row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+		idUbicacion = (String) row.getPropiedades().get("arreglo")[0];
+		
+		if(!BDUtils.crearRelacion(Constantes.SERVER_ROOT_URI + "/node/" + idUbicacion, propiedades.toString()))
+			throw new BDException();
+		
+		response.setCaracterAceptacion("B");
+		response.setMensajeRespuesta("Deporte asociado exitosamente");
+		response.setDatosExtra(nodoUbicacionDeporte);
+		
 		return response;
 	}
 
