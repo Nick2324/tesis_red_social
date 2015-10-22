@@ -22,16 +22,18 @@ public class LugarPractica extends Lugar implements MediaTypeTranslator {
         nombre = ubicacion.getString("nombre");
         latitud = (float) ubicacion.getDouble("latitud");
         longitud = (float) ubicacion.getDouble("longitud");
-        JSONArray arreglo = ubicacion.getJSONArray("deportesPracticados");
-        try{
-            deportesPracticados = new Deporte[arreglo.length()];
-            for(int i=0;i<arreglo.length();i++){
-                deportesPracticados[i] = new Deporte(arreglo.getJSONObject(i));
+        if(ubicacion.has("deportesPracticados") && ubicacion.get("deportesPracticados") != null &&
+                !ubicacion.getString("deportesPracticados").equals("null")) {
+            JSONArray arreglo = ubicacion.getJSONArray("deportesPracticados");
+            try {
+                deportesPracticados = new Deporte[arreglo.length()];
+                for (int i = 0; i < arreglo.length(); i++) {
+                    deportesPracticados[i] = new Deporte(arreglo.getJSONObject(i));
+                }
+            } catch (Exception e) {
+                deportesPracticados = null;
             }
-        }catch (Exception e){
-            deportesPracticados = null;
         }
-
     }
 
     public Deporte[] getDeportesPracticados() {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_gestion_ubicaciones">Gestión de ubicaciones</string>
+    <string name="listview_filtro_lugares_practica">Lugares de practica registrados</string>
+    <string name="alert_traer_lugares_practica_tit">Traer lugares de practica registrados</string>
+    <string name="alert_traer_lugares_practica_err_msn">Ocurrió un error al traer los lugares de practica registrados en el SNS</string>
+    <string name="alert_traer_ubicaciones_tit">Traer ubicaciones registradas</string>
+    <string name="alert_traer_ubicaciones_err_msn">Error al traer las ubicaciones requeridas</string>
+</resources>

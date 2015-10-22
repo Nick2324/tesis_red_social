@@ -1,12 +1,14 @@
 package com.sna_deportivo.services;
 
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 
 import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
 import com.sna_deportivo.pojo.evento.Evento;
@@ -16,7 +18,6 @@ import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.pojo.ubicacion.Pais;
 import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
-import com.sna_deportivo.services.eventos.GestionEvento;
 import com.sna_deportivo.services.ubicaciones.GestionUbicacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 
@@ -113,14 +114,12 @@ public class GestionUbicacionService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearLugarPractica")
 	public ResponseGenerico crearLugarPractica(Ubicacion ubicacion){
-		
 		ResponseGenerico response = new ResponseGenerico();
 		
 		try{
 			Pais pais = ubicacion.getPais();
 			Ciudad ciudad = ubicacion.getCiudad();
 			LugarPractica lugar = ubicacion.getLugar();
-			
 			response = servicio.crearLugarPractica(pais, ciudad, lugar);
 		
 		}catch (BDException e){
@@ -131,6 +130,7 @@ public class GestionUbicacionService {
 		return response;
 		
 	}
+
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
@@ -147,7 +147,23 @@ public class GestionUbicacionService {
 			response.setCaracterAceptacion("M");
 			response.setMensajeRespuesta("Ha ocurrido un error con la base de datos.");
 		}
-
 		return response;
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("ubicaciones")
+	public Ubicacion[] obtenerUbicaciones(Ubicacion body){
+		try{
+			return this.servicio.obtenerUbicaciones(body);
+		}catch(WebApplicationException e){
+			e.printStackTrace();
+			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(Response.Status.
+					INTERNAL_SERVER_ERROR.getStatusCode());
+		}
 	}
 }

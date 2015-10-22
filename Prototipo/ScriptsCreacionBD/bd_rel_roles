@@ -3,6 +3,8 @@ match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:1}) create 
 
 match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:6}) create (p)-[:R_Permiso]->(r);
 
+match (r:E_Rol {consecutivoRol:1}), (p:E_Permiso {consecutivoPermiso:7}) create (p)-[:R_Permiso]->(r);
+
 match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:2}) create (p)-[:R_Permiso]->(r);
 
 match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:3}) create (p)-[:R_Permiso]->(r);
@@ -13,7 +15,11 @@ match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:5})
 
 match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:6}) create (p)-[:R_Permiso]->(r);
 
+match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:7}) create (p)-[:R_Permiso]->(r);
+
 match (a:E_Permiso {consecutivoPermiso:8}), (b:E_Permiso {consecutivoPermiso:9}) create (b)-[:R_Permiso]->(a);
+
+match (a:E_Permiso {consecutivoPermiso:7}), (b:E_Permiso {consecutivoPermiso:11}) create (b)-[:R_Permiso]->(a);
 
 match (a:E_Permiso {consecutivoPermiso:8}), (b:E_Permiso {consecutivoPermiso:10}) create (b)-[:R_Permiso]->(a);
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="titulo_descripcion_deporte">Descripción del deporte</string>
+    <string name="titulo_spinner_deporte">Deporte</string>
+    <string name="textview_nombre_deporte">Nombre</string>
+    <string name="textview_descripcion_deporte">Descripción</string>
+    <string name="textview_historia_deporte">Historia</string>
+    <string name="textview_olimpico_deporte">Olimpico</string>
+    <string name="textview_fecha_creacion_deporte">Fecha de creación</string>
+</resources>

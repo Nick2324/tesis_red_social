@@ -13,7 +13,6 @@ import com.sna_deportivo.pojo.evento.DeporteEvento;
 import com.sna_deportivo.pojo.evento.DeporteEventoDAO;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
-import com.sna_deportivo.pojo.ubicaciones.Ubicacion;
 import com.sna_deportivo.pojo.usuarios.ConstantesUsuarios;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
@@ -28,7 +27,7 @@ public class CrearEvento {
 	private ArrayList<ObjectSNSDeportivo> usuarios;
 	private ArrayList<ObjectSNSDeportivo> deportes;
 	private ArrayList<ObjectSNSDeportivo> generos;
-	private ArrayList<ObjectSNSDeportivo> ubicaciones;
+	//private ArrayList<ObjectSNSDeportivo> ubicaciones;
 	private GestionEvento gestionEvento;
 
 	public CrearEvento(){

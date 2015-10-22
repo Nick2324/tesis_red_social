@@ -4,6 +4,11 @@ import javax.ws.rs.core.Response;
 
 public class BDException extends javax.ws.rs.WebApplicationException {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public BDException() {
 		super();
 	}

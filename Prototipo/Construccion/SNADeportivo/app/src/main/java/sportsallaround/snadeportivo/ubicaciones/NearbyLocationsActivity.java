@@ -44,6 +44,7 @@ import sportsallaround.utils.generales.ObtainNearbyLocations;
 import sportsallaround.utils.generales.ObtainNearbyUsers;
 
 public class NearbyLocationsActivity extends FragmentActivity implements ObtainNearbyLocations,ObtainNearbyUsers,ObtainNearbyEvents,OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+
     private GoogleApiClient mGoogleApiClient;
     private GoogleMap mMap;
     private Location mLastLocation;
@@ -75,6 +76,7 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
 
     @Override
     public void onMapReady(GoogleMap mMap) {
+
         this.mMap = mMap;
         if(ubicacionInicial==null){
             if(ubicacion == null)

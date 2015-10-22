@@ -1,0 +1,4 @@
+//************************************Control de eliminacion de nodos y patrones*******************************
+//match (a)-[r]-(b) return *;
+match (a)-[r]-(b) delete a,r,b;
+match n delete n;

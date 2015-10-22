@@ -12,6 +12,7 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 
 	protected String[] aRetornar;
 	protected String[] separadores;
+	protected boolean switchConvierteAtributosBD;
 	
 	public abstract String stringJson();
 	
@@ -74,6 +75,14 @@ public abstract class ObjectSNSDeportivo implements JsonSerializable{
 						"\" no existe en el objeto o no ha podido ser inicializada");
 			}
 		}
+	}
+	
+	public void prenderSwitchConvierteAtribDB(){
+		this.switchConvierteAtributosBD = true;
+	}
+	
+	public void apagarSwitchConvierteAtribDB(){
+		this.switchConvierteAtributosBD = false;
 	}
 	
 	protected final String stringJsonArray(String identificador,

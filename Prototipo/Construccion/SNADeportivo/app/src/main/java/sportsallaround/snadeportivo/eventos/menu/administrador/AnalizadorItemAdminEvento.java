@@ -33,6 +33,9 @@ public class AnalizadorItemAdminEvento implements AnalizadorUsoItem{
             if(items.contains(R.id.item_actualizar_evento)){
                 analizados.add(R.id.item_actualizar_evento);
             }
+            if(items.contains(R.id.item_gestion_ubicaciones_eve_admin)){
+                analizados.add(R.id.item_gestion_ubicaciones_eve_admin);
+            }
         }else if(this.funcionalidad.equals(ConstantesEvento.ACTUALIZAR_EVENTO)){
             if(items.contains(R.id.item_crear_evento)){
                 analizados.add(R.id.item_crear_evento);

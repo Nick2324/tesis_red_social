@@ -47,4 +47,7 @@
     <string name="title_activity_crear_usuario">Crear usuario</string>
     <string name="title_activity_mis_deportes">Actualizar mis deportes</string>
     <string name="title_activity_crear_ubicacion">¿Qué hay aquí?</string>
+    <string name="title_activity_lista_lugares_practica">ListaLugaresPractica</string>
+    <string name="title_activity_muestra_info_deporte">Información de deportes</string>
+
 </resources>

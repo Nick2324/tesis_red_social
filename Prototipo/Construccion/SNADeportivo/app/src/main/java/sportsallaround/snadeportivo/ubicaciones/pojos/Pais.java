@@ -1,5 +1,8 @@
 package sportsallaround.snadeportivo.ubicaciones.pojos;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 import sportsallaround.utils.generales.MediaTypeTranslator;
@@ -14,6 +17,15 @@ public class Pais implements MediaTypeTranslator {
     private ArrayList<Ciudad> ciudades;
     private float latitud;
     private float longitud;
+
+    public Pais(){}
+
+    public Pais(JSONObject pais) throws JSONException {
+        id = pais.getInt("id");
+        nombre = pais.getString("nombre");
+        latitud = Float.parseFloat(pais.getString("latitud"));
+        longitud = Float.parseFloat(pais.getString("longitud"));
+    }
 
     public int getId() {
         return id;

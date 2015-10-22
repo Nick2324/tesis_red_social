@@ -3,11 +3,12 @@ package com.sna_deportivo.services.ubicaciones;
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
 import com.sna_deportivo.pojo.evento.Evento;
-import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.Pais;
 import com.sna_deportivo.pojo.ubicacion.Ubicacion;
+import com.sna_deportivo.pojo.ubicacion.UbicacionDAO;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.utils.gr.Constantes;
 import com.sna_deportivo.utils.bd.BDUtils;
@@ -37,7 +38,6 @@ public class GestionUbicacion {
 		Ciudad[] ciudades = null;
 		String query = "MATCH (c:" + Entidades.CIUDAD + ")<-[:" + Relaciones.PAISCIUDAD + "]-(p:" + Entidades.PAIS + " {id:" + pais.getId() + "}) RETURN c ORDER BY c.id";
 		Object[] data = BDUtils.ejecutarQuery(query);
-		System.out.println(data.length);
 		ciudades = new Ciudad[data.length];
 		if (!data[0].equals(""))
 			for (int i = 0; i < data.length; i++) {
@@ -272,6 +272,23 @@ public ResponseGenerico crearLugarPractica(Pais pais, Ciudad ciudad, LugarPracti
 			eventos = null;
 		}
 		return eventos;
+	}
+	
+	public Ubicacion[] obtenerUbicaciones(Ubicacion body) 
+			throws ProductorFactoryExcepcion, ExcepcionJsonDeserializacion{
+		UbicacionDAO du = new UbicacionDAO();
+		if(body.getCiudad() == null){
+			body.setCiudad(new Ciudad());
+		}
+		if(body.getPais() == null){
+			body.setPais(new Pais());
+		}
+		if(body.getLugar() == null){
+			body.setLugar(new LugarPractica());
+		}
+		du.setObjetcSNSDeportivo(body);
+		return (Ubicacion[])du.getUbicaciones();
+
 	}
 
 }

@@ -91,6 +91,42 @@ public abstract class ObjectSNSDeportivoDAO {
 		return this.producirNodoMatchAbstracto(null, false);
 	}
 	
+	public String producirPatronRelacionIndividual(RelacionSNS relacion,
+												   FactoryObjectSNSDeportivo factory,
+												   boolean desdeWith) 
+				throws BDException{
+		String retorno = null;
+		if(relacion != null && factory != null){
+			if(relacion.getObjetosRelacion().size() > 1){
+				throw new BDException();
+			}else{
+				ObjectSNSDeportivo obj = relacion.getObjetoRelacion();
+				if(obj != null){
+					StringBuilder patron = new StringBuilder();
+					String nodoDAO = desdeWith?
+							this.identificadorQueries:
+							this.producirNodoMatch();
+					ObjectSNSDeportivoDAO dao =
+							factory.getObjetoSNSDAO();
+					dao.setObjetcSNSDeportivo(obj);
+					if(RelacionSNS.DIRECCION_ENTRADA.
+							equals(relacion.getDireccion())){
+						patron.append(nodoDAO);
+						patron.append(relacion.stringJson());
+					}
+					patron.append(dao.producirNodoMatch());
+					if(RelacionSNS.DIRECCION_SALIDA.equals(
+							relacion.getDireccion())){
+						patron.append(relacion.stringJson());
+						patron.append(nodoDAO);
+					}
+					retorno = patron.toString();
+				}
+			}
+		}
+		return retorno;
+	}
+	
 	public boolean crearRelacion(RelacionSNS relacionACrear,
 							     ProductorSNSDeportivo productor)
 				throws ProductorFactoryExcepcion{
@@ -256,6 +292,51 @@ public abstract class ObjectSNSDeportivoDAO {
 		return query;
 	}
 	
+	public StringBuilder devuelveWith(){
+		StringBuilder query = new StringBuilder("MATCH ");
+		query.append(this.producirNodoMatch());
+		query.append(" WITH ");
+		query.append(this.identificadorQueries);
+		return query;
+	}
+	
+	public StringBuilder devuelveMatchObj(boolean modoJson){
+		StringBuilder query = null;
+		if(!modoJson || (modoJson && this.objectSNSDeportivo != null)){
+			query = new StringBuilder("MATCH ");
+			if(modoJson){
+				query.append(this.producirNodoMatch());
+			}else{
+				query.append(this.producirNodoMatchNoJson());
+			}
+		}
+
+		return query;
+		
+	}
+	
+	private StringBuilder devuelve(ArrayList<String> patrones, String clausula){
+		StringBuilder query = null;
+		if(patrones != null && patrones.size() > 0){
+			query = new StringBuilder(clausula);
+			query.append(" ");
+			for(String patron:patrones){
+				query.append(patron);
+				query.append(",");
+			}
+			query = new StringBuilder(query.substring(0,query.length() - 1));
+		}
+		return query;
+	}
+	
+	public StringBuilder devuelveMatch(ArrayList<String> patrones){
+		return this.devuelve(patrones, "MATCH");
+	}
+	
+	public StringBuilder devuelveRetorno(ArrayList<String> patrones){
+		return this.devuelve(patrones,"RETURN");
+	}
+	
 	/**
 	 * Retorna los nodos unidos al objeto de éste DAO en la BD
 	 * @param relacionACrear Lista de relaciones que se desean
@@ -324,10 +405,6 @@ public abstract class ObjectSNSDeportivoDAO {
 	
 	public String getIdentificadorQueries() {
 		return identificadorQueries;
-	}
-	
-	public static void main(String[] args){
-		BDUtils.ejecutarQueryREST("MATCH (u:E_Usuario) RETURN COUNT(u) AS cuenta");
 	}
 	
 }

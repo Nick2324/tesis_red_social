@@ -231,14 +231,11 @@ public class BDUtils {
 										String identificador) throws ExcepcionJsonDeserializacion{
 		StringBuilder retorno = new StringBuilder(" WHERE ");
 		if(objetoRedSocial != null && identificador != null){
-			System.out.println("En where = "+objetoRedSocial.stringJson());
 			JsonObject objetoJson = JsonUtils.JsonStringToObject(objetoRedSocial.stringJson());
 			for(String propiedad:objetoJson.getPropiedades().keySet()){
 				if(!(((String)objetoJson.getPropiedades().get(propiedad)[0]).equals("null")) &&					
 					objetoJson.getPropiedades().get(propiedad)[0] != null && propiedad != null &&
-					propiedad != ""){
-					System.out.println("Propiedad: "+propiedad);
-					System.out.println("Valor: "+(String)objetoJson.getPropiedades().get(propiedad)[0]);	
+					propiedad != ""){	
 					retorno.append(identificador);
 					retorno.append(".");
 					if(!propiedad.equals("null")){
@@ -295,6 +292,16 @@ public class BDUtils {
 		return retorno.toString();
 	}
 	
+	public static Object[] obtenerRestRegistroCompleto(Object registroResultadoRest){
+		Object[] restArreglo = null;
+		try{
+			JsonObject registro = (JsonObject)registroResultadoRest;
+			JsonObject rest = (JsonObject)registro.getPropiedades().get("rest")[0];
+			restArreglo = rest.getPropiedades().get("arreglo");
+		}catch(Exception e){}
+		return restArreglo;
+	}
+	
 	public static JsonObject obtenerRestRegistro(Object registroResultadoRest){
 		JsonObject restArreglo = null;
 		try{
@@ -311,13 +318,6 @@ public class BDUtils {
 		return Integer.parseInt((String)((JsonObject)((JsonObject)
 				resultado[0]).getPropiedades().get("row")[0]).
 				getPropiedades().get("arreglo")[0]);
-	}
-	
-	
-	public static void main(String[] args){
-		String query = "MATCH (evento:E_EventoDeportivo)<-[creaEvento:R_CreaEvento]-(usua"
-				+ "rio:E_Usuario{\"primerNombre\":'pru'}) RETURN evento,usuario";
-		BDUtils.ejecutarQueryREST(query);
 	}
 	
 }

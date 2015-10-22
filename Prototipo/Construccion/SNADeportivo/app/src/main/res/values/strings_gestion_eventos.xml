@@ -2,7 +2,6 @@
 <resources>
     <string name="titulo_gestion_eventos_lista">Eventos deportivos</string>
     <string name="hint_carga_informacion">Información del evento</string>
-    <string name="item_actualizar_evento">Actualiza general evento</string>
     <string name="crear_evento">Crear evento</string>
     <string name="tipo_evento">Tipo de evento</string>
     <string name="lista_evento_string">ListaEventos</string>
@@ -103,4 +102,7 @@
     <string name="toast_deja_evento">Has dejado el evento</string>
     <string name="toast_une_evento">Se ha enviado la solicitud de participación al evento</string>
     <string name="button_invitar_participantes">Invitar participantes</string>
+    <string name="alert_crea_ubicacion_evento_tit">Asignación de ubicación de evento</string>
+    <string name="alert_crea_ubicacion_evento_err_msn">Se produjo un error en la asignación de ubicación de evento</string>
+    <string name="toast_crea_ubicacion_evento_exito">Asignación de ubicación de evento exitosa</string>
 </resources>

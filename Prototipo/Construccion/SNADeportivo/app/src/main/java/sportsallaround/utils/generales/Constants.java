@@ -19,16 +19,20 @@ public class Constants {
     //*********************************************************************************************
     //*************************************Servicios Deportes**************************************
     public static final String SERVICES_PATH_DEPORTES = "deportes/";
+    public static final String SERVICES_PATH_UBICACIONES_REST = "ubicaciones/";
     //*********************************************************************************************
     //***********************************Servicios Entidades Generales*****************************
     public static final String SERVICES_PATH_GENERALES = "generales/";
     public static final String SERVICES_PATH_GENERO = "generos/";
     //***********************************Servicios Ubicaciones*************************************
-    public static final String SERVICES_PATH_UBICACIONES = "ubicaciones/";
+    public static final String SERVICES_PATH_UBICACIONES = "GestionUbicacionService/";
+    public static final String SERVICES_CREAR_UBICACION ="GestionUbicacionService/crearLugarPractica";
+    public static final String SERVICES_OBTENER_UBICACIONES = "GestionUbicacionService/obtenerLugaresPractica";
+    public static final String SERVICES_OBTENER_UBICACIONES_EVENTOS = "GestionUbicacionService/obtenerEventosLocalizados";
+    public static final String SERVICES_OBTENER_UBICACIONES_USUARIOS = "";
     //*********************************************************************************************
     //******************************Strings de formato y patrones**********************************
-    public static final String ROOT_URL = "http://192.168.0.15:8080/SNA_DEPORTIVO_WEB/services/";
-    //public static final String ROOT_URL = "http://10.42.0.1:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://snadeportivo.ddns.net/SNA_DEPORTIVO_WEB/services/";
     /*
     *
     * SERVICIOS GESTION DE USUARIO
@@ -49,9 +53,7 @@ public class Constants {
     public static final String SERVICES_ADICIONAR_DEPORTE_PRACTICADO = "GestionUsuarioService/adicionarDeportePracticado";
     public static final String SERVICES_ELIMINAR_DEPORTE_PRACTICADO = "GestionUsuarioService/eliminarDeportePracticado";
     public static final String SERVICES_ACTUALIZAR_DEPORTE_PRACTICADO = "GestionUsuarioService/actualizarDeportePracticado";
-
-    public static final String SERVICES_OBTENER_UBICACIONES_EVENTOS = "GestionUbicacionService/obtenerEventosLocalizados";
-    public static final String SERVICES_OBTENER_UBICACIONES_USUARIOS = "";
+    public static final String SERVICES_ASIGNAR_DEPORTE_UBICACION = "GestionUbicacionService/asignarDeportesPracticadosLugar";
 
     public static final String DATE_FORMAT = "dd/MM/yyyy";
     public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -61,10 +63,6 @@ public class Constants {
     public static final String DATOS_FUNCIONALIDAD = "datos_funcionalidad";
     public static final String FUNCIONALIDAD = "funcionalidad";
     public static final String USUARIO = "user";
-
-    public static final String SERVICES_CREAR_UBICACION ="GestionUbicacionService/crearLugarPractica";
-    public static final String SERVICES_OBTENER_UBICACIONES = "GestionUbicacionService/obtenerLugaresPractica";
-    public static final String SERVICES_ASIGNAR_DEPORTE_UBICACION = "GestionUbicacionService/asignarDeportesPracticadosLugar";
 
     public static final TipoUbicacion[] TIPOS_UBICACION =
             {new TipoUbicacion("Parque", true),
