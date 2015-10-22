@@ -2,7 +2,7 @@ package com.sna_deportivo.pojo.evento;
 
 import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.entidadesEstaticas.Genero;
-import com.sna_deportivo.pojo.ubicaciones.Ubicacion;
+import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.AtributoInexistenteException;
 import com.sna_deportivo.utils.json.JsonUtils;
@@ -140,8 +140,7 @@ public class DeporteEvento extends ObjectSNSDeportivo{
 
 	@Override
 	public Class<?> getTipoDatoPropiedad(String propiedad) {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 }

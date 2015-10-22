@@ -41,4 +41,8 @@
     <string name="title_activity_user_update_practiced_sport">UserUpdatePracticedSport</string>
     <string name="title_activity_nearby_locations">Map</string>
     <string name="title_activity_create_location">CreateLocationActivity</string>
+    <string name="title_activity_menu_ubicaciones">MenuUbicaciones</string>
+    <string name="title_activity_seleccionar_localizacion">Seleccion de localizacion de lugar
+    </string>
+    <string name="title_activity_lista_lugares_practica">ListaLugaresPractica</string>
 </resources>

@@ -15,3 +15,6 @@ create (:E_Permiso {nombre:"Mis patrocinios", descripcion:"Funcionalidad que per
 
 create (:E_Permiso {nombre:"Gestionar eventos", descripcion:"Funcionalidad que permite acceder al menu de gestion de eventos",
 ruta:"sportsallaround.snadeportivo.eventos.gui.GestionEventos", consecutivoPermiso:6});
+
+create (:E_Permiso {nombre:"Adicion de ubicaciones", descripcion:"Funcionalidad que permite ir al menu de ubicaciones",
+ruta:"sportsallaround.snadeportivo.ubicaciones.MenuEvento", consecutivoPermiso:7});

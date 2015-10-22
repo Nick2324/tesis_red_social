@@ -2,6 +2,7 @@ package sportsallaround.snadeportivo.eventos.peticiones;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.util.Log;
 
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.Evento;
@@ -11,6 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.snadeportivo.ubicaciones.pojos.Ubicacion;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.Peticion;
 import sportsallaround.utils.generales.PeticionObjectCallback;
@@ -23,12 +25,28 @@ public class TraerUbicacionEvento extends Peticion {
     private Context contexto;
     private Evento evento;
     private String tipoEvento;
+    private String identificadorCallback;
 
     public TraerUbicacionEvento(Context contexto, Evento evento, String tipoEvento) {
         if(contexto instanceof PeticionObjectCallback) {
             this.contexto = contexto;
             this.evento = evento;
             this.tipoEvento = tipoEvento;
+            this.identificadorCallback = getClass().getSimpleName();
+        }else{
+            throw new ClassCastException();
+        }
+    }
+
+    public TraerUbicacionEvento(Context contexto,
+                                Evento evento,
+                                String tipoEvento,
+                                String identificadorCallback) {
+        if(contexto instanceof PeticionObjectCallback) {
+            this.contexto = contexto;
+            this.evento = evento;
+            this.tipoEvento = tipoEvento;
+            this.identificadorCallback = identificadorCallback;
         }else{
             throw new ClassCastException();
         }
@@ -44,21 +62,21 @@ public class TraerUbicacionEvento extends Peticion {
         super.servicio = Constants.SERVICES_PATH_EVENTOS +
                 this.tipoEvento + "/" +
                 this.evento.getId() + "/" +
-                Constants.SERVICES_PATH_UBICACIONES;
+                Constants.SERVICES_PATH_UBICACIONES_REST;
     }
 
     @Override
     public void calcularParams() {
         try {
-            super.params = new JSONObject();
+            super.params = new JSONObject(this.evento.stringJson());
             //PONIENDO EVENTO
-            JSONArray arrayEventos = new JSONArray();
+            /*JSONArray arrayEventos = new JSONArray();
             arrayEventos.put(new JSONObject(this.evento.stringJson()));
             JSONObject parametrosEvento = new JSONObject();
             parametrosEvento.put(this.evento.getClass().getSimpleName(),
                     arrayEventos);
             super.params.put(ConstantesEventos.ELEMENTO_MENSAJE_SERVICIO_EVE,
-                    parametrosEvento);
+                    parametrosEvento);*/
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -73,13 +91,11 @@ public class TraerUbicacionEvento extends Peticion {
     public void onPostExcecute(String resultadoPeticion) {
         if(resultadoPeticion != null){
             try {
-                JSONObject resultado = new JSONObject(resultadoPeticion);
-                if(resultado.getString("caracterAceptacion") != null &&
-                        resultado.getString("caracterAceptacion").equals("200")){
-                    ((PeticionObjectCallback)this.contexto).getObjetoPeticion(
-                            resultado.getString("datosExtra"));
-                }else{
-                    this.alertError();
+                Ubicacion ubicacion = new Ubicacion(new JSONObject(resultadoPeticion));
+                if(this.contexto instanceof PeticionObjectCallback) {
+                    ((PeticionObjectCallback) this.contexto).getObjetoPeticion(
+                            ubicacion,
+                            this.identificadorCallback);
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

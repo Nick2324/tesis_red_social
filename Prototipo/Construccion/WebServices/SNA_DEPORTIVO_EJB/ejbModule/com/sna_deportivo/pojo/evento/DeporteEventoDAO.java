@@ -11,11 +11,13 @@ import com.sna_deportivo.pojo.entidadesEstaticas.ProductorFactoryGenerales;
 import com.sna_deportivo.pojo.usuarios.DAOUsuario;
 import com.sna_deportivo.pojo.usuarios.ProductorFactoryUsuario;
 import com.sna_deportivo.pojo.usuarios.Usuario;
+import com.sna_deportivo.pojo.ubicacion.ProductorFactoryUbicacion;
 import com.sna_deportivo.utils.bd.BDUtils;
 import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.RelacionSNS;
 import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
+import com.sna_deportivo.utils.gr.FactoryObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivoDAO;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
@@ -505,33 +507,53 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 		return true;
 	}
 	
-	public boolean eliminarUbicacion() throws BDException{
+	public boolean eliminarUbicacion() throws BDException, ProductorFactoryExcepcion{
 		if(this.objectSNSDeportivo != null){
 			RelacionSNS aEliminar = new RelacionSNS(Relaciones.DESCRIPCIONEVENTO,
 					"ubicacionEventoRelacion",
-					RelacionSNS.DIRECCION_ENTRADA);
-			/*return this.eliminarRelacion(aEliminar,
-					new ProductorFactoryUbicacion());*/
+					RelacionSNS.DIRECCION_ENTRADA,
+					((DeporteEvento)this.objectSNSDeportivo).getUbicacion());
+			return this.eliminarRelacion(aEliminar,
+					new ProductorFactoryUbicacion());
 		}
 		return true;
 	}
 	
 	public boolean actualizarDeporteEvento() throws BDException,ProductorFactoryExcepcion{
 		//Ampliar a todo el evento, con invitaciones, participantes, etc.
+		boolean eliminacionesExitosas = false;
 		if(this.objectSNSDeportivo != null){
-			((DeporteEvento)this.objectSNSDeportivo).
-				setEvento(null);
-			if(this.eliminarDeporte() && 
-			   this.eliminarGenero() &&
-			   this.eliminarUbicacion()){
+			DeporteEvento de =(DeporteEvento)this.objectSNSDeportivo;
+			de.setEvento(null);
+			if(de.getDeporte() != null){
+				eliminacionesExitosas = this.eliminarDeporte();
+			}else{
+				eliminacionesExitosas = true;
+			}
+			if(eliminacionesExitosas){
+				if(de.getGenero() != null){
+					eliminacionesExitosas = 
+							this.eliminarGenero();
+				}else{
+					eliminacionesExitosas = true;
+					
+				}
+				if(eliminacionesExitosas){
+					if(de.getUbicacion() != null){
+						eliminacionesExitosas = 
+								this.eliminarUbicacion();
+					}else{
+						eliminacionesExitosas = true;
+					}
+				}
+			}
+			if(eliminacionesExitosas){
 				this.crearDeporte();
 				this.crearGenero();
 				this.crearUbicacion();
-			}else{
-				return false;
 			}
 		}
-		return true;
+		return eliminacionesExitosas;
 	}
 	
 	public String obtenerDeporteEvento() 
@@ -681,7 +703,7 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			if(de.getUbicacion() != null){
 				relacionEventoNAria.setObjetoRelacion(de.getUbicacion());
 				super.crearRelacion(relacionEventoNAria, 
-						null);
+						new ProductorFactoryUbicacion());
 			}
 		}
 	}
@@ -792,6 +814,43 @@ public class DeporteEventoDAO extends ObjectSNSDeportivoDAO{
 			}
 		}
 		return eventos;
+	}
+	
+	public String obtenerUbicacionEvento() 
+			throws BDException, ProductorFactoryExcepcion, ExcepcionJsonDeserializacion{
+		String retorno = "{}";
+		if(this.objectSNSDeportivo != null){
+			StringBuilder query = new StringBuilder("MATCH ");
+			DeporteEvento de = 
+					(DeporteEvento)this.objectSNSDeportivo;
+			RelacionSNS relacion = new RelacionSNS(
+					Relaciones.DESCRIPCIONEVENTO,
+					"ubicacionesRelacion",
+					RelacionSNS.DIRECCION_ENTRADA,
+					de.getUbicacion());
+			FactoryObjectSNSDeportivo factory =
+					new ProductorFactoryUbicacion().
+					producirFacObjetoSNS(de.getUbicacion().
+							getClass().getSimpleName());
+			ObjectSNSDeportivo objeto = factory.getObjetoSNS();
+			query.append(
+					this.producirPatronRelacionIndividual(
+					relacion, factory, false));
+			query.append("RETURN ");
+			query.append(factory.getObjetoSNSDAO().getIdentificadorQueries());
+			Object[] resultado = BDUtils.ejecutarQueryREST(query.toString());
+			if(resultado != null && !resultado[0].equals("")){
+				for(int i = 0; i < resultado.length; i++){
+					Object[] data =
+							BDUtils.obtenerRestRegistro(resultado[i]).getPropiedades().get("data");
+					if(data != null && !data[0].equals("")){
+						objeto.deserializarJson((JsonObject)data[0]);
+					}
+				}
+				retorno = objeto.stringJson();
+			}
+		}
+		return retorno;
 	}
 
 }

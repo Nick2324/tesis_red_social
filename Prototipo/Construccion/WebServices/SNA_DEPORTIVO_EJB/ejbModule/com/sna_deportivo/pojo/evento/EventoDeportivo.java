@@ -3,7 +3,6 @@ package com.sna_deportivo.pojo.evento;
 import java.util.ArrayList;
 
 import com.sna_deportivo.utils.json.JsonObject;
-import com.sna_deportivo.utils.json.JsonUtils;
 import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 /**

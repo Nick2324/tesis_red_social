@@ -2,7 +2,6 @@ package com.sna_deportivo.services.eventos;
 
 import java.util.ArrayList;
 
-import com.sna_deportivo.pojo.deportes.ProductorFactoryDeporte;
 import com.sna_deportivo.pojo.evento.ConstantesEventos;
 import com.sna_deportivo.pojo.evento.DeporteEvento;
 import com.sna_deportivo.pojo.evento.DeporteEventoDAO;

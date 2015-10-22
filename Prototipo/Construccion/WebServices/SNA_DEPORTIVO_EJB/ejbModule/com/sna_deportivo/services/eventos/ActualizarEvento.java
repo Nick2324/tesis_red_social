@@ -14,6 +14,9 @@ import com.sna_deportivo.pojo.evento.DeporteEvento;
 import com.sna_deportivo.pojo.evento.DeporteEventoDAO;
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
+import com.sna_deportivo.pojo.ubicacion.ConstantesUbicaciones;
+import com.sna_deportivo.pojo.ubicacion.ProductorFactoryUbicacion;
+import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.gr.ObjectSNSDeportivo;
 import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
@@ -40,6 +43,10 @@ public class ActualizarEvento {
 					JsonUtils.convertirMensajeJsonAObjectSNS(body, 
 							ConstantesEntidadesGenerales.ELEMENTO_MENSAJE_SERVICIO_GEN, 
 							new ProductorFactoryGenerales());
+			ArrayList<ObjectSNSDeportivo> ubicaciones =
+					JsonUtils.convertirMensajeJsonAObjectSNS(body, 
+							ConstantesUbicaciones.ELEMENTO_MENSAJE_SERVICIO_UBI, 
+							new ProductorFactoryUbicacion());
 			DeporteEvento ed = new DeporteEvento();
 			DeporteEventoDAO ded = new DeporteEventoDAO();
 			//Como no he implementado lo de solo algunos atributos y no todos...
@@ -70,6 +77,9 @@ public class ActualizarEvento {
 					}
 					if(generos != null && generos.size() == 1){
 						ed.setGenero((Genero)generos.get(0));
+					}
+					if(ubicaciones != null && ubicaciones.size() == 1){
+						ed.setUbicacion((Ubicacion)ubicaciones.get(0));
 					}
 					ded.setObjetcSNSDeportivo(ed);
 					if(!ded.actualizarDeporteEvento()){

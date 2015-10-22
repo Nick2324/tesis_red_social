@@ -2,7 +2,10 @@ package com.sna_deportivo.services.ubicaciones;
 
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.Pais;
+import com.sna_deportivo.pojo.ubicacion.Ubicacion;
+import com.sna_deportivo.pojo.ubicacion.UbicacionDAO;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.utils.gr.Constantes;
 import com.sna_deportivo.utils.bd.BDUtils;
@@ -10,6 +13,7 @@ import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionUbicacion {
 	
@@ -31,7 +35,6 @@ public class GestionUbicacion {
 		Ciudad[] ciudades = null;
 		String query = "MATCH (c:" + Entidades.CIUDAD + ")<-[:" + Relaciones.PAISCIUDAD + "]-(p:" + Entidades.PAIS + " {id:" + pais.getId() + "}) RETURN c ORDER BY c.id";
 		Object[] data = BDUtils.ejecutarQuery(query);
-		System.out.println(data.length);
 		ciudades = new Ciudad[data.length];
 		if (!data[0].equals(""))
 			for (int i = 0; i < data.length; i++) {
@@ -86,7 +89,6 @@ public class GestionUbicacion {
 		JsonObject row;
 		
 		ResponseGenerico response = new ResponseGenerico();
-		System.out.println("armando query");
 		//Crear nodo E_Ubicacion
 		nodoUbicacion = BDUtils.crearNodo();
 		// Asignar label a nodo
@@ -107,7 +109,6 @@ public class GestionUbicacion {
 		idPais = (String) row.getPropiedades().get("arreglo")[0];
 		//Obtener ID Ciudad
 		query = "MATCH (n:" + Entidades.CIUDAD + "{id:" + pais.getId() + "}) RETURN id(n)";
-		System.out.println(query);
 		data = BDUtils.ejecutarQuery(query);
 		row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
 		idCiudad = (String) row.getPropiedades().get("arreglo")[0];
@@ -147,6 +148,22 @@ public class GestionUbicacion {
 		response.setMensajeRespuesta("Lugar de práctica creado exitosamente");
 		response.setDatosExtra(nodoLugarPractica);
 		return response;
+	}
+	
+	public Ubicacion[] obtenerUbicaciones(Ubicacion body) 
+			throws ProductorFactoryExcepcion, ExcepcionJsonDeserializacion{
+		UbicacionDAO du = new UbicacionDAO();
+		if(body.getCiudad() == null){
+			body.setCiudad(new Ciudad());
+		}
+		if(body.getPais() == null){
+			body.setPais(new Pais());
+		}
+		if(body.getLugar() == null){
+			body.setLugar(new LugarPractica());
+		}
+		du.setObjetcSNSDeportivo(body);
+		return (Ubicacion[])du.getUbicaciones();
 	}
 
 }

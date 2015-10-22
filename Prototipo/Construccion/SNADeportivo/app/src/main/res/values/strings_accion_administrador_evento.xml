@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="perfil_evento_admin">Perfil del evento</string>
-    <string name="info_general_evento_admin">Información general del evento</string>
-    <string name="gestionar_involucrados_eve_admin">Gestionar involucrados</string>
-    <string name="gestion_ubicaciones_eve_admin">Gestionar ubicaciones</string>
-    <string name="cancelar_evento_admin">Cancelar evento</string>
+    <string name="menu_item_perfil_evento_admin">Perfil del evento</string>
+    <string name="menu_item_info_general_evento_admin">Información general del evento</string>
+    <string name="menu_item_gestionar_involucrados_eve_admin">Gestionar involucrados</string>
+    <string name="menu_item_gestion_ubicaciones_eve_admin">Gestionar ubicaciones</string>
+    <string name="menu_item_cancelar_evento_admin">Cancelar evento</string>
+    <string name="menu_item_actualizar_evento">Actualiza general evento</string>
 </resources>

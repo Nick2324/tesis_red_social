@@ -1,12 +1,14 @@
 package com.sna_deportivo.services;
 
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
@@ -86,14 +88,12 @@ public class GestionUbicacionService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearLugarPractica")
 	public ResponseGenerico crearLugarPractica(Ubicacion ubicacion){
-		System.out.println("crearLugarPractica");
 		ResponseGenerico response = new ResponseGenerico();
 		
 		try{
 			Pais pais = ubicacion.getPais();
 			Ciudad ciudad = ubicacion.getCiudad();
 			LugarPractica lugar = ubicacion.getLugar();
-			System.out.println("servicio ejecutando");
 			response = servicio.crearLugarPractica(pais, ciudad, lugar);
 		
 		}catch (BDException e){
@@ -103,6 +103,23 @@ public class GestionUbicacionService {
 		
 		return response;
 		
+	}
+	
+	@GET
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("ubicaciones")
+	public Ubicacion[] obtenerUbicaciones(Ubicacion body){
+		try{
+			return this.servicio.obtenerUbicaciones(body);
+		}catch(WebApplicationException e){
+			e.printStackTrace();
+			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(Response.Status.
+					INTERNAL_SERVER_ERROR.getStatusCode());
+		}
 	}
 
 }

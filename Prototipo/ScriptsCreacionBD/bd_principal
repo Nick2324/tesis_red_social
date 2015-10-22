@@ -3,6 +3,9 @@
 NEO4J_BIN='/opt/neo4j-community-2.2.3/bin'
 TESIS_BD_HOME='/home/nicolas/tesis_red_social/Prototipo/ScriptsCreacionBD'
 
+#Instrucciones de control
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_control_inicio
+
 #Creacion de todos los nodos
 $NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_roles
 $NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_generos
@@ -27,4 +30,4 @@ $NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_clasificacion_deportes
 $NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_rel_tacticas_tecnicas_movimientos
 
 #Instrucciones de control
-$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_control
+$NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_control_final

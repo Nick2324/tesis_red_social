@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ver_ubicaciones_evento">Ver ubicaciones de evento</string>
-    <string name="info_general_evento">Información general del evento</string>
-    <string name="perfil_evento">Perfil del evento</string>
-    <string name="informacion_participantes">Información de participantes</string>
-    <string name="unirse_evento_participante">Ser participante</string>
-    <string name="dejar_evento_participante">Dejar de ser participante</string>
+    <string name="item_ver_ubicaciones_evento">Ver ubicaciones de evento</string>
+    <string name="menu_item_info_general_evento">Información general del evento</string>
+    <string name="menu_item_perfil_evento">Perfil del evento</string>
+    <string name="menu_item_informacion_participantes">Información de participantes</string>
+    <string name="menu_item_unirse_evento_participante">Ser participante</string>
+    <string name="menu_item_dejar_evento_participante">Dejar de ser participante</string>
 </resources>

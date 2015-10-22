@@ -5,6 +5,6 @@ package sportsallaround.utils.generales;
  */
 public interface PeticionObjectCallback {
 
-    public void getObjetoPeticion(Object objetoPeticion);
+    public void getObjetoPeticion(Object objetoPeticion, String identificadorPeticion);
 
 }

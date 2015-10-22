@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -24,7 +23,9 @@ import sportsallaround.snadeportivo.ubicaciones.pojos.LugarPractica;
 import sportsallaround.snadeportivo.usuarios.tasks.RetreiveNearbyLocations;
 import sportsallaround.utils.generales.ObtainNearbyLocations;
 
-public class NearbyLocationsActivity extends FragmentActivity implements ObtainNearbyLocations,OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class NearbyLocationsActivity extends FragmentActivity implements ObtainNearbyLocations,
+        OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener {
     private GoogleApiClient mGoogleApiClient;
     private Location mLastLocation;
     private LatLng ubicacion;
@@ -54,13 +55,15 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 15));
         //mMap.moveCamera(CameraUpdateFactory.zoomBy(12));
         mMap.addCircle(new CircleOptions().center(ubicacion).radius(2).fillColor(Color.BLUE).strokeColor(Color.BLUE));
-        for(LugarPractica lugar : locations){
-            if(lugar != null) {
-                mMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(lugar.getLatitud(), lugar.getLongitud()))
-                                .title(lugar.getNombre())
-                                .snippet("Deportes practicados: PENDIENTE")
-                );
+        if(locations != null) {
+            for (LugarPractica lugar : locations) {
+                if (lugar != null) {
+                    mMap.addMarker(new MarkerOptions()
+                                    .position(new LatLng(lugar.getLatitud(), lugar.getLongitud()))
+                                    .title(lugar.getNombre())
+                                    .snippet("Deportes practicados: PENDIENTE")
+                    );
+                }
             }
         }
     }

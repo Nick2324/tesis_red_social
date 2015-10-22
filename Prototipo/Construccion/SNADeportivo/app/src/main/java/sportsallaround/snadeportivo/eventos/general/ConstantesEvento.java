@@ -30,4 +30,9 @@ public class ConstantesEvento {
     public static final String SERVICIO_EVENTO = "servicioEvento";
     public static final String OWNER_EVENTO = "duenoEvento";
 
+    //TAGS DE COMUNICACION DE CALLBACKS
+    public static final String CALLBACK_TRAE_UBICACION_EVENTO = "cbTraeUbicacionEvento";
+
+    //TAGS PARA MUESTRA DE DIFERENTES ERRORES
+    public static final String ERROR_TRAER_UBICACION_EVENTO = "traerUbicacionEvento";
 }

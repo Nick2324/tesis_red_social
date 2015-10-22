@@ -11,10 +11,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.services.eventos.ActualizarEvento;
+import com.sna_deportivo.services.eventos.ConsultarEvento;
 import com.sna_deportivo.services.eventos.CrearEvento;
 import com.sna_deportivo.services.eventos.GestionEvento;
 import com.sna_deportivo.services.eventos.ObtenerDeporteEvento;
@@ -123,12 +125,16 @@ public class GestionEventoService {
 										     @PathParam("id") String id,
 										     Evento evento){
 		try{
-			
+			return new ConsultarEvento().consultarUbicacionEvento(
+					tipoEvento, evento);
 		}catch(WebApplicationException e){
+			e.printStackTrace();
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(
+					Response.Status.INTERNAL_SERVER_ERROR.getStatusCode());
 		}
-
-		return null;
 	}
 
 	@POST
@@ -139,12 +145,18 @@ public class GestionEventoService {
 										 @PathParam("id") String id,
 										 String body){
 		try{
-			
+			return new ResponseGenerico(
+					new Integer(Response.Status.CREATED.getStatusCode()).toString(),
+					"Ubicacion creada con exito",
+					new ActualizarEvento().actualizarEvento(tipoEvento, id, body));
 		}catch(WebApplicationException e){
 			throw e;
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new WebApplicationException(
+					Response.Status.INTERNAL_SERVER_ERROR.getStatusCode());
 		}
-
-		return null;
+		
 	}
 	
 	@DELETE

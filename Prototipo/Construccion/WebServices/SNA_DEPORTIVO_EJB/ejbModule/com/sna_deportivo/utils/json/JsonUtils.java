@@ -205,6 +205,8 @@ public class JsonUtils {
 				return Integer.parseInt(obj.toString());
 			}else if(claseTDP.getSimpleName().equals("Boolean")){
 				return Boolean.parseBoolean(obj.toString());
+			}else if(claseTDP.getSimpleName().equals("Float")){
+				return Float.parseFloat(obj.toString());
 			}else{
 				//implementar para los demas
 				return obj.toString() ;
