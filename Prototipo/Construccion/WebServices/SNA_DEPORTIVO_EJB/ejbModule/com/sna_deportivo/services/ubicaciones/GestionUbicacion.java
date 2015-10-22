@@ -1,8 +1,12 @@
 package com.sna_deportivo.services.ubicaciones;
 
+import com.sna_deportivo.pojo.deportes.Deporte;
 import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
+import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.ProductorFactoryEvento;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.Pais;
+import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.utils.gr.Constantes;
@@ -11,6 +15,7 @@ import com.sna_deportivo.utils.bd.Entidades;
 import com.sna_deportivo.utils.bd.Relaciones;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 import com.sna_deportivo.utils.json.JsonObject;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 
 public class GestionUbicacion {
 	
@@ -70,6 +75,41 @@ public class GestionUbicacion {
 				JsonObject arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
 				lugares[i] = new LugarPractica(arregloRow.getPropiedades());
 			}
+		return lugares;
+	}
+	
+	public Deporte[] obtenerDeportesPracticadosLugar(LugarPractica lugar){
+		Deporte[] deportes = null;
+		
+		String query = "MATCH (l:" + Entidades.LUGARPRACTICA + " {id:" + lugar.getId() + "}) -[:" + Relaciones.COMPLETAUBICACION + "]->"
+					 + "(u:" + Entidades.UBICACION + ") -[:" + Relaciones.PRACTICADOEN + "]->"
+					 + "(ud:" + Entidades.UBICACIONDEPORTE + "),"
+					 + "(d:" + Entidades.DEPORTE + ") -[:" + Relaciones.PRACTICADOEN + "]-> (ud) RETURN d";
+		
+		Object[] data = BDUtils.ejecutarQuery(query);
+		deportes = new Deporte[data.length];
+		if (!data[0].equals(""))
+			for (int i = 0; i < data.length; i++) {
+				JsonObject row = (JsonObject) ((JsonObject) data[i]).getPropiedades().get("row")[0];
+				JsonObject arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+				deportes[i] = new Deporte(arregloRow);
+			}
+		return deportes;
+	}
+	
+	public LugarPractica obtenerUbicacionEvento(Evento evento) {
+		LugarPractica lugares = null;
+		String query = "MATCH (l:" + Entidades.LUGARPRACTICA + ") -[:" + Relaciones.DESCRIPCIONEVENTO + "]->"
+				 + "(u:" + Entidades.UBICACION + ") <-[:" + Relaciones.DESCRIPCIONEVENTO + "]-"
+				 + "(ud:" + Entidades.EVENTODEPORTIVO + " {id:" + evento.getId() + "})"
+				 + "  RETURN l";
+		Object[] data = BDUtils.ejecutarQuery(query);
+		lugares = new LugarPractica();
+		if (!data[0].equals("")){
+			JsonObject row = (JsonObject) ((JsonObject) data[0]).getPropiedades().get("row")[0];
+			JsonObject arregloRow = (JsonObject) row.getPropiedades().get("arreglo")[0];
+			lugares = new LugarPractica(arregloRow.getPropiedades());
+		}
 		return lugares;
 	}
 	
@@ -210,6 +250,29 @@ public class GestionUbicacion {
 		response.setDatosExtra(nodoUbicacionDeporte);
 		
 		return response;
+	}
+
+	public Evento[] getEventosDB() {
+		Evento[] eventos = null;
+		String query = "MATCH (e:" + Entidades.EVENTODEPORTIVO + ") RETURN e";
+		try {
+			Object[] resultadoQuery = BDUtils.ejecutarQueryREST(
+										query.toString());
+			eventos = new Evento[resultadoQuery.length];
+			for(int i = 0; i < resultadoQuery.length; i++){
+				JsonObject datos = 
+						(JsonObject)BDUtils.obtenerRestRegistro(resultadoQuery[i]).
+						getPropiedades().get("data")[0];
+				eventos[i].deserializarJson(datos);
+			}
+		} catch (BDException e) {
+			eventos = null;
+			} catch (ExcepcionJsonDeserializacion e) {
+			e.printStackTrace();
+		} catch(NullPointerException e){
+			eventos = null;
+		}
+		return eventos;
 	}
 
 }

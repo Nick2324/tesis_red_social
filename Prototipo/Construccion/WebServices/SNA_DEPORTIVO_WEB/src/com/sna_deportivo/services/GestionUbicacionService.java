@@ -9,11 +9,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
+import com.sna_deportivo.pojo.evento.Evento;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
+import com.sna_deportivo.pojo.ubicacion.EventoLocalizado;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.pojo.ubicacion.Pais;
 import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
+import com.sna_deportivo.services.eventos.GestionEvento;
 import com.sna_deportivo.services.ubicaciones.GestionUbicacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 
@@ -76,10 +79,33 @@ public class GestionUbicacionService {
 		LugarPractica[] lugares;
 		try{
 			lugares = servicio.obtenerLugaresPractica();
+			for(LugarPractica lugar : lugares){
+				lugar.setDeportesPracticados(servicio.obtenerDeportesPracticadosLugar(lugar));
+			}
 		}catch (BDException e){
 			lugares = null;
 		}
 		return lugares;
+	}
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	@Path("obtenerEventosLocalizados")
+	public EventoLocalizado[] obtenerEventosLocalizados(){
+		EventoLocalizado[] retorno;
+		Evento[] eventos;
+		eventos = servicio.getEventosDB();
+		if(eventos != null){
+			retorno = new EventoLocalizado[eventos.length];
+			for(int i=0;i<retorno.length;i++){
+				retorno[i] = new EventoLocalizado();
+				retorno[i].setEvento(eventos[i]);
+				retorno[i].setUbicacion(servicio.obtenerUbicacionEvento(eventos[i]));
+			}
+		}
+		else
+			retorno = null;
+			
+		return retorno;
 	}
 	
 	@POST

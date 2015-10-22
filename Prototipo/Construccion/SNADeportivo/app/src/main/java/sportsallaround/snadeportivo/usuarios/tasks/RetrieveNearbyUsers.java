@@ -7,7 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sportsallaround.snadeportivo.ubicaciones.pojos.Lugar;
 import sportsallaround.snadeportivo.ubicaciones.pojos.LugarPractica;
+import sportsallaround.snadeportivo.ubicaciones.pojos.LugarUsuario;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.generales.ObtainNearbyLocations;
 import sportsallaround.utils.generales.ObtainNearbyUsers;
@@ -16,7 +18,7 @@ import sportsallaround.utils.generales.ServiceUtils;
 /**
  * Created by luis on 9/30/15.
  */
-public class RetrieveNearbyUsers extends AsyncTask<Void, Void, LugarPractica[]> {
+public class RetrieveNearbyUsers extends AsyncTask<Void, Void, Lugar[]> {
 
     private ObtainNearbyUsers activity;
 
@@ -25,8 +27,8 @@ public class RetrieveNearbyUsers extends AsyncTask<Void, Void, LugarPractica[]> 
     }
 
     @Override
-    protected LugarPractica[] doInBackground(Void... params) {
-        String responseLocations = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_UBICACIONES, "GET");
+    protected Lugar[] doInBackground(Void... params) {
+        String responseLocations = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_UBICACIONES_USUARIOS, "GET");
         LugarPractica[] usuarios = null;
         try {
             JSONArray jsonRoles = new JSONArray(responseLocations);
@@ -43,7 +45,7 @@ public class RetrieveNearbyUsers extends AsyncTask<Void, Void, LugarPractica[]> 
     }
 
     @Override
-    protected void onPostExecute(LugarPractica[] ubicaciones) {
-        activity.setNearbyUsers(ubicaciones);
+    protected void onPostExecute(Lugar[] ubicaciones) {
+        activity.setNearbyUsers((LugarUsuario[]) ubicaciones);
     }
 }

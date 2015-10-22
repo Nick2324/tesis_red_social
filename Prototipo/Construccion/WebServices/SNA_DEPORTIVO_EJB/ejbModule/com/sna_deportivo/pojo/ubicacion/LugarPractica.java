@@ -2,12 +2,16 @@ package com.sna_deportivo.pojo.ubicacion;
 
 import java.util.Map;
 
+import com.sna_deportivo.pojo.deportes.Deporte;
+
 public class LugarPractica {
 	
 	private int id;
 	private String nombre;
 	private float latitud;
 	private float longitud;
+	
+	private Deporte[] deportesPracticados;
 	
 	public LugarPractica() {
 	}
@@ -41,6 +45,14 @@ public class LugarPractica {
 	}
 	public void setLongitud(float longitud) {
 		this.longitud = longitud;
+	}
+	
+	public Deporte[] getDeportesPracticados() {
+		return deportesPracticados;
+	}
+	
+	public void setDeportesPracticados(Deporte[] deportesPracticados) {
+		this.deportesPracticados = deportesPracticados;
 	}
 	
 	@Override
