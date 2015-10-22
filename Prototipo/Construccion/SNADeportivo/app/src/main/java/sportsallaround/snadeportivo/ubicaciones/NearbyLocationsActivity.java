@@ -76,7 +76,7 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
     @Override
     public void onMapReady(GoogleMap mMap) {
         this.mMap = mMap;
-        if(ubicacionInicial!=null){
+        if(ubicacionInicial==null){
             if(ubicacion == null)
                 obtenerUbicacion();
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ubicacion, 15));

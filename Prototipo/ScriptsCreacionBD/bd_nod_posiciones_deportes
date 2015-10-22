@@ -19,3 +19,4 @@ CREATE (d1posicion9:E_Posicion{id:9,nombre:"Ala",descripcion:"Son los jugadores 
 
 CREATE (d1posicion10:E_Posicion{id:10,nombre:"Zaguero",descripcion:"Dado que es el último hombre en detener el contraataque del rival debe ser un buen placador. Por lo general, desde posiciones defensivas utiliza mucho el juego aéreo ejecutando muchas patadas (en inglés kicks) por lo que también debe ser buen pateador. Asimismo, debe ser un buen receptor ya que suele ser la persona encargada de recoger las pelotas pateadas por el apertura y zaguero contrario."});
 
+create (:E_Posicion {id:11,nombre:"No aplica",descripcion:"No aplica"});

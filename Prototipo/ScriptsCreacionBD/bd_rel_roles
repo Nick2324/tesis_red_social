@@ -12,3 +12,9 @@ match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:4})
 match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:5}) create (p)-[:R_Permiso]->(r);
 
 match (r:E_Permiso {consecutivoPermiso:1}), (p:E_Permiso {consecutivoPermiso:6}) create (p)-[:R_Permiso]->(r);
+
+match (a:E_Permiso {consecutivoPermiso:8}), (b:E_Permiso {consecutivoPermiso:9}) create (b)-[:R_Permiso]->(a);
+
+match (a:E_Permiso {consecutivoPermiso:8}), (b:E_Permiso {consecutivoPermiso:10}) create (b)-[:R_Permiso]->(a);
+
+match (a:E_Permiso {consecutivoPermiso:8}), (b:E_Rol {consecutivoRol:1}) create (a)-[:R_Permiso]->(b);

@@ -18,3 +18,5 @@ MATCH (deporte1:E_Deporte{id:1}),(d1posicion8:E_Posicion{id:8}) CREATE (deporte1
 MATCH (deporte1:E_Deporte{id:1}),(d1posicion9:E_Posicion{id:9}) CREATE (deporte1)-[posiciondeporte9:R_PosicionDeporte{id:9}]->(d1posicion9);
 
 MATCH (deporte1:E_Deporte{id:1}),(d1posicion10:E_Posicion{id:10}) CREATE (deporte1)-[posiciondeporte10:R_PosicionDeporte{id:10}]->(d1posicion10);
+
+MATCH (d:E_Deporte {id:2}),(p:E_Posicion{id:11}) CREATE (d)-[:R_PosicionDeporte {id:11}]->(p);

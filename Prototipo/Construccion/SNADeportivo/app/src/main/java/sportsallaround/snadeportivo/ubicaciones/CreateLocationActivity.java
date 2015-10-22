@@ -264,7 +264,7 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
                 JSONObject parametros;
                 parametros = new JSONObject(nuevaUbicacion[0].toJSONObject());
 
-                String resultadoString = ServiceUtils.invokeService(parametros, Constants.SERVICES_CREAR_UBICACION, "POST");
+                String resultadoString = ServiceUtils.invokeService_(parametros, Constants.SERVICES_CREAR_UBICACION, "POST");
                 JSONObject response = new JSONObject(resultadoString);
                 mensajeRespuesta = response.getString("mensajeRespuesta");
                 if(!response.getString("caracterAceptacion").equals("B")){

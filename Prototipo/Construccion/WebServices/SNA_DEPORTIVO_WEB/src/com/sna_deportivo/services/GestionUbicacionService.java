@@ -113,14 +113,14 @@ public class GestionUbicacionService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("crearLugarPractica")
 	public ResponseGenerico crearLugarPractica(Ubicacion ubicacion){
-		System.out.println("crearLugarPractica");
+		
 		ResponseGenerico response = new ResponseGenerico();
 		
 		try{
 			Pais pais = ubicacion.getPais();
 			Ciudad ciudad = ubicacion.getCiudad();
 			LugarPractica lugar = ubicacion.getLugar();
-			System.out.println("servicio ejecutando");
+			
 			response = servicio.crearLugarPractica(pais, ciudad, lugar);
 		
 		}catch (BDException e){

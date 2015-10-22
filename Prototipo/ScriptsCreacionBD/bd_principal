@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NEO4J_BIN='/opt/neo4j-community-2.2.3/bin'
-TESIS_BD_HOME='/home/nicolas/tesis_red_social/Prototipo/ScriptsCreacionBD'
+NEO4J_BIN='/home/luis/Aplicaciones/neo4j-community-2.2.3/bin'
+TESIS_BD_HOME='/home/luis/Prueba/tesis_red_social/Prototipo/ScriptsCreacionBD'
 
 #Creacion de todos los nodos
 $NEO4J_BIN/neo4j-shell -c <  $TESIS_BD_HOME/bd_nod_roles

@@ -9,9 +9,15 @@ create (:E_Permiso {nombre:"Actualizar datos personales", descripcion:"Funcional
 
 create (:E_Permiso {nombre:"Actualizar datos de jugador", descripcion:"Funcionalidad que permite a los usuarios actualizar su información general de jugador", ruta:"", consecutivoPermiso:3});
 
-create (:E_Permiso {nombre:"Actualizar mis deportes practicados", descripcion:"Funcionalidad que permite a los usuarios actualizar sus deportes practicados", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdatePracticedSport", consecutivoPermiso:4});
+create (:E_Permiso {nombre:"Actualizar mis deportes practicados", descripcion:"Funcionalidad que permite a los usuarios actualizar sus deportes practicados", ruta:"sportsallaround.snadeportivo.usuarios.UserUpdateSportsActivity", consecutivoPermiso:4});
 
 create (:E_Permiso {nombre:"Mis patrocinios", descripcion:"Funcionalidad que permite a los acceder al menu de actualizacion de patrocinios", ruta:"", consecutivoPermiso:5});
 
 create (:E_Permiso {nombre:"Gestionar eventos", descripcion:"Funcionalidad que permite acceder al menu de gestion de eventos",
 ruta:"sportsallaround.snadeportivo.eventos.gui.GestionEventos", consecutivoPermiso:6});
+
+create (:E_Permiso {nombre:"Ubicaciones", descripcion:"Funcionalidad que le permite a los usuarios acceder al menu de ubicaciones, lugar donde podran reportar o descubrir ubicaciones a su al rededor", ruta:"sportsallaround.snadeportivo.usuarios.fragmentos.GenericMenuFragment", consecutivoPermiso:8});
+
+create (:E_Permiso {nombre:"Reportar ubicacion", descripcion:"Funcionalidad que le permite a los usuarios reportar una nueva ubicacion en la aplicacion", ruta:"sportsallaround.snadeportivo.ubicaciones.CreateLocationActivity", consecutivoPermiso:9});
+
+create (:E_Permiso {nombre:"¿Qué hay cerca?", descripcion:"Funcionalidad que le permite a los usuarios encontrar ubicaciones cercanasa su posicion actual", ruta:"sportsallaround.snadeportivo.ubicaciones.sportsallaround.snadeportivo.ubicaciones.NearbyLocationsActivity", consecutivoPermiso:10});

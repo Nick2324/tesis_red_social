@@ -59,7 +59,7 @@ public class LugarPractica extends Lugar implements MediaTypeTranslator {
         String descripcion = "Deportes practicados: ";
         if (deportesPracticados != null)
             for(Deporte deporte : deportesPracticados)
-                descripcion = descripcion + deporte.getNombre();
+                descripcion = descripcion.equals("Deportes practicados: ") ? descripcion + deporte.getNombre() : descripcion + ", " + deporte.getNombre();
         else
             descripcion = descripcion + "N/A";
         return descripcion;
