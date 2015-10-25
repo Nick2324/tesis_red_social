@@ -11,13 +11,20 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 
 import com.sna_deportivo.pojo.deportes.DeportePracticadoUbicacion;
+import com.sna_deportivo.pojo.evento.DAOEvento;
+import com.sna_deportivo.pojo.evento.DEPracticaDeportiva;
 import com.sna_deportivo.pojo.evento.Evento;
+import com.sna_deportivo.pojo.evento.PracticaDeportiva;
+import com.sna_deportivo.pojo.evento.TiposEventos;
 import com.sna_deportivo.pojo.ubicacion.Ciudad;
 import com.sna_deportivo.pojo.ubicacion.EventoLocalizado;
 import com.sna_deportivo.pojo.ubicacion.LugarPractica;
 import com.sna_deportivo.pojo.ubicacion.Pais;
 import com.sna_deportivo.pojo.ubicacion.Ubicacion;
 import com.sna_deportivo.utils.gr.ResponseGenerico;
+import com.sna_deportivo.utils.gr.excepciones.ProductorFactoryExcepcion;
+import com.sna_deportivo.utils.json.JsonUtils;
+import com.sna_deportivo.utils.json.excepciones.ExcepcionJsonDeserializacion;
 import com.sna_deportivo.services.ubicaciones.GestionUbicacion;
 import com.sna_deportivo.utils.bd.excepciones.BDException;
 
@@ -25,9 +32,11 @@ import com.sna_deportivo.utils.bd.excepciones.BDException;
 public class GestionUbicacionService {
 
 	private GestionUbicacion servicio;
+	private GestionEventoService servicioEvento;
 
 	public GestionUbicacionService() {
 		servicio = new GestionUbicacion();
+		servicioEvento = new GestionEventoService();
 	}
 	
 	@GET
@@ -92,20 +101,31 @@ public class GestionUbicacionService {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("obtenerEventosLocalizados")
 	public EventoLocalizado[] obtenerEventosLocalizados(){
-		EventoLocalizado[] retorno;
+		EventoLocalizado[] retorno = null;
 		Evento[] eventos;
-		eventos = servicio.getEventosDB();
-		if(eventos != null){
-			retorno = new EventoLocalizado[eventos.length];
-			for(int i=0;i<retorno.length;i++){
-				retorno[i] = new EventoLocalizado();
-				retorno[i].setEvento(eventos[i]);
-				retorno[i].setUbicacion(servicio.obtenerUbicacionEvento(eventos[i]));
+		DAOEvento de = new DEPracticaDeportiva();
+		de.setEvento(new Evento());
+		try {
+			eventos = de.getEventosDB();
+			if(eventos != null){
+				retorno = new EventoLocalizado[eventos.length];
+				for(int i=0;i<retorno.length;i++){
+					retorno[i] = new EventoLocalizado();
+					retorno[i].setEvento(eventos[i]);
+					retorno[i].setUbicacion(servicio.obtenerUbicacionEvento(eventos[i]));
+				}
 			}
+		} catch (BDException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ProductorFactoryExcepcion e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ExcepcionJsonDeserializacion e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		else
-			retorno = null;
-			
+		
 		return retorno;
 	}
 	

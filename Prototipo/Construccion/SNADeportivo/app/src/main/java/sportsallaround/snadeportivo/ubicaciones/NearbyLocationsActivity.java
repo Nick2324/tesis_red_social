@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.snadeportivo.ubicaciones.general.ConstantesUbicacion;
 import sportsallaround.snadeportivo.ubicaciones.pojos.Lugar;
 import sportsallaround.snadeportivo.ubicaciones.pojos.LugarEvento;
 import sportsallaround.snadeportivo.ubicaciones.pojos.LugarPractica;
@@ -58,15 +59,20 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*
-        String foco = getIntent().getStringExtra(Constants.UBICACION_FOCO);
+
+
         try {
+            String foco = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD)
+                    .getString(ConstantesUbicacion.UBICACION_FOCO);
             ubicacionInicial = new Ubicacion(new JSONObject(foco));
         } catch (JSONException e) {
             ubicacionInicial = null;
             e.printStackTrace();
+        } catch (NullPointerException e){
+            ubicacionInicial = null;
+            e.printStackTrace();
         }
-*/
+
         buildGoogleApiClient();
         setContentView(R.layout.activity_nearby_locations);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
