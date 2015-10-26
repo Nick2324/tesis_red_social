@@ -93,8 +93,10 @@ public class UbicacionesEvento extends Activity implements PeticionObjectCallbac
     public boolean onOptionsItemSelected(MenuItem item) {
         Bundle extras = getIntent().getExtras().
                 getBundle(Constants.DATOS_FUNCIONALIDAD);
-        extras.putString(ConstantesEvento.UBICACION_MANEJADA,
-                this.ubicacionEvento.toJSONObject());
+        if(this.ubicacionEvento != null) {
+            extras.putString(ConstantesEvento.UBICACION_MANEJADA,
+                    this.ubicacionEvento.toJSONObject());
+        }
         this.menuSNS.comportamiento(this, item.getItemId(),
                 extras);
         return super.onOptionsItemSelected(item);

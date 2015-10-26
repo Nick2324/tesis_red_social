@@ -76,7 +76,7 @@
         <activity
             android:name=".eventos.gui.InformacionGeneralEvento"
             android:label="@string/title_activity_informacion_general_evento"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
@@ -91,25 +91,29 @@
         <activity
             android:name=".eventos.gui.InformacionParticipantes"
             android:label="@string/title_activity_informacion_participantes"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.ListadoSolicitudes"
             android:label="@string/title_activity_manejo_participantes"
-            android:windowSoftInputMode="stateHidden" >
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.ListadoParticipantes"
             android:label="@string/title_activity_listado_participantes"
-            android:windowSoftInputMode="stateHidden" >
+            android:windowSoftInputMode="stateHidden"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.MenuAdministrarInvolucrados"
-            android:label="@string/title_activity_menu_administrar_involucrados" >
+            android:label="@string/title_activity_menu_administrar_involucrados"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.PerfilEvento"
-            android:label="@string/title_activity_perfil_evento" >
+            android:label="@string/title_activity_perfil_evento"
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.ListadoInvitacionesEvento"
@@ -118,10 +122,11 @@
         <activity
             android:name=".eventos.gui.UbicacionesEvento"
             android:label="@string/title_activity_ubicaciones_evento"
-            android:launchMode="singleTop" >
+            android:launchMode="singleTask">
         </activity>
         <activity
             android:name=".eventos.gui.ListadoInvitarAParticipar"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_listado_invitar_aparticipar" />
         <activity
             android:name=".usuarios.UserUpdatePracticedSport"
