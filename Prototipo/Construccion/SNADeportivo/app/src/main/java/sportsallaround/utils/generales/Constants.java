@@ -34,6 +34,7 @@ public class Constants {
     //******************************Strings de formato y patrones**********************************
     //public static final String ROOT_URL = "http://snadeportivo.ddns.net/SNA_DEPORTIVO_WEB/services/";
     public static final String ROOT_URL = "http://192.168.0.12:8080/SNA_DEPORTIVO_WEB/services/";
+    //public static final String ROOT_URL = "http://snadeportivo.ddns.net:8080/SNA_DEPORTIVO_WEB/services/";
     /*
     *
     * SERVICIOS GESTION DE USUARIO
