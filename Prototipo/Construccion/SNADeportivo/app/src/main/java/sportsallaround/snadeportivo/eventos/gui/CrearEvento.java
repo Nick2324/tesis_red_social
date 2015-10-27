@@ -42,6 +42,10 @@ public class CrearEvento extends Activity implements ObjetoListenerSpinner,Attac
             public void onClick(View v) {
                 //EL INTENT DEBERIA SER DISTINTO (O NO?) DEPENDIENDO DEL TIPO DE EVENTO
                 Bundle extras = getIntent().getBundleExtra(Constants.DATOS_FUNCIONALIDAD);
+                extras.putString(ConstantesEvento.EVENTO_MANEJADO,null);
+                extras.putString(ConstantesEvento.GENERO_MANEJADO,null);
+                extras.putString(ConstantesEvento.DEPORTE_MANEJADO,null);
+                extras.putString(ConstantesEvento.UBICACION_MANEJADA,null);
                 extras.putString(ConstantesEvento.TIPO_EVENTO,
                         ((SpinnerEventos)getFragmentManager().findFragmentById(
                         R.id.fragment_tipo_evento_crear)).getValueSpinnerEventos().getNombreClase());
