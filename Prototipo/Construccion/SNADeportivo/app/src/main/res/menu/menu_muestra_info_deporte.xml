@@ -4,4 +4,25 @@
     tools:context="sportsallaround.snadeportivo.deportes.gui.MuestraInfoDeporte">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <!--<item
+        android:id="@+id/item_muestra_tacticas"
+        android:title="@string/item_muestra_tacticas"/>
+
+    <item
+        android:id="@+id/item_muestra_tecnicas"
+        android:title="@string/item_muestra_tecnicas"/>
+
+    <item
+        android:id="@+id/item_muestra_clasificacion"
+        android:title="@string/item_muestra_clasificacion"/>
+
+    <item
+        android:id="@+id/item_muestra_implementos"
+        android:title="@string/item_muestra_implementos"/>
+
+    <item
+        android:id="@+id/item_posiciones"
+        android:title="@string/item_posiciones"/>-->
+
 </menu>

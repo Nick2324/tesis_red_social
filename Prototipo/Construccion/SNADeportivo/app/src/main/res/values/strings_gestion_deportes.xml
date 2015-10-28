@@ -7,4 +7,11 @@
     <string name="textview_historia_deporte">Historia</string>
     <string name="textview_olimpico_deporte">Olimpico</string>
     <string name="textview_fecha_creacion_deporte">Fecha de creación</string>
+
+    <string name= "item_muestra_tacticas">Tácticas de deporte</string>
+    <string name= "item_muestra_tecnicas">Técnicas de deporte</string>
+    <string name= "item_muestra_clasificacion">Clasificación de deporte</string>
+    <string name= "item_muestra_implementos">Implementos de deporte</string>
+    <string name= "item_posiciones">Posiciones de deporte</string>
+
 </resources>
