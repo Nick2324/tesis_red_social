@@ -10,6 +10,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 import sportsallaround.snadeportivo.ubicaciones.pojos.EventoLocalizado;
 import sportsallaround.snadeportivo.ubicaciones.pojos.Lugar;
 import sportsallaround.snadeportivo.ubicaciones.pojos.LugarEvento;
@@ -33,29 +35,41 @@ public class RetrieveNearbyEvents extends AsyncTask<Void, Void, Lugar[]> {
     @Override
     protected Lugar[] doInBackground(Void... params) {
         String responseLocations = ServiceUtils.invokeService_((JSONObject) null, Constants.SERVICES_OBTENER_UBICACIONES_EVENTOS, "GET");
-        LugarEvento[] eventos = null;
+        ArrayList<LugarEvento> eventos = new ArrayList<>();
+        LugarEvento eventoTmp;
         try {
             JSONArray jsonRoles = new JSONArray(responseLocations);
-            eventos = new LugarEvento[jsonRoles.length()];
+            eventoTmp = new LugarEvento();
             EventoLocalizado tmp;
             JSONObject evento;
             for (int i = 0; i < jsonRoles.length(); i++) {
-                evento = jsonRoles.getJSONObject(i);
-                tmp = new EventoLocalizado(evento);
-                eventos[i] = new LugarEvento();
-                eventos[i].setLatitud(tmp.getUbicacion().getLatitud());
-                eventos[i].setLongitud(tmp.getUbicacion().getLongitud());
-                eventos[i].setNombre(tmp.getUbicacion().getNombre());
-                eventos[i].setId(tmp.getUbicacion().getId());
-                ((LugarEvento)eventos[i]).setNombreEvento(tmp.getEvento().getNombre());
-                ((LugarEvento)eventos[i]).setDescripcionEvento(tmp.getEvento().getDescripcion());
-                ((LugarEvento)eventos[i]).setFechaInicio(tmp.getEvento().getFechaInicio());
-                ((LugarEvento)eventos[i]).setFechaFin(tmp.getEvento().getFechaFinal());
+                try {
+                    evento = jsonRoles.getJSONObject(i);
+                    tmp = new EventoLocalizado(evento);
+                    eventoTmp = new LugarEvento();
+                    eventoTmp.setLatitud(tmp.getUbicacion().getLatitud());
+                    eventoTmp.setLongitud(tmp.getUbicacion().getLongitud());
+                    eventoTmp.setNombre(tmp.getUbicacion().getNombre());
+                    eventoTmp.setId(tmp.getUbicacion().getId());
+                    ((LugarEvento) eventoTmp).setNombreEvento(tmp.getEvento().getNombre());
+                    ((LugarEvento) eventoTmp).setDescripcionEvento(tmp.getEvento().getDescripcion());
+                    ((LugarEvento) eventoTmp).setFechaInicio(tmp.getEvento().getFechaInicio());
+                    ((LugarEvento) eventoTmp).setFechaFin(tmp.getEvento().getFechaFinal());
+                    eventos.add(eventoTmp);
+                }
+                catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return eventos;
+        LugarEvento[] eventosValidos = new LugarEvento[eventos.size()];
+        int i=0;
+        for(LugarEvento lugar : eventos){
+            eventosValidos[i++] = lugar;
+        }
+        return eventos.size() == 0 ? null : eventosValidos;
     }
 
     @Override

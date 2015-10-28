@@ -204,8 +204,15 @@ public class NearbyLocationsActivity extends FragmentActivity implements ObtainN
                     @Override
                     public String getDescripcion() {
                         String descripcion = "";
-                        for (Lugar lugarCompartido : lugar)
+                        for (Lugar lugarCompartido : lugar){
                             descripcion = descripcion + "\n" + lugarCompartido.getNombre() + " - " + lugarCompartido.getDescripcion();
+                            /*if (lugarCompartido.getClass().equals(LugarPractica.class))
+                                descripcion = descripcion + ((LugarPractica)lugarCompartido).getDescripcion();
+                            else if (lugarCompartido.getClass().equals(LugarEvento.class))
+                                descripcion = descripcion + ((LugarEvento)lugarCompartido).getDescripcion();
+                            else
+                                descripcion = descripcion + ((LugarUsuario)lugarCompartido).getDescripcion();
+                        */}
                         return descripcion;
                     }
 

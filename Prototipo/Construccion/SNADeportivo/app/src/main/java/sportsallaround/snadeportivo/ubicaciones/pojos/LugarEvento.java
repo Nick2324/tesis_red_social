@@ -45,7 +45,7 @@ public class LugarEvento extends Lugar {
 
     @Override
     public String getDescripcion() {
-        String desc = "Evento: " + getNombreEvento() + " - Inicia: " + getFechaInicio() + " Termina: " + getFechaFin() + " | " + getDescripcion();
+        String desc = "Evento: " + getNombreEvento() + " - Inicia: " + getFechaInicio() + " Termina: " + getFechaFin() + " | " + descripcionEvento;
         return desc;
     }
 

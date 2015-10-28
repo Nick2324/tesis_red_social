@@ -32,7 +32,8 @@ public class Constants {
     public static final String SERVICES_OBTENER_UBICACIONES_USUARIOS = "";
     //*********************************************************************************************
     //******************************Strings de formato y patrones**********************************
-    public static final String ROOT_URL = "http://snadeportivo.ddns.net:8080/SNA_DEPORTIVO_WEB/services/";
+    //public static final String ROOT_URL = "http://snadeportivo.ddns.net:8080/SNA_DEPORTIVO_WEB/services/";
+    public static final String ROOT_URL = "http://192.168.0.15:8080/SNA_DEPORTIVO_WEB/services/";
     /*
     *
     * SERVICIOS GESTION DE USUARIO

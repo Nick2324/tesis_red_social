@@ -102,8 +102,8 @@ public class GestionUbicacion {
 		LugarPractica lugares = null;
 		String query = "MATCH (l:" + Entidades.LUGARPRACTICA + ") -[:" + Relaciones.COMPLETAUBICACION + "]->" + "(u:"
 				+ Entidades.UBICACION + ") -[:" + Relaciones.DESCRIPCIONEVENTO + "]->(de:" + Entidades.DEPORTEEVENTO
-				+ ") <-[:" + Relaciones.DESCRIPCIONEVENTO + "]-" + "(ud:" + Entidades.EVENTODEPORTIVO + " {id:\""
-				+ evento.getId() + "\"})" + "  RETURN l";
+				+ ") <-[:" + Relaciones.DESCRIPCIONEVENTO + "]-" + "(ud:" + Entidades.EVENTODEPORTIVO + " {id:'"
+				+ evento.getId() + "'})" + "  RETURN l";
 		Object[] data = BDUtils.ejecutarQuery(query);
 		lugares = new LugarPractica();
 		if (!data[0].equals("")) {
