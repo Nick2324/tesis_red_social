@@ -300,9 +300,9 @@ public class CreateLocationActivity extends AppCompatActivity implements ObtainS
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             if(aBoolean)
-                Toast.makeText(context,mensajeRespuesta,Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Lugar creado exitosamente",Toast.LENGTH_LONG).show();
             else
-                Toast.makeText(context,mensajeRespuesta,Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Ha ocurrido un error creando su ubicación. Por favor, intentelo mas tarde.",Toast.LENGTH_LONG).show();
         }
     }
 }

@@ -161,7 +161,7 @@ public class GestionUbicacionService {
 		
 		try{
 			for(DeportePracticadoUbicacion deporte : deportes){
-				servicio.asociarDeporteLugar(deporte);
+				response = servicio.asociarDeporteLugar(deporte);
 			}
 		}catch (BDException e){
 			response.setCaracterAceptacion("M");

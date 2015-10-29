@@ -22,6 +22,7 @@ import org.json.JSONObject;
 import java.io.InputStream;
 
 import sportsallaround.snadeportivo.R;
+import sportsallaround.snadeportivo.usuarios.pojos.Usuario;
 import sportsallaround.snadeportivo.usuarios.tasks.RetrieveRoles;
 import sportsallaround.utils.generales.Constants;
 import sportsallaround.utils.gui.DatePickerFragment;
@@ -248,6 +249,13 @@ public class CreateUserActivity extends Activity implements OnDatePickedListener
             if (success) {
                 //todo: Invocar pagina inicial del usuario con la ruta retornada por la creacion del mismo.
                 Intent intent = new Intent(getApplicationContext(), UserMainDrawer.class);
+                Usuario usuarioCreado = new Usuario();
+                usuarioCreado.setUsuario((String) datosUsuario.get("usuario"));
+                usuarioCreado.setPrimerNombre((String) datosUsuario.get("primerNombre"));
+                usuarioCreado.setSegundoNombre((String) datosUsuario.get("segundoNombre"));
+                usuarioCreado.setApellidos((String) datosUsuario.get("apellidos"));
+                intent.putExtra("user", usuarioCreado);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }else
                 Toast.makeText(context,"Un usuario con el mismo correo ya existe", Toast.LENGTH_LONG).show();

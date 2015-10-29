@@ -226,7 +226,7 @@ public class UserUpdatePracticedSport extends ActionBarActivity implements Obtai
         @Override
         protected void onPostExecute(Boolean aBoolean) {
             if(aBoolean)
-                Toast.makeText(context,"Deporte añadido satisfactoriamente",Toast.LENGTH_LONG).show();
+                Toast.makeText(context,"Deporte acualizado satisfactoriamente",Toast.LENGTH_LONG).show();
             else
                 Toast.makeText(context,mensajeRespuesta,Toast.LENGTH_LONG).show();
         }

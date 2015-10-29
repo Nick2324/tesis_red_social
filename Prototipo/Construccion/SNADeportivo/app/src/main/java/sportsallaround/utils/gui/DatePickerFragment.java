@@ -43,7 +43,7 @@ public class DatePickerFragment extends DialogFragment
     public void onDateSet(DatePicker view, int year, int month, int day) {
         if(callBack != null)
         {
-            callBack.onDatePicked(String.format("%02d", day) + "/" + String.format("%02d", month) + "/" + String.format("%04d", year));
+            callBack.onDatePicked(String.format("%02d", day) + "/" + String.format("%02d", month+1) + "/" + String.format("%04d", year));
         }
     }
 }

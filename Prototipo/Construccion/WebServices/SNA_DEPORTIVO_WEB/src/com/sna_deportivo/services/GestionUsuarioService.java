@@ -59,6 +59,7 @@ public class GestionUsuarioService {
 		ResponseGenerico response = new ResponseGenerico();
 		try {
 			if (!servicio.existeUsuario(user)) {
+				user.retornoToString(null);
 				user.setEstado(true);
 				user.setFechaRegistro(new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
 				response = servicio.crearUsuario(user);
